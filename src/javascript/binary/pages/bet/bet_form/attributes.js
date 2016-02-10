@@ -139,9 +139,6 @@ BetForm.attributes = function() {
             amount_type: function() {
                 return $('#amount_type', this.form_selector()).val();
             },
-            show_ohlc: function() {
-                return ($('input[name="showohlc"]', this.form_selector()).val() == "yes");
-            },
             extratab: function() {
                 return ($('input[name="extratab"]', this.form_selector()).val());
             },
@@ -349,7 +346,7 @@ BetForm.attributes = function() {
                     currency: function() {
                         if(page.client.is_logged_in) {
                             var client_currencies = Settings.get('client.currencies');
-                            if(client_currencies !== 'undefined'  && client_currencies.length > 0) {
+                            if(typeof client_currencies !== 'undefined'  && client_currencies.length > 0) {
                                 $('#bet_currency option').each(function() {
                                     if($.inArray($(this).val(), client_currencies) < 0) {
                                         $(this).remove();

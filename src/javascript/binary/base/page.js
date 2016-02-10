@@ -299,22 +299,28 @@ Menu.prototype = {
 
         this.on_mouse_hover(active.item);
 
+        this.disable_not_allowed_markets();
+    },
+    disable_not_allowed_markets: function() {
         // enable only allowed markets
         var allowed_markets = $.cookie('allowed_markets');
-        if(allowed_markets) {
-            var markets_array = allowed_markets.split(',');
-            var sub_items = $('li#topMenuStartBetting ul.sub_items');
-            sub_items.find('li').each(function () {
-                var link_id = $(this).attr('id').split('_')[1];
-                if(markets_array.indexOf(link_id) < 0) {
-                    var link = $(this).find('a');
-                    if(markets_array.indexOf(link.attr('id')) < 0) {
-                        var link_text = link.text();
-                        link.replaceWith($('<span/>', {class: 'link disabled-link', text: link_text}));
-                    }
-                }
-            });
-        }
+        var markets_array = allowed_markets ? allowed_markets.split(',') : [];
+        var sub_items = $('li#topMenuStartBetting ul.sub_items');
+        sub_items.find('li').each(function () {
+            var link_id = $(this).attr('id').split('_')[1];
+            if(markets_array.indexOf(link_id) < 0 && !(/VRT/.test($.cookie('loginid')))) {
+                var link = $(this).find('a');
+                var link_text = link.text();
+                var link_href = link.attr('href');
+                link.replaceWith($('<span/>', {class: 'link disabled-link', text: link_text, link_url: link_href}));
+            }
+            else {
+                var span = $(this).find('span');
+                var span_text = span.text();
+                var span_href = span.attr('link_url');
+                span.replaceWith($('<a/>', {class: 'link pjaxload', text: span_text, href: span_href}));
+            }
+        });
     },
     reset: function() {
         $("#main-menu .item").unbind();
@@ -474,7 +480,7 @@ Header.prototype = {
     register_dynamic_links: function() {
         var logged_in_url = page.url.url_for('');
         if(this.client.is_logged_in) {
-            logged_in_url = page.url.url_for('user/myaccount');
+            logged_in_url = page.url.url_for('user/my_accountws');
         }
 
         $('#logo').attr('href', logged_in_url).on('click', function(event) {
@@ -544,7 +550,7 @@ Header.prototype = {
         if("logout" in response && response.logout === 1){
             sessionStorage.setItem('currencies', '');
             var cookies = ['login', 'loginid', 'loginid_list', 'email', 'settings', 'reality_check', 'affiliate_token', 'affiliate_tracking'];
-            var current_domain = window.location.hostname.replace('www', '');
+            var current_domain = '.' + document.domain.split('.').slice(-2).join('.');
             cookies.map(function(c){
                 $.removeCookie(c, {path: '/', domain: current_domain});
             });

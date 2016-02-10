@@ -371,7 +371,42 @@ function handle_residence_state_ws(){
       var response = JSON.parse(msg.data);
       if (response) {
         var type = response.msg_type;
-        if (type === 'states_list'){
+        if (response.msg_type === 'get_settings') {
+          var country = response.get_settings.country_code;
+          if (country && country !== null) {
+            page.client.residence = country;
+            RealAccOpeningUI.setValues();
+          } else {
+            $('#real-form').hide();
+            $('#residence-disabled').insertAfter('#move-residence-here');
+            $('#error-residence').insertAfter('#residence-disabled');
+            $('#residence-disabled').removeAttr('disabled');
+            $('#residence-form').show();
+            $('#residence-form').submit(function(evt) {
+              evt.preventDefault();
+              if (Validate.fieldNotEmpty($('#residence-disabled').val(), document.getElementById('error-residence'))) {
+                page.client.residence = $('#residence-disabled').val();
+                BinarySocket.send({set_settings:1, residence:page.client.residence});
+              }
+            });
+          }
+        } else if (type === 'set_settings') {
+          var errorElement = document.getElementById('error-residence');
+          if (response.hasOwnProperty('error')) {
+            if (response.error.message) {
+              errorElement.innerHTML = response.error.message;
+              errorElement.setAttribute('style', 'display:block');
+            }
+          } else {
+            errorElement.setAttribute('style', 'display:none');
+            $('#residence-form').hide();
+            $('#residence-disabled').insertAfter('#move-residence-back');
+            $('#error-residence').insertAfter('#residence-disabled');
+            $('#residence-disabled').attr('disabled', 'disabled');
+            $('#real-form').show();
+            RealAccOpeningUI.setValues();
+          }
+        } else if (type === 'states_list'){
           select = document.getElementById('address-state');
           var states_list = response.states_list;
           if (states_list.length > 0){
@@ -383,7 +418,7 @@ function handle_residence_state_ws(){
         } else if (type === 'residence_list'){
           select = document.getElementById('residence-disabled') || document.getElementById('residence');
           var phoneElement   = document.getElementById('tel'),
-              residenceValue = $.cookie('residence'),
+              residenceValue = page.client.residence,
               residence_list = response.residence_list;
           if (residence_list.length > 0){
             for (i = 0; i < residence_list.length; i++) {
@@ -406,6 +441,10 @@ function handle_residence_state_ws(){
   });
 }
 
+function getSettings() {
+  BinarySocket.send({get_settings:1});
+}
+
 function setResidenceWs(){
   BinarySocket.send({ residence_list: 1 });
 }
@@ -413,7 +452,9 @@ function setResidenceWs(){
 //pass select element to generate list of states
 function generateState(select) {
     appendTextValueChild(select, Content.localize().textSelect, '');
-    BinarySocket.send({ states_list: $.cookie('residence') });
+    if (page.client.residence !== "") {
+      BinarySocket.send({ states_list: page.client.residence });
+    }
 }
 
 function getUrlVars() {
@@ -586,6 +627,27 @@ pjax_config_page('/terms-and-condition', function() {
             var year = document.getElementsByClassName('currentYear');
             for (i = 0; i < year.length; i++){
               year[i].innerHTML = new Date().getFullYear();
+            }
+        },
+    };
+});
+
+pjax_config_page('/user/myaccount', function() {
+    return {
+        onLoad: function() {
+            var divOne = text.localize('<div class="notice-msg" style="margin-top: 10px;">Your %1 account is unavailable. For any questions please contact <a href="%2">Customer Support</a>.</div>').replace('%2', page.url.url_for('contact')),
+                divTwo = text.localize('<div class="notice-msg" style="margin-top: 10px;">Your %1 accounts are unavailable. For any questions please contact <a href="%2">Customer Support</a>.</div>').replace('%2', page.url.url_for('contact'));
+            var loginidArry = page.user.loginid_array,
+                disabledAccount = [];
+            for (i = 0; i < loginidArry.length; i++) {
+              if (loginidArry[i].disabled === true && loginidArry[i].real === true) {
+                disabledAccount.push(loginidArry[i].id);
+              }
+            }
+            if (disabledAccount.length === 1) {
+                $(divOne.replace('%1', disabledAccount.toString())).insertAfter('.clientid');
+            } else if (disabledAccount.length > 1) {
+                $(divTwo.replace('%1', disabledAccount.join(', '))).insertAfter('.clientid');
             }
         },
     };

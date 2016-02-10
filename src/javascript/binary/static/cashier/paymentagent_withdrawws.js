@@ -41,6 +41,10 @@ var PaymentAgentWithdrawWS = (function() {
             return false;
         }
 
+        if ($.cookie('verify_token')) {
+          $.removeCookie($.cookie('verify_token'), {path: '/', domain: '.' + document.domain.split('.').slice(-2).join('.')});
+        }
+
         var residence = $.cookie('residence');
         BinarySocket.send({"paymentagent_list": residence});
 
@@ -90,13 +94,13 @@ var PaymentAgentWithdrawWS = (function() {
         var agent  = $(fieldIDs.ddlAgents).val(),
             amount = $(fieldIDs.txtAmount).val().trim(),
             desc   = $(fieldIDs.txtDesc).val().trim();
-        
+
         var letters = Content.localize().textLetters,
             numbers = Content.localize().textNumbers,
             space   = Content.localize().textSpace,
             period  = Content.localize().textPeriod,
             comma   = Content.localize().textComma;
-        
+
         // Payment Agent
         isRequiredError(fieldIDs.ddlAgents);
 
@@ -253,7 +257,6 @@ pjax_config_page("paymentagent/withdrawws", function() {
                 window.location.href = page.url.url_for('login');
                 return;
             }
-
             BinarySocket.init({
                 onmessage: function(msg) {
                     var response = JSON.parse(msg.data);

@@ -1,16 +1,13 @@
 var RealAccOpeningUI = (function(){
   "use strict";
 
-  function setValues(residenceValue){
+  function setValues(){
     var dobdd    = document.getElementById('dobdd'),
         dobmm    = document.getElementById('dobmm'),
         dobyy    = document.getElementById('dobyy'),
-        tel      = document.getElementById('tel'),
         state    = document.getElementById('address-state');
 
-    handle_residence_state_ws();
     generateBirthDate(dobdd, dobmm, dobyy);
-    setResidenceWs(tel, residenceValue);
     generateState(state);
   }
 
@@ -20,7 +17,7 @@ var RealAccOpeningUI = (function(){
     if (opt === 'duplicate') {
       error.innerHTML = text.localize("Sorry, you seem to already have a real money account with us. Perhaps you have used a different email address when you registered it. For legal reasons we are not allowed to open multiple real money accounts per person. If you do not remember your account with us, please") + " " + "<a href='" + page.url.url_for('contact') + "'>" + text.localize("contact us") + "</a>";
     } else {
-      error.innerHTML = Content.localize().textUnavailableReal;
+      error.innerHTML = opt;
     }
     error.parentNode.parentNode.parentNode.setAttribute('style', 'display:block');
   }
@@ -63,7 +60,7 @@ var RealAccOpeningUI = (function(){
                 Trim(fname.value),
                 Trim(lname.value),
                 dobyy.value + '-' + dobmm.value + '-' + dobdd.value,
-                $.cookie('residence'),
+                page.client.residence,
                 Trim(address1.value),
                 Trim(address2.value),
                 Trim(town.value),
@@ -128,7 +125,7 @@ var RealAccOpeningUI = (function(){
       errorCounter++;
     }
 
-    if (!isValidDate(dobdd.value, dobmm.value, dobyy.value)) {
+    if (!isValidDate(dobdd.value, dobmm.value, dobyy.value) || dobdd.value === '' || dobmm.value === '' || dobyy.value === '') {
       errorBirthdate.innerHTML = Content.localize().textErrorBirthdate;
       Validate.displayErrorMessage(errorBirthdate);
       errorCounter++;
@@ -160,8 +157,8 @@ var RealAccOpeningUI = (function(){
       errorCounter++;
     }
 
-    if (postcode.value !== '' && !/^[\d-]+$/.test(postcode.value)){
-      errorPostcode.innerHTML = Content.errorMessage('reg', [numbers, hyphen, ' ']);
+    if (postcode.value !== '' && !/^[a-zA-Z\d-]+$/.test(postcode.value)){
+      errorPostcode.innerHTML = Content.errorMessage('reg', [letters, numbers, hyphen, ' ']);
       Validate.displayErrorMessage(errorPostcode);
       errorCounter++;
     }

@@ -3,13 +3,12 @@ pjax_config_page("new_account/realws", function(){
   return {
     onLoad: function() {
       Content.populate();
-      var residenceValue = $.cookie('residence');
-      if (!$.cookie('login') || !residenceValue) {
+      if (!$.cookie('login')) {
           window.location.href = page.url.url_for('login');
           return;
       }
       if (page.client.type !== 'virtual') {
-        window.location.href = page.url.url_for('user/myaccount');
+        window.location.href = page.url.url_for('user/my_accountws');
         return;
       }
       for (i = 0; i < page.user.loginid_array.length; i++){
@@ -18,11 +17,9 @@ pjax_config_page("new_account/realws", function(){
           return;
         }
       }
-      if (page.client.is_logged_in) {
-          client_form.set_virtual_email_id(page.client.email);
-      }
-      RealAccOpeningUI.setValues(residenceValue);
-
+      handle_residence_state_ws();
+      getSettings();
+      setResidenceWs();
       $('#real-form').submit(function(evt) {
         evt.preventDefault();
         if (RealAccOpeningUI.checkValidity()){
@@ -50,8 +47,8 @@ pjax_config_page("new_account/realws", function(){
                     'event': 'new_account',
                     'visitorID': loginid,
                     'bom_age': age,
-                    'bom_country': $('#residence-disabled option[value="' + residenceValue + '"]').html(),
-                    'bom_date_joined': Math.floor(Date.now() / 1000),
+                    'bom_country': $('#residence-disabled option[value="' + page.client.residence + '"]').html(),
+                    'bom_today': Math.floor(Date.now() / 1000),
                     'bom_email': page.user.email,
                     'bom_firstname': document.getElementById('fname').value,
                     'bom_lastname': document.getElementById('lname').value,
@@ -59,7 +56,7 @@ pjax_config_page("new_account/realws", function(){
                   });
                   var affiliateToken = $.cookie('affiliate_tracking');
                   if (affiliateToken) {
-                    dataLayer.push({'bom_affiliate_token': affiliateToken});
+                    dataLayer.push({'bom_affiliate_token': JSON.parse($.cookie('affiliate_tracking')).t});
                   }
 
                   //generate dropdown list and switch
@@ -68,11 +65,11 @@ pjax_config_page("new_account/realws", function(){
                   $('#client_loginid option[value="' + page.client.loginid + '"]').removeAttr('selected');
                   option.setAttribute('selected', 'selected');
                   $('#loginid-switch-form').submit();
-                } else if (error) {
+                } else if (error && error.message) {
                   if (/multiple real money accounts/.test(error.message)){
                     RealAccOpeningUI.showError('duplicate');
                   } else {
-                    RealAccOpeningUI.showError();
+                    RealAccOpeningUI.showError(error.message);
                   }
                 }
               }

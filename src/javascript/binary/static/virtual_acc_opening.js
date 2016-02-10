@@ -2,7 +2,7 @@ pjax_config_page("new_account/virtualws", function(){
   return {
     onLoad: function() {
       if (getCookieItem('login')) {
-          window.location.href = page.url.url_for('user/myaccount');
+          window.location.href = page.url.url_for('user/my_accountws');
           return;
       }
       handle_residence_state_ws();
@@ -12,7 +12,8 @@ pjax_config_page("new_account/virtualws", function(){
       var errorEmail = document.getElementById('error-email'),
           errorPassword = document.getElementById('error-password'),
           errorRPassword = document.getElementById('error-r-password'),
-          errorResidence = document.getElementById('error-residence');
+          errorResidence = document.getElementById('error-residence'),
+          errorAccount = document.getElementById('error-account-opening');
 
       if (isIE() === false) {
         $('#password').on('input', function() {
@@ -33,6 +34,7 @@ pjax_config_page("new_account/virtualws", function(){
 
           Validate.errorMessageResidence(residence, errorResidence);
           Validate.errorMessageEmail(email, errorEmail);
+          Validate.hideErrorMessage(errorAccount);
 
           if (Validate.errorMessagePassword(password, rPassword, errorPassword, errorRPassword) && !Validate.errorMessageEmail(email, errorEmail) && !Validate.errorMessageResidence(residence, errorResidence)){
             BinarySocket.init({
@@ -48,7 +50,11 @@ pjax_config_page("new_account/virtualws", function(){
                     $('#virtual-form').unbind('submit');
                     form.submit();
                   } else if (type === 'error' || error){
-                    if (/email address is already in use/.test(error.message)) {
+                    if (/account opening is unavailable/.test(error.message)) {
+                      errorAccount.textContent = error.message;
+                      Validate.displayErrorMessage(errorAccount);
+                      return;
+                    } else if (/email address is already in use/.test(error.message)) {
                       errorEmail.textContent = Content.localize().textDuplicatedEmail;
                     } else if (/email address is unverified/.test(error.message)) {
                       errorEmail.textContent = text.localize('The re-entered email address is incorrect.');
