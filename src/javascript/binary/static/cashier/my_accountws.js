@@ -14,7 +14,7 @@ var MyAccountWS = (function() {
         virtualTopupID = '#VRT_topup_link';
         authButtonID   = '#authenticate_button';
 
-        loginid = $.cookie('loginid');
+        loginid = page.client.loginid || $.cookie('loginid');
         isReal = !(/VRT/.test(loginid));
 
         BinarySocket.send({"get_settings": 1});
@@ -42,6 +42,7 @@ var MyAccountWS = (function() {
             if(get_settings.is_authenticated_payment_agent) {
                 $('#payment_agent').removeClass(hiddenClass);
             }
+            showNoticeMsg();
         }
 
         addGTMDataLayer(get_settings);
@@ -58,6 +59,7 @@ var MyAccountWS = (function() {
                     (text.localize('Deposit %1 virtual money into your account ') + loginid)
                     .replace('%1', response.balance.currency + ' 10000')
                 );
+            $(virtualTopupID).removeClass(hiddenClass);
         }
     };
 
@@ -83,13 +85,10 @@ var MyAccountWS = (function() {
 
         setCookie('allowed_markets', allowed_markets.length === 0 ? '' : allowed_markets.join(','));
         recheckLegacyTradeMenu();
-
-        showNoticeMsg();
     };
 
     var responsePayoutCurrencies = function (response) {
-        var currencies = {'client.currencies': response.payout_currencies};
-        setCookie('settings', JSON.stringify(currencies));
+        Settings.set('client.currencies', response.hasOwnProperty('payout_currencies') ? response.payout_currencies : '');
     };
 
     var shoWelcomeMessage = function(landing_company) {
@@ -103,9 +102,6 @@ var MyAccountWS = (function() {
                 ' (' + loginid + ').'
             )
             .removeClass(hiddenClass);
-
-        $('#cashier-portfolio').removeClass(hiddenClass);
-        $('#profit-statement').removeClass(hiddenClass);
     };
 
     var showNoticeMsg = function() {
@@ -152,7 +148,7 @@ var MyAccountWS = (function() {
                     'new_account' : 
                     page.url.param('login') ?
                         'log_in' :
-                        'page_load'; //TODO: pjax?
+                        'page_load';
 
             dataLayer.push(data);
             window.history.replaceState('My Account', title, newUrl);
