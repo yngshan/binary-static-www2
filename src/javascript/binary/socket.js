@@ -118,6 +118,7 @@ function BinarySocketClass() {
                 page.header.validate_cookies();
                 if (clock_started === false) {
                     page.header.start_clock_ws();
+                    page.client.check_storage_values();
                 }
             }
         };
@@ -149,6 +150,8 @@ function BinarySocketClass() {
                    page.header.time_counter(response);
                 } else if (type === 'logout') {
                    page.header.do_logout(response);
+                } else if (type === 'landing_company' && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.origin === 'page.client') {
+                   page.client.response_landing_company(response);
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code && response.error.code === 'RateLimit') {

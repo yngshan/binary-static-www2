@@ -18,13 +18,18 @@ var MyAccountWS = (function() {
         isReal = !(/VRT/.test(loginid));
 
         BinarySocket.send({"get_settings": 1});
-        BinarySocket.send({"payout_currencies": 1});
         BinarySocket.send({"get_account_status": 1});
+
+        if(!sessionStorage.getItem('currencies')) {
+            BinarySocket.send({"payout_currencies": 1});
+        }
 
         if(!isReal) {
             BinarySocket.send({"balance": 1, "req_id": 1});
             shoWelcomeMessage();
-            recheckLegacyTradeMenu();
+        }
+        else if(page.client.company) {
+            shoWelcomeMessage(page.client.company);
         }
         
         //checkDisabledAccount();
@@ -34,11 +39,6 @@ var MyAccountWS = (function() {
         var get_settings = response.get_settings;
 
         if(isReal) {
-            var country_code = get_settings.country_code;
-            if(country_code) {
-                BinarySocket.send({"landing_company": country_code});
-            }
-
             if(get_settings.is_authenticated_payment_agent) {
                 $('#payment_agent').removeClass(hiddenClass);
             }
@@ -69,26 +69,8 @@ var MyAccountWS = (function() {
         }
     };
 
-    var responseLandingCompany = function(response) {
-        var landing_company = response.landing_company,
-            company,
-            allowed_markets = [];
-        if(/MLT/.test(loginid) && landing_company.hasOwnProperty('gaming_company')) {
-            company = landing_company.gaming_company.name;
-            allowed_markets = landing_company.gaming_company.legal_allowed_markets;
-        }
-        else {
-            company = landing_company.financial_company.name;
-            allowed_markets = landing_company.financial_company.legal_allowed_markets;
-        }
-        shoWelcomeMessage(company);
-
-        setCookie('allowed_markets', allowed_markets.length === 0 ? '' : allowed_markets.join(','));
-        recheckLegacyTradeMenu();
-    };
-
     var responsePayoutCurrencies = function (response) {
-        Settings.set('client.currencies', response.hasOwnProperty('payout_currencies') ? response.payout_currencies : '');
+        sessionStorage.setItem('currencies', response.hasOwnProperty('payout_currencies') ? response.payout_currencies : '');
     };
 
     var shoWelcomeMessage = function(landing_company) {
@@ -110,11 +92,6 @@ var MyAccountWS = (function() {
         if(res.length === 2 && (/MLT/.test(res[0]) || /MLT/.test(res[1]))) {
             $('#investment_message').removeClass(hiddenClass);
         }
-    };
-
-    var recheckLegacyTradeMenu = function() {
-        page.header.menu.disable_not_allowed_markets();
-        page.header.register_dynamic_links();
     };
 
     var addGTMDataLayer = function(get_settings) {
@@ -153,14 +130,6 @@ var MyAccountWS = (function() {
             dataLayer.push(data);
             window.history.replaceState('My Account', title, newUrl);
         }
-    };
-
-    var setCookie = function (name, value) {
-        $.cookie(name, value, {
-            expires : new Date('Thu, 1 Jan 2037 12:00:00 GMT'),
-            path    : '/',
-            domain  : '.' + document.domain.split('.').slice(-2).join('.')
-        });
     };
 
     var checkDisabledAccount = function() {
@@ -203,7 +172,7 @@ var MyAccountWS = (function() {
                 responseGetSettings(response);
                 break;
             case 'landing_company':
-                responseLandingCompany(response);
+                shoWelcomeMessage(page.client.company);
                 break;
             case 'payout_currencies':
                 responsePayoutCurrencies(response);

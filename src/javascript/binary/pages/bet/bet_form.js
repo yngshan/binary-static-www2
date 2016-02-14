@@ -6,6 +6,33 @@ var BetForm = function () {
             this.actions.init();
             this.actions.register();
         },
+        storage_values: function() {
+            return {
+                init: function() {
+                    if(!sessionStorage.getItem('currencies')) {
+                        var that = this;
+                        
+                        BinarySocket.init({
+                            onmessage: function(msg) {
+                                that.response_handler(JSON.parse(msg.data));
+                            }
+                        });
+
+                        BinarySocket.send({'payout_currencies': 1});
+                    }
+                },
+                response_handler: function(response) {
+                    if (response && !response.hasOwnProperty('error')) {
+                        if(response.msg_type === 'payout_currencies') {
+                            sessionStorage.setItem('currencies', response.payout_currencies);
+                            if(response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough === 'attributes.restore.currency') {
+                                BetForm.attributes.restore.currency();
+                            }
+                        }
+                    }
+                },
+            };
+        }(),
         unregister_actions: function() {
             this.actions.unregister();
         },

@@ -109,6 +109,33 @@ var Client = function() {
     }
 };
 
+Client.prototype = {
+    check_storage_values: function() {
+        if(this.is_logged_in) {
+            if(this.is_real && !sessionStorage.getItem('allowed_markets') && page.client.residence) {
+                $('#topMenuStartBetting').addClass('invisible');
+                BinarySocket.send({'landing_company': page.client.residence, 'passthrough': {'origin': 'page.client'}});
+            }
+        }
+    },
+    response_landing_company: function(response) {
+        var allowed_markets = '';
+        if(/MLT/.test(this.loginid) && response.landing_company.hasOwnProperty('gaming_company')) {
+            this.company = response.landing_company.gaming_company.name;
+            allowed_markets = response.landing_company.gaming_company.legal_allowed_markets;
+        }
+        else {
+            this.company = response.landing_company.financial_company.name;
+            allowed_markets = response.landing_company.financial_company.legal_allowed_markets;
+        }
+        sessionStorage.setItem('allowed_markets', allowed_markets.length === 0 ? '' : allowed_markets.join(','));
+
+        page.header.menu.disable_not_allowed_markets();
+        page.header.menu.register_dynamic_links();
+        $('#topMenuStartBetting').removeClass('invisible');
+    },
+};
+
 var URL = function (url) { // jshint ignore:line
     this.is_valid = true;
     this.history_supported = window.history && window.history.pushState;
@@ -303,7 +330,11 @@ Menu.prototype = {
     },
     disable_not_allowed_markets: function() {
         // enable only allowed markets
-        var allowed_markets = $.cookie('allowed_markets');
+        var allowed_markets = sessionStorage.getItem('allowed_markets');
+        if(!allowed_markets && page.client.is_logged_in) {
+            page.client.check_storage_values();
+            return;
+        }
         var markets_array = allowed_markets ? allowed_markets.split(',') : [];
         var sub_items = $('li#topMenuStartBetting ul.sub_items');
         var isReal = $.cookie('loginid') && !(/VRT/.test($.cookie('loginid')));
@@ -382,13 +413,16 @@ Menu.prototype = {
     },
     register_dynamic_links: function() {
         var stored_market = page.url.param('market') || LocalStore.get('bet_page.market') || 'forex';
-        var allowed_markets = $.cookie('allowed_markets');
-        if(allowed_markets) {
-            var markets_array = allowed_markets.split(',');
-            if(markets_array.indexOf(stored_market) < 0) {
-                stored_market = markets_array[0];
-                LocalStore.set('bet_page.market', stored_market);
-            }
+        var allowed_markets = sessionStorage.getItem('allowed_markets');
+        if(!allowed_markets && page.client.is_logged_in) {
+            page.client.check_storage_values();
+            return;
+        }
+
+        var markets_array = allowed_markets.split(',');
+        if(markets_array.indexOf(stored_market) < 0) {
+            stored_market = markets_array[0];
+            LocalStore.set('bet_page.market', stored_market);
         }
         var start_trading = $('#topMenuStartBetting a:first');
         var trade_url = start_trading.attr("href");
@@ -550,7 +584,8 @@ Header.prototype = {
     do_logout : function(response){
         if("logout" in response && response.logout === 1){
             sessionStorage.setItem('currencies', '');
-            var cookies = ['login', 'loginid', 'loginid_list', 'email', 'settings', 'reality_check', 'affiliate_token', 'affiliate_tracking'];
+            sessionStorage.setItem('allowed_markets', '');
+            var cookies = ['login', 'loginid', 'loginid_list', 'email', 'settings', 'allowed_markets', 'reality_check', 'affiliate_token', 'affiliate_tracking'];
             var current_domain = '.' + document.domain.split('.').slice(-2).join('.');
             cookies.map(function(c){
                 $.removeCookie(c, {path: '/', domain: current_domain});
@@ -857,6 +892,7 @@ Page.prototype = {
         var that = this;
         $('#client_loginid').on('change', function() {
             sessionStorage.setItem('currencies', '');
+            sessionStorage.setItem('allowed_markets', '');
             $('#loginid-switch-form').submit();
         });
     },

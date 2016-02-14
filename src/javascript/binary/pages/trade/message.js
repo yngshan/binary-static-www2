@@ -18,7 +18,7 @@ var Message = (function () {
             } else if (type === 'contracts_for') {
                 processContract(response);
             } else if (type === 'payout_currencies') {
-                sessionStorage.setItem('currencies', msg.data);
+                sessionStorage.setItem('currencies', response.payout_currencies);
                 displayCurrencies();
                 Symbols.getSymbols(1);
             } else if (type === 'proposal') {
