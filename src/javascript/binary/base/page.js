@@ -421,7 +421,7 @@ Menu.prototype = {
             return;
         }
 
-        var markets_array = allowed_markets.split(',');
+        var markets_array = allowed_markets ? allowed_markets.split(',') : '';
         if(markets_array.indexOf(stored_market) < 0) {
             stored_market = markets_array[0];
             LocalStore.set('bet_page.market', stored_market);
@@ -432,7 +432,7 @@ Menu.prototype = {
             if(/market=/.test(trade_url)) {
                 trade_url = trade_url.replace(/market=\w+/, 'market=' + stored_market);
             } else {
-                trade_url += '&market=' + stored_market;
+                trade_url = trade_url.replace('?', '?market=' + stored_market + '&');
             }
             start_trading.attr("href", trade_url);
 
