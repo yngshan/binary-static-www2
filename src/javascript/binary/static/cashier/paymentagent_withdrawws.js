@@ -14,6 +14,7 @@ var PaymentAgentWithdrawWS = (function() {
         minAmount,
         maxAmount;
 
+    var verificationCode;
 
     var init = function() {
         containerID = '#paymentagent_withdrawal';
@@ -42,7 +43,11 @@ var PaymentAgentWithdrawWS = (function() {
         }
 
         if ($.cookie('verify_token')) {
+          verificationCode = $.cookie('verify_token');
           $.removeCookie('verify_token', {path: '/', domain: '.' + document.domain.split('.').slice(-2).join('.')});
+        } else {
+          showPageError(Content.localize().textTokenMissing, Content.localize().textClickHereToRestart.replace('%1', page.url.url_for('paymentagent/request_withdrawws')));
+          return false;
         }
 
         var residence = $.cookie('residence');
@@ -160,14 +165,14 @@ var PaymentAgentWithdrawWS = (function() {
     // ----------------------------
     var withdrawRequest = function(isDryRun) {
         var dry_run = isDryRun ? 1 : 0;
-
         BinarySocket.send({
             "paymentagent_withdraw" : 1,
             "paymentagent_loginid"  : formData.agent,
             "currency"    : formData.currency,
             "amount"      : formData.amount,
             "description" : formData.desc,
-            "dry_run"     : dry_run
+            "dry_run"     : dry_run,
+            "verification_code": verificationCode
         });
     };
 
@@ -220,9 +225,12 @@ var PaymentAgentWithdrawWS = (function() {
     // -----------------------------
     // ----- Message Functions -----
     // -----------------------------
-    var showPageError = function(errMsg) {
+    var showPageError = function(errMsg, noticeMsg) {
         setActiveView(viewIDs.error);
         $(viewIDs.error + ' > p').html(errMsg);
+        if (noticeMsg) {
+          $(viewIDs.error).append($('<p/>', {html: noticeMsg}));
+        }
     };
 
     var showError = function(fieldID, errMsg) {
