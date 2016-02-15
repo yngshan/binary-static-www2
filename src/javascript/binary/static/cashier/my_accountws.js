@@ -17,22 +17,22 @@ var MyAccountWS = (function() {
         loginid = page.client.loginid || $.cookie('loginid');
         isReal = !(/VRT/.test(loginid));
 
-        BinarySocket.send({"get_settings": 1});
+        if(!isReal) {
+            BinarySocket.send({"balance": 1, "req_id": 1});
+            showWelcomeMessage();
+        }
+        else if(sessionStorage.getItem('company')) {
+            showWelcomeMessage();
+        }
+        
         BinarySocket.send({"get_account_status": 1});
+        BinarySocket.send({"get_settings": 1});
 
         if(!sessionStorage.getItem('currencies')) {
             BinarySocket.send({"payout_currencies": 1});
         }
 
-        if(!isReal) {
-            BinarySocket.send({"balance": 1, "req_id": 1});
-            shoWelcomeMessage();
-        }
-        else if(page.client.company) {
-            shoWelcomeMessage(page.client.company);
-        }
-        
-        //checkDisabledAccount();
+        //checkDisabledAccount(); 
     };
 
     var responseGetSettings = function(response) {
@@ -73,7 +73,8 @@ var MyAccountWS = (function() {
         sessionStorage.setItem('currencies', response.hasOwnProperty('payout_currencies') ? response.payout_currencies : '');
     };
 
-    var shoWelcomeMessage = function(landing_company) {
+    var showWelcomeMessage = function() {
+        var landing_company = sessionStorage.getItem('company');
         $(welcomeTextID)
             .text(
                 text.localize(
@@ -172,7 +173,7 @@ var MyAccountWS = (function() {
                 responseGetSettings(response);
                 break;
             case 'landing_company':
-                shoWelcomeMessage(page.client.company);
+                showWelcomeMessage();
                 break;
             case 'payout_currencies':
                 responsePayoutCurrencies(response);

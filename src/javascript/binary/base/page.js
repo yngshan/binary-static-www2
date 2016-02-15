@@ -100,7 +100,7 @@ var Client = function() {
         if(this.is_logged_in && parsed[0] == this.loginid) {
             this.first_name = parsed[1];
             this.last_name = parsed[2];
-            this.name = this.first_name +  ' ' + this.last_name;
+            this.name = this.first_name + ' ' + this.last_name;
             this.email = parsed[3];
             this.phone = parsed[4];
         } else {
@@ -119,16 +119,18 @@ Client.prototype = {
         }
     },
     response_landing_company: function(response) {
-        var allowed_markets = '';
+        var allowed_markets = '', 
+            company = '';
         if(/MLT/.test(this.loginid) && response.landing_company.hasOwnProperty('gaming_company')) {
-            this.company = response.landing_company.gaming_company.name;
+            company = response.landing_company.gaming_company.name;
             allowed_markets = response.landing_company.gaming_company.legal_allowed_markets;
         }
         else {
-            this.company = response.landing_company.financial_company.name;
+            company  = response.landing_company.financial_company.name;
             allowed_markets = response.landing_company.financial_company.legal_allowed_markets;
         }
         sessionStorage.setItem('allowed_markets', allowed_markets.length === 0 ? '' : allowed_markets.join(','));
+        sessionStorage.setItem('company', company);
 
         page.header.menu.disable_not_allowed_markets();
         page.header.menu.register_dynamic_links();
@@ -585,6 +587,7 @@ Header.prototype = {
         if("logout" in response && response.logout === 1){
             sessionStorage.setItem('currencies', '');
             sessionStorage.setItem('allowed_markets', '');
+            sessionStorage.setItem('company', '');
             var cookies = ['login', 'loginid', 'loginid_list', 'email', 'settings', 'allowed_markets', 'reality_check', 'affiliate_token', 'affiliate_tracking'];
             var current_domain = '.' + document.domain.split('.').slice(-2).join('.');
             cookies.map(function(c){
@@ -893,6 +896,7 @@ Page.prototype = {
         $('#client_loginid').on('change', function() {
             sessionStorage.setItem('currencies', '');
             sessionStorage.setItem('allowed_markets', '');
+            sessionStorage.setItem('company', '');
             $('#loginid-switch-form').submit();
         });
     },
