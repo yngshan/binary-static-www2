@@ -120,8 +120,8 @@ var APITokenWS = (function() {
 
     var createTableRow = function(token) {
         var lastUsed = token.last_used ? token.last_used : text.localize('Never Used');
-        var scopes = token.scopes.map(function () {
-            return this.capitalizeFirstLetter();
+        var scopes = token.scopes.map(function (v) {
+            return v.capitalizeFirstLetter();
         });
         var $tableRow = Table.createFlexTableRow(
             [
