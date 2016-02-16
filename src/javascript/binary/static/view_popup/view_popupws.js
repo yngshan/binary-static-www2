@@ -285,11 +285,9 @@ var ViewPopupWS = (function() {
                 '<ul>' +
                     '<li><a href="#sell_details_table">'   + text.localize('Table')       + '</a></li>' +
                     '<li><a href="#sell_details_chart">'   + text.localize('Chart')       + '</a></li>' +
-                    '<li><a href="#sell_details_explain">' + text.localize('Explanation') + '</a></li>' +
                 '</ul>' +
                 '<div id="sell_details_table"></div>'   + 
                 '<div id="sell_details_chart"></div>'   +
-                '<div id="sell_details_explain"></div>' +
             '</div>');
 
         $tabs.find('#sell_details_table').html(
@@ -309,33 +307,6 @@ var ViewPopupWS = (function() {
                         '<td id="trade_details_purchase_price_desc"></td>' + '<td id="trade_details_indicative_price_desc" class="details_live"></td>'  + '<td id="trade_details_final_price_desc"></td></tr>' +
                 '</table>' +
             '</div>');
-
-        var explanation = 
-            '<h3>' + text.localize('Entry spot') + '</h3>' +
-            '<p>' + text.localize('If you select a <strong>start time</strong> of "Now", the <strong>start time</strong> is when the contract is processed by our servers and the <strong>entry spot</strong> is the <strong>next tick</strong> thereafter.') +
-                '<br />' + text.localize('If you select a <strong>start time</strong> in the future, the <strong>start time</strong> is that which is selected and the <strong>entry spot</strong> is the price in effect at that time.') +
-            '</p><br />' +
-            '<h3>' + text.localize('Exit spot') + '</h3>' +
-            '<p>' + text.localize('The <strong>exit spot</strong> is the spot at the <strong>end time</strong>.') +
-                '<br />' + text.localize('If you select a <strong>start time</strong> of "Now", the <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration).') +
-                '<br />' + text.localize('If you select a specific <strong>end time</strong>, the <strong>end time</strong> is the selected time.') +
-            '</p>';
-        if(/EXPIRY/.test(contract.shortcode)) {
-            explanation = 
-                '<h3>' + text.localize('Exit spot') + '</h3>' +
-                '<p>' + text.localize('The <strong>exit spot</strong> is the spot at the <strong>end time</strong>.') +
-                '<p>' + text.localize('The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration).') + '</p>' +
-                '<p>' + text.localize('The <strong>start time</strong> is when the contract is processed by our servers.') + '</p>';
-        }
-        else if(/TOUCH|UPORDOWN|RANGE/.test(contract.shortcode)) {
-            explanation = 
-                '<h3>' + text.localize('Contract period') + '</h3>' +
-                '<p>' + text.localize('The <strong>contract period</strong> is the period between the <strong>next tick</strong> after the <strong>start time</strong> and the <strong>end time</strong>.') + '</p>' +
-                '<p>' + text.localize('The <strong>start time</strong> is when the contract is processed by our servers.') + '</p>' +
-                '<p>' + text.localize('The <strong>end time</strong> is the selected number of minutes/hours after the <strong>start time</strong> (if less than one day in duration), or at the end of the trading day (if one day or more in duration).') + '</p>';
-        }
-
-        $tabs.find('#sell_details_explain').html('<div id="explanation-content" class="grd-grid-12">' + explanation + '</div>');
 
         $Container.find('#' + wrapperID)
             .append($tabs)
