@@ -82,12 +82,12 @@ var MyAccountWS = (function() {
         var landing_company = sessionStorage.getItem('company');
         $(welcomeTextID)
             .text(
-                text.localize(
+                (text.localize(
                     isReal ? 
-                        "You're currently logged in to your real money account with %1 " : 
-                        "You're currently logged in to your virtual money account "
+                        "You're currently logged in to your real money account with %1" : 
+                        "You're currently logged in to your virtual money account"
                 ).replace('%1', landing_company || '') + 
-                ' (' + loginid + ').'
+                ' (' + loginid + ').').replace(/\s\s+/g, ' ')
             )
             .removeClass(hiddenClass);
     };

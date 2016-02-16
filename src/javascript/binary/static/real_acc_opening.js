@@ -60,6 +60,7 @@ pjax_config_page("new_account/realws", function(){
                   }
 
                   //generate dropdown list and switch
+                  page.client.clear_storage_values();
                   var option = new Option('Real Account (' + loginid + ')', loginid);
                   document.getElementById('client_loginid').appendChild(option);
                   $('#client_loginid option[value="' + page.client.loginid + '"]').removeAttr('selected');
