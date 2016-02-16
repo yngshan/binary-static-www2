@@ -136,6 +136,15 @@ Client.prototype = {
         page.header.menu.register_dynamic_links();
         $('#topMenuStartBetting').removeClass('invisible');
     },
+    clear_storage_values: function() {
+        sessionStorage.setItem('currencies', '');
+        sessionStorage.setItem('allowed_markets', '');
+        sessionStorage.setItem('company', '');
+    },
+    update_storage_values: function() {
+        this.clear_storage_values();
+        this.check_storage_values();
+    },
 };
 
 var URL = function (url) { // jshint ignore:line
@@ -352,7 +361,7 @@ Menu.prototype = {
                 var span = $(this).find('span');
                 var span_text = span.text();
                 var span_href = span.attr('link_url');
-                span.replaceWith($('<a/>', {class: 'link pjaxload', text: span_text, href: span_href}));
+                span.replaceWith($('<a/>', {class: 'link', text: span_text, href: span_href}));
             }
         });
     },
@@ -438,11 +447,6 @@ Menu.prototype = {
 
             $('#mobile-menu #topMenuStartBetting a.trading_link').attr('href', trade_url);
         }
-
-        start_trading.on('click', function(event) {
-            event.preventDefault();
-            load_with_pjax(trade_url);
-        }).addClass('unbind_later');
     }
 };
 
@@ -585,9 +589,7 @@ Header.prototype = {
     },
     do_logout : function(response){
         if("logout" in response && response.logout === 1){
-            sessionStorage.setItem('currencies', '');
-            sessionStorage.setItem('allowed_markets', '');
-            sessionStorage.setItem('company', '');
+            page.client.clear_storage_values();
             var cookies = ['login', 'loginid', 'loginid_list', 'email', 'settings', 'allowed_markets', 'reality_check', 'affiliate_token', 'affiliate_tracking'];
             var current_domain = '.' + document.domain.split('.').slice(-2).join('.');
             cookies.map(function(c){
@@ -894,9 +896,7 @@ Page.prototype = {
     on_change_loginid: function() {
         var that = this;
         $('#client_loginid').on('change', function() {
-            sessionStorage.setItem('currencies', '');
-            sessionStorage.setItem('allowed_markets', '');
-            sessionStorage.setItem('company', '');
+            page.client.clear_storage_values();
             $('#loginid-switch-form').submit();
         });
     },

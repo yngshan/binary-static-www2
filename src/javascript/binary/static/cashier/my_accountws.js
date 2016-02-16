@@ -21,8 +21,13 @@ var MyAccountWS = (function() {
             BinarySocket.send({"balance": 1, "req_id": 1});
             showWelcomeMessage();
         }
-        else if(sessionStorage.getItem('company')) {
-            showWelcomeMessage();
+        else {
+            if(page.url.param('login')) {
+                page.client.update_storage_values();
+            }
+            if(sessionStorage.getItem('company')) {
+                showWelcomeMessage();
+            }
         }
         
         BinarySocket.send({"get_account_status": 1});
