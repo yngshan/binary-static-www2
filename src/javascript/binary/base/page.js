@@ -550,20 +550,37 @@ Header.prototype = {
     do_logout : function(response){
         if("logout" in response && response.logout === 1){
             sessionStorage.setItem('currencies', '');
-            var cookies = ['login', 'loginid', 'loginid_list', 'email', 'settings', 'reality_check', 'affiliate_token', 'affiliate_tracking'];
-            var current_domain = '.' + document.domain.split('.').slice(-2).join('.');
+            var cookies = ['login', 'loginid', 'loginid_list', 'email', 'settings', 'reality_check', 'affiliate_token', 'affiliate_tracking', 'residence', 'allowed_markets'];
+            var current_domain = ['.' + document.domain.split('.').slice(-2).join('.'), document.domain];
+            var cookie_path = ['/'];
+            if (window.location.pathname.split('/')[1] !== '') {
+              cookie_path.push('/' + window.location.pathname.split('/')[1]);
+            }
+            var regex;
             cookies.map(function(c){
-                $.removeCookie(c, {path: '/', domain: current_domain});
+              regex = new RegExp(c);
+              $.removeCookie(c, {path: cookie_path[0], domain: current_domain[0]});
+              $.removeCookie(c);
+              if (regex.test(document.cookie) && cookie_path[1]) {
+                  $.removeCookie(c, {path: cookie_path[1], domain: current_domain[0]});
+                  $.removeCookie(c, {path: cookie_path[1]});
+              }
             });
-
             var redirectPage;
+                redirectCheck = 1;
             if(response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.hasOwnProperty('redirect')) {
                 redirectPage = response.echo_req.passthrough.redirect;
+                regex = new RegExp(redirectPage);
+                if (regex.test(window.location.pathname)) {
+                  redirectCheck = 0;
+                }
             }
             else {
                 redirectPage = ''; //redirect to homepage
             }
-            window.location.href = page.url.url_for(redirectPage);
+            if (redirectCheck) {
+              window.location.href = page.url.url_for(redirectPage);
+            }
         }
     },
 };
