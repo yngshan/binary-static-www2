@@ -243,11 +243,11 @@ var SelfExlusionWS = (function() {
 pjax_config_page("user/self_exclusionws", function() {
     return {
         onLoad: function() {
-        	if (!getCookieItem('login')) {
+        	if (!page.client.is_logged_in) {
                 window.location.href = page.url.url_for('login');
                 return;
             }
-            if((/VRT/.test($.cookie('loginid')))){
+            if(!page.client.is_real){
                 window.location.href = page.url.url_for('user/settingsws');
                 return;
             }

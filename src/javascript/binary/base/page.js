@@ -73,16 +73,12 @@ var Client = function() {
     this.loginid =  $.cookie('loginid');
     this.residence =  $.cookie('residence');
     this.is_logged_in = false;
-    this.is_real = false;
+    this.is_real = !TUser.get().is_virtual;
     if(this.loginid === null || typeof this.loginid === "undefined") {
         this.type = 'logged_out';
-    } else if(/VRT/.test(this.loginid)) {
-        this.type = 'virtual';
-        this.is_logged_in = true;
     } else {
-        this.type = 'real';
+        this.type = this.is_real ? 'real' : 'virtual';
         this.is_logged_in = true;
-        this.is_real = true;
     }
 
     var dl_info = gtm_data_layer_info();
@@ -107,6 +103,16 @@ var Client = function() {
             SessionStore.remove('client_info');
         }
     }
+};
+
+Client.prototype = {
+    redirect_if_not_logged_in: function(redirectToPage) {
+        if(!this.is_logged_in) {
+            window.location.href = page.url.url_for(redirectPage || 'login');
+        }
+
+        return !this.is_logged_in;
+    },
 };
 
 var URL = function (url) { // jshint ignore:line
@@ -306,10 +312,9 @@ Menu.prototype = {
         var allowed_markets = $.cookie('allowed_markets');
         var markets_array = allowed_markets ? allowed_markets.split(',') : [];
         var sub_items = $('li#topMenuStartBetting ul.sub_items');
-        var isReal = $.cookie('loginid') && !(/VRT/.test($.cookie('loginid')));
         sub_items.find('li').each(function () {
             var link_id = $(this).attr('id').split('_')[1];
-            if(markets_array.indexOf(link_id) < 0 && isReal) {
+            if(markets_array.indexOf(link_id) < 0 && page.client.is_real) {
                 var link = $(this).find('a');
                 var link_text = link.text();
                 var link_href = link.attr('href');

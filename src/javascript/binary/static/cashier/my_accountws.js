@@ -15,7 +15,7 @@ var MyAccountWS = (function() {
         authButtonID   = '#authenticate_button';
 
         loginid = page.client.loginid || $.cookie('loginid');
-        isReal = !(/VRT/.test(loginid));
+        isReal = page.client.is_real;
 
         BinarySocket.send({"get_settings": 1});
         BinarySocket.send({"payout_currencies": 1});
@@ -223,7 +223,7 @@ var MyAccountWS = (function() {
 pjax_config_page("user/my_accountws", function() {
     return {
         onLoad: function() {
-            if (!getCookieItem('login')) {
+            if (!page.client.is_logged_in) {
                 window.location.href = page.url.url_for('login');
                 return;
             }

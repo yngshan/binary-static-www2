@@ -19,7 +19,7 @@ var TopUpVirtualWS = (function() {
 
         $views.addClass('hidden');
 
-        if(!(/VRT/).test(loginID)) {
+        if(page.client.is_real) {
             showMessage(text.localize('Sorry, this feature is available to virtual accounts only.'), false);
         }
         else {
@@ -66,7 +66,7 @@ var TopUpVirtualWS = (function() {
 pjax_config_page("top_up_virtualws", function() {
     return {
         onLoad: function() {
-        	if (!getCookieItem('login')) {
+            if (!page.client.is_logged_in) {
                 window.location.href = page.url.url_for('login');
                 return;
             }

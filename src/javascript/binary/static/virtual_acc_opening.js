@@ -1,7 +1,7 @@
 pjax_config_page("new_account/virtualws", function(){
   return {
     onLoad: function() {
-      if (getCookieItem('login')) {
+      if (page.client.is_logged_in) {
           window.location.href = page.url.url_for('user/my_accountws');
           return;
       }

@@ -3,7 +3,7 @@
 pjax_config_page("user/profit_table", function(){
     return {
         onLoad: function() {
-            if (!getCookieItem('login')) {
+            if (!page.client.is_logged_in) {
                 window.location.href = page.url.url_for('login');
                 return;
             }

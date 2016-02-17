@@ -159,17 +159,17 @@ var securityws = (function(){
 pjax_config_page("user/settings/securityws", function() {
     return {
         onLoad: function() {
-          if (!getCookieItem('login')) {
-              window.location.href = page.url.url_for('login');
-              return;
-          }
-          if((/VRT/.test($.cookie('loginid')))){
-              window.location.href = ("/");
-          }
-
-          Content.populate();
-
-          BinarySocket.init({
+            if (!page.client.is_logged_in) {
+                window.location.href = page.url.url_for('login');
+                return;
+            }
+            if(!page.client.is_real){
+                window.location.href = ("/");
+            }
+  
+            Content.populate();
+  
+            BinarySocket.init({
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);
                     if (response) {

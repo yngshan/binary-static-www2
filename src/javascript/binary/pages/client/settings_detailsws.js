@@ -29,13 +29,10 @@ var SettingsDetailsWS = (function() {
     var getDetails = function(response) {
         var data = response.get_settings;
 
-        // Check if it is a real account or not
-        var isReal = !(/VRT/.test($.cookie('loginid')));
-
         $('#lblCountry').text(data.country);
         $('#lblEmail').text(data.email);
 
-        if(!isReal){ // Virtual Account
+        if(!page.client.is_real){ // Virtual Account
             $(RealAccElements).remove();
         } 
         else { // Real Account
@@ -211,7 +208,7 @@ var SettingsDetailsWS = (function() {
 pjax_config_page("settings/detailsws", function() {
     return {
         onLoad: function() {
-            if (!$.cookie('login')) {
+            if (!page.client.is_logged_in) {
                 window.location.href = page.url.url_for('login');
                 return;
             }
