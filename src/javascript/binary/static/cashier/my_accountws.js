@@ -15,7 +15,7 @@ var MyAccountWS = (function() {
         authButtonID   = '#authenticate_button';
 
         loginid = page.client.loginid || $.cookie('loginid');
-        isReal = !(/VRT/.test(loginid));
+        isReal = !TUser.get().is_virtual;
 
         if(!isReal) {
             BinarySocket.send({"balance": 1, "req_id": 1});

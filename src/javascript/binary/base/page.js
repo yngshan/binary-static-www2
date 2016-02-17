@@ -114,21 +114,18 @@ Client.prototype = {
         if(this.is_logged_in) {
             if(this.is_real && !sessionStorage.getItem('allowed_markets') && page.client.residence) {
                 $('#topMenuStartBetting').addClass('invisible');
-                BinarySocket.send({'landing_company': page.client.residence, 'passthrough': {'origin': 'page.client'}});
+                BinarySocket.send({'landing_company_details': TUser.get().landing_company_name, 'passthrough': {'origin': 'page.client'}});
             }
         }
     },
-    response_landing_company: function(response) {
-        var allowed_markets = '', 
-            company = '';
-        if(/MLT/.test(this.loginid) && response.landing_company.hasOwnProperty('gaming_company')) {
-            company = response.landing_company.gaming_company.name;
-            allowed_markets = response.landing_company.gaming_company.legal_allowed_markets;
+    response_landing_company_details: function(response) {
+        if(response.hasOwnProperty('error')) { // TO BE REMOVED!
+            console.log(response.error.message);
+            return;
         }
-        else {
-            company  = response.landing_company.financial_company.name;
-            allowed_markets = response.landing_company.financial_company.legal_allowed_markets;
-        }
+        var allowed_markets = response.landing_company_details.legal_allowed_markets;
+        var company = response.landing_company_details.name;
+
         sessionStorage.setItem('allowed_markets', allowed_markets.length === 0 ? '' : allowed_markets.join(','));
         sessionStorage.setItem('company', company);
 
