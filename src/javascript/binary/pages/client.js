@@ -29,42 +29,6 @@ var select_user_country = function() {
     }
 };
 
-var disable_residence = function () {
-    var vr_residence = page.client.residence;
-    if (vr_residence.length > 0 && vr_residence == $('#residence').val()) {
-        $('#residence').attr('disabled', true);
-    }
-};
-
-var enable_residence_form_submit = function () {
-    $('form#openAccForm').submit(function (event) {
-        var field_error = false;
-        $("form#openAccForm").find('p.errorfield:visible').each(function() {
-            if ($(this).text().length > 0) {
-                field_error = true;
-                return false;
-            }
-        });
-        if (!field_error) {
-            $('#residence').removeAttr('disabled');
-        }
-    });
-};
-
-/*pjax_config_page('new_account/real', function() {
-    return {
-        onLoad: function() {
-            client_form.on_residence_change();
-            select_user_country();
-            disable_residence();
-            enable_residence_form_submit();
-            if (page.client.is_logged_in) {
-                client_form.set_virtual_email_id(page.client.email);
-            }
-        }
-    };
-});*/
-
 var upgrade_investment_disabled_field = function () {
     if (page.client.is_real) {
         var fields = ['mrms', 'fname', 'lname', 'dobdd', 'dobmm', 'dobyy', 'residence', 'secretquestion', 'secretanswer'];
