@@ -182,7 +182,7 @@ var APITokenWS = (function() {
         var scopes = $('input:checkbox[name="scopes[]"]:checked').map(function () {
             return this.value;
         }).get();
-        if (scopes.length == 0) {
+        if (scopes.length === 0) {
             showError('scopes', text.localize('Please select at least one scope.'));
         }
 
