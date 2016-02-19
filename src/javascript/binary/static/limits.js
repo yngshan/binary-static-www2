@@ -12,9 +12,9 @@ pjax_config_page("limitsws", function(){
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);
 
-                    if (/^VRT/.test(TUser.get().loginid)) {
+                    if (!page.client.is_real) {
                         LimitsWS.limitsError();
-                    } else if (response && !/^VRT/.test(TUser.get().loginid)) {
+                    } else if (response) {
                         var type = response.msg_type;
                         var error = response.error;
 
