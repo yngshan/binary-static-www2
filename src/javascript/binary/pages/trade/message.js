@@ -29,11 +29,7 @@ var Message = (function () {
                 processTick(response);
             } else if (type === 'history') {
                 var digit_info = TradingAnalysis.digit_info();
-                if(response.req_id === 1){
-                    digit_info.add_content();
-                    digit_info.on_latest();
-                    digit_info.show_chart(sessionStorage.getItem('underlying'), response.history.prices);
-                } else if(response.req_id === 2){
+                if(response.req_id === 1 || response.req_id === 2){
                     digit_info.show_chart(response.echo_req.ticks_history, response.history.prices);
                 } else
                     Tick.processHistory(response);
