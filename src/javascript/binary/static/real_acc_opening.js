@@ -42,17 +42,16 @@ pjax_config_page("new_account/realws", function(){
                   var gtmDataLayer = document.getElementsByClassName('gtm_data_layer')[0];
                   var age = new Date().getFullYear() - document.getElementById('dobyy').value;
                   document.getElementById('event').innerHTML = 'new_account';
-                  dataLayer.push({
-                    'language': page.language(),
-                    'event': 'new_account',
-                    'visitorID': loginid,
-                    'bom_age': age,
-                    'bom_country': $('#residence-disabled option[value="' + page.client.residence + '"]').html(),
-                    'bom_today': Math.floor(Date.now() / 1000),
-                    'bom_email': page.user.email,
-                    'bom_firstname': document.getElementById('fname').value,
-                    'bom_lastname': document.getElementById('lname').value,
-                    'bom_phone': document.getElementById('tel').value
+                  GTM.push_data_layer({
+                    'event'         : 'new_account',
+                    'visitorID'     : loginid,
+                    'bom_age'       : age,
+                    'bom_country'   : $('#residence-disabled option[value="' + page.client.residence + '"]').html(),
+                    'bom_today'     : Math.floor(Date.now() / 1000),
+                    'bom_email'     : page.user.email,
+                    'bom_firstname' : document.getElementById('fname').value,
+                    'bom_lastname'  : document.getElementById('lname').value,
+                    'bom_phone'     : document.getElementById('tel').value
                   });
                   var affiliateToken = $.cookie('affiliate_tracking');
                   if (affiliateToken) {
