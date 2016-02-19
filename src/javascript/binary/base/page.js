@@ -72,14 +72,7 @@ var User = function() {
 var Client = function() {
     this.loginid =  $.cookie('loginid');
     this.residence =  $.cookie('residence');
-    this.is_logged_in = false;
-    this.is_real = !TUser.get().is_virtual;
-    if(this.loginid === null || typeof this.loginid === "undefined") {
-        this.type = 'logged_out';
-    } else {
-        this.type = this.is_real ? 'real' : 'virtual';
-        this.is_logged_in = true;
-    }
+    this.is_logged_in = this.loginid && typeof this.loginid !== 'undefined';
 
     var dl_info = gtm_data_layer_info();
     if(dl_info.length > 0) {
@@ -106,7 +99,7 @@ var Client = function() {
 };
 
 Client.prototype = {
-    redirect_if_not_logged_in: function(redirectToPage) {
+    redirect_if_logout: function(redirectPage) {
         if(!this.is_logged_in) {
             window.location.href = page.url.url_for(redirectPage || 'login');
         }
@@ -314,7 +307,7 @@ Menu.prototype = {
         var sub_items = $('li#topMenuStartBetting ul.sub_items');
         sub_items.find('li').each(function () {
             var link_id = $(this).attr('id').split('_')[1];
-            if(markets_array.indexOf(link_id) < 0 && page.client.is_real) {
+            if(markets_array.indexOf(link_id) < 0 && !TUser.get().is_virtual) {
                 var link = $(this).find('a');
                 var link_text = link.text();
                 var link_href = link.attr('href');
@@ -720,7 +713,7 @@ Contents.prototype = {
     activate_by_client_type: function() {
         $('.by_client_type').addClass('invisible');
         if(this.client.is_logged_in) {
-            if(this.client.is_real) {
+            if(!TUser.get().is_virtual) {
                 $('.by_client_type.client_real').removeClass('invisible');
                 $('.by_client_type.client_real').show();
 
@@ -775,7 +768,7 @@ Contents.prototype = {
             var loginid_array = this.user.loginid_array;
             var c_config = page.settings.get('countries_list')[this.client.residence];
 
-            if (!this.client.is_real) {
+            if (TUser.get().is_virtual) {
                 var show_upgrade = true;
                 for (var i=0;i<loginid_array.length;i++) {
                     if (loginid_array[i].real) {

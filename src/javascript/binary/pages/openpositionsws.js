@@ -153,8 +153,7 @@ var PortfolioWS =  (function() {
 pjax_config_page("user/openpositionsws", function() {
     return {
         onLoad: function() {
-            if (!page.client.is_logged_in) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
             BinarySocket.init({

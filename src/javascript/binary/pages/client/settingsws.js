@@ -5,7 +5,7 @@ var SettingsWS = (function() {
         var classHidden = 'invisible',
             classReal   = '.real';
 
-        if(page.client.is_real) {
+        if(!TUser.get().is_virtual) {
             $(classReal).removeClass(classHidden);
         }
         else {
@@ -24,8 +24,7 @@ var SettingsWS = (function() {
 pjax_config_page("settingsws", function() {
     return {
         onLoad: function() {
-            if (!page.client.is_logged_in) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
 

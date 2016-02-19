@@ -66,7 +66,7 @@ var enable_residence_form_submit = function () {
 });*/
 
 var upgrade_investment_disabled_field = function () {
-    if (page.client.is_real) {
+    if (!TUser.get().is_virtual) {
         var fields = ['mrms', 'fname', 'lname', 'dobdd', 'dobmm', 'dobyy', 'residence', 'secretquestion', 'secretanswer'];
         fields.forEach(function (element, index, array) {
             var obj = $('#'+element);
@@ -92,7 +92,7 @@ var financial_enable_fields_form_submit = function () {
             return;
         }
 
-        if (page.client.is_real) {
+        if (!TUser.get().is_virtual) {
             var fields = ['mrms', 'fname', 'lname', 'dobdd', 'dobmm', 'dobyy', 'residence', 'secretquestion', 'secretanswer'];
             fields.forEach(function (element, index, array) {
                 var obj = $('#'+element);
@@ -140,7 +140,7 @@ var validate_hedging_fields_form_submit = function () {
 pjax_config_page('new_account/maltainvest', function() {
     return {
         onLoad: function() {
-            if (!page.client.is_real) {
+            if (TUser.get().is_virtual) {
                 client_form.on_residence_change();
                 select_user_country();
             }

@@ -16,22 +16,19 @@ var securityws = (function(){
         $("#changeCashierLock").show();
 
         clearErrors();
+
         $form.find("button").attr("value","Update");
 
+        var loginToken = CommonData.getApiToken();
         $form.find("button").on("click", function(e){
             e.preventDefault();
             e.stopPropagation();
             if(validateForm() === false){
                 return false;
             }
-            if($(this).attr("value") === "Update"){
-                BinarySocket.send({"authorize": $.cookie('login'), "passthrough": {"value": "lock_password"}});
-            }
-            else{
-                BinarySocket.send({"authorize": $.cookie('login'), "passthrough": {"value": "unlock_password"}});
-            }
+            BinarySocket.send({"authorize": loginToken, "passthrough": {"value": $(this).attr("value") === "Update" ? "lock_password" : "unlock_password"}});
         });
-        BinarySocket.send({"authorize": $.cookie('login'), "passthrough": {"value": "is_locked"}});
+        BinarySocket.send({"authorize": loginToken, "passthrough": {"value": "is_locked"}});
     };
 
     var validateForm = function(){
@@ -159,11 +156,10 @@ var securityws = (function(){
 pjax_config_page("user/settings/securityws", function() {
     return {
         onLoad: function() {
-            if (!page.client.is_logged_in) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
-            if(!page.client.is_real){
+            if(TUser.get().is_virtual) {
                 window.location.href = ("/");
             }
   

@@ -4,8 +4,7 @@ var TopUpVirtualWS = (function() {
     var containerID,
         viewIDs,
         hiddenClass,
-        $views,
-        loginID;
+        $views;
 
     var init = function() {
         containerID = '#topup_virtual';
@@ -15,11 +14,10 @@ var TopUpVirtualWS = (function() {
             error   : '#viewError',
             success : '#viewSuccess'
         };
-        loginID = getCookieItem('loginid');
 
         $views.addClass('hidden');
 
-        if(page.client.is_real) {
+        if(!TUser.get().is_virtual) {
             showMessage(text.localize('Sorry, this feature is available to virtual accounts only.'), false);
         }
         else {
@@ -39,7 +37,7 @@ var TopUpVirtualWS = (function() {
                 text.localize('%1 %2 has been credited to your Virtual money account %3')
                     .replace('%1', response.topup_virtual.currency)
                     .replace('%2', response.topup_virtual.amount)
-                    .replace('%3', loginID),
+                    .replace('%3', getCookieItem('loginid')),
                 true);
         }
     };
@@ -66,8 +64,7 @@ var TopUpVirtualWS = (function() {
 pjax_config_page("top_up_virtualws", function() {
     return {
         onLoad: function() {
-            if (!page.client.is_logged_in) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
 

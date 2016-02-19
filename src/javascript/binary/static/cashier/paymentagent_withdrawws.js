@@ -37,7 +37,7 @@ var PaymentAgentWithdrawWS = (function() {
 
         $views.addClass('hidden');
 
-        if(!page.client.is_real) { // Virtual Account
+        if(TUser.get().is_virtual) { // Virtual Account
             showPageError(text.localize('You are not authorized for withdrawal via payment agent.'));
             return false;
         }
@@ -261,8 +261,7 @@ var PaymentAgentWithdrawWS = (function() {
 pjax_config_page("paymentagent/withdrawws", function() {
     return {
         onLoad: function() {
-            if (!page.client.is_logged_in) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
             BinarySocket.init({

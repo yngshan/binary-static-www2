@@ -1,7 +1,7 @@
 pjax_config_page("user/statement", function(){
     return {
         onLoad: function() {
-            if (page.client.redirect_if_not_logged_in());
+            if (page.client.redirect_if_logout()) {
                 return;
             }
             BinarySocket.init({

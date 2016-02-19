@@ -32,7 +32,7 @@ var SettingsDetailsWS = (function() {
         $('#lblCountry').text(data.country);
         $('#lblEmail').text(data.email);
 
-        if(!page.client.is_real){ // Virtual Account
+        if(TUser.get().is_virtual){ // Virtual Account
             $(RealAccElements).remove();
         } 
         else { // Real Account
@@ -208,8 +208,7 @@ var SettingsDetailsWS = (function() {
 pjax_config_page("settings/detailsws", function() {
     return {
         onLoad: function() {
-            if (!page.client.is_logged_in) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
 

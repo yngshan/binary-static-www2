@@ -257,11 +257,10 @@ var account_transferws = (function(){
 pjax_config_page("cashier/account_transferws", function() {
     return {
         onLoad: function() {
-            if (!page.client.is_logged_in) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
-            if(!page.client.is_real){
+            if(TUser.get().is_virtual){
                 window.location.href = ("/");
             }
 

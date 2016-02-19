@@ -15,25 +15,24 @@ var MyAccountWS = (function() {
         authButtonID   = '#authenticate_button';
 
         loginid = page.client.loginid || $.cookie('loginid');
-        isReal = page.client.is_real;
 
         BinarySocket.send({"get_settings": 1});
         BinarySocket.send({"payout_currencies": 1});
         BinarySocket.send({"get_account_status": 1});
 
-        if(!isReal) {
-            BinarySocket.send({"balance": 1, "req_id": 1});
-            shoWelcomeMessage();
-            recheckLegacyTradeMenu();
-        }
-        
         //checkDisabledAccount();
     };
 
     var responseGetSettings = function(response) {
         var get_settings = response.get_settings;
 
-        if(isReal) {
+        isReal = !TUser.get().is_virtual;
+        if(!isReal) {
+            shoWelcomeMessage();
+            topUpLink();
+            recheckLegacyTradeMenu();
+        }
+        else {
             var country_code = get_settings.country_code;
             if(country_code) {
                 BinarySocket.send({"landing_company": country_code});
@@ -48,16 +47,12 @@ var MyAccountWS = (function() {
         addGTMDataLayer(get_settings);
     };
 
-    var responseBalance = function(response) {
-        if(!response.echo_req.req_id || parseInt(response.req_id, 10) !== 1) {
-            return;
-        }
-
-        if(response.balance.balance < 1000) {
+    var topUpLink = function() {
+        if(TUser.get().balance < 1000) {
             $(virtualTopupID + ' a')
                 .text(
                     (text.localize('Deposit %1 virtual money into your account ') + loginid)
-                    .replace('%1', response.balance.currency + ' 10000')
+                    .replace('%1', TUser.get().currency + ' 10000')
                 );
             $(virtualTopupID).removeClass(hiddenClass);
         }
@@ -94,12 +89,12 @@ var MyAccountWS = (function() {
     var shoWelcomeMessage = function(landing_company) {
         $(welcomeTextID)
             .text(
-                text.localize(
+                (text.localize(
                     isReal ? 
                         "You're currently logged in to your real money account with %1 " : 
                         "You're currently logged in to your virtual money account "
                 ).replace('%1', landing_company || '') + 
-                ' (' + loginid + ').'
+                ' (' + loginid + ').').replace(/\s\s+/g, ' ')
             )
             .removeClass(hiddenClass);
     };
@@ -193,9 +188,6 @@ var MyAccountWS = (function() {
         }
 
         switch(response.msg_type) {
-            case 'balance':
-                responseBalance(response);
-                break;
             case 'get_account_status':
                 responseAccountStatus(response);
                 break;
@@ -223,8 +215,7 @@ var MyAccountWS = (function() {
 pjax_config_page("user/my_accountws", function() {
     return {
         onLoad: function() {
-            if (!page.client.is_logged_in) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
 

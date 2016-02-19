@@ -3,11 +3,10 @@ pjax_config_page("new_account/realws", function(){
   return {
     onLoad: function() {
       Content.populate();
-      if (!$.cookie('login')) {
-          window.location.href = page.url.url_for('login');
+      if (page.client.redirect_if_logout()) {
           return;
       }
-      if (page.client.type !== 'virtual') {
+      if (!TUser.get().is_virtual) {
         window.location.href = page.url.url_for('user/my_accountws');
         return;
       }

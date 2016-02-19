@@ -1,8 +1,7 @@
 pjax_config_page("limitsws", function(){
     return {
         onLoad: function() {
-            if (!$.cookie('login')) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
             Content.populate();
@@ -12,7 +11,7 @@ pjax_config_page("limitsws", function(){
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);
 
-                    if (!page.client.is_real) {
+                    if (TUser.get().is_virtual) {
                         LimitsWS.limitsError();
                     } else if (response) {
                         var type = response.msg_type;
