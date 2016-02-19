@@ -20,7 +20,7 @@ var toggleStreaming = function() {
 pjax_config_page('/trade.cgi', function() {
     return {
         onLoad: function() {
-            BetForm.storage_values.init();
+            page.client.check_storage_values();
             trade_contract_back();
             BetForm.init();
             BetAnalysis.register_actions();

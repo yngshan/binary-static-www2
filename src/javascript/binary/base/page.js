@@ -100,7 +100,7 @@ var Client = function() {
         if(this.is_logged_in && parsed[0] == this.loginid) {
             this.first_name = parsed[1];
             this.last_name = parsed[2];
-            this.name = this.first_name + ' ' + this.last_name;
+            this.name = this.first_name +  ' ' + this.last_name;
             this.email = parsed[3];
             this.phone = parsed[4];
         } else {
@@ -110,28 +110,62 @@ var Client = function() {
 };
 
 Client.prototype = {
-    check_storage_values: function() {
+    check_storage_values: function(origin) {
+        var is_ok = true;
+        // currencies
+        var currencies = sessionStorage.getItem('currencies');
+        if(currencies && currencies.indexOf('echo_req') >= 0) {
+            currencies = '';
+            sessionStorage.setItem('currencies', '');
+        }
+        if(!currencies) {
+            BinarySocket.send({
+                'payout_currencies': 1,
+                'passthrough': {
+                    'handler': 'page.client',
+                    'origin' : origin || ''
+                }
+            });
+            is_ok = false;
+        }
+
+        // allowed markets
         if(this.is_logged_in) {
             if(this.is_real && !sessionStorage.getItem('allowed_markets') && page.client.residence) {
                 $('#topMenuStartBetting').addClass('invisible');
-                BinarySocket.send({'landing_company_details': TUser.get().landing_company_name, 'passthrough': {'origin': 'page.client'}});
+                BinarySocket.send({
+                    'landing_company_details': TUser.get().landing_company_name,
+                    'passthrough': {
+                        'handler': 'page.client',
+                        'origin' : origin || ''
+                    }
+                });
+                is_ok = false;
+            }
+        }
+
+        return is_ok;
+    },
+    response_payout_currencies: function(response) {
+        if (!response.hasOwnProperty('error')) {
+            sessionStorage.setItem('currencies', response.payout_currencies);
+            if(response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.origin === 'attributes.restore.currency') {
+                BetForm.attributes.restore.currency();
             }
         }
     },
     response_landing_company_details: function(response) {
-        if(response.hasOwnProperty('error')) { // TO BE REMOVED!
-            console.log(response.error.message);
-            return;
+        if (!response.hasOwnProperty('error')) {
+            var allowed_markets = response.landing_company_details.legal_allowed_markets;
+            var company = response.landing_company_details.name;
+
+            sessionStorage.setItem('allowed_markets', allowed_markets.length === 0 ? '' : allowed_markets.join(','));
+            sessionStorage.setItem('company', company);
+
+            page.header.menu.disable_not_allowed_markets();
+            page.header.menu.register_dynamic_links();
+            $('#topMenuStartBetting').removeClass('invisible');
         }
-        var allowed_markets = response.landing_company_details.legal_allowed_markets;
-        var company = response.landing_company_details.name;
-
-        sessionStorage.setItem('allowed_markets', allowed_markets.length === 0 ? '' : allowed_markets.join(','));
-        sessionStorage.setItem('company', company);
-
-        page.header.menu.disable_not_allowed_markets();
-        page.header.menu.register_dynamic_links();
-        $('#topMenuStartBetting').removeClass('invisible');
     },
     clear_storage_values: function() {
         sessionStorage.setItem('currencies', '');
@@ -427,7 +461,7 @@ Menu.prototype = {
             return;
         }
 
-        var markets_array = allowed_markets ? allowed_markets.split(',') : '';
+        var markets_array = allowed_markets.split(',');
         if(markets_array.indexOf(stored_market) < 0) {
             stored_market = markets_array[0];
             LocalStore.set('bet_page.market', stored_market);

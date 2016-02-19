@@ -344,12 +344,11 @@ BetForm.attributes = function() {
                         }
                     },
                     currency: function() {
-                        var currencies = sessionStorage.getItem('currencies');
-                        if(!currencies) {
-                            BinarySocket.send({'payout_currencies': 1, 'passthrough': {'origin': 'attributes.restore.currency'}});
+                        if(!page.client.check_storage_values('attributes.restore.currency')) {
                             return;
                         }
 
+                        var currencies = sessionStorage.getItem('currencies');
                         var client_currencies = currencies.split(',');
                         if(typeof client_currencies !== 'undefined'  && client_currencies.length > 0) {
                             $('#bet_currency option').each(function() {

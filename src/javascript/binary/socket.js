@@ -150,8 +150,10 @@ function BinarySocketClass() {
                    page.header.time_counter(response);
                 } else if (type === 'logout') {
                    page.header.do_logout(response);
-                } else if (type === 'landing_company_details' && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.origin === 'page.client') {
+                } else if (type === 'landing_company_details' && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.handler === 'page.client') {
                    page.client.response_landing_company_details(response);
+                } else if (type === 'payout_currencies' && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.handler === 'page.client') {
+                   page.client.response_payout_currencies(response);
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code && response.error.code === 'RateLimit') {

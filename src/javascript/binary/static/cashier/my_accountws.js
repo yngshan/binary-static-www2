@@ -33,7 +33,8 @@ var MyAccountWS = (function() {
         BinarySocket.send({"get_account_status": 1});
         BinarySocket.send({"get_settings": 1});
 
-        if(!sessionStorage.getItem('currencies')) {
+        var currencies = sessionStorage.getItem('currencies');
+        if(!currencies || currencies.indexOf('echo_req') >= 0) {
             BinarySocket.send({"payout_currencies": 1});
         }
 
