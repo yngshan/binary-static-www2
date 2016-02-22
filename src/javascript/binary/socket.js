@@ -118,7 +118,6 @@ function BinarySocketClass() {
                 page.header.validate_cookies();
                 if (clock_started === false) {
                     page.header.start_clock_ws();
-                    page.client.check_storage_values();
                 }
             }
         };
@@ -135,15 +134,16 @@ function BinarySocketClass() {
                     if(response.hasOwnProperty('error')) {
                        send({'logout': '1', passthrough: {'redirect': 'login'}});
                     }
-                   else {
-                       authorized = true;
-                       TUser.set(response.authorize);
-                       if(typeof events.onauth === 'function'){
-                           events.onauth();
-                       }
-                       send({balance:1, subscribe: 1});
-                       sendBufferedSends();
-                   }
+                    else {
+                        authorized = true;
+                        TUser.set(response.authorize);
+                        page.client.update_storage_values();
+                        if(typeof events.onauth === 'function'){
+                            events.onauth();
+                        }
+                        send({balance:1, subscribe: 1});
+                        sendBufferedSends();
+                    }
                 } else if (type === 'balance') {
                    ViewBalanceUI.updateBalances(response);
                 } else if (type === 'time') {

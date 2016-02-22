@@ -112,11 +112,12 @@ var Client = function() {
 Client.prototype = {
     check_storage_values: function(origin) {
         var is_ok = true;
+
         // currencies
         var currencies = sessionStorage.getItem('currencies');
-        if(currencies && currencies.indexOf('echo_req') >= 0) {
-            currencies = '';
-            sessionStorage.setItem('currencies', '');
+        if(currencies && currencies.indexOf('echo_req') >= 0 && currencies.indexOf('payout_currencies') >= 0) {
+            currencies = JSON.parse(currencies)['payout_currencies']; // transition from previously stored value
+            sessionStorage.setItem('currencies', currencies);
         }
         if(!currencies) {
             BinarySocket.send({
@@ -131,7 +132,7 @@ Client.prototype = {
 
         // allowed markets
         if(this.is_logged_in) {
-            if(this.is_real && !sessionStorage.getItem('allowed_markets') && page.client.residence) {
+            if(this.is_real && !sessionStorage.getItem('allowed_markets') && TUser.get().landing_company_name) {
                 $('#topMenuStartBetting').addClass('invisible');
                 BinarySocket.send({
                     'landing_company_details': TUser.get().landing_company_name,
@@ -168,9 +169,10 @@ Client.prototype = {
         }
     },
     clear_storage_values: function() {
-        sessionStorage.setItem('currencies', '');
-        sessionStorage.setItem('allowed_markets', '');
-        sessionStorage.setItem('company', '');
+        var items = ['currencies', 'allowed_markets', 'company'];
+        items.forEach(function(item) {
+            sessionStorage.setItem(item, '');
+        });
     },
     update_storage_values: function() {
         this.clear_storage_values();
@@ -472,7 +474,7 @@ Menu.prototype = {
             if(/market=/.test(trade_url)) {
                 trade_url = trade_url.replace(/market=\w+/, 'market=' + stored_market);
             } else {
-                trade_url = trade_url.replace('?', '?market=' + stored_market + '&');
+                trade_url += '&market=' + stored_market;
             }
             start_trading.attr("href", trade_url);
 

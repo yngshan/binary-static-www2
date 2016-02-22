@@ -15,36 +15,23 @@ var MyAccountWS = (function() {
         authButtonID   = '#authenticate_button';
 
         loginid = page.client.loginid || $.cookie('loginid');
-        isReal = !TUser.get().is_virtual;
 
-        if(!isReal) {
-            BinarySocket.send({"balance": 1, "req_id": 1});
-            showWelcomeMessage();
-        }
-        else {
-            if(page.url.param('login')) {
-                page.client.update_storage_values();
-            }
-            if(sessionStorage.getItem('company')) {
-                showWelcomeMessage();
-            }
-        }
-        
-        BinarySocket.send({"get_account_status": 1});
         BinarySocket.send({"get_settings": 1});
+        BinarySocket.send({"get_account_status": 1});
 
-        var currencies = sessionStorage.getItem('currencies');
-        if(!currencies || currencies.indexOf('echo_req') >= 0) {
-            BinarySocket.send({"payout_currencies": 1});
-        }
-
-        //checkDisabledAccount(); 
+        //checkDisabledAccount();
     };
 
     var responseGetSettings = function(response) {
         var get_settings = response.get_settings;
 
-        if(isReal) {
+        isReal = !TUser.get().is_virtual;
+
+        showWelcomeMessage();
+        if(!isReal) {
+            topupLink();
+        }
+        else {
             if(get_settings.is_authenticated_payment_agent) {
                 $('#payment_agent').removeClass(hiddenClass);
             }
@@ -54,29 +41,10 @@ var MyAccountWS = (function() {
         addGTMDataLayer(get_settings);
     };
 
-    var responseBalance = function(response) {
-        if(!response.echo_req.req_id || parseInt(response.req_id, 10) !== 1) {
-            return;
-        }
-
-        if(response.balance.balance < 1000) {
-            $(virtualTopupID + ' a')
-                .text(
-                    (text.localize('Deposit %1 virtual money into your account ') + loginid)
-                    .replace('%1', response.balance.currency + ' 10000')
-                );
-            $(virtualTopupID).removeClass(hiddenClass);
-        }
-    };
-
     var responseAccountStatus = function(response) {
         if(response.get_account_status[0] === 'unwelcome'){
             $(authButtonID).removeClass(hiddenClass);
         }
-    };
-
-    var responsePayoutCurrencies = function (response) {
-        sessionStorage.setItem('currencies', response.hasOwnProperty('payout_currencies') ? response.payout_currencies : '');
     };
 
     var showWelcomeMessage = function() {
@@ -91,6 +59,17 @@ var MyAccountWS = (function() {
                 ' (' + loginid + ').').replace(/\s\s+/g, ' ')
             )
             .removeClass(hiddenClass);
+    };
+
+    var topupLink = function() {
+        if(TUser.get().balance < 1000) {
+            $(virtualTopupID + ' a')
+                .text(
+                    (text.localize('Deposit %1 virtual money into your account ') + loginid)
+                    .replace('%1', TUser.get().currency + ' 10000')
+                );
+            $(virtualTopupID).removeClass(hiddenClass);
+        }
     };
 
     var showNoticeMsg = function() {
@@ -169,20 +148,11 @@ var MyAccountWS = (function() {
         }
 
         switch(response.msg_type) {
-            case 'balance':
-                responseBalance(response);
-                break;
             case 'get_account_status':
                 responseAccountStatus(response);
                 break;
             case 'get_settings':
                 responseGetSettings(response);
-                break;
-            case 'landing_company':
-                showWelcomeMessage();
-                break;
-            case 'payout_currencies':
-                responsePayoutCurrencies(response);
                 break;
             default:
                 break;
