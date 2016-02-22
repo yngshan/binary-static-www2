@@ -347,10 +347,10 @@ function handle_residence_state_ws(){
             return;
           }
         } else if (type === 'landing_company') {
-          if (response.hasOwnProperty('financial_company') && !response.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'maltainvest') {
+          if (response.landing_company.hasOwnProperty('financial_company') && !response.landing_company.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'maltainvest') {
             window.location.href = page.url.url_for('new_account/maltainvest');
             return;
-          } else if (response.hasOwnProperty('financial_company') && !response.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'japan') {
+          } else if (response.landing_company.hasOwnProperty('financial_company') && !response.landing_company.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'japan') {
             window.location.href = page.url.url_for('new_account/japanws');
             return;
           } else {
