@@ -175,7 +175,7 @@ var TradingEvents = (function () {
         var durationAmountElement = document.getElementById('duration_amount');
         if (durationAmountElement) {
             // jquery needed for datepicker
-            $('#duration_amount').on('input change', debounce(function (e) {
+            $('#duration_amount').on('input', debounce(function (e) {
                 if (e.target.value % 1 !== 0 ) {
                     e.target.value = Math.floor(e.target.value);
                 }
