@@ -183,7 +183,7 @@ var APITokenWS = (function() {
             return this.value;
         }).get();
         if (scopes.length === 0) {
-            showError('scopes', text.localize('Please select at least one scope.'));
+            showError('#scopes', text.localize('Please select at least one scope.'));
         }
 
         return isValid ? newName : false;
