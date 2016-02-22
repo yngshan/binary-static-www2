@@ -153,22 +153,26 @@ BetAnalysis.DigitInfoWS.prototype = {
             console.log("Unexpected error occured in the charts.");
             return;
         }
-        this.chart_config.xAxis.title = {
-            text: $('#last_digit_title').html().replace('%2', $('[name=underlying] option:selected').text()).replace('%1',spots.length),
-        };
+        
         var dec = spots[0].split('.')[1].length;
         for(i=0;i<spots.length;i++){
             var val = parseFloat(spots[i]).toFixed(dec);
             spots[i]=val.substr(val.length-1);
         }
         this.spots = spots;
-        if(this.chart){
+        if(this.chart &&  $('#last_digit_histo').html()){
             this.chart.xAxis[0].setTitle(this.chart_config.xAxis.title);
             this.chart.series[0].name = underlying;
         }
         else{
+            this.add_content();
+            this.chart_config.xAxis.title = {
+                text: $('#last_digit_title').html().replace('%2', $('[name=underlying] option:selected').text()).replace('%1',spots.length),
+            };
             this.chart = new Highcharts.Chart(this.chart_config);
             this.chart.addSeries({name : underlying, data: []});
+            this.on_latest();
+            this.stream_id = null;
         }
         this.update();
     },
