@@ -309,14 +309,14 @@ function handle_residence_state_ws(){
       if (response) {
         var type = response.msg_type;
         var residenceDisabled = $('#residence-disabled');
-        if (response.msg_type === 'get_settings') {
+        if (type === 'get_settings') {
           var country = response.get_settings.country_code;
           if (country && country !== null) {
             page.client.residence = country;
             generateBirthDate();
             generateState();
             return;
-          } else {
+          } else if (document.getElementById('move-residence-here')) {
             var residenceForm = $('#residence-form');
             $('#real-form').hide();
             residenceDisabled.insertAfter('#move-residence-here');
@@ -343,6 +343,17 @@ function handle_residence_state_ws(){
             return;
           } else {
             errorElement.setAttribute('style', 'display:none');
+            BinarySocket.send({landing_company: page.client.residence});
+            return;
+          }
+        } else if (type === 'landing_company') {
+          if (response.hasOwnProperty('financial_company') && !response.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'maltainvest') {
+            window.location.href = page.url.url_for('new_account/maltainvest');
+            return;
+          } else if (response.hasOwnProperty('financial_company') && !response.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'japan') {
+            window.location.href = page.url.url_for('new_account/japanws');
+            return;
+          } else {
             $('#residence-form').hide();
             residenceDisabled.insertAfter('#move-residence-back');
             $('#error-residence').insertAfter('#residence-disabled');
@@ -394,12 +405,11 @@ function getSettings() {
   return;
 }
 
-function setResidenceWs(){
+function setResidenceWs() {
   BinarySocket.send({residence_list:1});
   return;
 }
 
-//pass select element to generate list of states
 function generateState() {
     var state = document.getElementById('address-state');
     appendTextValueChild(state, Content.localize().textSelect, '');
