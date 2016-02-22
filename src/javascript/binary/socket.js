@@ -137,7 +137,7 @@ function BinarySocketClass() {
                     else {
                         authorized = true;
                         TUser.set(response.authorize);
-                        page.client.update_storage_values();
+                        page.client.check_storage_values();
                         if(typeof events.onauth === 'function'){
                             events.onauth();
                         }

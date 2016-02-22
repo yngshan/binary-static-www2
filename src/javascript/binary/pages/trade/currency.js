@@ -9,7 +9,7 @@ function displayCurrencies(selected) {
 
     var target = document.getElementById('currency'),
         fragment =  document.createDocumentFragment(),
-        currencies = sessionStorage.getItem('currencies').split(',');
+        currencies = page.client.get_currencies().split(',');
 
     if (!target) {
         return;

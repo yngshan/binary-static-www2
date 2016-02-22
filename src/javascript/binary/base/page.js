@@ -110,16 +110,19 @@ var Client = function() {
 };
 
 Client.prototype = {
+    get_currencies: function() {
+        var currencies = sessionStorage.getItem('currencies');
+        if(currencies && currencies.indexOf('echo_req') >= 0 && currencies.indexOf('payout_currencies') >= 0) {
+            currencies = (JSON.parse(currencies)['payout_currencies']).join(','); // transition from previously stored value
+            sessionStorage.setItem('currencies', currencies);
+        }
+        return currencies;
+    },
     check_storage_values: function(origin) {
         var is_ok = true;
 
         // currencies
-        var currencies = sessionStorage.getItem('currencies');
-        if(currencies && currencies.indexOf('echo_req') >= 0 && currencies.indexOf('payout_currencies') >= 0) {
-            currencies = JSON.parse(currencies)['payout_currencies']; // transition from previously stored value
-            sessionStorage.setItem('currencies', currencies);
-        }
-        if(!currencies) {
+        if(!this.get_currencies()) {
             BinarySocket.send({
                 'payout_currencies': 1,
                 'passthrough': {
@@ -149,7 +152,7 @@ Client.prototype = {
     },
     response_payout_currencies: function(response) {
         if (!response.hasOwnProperty('error')) {
-            sessionStorage.setItem('currencies', response.payout_currencies);
+            sessionStorage.setItem('currencies', response.payout_currencies.join(','));
             if(response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.origin === 'attributes.restore.currency') {
                 BetForm.attributes.restore.currency();
             }
@@ -376,7 +379,9 @@ Menu.prototype = {
         // enable only allowed markets
         var allowed_markets = sessionStorage.getItem('allowed_markets');
         if(!allowed_markets && page.client.is_logged_in) {
-            page.client.check_storage_values();
+            if(page.client.is_real) {
+                $('#topMenuStartBetting').addClass('invisible');
+            }
             return;
         }
         var markets_array = allowed_markets ? allowed_markets.split(',') : [];
@@ -458,13 +463,12 @@ Menu.prototype = {
     register_dynamic_links: function() {
         var stored_market = page.url.param('market') || LocalStore.get('bet_page.market') || 'forex';
         var allowed_markets = sessionStorage.getItem('allowed_markets');
-        if(!allowed_markets && page.client.is_logged_in) {
-            page.client.check_storage_values();
+        if(!allowed_markets && page.client.is_logged_in && page.client.is_real) {
             return;
         }
 
-        var markets_array = allowed_markets.split(',');
-        if(markets_array.indexOf(stored_market) < 0) {
+        var markets_array = allowed_markets ? allowed_markets.split(',') : [];
+        if(page.client.is_real && markets_array.indexOf(stored_market) < 0) {
             stored_market = markets_array[0];
             LocalStore.set('bet_page.market', stored_market);
         }

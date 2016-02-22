@@ -25,8 +25,6 @@ var MyAccountWS = (function() {
     var responseGetSettings = function(response) {
         var get_settings = response.get_settings;
 
-        isReal = !TUser.get().is_virtual;
-
         showWelcomeMessage();
         if(!isReal) {
             topupLink();
@@ -147,12 +145,17 @@ var MyAccountWS = (function() {
             return false;
         }
 
+        isReal = !TUser.get().is_virtual;
+
         switch(response.msg_type) {
             case 'get_account_status':
                 responseAccountStatus(response);
                 break;
             case 'get_settings':
                 responseGetSettings(response);
+                break;
+            case 'landing_company_details':
+                showWelcomeMessage();
                 break;
             default:
                 break;
@@ -172,6 +175,9 @@ pjax_config_page("user/my_accountws", function() {
             if (!getCookieItem('login')) {
                 window.location.href = page.url.url_for('login');
                 return;
+            }
+            if(page.url.param('login')) {
+                page.client.clear_storage_values();
             }
 
             BinarySocket.init({
