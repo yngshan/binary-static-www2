@@ -391,16 +391,16 @@ function handle_residence_state_ws(){
               residence_list = response.residence_list;
           if (residence_list.length > 0){
             for (i = 0; i < residence_list.length; i++) {
-              if (residence_list[i].disabled) {
+              if (residence_list[i].disabled  && select) {
                 appendTextValueChild(select, residence_list[i].text, residence_list[i].value, 'disabled');
-              } else {
+              } else if (select) {
                 appendTextValueChild(select, residence_list[i].text, residence_list[i].value);
               }
-              if (phoneElement && residence_list[i].phone_idd && residenceValue === residence_list[i].value){
+              if (phoneElement && residence_list[i].phone_idd && residenceValue === residence_list[i].value  && select){
                 phoneElement.value = '+' + residence_list[i].phone_idd;
               }
             }
-            if (residenceValue){
+            if (residenceValue && select){
                 select.value = residenceValue;
             }
           }

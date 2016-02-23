@@ -6,7 +6,6 @@ pjax_config_page("new_account/realws", function(){
       AccountOpening.redirectCookie();
       if (page.client.residence) {
         BinarySocket.send({landing_company: page.client.residence});
-        return;
       }
       handle_residence_state_ws();
       getSettings();

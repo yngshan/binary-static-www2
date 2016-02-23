@@ -10,6 +10,7 @@ pjax_config_page("new_account/japanws", function(){
       }
       handle_residence_state_ws();
       getSettings();
+      setResidenceWs();
       var purpose = $('#trading-purpose'),
           hedging = $('.hedging-assets');
       purpose.change(function(evt) {
