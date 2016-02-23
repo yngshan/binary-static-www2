@@ -12,6 +12,7 @@ var JapanAccOpeningData = (function(){
           address_line_2: elementObj['address2'].value,
           address_city: elementObj['town'].value,
           address_postcode: elementObj['postcode'].value,
+          address_state : elementObj['state'].value,
           phone: elementObj['tel'].value,
           secret_question: elementObj['question'].value,
           secret_answer: elementObj['answer'].value,
@@ -26,8 +27,6 @@ var JapanAccOpeningData = (function(){
           trading_experience_public_bond: elementObj['bond'].value,
           trading_experience_option_trading: elementObj['otc'].value,
           trading_purpose : elementObj['purpose'].value,
-          hedge_asset : elementObj['hedge'].value,
-          hedge_asset_amount : elementObj['amount'].value,
           agree_use_electronic_doc                : 1,
           agree_warnings_and_policies             : 1,
           confirm_understand_own_judgment         : 1,
@@ -41,8 +40,9 @@ var JapanAccOpeningData = (function(){
           declare_not_fatca                       : 1
         };
 
-        if (elementObj['state'].value !== '') {
-          req.address_state = elementObj['state'].value;
+        if (elementObj['purpose'].value === 'Hedging') {
+          req.hedge_asset = elementObj['hedge'].value;
+          req.hedge_asset_amount = elementObj['amount'].value;
         }
 
         BinarySocket.send(req);

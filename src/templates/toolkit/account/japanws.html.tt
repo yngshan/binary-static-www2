@@ -75,6 +75,33 @@
                         <legend id="address">[% l('Address') %]</legend>
                         <div class="grd-row-padding row clear">
                             <div class="grd-grid-4 form_label">
+                                <label for="address-postcode">[% l('Postal code/ZIP') %]</label>
+                            </div>
+                            <div class="grd-grid-8">
+                                <input type="text" class="text" id="address-postcode" name="address-postcode" maxlength="20"></input>
+                                <p class="errorfield" id="error-postcode" style="display:none"></p>
+                            </div>
+                        </div>
+                        <div class="grd-row-padding row clear" style="display:none">
+                            <div class="grd-grid-4 form_label">
+                                <label for="address-state">[% l('State/Province') %]</label>
+                            </div>
+                            <div class="grd-grid-8">
+                                <select id="address-state" name="address-state"></select>
+                                <p class="errorfield" id="error-state" style="display:none"></p>
+                            </div>
+                        </div>
+                        <div class="grd-row-padding row clear">
+                            <div class="grd-grid-4 form_label">
+                                <label for="address-town">[% l('Town/City') %]</label>
+                            </div>
+                            <div class="grd-grid-8">
+                                <input type="text" class="text" id="address-town" name="address-town" maxlength="35"></input>
+                                <p class="errorfield" id="error-town" style="display:none"></p>
+                            </div>
+                        </div>
+                        <div class="grd-row-padding row clear">
+                            <div class="grd-grid-4 form_label">
                                 <label for="address1">[% l('First line of home address') %]</label>
                             </div>
                             <div class="grd-grid-8">
@@ -89,33 +116,6 @@
                             <div class="grd-grid-8">
                                 <input type="text" class="text" id="address2" name="address2" maxlength="70"></input>
                                 <p class="errorfield" id="error-address2" style="display:none"></p>
-                            </div>
-                        </div>
-                        <div class="grd-row-padding row clear">
-                            <div class="grd-grid-4 form_label">
-                                <label for="address-town">[% l('Town/City') %]</label>
-                            </div>
-                            <div class="grd-grid-8">
-                                <input type="text" class="text" id="address-town" name="address-town" maxlength="35"></input>
-                                <p class="errorfield" id="error-town" style="display:none"></p>
-                            </div>
-                        </div>
-                        <div class="grd-row-padding row clear" style="display:none">
-                            <div class="grd-grid-4 form_label">
-                                <label for="address-state">[% l('State/Province') %]</label>
-                            </div>
-                            <div class="grd-grid-8">
-                                <select id="address-state" name="address-state"></select>
-                                <p class="errorfield" id="error-state" style="display:none"></p>
-                            </div>
-                        </div>
-                        <div class="grd-row-padding row clear">
-                            <div class="grd-grid-4 form_label">
-                                <label for="address-postcode">[% l('Postal code/ZIP') %]</label>
-                            </div>
-                            <div class="grd-grid-8">
-                                <input type="text" class="text" id="address-postcode" name="address-postcode" maxlength="20"></input>
-                                <p class="errorfield" id="error-postcode" style="display:none"></p>
                             </div>
                         </div>
                         <div class="grd-row-padding row clear">

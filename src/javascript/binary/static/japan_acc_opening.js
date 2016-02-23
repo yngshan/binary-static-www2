@@ -9,8 +9,8 @@ pjax_config_page("new_account/japanws", function(){
         return;
       }
       handle_residence_state_ws();
-      getSettings();
-      setResidenceWs();
+      BinarySocket.send({get_settings:1});
+      BinarySocket.send({residence_list:1});
       var purpose = $('#trading-purpose'),
           hedging = $('.hedging-assets');
       purpose.change(function(evt) {

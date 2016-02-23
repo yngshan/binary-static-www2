@@ -71,7 +71,7 @@ var RealAccOpeningUI = (function(){
     AccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
 
     for (key in elementObj){
-      if (elementObj[key].offsetParent !== null && key !== 'address2' && key !== 'postcode') {
+      if (elementObj[key].offsetParent !== null && key !== 'address2' && key !== 'postcode' && key !== 'state') {
         if (/^$/.test(Trim(elementObj[key].value)) && elementObj[key].type !== 'checkbox'){
           errorObj[key].innerHTML = Content.errorMessage('req');
           Validate.displayErrorMessage(errorObj[key]);

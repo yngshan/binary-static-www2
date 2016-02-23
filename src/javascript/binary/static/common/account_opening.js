@@ -17,14 +17,15 @@ var AccountOpening = (function(){
   }
   function handler(response, message) {
     if (response.error) {
-      if (reponse.error.message) {
+      var errorMessage = response.error.message;
+      if (errorMessage) {
         if (document.getElementById('real-form')) {
           $('#real-form').remove();
         } else if (document.getElementById('japan-form')) {
           $('#japan-form').remove();
         }
         var error = document.getElementsByClassName('notice-msg')[0];
-        error.innerHTML = opt;
+        error.innerHTML = errorMessage;
         error.parentNode.parentNode.parentNode.setAttribute('style', 'display:block');
         return;
       }

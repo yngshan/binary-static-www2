@@ -4,12 +4,12 @@ pjax_config_page("new_account/realws", function(){
     onLoad: function() {
       Content.populate();
       AccountOpening.redirectCookie();
-      if (page.client.residence) {
-        BinarySocket.send({landing_company: page.client.residence});
-      }
       handle_residence_state_ws();
-      getSettings();
-      setResidenceWs();
+      if (page.client.residence) {
+        BinarySocket.send({landing_company: page.client.residence}); 
+      }
+      BinarySocket.send({get_settings:1});
+      BinarySocket.send({residence_list:1});
       $('#real-form').submit(function(evt) {
         evt.preventDefault();
         if (RealAccOpeningUI.checkValidity()){

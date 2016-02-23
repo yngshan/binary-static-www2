@@ -101,21 +101,13 @@ var JapanAccOpeningUI = (function(){
       }
     }
 
-    if (Trim(elementObj['fname'].value).length < 2) {
-      errorObj['fname'].innerHTML = Content.errorMessage('min', '2');
-      Validate.displayErrorMessage(errorObj['fname']);
-      errorCounter++;
-    } else if (!/^[a-zA-Z\s-.']+$/.test(elementObj['fname'].value)){
+    if (!/^[a-zA-Z\s-.']+$/.test(elementObj['fname'].value)){
       errorObj['fname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
       Validate.displayErrorMessage(errorObj['fname']);
       errorCounter++;
     }
 
-    if (Trim(elementObj['lname'].value).length < 2) {
-      errorObj['lname'].innerHTML = Content.errorMessage('min', '2');
-      Validate.displayErrorMessage(errorObj['lname']);
-      errorCounter++;
-    } else if (!/^[a-zA-Z\s-.']+$/.test(elementObj['lname'].value)){
+    if (!/^[a-zA-Z\s-.']+$/.test(elementObj['lname'].value)){
       errorObj['lname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
       Validate.displayErrorMessage(errorObj['lname']);
       errorCounter++;
@@ -141,7 +133,7 @@ var JapanAccOpeningUI = (function(){
     }
 
     for (key in elementObj){
-      if (elementObj[key].offsetParent !== null && key !== 'address2' && key !== 'postcode') {
+      if (elementObj[key].offsetParent !== null && key !== 'address2') {
         if (/^$/.test(Trim(elementObj[key].value)) && elementObj[key].type !== 'checkbox'){
           errorObj[key].innerHTML = Content.errorMessage('req');
           Validate.displayErrorMessage(errorObj[key]);

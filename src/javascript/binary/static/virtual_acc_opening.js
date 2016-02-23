@@ -9,7 +9,7 @@ pjax_config_page("new_account/virtualws", function(){
       var virtualForm = $('#virtual-form');
       if ($.cookie('verify_token')) {
         handle_residence_state_ws();
-        setResidenceWs();
+        BinarySocket.send({residence_list:1});
         var form = document.getElementById('virtual-form');
         var errorEmail = document.getElementById('error-email'),
             errorPassword = document.getElementById('error-password'),

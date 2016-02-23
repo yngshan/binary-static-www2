@@ -364,7 +364,7 @@ function handle_residence_state_ws(){
           } else if (response.landing_company.hasOwnProperty('financial_company') && !response.landing_company.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'japan') {
             window.location.href = page.url.url_for('new_account/japanws');
             return;
-          } else {
+          } else if (!$('#real-form').is(':visible')) {
             $('#residence-form').hide();
             residenceDisabled.insertAfter('#move-residence-back');
             $('#error-residence').insertAfter('#residence-disabled');
@@ -396,7 +396,7 @@ function handle_residence_state_ws(){
               } else if (select) {
                 appendTextValueChild(select, residence_list[i].text, residence_list[i].value);
               }
-              if (phoneElement && residence_list[i].phone_idd && residenceValue === residence_list[i].value  && select){
+              if (phoneElement && residence_list[i].phone_idd && residenceValue === residence_list[i].value){
                 phoneElement.value = '+' + residence_list[i].phone_idd;
               }
             }
@@ -409,16 +409,6 @@ function handle_residence_state_ws(){
       }
     }
   });
-}
-
-function getSettings() {
-  BinarySocket.send({get_settings:1});
-  return;
-}
-
-function setResidenceWs() {
-  BinarySocket.send({residence_list:1});
-  return;
 }
 
 function generateState() {
