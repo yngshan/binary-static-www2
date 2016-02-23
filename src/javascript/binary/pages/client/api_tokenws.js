@@ -123,6 +123,11 @@ var APITokenWS = (function() {
         var scopes = token.scopes.map(function (v) {
             return v.capitalizeFirstLetter();
         });
+        // sort with Read, Trade, Payments, Admin
+        var scopes_i = {'Read': 0, 'Trade': 1, 'Payments': 2, 'Admin': 3};
+        scopes.sort(function(a, b) {
+            return scopes_i[a] > scopes_i[b];
+        });
         var $tableRow = Table.createFlexTableRow(
             [
                 token.display_name,
