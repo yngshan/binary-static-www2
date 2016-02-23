@@ -254,7 +254,20 @@ function dropDownNumbers(select, startNum, endNum) {
 }
 
 function dropDownMonths(select, startNum, endNum) {
-    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var months = [
+        text.localize("Jan"),
+        text.localize("Feb"),
+        text.localize("Mar"),
+        text.localize("Apr"),
+        text.localize("May"),
+        text.localize("Jun"),
+        text.localize("Jul"),
+        text.localize("Aug"),
+        text.localize("Sep"),
+        text.localize("Oct"),
+        text.localize("Nov"),
+        text.localize("Dec")
+    ];
     select.appendChild(document.createElement("option"));
     for (i = startNum; i <= endNum; i++){
         var option = document.createElement("option");
@@ -273,17 +286,15 @@ function dropDownMonths(select, startNum, endNum) {
 
 function generateBirthDate(){
     var days    = document.getElementById('dobdd'),
-        months    = document.getElementById('dobmm'),
+        months  = document.getElementById('dobmm'),
         year    = document.getElementById('dobyy');
     //days
     dropDownNumbers(days, 1, 31);
     //months
     dropDownMonths(months, 1, 12);
-
     var currentYear = new Date().getFullYear();
     var startYear = currentYear - 100;
     var endYear = currentYear - 17;
-
     //years
     dropDownNumbers(year, startYear, endYear);
     return;
@@ -450,11 +461,6 @@ function Trim(str){
   while(str.charAt(0) == (" ") ){str = str.substring(1);}
   while(str.charAt(str.length-1) ==" " ){str = str.substring(0,str.length-1);}
   return str;
-}
-
-//remove wrong json affiliate_tracking
-if ($.cookie('affiliate_tracking')) {
-  $.removeCookie('affiliate_tracking');
 }
 
 pjax_config_page('/$|/home', function() {

@@ -1,18 +1,6 @@
 var JapanAccOpeningUI = (function(){
   "use strict";
 
-  function showError(opt){
-    $('#japan-form').remove();
-    var error = document.getElementsByClassName('notice-msg')[0];
-    if (opt === 'duplicate') {
-      error.innerHTML = text.localize("Sorry, you seem to already have a real money account with us. Perhaps you have used a different email address when you registered it. For legal reasons we are not allowed to open multiple real money accounts per person. If you do not remember your account with us, please") + " " + "<a href='" + page.url.url_for('contact') + "'>" + text.localize("contact us") + "</a>" + ".";
-    } else {
-      error.innerHTML = opt;
-    }
-    error.parentNode.parentNode.parentNode.setAttribute('style', 'display:block');
-    return;
-  }
-
   function checkValidity(){
     var errorCounter = 0;
 
@@ -133,51 +121,12 @@ var JapanAccOpeningUI = (function(){
       errorCounter++;
     }
 
-    if (!isValidDate(elementObj['dobdd'].value, elementObj['dobmm'].value, elementObj['dobyy'].value) || elementObj['dobdd'].value === '' || elementObj['dobmm'].value === '' || elementObj['dobyy'].value === '') {
-      errorObj['dobdd'].innerHTML = Content.localize().textErrorBirthdate;
-      Validate.displayErrorMessage(errorObj['dobdd']);
-      errorCounter++;
-    }
-
-    if (!/^[a-zA-Z\d\s-.']+$/.test(elementObj['address1'].value)){
-      errorObj['address1'].innerHTML = Content.errorMessage('reg', [letters, numbers, space, hyphen, period, apost, ' ']);
-      Validate.displayErrorMessage(errorObj['address1']);
-      errorCounter++;
-    }
-
-    if (elementObj['address2'].value !== "" && !/^[a-zA-Z\d\s-.']+$/.test(elementObj['address2'].value)){
-      errorObj['address2'].innerHTML = Content.errorMessage('reg', [letters, numbers, space, hyphen, period, apost, ' ']);
-      Validate.displayErrorMessage(errorObj['address2']);
-      errorCounter++;
-    }
-
-    if (!/^[a-zA-Z\s-.']+$/.test(elementObj['town'].value)){
-      errorObj['town'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
-      Validate.displayErrorMessage(errorObj['town']);
-      errorCounter++;
-    }
-
-    if (elementObj['postcode'].value !== '' && !/^[a-zA-Z\d-]+$/.test(elementObj['postcode'].value)){
-      errorObj['postcode'].innerHTML = Content.errorMessage('reg', [letters, numbers, hyphen, ' ']);
-      Validate.displayErrorMessage(errorObj['postcode']);
-      errorCounter++;
-    }
-
-    if (elementObj['tel'].value.replace(/\+| /g,'').length < 6) {
-      errorObj['tel'].innerHTML = Content.errorMessage('min', 6);
-      Validate.displayErrorMessage(errorObj['tel']);
-      errorCounter++;
-    } else if (!/^\+?[\d-\s]+$/.test(elementObj['tel'].value)){
-      errorObj['tel'].innerHTML = Content.errorMessage('reg', [numbers, space, hyphen, ' ']);
-      Validate.displayErrorMessage(errorObj['tel']);
-      errorCounter++;
-    }
-
-    if (elementObj['answer'].value.length < 4) {
-      errorObj['answer'].innerHTML = Content.errorMessage('min', 4);
-      Validate.displayErrorMessage(errorObj['answer']);
-      errorCounter++;
-    }
+    AccountOpening.checkDate(elementObj['dobdd'], elementObj['dobmm'], elementObj['dobyy'], errorObj['dobdd']);
+    AccountOpening.checkAddress(elementObj['address1'], errorObj['address1'], elementObj['address2'], errorObj['address2']);
+    AccountOpening.checkTown(elementObj['town'], errorObj['town']);
+    AccountOpening.checkPostcode(elementObj['postcode'], errorObj['postcode']);
+    AccountOpening.checkTel(elementObj['tel'], errorObj['tel']);
+    AccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
 
     if (!/^\d+$/.test(elementObj['limit'].value)){
       errorObj['limit'].innerHTML = Content.errorMessage('reg', [numbers, '']);
@@ -219,7 +168,6 @@ var JapanAccOpeningUI = (function(){
   }
 
   return {
-    showError: showError,
     checkValidity: checkValidity
   };
 })();
