@@ -149,11 +149,10 @@ BetAnalysis.DigitInfoWS.prototype = {
         $('[name=tick_count]', form).on('change',  get_latest ).addClass('unbind_later');
     },
     show_chart: function(underlying, spots) {
-        if(typeof spots === 'undefined'){
+        if(typeof spots === 'undefined' || spots.length <= 0){
             console.log("Unexpected error occured in the charts.");
             return;
         }
-        
         var dec = spots[0].split('.')[1].length;
         for(i=0;i<spots.length;i++){
             var val = parseFloat(spots[i]).toFixed(dec);
@@ -161,7 +160,11 @@ BetAnalysis.DigitInfoWS.prototype = {
         }
         this.spots = spots;
         if(this.chart &&  $('#last_digit_histo').html()){
-            this.chart.xAxis[0].setTitle(this.chart_config.xAxis.title);
+            this.chart.xAxis[0].update({
+                title:{
+                    text: $('#last_digit_title').html().replace('%2', $('[name=underlying] option:selected').text()).replace('%1',spots.length),
+                }
+            }, true);
             this.chart.series[0].name = underlying;
         }
         else{
