@@ -71,8 +71,21 @@ var TradingEvents = (function () {
         if(!value || !$('#duration_units').find('option[value='+value+']').length){
             return 0;
         }
+        if(value === "d"){
+            $('#duration_amount').on('change', debounce(function (e) {
+                if (e.target.value % 1 !== 0 ) {
+                    e.target.value = Math.floor(e.target.value);
+                }
+                sessionStorage.setItem('duration_amount',e.target.value);
+                Durations.select_amount(e.target.value);
+                processPriceRequest();
+                submitForm(document.getElementById('websocket_form'));
+            }));
+        } else{
+            $('#duration_amount').off('change');
+        }
         $('#duration_units').val(value);
-
+        
         sessionStorage.setItem('duration_units',value);
         Durations.select_unit(value);
         Durations.populate();
