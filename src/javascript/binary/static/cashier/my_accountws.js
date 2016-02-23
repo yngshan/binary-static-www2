@@ -46,7 +46,7 @@ var MyAccountWS = (function() {
     };
 
     var showWelcomeMessage = function() {
-        var landing_company = sessionStorage.getItem('company');
+        var landing_company = page.client.get_storage_value('landing_company_name');
         $(welcomeTextID)
             .text(
                 (text.localize(

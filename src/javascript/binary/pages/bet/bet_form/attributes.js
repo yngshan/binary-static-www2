@@ -348,7 +348,7 @@ BetForm.attributes = function() {
                             return;
                         }
 
-                        var currencies = sessionStorage.getItem('currencies');
+                        var currencies = page.client.get_storage_value('currencies');
                         var client_currencies = currencies.split(',');
                         if(typeof client_currencies !== 'undefined'  && client_currencies.length > 0) {
                             $('#bet_currency option').each(function() {

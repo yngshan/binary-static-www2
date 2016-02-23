@@ -110,19 +110,17 @@ var Client = function() {
 };
 
 Client.prototype = {
-    get_currencies: function() {
-        var currencies = sessionStorage.getItem('currencies');
-        if(currencies && currencies.indexOf('echo_req') >= 0 && currencies.indexOf('payout_currencies') >= 0) {
-            currencies = (JSON.parse(currencies)['payout_currencies']).join(','); // transition from previously stored value
-            sessionStorage.setItem('currencies', currencies);
-        }
-        return currencies;
+    get_storage_value: function(key) {
+        return LocalStore.get('client.' + key) || '';
+    },
+    set_storage_value: function(key, value) {
+        return LocalStore.set('client.' + key, value);
     },
     check_storage_values: function(origin) {
         var is_ok = true;
 
         // currencies
-        if(!this.get_currencies()) {
+        if(!this.get_storage_value('currencies')) {
             BinarySocket.send({
                 'payout_currencies': 1,
                 'passthrough': {
@@ -135,7 +133,7 @@ Client.prototype = {
 
         // allowed markets
         if(this.is_logged_in) {
-            if(this.is_real && !sessionStorage.getItem('allowed_markets') && TUser.get().landing_company_name) {
+            if(this.is_real && !this.get_storage_value('allowed_markets') && TUser.get().landing_company_name) {
                 $('#topMenuStartBetting').addClass('invisible');
                 BinarySocket.send({
                     'landing_company_details': TUser.get().landing_company_name,
@@ -152,7 +150,7 @@ Client.prototype = {
     },
     response_payout_currencies: function(response) {
         if (!response.hasOwnProperty('error')) {
-            sessionStorage.setItem('currencies', response.payout_currencies.join(','));
+            this.set_storage_value('currencies', response.payout_currencies.join(','));
             if(response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.origin === 'attributes.restore.currency') {
                 BetForm.attributes.restore.currency();
             }
@@ -163,8 +161,8 @@ Client.prototype = {
             var allowed_markets = response.landing_company_details.legal_allowed_markets;
             var company = response.landing_company_details.name;
 
-            sessionStorage.setItem('allowed_markets', allowed_markets.length === 0 ? '' : allowed_markets.join(','));
-            sessionStorage.setItem('company', company);
+            this.set_storage_value('allowed_markets', allowed_markets.length === 0 ? '' : allowed_markets.join(','));
+            this.set_storage_value('landing_company_name', company);
 
             page.header.menu.disable_not_allowed_markets();
             page.header.menu.register_dynamic_links();
@@ -172,10 +170,12 @@ Client.prototype = {
         }
     },
     clear_storage_values: function() {
-        var items = ['currencies', 'allowed_markets', 'company'];
+        var that  = this;
+        var items = ['currencies', 'allowed_markets', 'landing_company_name'];
         items.forEach(function(item) {
-            sessionStorage.setItem(item, '');
+            that.set_storage_value(item, '');
         });
+        sessionStorage.setItem('currencies', '');
     },
     update_storage_values: function() {
         this.clear_storage_values();
@@ -377,7 +377,7 @@ Menu.prototype = {
     },
     disable_not_allowed_markets: function() {
         // enable only allowed markets
-        var allowed_markets = sessionStorage.getItem('allowed_markets');
+        var allowed_markets = page.client.get_storage_value('allowed_markets');
         if(!allowed_markets && page.client.is_logged_in) {
             if(page.client.is_real) {
                 $('#topMenuStartBetting').addClass('invisible');
@@ -462,7 +462,7 @@ Menu.prototype = {
     },
     register_dynamic_links: function() {
         var stored_market = page.url.param('market') || LocalStore.get('bet_page.market') || 'forex';
-        var allowed_markets = sessionStorage.getItem('allowed_markets');
+        var allowed_markets = page.client.get_storage_value('allowed_markets');
         if(!allowed_markets && page.client.is_logged_in && page.client.is_real) {
             return;
         }
