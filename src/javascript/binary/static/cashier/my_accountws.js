@@ -27,7 +27,7 @@ var MyAccountWS = (function() {
 
         showWelcomeMessage();
         if(!isReal) {
-            topupLink();
+            showTopUpLink();
         }
         else {
             if(get_settings.is_authenticated_payment_agent) {
@@ -43,6 +43,8 @@ var MyAccountWS = (function() {
         if(response.get_account_status[0] === 'unwelcome'){
             $(authButtonID).removeClass(hiddenClass);
         }
+
+        $('#loading').remove();
     };
 
     var showWelcomeMessage = function() {
@@ -59,7 +61,7 @@ var MyAccountWS = (function() {
             .removeClass(hiddenClass);
     };
 
-    var topupLink = function() {
+    var showTopUpLink = function() {
         if(TUser.get().balance < 1000) {
             $(virtualTopupID + ' a')
                 .text(
@@ -176,6 +178,9 @@ pjax_config_page("user/my_accountws", function() {
                 window.location.href = page.url.url_for('login');
                 return;
             }
+
+            showLoadingImage($('<div/>', {id: 'loading'}).insertAfter('#welcome'));
+
             if(page.url.param('login')) {
                 page.client.clear_storage_values();
             }

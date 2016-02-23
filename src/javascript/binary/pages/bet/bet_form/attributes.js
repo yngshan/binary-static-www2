@@ -349,8 +349,8 @@ BetForm.attributes = function() {
                         }
 
                         var currencies = page.client.get_storage_value('currencies');
-                        var client_currencies = currencies.split(',');
-                        if(typeof client_currencies !== 'undefined'  && client_currencies.length > 0) {
+                        if(currencies && currencies.length > 0) {
+                            var client_currencies = currencies.split(',');
                             $('#bet_currency option').each(function() {
                                 if($.inArray($(this).val(), client_currencies) < 0) {
                                     $(this).remove();
