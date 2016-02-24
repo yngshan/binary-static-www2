@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-02-09 04:41+0000\n"
+"PO-Revision-Date: 2016-02-22 08:07+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary/static/zh_TW/>\n"
 "Language: zh_TW\n"
@@ -319,7 +319,7 @@ msgstr "%ctx(If you look in the sky）您會看到%plural(%1,一顆星星, %d �
 msgid "%ctx(minimum duration, for example minimum 15 seconds)min"
 msgstr "%ctx(minimum duration, for example minimum 15 seconds)分鐘"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:274
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:257
 msgid "%ctx(the return of investment of a contract)Return"
 msgstr "%ctx(the return of investment of a contract)回報"
 
@@ -694,7 +694,7 @@ msgid "<strong>Benchmarked prices</strong> - %1 benchmarks its prices daily agai
 msgstr "<strong>基準價格</strong> - %1 每日都對比銀行間衍生品市場來制訂基準價格。"
 
 #. (to_monetary_number_format($limit_price)
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1754
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1718
 msgid "<strong>Better execution price!</strong><br />  The price has moved in your favour from %1 to %2."
 msgstr "<strong>更好的成交價！</strong><br /> 該價格變動對您有利，從%1 變為%2。"
 
@@ -1131,7 +1131,7 @@ msgstr "已經傳送了驗證郵件到 %1。"
 msgid "API"
 msgstr "應用程式編程介面"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1054
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1051
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/settings.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:84
@@ -1195,7 +1195,7 @@ msgstr "因此，若要繼續對外匯/股指/商品進行二元期權交易，�
 msgid "Account Closure"
 msgstr "帳戶關閉"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:860
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:857
 msgid "Account Details"
 msgstr "帳戶詳細資料"
 
@@ -1253,12 +1253,12 @@ msgstr "累積/發佈"
 msgid "Accuracy of Information"
 msgstr "資訊的準確性"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:345
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:352
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:1058
 msgid "Acknowledgement of Money Transfer"
 msgstr "確認轉帳"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:590
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:602
 msgid "Acknowledgement of Withdrawal Request"
 msgstr "確認提款要求"
 
@@ -1279,7 +1279,7 @@ msgstr "新增線"
 msgid "Add Overlay"
 msgstr "新增重疊"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:588
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:615
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:90
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:87
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:56
@@ -1435,11 +1435,11 @@ msgstr ""
 msgid "An error occured."
 msgstr "發生錯誤。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:257
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:265
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:478
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:486
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:776
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:264
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:272
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:488
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:496
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:791
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:356
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:961
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:968
@@ -2272,7 +2272,7 @@ msgid "Candlestick Chart"
 msgstr "K線圖"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:125
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Transaction.pm:37
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Transaction.pm:41
 #, fuzzy
 #| msgid "Cannot create sell contract"
 msgid "Cannot create contract"
@@ -2337,17 +2337,17 @@ msgid "Change = Close - Open, for the day"
 msgstr "變更=當日收盤價 – 當日開盤價"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:229
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1027
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1024
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:62
 msgid "Change Password"
 msgstr "更改密碼"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:613
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:640
 msgid "Change in account settings"
 msgstr "帳戶設定更改"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1786
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1750
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:645
 msgid "Chart"
 msgstr "圖表"
@@ -2527,8 +2527,10 @@ msgid "Clients registered with Binary (Europe) Ltd can raise their unresolved di
 msgstr "在Binary (Europe) Ltd 註冊的客戶可以在此就尚未解決的糾紛向馬爾他博彩管理局%1投訴"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:13
-msgid "Clients registered with Binary (IOM) Ltd can raise their unresolved disputes with the Isle of Man Gambling Supervision Commission at gaming@gov.im."
-msgstr "在 Binary (IOM) Ltd 註冊的客戶可以傳送電子郵件到 gaming@gov.im ，就尚未解決的糾紛向曼島博彩監督委員會投訴。"
+#, fuzzy
+#| msgid "UK clients registered with Binary (Europe) Ltd can submit their dispute with the alternative dispute resolution entity which is the Independent Betting Adjudication Service Ltd (IBAS) by filling the adjudication form on the ADR entity’s"
+msgid "Clients registered with Binary (IOM) Ltd can raise their unresolved disputes with the alternative dispute resolution entity IBAS by filling the adjudication form on the ADR entity’s"
+msgstr "在 Binary (Europe) Ltd註冊的英國客戶可以通過在替代性爭議解決機構 Independent Betting Adjudication Service Ltd 填寫仲裁表格並提交糾紛"
 
 #. ("<a href='http://mymoneybox.mfsa.com.mt' target='_blank'>http://mymoneybox.mfsa.com.mt</a>")
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:19
@@ -2926,7 +2928,7 @@ msgstr "成本和費用"
 msgid "Country Manager"
 msgstr "區域經理"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:586
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:613
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1687
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:34
 msgid "Country of Residence"
@@ -2950,7 +2952,7 @@ msgstr "新增"
 msgid "Create Free Account"
 msgstr "開立免費帳戶"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1036
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1033
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:55
 msgid "Create New Account"
@@ -2985,7 +2987,7 @@ msgstr "借記/貸記"
 msgid "Credit/Debit Card"
 msgstr "信用卡/扣款卡"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:227
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:234
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:927
 msgid "Cross-company payment agent transfers are not allowed."
 msgstr "不允許跨公司間支付代理轉帳。"
@@ -3120,9 +3122,9 @@ msgstr "親愛的"
 #. ($client_to->salutation, $client_to->first_name, $client_to->last_name,)
 #. ($pa_client->salutation, $pa_client->first_name, $pa_client->last_name)
 #. (BOM::Platform::Locale::translate_salutation($client->salutation)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:578
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:333
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:574
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:605
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:340
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:586
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:1046
 msgid "Dear %1 %2 %3,"
 msgstr "親愛的 %1 %2 %3,"
@@ -3721,14 +3723,14 @@ msgstr "電子郵件"
 msgid "Email Verification"
 msgstr "電子郵件驗證"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:585
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:612
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1312
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/lost_password.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:45
 msgid "Email address"
 msgstr "電子郵件地址"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:64
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:59
 msgid "Email not given."
 msgstr "未輸入電子郵件地址 。"
 
@@ -3878,19 +3880,19 @@ msgid "Exclude time cannot be for more than 5 years."
 msgstr "禁止時間不能超過5年。"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:431
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:746
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:779
 msgid "Exclude time cannot be for more than five years."
 msgstr "禁止時間不能超過五年。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:344
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:426
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:741
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:774
 msgid "Exclude time cannot be less than 6 months."
 msgstr "禁止時間不能少於6個月。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:343
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:421
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:736
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:769
 msgid "Exclude time must be after today."
 msgstr "禁止時間必須在今日之後。"
 
@@ -4124,7 +4126,7 @@ msgstr "最終價格"
 msgid "Finance"
 msgstr "金融"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:928
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:925
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/settings.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:70
 msgid "Financial Assessment"
@@ -4324,7 +4326,7 @@ msgstr "免費線上研討會"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Fresh graduates who meet our basic requirements and are passionate about pursuing a professional career in administrative services are welcome to apply."
-msgstr ""
+msgstr "歡迎符合我們基本要求並熱衷於追求行政服務為專業的應屆大學畢業生踴躍申請。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:76
 msgid "Friday"
@@ -4348,7 +4350,7 @@ msgid "Further information"
 msgstr "更多資訊"
 
 #. (300)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:460
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:470
 msgid "Further instructions must not exceed %1 characters."
 msgstr "詳細說明不能超過 %1 個字元。"
 
@@ -4419,7 +4421,7 @@ msgstr "德國"
 msgid "Get %1 when you deposit %2."
 msgstr "存 %2 獎 %1。"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:950
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:916
 msgid "Get Prices"
 msgstr "獲取報價"
 
@@ -5165,7 +5167,7 @@ msgstr "任何標的工具或資產前次的效能資訊不可用於保證其目
 msgid "Input error."
 msgstr "輸入錯誤。"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:373
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:371
 msgid "Input validation failed: "
 msgstr "輸入驗證失敗: "
 
@@ -5229,21 +5231,21 @@ msgstr "無效住宅編號/名稱"
 msgid "Invalid Input"
 msgstr "無效輸入"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:47
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:51
 #, fuzzy
 #| msgid "Invalid transfer."
 msgid "Invalid URI for appstore."
 msgstr "無效轉帳。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:44
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:48
 msgid "Invalid URI for github."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:50
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:54
 msgid "Invalid URI for googleplay."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:41
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:45
 msgid "Invalid URI for homepage."
 msgstr ""
 
@@ -5260,12 +5262,12 @@ msgstr "無效金額，最大是"
 msgid "Invalid amount, minimum is"
 msgstr "無效金額，最小是"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:721
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:736
 msgid "Invalid amount. Minimum transfer amount is 0.10, and up to 2 decimal places."
 msgstr "無效金額。最小轉帳金額為0.10，最多2個小數位。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:214
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:432
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:221
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:442
 #, fuzzy
 #| msgid "Invalid amount, maximum is"
 msgid "Invalid amount. minimum is 10, maximum is 2000."
@@ -5279,8 +5281,8 @@ msgstr "無效K線圖請求"
 msgid "Invalid email address"
 msgstr "無效的電子郵件地址"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:152
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:73
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:147
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:68
 msgid "Invalid email and password combination."
 msgstr "無效的電子郵件地址和密碼組合。"
 
@@ -5292,8 +5294,8 @@ msgstr "無效賠付貨幣。"
 msgid "Invalid period input! Please input the period between 0 and #1"
 msgstr "無效期限輸入！請輸入在 0 和 #1 之間的期限"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:498
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:533
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:495
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:530
 msgid "Invalid request"
 msgstr "無效請求"
 
@@ -6074,7 +6076,7 @@ msgstr "關鍵資料"
 msgid "Kind Regards"
 msgstr "謹致問候"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:583
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:595
 msgid "Kind Regards,"
 msgstr "謹致問候，"
 
@@ -6117,7 +6119,7 @@ msgstr "最新"
 msgid "Last Digit Prediction"
 msgstr "最後數字的預測"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1815
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1779
 msgid "Last Digit Stats"
 msgstr "最後數字的統計資料"
 
@@ -6307,8 +6309,8 @@ msgstr "對數標度"
 msgid "Login"
 msgstr "登入"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:122
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:38
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:117
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:33
 msgid "Login Failed"
 msgstr "登入失敗"
 
@@ -6317,12 +6319,12 @@ msgid "Login ID"
 msgstr "登入 ID"
 
 #. ($loginid_to)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:219
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:226
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:911
 msgid "Login ID (%1) does not exist."
 msgstr "登入 ID (%1) 不存在。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:112
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:107
 msgid "Login Success"
 msgstr "登入成功"
 
@@ -6349,7 +6351,7 @@ msgid "Logout"
 msgstr "登出"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:213
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1186
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1152
 msgid "Long"
 msgstr "長倉"
 
@@ -6543,7 +6545,7 @@ msgstr "對應合約獎勵"
 msgid "Matches/Differs"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:848
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:895
 msgid "Max 30 tokens are allowed."
 msgstr "最多可擁有30個權杖。"
 
@@ -6601,7 +6603,7 @@ msgid "Maximum daily turnover"
 msgstr "最大日成交量"
 
 #. ($email)
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:425
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:422
 msgid "Maximum number of attempts exceeded. Please try again after 10 minutes."
 msgstr "已超出可允許之嘗試次數。請 10 分鐘後重新嘗試。"
 
@@ -6890,7 +6892,7 @@ msgid "New Password"
 msgstr "新密碼"
 
 #: /home/git/regentmarkets/bom-backoffice/f_clientloginid_newpassword.cgi:70
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:459
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:456
 msgid "New Password Request"
 msgstr "新密碼要求"
 
@@ -6898,7 +6900,7 @@ msgstr "新密碼要求"
 msgid "New password"
 msgstr "新密碼"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:311
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:326
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v2/Accounts.pm:192
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:39
 msgid "New password is same as old password."
@@ -7001,7 +7003,7 @@ msgstr "沒有公司許可，不可發佈任何廣告材料。在您網站發佈
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "注：合約將在我們伺服器收到要求時以當時的市場價格賣出。此價格可能會與報價有差異。"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:917
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:883
 msgid "Note: During summer time (daylight saving), GMT is one hour behind BST (British Summer Time)"
 msgstr "注：在夏季（夏令時），格林威治標準時間（GMT） 比英國夏令時（BST）晚1小時"
 
@@ -7018,7 +7020,7 @@ msgid "Note: Withdrawal via payment agent is available only if you deposit exclu
 msgstr "注意:您必須完全通過付款代理存款才可使用付款代理提款"
 
 #. ($currency,            $withdrawal_limits->{'frozen_free_gift'},            $withdrawal_limits->{'free_gift_turnover_limit'})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:662
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:674
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:1199
 msgid "Note: You will be able to withdraw your bonus of %1%2 only once your aggregate volume of trades exceeds %1%3. This restriction applies only to the bonus and profits derived therefrom.  All other deposits and profits derived therefrom can be withdrawn at any time."
 msgstr "注：僅當您的交易總額超過%1%3時，您才能夠提取您的獎金%1%2。此限制僅適用於由此產生的獎金和收益。由此產生的所有其他存款和收益可隨時提取。"
@@ -7101,7 +7103,7 @@ msgid "Ok"
 msgstr "確定"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:349
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:309
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:324
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v2/Accounts.pm:194
 msgid "Old password is wrong."
 msgstr "舊密碼不正確。"
@@ -7355,7 +7357,7 @@ msgstr "我們所提供的服務僅限於執行。我們並不提供與產品和
 msgid "Our site can be filtered using a number of filtering systems available on the market which could be used to restrict one’s access to our site."
 msgstr "我們的網站可以使用市場上多個過濾系統進行過濾，以限制用戶對網站的存取。"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:398
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:396
 msgid "Output validation failed: "
 msgstr "輸出驗證失敗: "
 
@@ -7425,7 +7427,7 @@ msgstr "無法找到頁面"
 msgid "Parabolic SAR"
 msgstr "拋物停損轉向指標"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:555
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:553
 msgid "Parameters sanity check failed."
 msgstr "參數完整性檢查失敗。"
 
@@ -7458,8 +7460,8 @@ msgid "Password is moderate"
 msgstr "重設密碼"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:272
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:313
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:390
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:328
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:409
 msgid "Password is not strong enough."
 msgstr "密碼安全度不夠。"
 
@@ -7481,14 +7483,14 @@ msgstr "密碼安全度不夠。"
 msgid "Password is weak"
 msgstr "重設密碼"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:68
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:63
 msgid "Password not given."
 msgstr "未輸入密碼。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:578
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:614
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:638
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:682
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:575
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:611
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:635
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:679
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/lost_password.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/lost_password_email_sent.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/reset_password.html.tt:2
@@ -7529,7 +7531,7 @@ msgstr "支付代理取款"
 msgid "Payment Agent Withdrawal Verification"
 msgstr "支付代理取款"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:203
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:210
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:871
 msgid "Payment Agent activity not currently authorized"
 msgstr "支付代理活動目前未經授權"
@@ -7551,8 +7553,8 @@ msgstr "付款代理"
 msgid "Payment Agents are not available for your account."
 msgstr "您的帳戶無可用支付代理。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:199
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:412
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:206
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:422
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:867
 msgid "Payment Agents are not available on this site."
 msgstr "本網站無可用支付代理。"
@@ -7587,7 +7589,7 @@ msgid "Payout"
 msgstr "賠付"
 
 #. (to_monetary_number_format($transaction_parameters->{payout})
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1405
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1371
 msgid "Payout has moved in your favour from %1 to %2."
 msgstr "賠付變得對您有利，從 %1 變為 %2。"
 
@@ -7625,11 +7627,11 @@ msgstr ""
 msgid "Perl modules"
 msgstr "Perl 模組"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:26
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:51
 msgid "Permission denied."
 msgstr "權限不足。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1045
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1042
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/settings.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:12
@@ -7700,7 +7702,7 @@ msgid "Please enter a number between 0 and %1"
 msgstr "請輸入0和%1之間的數字"
 
 #. ($self_exclusion->{$field})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:716
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:749
 #, fuzzy
 #| msgid "Please enter a number between 0 and %1"
 msgid "Please enter a number between 0 and %1."
@@ -7773,7 +7775,7 @@ msgstr "請輸入您目前密碼。"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1328
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:709
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:409
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:406
 msgid "Please enter your email address."
 msgstr "請輸入您的電郵地址。"
 
@@ -7804,8 +7806,9 @@ msgstr "請輸入有效日期"
 msgid "Please input a valid date."
 msgstr "請輸入有效日期。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:75
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:382
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Transaction.pm:29
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:100
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:380
 msgid "Please log in."
 msgstr "請登入。"
 
@@ -7836,7 +7839,7 @@ msgstr "請注意，為進行合約結算，週末報價將忽略不計。週末
 msgid "Please note that you may update your personal information at any time by logging into the \"Settings\" section of your account. It is your responsibility to ensure that %1 is promptly and continually informed of any change in your personal information."
 msgstr "請注意，您可以隨時登入帳戶的「設定」部份更新您的個人資料。您應確保始終及時向%1告知您個人資料的任何變化。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:580
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:607
 msgid "Please note that your settings have been updated as follows:"
 msgstr "請注意，您的設定已進行以下更新："
 
@@ -7844,7 +7847,7 @@ msgstr "請注意，您的設定已進行以下更新："
 msgid "Please post the documents to:"
 msgstr "請將文件郵寄至："
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:810
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:843
 msgid "Please provide at least one self-exclusion setting."
 msgstr "請提供至少一個自我禁止設定。"
 
@@ -7944,7 +7947,7 @@ msgstr "請將以上資訊傳到 <a href='mailto:affiliates@binary.com'>affiliat
 msgid "Please switch accounts to trade this contract."
 msgstr "請換一個帳戶進行此合同交易。"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:706
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:672
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1432
 msgid "Please switch accounts to trade this market."
 msgstr "請換一個帳戶進行此市場交易。"
@@ -7962,7 +7965,7 @@ msgstr "請重試。"
 msgid "Please type your chosen password twice into the fields below:"
 msgstr "請在以下欄位輸入您設定的密碼兩次："
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:386
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:405
 msgid "Please use a different password than your login password."
 msgstr "請使用與登入密碼不同的密碼。"
 
@@ -8093,7 +8096,7 @@ msgid "Price Oscillator"
 msgstr "價格震盪指標"
 
 #. (to_monetary_number_format($transaction_parameters->{price})
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1400
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1366
 msgid "Price has moved in your favour from %1 to %2."
 msgstr "該價格變動對您有利，從 %1 變為 %2。"
 
@@ -8101,7 +8104,7 @@ msgstr "該價格變動對您有利，從 %1 變為 %2。"
 msgid "Price the trade."
 msgstr "對交易進行報價。"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1824
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1788
 msgid "Prices"
 msgstr "價格"
 
@@ -8182,7 +8185,7 @@ msgstr "利潤 / 虧損"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:211
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:78
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1018
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1015
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_in.html.tt:91
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:74
 msgid "Profit Table"
@@ -8259,7 +8262,7 @@ msgid "Published in English, Japanese, Chinese, Arabic, Polish, German, French, 
 msgstr "以英語、日文、中文、阿拉伯文、波蘭文、德文、法文、西班牙文、葡萄牙文、意大利文和俄文發佈"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:158
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1273
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1239
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/openpositionsws.html.tt:31
 msgid "Purchase"
 msgstr "買入"
@@ -8433,7 +8436,7 @@ msgstr "真實帳戶"
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Account/Real/default.pm:40
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Account/Real/japan.pm:16
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Account/Real/japan.pm:40
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1063
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1060
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:2
 msgid "Real Money Account Opening"
 msgstr "真實資金帳戶開立"
@@ -8622,8 +8625,8 @@ msgstr "資源"
 msgid "Respond to client queries using our state of the art telephone, electronic mail and on-line chat systems"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:129
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:509
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:127
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:507
 msgid "Response too large."
 msgstr "反應太大。"
 
@@ -8826,7 +8829,7 @@ msgid "Secret question"
 msgstr "密碼提示問題"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:108
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:851
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:848
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/settings_securityws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/settings.html.haml:1
@@ -8952,7 +8955,7 @@ msgstr "九月"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:340
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:294
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:409
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:724
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:757
 msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "交易期持續時間限制不能大於6週。"
 
@@ -8975,7 +8978,7 @@ msgid "Set client deposit and loss limits"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:102
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1072
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1069
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/settings.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:2
 msgid "Settings"
@@ -8985,8 +8988,8 @@ msgstr "設定"
 msgid "Settles"
 msgstr "結算"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:584
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:687
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:550
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:653
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/ErrorMessage.pm:28
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:756
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:766
@@ -8999,7 +9002,7 @@ msgid "Sharp prices"
 msgstr "精準報價"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:214
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1188
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1154
 msgid "Short"
 msgstr "短倉"
 
@@ -9135,16 +9138,16 @@ msgid "Sorry, $currency is not default currency for payment agent "
 msgstr "抱歉，$貨幣不是支付代理的預設貨幣 "
 
 #. ($currency, $client_to->loginid)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:239
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:246
 msgid "Sorry, %1 is not default currency for client %2"
 msgstr "很抱歉，%1貨幣不是客戶 %2的預設貨幣"
 
 #. ($currency, $client_fm->loginid)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:236
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:243
 msgid "Sorry, %1 is not default currency for payment agent %2"
 msgstr "抱歉，%1 不是支付代理 %2的預設貨幣"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:197
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:204
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:865
 msgid "Sorry, Payment Agent Transfer is temporarily disabled due to system maintenance. Please try again in 30 minutes."
 msgstr "對不起，由於系統維護，支付代理轉帳暫停使用。請 30 分鐘後重試。"
@@ -9154,7 +9157,7 @@ msgstr "對不起，由於系統維護，支付代理轉帳暫停使用。請 30
 msgid "Sorry, account opening is unavailable."
 msgstr "對不起，不可開立帳號。"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:559
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:525
 msgid "Sorry, an error occured with this trade.  Please try again in a few minutes.  If the problem persists, please contact customer support."
 msgstr "對不起，此交易發生錯誤。請幾分鐘後再試。如果問題持續出現，請聯繫客戶支援人員。"
 
@@ -9168,17 +9171,17 @@ msgid "Sorry, an error occurred while loading the form. Please contact customer 
 msgstr "對不起，在載入表格時出錯了。如果問題持續出現，請聯繫客戶支援人員"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:252
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:395
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:441
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:525
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:570
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:414
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:460
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:552
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:597
 msgid "Sorry, an error occurred while processing your account."
 msgstr "對不起，在處理您的帳戶時出錯。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:193
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:250
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:474
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:493
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:253
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:472
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:491
 msgid "Sorry, an error occurred while processing your request."
 msgstr "對不起，在處理您的請求時發生錯誤。"
 
@@ -9186,7 +9189,7 @@ msgstr "對不起，在處理您的請求時發生錯誤。"
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:716
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:728
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:747
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:765
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:762
 msgid "Sorry, an error occurred. Please contact customer support if this problem persists."
 msgstr "對不起，出錯了。如果問題持續出現，請聯繫客戶支援人員。"
 
@@ -9198,7 +9201,7 @@ msgstr "對不起，您的居住國無法使用隨機指數合同"
 msgid "Sorry, only UK residents can authenticate their identity online."
 msgstr "對不起，僅英國居民可線上驗證身份。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:232
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:239
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:932
 msgid "Sorry, only USD is allowed."
 msgstr "對不起，只允許美元。"
@@ -9216,20 +9219,20 @@ msgstr "對不起，我們不對您的居住國提供服務。"
 msgid "Sorry, the Login ID (%1) does not exist."
 msgstr "對不起，登入 ID (%1) 不存在。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:410
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:420
 msgid "Sorry, the Payment Agent Withdrawal is temporarily disabled due to system maintenance. Please try again in 30 minutes."
 msgstr "對不起，由於系統維護，支付代理取款暫時不可用。請於 30 分鐘後重試。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:436
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:446
 msgid "Sorry, the Payment Agent does not exist."
 msgstr "對不起，支付代理不存在。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:439
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:449
 msgid "Sorry, the Payment Agent is unavailable for your region."
 msgstr "對不起，支付代理在您的區域不可用。"
 
 #. ($pa_client->currency)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:450
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:460
 msgid "Sorry, the Payment Agent's currency %1 is unavailable for Payment Agent Withdrawal"
 msgstr "對不起，支付代理提款不可使用支付代理貨幣 %1"
 
@@ -9238,7 +9241,7 @@ msgstr "對不起，支付代理提款不可使用支付代理貨幣 %1"
 msgid "Sorry, the aggregate payouts of contracts on your account cannot exceed %2%1."
 msgstr "對不起，您帳戶的累計賠付額不能大於%2%1 。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:231
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:238
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:931
 msgid "Sorry, the currency format is incorrect."
 msgstr "對不起，貨幣格式不正確。"
@@ -9259,7 +9262,7 @@ msgstr "對不起，要顯示的資料太多，請選擇較短的間隔時間"
 msgid "Sorry, there was a problem validating your personal information with our payment processor. Please contact our Customer Service."
 msgstr "對不起，我們的支付處理器在驗證您的個人資訊時出現了問題，請聯繫我們的客服。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:907
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:925
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:672
 msgid "Sorry, this feature is available to virtual accounts only"
 msgstr "對不起，此功能僅適用虛擬帳戶"
@@ -9269,7 +9272,7 @@ msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "對不起，此功能僅適用虛擬帳戶。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:293
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:46
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:49
 msgid "Sorry, this feature is not available."
 msgstr "對不起，此功能不可用。"
 
@@ -9292,7 +9295,7 @@ msgid "Sorry, you cannot withdraw."
 msgstr "對不起，您不能取款。"
 
 #. ($currency, $balance)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:647
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:659
 msgid "Sorry, you cannot withdraw. Your account balance is %1 %2."
 msgstr "對不起，您不能提款。您的帳戶餘額為%1 %2。"
 
@@ -9300,53 +9303,53 @@ msgstr "對不起，您不能提款。您的帳戶餘額為%1 %2。"
 msgid "Sorry, you have already had too many unsuccessful attempts. Please try again in 5 minutes."
 msgstr "對不起，您的失敗嘗試次數過多。請5分鐘後再試。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:436
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:455
 msgid "Sorry, you have entered an incorrect cashier password"
 msgstr "對不起，您輸入的收銀台密碼不正確"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1293
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1333
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:714
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:413
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:410
 msgid "Sorry, you have entered an incorrect email address."
 msgstr "對不起，您輸入的電郵地址不正確。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:307
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:545
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:314
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:555
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:1009
 msgid "Sorry, you have exceeded the maximum allowable transactions for today."
 msgstr "對不起，您已超過今日允許的最大交易數。"
 
 #. ($currency . $daily_limit)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:526
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:536
 msgid "Sorry, you have exceeded the maximum allowable transfer amount %1 for today."
 msgstr "對不起，您已超過今日允許的最大轉帳金額%1。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:299
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:306
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:1001
 msgid "Sorry, you have exceeded the maximum allowable transfer amount for today."
 msgstr "對不起，您已超過今日允許的最大轉帳金額。"
 
 #. ($lim)
 #. ($limit_excludeuntil)
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1917
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1881
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Hooks.pm:174
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1490
 msgid "Sorry, you have excluded yourself from the website until %1."
 msgstr "對不起，您已禁止自己存取本網站，直到%1。"
 
 #. ($lim)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:89
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:114
 msgid "Sorry, you have excluded yourself until %1."
 msgstr "對不起，您已禁止自己，直到%1。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:916
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:934
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:681
 msgid "Sorry, you have open positions. Please close out all open positions before requesting additional funds."
 msgstr "對不起，您還有未平倉的頭寸。在請求額外資金前，請了結所有未平倉頭寸。"
 
 #. ($lim)
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1925
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1889
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Hooks.pm:181
 msgid "Sorry, you have reached your session duration limit of %plural(%1,%d minute,%d minutes)."
 msgstr "對不起，您已超過交易期持續時間限制 %plural(%1,%d 分鐘,%d 分鐘)。"
@@ -9370,7 +9373,7 @@ msgid "Sorry, your account is not authorised for any further contract purchases.
 msgstr "對不起，您的帳戶沒有進一步買入任何合約的權限。"
 
 #. ($client->currency)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:446
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:456
 msgid "Sorry, your currency of %1 is unavailable for Payment Agent Withdrawal"
 msgstr "抱歉，支付代理提款不可使用您的 %1 貨幣"
 
@@ -9463,7 +9466,7 @@ msgstr "州/省"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:191
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:86
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1009
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:1006
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_in.html.tt:106
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:87
 msgid "Statement"
@@ -9751,7 +9754,7 @@ msgstr "技術指標由阿隆上升線減去阿隆下行線得出。阿隆上升
 msgid "Tel"
 msgstr "電話"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:596
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:623
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1853
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:135
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:105
@@ -9859,8 +9862,8 @@ msgid "The %1 simulates a market that is active during the day (but becomes less
 msgstr "%1 所模擬的市場白天很活躍（但在晚間較穩定）。%2 所模擬的市場在白天是平靜的（但晚上時變得較不穩定）。"
 
 #. ($website_name)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:608
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:585
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:635
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:597
 msgid "The %1 team."
 msgstr "%1 團隊。"
 
@@ -10078,7 +10081,7 @@ msgid "The Moving Average Convergence/Divergence (MACD) indicator is a trend fol
 msgstr "平滑異同移動平均線（MACD)指數是一個趨勢跟蹤指數，用於判斷趨勢變化。 MACD是一個震盪指標，以一個股票價格的兩條價格指數平均線為基礎，一共顯示三條線。 MACD線計算的是兩個移動平均線之間的差（通常是12日和26日平均線）。而「訊號」線則是標準MACD線的9日平滑平均線，有時候也被稱為「緩慢」 MACD線。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:305
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:427
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:437
 msgid "The Payment Agent facility is currently not available in your country."
 msgstr "您的國家無可用支付代理設施。"
 
@@ -10111,8 +10114,9 @@ msgid "The ability to acquire knowledge of compliance matters in a multitude of 
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
 msgid "The ability to communicate effectively in English (both oral and written)"
-msgstr ""
+msgstr "能夠有效地以英語口語和書面溝通"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to communicate fluently in English (both oral and written)"
@@ -10146,16 +10150,16 @@ msgstr ""
 msgid "The above personal data that we collect will be held by us and processed for any purpose as may be allowed by law or required by any law. We may also transfer such personal data to any company within the Binary Group of companies, any of our business associates or payment providers, whether in or outside of the EEA including in countries which might not offer an equivalent level of protection of personal data."
 msgstr "對於以上收集的個人資料，我們將根據法律允許或規定目的持有或處理。我們可能會將相關個人資料轉移給Binary 集團的公司、我們的業務夥伴或資金提供者，不論其是否位於EEA區域，包括一些可能沒有提供相等個人資料保護水平的國家。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:761
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:776
 msgid "The account transfer is unavailable for accounts with different default currency."
 msgstr "帳戶不可用不同的預設貨幣轉帳。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:743
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:758
 msgid "The account transfer is unavailable for your account."
 msgstr "您的帳戶不可轉帳。"
 
 #. ($client->loginid)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:691
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:706
 msgid "The account transfer is unavailable for your account: %1."
 msgstr "您的帳戶不可轉帳：%1。"
 
@@ -10163,7 +10167,7 @@ msgstr "您的帳戶不可轉帳：%1。"
 msgid "The account transfer is unavailable. Please"
 msgstr "帳戶不可轉帳。請"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:755
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:770
 #, fuzzy
 #| msgid "The account transfer is unavailable. Please <a href=\"%1\">deposit</a> to your account."
 msgid "The account transfer is unavailable. Please deposit to your account."
@@ -10181,7 +10185,7 @@ msgstr "每上漲/下降一點之盈利/虧損乘以每一點之金額。  如�
 msgid "The anti-money laundering processes have the following effects on Clients:"
 msgstr "反洗黑錢程序對客戶有以下影響："
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:123
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:121
 msgid "The application sent an invalid request."
 msgstr "應用程式發送的請求無效。"
 
@@ -10386,8 +10390,8 @@ msgstr "客戶可能蒙受的最大損失就是其向本公司支付的金額。
 msgid "The maximum number of tokens (%1) has been reached."
 msgstr "已達權杖 (%1) 最大限數。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:841
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:55
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:888
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:59
 msgid "The name is taken."
 msgstr "此名字已被註冊。"
 
@@ -10397,7 +10401,7 @@ msgstr "頁面超時，這可能是由於網際網路連接速度慢或者我們
 
 #. ($client_obj->email,                    $r->client_ip)
 #. ($client->email,                    $client_ip)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:335
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:350
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v2/Accounts.pm:217
 msgid "The password for your account %1 has been changed. This request originated from IP address %2. If this request was not performed by you, please immediately contact Customer Support."
 msgstr "您的帳戶%1密碼已更改。此要求源自IP地址%2。如您並沒執行此項要求，請立刻聯繫客戶支援人員。"
@@ -10476,7 +10480,7 @@ msgstr "我們提供止損和止盈的保證。虧損和盈利分別受止損和
 msgid "The symbol is invalid."
 msgstr "此符號無效。"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:557
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:523
 msgid "The system is missing critical pricing information. Please try again in a few minutes, or try a different market."
 msgstr "系統丟失關鍵定價資訊。請幾分鐘後再試，或嘗試別的市場。"
 
@@ -10489,7 +10493,7 @@ msgstr "「公司」一詞指 Binary (IOM) Ltd.，地址為：First Floor, Mille
 msgid "The time is now %1 %2 and the market opening times (for the %3) are:"
 msgstr "現在時間是 %1 %2，（ %3的）開市時間為："
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Authorize.pm:22
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:45
 msgid "The token is invalid."
 msgstr "權杖無效。"
 
@@ -10564,11 +10568,11 @@ msgstr "在驗證您地址的時候出現問題。請修改指示欄位。如需
 msgid "There was an error and we were unable to process your request."
 msgstr "出現錯誤，我們無法處理您的要求。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:247
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:251
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:455
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:254
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:258
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:465
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/PortfolioManagement.pm:102
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:475
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/PortfolioManagement.pm:108
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:951
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:955
 msgid "There was an error processing the request."
@@ -10654,7 +10658,7 @@ msgstr "本協議從公司通知您加入公司聯盟計劃的申請成功時起
 msgid "This Document"
 msgstr "本文件"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:468
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:478
 msgid "This Payment Agent cashier section is locked."
 msgstr "此支付代理的收銀台部份已鎖定。"
 
@@ -10663,12 +10667,12 @@ msgstr "此支付代理的收銀台部份已鎖定。"
 msgid "This URL is invalid."
 msgstr "此 URL 無效。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:79
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:104
 msgid "This account is unavailable."
 msgstr "此帳戶不可使用。"
 
 #. ($r->url_for("contact")
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1907
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1871
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Hooks.pm:165
 msgid "This account is unavailable. For any questions please contact <a href=\"%1\">Customer Support</a>."
 msgstr "此帳戶不可用。如有任何問題，請聯繫<a href=\"%1\">客戶支援人員</a>。"
@@ -10686,7 +10690,7 @@ msgstr "本獎金僅適用於新客戶。現有或以往客戶不符合條件。
 msgid "This bonus will be processed and credited to a client's account when:"
 msgstr "在下列時候，該獎金將被處理，並記入客戶的帳戶中："
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:247
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:254
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:951
 msgid "This client cashier section is locked."
 msgstr "此客戶的收銀台部份已鎖定。"
@@ -10759,13 +10763,13 @@ msgid "This is a virtual-money account. Please switch to real-money account and 
 msgstr "這是虛擬帳戶。請轉換到真實資金帳戶並存入資金。"
 
 #. ($client->loginid,                            $client_ip)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:406
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:452
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:425
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:471
 msgid "This is an automated message to alert you that a change was made to your cashier settings section of your account %1 from IP address %2. If you did not perform this update please login to your account and update settings."
 msgstr "這是一個自動消息，提醒您下列情況：您帳戶%1的收銀台/設定部份已被來自IP地址%2進行了更改。如您並沒執行該項更新，請登入您的帳戶並對設定進行更新。"
 
 #. ($client->loginid,                            $client_ip)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:431
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:450
 msgid "This is an automated message to alert you to the fact that there was a failed attempt to unlock the Cashier/Settings section of your account %1 from IP address %2"
 msgstr "這是一個自動消息，提醒您下列情況：有一個來自IP 地址%2 的失敗嘗試，試圖解除您帳戶%1的收銀台/設定部份的鎖定"
 
@@ -11139,7 +11143,7 @@ msgstr "二元期權交易不一定適合每一個人。因此，請確保您完
 msgid "Trading in Binary Options is speculative and involves a high degree of risk that can result in the loss of your entire investment. Therefore, trading in Binary Options is appropriate only for persons that understand and are willing to assume the economic, legal and other risks involved in such transactions. You should be satisfied that Binary Options trading is suitable for you in light of your investment circumstances and attitude towards risk before trading. You should not engage in speculative Binary Options trading unless you understand the basic aspects of such trading and its risks. If you are in any doubt as to whether Binary Option trading is appropriate and suitable for you, please seek independent advice from a investment consulting professional. %1 does not provide such advice. It is your responsibility, taking into account your personal circumstances and investment resources, to take particular care and make careful considerations independently, both prior to applying to engage in Binary Options with %1, as well as prior to making any individual order. Where you do not understand the risks involved in applying for a trading account with %1 or in making any individual order, you should seek advice and consultation from an independent investment advisor. If you continue to not understand the risks involved in trading in Binary Options, you should not trade at all."
 msgstr "二元期權交易是投機活動，有很高的風險，可能會導致您的所有投資虧損。因此，進行二元期權交易活動只適合明白並願意承擔經濟、法律和其它相關風險的人士。進行交易前，您必須事先評估，並對您的投資情況和態度與二元期權交易的適合性感到滿意。除非您已明白此類交易與風險的基本問題，否則您不應參與二元期權的投機交易。如果您對二元期權交易是否適合您感到迷惑，請尋求專業投資顧問的獨立性建議。 %1並不提供此類服務。在您通過%1進行二元期權交易以及下任何訂單前，您有責任先考慮自身的個人情況和投資資源，並慎重、獨立地考慮清楚。如果您對在%1開立交易帳戶或確定任何訂單所牽涉到的風險有任何不解之處，請務必要向獨立的投資顧問請教並尋求忠告。如果您還是對二元期權交易的風險不甚了解，請不要進行任何交易。"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:534
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:500
 msgid "Trading is Suspended"
 msgstr "交易暫停"
 
@@ -11318,7 +11322,9 @@ msgid "UK and Manx residents will have their account opened with Binary (IOM) Lt
 msgstr "英國和曼島居民將在 Binary (IOM) Ltd開戶。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:16
-msgid "UK clients registered with Binary (Europe) Ltd can submit their dispute with the alternative dispute resolution entity which is the Independent Betting Adjudication Service Ltd (IBAS) by filling the adjudication form on the ADR entity’s"
+#, fuzzy
+#| msgid "UK clients registered with Binary (Europe) Ltd can submit their dispute with the alternative dispute resolution entity which is the Independent Betting Adjudication Service Ltd (IBAS) by filling the adjudication form on the ADR entity’s"
+msgid "UK clients registered with Binary (Europe) Ltd can submit their dispute with the alternative dispute resolution entity IBAS by filling the adjudication form on the ADR entity’s"
 msgstr "在 Binary (Europe) Ltd註冊的英國客戶可以通過在替代性爭議解決機構 Independent Betting Adjudication Service Ltd 填寫仲裁表格並提交糾紛"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:132
@@ -11380,7 +11386,7 @@ msgstr "英國"
 msgid "Unknown contract proposal"
 msgstr "未知合約建議"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Transaction.pm:102
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Transaction.pm:108
 msgid "Unknown contract sell proposal"
 msgstr "未知合約出售建議"
 
@@ -11388,8 +11394,8 @@ msgstr "未知合約出售建議"
 msgid "Unknown error while saving workspace '#1'."
 msgstr "儲存工作區「#1」時出現未知錯誤。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:58
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:85
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:59
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:86
 msgid "Unknown landing company."
 msgstr "未知著陸公司。"
 
@@ -11397,7 +11403,7 @@ msgstr "未知著陸公司。"
 msgid "Unless otherwise advised, we shall treat you as a Retail Client. You may also request, in writing, us to change the category in which you have been classified and this may have an effect on the level of protection afforded to you. We reserve the right to accept or refuse any such request for change in classification."
 msgstr "除非另行通知，我們將視您為零售客戶。您也可通過書面要求我們改變您的類別，這麼做可能會影響到我們所提供給您的保護級別。我們保留接受或拒絕任何改變類別要求的權利。"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:406
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:404
 msgid "Unrecognised request."
 msgstr "無法辨識之請求。"
 
@@ -11418,7 +11424,7 @@ msgid "Upcoming Events"
 msgstr "未來事件"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1966
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:967
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:964
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/settings_securityws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:124
 msgid "Update"
@@ -11504,7 +11510,7 @@ msgstr "驗證新密碼"
 #. ($params->{website_name})
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Account/Virtual.pm:106
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:90
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:744
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:741
 msgid "Verify your email address - %1"
 msgstr "驗證您的電子郵件地址 - %1"
 
@@ -11776,7 +11782,7 @@ msgid "We use identity verification services and real-time fraud detection measu
 msgstr "我們通過身份驗證服務和即時防欺詐措施來防止您的帳戶遭到非法存取。另外，我們還會對您的帳戶活動進行監控以發現不正常的欺詐活動跡象，我們還會和收債代理和執法機關合作來應對欺詐問題。"
 
 #. ($r->url_for('/user/lost_password')
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:544
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:541
 msgid "We were unable to recover your Login ID or Password with the provided information. <a href=\"%1\">Return to Password Recovery</a>, or <a href=\"%2\"><strong>contact us</strong></a> should you need further assistance."
 msgstr "我們無法根據您提供的資訊找回您的登入ID 或密碼。 <a href=\"%1\">返回「密碼復原」頁面</a>，或<a href=\"%2\"><strong>聯繫我們</strong></a>獲取進一步幫助。"
 
@@ -11815,7 +11821,7 @@ msgstr ""
 "  %4團隊。"
 
 #. ($currency, $amount, $payment_agent->payment_agent_name, $website_name)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:335
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:342
 msgid ""
 "We would like to inform you that the transfer of %1 %2 via %3 has been processed.\n"
 "The funds have been credited into your account.\n"
@@ -11832,7 +11838,7 @@ msgstr ""
 "%4團隊。"
 
 #. ($currency, $amount, $client_name, $client_loginid, $paymentagent_loginid, $website_name)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:579
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:591
 msgid "We would like to inform you that the withdrawal request of %1%2 by %3 %4 has been processed. The funds have been credited into your account %5 at %6."
 msgstr "我們特此通知您，由%3%4作出的%1%2取款要求已經處理。資金已經計入您在%6的%5帳戶。"
 
@@ -12347,15 +12353,15 @@ msgstr "我們僅此通知您，%1 所提供的二元期權交易並不受任何
 msgid "You are already subscribed to %1"
 msgstr "您已訂閱%1"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Accounts.pm:306
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Accounts.pm:315
 msgid "You are already subscribed to balance updates."
 msgstr "您已訂閱餘額更新。"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Transaction.pm:81
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Transaction.pm:78
 msgid "You are already subscribed to transaction updates."
 msgstr "您已訂閱交易更新。"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1757
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1721
 msgid "You are being given the better price."
 msgstr "正在為您獲取更好的價格。"
 
@@ -12363,7 +12369,7 @@ msgstr "正在為您獲取更好的價格。"
 msgid "You are either already subscribed or you have reached the limit for proposal subscription."
 msgstr "您已經訂閱，或已達到建议議訂閱的上限。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:201
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:208
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:869
 msgid "You are not a Payment Agent"
 msgstr "您不是支付代理"
@@ -12373,7 +12379,7 @@ msgid "You are not allowed to rebate any part commission payment onto your refer
 msgstr "您不能用部分佣金作為給推薦人的折扣，公司發現後將立即撤銷您的帳戶。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:303
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:415
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:425
 msgid "You are not authorized for withdrawal via payment agent."
 msgstr "您未經授權通過付款代理進行取款。"
 
@@ -12423,7 +12429,7 @@ msgid "You can use an authorized payment agent to process deposits and withdrawa
 msgstr "對於不受 %1  支持的支付方式或本地貨幣， 您可使用授權支付代理輕鬆處理存款和取款。"
 
 #. ($loginid_to)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:243
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:250
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:947
 msgid "You cannot transfer to account %1, as their account is currently disabled."
 msgstr "您不能轉帳至帳戶%1，因為此帳戶目前已禁用。"
@@ -12500,7 +12506,7 @@ msgid "You have purchased the following contract:"
 msgstr "您已經買入以下合約："
 
 #. ($descriptor->{category})
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:357
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:355
 msgid "You have reached the rate limit for %1."
 msgstr "您已達 %1的最高限率。"
 
@@ -12696,7 +12702,7 @@ msgid "Your account balance (%1%2) is insufficient to buy this contract (%1%3)."
 msgstr "您的帳戶餘額(%1%2)不足以買入該合約(%1%3)。"
 
 #. ($currency, $balance, $withdrawal_limits->{'max_withdrawal'})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:654
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:666
 msgid "Your account balance is %1 %2. Maximum withdrawal by all other means is %1 %3."
 msgstr "您的帳戶餘額是 %1 %2。通過所有其它方式的最大取款金額是 %1 %3。"
 
@@ -12758,7 +12764,7 @@ msgstr "您的帳戶已成功轉帳。最新餘額是:"
 msgid "Your application will then be reviewed by our compliance and marketing departments. Once approved, we will put you live in our <a href='%1'>payment agent</a> list."
 msgstr "然後我們的審核和行銷部門將審查您的申請。一旦批准，我們將把您列入 <a href='%1'>付款代理</a>列表。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:912
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:930
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:677
 msgid "Your balance is higher than the permitted amount."
 msgstr "您的餘款已超出允許金額。"
@@ -12784,7 +12790,7 @@ msgstr "您的獎金將在3個工作日內計入您的帳戶。"
 msgid "Your cashier is locked"
 msgstr "您的收銀台已被鎖定"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:205
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:212
 msgid "Your cashier is locked as per your request"
 msgstr "您的收銀台已依照您的請求被鎖定"
 
@@ -12794,11 +12800,11 @@ msgstr "您的收銀台已依照您的請求被鎖定"
 msgid "Your cashier is locked as per your request - to unlock it, please <a href=\"%1\">click here</a>."
 msgstr "根據您的要求，您的收銀台已被鎖定- 如需解除鎖定，請<a href=\"%1\">點選此處</a>。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:417
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:427
 msgid "Your cashier is locked as per your request."
 msgstr "您的收銀台已依照您的請求被鎖定。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:251
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:258
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:955
 msgid "Your cashier section is locked."
 msgstr "您的收銀台區段已被鎖定。"
@@ -12807,11 +12813,11 @@ msgstr "您的收銀台區段已被鎖定。"
 msgid "Your cashier session has expired"
 msgstr "您的收銀台工作階段已經過期"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:381
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:400
 msgid "Your cashier was locked."
 msgstr "您的收銀台已被鎖定。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:415
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:434
 msgid "Your cashier was not locked."
 msgstr "您的收銀台沒有被鎖定。"
 
@@ -12836,7 +12842,7 @@ msgstr "您的出生日期無效。"
 msgid "Your details"
 msgstr "您的詳細資料"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:918
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:915
 msgid "Your details have been updated."
 msgstr "您的個人資訊已成功更新。"
 
@@ -12855,8 +12861,8 @@ msgstr "您的電子郵件地址未經驗證。"
 msgid "Your email address verification link is: "
 msgstr "您的電子郵件地址驗證碼是: "
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:720
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:770
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:717
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:767
 msgid "Your email has been verified."
 msgstr "您的電子郵件地址已經驗證。"
 
@@ -12894,12 +12900,12 @@ msgstr "您的名字、電子郵件地址和電話號"
 msgid "Your name/company"
 msgstr "您的姓名/公司"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1706
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1670
 msgid "Your new account balance is %s %s"
 msgstr "您的新帳戶餘額為 %s %s"
 
 #. ($reference_number, $executed_price)
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1762
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1726
 msgid "Your order (Reference # <span id=\"reference_no\">%1</span>) has been executed at %2."
 msgstr "您的訂單(參考# <span id=\"參考_編號\">%1</span>)已經於%2生效。"
 
@@ -12916,7 +12922,7 @@ msgstr "您的密碼不可與電子郵件相同"
 msgid "Your password contains invalid characters."
 msgstr "您的密碼含無效字元。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:329
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:344
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v2/Accounts.pm:211
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:72
 msgid "Your password has been changed."
@@ -12927,7 +12933,7 @@ msgid "Your password has been successfully reset. Please log into your account u
 msgstr "您的密碼已成功重設。請用新密碼登入您的帳戶。"
 
 #. ($r->url_for('/user/lost_password')
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:548
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:545
 msgid "Your password recovery token has expired. Please click <a href=\"%1\"><strong>here</strong></a> to restart the password recovery process. Your account is important to us. If you require further assistance, please contact our <a href=\"%2\"><strong>Customer Support</strong></a>"
 msgstr "您的密碼復原權杖已經過期，請點選<a href=\"%1\"><strong>這裡</strong></a>重新開始密碼復原程序。您的帳戶對我們很重要，如需更多幫助，請聯繫我們的<a href=\"%2\"><strong>客服人員</strong></a>"
 
@@ -12939,7 +12945,7 @@ msgstr "您的密碼至少應為 6 個字元。"
 msgid "Your password should not be more then 25 characters."
 msgstr "您的密碼最多不超過 25 個字元。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:374
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:384
 #, fuzzy
 #| msgid "Your cashier session has expired"
 msgid "Your payment agent withdrawal token has expired."
@@ -12988,7 +12994,7 @@ msgid "Your token has been invalidated. Please click <a class=\"pjaxload\" href=
 msgstr ""
 
 #. ($c->stash('request')
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:519
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:516
 msgid "Your token has expired. If you require further assistance, please contact our <a href=\"%1\"><strong>Customer Support</strong></a>."
 msgstr "您的權杖已經過期。如需要更多幫助，請聯繫我們的<a href=\"%1\"><strong>客服人員</strong></a>。"
 
@@ -13002,14 +13008,14 @@ msgid "Your transaction reference is"
 msgstr "您的交易參考號是"
 
 #. ($tradeRef)
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1356
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1722
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1322
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1686
 msgid "Your transaction reference number is %1"
 msgstr "您的交易號是 %1"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:162
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:774
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:783
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:771
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:780
 msgid "Your verification link has expired. Please click below to re-send a verification email."
 msgstr "您的驗證連結已經失效。請點選下方的連結，以重傳驗證電郵。"
 
@@ -13053,7 +13059,7 @@ msgstr "在指定時間期限內您可以交易的金額限制；"
 msgid "a limit on the losses you may incur within a specified period of time;"
 msgstr "在指定時間期限內您可遭受的損失限額；"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:844
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:891
 msgid "alphanumeric with space and dash, 2-32 characters"
 msgstr "允許輸入英數字元和空格虛線，2-32個字元"
 
@@ -13086,7 +13092,7 @@ msgstr "單引號"
 msgid "barrier"
 msgstr "障礙"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1410
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1376
 msgid "better trade"
 msgstr "更佳交易"
 
@@ -13162,7 +13168,7 @@ msgstr "入市現價加上 %1"
 msgid "entry spot plus %plural(%1,1 pip, %d pips)"
 msgstr "入市現價加上 %plural(%1,1 點, %d 點)"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1800
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1764
 msgid "explanation"
 msgstr "說明"
 
@@ -13380,6 +13386,7 @@ msgstr "入您的帳戶。"
 msgid "today"
 msgstr "今天"
 
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:13
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:16
 msgid "website"
 msgstr "網站"
@@ -13900,21 +13907,9 @@ msgstr "澳元/韓元"
 msgid "CHF/JPY"
 msgstr ""
 
-#: Underlying Symbol SYNFCHI
-msgid "French Smart Index"
-msgstr "法國智慧指數"
-
-#: Underlying Symbol SYNN225
-msgid "Japanese Smart Index"
-msgstr "日本智慧指數"
-
 #: Underlying Symbol IXIC
 msgid "US Tech Composite Index"
 msgstr "美國科技綜合指數"
-
-#: Underlying Symbol FTSE
-msgid "UK Index"
-msgstr "英國指數"
 
 #: Underlying Symbol DFMGI
 msgid "Dubai Index"
@@ -13923,10 +13918,6 @@ msgstr "迪拜指數"
 #: Underlying Symbol N150
 msgid "Euro 150 Index"
 msgstr "歐洲150指數"
-
-#: Underlying Symbol SSECOMP
-msgid "Shanghai Index"
-msgstr "上海指數"
 
 #: Underlying Symbol FCHI
 msgid "French Index"
@@ -13943,18 +13934,6 @@ msgstr "葡萄牙指數"
 #: Underlying Symbol DJI
 msgid "Wall Street Index"
 msgstr "華爾街指數"
-
-#: Underlying Symbol SASEIDX
-msgid "Saudi Arabia Index"
-msgstr "沙地阿拉伯指數"
-
-#: Underlying Symbol SX5E
-msgid "Euro 50 Index"
-msgstr "歐洲 50 指數"
-
-#: Underlying Symbol SYNSX5E
-msgid "Euro 50 Smart Index"
-msgstr "歐洲 50 智慧指數"
 
 #: Underlying Symbol OBX
 msgid "Norwegian Index"
@@ -13976,14 +13955,6 @@ msgstr "日本指數"
 msgid "Shenzhen 300 Index"
 msgstr "深圳指數"
 
-#: Underlying Symbol IBEX35
-msgid "Spanish Index"
-msgstr "西班牙指數"
-
-#: Underlying Symbol SPTSX60
-msgid "Canadian Index"
-msgstr "加拿大指數"
-
 #: Underlying Symbol AEX
 msgid "Dutch Index"
 msgstr "荷蘭指數"
@@ -13995,10 +13966,6 @@ msgstr "意大利 30 指數"
 #: Underlying Symbol RTSI
 msgid "Russian Regular Index"
 msgstr "俄羅斯普通指數"
-
-#: Underlying Symbol SZSECOMP
-msgid "Shenzhen Index"
-msgstr "深圳指數"
 
 #: Underlying Symbol ADSMI
 msgid "Abu Dhabi Index"
@@ -14013,14 +13980,6 @@ msgstr "意大利指數"
 #: Underlying Symbol BFX
 msgid "Belgian Index"
 msgstr "比利時指數"
-
-#: Underlying Symbol ISEQ
-msgid "Irish Index"
-msgstr "愛爾蘭指數"
-
-#: Underlying Symbol IBOV
-msgid "Brazilian Index"
-msgstr "巴西指數"
 
 #: Underlying Symbol MICEX
 #, fuzzy
@@ -14056,10 +14015,6 @@ msgstr "美國標普 100 指數"
 msgid "New Zealand Index"
 msgstr "紐西蘭指數"
 
-#: Underlying Symbol SYNFTSE
-msgid "UK Smart Index"
-msgstr "英國智慧指數"
-
 #: Underlying Symbol SPC
 msgid "US Index"
 msgstr "美國指數"
@@ -14080,25 +14035,13 @@ msgstr "瑞典指數"
 msgid "Singapore Index"
 msgstr "新加坡指數"
 
-#: Underlying Symbol SYNDJI
-msgid "Wall Street Smart Index"
-msgstr "華爾街智慧指數"
-
 #: Underlying Symbol SYNPSI20
 msgid "Portuguese Smart Index"
 msgstr "葡萄牙智慧指數"
 
-#: Underlying Symbol KOSPI2
-msgid "Korean Index"
-msgstr "韓國指數"
-
 #: Underlying Symbol NIFTY
 msgid "Indian 50 Index"
 msgstr "印度50 指數"
-
-#: Underlying Symbol SYNAEX
-msgid "Dutch Smart Index"
-msgstr "荷蘭智慧指數"
 
 #: Underlying Symbol SSMI
 msgid "Swiss Index"
@@ -14108,14 +14051,6 @@ msgstr "瑞士指數"
 msgid "Hong Kong Index"
 msgstr "香港指數"
 
-#: Underlying Symbol SYNGDAXI
-msgid "German Smart Index"
-msgstr "德國智慧指數"
-
-#: Underlying Symbol SYNSSMI
-msgid "Swiss Smart Index"
-msgstr "瑞士智慧指數"
-
 #: Underlying Symbol FTSEMIB
 msgid "Italian Index"
 msgstr "意大利指數"
@@ -14123,10 +14058,6 @@ msgstr "意大利指數"
 #: Underlying Symbol N100
 msgid "Euro 100 Index"
 msgstr "歐洲100指數"
-
-#: Underlying Symbol SYNSPC
-msgid "US Smart Index"
-msgstr "美國智慧指數"
 
 #: Underlying Symbol BSESENSEX30
 msgid "Bombay Index"
@@ -14438,10 +14369,6 @@ msgstr "桑坦德銀行"
 msgid "POSCO"
 msgstr "POSCO"
 
-#: Underlying Symbol DEDBK
-msgid "Deutsche Bank AG"
-msgstr "德意志銀行"
-
 #: Underlying Symbol JPORNT
 #, fuzzy
 #| msgid "Corporate Actions"
@@ -14744,10 +14671,6 @@ msgstr ""
 msgid "Bridgestone Corporation Tokyo"
 msgstr ""
 
-#: Underlying Symbol DEADS
-msgid "ADIDAS AG"
-msgstr "阿迪達斯"
-
 #: Underlying Symbol USCVX
 msgid "Chevron Co."
 msgstr "雪佛龍公司"
@@ -14867,10 +14790,6 @@ msgstr "歐萊雅集團"
 #: Underlying Symbol JPATSG
 msgid "Atsugi Corp Ltd."
 msgstr ""
-
-#: Underlying Symbol UKTSCO
-msgid "Tesco plc"
-msgstr "特易購公司"
 
 #: Underlying Symbol AUNWS
 msgid "NEWS CORPORATION."
@@ -15278,10 +15197,6 @@ msgstr "澳大利亞國民銀行有限公司"
 msgid "Nippon Steel Corporation Tokyo"
 msgstr ""
 
-#: Underlying Symbol UKAZN
-msgid "AstraZeneca plc"
-msgstr "阿斯利康藥廠"
-
 #: Underlying Symbol FPLEG
 msgid "Legrand electrical components & equipm"
 msgstr ""
@@ -15303,10 +15218,6 @@ msgstr "菲利普莫里斯股份有限公司"
 #: Underlying Symbol JPKWSK
 msgid "Kawasaki Heavy Industries Tokyo"
 msgstr ""
-
-#: Underlying Symbol UKHSBA
-msgid "HSBC Holdings plc"
-msgstr "滙豐控股有限公司"
 
 #: Underlying Symbol DEEOAN
 msgid "E.ON SE"
@@ -15335,14 +15246,6 @@ msgstr "輝瑞大藥廠"
 #: Underlying Symbol AUANZ
 msgid "ANZ Banking Group Ltd"
 msgstr "澳新銀行集團有限公司"
-
-#: Underlying Symbol UKBATS
-msgid "British American Tobacco"
-msgstr "英美菸草商務股份有限公司"
-
-#: Underlying Symbol DELHA
-msgid "Deutsche Lufthansa"
-msgstr "德國漢莎航空"
 
 #: Underlying Symbol USORCL
 msgid "Oracle"
@@ -15593,10 +15496,6 @@ msgstr "可口可樂"
 #: Underlying Symbol BBUCB
 msgid "UCB"
 msgstr "比利時聯合化學集團"
-
-#: Underlying Symbol UKBP
-msgid "BP plc"
-msgstr "英國石油公司"
 
 #: Underlying Symbol USNVAR
 #, fuzzy
@@ -16475,6 +16374,90 @@ msgstr "如果%3一直到%5時處於%7至%6之外，將獲得%1%2的賠付額。
 #: Translation for contract type description (UPORDOWN - intraday)
 msgid "%1 %2 payout if %3 goes outside %7 and %6 through %5 after %4."
 msgstr "如果%3在%4過後一直到%5時處於%7與%6之外，將獲得%1%2的賠付額。"
+
+#~ msgid "Clients registered with Binary (IOM) Ltd can raise their unresolved disputes with the Isle of Man Gambling Supervision Commission at gaming@gov.im."
+#~ msgstr "在 Binary (IOM) Ltd 註冊的客戶可以傳送電子郵件到 gaming@gov.im ，就尚未解決的糾紛向曼島博彩監督委員會投訴。"
+
+#~ msgid "French Smart Index"
+#~ msgstr "法國智慧指數"
+
+#~ msgid "Japanese Smart Index"
+#~ msgstr "日本智慧指數"
+
+#~ msgid "UK Index"
+#~ msgstr "英國指數"
+
+#~ msgid "Shanghai Index"
+#~ msgstr "上海指數"
+
+#~ msgid "Saudi Arabia Index"
+#~ msgstr "沙地阿拉伯指數"
+
+#~ msgid "Euro 50 Index"
+#~ msgstr "歐洲 50 指數"
+
+#~ msgid "Euro 50 Smart Index"
+#~ msgstr "歐洲 50 智慧指數"
+
+#~ msgid "Spanish Index"
+#~ msgstr "西班牙指數"
+
+#~ msgid "Canadian Index"
+#~ msgstr "加拿大指數"
+
+#~ msgid "Shenzhen Index"
+#~ msgstr "深圳指數"
+
+#~ msgid "Irish Index"
+#~ msgstr "愛爾蘭指數"
+
+#~ msgid "Brazilian Index"
+#~ msgstr "巴西指數"
+
+#~ msgid "UK Smart Index"
+#~ msgstr "英國智慧指數"
+
+#~ msgid "Wall Street Smart Index"
+#~ msgstr "華爾街智慧指數"
+
+#~ msgid "Korean Index"
+#~ msgstr "韓國指數"
+
+#~ msgid "Dutch Smart Index"
+#~ msgstr "荷蘭智慧指數"
+
+#~ msgid "German Smart Index"
+#~ msgstr "德國智慧指數"
+
+#~ msgid "Swiss Smart Index"
+#~ msgstr "瑞士智慧指數"
+
+#~ msgid "US Smart Index"
+#~ msgstr "美國智慧指數"
+
+#~ msgid "Deutsche Bank AG"
+#~ msgstr "德意志銀行"
+
+#~ msgid "ADIDAS AG"
+#~ msgstr "阿迪達斯"
+
+#~ msgid "Tesco plc"
+#~ msgstr "特易購公司"
+
+#~ msgid "AstraZeneca plc"
+#~ msgstr "阿斯利康藥廠"
+
+#~ msgid "HSBC Holdings plc"
+#~ msgstr "滙豐控股有限公司"
+
+#~ msgid "British American Tobacco"
+#~ msgstr "英美菸草商務股份有限公司"
+
+#~ msgid "Deutsche Lufthansa"
+#~ msgstr "德國漢莎航空"
+
+#~ msgid "BP plc"
+#~ msgstr "英國石油公司"
 
 #~ msgid "Verification token is missing. Click on the verification link sent to your email and make sure you are not already logged in."
 #~ msgstr "沒找到驗證權杖。請點選發送到您郵箱的驗證連結，並確保您還未登入。"
