@@ -39,6 +39,9 @@ pjax_config_page('/trade.cgi', function() {
                     if (response) {
                         if (response.msg_type === "history") {
                             TradingAnalysis.digit_info().show_chart(response.echo_req.ticks_history, response.history.prices);
+                            $('[name=underlying_symbol]').on('change', function(e){
+                                $('[name=underlying]').val($('[name=underlying_symbol] option:selected').val());
+                            });
                         } else if (response.msg_type === "active_symbols") {
                             Symbols.details(response);
                             var underlying = $('[name=underlying_symbol] option:selected').val() || $('#underlying option:selected').val();
