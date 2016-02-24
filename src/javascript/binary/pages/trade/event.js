@@ -71,19 +71,6 @@ var TradingEvents = (function () {
         if(!value || !$('#duration_units').find('option[value='+value+']').length){
             return 0;
         }
-        if(value === "d"){
-            $('#duration_amount').on('change', debounce(function (e) {
-                if (e.target.value % 1 !== 0 ) {
-                    e.target.value = Math.floor(e.target.value);
-                }
-                sessionStorage.setItem('duration_amount',e.target.value);
-                Durations.select_amount(e.target.value);
-                processPriceRequest();
-                submitForm(document.getElementById('websocket_form'));
-            }));
-        } else{
-            $('#duration_amount').off('change');
-        }
         $('#duration_units').val(value);
         
         sessionStorage.setItem('duration_units',value);
@@ -185,17 +172,28 @@ var TradingEvents = (function () {
         /*
          * bind event to change in duration amount, request new price
          */
-        var durationAmountElement = document.getElementById('duration_amount');
+        function triggerOnDurationChange(e){
+            if (e.target.value % 1 !== 0 ) {
+                e.target.value = Math.floor(e.target.value);
+            }
+            sessionStorage.setItem('duration_amount',e.target.value);
+            Durations.select_amount(e.target.value);
+            processPriceRequest();
+            submitForm(document.getElementById('websocket_form'));
+        }
+        var durationAmountElement = document.getElementById('duration_amount'),
+            flagForEvent = 0;          // For triggering one of the two events.
         if (durationAmountElement) {
             // jquery needed for datepicker
             $('#duration_amount').on('input', debounce(function (e) {
-                if (e.target.value % 1 !== 0 ) {
-                    e.target.value = Math.floor(e.target.value);
-                }
-                sessionStorage.setItem('duration_amount',e.target.value);
-                Durations.select_amount(e.target.value);
-                processPriceRequest();
-                submitForm(document.getElementById('websocket_form'));
+                triggerOnDurationChange(e);
+                flagForEvent = 1;
+            }));
+            $('#duration_amount').on('change', debounce(function (e) {
+                if(flagForEvent === 0)
+                    triggerOnDurationChange(e);
+                else
+                    flagForEvent = 0;
             }));
         }
 
