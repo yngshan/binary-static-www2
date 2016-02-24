@@ -57,8 +57,6 @@ var RealAccOpeningUI = (function(){
     AccountOpening.checkFname(elementObj['fname'], errorObj['fname']);
     AccountOpening.checkLname(elementObj['lname'], errorObj['lname']);
     AccountOpening.checkDate(elementObj['dobdd'], elementObj['dobmm'], elementObj['dobyy'], errorObj['dobdd']);
-    AccountOpening.checkAddress(elementObj['address1'], errorObj['address1'], elementObj['address2'], errorObj['address2']);
-    AccountOpening.checkTown(elementObj['town'], errorObj['town']);
     AccountOpening.checkPostcode(elementObj['postcode'], errorObj['postcode']);
 
     if (residence.value === 'gb' && /^$/.test(Trim(postcode.value))){

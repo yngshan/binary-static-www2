@@ -1,5 +1,5 @@
 var AccountOpening = (function(){
-  function redirectCookie() {
+  var redirectCookie = function() {
     if (!$.cookie('login')) {
         window.location.href = page.url.url_for('login');
         return;
@@ -14,8 +14,8 @@ var AccountOpening = (function(){
         return;
       }
     }
-  }
-  function handler(response, message) {
+  };
+  var handler = function(response, message) {
     if (response.error) {
       var errorMessage = response.error.message;
       if (errorMessage) {
@@ -63,7 +63,7 @@ var AccountOpening = (function(){
       option.setAttribute('selected', 'selected');
       $('#loginid-switch-form').submit();
     }
-  }
+  };
   var errorCounter = 0;
   var letters = Content.localize().textLetters,
       numbers = Content.localize().textNumbers,
@@ -71,7 +71,7 @@ var AccountOpening = (function(){
       hyphen  = Content.localize().textHyphen,
       period  = Content.localize().textPeriod,
       apost   = Content.localize().textApost;
-  function checkFname(fname, errorFname) {
+  var checkFname = function(fname, errorFname) {
     if (Trim(fname.value).length < 2) {
       errorFname.innerHTML = Content.errorMessage('min', '2');
       Validate.displayErrorMessage(errorFname);
@@ -82,8 +82,8 @@ var AccountOpening = (function(){
       errorCounter++;
     }
     return errorCounter;
-  }
-  function checkLname(lname, errorLname) {
+  };
+  var checkLname = function(lname, errorLname) {
     if (Trim(lname.value).length < 2) {
       errorLname.innerHTML = Content.errorMessage('min', '2');
       Validate.displayErrorMessage(errorLname);
@@ -94,47 +94,24 @@ var AccountOpening = (function(){
       errorCounter++;
     }
     return errorCounter;
-  }
-  function checkDate(dobdd, dobmm, dobyy, errorDob) {
+  };
+  var checkDate = function(dobdd, dobmm, dobyy, errorDob) {
     if (!isValidDate(dobdd.value, dobmm.value, dobyy.value) || dobdd.value === '' || dobmm.value === '' || dobyy.value === '') {
       errorDob.innerHTML = Content.localize().textErrorBirthdate;
       Validate.displayErrorMessage(errorDob);
       errorCounter++;
     }
     return errorCounter;
-  }
-  function checkAddress(address1, errorAddress1, address2, errorAddress2) {
-    if (!/^[a-zA-Z\d\s-.']+$/.test(address1.value)){
-      errorAddress1.innerHTML = Content.errorMessage('reg', [letters, numbers, space, hyphen, period, apost, ' ']);
-      Validate.displayErrorMessage(errorAddress1);
-      errorCounter++;
-    }
-    if (address2.value !== ""){
-      if (!/^[a-zA-Z\d\s-.']+$/.test(address2.value)){
-        errorAddress2.innerHTML = Content.errorMessage('reg', [letters, numbers, space, hyphen, period, apost, ' ']);
-        Validate.displayErrorMessage(errorAddress2);
-        errorCounter++;
-      }
-    }
-    return errorCounter;
-  }
-  function checkTown(town, errorTown) {
-    if (!/^[a-zA-Z\s-.']+$/.test(town.value)){
-      errorTown.innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
-      Validate.displayErrorMessage(errorTown);
-      errorCounter++;
-    }
-    return errorCounter;
-  }
-  function checkPostcode(postcode, errorPostcode) {
+  };
+  var checkPostcode = function(postcode, errorPostcode) {
     if (postcode.value !== '' && !/^[a-zA-Z\d-]+$/.test(postcode.value)){
       errorPostcode.innerHTML = Content.errorMessage('reg', [letters, numbers, hyphen, ' ']);
       Validate.displayErrorMessage(errorPostcode);
       errorCounter++;
     }
     return errorCounter;
-  }
-  function checkTel(tel, errorTel) {
+  };
+  var checkTel = function(tel, errorTel) {
     if (tel.value.replace(/\+| /g,'').length < 6) {
       errorTel.innerHTML = Content.errorMessage('min', 6);
       Validate.displayErrorMessage(errorTel);
@@ -145,23 +122,21 @@ var AccountOpening = (function(){
       errorCounter++;
     }
     return errorCounter;
-  }
-  function checkAnswer(answer, errorAnswer) {
+  };
+  var checkAnswer = function(answer, errorAnswer) {
     if (answer.value.length < 4) {
       errorAnswer.innerHTML = Content.errorMessage('min', 4);
       Validate.displayErrorMessage(errorAnswer);
       errorCounter++;
     }
     return errorCounter;
-  }
+  };
   return {
     redirectCookie: redirectCookie,
     handler: handler,
     checkFname: checkFname,
     checkLname: checkLname,
     checkDate: checkDate,
-    checkAddress: checkAddress,
-    checkTown: checkTown,
     checkPostcode: checkPostcode,
     checkTel: checkTel,
     checkAnswer: checkAnswer

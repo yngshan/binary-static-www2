@@ -1,5 +1,4 @@
 pjax_config_page("new_account/japanws", function(){
-
   return {
     onLoad: function() {
       Content.populate();

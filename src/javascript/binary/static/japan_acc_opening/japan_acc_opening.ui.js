@@ -1,98 +1,98 @@
-var JapanAccOpeningUI = (function(){
+var JapanAccOpeningUI = function () {
   "use strict";
 
-  function checkValidity(){
+  function checkValidity() {
     var errorCounter = 0;
 
     var letters = Content.localize().textLetters,
         numbers = Content.localize().textNumbers,
-        space   = Content.localize().textSpace,
-        hyphen  = Content.localize().textHyphen,
-        period  = Content.localize().textPeriod,
-        apost   = Content.localize().textApost;
+        space = Content.localize().textSpace,
+        hyphen = Content.localize().textHyphen,
+        period = Content.localize().textPeriod,
+        apost = Content.localize().textApost;
 
     var elementObj = {
-        gender      : document.getElementById('gender'),
-        fname       : document.getElementById('fname'),
-        lname       : document.getElementById('lname'),
-        dobdd       : document.getElementById('dobdd'),
-        dobmm       : document.getElementById('dobmm'),
-        dobyy       : document.getElementById('dobyy'),
-        occupation  : document.getElementById('occupation'),
-        address1    : document.getElementById('address1'),
-        address2    : document.getElementById('address2'),
-        town        : document.getElementById('address-town'),
-        state       : document.getElementById('address-state'),
-        postcode    : document.getElementById('address-postcode'),
-        tel         : document.getElementById('tel'),
-        question    : document.getElementById('secret-question'),
-        answer      : document.getElementById('secret-answer'),
-        fatca       : document.getElementById('fatca'),
-        income      : document.getElementById('annual-income'),
-        asset       : document.getElementById('financial-asset'),
-        limit       : document.getElementById('daily-loss-limit'),
-        equities    : document.getElementById('equities'),
-        commodities : document.getElementById('commodities'),
-        deposit     : document.getElementById('foreign-currency-deposit'),
-        margin      : document.getElementById('margin-fx'),
-        trust       : document.getElementById('investment-trust'),
-        bond        : document.getElementById('public-and-corporation-bond'),
-        otc         : document.getElementById('otc-derivative-trading'),
-        purpose     : document.getElementById('trading-purpose'),
-        hedge       : document.getElementById('hedge-asset'),
-        amount      : document.getElementById('hedge-asset-amount'),
-        electronic  : document.getElementById('use-electronic-doc'),
-        policies    : document.getElementById('warnings-and-policies'),
-        judgement   : document.getElementById('own-judgment'),
-        mechanism   : document.getElementById('trading-mechanism'),
-        time        : document.getElementById('judgment-time'),
-        total       : document.getElementById('total-loss'),
-        sellback    : document.getElementById('sellback-loss'),
-        shortsell   : document.getElementById('shortsell-loss'),
-        profit      : document.getElementById('company-profit'),
-        knowledge   : document.getElementById('expert-knowledge')
+        gender: document.getElementById('gender'),
+        fname: document.getElementById('fname'),
+        lname: document.getElementById('lname'),
+        dobdd: document.getElementById('dobdd'),
+        dobmm: document.getElementById('dobmm'),
+        dobyy: document.getElementById('dobyy'),
+        occupation: document.getElementById('occupation'),
+        address1: document.getElementById('address1'),
+        address2: document.getElementById('address2'),
+        town: document.getElementById('address-town'),
+        state: document.getElementById('address-state'),
+        postcode: document.getElementById('address-postcode'),
+        tel: document.getElementById('tel'),
+        question: document.getElementById('secret-question'),
+        answer: document.getElementById('secret-answer'),
+        fatca: document.getElementById('fatca'),
+        income: document.getElementById('annual-income'),
+        asset: document.getElementById('financial-asset'),
+        limit: document.getElementById('daily-loss-limit'),
+        equities: document.getElementById('equities'),
+        commodities: document.getElementById('commodities'),
+        deposit: document.getElementById('foreign-currency-deposit'),
+        margin: document.getElementById('margin-fx'),
+        trust: document.getElementById('investment-trust'),
+        bond: document.getElementById('public-and-corporation-bond'),
+        otc: document.getElementById('otc-derivative-trading'),
+        purpose: document.getElementById('trading-purpose'),
+        hedge: document.getElementById('hedge-asset'),
+        amount: document.getElementById('hedge-asset-amount'),
+        electronic: document.getElementById('use-electronic-doc'),
+        policies: document.getElementById('warnings-and-policies'),
+        judgement: document.getElementById('own-judgment'),
+        mechanism: document.getElementById('trading-mechanism'),
+        time: document.getElementById('judgment-time'),
+        total: document.getElementById('total-loss'),
+        sellback: document.getElementById('sellback-loss'),
+        shortsell: document.getElementById('shortsell-loss'),
+        profit: document.getElementById('company-profit'),
+        knowledge: document.getElementById('expert-knowledge')
     };
 
     var errorObj = {
-        gender      : document.getElementById('error-gender'),
-        fname       : document.getElementById('error-fname'),
-        lname       : document.getElementById('error-lname'),
-        dobdd       : document.getElementById('error-birthdate'),
-        dobmm       : document.getElementById('error-birthdate'),
-        dobyy       : document.getElementById('error-birthdate'),
-        occupation  : document.getElementById('error-occupation'),
-        address1    : document.getElementById('error-address1'),
-        address2    : document.getElementById('error-address2'),
-        town        : document.getElementById('error-town'),
-        state       : document.getElementById('error-state'),
-        postcode    : document.getElementById('error-postcode'),
-        tel         : document.getElementById('error-tel'),
-        question    : document.getElementById('error-question'),
-        answer      : document.getElementById('error-answer'),
-        fatca       : document.getElementById('error-fatca'),
-        income      : document.getElementById('error-annual-income'),
-        asset       : document.getElementById('error-financial-asset'),
-        limit       : document.getElementById('error-daily-loss-limit'),
-        equities    : document.getElementById('error-equities'),
-        commodities : document.getElementById('error-commodities'),
-        deposit     : document.getElementById('error-foreign-currency-deposit'),
-        margin      : document.getElementById('error-margin-fx'),
-        trust       : document.getElementById('error-investment-trust'),
-        bond        : document.getElementById('error-public-and-corporation-bond'),
-        otc         : document.getElementById('error-otc-derivative-trading'),
-        purpose     : document.getElementById('error-trading-purpose'),
-        hedge       : document.getElementById('error-hedge-asset'),
-        amount      : document.getElementById('error-hedge-asset-amount'),
-        electronic  : document.getElementById('error-use-electronic-doc'),
-        policies    : document.getElementById('error-warnings-and-policies'),
-        judgement   : document.getElementById('error-own-judgment'),
-        mechanism   : document.getElementById('error-trading-mechanism'),
-        time        : document.getElementById('error-judgment-time'),
-        total       : document.getElementById('error-total-loss'),
-        sellback    : document.getElementById('error-sellback-loss'),
-        shortsell   : document.getElementById('error-shortsell-loss'),
-        profit      : document.getElementById('error-company-profit'),
-        knowledge   : document.getElementById('error-expert-knowledge')
+        gender: document.getElementById('error-gender'),
+        fname: document.getElementById('error-fname'),
+        lname: document.getElementById('error-lname'),
+        dobdd: document.getElementById('error-birthdate'),
+        dobmm: document.getElementById('error-birthdate'),
+        dobyy: document.getElementById('error-birthdate'),
+        occupation: document.getElementById('error-occupation'),
+        address1: document.getElementById('error-address1'),
+        address2: document.getElementById('error-address2'),
+        town: document.getElementById('error-town'),
+        state: document.getElementById('error-state'),
+        postcode: document.getElementById('error-postcode'),
+        tel: document.getElementById('error-tel'),
+        question: document.getElementById('error-question'),
+        answer: document.getElementById('error-answer'),
+        fatca: document.getElementById('error-fatca'),
+        income: document.getElementById('error-annual-income'),
+        asset: document.getElementById('error-financial-asset'),
+        limit: document.getElementById('error-daily-loss-limit'),
+        equities: document.getElementById('error-equities'),
+        commodities: document.getElementById('error-commodities'),
+        deposit: document.getElementById('error-foreign-currency-deposit'),
+        margin: document.getElementById('error-margin-fx'),
+        trust: document.getElementById('error-investment-trust'),
+        bond: document.getElementById('error-public-and-corporation-bond'),
+        otc: document.getElementById('error-otc-derivative-trading'),
+        purpose: document.getElementById('error-trading-purpose'),
+        hedge: document.getElementById('error-hedge-asset'),
+        amount: document.getElementById('error-hedge-asset-amount'),
+        electronic: document.getElementById('error-use-electronic-doc'),
+        policies: document.getElementById('error-warnings-and-policies'),
+        judgement: document.getElementById('error-own-judgment'),
+        mechanism: document.getElementById('error-trading-mechanism'),
+        time: document.getElementById('error-judgment-time'),
+        total: document.getElementById('error-total-loss'),
+        sellback: document.getElementById('error-sellback-loss'),
+        shortsell: document.getElementById('error-shortsell-loss'),
+        profit: document.getElementById('error-company-profit'),
+        knowledge: document.getElementById('error-expert-knowledge')
     };
     var key;
     for (key in errorObj) {
@@ -101,45 +101,43 @@ var JapanAccOpeningUI = (function(){
       }
     }
 
-    if (!/^[a-zA-Z\s-.']+$/.test(elementObj['fname'].value)){
+    if (!/^(?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])|[\t-\r \xA0\u1680\u180E\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]\-(?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])'+$/.test(Trim(elementObj['fname'].value))) {
       errorObj['fname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
       Validate.displayErrorMessage(errorObj['fname']);
       errorCounter++;
     }
 
-    if (!/^[a-zA-Z\s-.']+$/.test(elementObj['lname'].value)){
+    if (!/^(?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])|[\t-\r \xA0\u1680\u180E\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]\-(?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])'+$/.test(Trim(elementObj['lname'].value))) {
       errorObj['lname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
       Validate.displayErrorMessage(errorObj['lname']);
       errorCounter++;
     }
 
     AccountOpening.checkDate(elementObj['dobdd'], elementObj['dobmm'], elementObj['dobyy'], errorObj['dobdd']);
-    AccountOpening.checkAddress(elementObj['address1'], errorObj['address1'], elementObj['address2'], errorObj['address2']);
-    AccountOpening.checkTown(elementObj['town'], errorObj['town']);
     AccountOpening.checkPostcode(elementObj['postcode'], errorObj['postcode']);
     AccountOpening.checkTel(elementObj['tel'], errorObj['tel']);
     AccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
 
-    if (!/^\d+$/.test(elementObj['limit'].value)){
+    if (!/^\d+$/.test(elementObj['limit'].value)) {
       errorObj['limit'].innerHTML = Content.errorMessage('reg', [numbers, '']);
       Validate.displayErrorMessage(errorObj['limit']);
       errorCounter++;
     }
 
-    if (elementObj['amount'].offsetParent !== null && !/^\d+$/.test(elementObj['amount'].value)){
+    if (elementObj['amount'].offsetParent !== null && !/^\d+$/.test(elementObj['amount'].value)) {
       errorObj['amount'].innerHTML = Content.errorMessage('reg', [numbers, '']);
       Validate.displayErrorMessage(errorObj['amount']);
       errorCounter++;
     }
 
-    for (key in elementObj){
+    for (key in elementObj) {
       if (elementObj[key].offsetParent !== null && key !== 'address2') {
-        if (/^$/.test(Trim(elementObj[key].value)) && elementObj[key].type !== 'checkbox'){
+        if (/^$/.test(Trim(elementObj[key].value)) && elementObj[key].type !== 'checkbox') {
           errorObj[key].innerHTML = Content.errorMessage('req');
           Validate.displayErrorMessage(errorObj[key]);
           errorCounter++;
         }
-        if (elementObj[key].type === 'checkbox' && !elementObj[key].checked){
+        if (elementObj[key].type === 'checkbox' && !elementObj[key].checked) {
           errorObj[key].innerHTML = Content.errorMessage('req');
           Validate.displayErrorMessage(errorObj[key]);
           errorCounter++;
@@ -162,4 +160,4 @@ var JapanAccOpeningUI = (function(){
   return {
     checkValidity: checkValidity
   };
-})();
+}();

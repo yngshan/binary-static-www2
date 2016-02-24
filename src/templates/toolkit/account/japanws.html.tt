@@ -218,7 +218,7 @@
                                 <label for="daily-loss-limit">[% l('Daily limit on losses') %]</label>
                             </div>
                             <div class="grd-grid-8">
-                              <input class="text" id="daily-loss-limit" type="text"></input>
+                              <input class="text" id="daily-loss-limit" type="text" maxlength="20"></input>
                               <br />
                               <p class="hint">Maximum aggregate loss per day.</p>
                               <p class="errorfield" id="error-daily-loss-limit"></p>
