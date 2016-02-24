@@ -580,27 +580,6 @@ pjax_config_page('/terms-and-condition', function() {
     };
 });
 
-pjax_config_page('/user/myaccount', function() {
-    return {
-        onLoad: function() {
-            var divOne = text.localize('<div class="notice-msg" style="margin-top: 10px;">Your %1 account is unavailable. For any questions please contact <a href="%2">Customer Support</a>.</div>').replace('%2', page.url.url_for('contact')),
-                divTwo = text.localize('<div class="notice-msg" style="margin-top: 10px;">Your %1 accounts are unavailable. For any questions please contact <a href="%2">Customer Support</a>.</div>').replace('%2', page.url.url_for('contact'));
-            var loginidArry = page.user.loginid_array,
-                disabledAccount = [];
-            for (i = 0; i < loginidArry.length; i++) {
-              if (loginidArry[i].disabled === true && loginidArry[i].real === true) {
-                disabledAccount.push(loginidArry[i].id);
-              }
-            }
-            if (disabledAccount.length === 1) {
-                $(divOne.replace('%1', disabledAccount.toString())).insertAfter('.clientid');
-            } else if (disabledAccount.length > 1) {
-                $(divTwo.replace('%1', disabledAccount.join(', '))).insertAfter('.clientid');
-            }
-        },
-    };
-});
-
 pjax_config_page('/login', function() {
     return {
         onLoad: function() {
