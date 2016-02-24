@@ -191,6 +191,10 @@ var TradingAnalysis = (function() {
         digit_info: function() {
             return trading_digit_info;
         },
+        // Should be removed with legacy trading.
+        set_digit_info: function(obj) {
+            trading_digit_info = obj;
+        },
         japan_info: function() {
             return tab_japan_info;
         },
