@@ -33,15 +33,13 @@ pjax_config_page('/trade.cgi', function() {
                     document.addEventListener("visibilitychange", toggleStreaming);
                 }
             }
-            Symbols.getSymbols(); // For last_digit_chart
             BinarySocket.init({
                 onmessage: function(msg) {
                     var response = JSON.parse(msg.data);
                     if (response) {
                         if (response.msg_type === "history") {
                             TradingAnalysis.digit_info().show_chart(response.echo_req.ticks_history, response.history.prices);
-                        }
-                        else if (response.msg_type === "active_symbols") {
+                        } else if (response.msg_type === "active_symbols") {
                             Symbols.details(response);
                             var underlying = $('[name=underlying_symbol] option:selected').val() || $('#underlying option:selected').val();
                             var tick = $('[name=tick_count]').val() || 100;

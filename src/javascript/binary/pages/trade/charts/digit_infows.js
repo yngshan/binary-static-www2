@@ -88,7 +88,7 @@ BetAnalysis.DigitInfoWS = function() {
 };
 
 BetAnalysis.DigitInfoWS.prototype = {
-    add_content: function(){
+    add_content: function(underlying){
         var domain = document.domain.split('.').slice(-2).join('.'),
             underlyings =[];
         var symbols = Symbols.getAllSymbols();
@@ -116,7 +116,7 @@ BetAnalysis.DigitInfoWS.prototype = {
                         '<div id="last_digit_title" class="grd-hide">'+ text.localize(domain.replace(domain[0],domain[0].toUpperCase()) +' - Last digit stats for the latest %1 ticks on %2') +'</div>'+
                         '</div>';
         contentId.innerHTML = content;
-        $('[name=underlying]').val($('#underlying option:selected').val());
+        $('[name=underlying]').val(underlying);
         
     },
     on_latest: function() {
@@ -136,7 +136,8 @@ BetAnalysis.DigitInfoWS.prototype = {
                                         '"req_id": 2}');
             if(that.chart.series[0].name !== symbol){
                 if($('#underlying option:selected').val() != $('[name=underlying]', form).val()){
-                    request['subscribe']=1;
+                    request['subscribe'] = 1;
+                    request['style'] = "ticks";
                 }
                 if(that.stream_id !== null ){
                     BinarySocket.send(JSON.parse('{"forget": "'+ that.stream_id +'"}'));
@@ -165,7 +166,7 @@ BetAnalysis.DigitInfoWS.prototype = {
             this.chart.series[0].name = underlying;
         }
         else{
-            this.add_content();
+            this.add_content(underlying);
             this.chart_config.xAxis.title = {
                 text: $('#last_digit_title').html().replace('%2', $('[name=underlying] option:selected').text()).replace('%1',spots.length),
             };
