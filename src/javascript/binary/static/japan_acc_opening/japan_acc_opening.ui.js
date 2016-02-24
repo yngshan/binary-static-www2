@@ -102,13 +102,13 @@ var JapanAccOpeningUI = function () {
     }
 
     if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|]+/.test(Trim(elementObj['fname'].value))) {
-      errorObj['fname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
+      errorObj['fname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost]);
       Validate.displayErrorMessage(errorObj['fname']);
       errorCounter++;
     }
 
     if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|]+/.test(Trim(elementObj['lname'].value))) {
-      errorObj['lname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
+      errorObj['lname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost]);
       Validate.displayErrorMessage(errorObj['lname']);
       errorCounter++;
     }
@@ -119,13 +119,13 @@ var JapanAccOpeningUI = function () {
     ValidAccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
 
     if (!/^\d+$/.test(elementObj['limit'].value)) {
-      errorObj['limit'].innerHTML = Content.errorMessage('reg', [numbers, '']);
+      errorObj['limit'].innerHTML = Content.errorMessage('reg', [numbers]);
       Validate.displayErrorMessage(errorObj['limit']);
       errorCounter++;
     }
 
     if (elementObj['amount'].offsetParent !== null && !/^\d+$/.test(elementObj['amount'].value)) {
-      errorObj['amount'].innerHTML = Content.errorMessage('reg', [numbers, '']);
+      errorObj['amount'].innerHTML = Content.errorMessage('reg', [numbers]);
       Validate.displayErrorMessage(errorObj['amount']);
       errorCounter++;
     }

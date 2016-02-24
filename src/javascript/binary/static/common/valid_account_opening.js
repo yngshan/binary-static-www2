@@ -24,7 +24,7 @@ var ValidAccountOpening = (function(){
         $('#japan-form').remove();
       }
       var error = document.getElementsByClassName('notice-msg')[0];
-      error.innerHTML = (errorMessage) ? errorMessage : text.localize('There was some invalid character in an input field.')
+      error.innerHTML = (response.msg_type === 'sanity_check') ? text.localize('There was some invalid character in an input field.') : errorMessage;
       error.parentNode.parentNode.parentNode.setAttribute('style', 'display:block');
       return;
     } else {
@@ -82,7 +82,7 @@ var ValidAccountOpening = (function(){
       errorCounter++;
     } else if (!/^[a-zA-Z\s-.']+$/.test(fname.value)){
       initializeValues();
-      errorFname.innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
+      errorFname.innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost]);
       Validate.displayErrorMessage(errorFname);
       errorCounter++;
     }
@@ -95,7 +95,7 @@ var ValidAccountOpening = (function(){
       errorCounter++;
     } else if (!/^[a-zA-Z\s-.']+$/.test(lname.value)){
       initializeValues();
-      errorLname.innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
+      errorLname.innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost]);
       Validate.displayErrorMessage(errorLname);
       errorCounter++;
     }
@@ -112,7 +112,7 @@ var ValidAccountOpening = (function(){
   var checkPostcode = function(postcode, errorPostcode) {
     if (postcode.value !== '' && !/^[a-zA-Z\d-]+$/.test(postcode.value)){
       initializeValues();
-      errorPostcode.innerHTML = Content.errorMessage('reg', [letters, numbers, hyphen, ' ']);
+      errorPostcode.innerHTML = Content.errorMessage('reg', [letters, numbers, hyphen]);
       Validate.displayErrorMessage(errorPostcode);
       errorCounter++;
     }
@@ -125,7 +125,7 @@ var ValidAccountOpening = (function(){
       errorCounter++;
     } else if (!/^\+?[\d-\s]+$/.test(tel.value)){
       initializeValues();
-      errorTel.innerHTML = Content.errorMessage('reg', [numbers, space, hyphen, ' ']);
+      errorTel.innerHTML = Content.errorMessage('reg', [numbers, space, hyphen]);
       Validate.displayErrorMessage(errorTel);
       errorCounter++;
     }
