@@ -54,10 +54,10 @@ var RealAccOpeningUI = (function(){
       }
     }
 
-    AccountOpening.checkFname(elementObj['fname'], errorObj['fname']);
-    AccountOpening.checkLname(elementObj['lname'], errorObj['lname']);
-    AccountOpening.checkDate(elementObj['dobdd'], elementObj['dobmm'], elementObj['dobyy'], errorObj['dobdd']);
-    AccountOpening.checkPostcode(elementObj['postcode'], errorObj['postcode']);
+    ValidAccountOpening.checkFname(elementObj['fname'], errorObj['fname']);
+    ValidAccountOpening.checkLname(elementObj['lname'], errorObj['lname']);
+    ValidAccountOpening.checkDate(elementObj['dobdd'], elementObj['dobmm'], elementObj['dobyy'], errorObj['dobdd']);
+    ValidAccountOpening.checkPostcode(elementObj['postcode'], errorObj['postcode']);
 
     if (residence.value === 'gb' && /^$/.test(Trim(postcode.value))){
       errorPostcode.innerHTML = Content.errorMessage('req');
@@ -65,8 +65,8 @@ var RealAccOpeningUI = (function(){
       errorCounter++;
     }
 
-    AccountOpening.checkTel(elementObj['tel'], errorObj['tel']);
-    AccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
+    ValidAccountOpening.checkTel(elementObj['tel'], errorObj['tel']);
+    ValidAccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
 
     for (key in elementObj){
       if (elementObj[key].offsetParent !== null && key !== 'address2' && key !== 'postcode' && key !== 'state') {
