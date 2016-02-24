@@ -18,17 +18,15 @@ var ValidAccountOpening = (function(){
   var handler = function(response, message) {
     if (response.error) {
       var errorMessage = response.error.message;
-      if (errorMessage) {
-        if (document.getElementById('real-form')) {
-          $('#real-form').remove();
-        } else if (document.getElementById('japan-form')) {
-          $('#japan-form').remove();
-        }
-        var error = document.getElementsByClassName('notice-msg')[0];
-        error.innerHTML = errorMessage;
-        error.parentNode.parentNode.parentNode.setAttribute('style', 'display:block');
-        return;
+      if (document.getElementById('real-form')) {
+        $('#real-form').remove();
+      } else if (document.getElementById('japan-form')) {
+        $('#japan-form').remove();
       }
+      var error = document.getElementsByClassName('notice-msg')[0];
+      error.innerHTML = (errorMessage) ? errorMessage : text.localize('There was some invalid character in an input field.')
+      error.parentNode.parentNode.parentNode.setAttribute('style', 'display:block');
+      return;
     } else {
       var loginid = message.client_id;
       //set cookies

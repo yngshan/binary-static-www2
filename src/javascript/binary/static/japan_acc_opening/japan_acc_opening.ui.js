@@ -101,13 +101,13 @@ var JapanAccOpeningUI = function () {
       }
     }
 
-    if (!/^(?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])|[\t-\r \xA0\u1680\u180E\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]\-(?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])'+$/.test(Trim(elementObj['fname'].value)) || /[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|]+/.test(Trim(elementObj['fname'].value))) {
+    if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|]+/.test(Trim(elementObj['fname'].value))) {
       errorObj['fname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
       Validate.displayErrorMessage(errorObj['fname']);
       errorCounter++;
     }
 
-    if (!/^(?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])|[\t-\r \xA0\u1680\u180E\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF]\-(?:[\0-\t\x0B\f\x0E-\u2027\u202A-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])'+$/.test(Trim(elementObj['lname'].value)) || /[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|]+/.test(Trim(elementObj['lname'].value))) {
+    if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|]+/.test(Trim(elementObj['lname'].value))) {
       errorObj['lname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost, ' ']);
       Validate.displayErrorMessage(errorObj['lname']);
       errorCounter++;

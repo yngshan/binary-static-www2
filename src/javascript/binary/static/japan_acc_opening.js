@@ -28,8 +28,11 @@ pjax_config_page("new_account/japanws", function(){
             onmessage: function(msg){
               var response = JSON.parse(msg.data);
               if (response) {
-                if (response.msg_type === 'new_account_japan'){
+                var type = response.msg_type;
+                if (type === 'new_account_japan'){
                   ValidAccountOpening.handler(response, response.new_account_japan);
+                } else if (type === 'error') {
+                  ValidAccountOpening.handler(response);
                 }
               }
             }
