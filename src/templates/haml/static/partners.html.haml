@@ -58,9 +58,9 @@
   .grd-grid-12.grd-grid-mobile-12.grd-parent.grd-clear
     .grd-grid-4.grd-grid-mobile-12
       .grd-grid-6.grd-with-padding
-        %a{:href => url_for('/user-testing')}
+        %a.pjaxload{:href => url_for('/user-testing')}
           %img#charting_icon.responsive.charting-page-icon{:src => url_for('images/pages/partners/tester.svg')}
       .grd-grid-12
         %h4
-          %a{:href => url_for('/user-testing')}= l('User Testing')
+          %a.pjaxload{:href => url_for('/user-testing')}= l('User Testing')
         %p= l('Earn money for any verifiable errors that you find.')
