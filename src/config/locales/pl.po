@@ -7,14 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-02-23 11:08+0000\n"
+"PO-Revision-Date: 2016-02-25 12:01+0000\n"
 "Last-Translator: Ewelina Bruździak <e.bruzdziak@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/binary/static/pl/>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/binary/static/pl/>"
+"\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.5-dev\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -2190,10 +2192,9 @@ msgstr "Cena kupna"
 
 #. (to_monetary_number_format($stake_min, 1)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1550
-#, fuzzy
 #| msgid "Duration must be between %1 and %2."
 msgid "Buy price must be between %1 and %2."
-msgstr "Czas trwania musi wynosić pomiędzy %1 a %2."
+msgstr "Cena zakupu musi mieścić się w przedziale %1-%2."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/register/risk_disclaimer_message.html.tt:8
 msgid "By clicking <strong>Accept</strong> below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate."
@@ -2440,7 +2441,7 @@ msgstr "Wybierz swoją wypłatę."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/charting/index.html.haml:1
 msgid "Chrome app"
-msgstr ""
+msgstr "Aplikacja Chrome"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/japan.pm:327
 msgid "Classification of assets requiring hedge"
@@ -3278,10 +3279,9 @@ msgid "Deposit"
 msgstr "Wpłata"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:368
-#, fuzzy
 #| msgid "Deposit %1 virtual money into your account"
 msgid "Deposit %1 %2 virtual money into your account %3"
-msgstr "Wpłać na swoje konto wirtualne pieniądze w kwocie: %1"
+msgstr "Wpłać na swoje konto %3 wirtualne pieniądze w kwocie: %2 %1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/promocode.html.tt:3
 msgid "Deposit Bonus"
@@ -6060,10 +6060,11 @@ msgid "Last Used"
 msgstr "Ostatnio używane"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:363
-#, fuzzy
 #| msgid "Last digits for the latest %1 ticks on %2"
 msgid "Last digit stats for the latest %1 ticks on %2"
-msgstr "Końcowe cyfry ostatnich %1 transakcji z najmniejszym przyrostem ceny %2"
+msgstr ""
+"Statystyki końcowych cyfr dla ostatnich %1 transakcji z najmniejszym "
+"przyrostem ceny %2"
 
 #. ($tick_count, $underlying->translated_display_name)
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:281
@@ -6360,10 +6361,9 @@ msgid "Make a Deposit"
 msgstr "Wpłać środki"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:47
-#, fuzzy
 #| msgid "Make a deposit or withdraw"
 msgid "Make a deposit or withdraw."
-msgstr "Wpłać lub wypłać"
+msgstr "Wpłać lub wypłać środki."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
 msgid "Make your trade"
@@ -11094,7 +11094,6 @@ msgid "TradingView"
 msgstr "Widok handlowy"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/charting/index.html.haml:1
-#, fuzzy
 #| msgid "TradingView"
 msgid "Tradingview"
 msgstr "Widok handlowy"
@@ -11349,10 +11348,9 @@ msgid "Use the opportunity provided by our website to practice for free with our
 msgstr "Korzystaj z możliwości oferowanych przez nasz portal, aby ćwiczyć za darmo na koncie z wirtualnymi pieniędzmi. Dzięki temu poznasz funkcje i zasady funkcjonowania portalu."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/partners.html.haml:1
-#, fuzzy
 #| msgid "Cashier Testing"
 msgid "User Testing"
-msgstr "Testowanie kasjera"
+msgstr "Testowanie przez użytkownika"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/about/index.html.haml:1
 msgid "Using our website, customers can trade currencies, indices, stocks and commodities 24/7. We have the most flexible pricing and the most comprehensive suite of products available."
@@ -11737,7 +11735,7 @@ msgstr "Przykro nam, ale weryfikacja online Twojego identyfikatora przez nasz sy
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/charting/index.html.haml:1
 msgid "Web version"
-msgstr ""
+msgstr "Wersja sieci"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:66
@@ -12245,16 +12243,15 @@ msgid "You are being given the better price."
 msgstr "Otrzymujesz lepszą cenę."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:366
-#, fuzzy
 #| msgid "You're currently logged in to your real money account with %1"
 msgid "You are currently logged in to your real money account with %1 (%2)."
-msgstr "Jesteś obecnie zalogowany/a do konta z prawdziwymi pieniędzmi w %1"
+msgstr ""
+"Jesteś obecnie zalogowany/a do konta z prawdziwymi pieniędzmi w %1 (%2)."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:367
-#, fuzzy
 #| msgid "You're currently logged in to your virtual money account"
 msgid "You are currently logged in to your virtual money account (%2)."
-msgstr "Jesteś obecnie zalogowany/a do konta z wirtualnymi pieniędzmi"
+msgstr "Jesteś obecnie zalogowany/a do konta z wirtualnymi pieniędzmi (%2)."
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:89
 msgid "You are either already subscribed or you have reached the limit for proposal subscription."
@@ -12548,16 +12545,18 @@ msgid "You're using a Virtual Account."
 msgstr "Korzystasz z konta z wirtualnymi pieniędzmi."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:369
-#, fuzzy
 #| msgid "This account is unavailable. For any questions please contact <a href=\"%1\">Customer Support</a>."
 msgid "Your %1 account is unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
-msgstr "To konto jest niedostępne. W przypadku jakichkolwiek pytań prosimy o kontakt z <a href=\"%1\">działem obsługi klienta</a>."
+msgstr ""
+"Twoje konto %1 jest niedostępne. W przypadku jakichkolwiek pytań prosimy o "
+"kontakt z <a href=\"%2\">działem obsługi klienta</a>."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:370
-#, fuzzy
 #| msgid "This account is unavailable. For any questions please contact <a href=\"%1\">Customer Support</a>."
 msgid "Your %1 accounts are unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
-msgstr "To konto jest niedostępne. W przypadku jakichkolwiek pytań prosimy o kontakt z <a href=\"%1\">działem obsługi klienta</a>."
+msgstr ""
+"Twoje konta %1 są niedostępne. W przypadku jakichkolwiek pytań prosimy o "
+"kontakt z <a href=\"%2\">działem obsługi klienta</a>."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:241
 msgid "Your %1 day withdrawal limit is currently EUR %2. (or equivalent in other currency)."
@@ -13981,7 +13980,6 @@ msgid "International Consolidated Airlines Group SA"
 msgstr "International Consolidated Airlines Group SA"
 
 #: Underlying Symbol DEDUE
-#, fuzzy
 #| msgid "Drr AG"
 msgid "Drr AG"
 msgstr "Drr AG"
