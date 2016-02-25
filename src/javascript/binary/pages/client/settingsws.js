@@ -28,7 +28,19 @@ pjax_config_page("settingsws", function() {
                 return;
             }
 
-            SettingsWS.init();
+            if(!TUser.get().hasOwnProperty('is_virtual')) {
+                BinarySocket.init({
+                    onmessage: function(msg) {
+                        var response = JSON.parse(msg.data);
+                        if (response && response.msg_type === 'authorize') {
+                            SettingsWS.init();
+                        }
+                    }
+                });
+            }
+            else {
+                SettingsWS.init();
+            }
         }
     };
 });

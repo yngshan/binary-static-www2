@@ -72,7 +72,7 @@ var User = function() {
 var Client = function() {
     this.loginid =  $.cookie('loginid');
     this.residence =  $.cookie('residence');
-    this.is_logged_in = this.loginid && typeof this.loginid !== 'undefined';
+    this.is_logged_in = this.loginid && this.loginid.length > 0;
 
     var dl_info = gtm_data_layer_info();
     if(dl_info.length > 0) {
@@ -128,7 +128,7 @@ Client.prototype = {
 
         // allowed markets
         if(this.is_logged_in) {
-            if(this.is_real && !this.get_storage_value('allowed_markets') && TUser.get().landing_company_name) {
+            if(!TUser.get().is_virtual && !this.get_storage_value('allowed_markets') && TUser.get().landing_company_name) {
                 $('#topMenuStartBetting').addClass('invisible');
                 BinarySocket.send({
                     'landing_company_details': TUser.get().landing_company_name,
@@ -374,11 +374,12 @@ Menu.prototype = {
         // enable only allowed markets
         var allowed_markets = page.client.get_storage_value('allowed_markets');
         if(!allowed_markets && page.client.is_logged_in) {
-            if(page.client.is_real) {
+            if(TUser.get().hasOwnProperty('is_virtual') && !TUser.get().is_virtual) {
                 $('#topMenuStartBetting').addClass('invisible');
             }
             return;
         }
+
         var markets_array = allowed_markets ? allowed_markets.split(',') : [];
         var sub_items = $('li#topMenuStartBetting ul.sub_items');
         sub_items.find('li').each(function () {
@@ -396,6 +397,7 @@ Menu.prototype = {
                 span.replaceWith($('<a/>', {class: 'link', text: span_text, href: span_href}));
             }
         });
+        $('#topMenuStartBetting').removeClass('invisible');
     },
     reset: function() {
         $("#main-menu .item").unbind();
@@ -457,12 +459,12 @@ Menu.prototype = {
     register_dynamic_links: function() {
         var stored_market = page.url.param('market') || LocalStore.get('bet_page.market') || 'forex';
         var allowed_markets = page.client.get_storage_value('allowed_markets');
-        if(!allowed_markets && page.client.is_logged_in && page.client.is_real) {
+        if(!allowed_markets && page.client.is_logged_in && !TUser.get().is_virtual) {
             return;
         }
 
         var markets_array = allowed_markets ? allowed_markets.split(',') : [];
-        if(page.client.is_real && markets_array.indexOf(stored_market) < 0) {
+        if(!TUser.get().is_virtual && markets_array.indexOf(stored_market) < 0) {
             stored_market = markets_array[0];
             LocalStore.set('bet_page.market', stored_market);
         }
@@ -786,6 +788,9 @@ Contents.prototype = {
     activate_by_client_type: function() {
         $('.by_client_type').addClass('invisible');
         if(this.client.is_logged_in) {
+            if(!TUser.get().hasOwnProperty('is_virtual')) {
+                return;
+            }
             if(!TUser.get().is_virtual) {
                 $('.by_client_type.client_real').removeClass('invisible');
                 $('.by_client_type.client_real').show();
@@ -838,6 +843,9 @@ Contents.prototype = {
     },
     topbar_message_visibility: function() {
         if(this.client.is_logged_in) {
+            if(!TUser.get().hasOwnProperty('is_virtual')) {
+                return;
+            }
             var loginid_array = this.user.loginid_array;
             var c_config = page.settings.get('countries_list')[this.client.residence];
 
