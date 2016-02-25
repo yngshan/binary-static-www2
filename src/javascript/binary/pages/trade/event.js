@@ -182,18 +182,18 @@ var TradingEvents = (function () {
             submitForm(document.getElementById('websocket_form'));
         }
         var durationAmountElement = document.getElementById('duration_amount'),
-            flagForEvent = 0;          // For triggering one of the two events.
+            inputEventTriggered = false;          // For triggering one of the two events.
         if (durationAmountElement) {
             // jquery needed for datepicker
             $('#duration_amount').on('input', debounce(function (e) {
                 triggerOnDurationChange(e);
-                flagForEvent = 1;
+                inputEventTriggered = true;
             }));
             $('#duration_amount').on('change', debounce(function (e) {
-                if(flagForEvent === 0)
+                if(inputEventTriggered === false)
                     triggerOnDurationChange(e);
                 else
-                    flagForEvent = 0;
+                    inputEventTriggered = false;
             }));
         }
 
