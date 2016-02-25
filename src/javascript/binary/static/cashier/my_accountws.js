@@ -51,12 +51,13 @@ var MyAccountWS = (function() {
         var landing_company = page.client.get_storage_value('landing_company_name');
         $(welcomeTextID)
             .text(
-                (text.localize(
+                text.localize(
                     isReal ? 
-                        "You're currently logged in to your real money account with %1" : 
-                        "You're currently logged in to your virtual money account"
-                ).replace('%1', landing_company || '') + 
-                ' (' + loginid + ').').replace(/\s\s+/g, ' ')
+                        'You are currently logged in to your real money account with [_1] ([_2]).' : 
+                        'You are currently logged in to your virtual money account ([_2]).'
+                )
+                    .replace('[_1]', landing_company || '')
+                    .replace('[_2]', loginid)
             )
             .removeClass(hiddenClass);
     };
@@ -65,8 +66,10 @@ var MyAccountWS = (function() {
         if(TUser.get().balance < 1000) {
             $(virtualTopupID + ' a')
                 .text(
-                    (text.localize('Deposit %1 virtual money into your account ') + loginid)
-                    .replace('%1', TUser.get().currency + ' 10000')
+                    text.localize('Deposit [_1] [_2] virtual money into your account [_3]')
+                        .replace('[_1]', TUser.get().currency)
+                        .replace('[_2]', ' 10000')
+                        .replace('[_3]', loginid)
                 );
             $(virtualTopupID).removeClass(hiddenClass);
         }
@@ -127,13 +130,13 @@ var MyAccountWS = (function() {
         });
 
         if(disabledAccount.length > 0) {
-            var msgSingular = text.localize('Your %1 account is unavailable. For any questions please contact <a href="%2">Customer Support</a>.'),
-                msgPlural   = text.localize('Your %1 accounts are unavailable. For any questions please contact <a href="%2">Customer Support</a>.');
+            var msgSingular = text.localize('Your [_1] account is unavailable. For any questions please contact <a href="[_2]">Customer Support</a>.'),
+                msgPlural   = text.localize('Your [_1] accounts are unavailable. For any questions please contact <a href="[_2]">Customer Support</a>.');
             $('<p/>', {class: 'notice-msg'})
                 .html(
                     (disabledAccount.length === 1 ? msgSingular : msgPlural)
-                        .replace('%1', disabledAccount.join(', '))
-                        .replace('%2', page.url.url_for('contact'))
+                        .replace('[_1]', disabledAccount.join(', '))
+                        .replace('[_2]', page.url.url_for('contact'))
                 )
                 .insertAfter($(welcomeTextID));
         }
