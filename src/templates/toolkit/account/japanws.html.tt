@@ -22,20 +22,20 @@
                         </div>
                         <div class="grd-row-padding row clear">
                             <div class="grd-grid-4 form_label">
-                                <label for="fname">[% l('First name') %]</label>
-                            </div>
-                            <div class="grd-grid-8">
-                                <input type="text" class="text" id="fname" name="fname" maxlength="30"></input>
-                                <p class="errorfield" id="error-fname" style="display:none"></p>
-                            </div>
-                        </div>
-                        <div class="grd-row-padding row clear">
-                            <div class="grd-grid-4 form_label">
                                 <label for="lname">[% l('Family name') %]</label>
                             </div>
                             <div class="grd-grid-8">
                                 <input type="text" class="text" id="lname" name="lname" maxlength="30"></input>
                                 <p class="errorfield" id="error-lname" style="display:none"></p>
+                            </div>
+                        </div>
+                        <div class="grd-row-padding row clear">
+                            <div class="grd-grid-4 form_label">
+                                <label for="fname">[% l('First name') %]</label>
+                            </div>
+                            <div class="grd-grid-8">
+                                <input type="text" class="text" id="fname" name="fname" maxlength="30"></input>
+                                <p class="errorfield" id="error-fname" style="display:none"></p>
                             </div>
                         </div>
                         <div class="grd-row-padding row clear">
@@ -79,6 +79,9 @@
                             </div>
                             <div class="grd-grid-8">
                                 <input type="text" class="text" id="address-postcode" name="address-postcode" maxlength="20"></input>
+                                <p class="hint">
+                                  [% l('E.g. 123-4567') %]
+                                </p>
                                 <p class="errorfield" id="error-postcode" style="display:none"></p>
                             </div>
                         </div>
@@ -97,6 +100,9 @@
                             </div>
                             <div class="grd-grid-8">
                                 <input type="text" class="text" id="address-town" name="address-town" maxlength="35"></input>
+                                <p class="hint">
+                                  [% l('E.g. Shibuya-ku') %]
+                                </p>
                                 <p class="errorfield" id="error-town" style="display:none"></p>
                             </div>
                         </div>
@@ -106,6 +112,9 @@
                             </div>
                             <div class="grd-grid-8">
                                 <input type="text" class="text" id="address1" name="address1" maxlength="70"></input>
+                                <p class="hint">
+                                  [% l('E.g. Hiroo') %]
+                                </p>
                                 <p class="errorfield" id="error-address1" style="display:none"></p>
                             </div>
                         </div>
@@ -115,6 +124,9 @@
                             </div>
                             <div class="grd-grid-8">
                                 <input type="text" class="text" id="address2" name="address2" maxlength="70"></input>
+                                <p class="hint">
+                                  [% l('E.g. Building name, apartment number etc (Optional)') %]
+                                </p>
                                 <p class="errorfield" id="error-address2" style="display:none"></p>
                             </div>
                         </div>
@@ -124,6 +136,9 @@
                             </div>
                             <div class="grd-grid-8">
                                 <input type="text" class="text" id="tel" name="tel" maxlength="35"></input>
+                                <p class="hint">
+                                  [% l('E.g. 03-1234-5678') %]
+                                </p>
                                 <p class="errorfield" id="error-tel" style="display:none"></p>
                             </div>
                         </div>
@@ -220,7 +235,7 @@
                             <div class="grd-grid-8">
                               <input class="text" id="daily-loss-limit" type="text" maxlength="20"></input>
                               <br />
-                              <p class="hint">Maximum aggregate loss per day.</p>
+                              <p class="hint">[% l('Maximum aggregate loss per day.') %]</p>
                               <p class="errorfield" id="error-daily-loss-limit"></p>
                             </div>
                         </div>

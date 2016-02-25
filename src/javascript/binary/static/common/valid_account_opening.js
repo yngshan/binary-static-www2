@@ -63,7 +63,6 @@ var ValidAccountOpening = (function(){
       $('#loginid-switch-form').submit();
     }
   };
-  var errorCounter = 0;
   var letter, numbers, space, hyphen, period, apost;
 
   var initializeValues = function() {
@@ -79,65 +78,65 @@ var ValidAccountOpening = (function(){
     if (Trim(fname.value).length < 2) {
       errorFname.innerHTML = Content.errorMessage('min', '2');
       Validate.displayErrorMessage(errorFname);
-      errorCounter++;
+      window.accountErrorCounter++;
     } else if (!/^[a-zA-Z\s-.']+$/.test(fname.value)){
       initializeValues();
       errorFname.innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost]);
       Validate.displayErrorMessage(errorFname);
-      errorCounter++;
+      window.accountErrorCounter++;
     }
-    return errorCounter;
+    return;
   };
   var checkLname = function(lname, errorLname) {
     if (Trim(lname.value).length < 2) {
       errorLname.innerHTML = Content.errorMessage('min', '2');
       Validate.displayErrorMessage(errorLname);
-      errorCounter++;
+      window.accountErrorCounter++;
     } else if (!/^[a-zA-Z\s-.']+$/.test(lname.value)){
       initializeValues();
       errorLname.innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost]);
       Validate.displayErrorMessage(errorLname);
-      errorCounter++;
+      window.accountErrorCounter++;
     }
-    return errorCounter;
+    return;
   };
   var checkDate = function(dobdd, dobmm, dobyy, errorDob) {
     if (!isValidDate(dobdd.value, dobmm.value, dobyy.value) || dobdd.value === '' || dobmm.value === '' || dobyy.value === '') {
       errorDob.innerHTML = Content.localize().textErrorBirthdate;
       Validate.displayErrorMessage(errorDob);
-      errorCounter++;
+      window.accountErrorCounter++;
     }
-    return errorCounter;
+    return;
   };
   var checkPostcode = function(postcode, errorPostcode) {
     if (postcode.value !== '' && !/^[a-zA-Z\d-]+$/.test(postcode.value)){
       initializeValues();
       errorPostcode.innerHTML = Content.errorMessage('reg', [letters, numbers, hyphen]);
       Validate.displayErrorMessage(errorPostcode);
-      errorCounter++;
+      window.accountErrorCounter++;
     }
-    return errorCounter;
+    return;
   };
   var checkTel = function(tel, errorTel) {
     if (tel.value.replace(/\+| /g,'').length < 6) {
       errorTel.innerHTML = Content.errorMessage('min', 6);
       Validate.displayErrorMessage(errorTel);
-      errorCounter++;
+      window.accountErrorCounter++;
     } else if (!/^\+?[\d-\s]+$/.test(tel.value)){
       initializeValues();
       errorTel.innerHTML = Content.errorMessage('reg', [numbers, space, hyphen]);
       Validate.displayErrorMessage(errorTel);
-      errorCounter++;
+      window.accountErrorCounter++;
     }
-    return errorCounter;
+    return;
   };
   var checkAnswer = function(answer, errorAnswer) {
     if (answer.value.length < 4) {
       errorAnswer.innerHTML = Content.errorMessage('min', 4);
       Validate.displayErrorMessage(errorAnswer);
-      errorCounter++;
+      window.accountErrorCounter++;
     }
-    return errorCounter;
+    return;
   };
   return {
     redirectCookie: redirectCookie,

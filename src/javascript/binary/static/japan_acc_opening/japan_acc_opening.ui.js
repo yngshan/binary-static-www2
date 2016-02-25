@@ -2,8 +2,7 @@ var JapanAccOpeningUI = function () {
   "use strict";
 
   function checkValidity() {
-    var errorCounter = 0;
-
+    window.accountErrorCounter = 0;
     var letters = Content.localize().textLetters,
         numbers = Content.localize().textNumbers,
         space = Content.localize().textSpace,
@@ -101,33 +100,39 @@ var JapanAccOpeningUI = function () {
       }
     }
 
-    if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|]+/.test(Trim(elementObj['fname'].value))) {
+    if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|\d]+/.test(Trim(elementObj['fname'].value))) {
       errorObj['fname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost]);
       Validate.displayErrorMessage(errorObj['fname']);
-      errorCounter++;
+      window.accountErrorCounter++;
     }
 
-    if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|]+/.test(Trim(elementObj['lname'].value))) {
+    if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|\d]+/.test(Trim(elementObj['lname'].value))) {
       errorObj['lname'].innerHTML = Content.errorMessage('reg', [letters, space, hyphen, period, apost]);
       Validate.displayErrorMessage(errorObj['lname']);
-      errorCounter++;
+      window.accountErrorCounter++;
     }
 
     ValidAccountOpening.checkDate(elementObj['dobdd'], elementObj['dobmm'], elementObj['dobyy'], errorObj['dobdd']);
-    ValidAccountOpening.checkPostcode(elementObj['postcode'], errorObj['postcode']);
+
+    if (!/^\d{3}-\d{4}$/.test(elementObj['postcode'].value)) {
+      errorObj['postcode'].innerHTML = text.localize('Please follow the pattern 3 numbers, a dash, followed by 4 numbers.');
+      Validate.displayErrorMessage(errorObj['postcode']);
+      window.accountErrorCounter++;
+    }
+
     ValidAccountOpening.checkTel(elementObj['tel'], errorObj['tel']);
     ValidAccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
 
     if (!/^\d+$/.test(elementObj['limit'].value)) {
       errorObj['limit'].innerHTML = Content.errorMessage('reg', [numbers]);
       Validate.displayErrorMessage(errorObj['limit']);
-      errorCounter++;
+      window.accountErrorCounter++;
     }
 
     if (elementObj['amount'].offsetParent !== null && !/^\d+$/.test(elementObj['amount'].value)) {
       errorObj['amount'].innerHTML = Content.errorMessage('reg', [numbers]);
       Validate.displayErrorMessage(errorObj['amount']);
-      errorCounter++;
+      window.accountErrorCounter++;
     }
 
     for (key in elementObj) {
@@ -135,17 +140,17 @@ var JapanAccOpeningUI = function () {
         if (/^$/.test(Trim(elementObj[key].value)) && elementObj[key].type !== 'checkbox') {
           errorObj[key].innerHTML = Content.errorMessage('req');
           Validate.displayErrorMessage(errorObj[key]);
-          errorCounter++;
+          window.accountErrorCounter++;
         }
         if (elementObj[key].type === 'checkbox' && !elementObj[key].checked) {
           errorObj[key].innerHTML = Content.errorMessage('req');
           Validate.displayErrorMessage(errorObj[key]);
-          errorCounter++;
+          window.accountErrorCounter++;
         }
       }
     }
 
-    if (errorCounter === 0) {
+    if (window.accountErrorCounter === 0) {
       JapanAccOpeningData.getJapanAcc(elementObj);
       for (key in errorObj) {
         if (errorObj[key].offsetParent !== null) {

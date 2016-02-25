@@ -2,7 +2,7 @@ var RealAccOpeningUI = (function(){
   "use strict";
 
   function checkValidity(){
-    var errorCounter = 0;
+    window.accountErrorCounter = 0;
 
     var letters = Content.localize().textLetters,
         numbers = Content.localize().textNumbers,
@@ -59,10 +59,10 @@ var RealAccOpeningUI = (function(){
     ValidAccountOpening.checkDate(elementObj['dobdd'], elementObj['dobmm'], elementObj['dobyy'], errorObj['dobdd']);
     ValidAccountOpening.checkPostcode(elementObj['postcode'], errorObj['postcode']);
 
-    if (residence.value === 'gb' && /^$/.test(Trim(postcode.value))){
+    if (elementObj['residence'].value === 'gb' && /^$/.test(Trim(elementObj['postcode'].value))){
       errorPostcode.innerHTML = Content.errorMessage('req');
       Validate.displayErrorMessage(errorPostcode);
-      errorCounter++;
+      window.accountErrorCounter++;
     }
 
     ValidAccountOpening.checkTel(elementObj['tel'], errorObj['tel']);
@@ -73,19 +73,23 @@ var RealAccOpeningUI = (function(){
         if (/^$/.test(Trim(elementObj[key].value)) && elementObj[key].type !== 'checkbox'){
           errorObj[key].innerHTML = Content.errorMessage('req');
           Validate.displayErrorMessage(errorObj[key]);
-          errorCounter++;
+          window.accountErrorCounter++;
         }
         if (elementObj[key].type === 'checkbox' && !elementObj[key].checked){
           errorObj[key].innerHTML = Content.errorMessage('req');
           Validate.displayErrorMessage(errorObj[key]);
-          errorCounter++;
+          window.accountErrorCounter++;
         }
       }
     }
 
-    if (errorCounter === 0) {
-      RealAccOpeningData.getRealAcc(arr);
-      hideAllErrors(allErrors);
+    if (window.accountErrorCounter === 0) {
+      RealAccOpeningData.getRealAcc(elementObj);
+      for (key in errorObj) {
+        if (errorObj[key].offsetParent !== null) {
+          errorObj[key].setAttribute('style', 'display:none');
+        }
+      }
       return 1;
     }
     return 0;

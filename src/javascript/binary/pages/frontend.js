@@ -358,6 +358,7 @@ function handle_residence_state_ws(){
             return;
           }
         } else if (type === 'landing_company') {
+          $.cookie('residence', page.client.residence, {domain: '.' + document.domain.split('.').slice(-2).join('.'), path: '/'});
           if (response.landing_company.hasOwnProperty('financial_company') && !response.landing_company.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'maltainvest') {
             window.location.href = page.url.url_for('new_account/maltainvest');
             return;
@@ -575,9 +576,14 @@ pjax_config_page('/bulk-trader-facility', function() {
     };
 });
 
-pjax_config_page('/terms-and-condition', function() {
+pjax_config_page('/terms-and-conditions', function() {
     return {
         onLoad: function() {
+            if (page.language() === 'JA' && /^jp/.test(window.location.pathname)) {
+              window.location.href = page.url.url_for('terms-and-conditions-jp');
+            } else if (page.language() === 'EN' && /jp/.test(window.location.pathname)) {
+              window.location.href = page.url.url_for('terms-and-conditions');
+            }
             var year = document.getElementsByClassName('currentYear');
             for (i = 0; i < year.length; i++){
               year[i].innerHTML = new Date().getFullYear();
