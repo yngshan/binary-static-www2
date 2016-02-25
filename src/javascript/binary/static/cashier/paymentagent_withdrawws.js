@@ -111,7 +111,7 @@ var PaymentAgentWithdrawWS = (function() {
 
         // Amount
         if(!isRequiredError(fieldIDs.txtAmount)){
-            if(!(/(^[0-9\.]+$)/).test(amount) || !$.isNumeric(amount)) {
+            if(!(/^\d+(\.\d{1,2})?$/).test(amount) || !$.isNumeric(amount)) {
                 showError(fieldIDs.txtAmount, Content.errorMessage('reg', [numbers]));
             }
             else if(amount < minAmount) {
