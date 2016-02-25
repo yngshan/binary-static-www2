@@ -54,6 +54,9 @@ var TradingAnalysis = (function() {
               '</div>' +
             '</div>' +
           '</div>';
+        if (formName === 'digits') {
+            $('#tab_last_digit').removeClass("invisible");
+        }
         sessionStorage.setItem('currentAnalysisTab', getActiveTab());
         bindAnalysisTabEvent();
         loadAnalysisTab();
@@ -114,8 +117,18 @@ var TradingAnalysis = (function() {
                     BetAnalysis.tab_live_chart.render(true);
                 }
             } else {
-                var url = currentLink.getAttribute('href');
-                $.ajax({
+                if (currentTab == 'tab_last_digit') {
+                    var underlying = $('[name=underlying] option:selected').val() || $('#underlying option:selected').val();
+                    var tick = $('[name=tick_count]').val() || 100;
+                    trading_digit_info = BetAnalysis.tab_last_digitws;
+                    var request = JSON.parse('{"ticks_history":"'+ underlying +'",'+
+                                              '"end": "latest",'+
+                                              '"count": '+ tick +','+
+                                              '"req_id": 1}');
+                    BinarySocket.send(request);
+                } else{
+                    var url = currentLink.getAttribute('href') ;
+                    $.ajax({
                         method: 'GET',
                         url: url,
                     })
@@ -128,6 +141,7 @@ var TradingAnalysis = (function() {
                         }
 
                     });
+                }
             }
         }
 
