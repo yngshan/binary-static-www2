@@ -7,9 +7,10 @@ msgstr ""
 "Project-Id-Version: I 18N\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-02-25 03:49+0000\n"
+"PO-Revision-Date: 2016-02-25 10:56+0000\n"
 "Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/binary/static/id/>\n"
+"Language-Team: Indonesian "
+"<https://hosted.weblate.org/projects/binary/static/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,10 +63,9 @@ msgstr "Syarat dan Ketentuan Program Affiliasi %1"
 
 #. ($params->{website_name})
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:77
-#, fuzzy
 #| msgid "New Password Request"
 msgid "%1 New Password Request"
-msgstr "Permohonan Kata Sandi Baru"
+msgstr "Permohonan Kata Sandi Baru %1"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/payment_agent.html.haml:1
@@ -586,7 +586,6 @@ msgstr ""
 
 #. ($params->{link} . ' </p>')
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:115
-#, fuzzy
 #| msgid ""
 #| "Dear Valued Customer,\n"
 #| "\n"
@@ -596,12 +595,8 @@ msgstr ""
 #| "\n"
 msgid "<p>Dear Valued Customer,</p><p>In order to verify your withdrawal request, please click on the following link: </p><p> "
 msgstr ""
-"Kepada Pelanggan Yth.,\n"
-"\n"
-"Untuk memverifikasi, silakan klik pada link berikut:\n"
-"\n"
-"%1\n"
-"\n"
+"<p>Kepada Pelanggan Yth.,</p><p>Untuk memverifikasi permintaan penarikan "
+"Anda, silakan klik pada link berikut: </p><p> "
 
 #. ($r->url_for('/cashier/forward')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:286
@@ -641,10 +636,9 @@ msgid "<span>All market conditions:</span> up/down, touch/no-touch, stays in/goe
 msgstr "<span>Semua kondisi pasar:</span> naik/turun, menyentuh/tidak, di dalam/ke luar."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
-#, fuzzy
 #| msgid "<span>All markets:</span> currencies, stock indices, and commodities."
 msgid "<span>All markets:</span> currencies, stocks, indices, and commodities."
-msgstr "<span>Semua pasar:</span> valuta asing, indeks saham dan komoditas."
+msgstr "<span>Semua pasar:</span> mata uang, saham, indeks, dan komoditas."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 msgid "<span>All payouts:</span> from $1 to $100,000."
@@ -711,10 +705,9 @@ msgid "<strong>Currencies</strong> - trade all major FX pairs."
 msgstr "<strong>Mata uang</strong> - trading semua pasangan utama FX."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "<strong>Deposit</strong> %1 (%2)"
 msgid "<strong>Duties and Responsibilities:</strong>"
-msgstr "<b>Credit/deposit</b> %1 (%2)"
+msgstr "<strong>Tugas dan Tanggung jawab:</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:77
 msgid "<strong>Exchange Rate Risk</strong>: Exchange rates between foreign currencies can change rapidly due to a wide range of economic, political and other conditions, exposing you to risk of exchange rate losses in addition to the inherent risk of loss from trading the underlying investment product. If you deposit funds in a currency to trade Contracts denominated in a different currency, your gains or losses on the underlying investment therefore may be affected by changes in the exchange rate between the currencies."
@@ -803,10 +796,9 @@ msgid "<strong>Payment options</strong> - %1 offers many payment methods, such a
 msgstr "<strong>Metode Pembayaran</strong> - %1 menawarkan berbagai jenis metode pembayaran seperti kartu kredit/debit, bank transfer, e-cash dan e-wallets."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "<strong>To get your API token:</strong>"
 msgid "<strong>Preferences:</strong>"
-msgstr "<strong>Untuk mendapatkan token API Anda:</strong>"
+msgstr "<strong>Preferensi:</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 msgid "<strong>Quiet markets</strong> - choose the no-touch trade, the stays-between trade, or the ends-between trade."
@@ -823,10 +815,9 @@ msgid "<strong>Random indices</strong> - trade %1's own random indices, 24/7."
 msgstr "<strong>Random Indeks</strong> - trading random indeks %1, 24/7."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "<strong>To get your API token:</strong>"
 msgid "<strong>Requirements:</strong>"
-msgstr "<strong>Untuk mendapatkan token API Anda:</strong>"
+msgstr "<strong>Persyaratan:</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
 msgid "<strong>Rise/Fall</strong> - predict if the market will rise or fall from its current level."
@@ -1225,20 +1216,18 @@ msgid "Account balance: "
 msgstr "Saldo akun Anda: "
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Account"
 msgid "Accounting"
-msgstr "Akun"
+msgstr "Akuntansi"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "Accounting & Payments"
 msgstr "Akuntansi & Pembayaran"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Accounting & Payments"
 msgid "Accounts And Payments Executive"
-msgstr "Akuntansi & Pembayaran"
+msgstr "Akuntan Dan Eksekutif Pembayaran"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:416
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:600
@@ -1303,10 +1292,9 @@ msgid "Administering the company’s semi-annual performance appraisal process"
 msgstr "Penyelenggara proses penilaian kinerja semi-tahunan perusahaan"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Compliance Executive"
 msgid "Administrative Executive"
-msgstr "Eksekutif Compliance"
+msgstr "Eksekutif Administrasi"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Administrator"
@@ -1873,7 +1861,6 @@ msgstr "Bertanggung jawab untuk mematuhi hukum, aturan dan peraturan pengiklanan
 
 #. ($params->{link})
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:80
-#, fuzzy
 #| msgid ""
 #| "Dear Valued Customer,\n"
 #| "\n"
@@ -1882,11 +1869,8 @@ msgstr "Bertanggung jawab untuk mematuhi hukum, aturan dan peraturan pengiklanan
 #| "%1"
 msgid "Before we can help you change your password, please help us to verify your identity by clicking on the following link: "
 msgstr ""
-"Pelanggan Yang Terhormat,\n"
-"\n"
-"Sebelum kami dapat membantu Anda mengubah kata sandi, mohon bantu kami untuk memverifikasi identitas Anda dengan mengklik link berikut ini:\n"
-"\n"
-"%1"
+"Sebelum kami dapat membantu Anda untuk mengubah kata sandi, silahkan "
+"verifikasi identitas Anda dengan mengklik link berikut:"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:29
 msgid "Before we open an account for you to trade or invest in Investment Products with BIEL, we are required to make an assessment of whether the Investment Products or services you have chosen are appropriate for you, and to warn you if, on the basis of the information you provide to us, any such product or service is not appropriate. Any decision to open an account and to use our products or services is yours. It is your responsibility to understand the risks involved with our products or services."
@@ -2275,10 +2259,9 @@ msgstr "Diagram Lilin"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:125
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Transaction.pm:41
-#, fuzzy
 #| msgid "Cannot create sell contract"
 msgid "Cannot create contract"
-msgstr "Tidak dapat menghasilkan penjualan kontrak"
+msgstr "Tidak dapat menyediakan kontrak"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:97
 msgid "Cannot validate contract"
@@ -2502,10 +2485,11 @@ msgid "Clients agree to be fully and personally liable for the due settlement of
 msgstr "Para Klien setuju secara keseluruhan dan secara pribadi bertanggung jawab atas penyelesaian setiap transaksi yang masuk ke dalam akun Perusahaan. Ini termasuk transaksi-transaksi yang dilakukan oleh anggota keluarga atau rombongan nasabah yang telah memperoleh akses ke akun tersebut. Klien bertanggung jawab untuk memastikan bahwa dia sendiri yang mengontrol akses ke dalam akun dan memastikan bahwa tidak ada anak di bawah umur diberikan akses untuk melakukan trading pada website. Dalam kasus apapun, Klien tetap bertanggung jawab sepenuhnya untuk setiap dan semua posisi yang ditradingkan dan transaksi melalui kartu kredit pada akunnya. Setiap Klien juga membebaskan Perusahaan atas semua biaya dan kerugian dalam bentuk apapun, apapun yang mungkin dikeluarkan oleh Perusahaan sebagai akibat, langsung atau tidak langsung, kegagalan Nasabah untuk melakukan atau menyelesaikan transaksi tersebut. Hutang Trading Online adalah dilaksanakan sesuai dengan hukum yang berlaku di negara Isle of Man."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/about/group-information.html.haml:1
-#, fuzzy
 #| msgid "Clients from the rest of the world will have their account opened with Binary (C.R.) S.A."
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Japan, Costa Rica, Hong Kong) will have their account opened with Binary (C.R.) S.A."
-msgstr "Pelanggan dari negara lainya akan terdaftar dibawah Binary (C.R.) S.A."
+msgstr ""
+"Pelanggan dari seluruh dunia (kecuali Amerika Serikat, Jepang, Costa Rica, "
+"Hong Kong) akan terdaftar dibawah Binary (C.R.) S.A."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/promocode.html.tt:23
 msgid "Clients may avail of this bonus only when a real money account is opened."
@@ -2533,10 +2517,12 @@ msgid "Clients registered with Binary (Europe) Ltd can raise their unresolved di
 msgstr "Klien terdaftar pada Binary (Europe) Ltd dapat melanjutkan sengketa dengan MGA %1 di"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:13
-#, fuzzy
 #| msgid "UK clients registered with Binary (Europe) Ltd can submit their dispute with the alternative dispute resolution entity which is the Independent Betting Adjudication Service Ltd (IBAS) by filling the adjudication form on the ADR entity’s"
 msgid "Clients registered with Binary (IOM) Ltd can raise their unresolved disputes with the alternative dispute resolution entity IBAS by filling the adjudication form on the ADR entity’s"
-msgstr "Klien UK terdaftar pada Binary (Europe) Ltd dapat mengajukan perselisihannya dengan entitas alternatif penyelesaian sengketa yang merupakan Independent Betting Adjudication Service Ltd (IBAS) dengan mengisi formulir ajudikasi pada entitas ADR"
+msgstr ""
+"Pelanggan yang terdaftar dibawah Binary (IOM) Ltd dapat melanjutkan sengketa "
+"yang belum diselesaikan menggunakan alternatif solusi yang disediakan oleh "
+"IBAS dengan mengisi formulir ajudikasi pada entitas ADR"
 
 #. ("<a href='http://mymoneybox.mfsa.com.mt' target='_blank'>http://mymoneybox.mfsa.com.mt</a>")
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:19
@@ -2668,10 +2654,9 @@ msgid "Complaints and Disputes"
 msgstr "Keluhan dan Perselisihan"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Compliance Executive"
 msgid "Compliance"
-msgstr "Eksekutif Compliance"
+msgstr "Kepatuhan"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Compliance Executive"
@@ -2913,10 +2898,9 @@ msgid "Copyright"
 msgstr "Hak Cipta"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Copyright"
 msgid "Copywriter"
-msgstr "Hak Cipta"
+msgstr "Copywriter"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:675
 msgid "Corporate Actions"
@@ -4214,10 +4198,14 @@ msgid "Follow up on rejected deposits"
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_request_withdrawws.html.tt:8
-#, fuzzy
 #| msgid "For added security protection against unauthorised withdrawals, an email containing a secure link to the withdrawals page has been sent to your email %1. Please check your email to access this link."
 msgid "For added security protection against unauthorised withdrawals, an email containing a secure link to the payment agent withdrawals page has been sent to your email <span id='client_email'></span>. Please check your email to access this link."
-msgstr "Untuk menambahkan perlindungan keamanan dari penarikan yang tidak sah, email berisikan link menuju ke halaman penarikan telah dikirim ke alamat email Anda %1. Silakan periksa email Anda untuk mengakses link tersebut."
+msgstr ""
+"Sebagai pengaman tambahan untuk mencegah penarikan yang tidak diinginkan, "
+"sebuah email yang berisikan link untuk proses penarikan selanjutnya ke "
+"halaman agen pembayaran sudah dikirim ke alamat email Anda <span "
+"id='client_email'></span>. Silahkan periksa email Anda untuk mengakses link "
+"ini."
 
 #. ($email)
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/withdrawal_request.html.haml:1
@@ -4493,10 +4481,9 @@ msgid "Granularity is not valid"
 msgstr "Rincian tidak valid"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Graphics Design"
 msgid "Graphic Designers"
-msgstr "Desain Grafis"
+msgstr "Desainer Grafis"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "Graphics Design"
@@ -4679,16 +4666,14 @@ msgid "However, in order to increase your withdrawal limits, you are kindly requ
 msgstr "Namun, untuk meningkatkan batasan penarikan dana silahkan ikuti instruksi berikut ini."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Compliance Executive"
 msgid "Human Resource Executive"
-msgstr "Eksekutif Compliance"
+msgstr "Eksekutif Sumber Daya Manusia"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Resources"
 msgid "Human Resources"
-msgstr "Sumber"
+msgstr "Sumber Daya Manusia"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 msgid "Hundreds of deposit and withdrawal options."
@@ -4920,10 +4905,14 @@ msgid "If you would like more information on becoming a Payment Agent, please co
 msgstr "Jika Anda ingin informasi lebih lanjut mengenai Agen Pembayaran, silahkan hubungi kami di <a href='mailto:affiliates@binary.com'>affiliates@binary.com</a>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:4
-#, fuzzy
 #| msgid "If you would like to file a complaint with regards to our service, kindly contact us providing any relevant details relating to your complaint. We shall investigate your enquiry and a response will be given to your enquiry. We will normally provide a final response within 2 months from receipt of all relevant details."
 msgid "If you would like to file a complaint with regards to our service, kindly contact us providing any relevant details relating to your complaint. We shall investigate your enquiry and a response will be given to your enquiry. We will usually provide a final response within 1-2 weeks (and at most within 2 months) from receipt of all relevant details."
-msgstr "Jika Anda ingin mengajukan keluhan berkaitan dengan layanan kami, silakan hubungi kami dengan memberikan rincian yang relevan berkaitan dengan keluhan Anda. Kami akan menyelidiki dan akan memberi jawaban kepada keluhan Anda tersebut. Kami biasanya akan memberikan respon terakhir dalam tempo 2 bulan setelah laporan detail kami terima."
+msgstr ""
+"Jika Anda ingin mengajukan keluhan berkaitan dengan layanan kami, silakan "
+"hubungi kami dengan memberikan rincian yang relevan berkaitan dengan keluhan "
+"Anda. Kami akan menyelidiki dan akan memberi jawaban kepada keluhan Anda "
+"tersebut. Kami biasanya akan memberikan keputusan dalam tempo 1-2 minggu ("
+"paling lambat 2 bulan) setelah laporan detail kami terima."
 
 #. (broker_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:21
@@ -5153,10 +5142,9 @@ msgid "Information Security"
 msgstr "Informasi Keamanan"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Information Security"
 msgid "Information Technology"
-msgstr "Informasi Keamanan"
+msgstr "Teknologi Informasi"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:6
 msgid "Information about the data feeds used by our company, and how the data is processed before being fed into the system."
@@ -5236,16 +5224,14 @@ msgid "Invalid Input"
 msgstr "Input tidak valid"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:48
-#, fuzzy
 #| msgid "Invalid transfer."
 msgid "Invalid URI for appstore."
-msgstr "Transfer salah."
+msgstr "URL salah untuk appstore."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:45
-#, fuzzy
 #| msgid "Invalid fax number."
 msgid "Invalid URI for github."
-msgstr "Nomor fax tidak berlaku."
+msgstr "URL salah untuk github."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:51
 msgid "Invalid URI for googleplay."
@@ -5274,10 +5260,9 @@ msgstr "Jumlah salah. Minimum transfer adalah 0.10 hingga 2 angka desimal."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:221
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:437
-#, fuzzy
 #| msgid "Invalid amount, maximum is"
 msgid "Invalid amount. minimum is 10, maximum is 2000."
-msgstr "Jumlah tidak berlaku, maksimal"
+msgstr "Jumlah salah. Minimum 10, maksimum 2000."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/TickStreamer.pm:60
 msgid "Invalid candles request"
@@ -6037,10 +6022,9 @@ msgid "Japan website Terms and Conditions Paragraph 1"
 msgstr "Japan website Terms and Conditions Paragraph 1"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Your details"
 msgid "Job details"
-msgstr "Data Anda"
+msgstr "Rincian pekerjaan"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/common_email.html.tt:670
 msgid "Join our analysts LIVE twice a week for a comprehensive analysis of recent developments and trends in the global financial markets."
@@ -6166,10 +6150,9 @@ msgid "Learn from us"
 msgstr "Belajar dari kami"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Learn More"
 msgid "Learn more"
-msgstr "Pelajari Lebih Lanjut"
+msgstr "Belajar lebih lanjut"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "Learn more about our corporate culture"
@@ -6526,23 +6509,20 @@ msgid "Market-closing times: Please refer to"
 msgstr "Waktu penutupan pasart: Silahkan lihat"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Market"
 msgid "Marketing"
-msgstr "Pasar"
+msgstr "Pemasaran"
 
 # 78%
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Market Exit Price"
 msgid "Marketing Executives"
-msgstr "Harga Akhir Market"
+msgstr "Eksekutif Pemasaran"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Marketing and Promotion"
 msgid "Marketing Project Manager"
-msgstr "Pemasaran dan Promosi"
+msgstr "Manajer Proyek Pemasaran"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:80
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:161
@@ -6558,10 +6538,9 @@ msgid "Matched Contract Bonus"
 msgstr "Bonus Kontrak Cocok"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:219
-#, fuzzy
 #| msgid "Digit Match/Differ"
 msgid "Matches/Differs"
-msgstr "Digit Sama/Beda"
+msgstr "Matches/Differs"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:854
 msgid "Max 30 tokens are allowed."
@@ -7214,10 +7193,9 @@ msgid "Open Account"
 msgstr "Daftar Akun"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Open positions"
 msgid "Open Positions"
-msgstr "Posisi berjalan"
+msgstr "Posisi Berjalan"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/partners.html.haml:1
 msgid "Open Source"
@@ -7472,10 +7450,9 @@ msgid "Password"
 msgstr "Kata Sandi"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:280
-#, fuzzy
 #| msgid "Password reset"
 msgid "Password is moderate"
-msgstr "Merubah kata sandi"
+msgstr "Kata sandi moderat"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:278
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:309
@@ -7484,22 +7461,19 @@ msgid "Password is not strong enough."
 msgstr "Kata sandi tidak cukup kuat."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:281
-#, fuzzy
 #| msgid "Password is not strong enough."
 msgid "Password is strong"
-msgstr "Kata sandi tidak cukup kuat."
+msgstr "Kata sandi kuat"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:282
-#, fuzzy
 #| msgid "Password is not strong enough."
 msgid "Password is very strong"
-msgstr "Kata sandi tidak cukup kuat."
+msgstr "Kata sandi sangat kuat."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:279
-#, fuzzy
 #| msgid "Password reset"
 msgid "Password is weak"
-msgstr "Merubah kata sandi"
+msgstr "Kata sandi lemah"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:63
 msgid "Password not given."
@@ -7544,10 +7518,9 @@ msgstr "Pencairan Agen Pembayaran"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:1163
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_request_withdrawws.html.tt:2
-#, fuzzy
 #| msgid "Payment Agent Withdrawal"
 msgid "Payment Agent Withdrawal Verification"
-msgstr "Pencairan Agen Pembayaran"
+msgstr "Verifikasi Penarikan Agen Pembayaran"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:210
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:816
@@ -7721,10 +7694,9 @@ msgstr "Silakan masukkan nomor antara 0 dan 1%"
 
 #. ($self_exclusion->{$field})
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:713
-#, fuzzy
 #| msgid "Please enter a number between 0 and %1"
 msgid "Please enter a number between 0 and %1."
-msgstr "Silakan masukkan nomor antara 0 dan 1%"
+msgstr "Silakan masukkan nomor antara 0 dan 1%."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_frequency.html.haml:1
@@ -8343,26 +8315,23 @@ msgid "Quality Assurance Engineer"
 msgstr "Insinyur Penjamin Kualitas"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Quantitative Analytics"
 msgid "Quantitative Analysis"
-msgstr "Analitik Kuantitatif"
+msgstr "Analisis Kuantitatif"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Quantitative Analytics"
 msgid "Quantitative Analyst"
-msgstr "Analitik Kuantitatif"
+msgstr "Analis Kuantitatif"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "Quantitative Analytics"
 msgstr "Analitik Kuantitatif"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Quantitative Analytics"
 msgid "Quantitative Developer"
-msgstr "Analitik Kuantitatif"
+msgstr "Pengembang Kuantitatif"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:426
 msgid "Quote"
@@ -8713,10 +8682,9 @@ msgid "Returns above 1000% on <a href='%1' class='pjaxload'>higher/lower</a> and
 msgstr "Laba diatas 1000% pada kontrak <a href='%1' class='pjaxload'>lebih tinggi/rendah</a> dan <a href='%2' class='pjaxload'>menyentuh/tidak</a>."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "View your historical transactions."
 msgid "Review suspicious account transactions"
-msgstr "Lihat transaksi historis Anda."
+msgstr "Tinjau transaksi akun yang mencurigakan"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Review, develop and enhance Perl, C++ and R codes used in options pricing, volatility forecasts, and risk management program"
