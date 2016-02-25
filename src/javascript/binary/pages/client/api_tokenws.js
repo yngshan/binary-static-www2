@@ -116,7 +116,7 @@ var APITokenWS = (function() {
 
     String.prototype.capitalizeFirstLetter = function() {
         return this.charAt(0).toUpperCase() + this.slice(1);
-    }
+    };
 
     var createTableRow = function(token) {
         var lastUsed = token.last_used ? token.last_used : text.localize('Never Used');
