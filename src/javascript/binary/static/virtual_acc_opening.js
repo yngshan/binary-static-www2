@@ -61,7 +61,7 @@ pjax_config_page("new_account/virtualws", function(){
                       } else if (/email address is unverified/.test(error.message)) {
                         virtualForm.empty();
                         var errorText = '<p class="errorfield">' + text.localize('The re-entered email address is incorrect.') + '</p>',
-                            noticeText = '<p>' + text.localize('Your token has been invalidated. Please click <a class="pjaxload" href="%1">here</a> to restart the verification process.').replace('%1', page.url.url_for('')) + '</p>';
+                            noticeText = '<p>' + text.localize('Your token has been invalidated. Please click <a class="pjaxload" href="[_1]">here</a> to restart the verification process.').replace('[_1]', page.url.url_for('')) + '</p>';
                         virtualForm.html(errorText + noticeText);
                         return;
                       } else if (/not strong enough/.test(error.message)) {
@@ -85,7 +85,7 @@ pjax_config_page("new_account/virtualws", function(){
       } else {
         virtualForm.empty();
         var errorText = '<p class="errorfield">' + Content.localize().textTokenMissing + '</p>',
-            noticeText = '<p>' + Content.localize().textClickHereToRestart.replace('%1', page.url.url_for('')) + '</p>';
+            noticeText = '<p>' + Content.localize().textClickHereToRestart.replace('[_1]', page.url.url_for('')) + '</p>';
         virtualForm.html(errorText + noticeText);
       }
     }
