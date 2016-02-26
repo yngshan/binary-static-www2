@@ -32,17 +32,18 @@ var TNCApproval = (function() {
         }
 
         $('#tnc-loading').addClass(hiddenClass);
+        $('#tnc_image').attr('src', page.url.url_for_static('images/pages/cashier/protection-icon.svg'));
         $('#tnc_approval').removeClass(hiddenClass);
         $('#tnc-message').html(
             text.localize('[_1] has updated its <a class="pjaxload" href="[_2]">Terms & Conditions</a>. By clicking OK, you confirm that you have read and accepted the updated <a class="pjaxload" href="[_2]">Terms & Conditions</a>.')
                 .replace('[_1]', page.client.get_storage_value('landing_company_name'))
-                .replace('[_2]', page.url.url_for('/terms-and-conditions'))
+                .replace(/\[_2\]/g, page.url.url_for('terms-and-conditions'))
         );
         $('#btn-accept').text(text.localize('OK'));
     };
 
     var responseTNCApproval = function(response) {
-        if(response.tnc_approval === '1') {
+        if(+response.tnc_approval === 1) {
             redirectToMyAccount();
         }
         else {
@@ -51,7 +52,7 @@ var TNCApproval = (function() {
     };
 
     var redirectToMyAccount = function() {
-        window.location.href = page.url.url_for('/user/my_accountws');
+        window.location.href = page.url.url_for('user/my_accountws');
     };
 
     var apiResponse = function(response) {
@@ -85,7 +86,7 @@ var TNCApproval = (function() {
 
 
 
-pjax_config_page("terms_conditions_approvalws", function() {
+pjax_config_page("tnc_approvalws", function() {
     return {
         onLoad: function() {
             if (!$.cookie('login')) {

@@ -19,7 +19,6 @@ var MyAccountWS = (function() {
         authButtonID   = '#authenticate_button';
 
         loginid = page.client.loginid || $.cookie('loginid');
-        isUnwelcome = false;
 
         BinarySocket.send({"get_settings"      : 1});
         BinarySocket.send({"website_status"    : 1});
@@ -49,8 +48,8 @@ var MyAccountWS = (function() {
             return;
         }
 
-        if(terms_conditions_version !== client_tnc_status) {
-            window.location.href = page.url.url_for('/user/terms_conditions_approvalws');
+        if(isReal && terms_conditions_version !== client_tnc_status) {
+            window.location.href = page.url.url_for('user/tnc_approvalws');
             return;
         }
 
