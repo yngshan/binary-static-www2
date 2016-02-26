@@ -47,15 +47,16 @@ var StatementUI = (function(){
 
         var date = dateStr + "\n" + timeStr;
         var ref = transaction["transaction_id"];
-        var desc = transaction["longcode"];
+        var desc = transaction["longcode"].replace(/\n/g, '<br />');
         var amount = Number(parseFloat(transaction["amount"])).toFixed(2);
         var balance = Number(parseFloat(transaction["balance_after"])).toFixed(2);
 
         var creditDebitType = (parseFloat(amount) >= 0) ? "profit" : "loss";
 
-        var $statementRow = Table.createFlexTableRow([date, ref, action, desc, amount, balance], columns, "data");
+        var $statementRow = Table.createFlexTableRow([date, ref, action, '', amount, balance], columns, "data");
         $statementRow.children(".credit").addClass(creditDebitType);
         $statementRow.children(".date").addClass("pre");
+        $statementRow.children(".desc").html(desc);
 
         //create view button and append
         if (action === "Sell" || action === "Buy") {
