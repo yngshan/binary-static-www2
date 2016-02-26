@@ -7,9 +7,10 @@ msgstr ""
 "Project-Id-Version: 1228\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-02-25 01:07+0000\n"
+"PO-Revision-Date: 2016-02-26 01:14+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
-"Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary/static/zh_CN/>\n"
+"Language-Team: Chinese (China) "
+"<https://hosted.weblate.org/projects/binary/static/zh_CN/>\n"
 "Language: zh_cn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2190,10 +2191,9 @@ msgstr "买入价"
 
 #. (to_monetary_number_format($stake_min, 1)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1550
-#, fuzzy
 #| msgid "Duration must be between %1 and %2."
 msgid "Buy price must be between %1 and %2."
-msgstr "期限须在%1 与 %2之间。"
+msgstr "买入价格须在%1 与 %2之间。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/register/risk_disclaimer_message.html.tt:8
 msgid "By clicking <strong>Accept</strong> below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate."
@@ -3282,10 +3282,9 @@ msgid "Deposit"
 msgstr "存款"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:368
-#, fuzzy
 #| msgid "Deposit %1 virtual money into your account"
 msgid "Deposit %1 %2 virtual money into your account %3"
-msgstr "将 %1 虚拟资金存入您的账户"
+msgstr "将%1 %2虚拟资金存入您的账户%3"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/promocode.html.tt:3
 msgid "Deposit Bonus"
@@ -6064,10 +6063,9 @@ msgid "Last Used"
 msgstr "上一次使用"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:363
-#, fuzzy
 #| msgid "Last digits for the latest %1 ticks on %2"
 msgid "Last digit stats for the latest %1 ticks on %2"
-msgstr "显示 %2 最新 %1 跳点之最后数字"
+msgstr "显示 %2 最新 %1 跳点的最后统计数字"
 
 #. ($tick_count, $underlying->translated_display_name)
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:281
@@ -6364,10 +6362,9 @@ msgid "Make a Deposit"
 msgstr "存入资金"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:47
-#, fuzzy
 #| msgid "Make a deposit or withdraw"
 msgid "Make a deposit or withdraw."
-msgstr "存取款"
+msgstr "存取款项。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
 msgid "Make your trade"
@@ -11102,7 +11099,6 @@ msgid "TradingView"
 msgstr "交易查看"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/charting/index.html.haml:1
-#, fuzzy
 #| msgid "TradingView"
 msgid "Tradingview"
 msgstr "交易查看"
@@ -11359,10 +11355,9 @@ msgid "Use the opportunity provided by our website to practice for free with our
 msgstr "利用我们网站提供的机会可以免费通过虚拟账户进行交易尝试，同时熟悉本网站的各种功能和规则。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/partners.html.haml:1
-#, fuzzy
 #| msgid "Cashier Testing"
 msgid "User Testing"
-msgstr "收银台测试"
+msgstr "用户测试"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/about/index.html.haml:1
 msgid "Using our website, customers can trade currencies, indices, stocks and commodities 24/7. We have the most flexible pricing and the most comprehensive suite of products available."
@@ -12257,16 +12252,14 @@ msgid "You are being given the better price."
 msgstr "正在为您获取更好的价格。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:366
-#, fuzzy
 #| msgid "You're currently logged in to your real money account with %1"
 msgid "You are currently logged in to your real money account with %1 (%2)."
-msgstr "您现已登录您的 %1真实资金账户"
+msgstr "您现已登录您的 %1(%2)真实资金账户。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:367
-#, fuzzy
 #| msgid "You're currently logged in to your virtual money account"
 msgid "You are currently logged in to your virtual money account (%2)."
-msgstr "您现已登录您的虚拟资金账户"
+msgstr "您现已登录您的虚拟资金账户(%2)。"
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:89
 msgid "You are either already subscribed or you have reached the limit for proposal subscription."
@@ -12560,16 +12553,14 @@ msgid "You're using a Virtual Account."
 msgstr "您正在使用虚拟账户。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:369
-#, fuzzy
 #| msgid "This account is unavailable. For any questions please contact <a href=\"%1\">Customer Support</a>."
 msgid "Your %1 account is unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
-msgstr "此账户不可用。如有任何问题，请联系<a href=\"%1\">客户支持人员</a>。"
+msgstr "您的%1 账户不可用。如有任何问题，请联系<a href=\"%1\">客户支持人员</a>。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:370
-#, fuzzy
 #| msgid "This account is unavailable. For any questions please contact <a href=\"%1\">Customer Support</a>."
 msgid "Your %1 accounts are unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
-msgstr "此账户不可用。如有任何问题，请联系<a href=\"%1\">客户支持人员</a>。"
+msgstr "您的%1账户不可用。如有任何问题，请联系<a href=\"%1\">客户支持人员</a>。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:241
 msgid "Your %1 day withdrawal limit is currently EUR %2. (or equivalent in other currency)."
@@ -13949,10 +13940,9 @@ msgid "Michelin"
 msgstr ""
 
 #: Underlying Symbol USVISA
-#, fuzzy
 #| msgid "Apple Inc."
 msgid "VISA Inc."
-msgstr "苹果公司。"
+msgstr "威士卡公司"
 
 #: Underlying Symbol DECOMMBK
 msgid "Commerzbank"
@@ -13971,10 +13961,9 @@ msgid "Thyssenkrupp SS"
 msgstr ""
 
 #: Underlying Symbol USCTRP
-#, fuzzy
 #| msgid "Essilor International"
 msgid "Ctrip.com International Ltd."
-msgstr "依视路"
+msgstr "携程旅行网"
 
 #: Underlying Symbol UKULVR
 msgid "Unilever plc"
@@ -13997,7 +13986,6 @@ msgid "International Consolidated Airlines Group SA"
 msgstr "國際航空集團"
 
 #: Underlying Symbol DEDUE
-#, fuzzy
 #| msgid "Drr AG"
 msgid "Drr AG"
 msgstr "杜尔集团"
@@ -14015,10 +14003,9 @@ msgid "The Goldman Sachs Group Inc."
 msgstr "高盛集团"
 
 #: Underlying Symbol USBNG
-#, fuzzy
 #| msgid "The Coca-Cola Company"
 msgid "The Boeing Company"
-msgstr "可口可乐"
+msgstr "波音公司"
 
 #: Underlying Symbol USLNKD
 msgid "LinkedIn Corporation"
@@ -14045,16 +14032,14 @@ msgid "ORIGIN ENERGY LIMITED"
 msgstr "起源能源公司"
 
 #: Underlying Symbol USAMAT
-#, fuzzy
 #| msgid "Applied Materials"
 msgid "Applied Materials Inc."
 msgstr "应用材料公司"
 
 #: Underlying Symbol INTATAMOTORS
-#, fuzzy
 #| msgid "Toyota Motor"
 msgid "Tata Motors"
-msgstr "丰田汽车"
+msgstr "塔塔汽车公司"
 
 #: Underlying Symbol USUKU
 msgid "Youku Tudou Inc."
@@ -14089,10 +14074,9 @@ msgid "Air Liquide"
 msgstr "液化空气集团"
 
 #: Underlying Symbol AUMGR
-#, fuzzy
 #| msgid "AIA Group Ltd"
 msgid "Mirvac Group Stapled"
-msgstr "益百利集团有限公司"
+msgstr "Mirvac集团"
 
 #: Underlying Symbol AULLC
 msgid "Lend Lease Group Stapled"
@@ -14127,10 +14111,9 @@ msgid "Berkshire Hathaway Inc."
 msgstr "伯克希尔哈撒韦公司"
 
 #: Underlying Symbol USVRTX
-#, fuzzy
 #| msgid "Pharmaceuticals Index"
 msgid "Vertex Pharmaceuticals Incorporated"
-msgstr "医药指数"
+msgstr "福泰制药公司"
 
 #: Underlying Symbol USQHO
 msgid "Qihoo 360 Technology Company Limited"
@@ -14153,10 +14136,9 @@ msgid "Anglo American plc"
 msgstr "英美资源集团"
 
 #: Underlying Symbol AUGPT
-#, fuzzy
 #| msgid "BG Group plc"
 msgid "GPT Group Stapled"
-msgstr "英国天然气集团公司"
+msgstr "GPT集团"
 
 #: Underlying Symbol UKCMPS
 msgid "Compass Group plc"
@@ -14171,7 +14153,6 @@ msgid "American Express Company"
 msgstr ""
 
 #: Underlying Symbol UKVIV
-#, fuzzy
 #| msgid "Aviva"
 msgid "Aviva plc"
 msgstr "英杰华集团"
@@ -14221,20 +14202,18 @@ msgid "SAP SE"
 msgstr ""
 
 #: Underlying Symbol USATHM
-#, fuzzy
 #| msgid "Google Inc."
 msgid "Autohome Inc."
-msgstr "谷歌公司。"
+msgstr "汽车之家有限公司"
 
 #: Underlying Symbol FPSGO
 msgid "Cie de Saint-Gobain"
 msgstr "圣戈班公司"
 
 #: Underlying Symbol DEBKP
-#, fuzzy
 #| msgid "Deutsche Bank AG"
 msgid "Piraeus Bank SA"
-msgstr "德意志银行"
+msgstr "比雷埃夫斯银行"
 
 #: Underlying Symbol DEAIR
 msgid "AIRBUS GROUP SE"
@@ -14269,10 +14248,9 @@ msgid "Accor S.A."
 msgstr "雅高酒店"
 
 #: Underlying Symbol UKIMT
-#, fuzzy
 #| msgid "Imperial Tobacco"
 msgid "Imperial Tobacco Group plc"
-msgstr "帝国烟草公司"
+msgstr "帝国烟草集团"
 
 #: Underlying Symbol FPARC
 msgid "ArcelorMittal steel"
@@ -14319,10 +14297,9 @@ msgid "TPG Telecom Limited"
 msgstr ""
 
 #: Underlying Symbol UKNTG
-#, fuzzy
 #| msgid "Horizontal Grid"
 msgid "National Grid plc"
-msgstr "水平网格"
+msgstr "英国国家电网公司"
 
 #: Underlying Symbol AUWPL
 msgid "WOODSIDE PETROLEUM LIMITED"
@@ -14357,26 +14334,23 @@ msgid "JP Morgan Chase & Co."
 msgstr "摩根大通公司"
 
 #: Underlying Symbol USGPR
-#, fuzzy
 #| msgid "Google Inc."
 msgid "GoPro Inc."
-msgstr "谷歌公司。"
+msgstr "GoPro公司"
 
 #: Underlying Symbol USJMEI
 msgid "Jumei International Holding Limited"
 msgstr ""
 
 #: Underlying Symbol USPBYI
-#, fuzzy
 #| msgid "Biotechnology Index"
 msgid "Puma Biotechnology Inc."
-msgstr "生物技术指数"
+msgstr "彪马生物技术公司"
 
 #: Underlying Symbol AUSTO
-#, fuzzy
 #| msgid "United States Stocks"
 msgid "Santos LimitedStar Stock"
-msgstr "美国股票"
+msgstr "桑托斯股票"
 
 #: Underlying Symbol USILLM
 #, fuzzy
