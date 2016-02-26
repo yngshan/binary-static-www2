@@ -2,7 +2,11 @@ var MyAccountWS = (function() {
     "use strict";
 
     var loginid,
-        isReal;
+        isReal,
+        get_account_status,
+        is_authenticated_payment_agent,
+        terms_conditions_version,
+        client_tnc_status;
     var hiddenClass,
         welcomeTextID,
         virtualTopupID,
@@ -15,8 +19,10 @@ var MyAccountWS = (function() {
         authButtonID   = '#authenticate_button';
 
         loginid = page.client.loginid || $.cookie('loginid');
+        isUnwelcome = false;
 
-        BinarySocket.send({"get_settings": 1});
+        BinarySocket.send({"get_settings"      : 1});
+        BinarySocket.send({"website_status"    : 1});
         BinarySocket.send({"get_account_status": 1});
 
         //checkDisabledAccount();
@@ -25,22 +31,41 @@ var MyAccountWS = (function() {
     var responseGetSettings = function(response) {
         var get_settings = response.get_settings;
 
-        showWelcomeMessage();
-        if(!isReal) {
-            showTopUpLink();
-        }
-        else {
-            if(get_settings.is_authenticated_payment_agent) {
-                $('#payment_agent').removeClass(hiddenClass);
-            }
-            showNoticeMsg();
-        }
+        client_tnc_status = get_settings.client_tnc_status || '-';
+        is_authenticated_payment_agent = get_settings.is_authenticated_payment_agent;
+
+        checkAll();
 
         addGTMDataLayer(get_settings);
     };
 
     var responseAccountStatus = function(response) {
-        if(response.get_account_status[0] === 'unwelcome'){
+        get_account_status = response.get_account_status;
+        checkAll();
+    };
+
+    var checkAll = function() {
+        if(!terms_conditions_version || !client_tnc_status || !get_account_status) {
+            return;
+        }
+
+        if(terms_conditions_version !== client_tnc_status) {
+            window.location.href = page.url.url_for('/user/terms_conditions_approvalws');
+            return;
+        }
+
+        showWelcomeMessage();
+        if(!isReal) {
+            showTopUpLink();
+        }
+        else {
+            if(is_authenticated_payment_agent) {
+                $('#payment_agent').removeClass(hiddenClass);
+            }
+            showNoticeMsg();
+        }
+
+        if(get_account_status[0] === 'unwelcome'){
             $(authButtonID).removeClass(hiddenClass);
         }
 
@@ -162,6 +187,10 @@ var MyAccountWS = (function() {
                 break;
             case 'landing_company_details':
                 showWelcomeMessage();
+                break;
+            case 'website_status':
+                terms_conditions_version = response.website_status.terms_conditions_version;
+                checkAll();
                 break;
             default:
                 break;
