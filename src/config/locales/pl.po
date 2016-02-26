@@ -9,14 +9,12 @@ msgstr ""
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: 2016-02-25 12:01+0000\n"
 "Last-Translator: Ewelina Bruździak <e.bruzdziak@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/binary/static/pl/>"
-"\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/binary/static/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.5-dev\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -2192,7 +2190,6 @@ msgstr "Cena kupna"
 
 #. (to_monetary_number_format($stake_min, 1)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1550
-#| msgid "Duration must be between %1 and %2."
 msgid "Buy price must be between %1 and %2."
 msgstr "Cena zakupu musi mieścić się w przedziale %1-%2."
 
@@ -3279,7 +3276,6 @@ msgid "Deposit"
 msgstr "Wpłata"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:368
-#| msgid "Deposit %1 virtual money into your account"
 msgid "Deposit %1 %2 virtual money into your account %3"
 msgstr "Wpłać na swoje konto %3 wirtualne pieniądze w kwocie: %2 %1"
 
@@ -5106,7 +5102,7 @@ msgstr "Informacje dotyczące wcześniejszej wydajności jakiegokolwiek instrume
 msgid "Input error."
 msgstr "Błąd wpisu."
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:372
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:398
 msgid "Input validation failed: "
 msgstr "Weryfikacja danych wejściowych nie powiodła się: "
 
@@ -6060,11 +6056,8 @@ msgid "Last Used"
 msgstr "Ostatnio używane"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:363
-#| msgid "Last digits for the latest %1 ticks on %2"
 msgid "Last digit stats for the latest %1 ticks on %2"
-msgstr ""
-"Statystyki końcowych cyfr dla ostatnich %1 transakcji z najmniejszym "
-"przyrostem ceny %2"
+msgstr "Statystyki końcowych cyfr dla ostatnich %1 transakcji z najmniejszym przyrostem ceny %2"
 
 #. ($tick_count, $underlying->translated_display_name)
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:281
@@ -6361,7 +6354,6 @@ msgid "Make a Deposit"
 msgstr "Wpłać środki"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:47
-#| msgid "Make a deposit or withdraw"
 msgid "Make a deposit or withdraw."
 msgstr "Wpłać lub wypłać środki."
 
@@ -7285,7 +7277,7 @@ msgstr "Świadczone przez nas usługi polegają wyłącznie na realizacji zlece�
 msgid "Our site can be filtered using a number of filtering systems available on the market which could be used to restrict one’s access to our site."
 msgstr "Możliwe jest korzystanie z różnych systemów filtrujących dostępnych na rynku w celu ograniczenia dostępu do naszej strony."
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:397
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:423
 msgid "Output validation failed: "
 msgstr "Weryfikacja danych wyjściowych nie powiodła się: "
 
@@ -7343,7 +7335,7 @@ msgstr "Strony i ich treść są własnością %1 i nie zostaną Ci przekazane p
 msgid "Ownership, content and liability for affiliate sites are the sole responsibility of the affiliate. You will be solely responsible for the development, operation, and maintenance of your site and for all materials that appear on your site. You will indemnify and hold us harmless from all claims, damages, and expenses (including, without limitation to, attorneys' fees) relating to the development, operation, maintenance, and contents of your site."
 msgstr "Odpowiedzialność za własność, treść i wiarygodność stron partnerskich ponosi wyłącznie partner. Partner jest w pełni odpowiedzialny za kodowanie, działanie i utrzymanie swojej strony internetowej i wszystkich materiałów, jakie się na niej pojawiają. Partner nie będzie pociągał Firmy do odpowiedzialności w związku z jakimikolwiek roszczeniami, odszkodowaniami czy wydatkami (w tym kosztami postępowań sądowych) związanymi z kodowaniem, działaniem i utrzymaniem swojej strony, czy też jej zawartością."
 
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:156
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:212
 msgid "P.O. Box is not accepted in address."
 msgstr "Adresy nie mogą zawierać numerów skrytek pocztowych."
 
@@ -7355,7 +7347,7 @@ msgstr "Nie znaleziono strony"
 msgid "Parabolic SAR"
 msgstr "Paraboliczny SAR"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:554
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:580
 msgid "Parameters sanity check failed."
 msgstr "Sprawdzanie poprawności parametrów nie powiodło się."
 
@@ -7577,7 +7569,7 @@ msgstr "Zawrzyj losowy zakład"
 msgid "Platform Tour"
 msgstr "Przewodnik po platformie"
 
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:167
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:223
 msgid "Please agree to the risk disclaimer before proceeding."
 msgstr "Zanim przejdziesz dalej, musisz zaakceptować zastrzeżenie dotyczące ryzyka."
 
@@ -7724,7 +7716,7 @@ msgstr "Wpisz poprawną datę."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Transaction.pm:29
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:100
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:381
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:407
 msgid "Please log in."
 msgstr "Proszę się zalogować."
 
@@ -7922,7 +7914,7 @@ msgstr "Kod pocztowy"
 msgid "Postal code/ZIP"
 msgstr "Kod pocztowy"
 
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:155
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:211
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1844
 msgid "Postcode is required for UK residents."
 msgstr "W przypadku mieszkańców Wielkiej Brytanii wymagany jest kod pocztowy."
@@ -8533,7 +8525,7 @@ msgid "Respond to client queries using our state of the art telephone, electroni
 msgstr "Odpowiadanie na zapytania klientów, korzystając z naszych najnowocześniejszych systemów telefonicznych, mailowych oraz czatu online"
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:127
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:508
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:534
 msgid "Response too large."
 msgstr "Odpowiedź jest za długa."
 
@@ -9053,7 +9045,7 @@ msgid "Sorry, Payment Agent Transfer is temporarily disabled due to system maint
 msgstr "Przepraszamy, transfer do pośredników płatności jest czasowo wyłączony z powodu konserwacji systemu. Prosimy spróbować ponownie za 30 min."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:297
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:153
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:209
 msgid "Sorry, account opening is unavailable."
 msgstr "Przepraszamy, otwarcie konta jest niemożliwe."
 
@@ -9080,8 +9072,8 @@ msgstr "Przepraszamy, wystąpił błąd podczas operacji na Twoim koncie."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:194
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:255
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:473
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:492
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:499
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:518
 msgid "Sorry, an error occurred while processing your request."
 msgstr "Przepraszamy, podczas przetwarzania Twojego żądania wystąpił błąd."
 
@@ -9110,7 +9102,7 @@ msgstr "Przepraszamy, dozwolony jest tylko dolar amerykański."
 msgid "Sorry, our service is not available for your country of residence"
 msgstr "Przepraszamy, nasze usługi nie są dostępne w Twoim kraju zamieszkania"
 
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:154
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:210
 msgid "Sorry, our service is not available for your country of residence."
 msgstr "Przepraszamy, nasze usługi nie są dostępne w Twoim kraju zamieszkania."
 
@@ -9179,7 +9171,7 @@ msgstr "Przepraszamy, wybrana funkcja jest niedostępna."
 msgid "Sorry, this page cannot be refreshed."
 msgstr "Przepraszamy, nie można odświeżyć tej strony."
 
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:166
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:222
 msgid "Sorry, you are too young to open an account."
 msgstr "Przepraszamy, ale nie możesz założyć konta ze względu na swój młody wiek."
 
@@ -9257,7 +9249,7 @@ msgid "Sorry, you seem to already have a real money account with us. Perhaps you
 msgstr "Przepraszamy, ale wygląda na to, że masz już u nas konto z prawdziwymi pieniędzmi. Możliwe, że zostało ono zarejestrowane przy użyciu innego adresu e-mail. Z powodów prawnych nie możemy otwierać wielu kont z prawdziwymi pieniędzmi dla jednej osoby. Jeśli nie pamiętasz danych Twojego konta,"
 
 #. (request()
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:164
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:220
 msgid "Sorry, you seem to already have a real money account with us. Perhaps you have used a different email address when you registered it. For legal reasons we are not allowed to open multiple real money accounts per person. If you don't remember your account with us, please <a href=\"%1\">contact us</a>."
 msgstr "Przepraszamy, ale wygląda na to, że masz już u nas konto z prawdziwymi pieniędzmi. Możliwe, że zostało ono zarejestrowane przy użyciu innego adresu e-mail. Z powodów prawnych nie możemy otwierać wielu kont z prawdziwymi pieniędzmi dla jednej osoby. Jeśli nie pamiętasz danych Twojego konta, <a href=\"%1\">skontaktuj się z nami</a>."
 
@@ -10323,6 +10315,13 @@ msgid "The provided currency %1 is invalid."
 msgstr "Podana waluta %1 jest nieprawidłowa."
 
 #. ($currency)
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:961
+#, fuzzy
+#| msgid "The provided currency %1 is not the default currency"
+msgid "The provided currency %1 is not applicable for this account."
+msgstr "Podana waluta %1 nie jest walutą domyślną"
+
+#. ($currency)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1023
 msgid "The provided currency %1 is not the default currency"
 msgstr "Podana waluta %1 nie jest walutą domyślną"
@@ -11094,7 +11093,6 @@ msgid "TradingView"
 msgstr "Widok handlowy"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/charting/index.html.haml:1
-#| msgid "TradingView"
 msgid "Tradingview"
 msgstr "Widok handlowy"
 
@@ -11218,7 +11216,7 @@ msgstr "Akcje amerykańskie"
 msgid "Ultimate Oscillator"
 msgstr "Oscylator ostateczny"
 
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:151
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:207
 msgid "Unable to price the contract."
 msgstr "Nie można wycenić kontraktu."
 
@@ -11247,7 +11245,7 @@ msgstr "Instrument bazowy"
 msgid "Unemployed"
 msgstr "Unemployed"
 
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:169
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:225
 msgid "Unfortunately your answers to the questions above indicate that you do not have sufficient financial resources or trading experience to be eligible to open a trading account at this time."
 msgstr "Niestety Twoje odpowiedzi na powyższe pytania wskazują, że w chwili obecnej nie posiadasz wystarczających środków finansowych i wystarczającego doświadczenia, aby otworzyć konto do handlowania."
 
@@ -11280,7 +11278,7 @@ msgstr "Spółka odpowiedzialna za prowadzenie konta jest nieznana."
 msgid "Unless otherwise advised, we shall treat you as a Retail Client. You may also request, in writing, us to change the category in which you have been classified and this may have an effect on the level of protection afforded to you. We reserve the right to accept or refuse any such request for change in classification."
 msgstr "Będziemy Cię traktować jako Klienta detalicznego, chyba że postanowiono inaczej. Możesz złożyć pisemny wniosek o zmianę kategorii, do której Cię zaklasyfikowano, co może mieć wpływ na poziom oferowanej ochrony. Zastrzegamy sobie prawo do akceptacji bądź odrzucenia wniosku o zmianę klasyfikacji."
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:405
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:431
 msgid "Unrecognised request."
 msgstr "Nie rozpoznano żądania."
 
@@ -11348,7 +11346,6 @@ msgid "Use the opportunity provided by our website to practice for free with our
 msgstr "Korzystaj z możliwości oferowanych przez nasz portal, aby ćwiczyć za darmo na koncie z wirtualnymi pieniędzmi. Dzięki temu poznasz funkcje i zasady funkcjonowania portalu."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/partners.html.haml:1
-#| msgid "Cashier Testing"
 msgid "User Testing"
 msgstr "Testowanie przez użytkownika"
 
@@ -12243,13 +12240,10 @@ msgid "You are being given the better price."
 msgstr "Otrzymujesz lepszą cenę."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:366
-#| msgid "You're currently logged in to your real money account with %1"
 msgid "You are currently logged in to your real money account with %1 (%2)."
-msgstr ""
-"Jesteś obecnie zalogowany/a do konta z prawdziwymi pieniędzmi w %1 (%2)."
+msgstr "Jesteś obecnie zalogowany/a do konta z prawdziwymi pieniędzmi w %1 (%2)."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:367
-#| msgid "You're currently logged in to your virtual money account"
 msgid "You are currently logged in to your virtual money account (%2)."
 msgstr "Jesteś obecnie zalogowany/a do konta z wirtualnymi pieniędzmi (%2)."
 
@@ -12394,7 +12388,7 @@ msgid "You have purchased the following contract:"
 msgstr "Zakupiono następujący kontrakt:"
 
 #. ($descriptor->{category})
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:356
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:383
 msgid "You have reached the rate limit for %1."
 msgstr "Osiągnięto limit stawki dla %1."
 
@@ -12545,18 +12539,12 @@ msgid "You're using a Virtual Account."
 msgstr "Korzystasz z konta z wirtualnymi pieniędzmi."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:369
-#| msgid "This account is unavailable. For any questions please contact <a href=\"%1\">Customer Support</a>."
 msgid "Your %1 account is unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
-msgstr ""
-"Twoje konto %1 jest niedostępne. W przypadku jakichkolwiek pytań prosimy o "
-"kontakt z <a href=\"%2\">działem obsługi klienta</a>."
+msgstr "Twoje konto %1 jest niedostępne. W przypadku jakichkolwiek pytań prosimy o kontakt z <a href=\"%2\">działem obsługi klienta</a>."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:370
-#| msgid "This account is unavailable. For any questions please contact <a href=\"%1\">Customer Support</a>."
 msgid "Your %1 accounts are unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
-msgstr ""
-"Twoje konta %1 są niedostępne. W przypadku jakichkolwiek pytań prosimy o "
-"kontakt z <a href=\"%2\">działem obsługi klienta</a>."
+msgstr "Twoje konta %1 są niedostępne. W przypadku jakichkolwiek pytań prosimy o kontakt z <a href=\"%2\">działem obsługi klienta</a>."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:241
 msgid "Your %1 day withdrawal limit is currently EUR %2. (or equivalent in other currency)."
@@ -12603,7 +12591,7 @@ msgstr "Saldo Twojego konta wynosi %2 %1. Maksymalna wypłata za pomocą innych 
 msgid "Your account has exceeded the trading limit with free promo code, please deposit if you wish to continue trading."
 msgstr "Na Twoim koncie przekroczony został limit handlowy dla kodu promocyjnego, prosimy o wpłatę, jeśli chcesz nadal handlować."
 
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:152
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:208
 msgid "Your account has no country of residence."
 msgstr "Do Twojego rachunku nie został przypisany żaden kraj zamieszkania."
 
@@ -12723,7 +12711,7 @@ msgstr "Twoim klientom z pewnością spodoba się platforma handlowa %1, gdyż o
 msgid "Your current balance is"
 msgstr "Obecnie Twoje saldo wynosi"
 
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:157
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:213
 msgid "Your date of birth is invalid."
 msgstr "Twoja data urodzenia jest nieprawidłowa."
 
@@ -12739,7 +12727,7 @@ msgstr "Twoje dane zostały uaktualnione."
 msgid "Your email address"
 msgstr "Twój adres e-mail"
 
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:150
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:206
 msgid "Your email address is unverified."
 msgstr "Twój adres e-mail nie jest zweryfikowany."
 
@@ -12849,7 +12837,7 @@ msgid "Your provided email address is already in use by another Login ID"
 msgstr "Podany adres e-mail jest już przypisany do innego loginu"
 
 #. (request()
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:160
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:216
 msgid "Your provided email address is already in use by another Login ID. According to our terms and conditions, you may only register once through our site. If you have forgotten the password of your existing account, please <a href=\"%1\">try our password recovery tool</a> or contact customer service."
 msgstr "Podany adres e-mail jest już przypisany do innego loginu. Zgodnie z naszym regulaminem można mieć tylko jedno konto na naszym portalu. Jeżeli nie pamiętasz hasła do obecnego konta, <a href=\"%1\">skorzystaj z opcji odzyskiwania hasła</a> lub skontaktuj się z obsługą klienta."
 
@@ -13980,6 +13968,7 @@ msgid "International Consolidated Airlines Group SA"
 msgstr "International Consolidated Airlines Group SA"
 
 #: Underlying Symbol DEDUE
+#, fuzzy
 #| msgid "Drr AG"
 msgid "Drr AG"
 msgstr "Drr AG"
