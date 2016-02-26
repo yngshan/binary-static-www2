@@ -161,7 +161,11 @@ BetAnalysis.DigitInfoWS.prototype = {
         }
         this.spots = spots;
         if(this.chart &&  $('#last_digit_histo').html()){
-            this.chart.xAxis[0].setTitle(this.chart_config.xAxis.title);
+            this.chart.xAxis[0].update({
+                title:{
+                    text: $('#last_digit_title').html().replace('[_2]', $('[name=underlying] option:selected').text()).replace('[_1]',spots.length),
+                }
+            }, true);
             this.chart.series[0].name = underlying;
         }
         else{
