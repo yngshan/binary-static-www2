@@ -44,6 +44,7 @@ var MyAccountWS = (function() {
             $(authButtonID).removeClass(hiddenClass);
         }
 
+        $('#cashier-portfolio, #profit-statement').removeClass(hiddenClass);
         $('#loading').remove();
     };
 
