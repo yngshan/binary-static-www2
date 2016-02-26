@@ -15,30 +15,21 @@ var MyAccountWS = (function() {
         authButtonID   = '#authenticate_button';
 
         loginid = page.client.loginid || $.cookie('loginid');
-        isReal = !(/VRT/.test(loginid));
 
         BinarySocket.send({"get_settings": 1});
-        BinarySocket.send({"payout_currencies": 1});
         BinarySocket.send({"get_account_status": 1});
 
-        if(!isReal) {
-            BinarySocket.send({"balance": 1, "req_id": 1});
-            shoWelcomeMessage();
-            recheckLegacyTradeMenu();
-        }
-        
         //checkDisabledAccount();
     };
 
     var responseGetSettings = function(response) {
         var get_settings = response.get_settings;
 
-        if(isReal) {
-            var country_code = get_settings.country_code;
-            if(country_code) {
-                BinarySocket.send({"landing_company": country_code});
-            }
-
+        showWelcomeMessage();
+        if(!isReal) {
+            showTopUpLink();
+        }
+        else {
             if(get_settings.is_authenticated_payment_agent) {
                 $('#payment_agent').removeClass(hiddenClass);
             }
@@ -48,60 +39,40 @@ var MyAccountWS = (function() {
         addGTMDataLayer(get_settings);
     };
 
-    var responseBalance = function(response) {
-        if(!response.echo_req.req_id || parseInt(response.req_id, 10) !== 1) {
-            return;
-        }
-
-        if(response.balance.balance < 1000) {
-            $(virtualTopupID + ' a')
-                .text(
-                    (text.localize('Deposit %1 virtual money into your account ') + loginid)
-                    .replace('%1', response.balance.currency + ' 10000')
-                );
-            $(virtualTopupID).removeClass(hiddenClass);
-        }
-    };
-
     var responseAccountStatus = function(response) {
         if(response.get_account_status[0] === 'unwelcome'){
             $(authButtonID).removeClass(hiddenClass);
         }
+
+        $('#loading').remove();
     };
 
-    var responseLandingCompany = function(response) {
-        var landing_company = response.landing_company,
-            company,
-            allowed_markets = [];
-        if(/MLT/.test(loginid) && landing_company.hasOwnProperty('gaming_company')) {
-            company = landing_company.gaming_company.name;
-            allowed_markets = landing_company.gaming_company.legal_allowed_markets;
-        }
-        else {
-            company = landing_company.financial_company.name;
-            allowed_markets = landing_company.financial_company.legal_allowed_markets;
-        }
-        shoWelcomeMessage(company);
-
-        setCookie('allowed_markets', allowed_markets.length === 0 ? '' : allowed_markets.join(','));
-        recheckLegacyTradeMenu();
-    };
-
-    var responsePayoutCurrencies = function (response) {
-        Settings.set('client.currencies', response.hasOwnProperty('payout_currencies') ? response.payout_currencies : '');
-    };
-
-    var shoWelcomeMessage = function(landing_company) {
+    var showWelcomeMessage = function() {
+        var landing_company = page.client.get_storage_value('landing_company_name');
         $(welcomeTextID)
             .text(
                 text.localize(
                     isReal ? 
-                        "You're currently logged in to your real money account with %1 " : 
-                        "You're currently logged in to your virtual money account "
-                ).replace('%1', landing_company || '') + 
-                ' (' + loginid + ').'
+                        'You are currently logged in to your real money account with [_1] ([_2]).' : 
+                        'You are currently logged in to your virtual money account ([_2]).'
+                )
+                    .replace('[_1]', landing_company || '')
+                    .replace('[_2]', loginid)
             )
             .removeClass(hiddenClass);
+    };
+
+    var showTopUpLink = function() {
+        if(TUser.get().balance < 1000) {
+            $(virtualTopupID + ' a')
+                .text(
+                    text.localize('Deposit [_1] [_2] virtual money into your account [_3]')
+                        .replace('[_1]', TUser.get().currency)
+                        .replace('[_2]', ' 10000')
+                        .replace('[_3]', loginid)
+                );
+            $(virtualTopupID).removeClass(hiddenClass);
+        }
     };
 
     var showNoticeMsg = function() {
@@ -110,11 +81,6 @@ var MyAccountWS = (function() {
         if(res.length === 2 && (/MLT/.test(res[0]) || /MLT/.test(res[1]))) {
             $('#investment_message').removeClass(hiddenClass);
         }
-    };
-
-    var recheckLegacyTradeMenu = function() {
-        page.header.menu.disable_not_allowed_markets();
-        page.header.register_dynamic_links();
     };
 
     var addGTMDataLayer = function(get_settings) {
@@ -155,14 +121,6 @@ var MyAccountWS = (function() {
         }
     };
 
-    var setCookie = function (name, value) {
-        $.cookie(name, value, {
-            expires : new Date('Thu, 1 Jan 2037 12:00:00 GMT'),
-            path    : '/',
-            domain  : '.' + document.domain.split('.').slice(-2).join('.')
-        });
-    };
-
     var checkDisabledAccount = function() {
         var disabledAccount = [];
         page.user.loginid_array.map(function(loginObj) {
@@ -172,13 +130,13 @@ var MyAccountWS = (function() {
         });
 
         if(disabledAccount.length > 0) {
-            var msgSingular = text.localize('Your %1 account is unavailable. For any questions please contact <a href="%2">Customer Support</a>.'),
-                msgPlural   = text.localize('Your %1 accounts are unavailable. For any questions please contact <a href="%2">Customer Support</a>.');
+            var msgSingular = text.localize('Your [_1] account is unavailable. For any questions please contact <a href="[_2]">Customer Support</a>.'),
+                msgPlural   = text.localize('Your [_1] accounts are unavailable. For any questions please contact <a href="[_2]">Customer Support</a>.');
             $('<p/>', {class: 'notice-msg'})
                 .html(
                     (disabledAccount.length === 1 ? msgSingular : msgPlural)
-                        .replace('%1', disabledAccount.join(', '))
-                        .replace('%2', page.url.url_for('contact'))
+                        .replace('[_1]', disabledAccount.join(', '))
+                        .replace('[_2]', page.url.url_for('contact'))
                 )
                 .insertAfter($(welcomeTextID));
         }
@@ -192,21 +150,17 @@ var MyAccountWS = (function() {
             return false;
         }
 
+        isReal = !TUser.get().is_virtual;
+
         switch(response.msg_type) {
-            case 'balance':
-                responseBalance(response);
-                break;
             case 'get_account_status':
                 responseAccountStatus(response);
                 break;
             case 'get_settings':
                 responseGetSettings(response);
                 break;
-            case 'landing_company':
-                responseLandingCompany(response);
-                break;
-            case 'payout_currencies':
-                responsePayoutCurrencies(response);
+            case 'landing_company_details':
+                showWelcomeMessage();
                 break;
             default:
                 break;
@@ -226,6 +180,12 @@ pjax_config_page("user/my_accountws", function() {
             if (!getCookieItem('login')) {
                 window.location.href = page.url.url_for('login');
                 return;
+            }
+
+            showLoadingImage($('<div/>', {id: 'loading'}).insertAfter('#welcome'));
+
+            if(page.url.param('login')) {
+                page.client.clear_storage_values();
             }
 
             BinarySocket.init({
