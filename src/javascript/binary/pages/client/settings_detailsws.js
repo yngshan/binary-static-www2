@@ -124,7 +124,7 @@ var SettingsDetailsWS = (function() {
         }
 
         // telephone
-        if(!isCountError(fieldIDs.phone, 6, 20) && !(/^(|\+?[0-9\s\-]+)$/).test(phone)) {
+        if(!isCountError(fieldIDs.phone, 6, 35) && !(/^(|\+?[0-9\s\-]+)$/).test(phone)) {
             showError(fieldIDs.phone, Content.errorMessage('reg', [numbers, space, '-']));
         }
 
