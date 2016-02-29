@@ -88,7 +88,7 @@ BetAnalysis.DigitInfoWS = function() {
 };
 
 BetAnalysis.DigitInfoWS.prototype = {
-    add_content: function(){
+    add_content: function(underlying){
         var domain = document.domain.split('.').slice(-2).join('.'),
             underlyings =[];
         var symbols = Symbols.getAllSymbols();
@@ -116,7 +116,7 @@ BetAnalysis.DigitInfoWS.prototype = {
                         '<div id="last_digit_title" class="grd-hide">'+ (domain.charAt(0).toUpperCase() + domain.slice(1)) + ' - ' + text.localize('Last digit stats for the latest [_1] ticks on [_2]') +'</div>'+
                         '</div>';
         contentId.innerHTML = content;
-        $('[name=underlying]').val($('#underlying option:selected').val());
+        $('[name=underlying]').val(underlying);
         
     },
     on_latest: function() {
@@ -136,7 +136,8 @@ BetAnalysis.DigitInfoWS.prototype = {
                                         '"req_id": 2}');
             if(that.chart.series[0].name !== symbol){
                 if($('#underlying option:selected').val() != $('[name=underlying]', form).val()){
-                    request['subscribe']=1;
+                    request['subscribe'] = 1;
+                    request['style'] = "ticks";
                 }
                 if(that.stream_id !== null ){
                     BinarySocket.send(JSON.parse('{"forget": "'+ that.stream_id +'"}'));
@@ -149,11 +150,10 @@ BetAnalysis.DigitInfoWS.prototype = {
         $('[name=tick_count]', form).on('change',  get_latest ).addClass('unbind_later');
     },
     show_chart: function(underlying, spots) {
-        if(typeof spots === 'undefined'){
+        if(typeof spots === 'undefined' || spots.length <= 0){
             console.log("Unexpected error occured in the charts.");
             return;
         }
-        
         var dec = spots[0].split('.')[1].length;
         for(i=0;i<spots.length;i++){
             var val = parseFloat(spots[i]).toFixed(dec);
@@ -161,11 +161,15 @@ BetAnalysis.DigitInfoWS.prototype = {
         }
         this.spots = spots;
         if(this.chart &&  $('#last_digit_histo').html()){
-            this.chart.xAxis[0].setTitle(this.chart_config.xAxis.title);
+            this.chart.xAxis[0].update({
+                title:{
+                    text: $('#last_digit_title').html().replace('%2', $('[name=underlying] option:selected').text()).replace('%1',spots.length),
+                }
+            }, true);
             this.chart.series[0].name = underlying;
         }
         else{
-            this.add_content();
+            this.add_content(underlying);
             this.chart_config.xAxis.title = {
                 text: $('#last_digit_title').html().replace('[_2]', $('[name=underlying] option:selected').text()).replace('[_1]',spots.length),
             };
