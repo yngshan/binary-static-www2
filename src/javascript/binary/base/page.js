@@ -105,6 +105,16 @@ Client.prototype = {
         }
         return !this.is_logged_in;
     },
+    redirect_if_is_virtual: function(redirectPage) {
+        var is_virtual = this.is_virtual();
+        if(is_virtual) {
+            window.location.href = page.url.url_for(redirectPage || '');
+        }
+        return is_virtual;
+    },
+    is_virtual: function() {
+        return this.get_storage_value('is_virtual') === '1';
+    },
     get_storage_value: function(key) {
         return LocalStore.get('client.' + key) || '';
     },
@@ -113,6 +123,10 @@ Client.prototype = {
     },
     check_storage_values: function(origin) {
         var is_ok = true;
+
+        if(!this.get_storage_value('is_virtual') && TUser.get().hasOwnProperty('is_virtual')) {
+            this.set_storage_value('is_virtual', TUser.get().is_virtual);
+        }
 
         // currencies
         if(!this.get_storage_value('currencies')) {
@@ -164,9 +178,16 @@ Client.prototype = {
             $('#topMenuStartBetting').removeClass('invisible');
         }
     },
+    response_authorize: function(response) {
+        TUser.set(response.authorize);
+        this.set_storage_value('is_virtual', TUser.get().is_virtual);
+        this.check_storage_values();
+        page.contents.activate_by_client_type();
+        page.contents.topbar_message_visibility();
+    },
     clear_storage_values: function() {
         var that  = this;
-        var items = ['currencies', 'allowed_markets', 'landing_company_name'];
+        var items = ['currencies', 'allowed_markets', 'landing_company_name', 'is_virtual'];
         items.forEach(function(item) {
             that.set_storage_value(item, '');
         });
@@ -384,7 +405,7 @@ Menu.prototype = {
         var sub_items = $('li#topMenuStartBetting ul.sub_items');
         sub_items.find('li').each(function () {
             var link_id = $(this).attr('id').split('_')[1];
-            if(markets_array.indexOf(link_id) < 0 && !TUser.get().is_virtual) {
+            if(markets_array.indexOf(link_id) < 0 && !page.client.is_virtual()) {
                 var link = $(this).find('a');
                 var link_text = link.text();
                 var link_href = link.attr('href');
@@ -788,10 +809,10 @@ Contents.prototype = {
     activate_by_client_type: function() {
         $('.by_client_type').addClass('invisible');
         if(this.client.is_logged_in) {
-            if(!TUser.get().hasOwnProperty('is_virtual')) {
+            if(page.client.get_storage_value('is_virtual').length === 0) {
                 return;
             }
-            if(!TUser.get().is_virtual) {
+            if(!page.client.is_virtual()) {
                 $('.by_client_type.client_real').removeClass('invisible');
                 $('.by_client_type.client_real').show();
 
@@ -843,13 +864,13 @@ Contents.prototype = {
     },
     topbar_message_visibility: function() {
         if(this.client.is_logged_in) {
-            if(!TUser.get().hasOwnProperty('is_virtual')) {
+            if(page.client.get_storage_value('is_virtual').length === 0) {
                 return;
             }
             var loginid_array = this.user.loginid_array;
             var c_config = page.settings.get('countries_list')[this.client.residence];
 
-            if (TUser.get().is_virtual) {
+            if (page.client.is_virtual()) {
                 var show_upgrade = true;
                 for (var i=0;i<loginid_array.length;i++) {
                     if (loginid_array[i].real) {

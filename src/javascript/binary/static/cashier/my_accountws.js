@@ -150,7 +150,7 @@ var MyAccountWS = (function() {
             return false;
         }
 
-        isReal = !TUser.get().is_virtual;
+        isReal = !page.client.is_virtual();
 
         switch(response.msg_type) {
             case 'get_account_status':

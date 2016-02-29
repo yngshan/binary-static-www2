@@ -136,10 +136,7 @@ function BinarySocketClass() {
                     }
                     else {
                         authorized = true;
-                        TUser.set(response.authorize);
-                        page.client.check_storage_values();
-                        page.contents.activate_by_client_type();
-                        page.contents.topbar_message_visibility();
+                        page.client.response_authorize(response);
                         if(typeof events.onauth === 'function'){
                             events.onauth();
                         }

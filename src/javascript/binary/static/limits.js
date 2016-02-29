@@ -17,7 +17,9 @@ pjax_config_page("limitsws", function(){
                         var type = response.msg_type;
                         var error = response.error;
 
-                        if (type === 'get_limits' && !error){
+                        if (type === 'authorize' && TUser.get().is_virtual){
+                            LimitsWS.limitsError(response);
+                        } else if (type === 'get_limits' && !error){
                             LimitsWS.limitsHandler(response);
                         } else if (error) {
                             LimitsWS.limitsError();

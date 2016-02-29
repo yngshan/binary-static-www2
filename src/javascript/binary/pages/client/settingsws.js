@@ -5,7 +5,7 @@ var SettingsWS = (function() {
         var classHidden = 'invisible',
             classReal   = '.real';
 
-        if(!TUser.get().is_virtual) {
+        if(!page.client.is_virtual()) {
             $(classReal).removeClass(classHidden);
         }
         else {
@@ -28,7 +28,7 @@ pjax_config_page("settingsws", function() {
                 return;
             }
 
-            if(!TUser.get().hasOwnProperty('is_virtual')) {
+            if(page.client.get_storage_value('is_virtual').length === 0) {
                 BinarySocket.init({
                     onmessage: function(msg) {
                         var response = JSON.parse(msg.data);

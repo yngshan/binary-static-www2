@@ -6,9 +6,8 @@ pjax_config_page("new_account/realws", function(){
       if (page.client.redirect_if_logout()) {
           return;
       }
-      if (!TUser.get().is_virtual) {
-        window.location.href = page.url.url_for('user/my_accountws');
-        return;
+      if(page.client.redirect_if_is_virtual('user/my_accountws')) {
+          return;
       }
       for (i = 0; i < page.user.loginid_array.length; i++){
         if (page.user.loginid_array[i].real === true){
@@ -29,7 +28,10 @@ pjax_config_page("new_account/realws", function(){
                 var type = response.msg_type;
                 var error = response.error;
 
-                if (type === 'new_account_real' && !error){
+                if(type === 'authorize' && page.client.redirect_if_is_virtual('user/my_accountws')) {
+                    return;
+                }
+                else if (type === 'new_account_real' && !error){
                   var loginid = response.new_account_real.client_id;
 
                   //set cookies

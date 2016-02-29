@@ -32,7 +32,7 @@ var SettingsDetailsWS = (function() {
         $('#lblCountry').text(data.country);
         $('#lblEmail').text(data.email);
 
-        if(TUser.get().is_virtual){ // Virtual Account
+        if(page.client.is_virtual()){ // Virtual Account
             $(RealAccElements).remove();
         } 
         else { // Real Account

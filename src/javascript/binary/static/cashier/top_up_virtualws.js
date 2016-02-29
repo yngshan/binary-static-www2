@@ -17,7 +17,7 @@ var TopUpVirtualWS = (function() {
 
         $views.addClass('hidden');
 
-        if(!TUser.get().is_virtual) {
+        if(!page.client.is_virtual()) {
             showMessage(text.localize('Sorry, this feature is available to virtual accounts only.'), false);
         }
         else {
@@ -37,7 +37,7 @@ var TopUpVirtualWS = (function() {
                 text.localize('[_1] [_2] has been credited to your Virtual money account [_3]')
                     .replace('[_1]', response.topup_virtual.currency)
                     .replace('[_2]', response.topup_virtual.amount)
-                    .replace('[_3]', getCookieItem('loginid')),
+                    .replace('[_3]', page.client.loginid),
                 true);
         }
     };
@@ -72,7 +72,10 @@ pjax_config_page("top_up_virtualws", function() {
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);
                     if (response) {
-                        if (response.msg_type === "topup_virtual") {
+                        if (response.msg_type === "authorize") {
+                            TopUpVirtualWS.init();
+                        }
+                        else if (response.msg_type === "topup_virtual") {
                             TopUpVirtualWS.responseHandler(response);
                         }
                     }
@@ -83,7 +86,9 @@ pjax_config_page("top_up_virtualws", function() {
             });
 
             Content.populate();
-            TopUpVirtualWS.init();
+            if(TUser.get().hasOwnProperty('is_virtual')) {
+                TopUpVirtualWS.init();
+            }
         }
     };
 });

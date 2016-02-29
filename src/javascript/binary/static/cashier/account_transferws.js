@@ -7,6 +7,10 @@ var account_transferws = (function(){
     var payoutCurr = [];
     
     var init = function(){
+        if(page.client.redirect_if_is_virtual()) {
+            return;
+        }
+
         $form = $('#account_transfer');
         $("#success_form").hide();
         $("#client_message").hide();
@@ -80,12 +84,13 @@ var account_transferws = (function(){
 
     var apiResponse = function(response){
         var type = response.msg_type;
-        if (type === "transfer_between_accounts" || (type === "error" && "transfer_between_accounts" in response.echo_req)){
-           responseMessage(response);
-
+        if (type === "authorize") {
+            init();
         }
-        else if(type === "payout_currencies" || (type === "error" && "payout_currencies" in response.echo_req))
-        {
+        else if (type === "transfer_between_accounts" || (type === "error" && "transfer_between_accounts" in response.echo_req)) {
+           responseMessage(response);
+        }
+        else if(type === "payout_currencies" || (type === "error" && "payout_currencies" in response.echo_req)) {
             responseMessage(response);
         }
     };
@@ -260,9 +265,6 @@ pjax_config_page("cashier/account_transferws", function() {
             if (page.client.redirect_if_logout()) {
                 return;
             }
-            if(TUser.get().is_virtual){
-                window.location.href = ("/");
-            }
 
         	BinarySocket.init({
                 onmessage: function(msg){
@@ -273,7 +275,9 @@ pjax_config_page("cashier/account_transferws", function() {
                 }
             });	
 
-            account_transferws.init();
+            if(TUser.get().hasOwnProperty('is_virtual')) {
+                account_transferws.init();
+            }
         }
     };
 });
