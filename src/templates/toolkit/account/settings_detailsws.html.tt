@@ -1,7 +1,7 @@
 <div class="grd-grid-12">
 
     <h1>[% l('Personal Details') %]</h1>
-    
+
     <form class="form form grd-row-padding hidden" id="frmPersonalDetails">
 
         <fieldset>
@@ -52,7 +52,7 @@
             </div>
         </fieldset>
 
-        <fieldset class="hidden RealAcc">
+        <fieldset class="hidden RealAcc ja-hide">
             <legend>[% l('Address') %]</legend>
 
             <div class="grd-row-padding row clear">
@@ -110,7 +110,77 @@
             </div>
         </fieldset>
 
-        <fieldset class="formlayout settings sticky hidden RealAcc" id="formlayout">
+        <fieldset class="JpAcc">
+            <legend>[% l('Address') %]</legend>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label for="Address1"><em class="required_asterisk">**</em> [% l('First line of home address') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblAddress1"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label for="Address2"><em class="required_asterisk">**</em> [% l('Second line of home address') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblAddress2"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label for="City"><em class="required_asterisk">**</em> [% l('Town/City') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblCity"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label for="State"><em class="required_asterisk">**</em> [% l('State/Province') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblState"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label for="Postcode"><em class="required_asterisk">**</em> [% l('Postal Code / ZIP') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblPostcode"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label for="Phone"><em class="required_asterisk">**</em> [% l('Telephone') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblPhone"></strong>
+                    </span>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="formlayout settings sticky hidden RealAcc ja-hide" id="formlayout">
             <div class="grd-row-padding">
                 <div class="grd-grid-4"></div>
                 <div class="grd-grid-8">

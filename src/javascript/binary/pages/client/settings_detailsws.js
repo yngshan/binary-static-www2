@@ -37,29 +37,39 @@ var SettingsDetailsWS = (function() {
 
         if(!isReal){ // Virtual Account
             $(RealAccElements).remove();
-        } 
+        }
         else { // Real Account
             $('#lblName').text((data.salutation || '') + ' ' + (data.first_name || '') + ' ' + (data.last_name || ''));
             var birthDate = data.date_of_birth ? moment.utc(new Date(data.date_of_birth * 1000)).format("YYYY-MM-DD") : '';
             $('#lblBirthDate').text(birthDate);
-            $(fieldIDs.address1).val(data.address_line_1);
-            $(fieldIDs.address2).val(data.address_line_2);
-            $(fieldIDs.city).val(data.address_city);
+            if (page.client.residence === 'jp') {
+                $('#lblAddress1').text(data.address_line_1);
+                $('#lblAddress2').text(data.address_line_2);
+                $('#lblCity').text(data.address_city);
+                $('#lblState').text(data.address_state);
+                $('#lblPostcode').text(data.address_postcode);
+                $('#lblPhone').text(data.phone);
+                $('.JpAcc').css('display', 'block');
+            } else {
+                $(fieldIDs.address1).val(data.address_line_1);
+                $(fieldIDs.address2).val(data.address_line_2);
+                $(fieldIDs.city).val(data.address_city);
 
-            // Generate states list
-            var residence = $.cookie('residence');
-            BinarySocket.send({"states_list": residence, "passthrough": {"value": data.address_state}});
-            
-            $(fieldIDs.postcode).val(data.address_postcode);
-            $(fieldIDs.phone).val(data.phone);
+                // Generate states list
+                var residence = $.cookie('residence');
+                BinarySocket.send({"states_list": residence, "passthrough": {"value": data.address_state}});
 
-            $(RealAccElements).removeClass('hidden');
+                $(fieldIDs.postcode).val(data.address_postcode);
+                $(fieldIDs.phone).val(data.phone);
 
-            $(frmBtn).click(function(e){
-                e.preventDefault();
-                e.stopPropagation();
-                return setDetails();
-            });
+                $(RealAccElements).removeClass('hidden');
+
+                $(frmBtn).click(function(e){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return setDetails();
+                });
+            }
         }
 
         $(formID).removeClass('hidden');
@@ -91,13 +101,13 @@ var SettingsDetailsWS = (function() {
             state    = $(fieldIDs.state).val(),
             postcode = $(fieldIDs.postcode).val().trim(),
             phone    = $(fieldIDs.phone).val().trim();
-        
+
         var letters = Content.localize().textLetters,
             numbers = Content.localize().textNumbers,
             space   = Content.localize().textSpace,
             period  = Content.localize().textPeriod,
             comma   = Content.localize().textComma;
-        
+
         // address 1
         if(!isRequiredError(fieldIDs.address1) && !(/^[a-zA-Z0-9\s\,\.\-\/\(\)#']+$/).test(address1)) {
             showError(fieldIDs.address1, Content.errorMessage('reg', [letters, numbers, space, period, comma, '- / ( ) # \'']));
@@ -124,7 +134,7 @@ var SettingsDetailsWS = (function() {
         }
 
         // telephone
-        if(!isCountError(fieldIDs.phone, 6, 20) && !(/^(|\+?[0-9\s\-]+)$/).test(phone)) {
+        if(!isCountError(fieldIDs.phone, 6, 35) && !(/^(|\+?[0-9\s\-]+)$/).test(phone)) {
             showError(fieldIDs.phone, Content.errorMessage('reg', [numbers, space, '-']));
         }
 
@@ -195,7 +205,7 @@ var SettingsDetailsWS = (function() {
             .delay(3000)
             .fadeOut(1000);
     };
-   
+
 
     return {
         init: init,
