@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 1228\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-02-26 03:47+0000\n"
+"PO-Revision-Date: 2016-02-26 09:38+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary/static/zh_CN/>\n"
 "Language: zh_cn\n"
@@ -42,7 +42,7 @@ msgstr "$25,000 - $100,000"
 msgid "$250,000 - $1,000,000"
 msgstr "$250,000 - $1,000,000"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:340
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:341
 msgid "%1 %2 has been credited to your Virtual money account %3"
 msgstr "%1 %2 已记入您的虚拟资金账户%3"
 
@@ -103,11 +103,6 @@ msgstr "%1不收取任何转账费用。"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/head.html.tt:11
 msgid "%1 gives everyone an easy and exciting way to participate in the financial markets. Trade with as little as $1 USD on major currencies, indices and commodities."
 msgstr "%1让每个人都能轻松、愉快地参与金融市场。您可交易各主要货币、指数和大宗商品，投资门槛低至1美元。"
-
-#. (broker_name)
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/resources/contract_guide.html.tt:3
-msgid "%1 gives you many different ways to trade on the markets. Learn more about each contract type by clicking on the links below."
-msgstr "%1 让您可以在市场上以多种不同方式交易。点击下方链接查看关于每种合约类型的详情。"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -1255,7 +1250,7 @@ msgstr "添加覆盖"
 msgid "Address"
 msgstr "地址"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:335
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:336
 msgid "Adjust trade parameters"
 msgstr "调整交易参数"
 
@@ -1398,7 +1393,7 @@ msgstr "可使用额外密码来限制对收银台的访问。"
 msgid "An advanced university degree in Mathematics, Physics or Engineering"
 msgstr "数学、 物理或工程专科硕士或博士学位"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:318
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:319
 msgid "An error occured."
 msgstr "出了差错。"
 
@@ -1543,7 +1538,7 @@ msgstr "您是专业投资人吗？"
 msgid "Are you ready?"
 msgstr "准备好了吗？"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:325
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:326
 msgid "Are you sure that you want to permanently delete token"
 msgstr "确定要永久删除令牌吗"
 
@@ -1627,9 +1622,9 @@ msgid "Asset"
 msgstr "资产"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:153
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:196
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2627
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2676
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:130
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2635
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2684
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:76
@@ -2189,7 +2184,7 @@ msgid "Buy Price"
 msgstr "买入价"
 
 #. (to_monetary_number_format($stake_min, 1)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1550
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1558
 msgid "Buy price must be between %1 and %2."
 msgstr "买入价格须在%1 与 %2之间。"
 
@@ -2315,7 +2310,7 @@ msgstr "图表"
 msgid "Chart Type"
 msgstr "图表类型"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:181
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:174
 #: /home/git/translations/binary-static-www2/src/templates/haml/charting/index.html.haml:1
 msgid "Charting"
 msgstr "图表"
@@ -2736,7 +2731,7 @@ msgid "Contract barrier must be positive."
 msgstr "合约障碍必须为正数。"
 
 #. ($end_of_bo->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2753
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2761
 msgid "Contract can not expire during the end-of-year holiday period. Select an expiry date after %1."
 msgstr "合约的到期日不能设置在年末节日期间。选择 %1 之后的一个到期日。"
 
@@ -2748,25 +2743,25 @@ msgstr "目前合约无法卖出。"
 msgid "Contract expired"
 msgstr "合约已到期"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2476
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2484
 msgid "Contract has already expired."
 msgstr "合约已经到期。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1547
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1555
 msgid "Contract market price is too close to final payout."
 msgstr "合约市场价格离最终赔付额太近。"
 
 #. ($eod_blackout_expiry->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2518
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2526
 msgid "Contract may not expire within the last %1 of trading."
 msgstr "合约不能在交易的最后%1内到期。"
 
 #. ($minimum_hold->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2359
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2367
 msgid "Contract must be held for %1 before resale is offered."
 msgstr "合同在提供转售前必须保留%1。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2488
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2496
 msgid "Contract must expire during trading hours."
 msgstr "合约必须在交易时段内到期。"
 
@@ -2802,12 +2797,12 @@ msgid "Contracts may not expire on a weekend; therefore the expiry date of a con
 msgstr "合约不能在周末到期，因此，如果合约的原定到期日为周六或周日，可能需延后至下周周一。"
 
 #. ($underlying->translated_display_name()
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2537
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2545
 msgid "Contracts on %1 with duration more than 24 hours must expire at the end of a trading day."
 msgstr "期限超过24小时的%1合约必须在同一交易日到期。"
 
 #. ($underlying->translated_display_name()
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2505
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2513
 msgid "Contracts on %1 with durations under 24 hours must expire on the same trading day."
 msgstr "期限小于24小时的%1合约必须在同一交易日到期。"
 
@@ -2973,7 +2968,7 @@ msgstr "当前现货价格"
 msgid "Current Spot Time"
 msgstr "当前现货时间"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2307
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2315
 msgid "Current market price is 0."
 msgstr "当前市场价格是 0。"
 
@@ -3256,7 +3251,7 @@ msgstr "默认值"
 msgid "Define your position"
 msgstr "设定头寸参数"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:324
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:325
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:518
 msgid "Delete"
 msgstr "删除"
@@ -3279,7 +3274,7 @@ msgstr "删除所有线？"
 msgid "Deposit"
 msgstr "存款"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:368
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:369
 msgid "Deposit %1 %2 virtual money into your account %3"
 msgstr "将%1 %2虚拟资金存入您的账户%3"
 
@@ -3703,7 +3698,7 @@ msgstr "结束时间"
 msgid "Ends Between/Ends Outside trades"
 msgstr "“收于范围之内/之外”的交易"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:158
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:92
 msgid "Ends Between/Outside"
 msgstr "收于范围之内/之外"
 
@@ -3826,7 +3821,7 @@ msgstr "出色的组织能力，注重细节并具有良好的职业道德"
 msgid "Exclude me from the website until"
 msgstr "禁止我访问本网站直到"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:351
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:352
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "禁止时间不能超过5年。"
 
@@ -3835,13 +3830,13 @@ msgstr "禁止时间不能超过5年。"
 msgid "Exclude time cannot be for more than five years."
 msgstr "禁止时间不能超过五年。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:350
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:351
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:426
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:738
 msgid "Exclude time cannot be less than 6 months."
 msgstr "禁止时间不能少于6个月。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:349
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:350
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:421
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:733
 msgid "Exclude time must be after today."
@@ -3955,7 +3950,7 @@ msgstr "到期时间"
 msgid "Expiry price"
 msgstr "到期价格"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2374
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2382
 msgid "Expiry time cannot be in the past."
 msgstr "到期时间不可为过去式。"
 
@@ -4104,7 +4099,7 @@ msgstr "财务方面的优势"
 msgid "Find the right trade for every market condition."
 msgstr "寻找各种市况之下的最佳交易机会。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:329
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:330
 msgid "Finish"
 msgstr "完成"
 
@@ -4534,9 +4529,8 @@ msgid "High/Low"
 msgstr "最高/最低"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:178
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:117
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:118
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:49
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:51
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:52
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "Higher/Lower"
 msgstr "“高于/低于”"
@@ -5003,9 +4997,8 @@ msgid "In what country do you want to offer your service"
 msgstr "您要提供服务的国家"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:192
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:146
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:159
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:76
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:80
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:93
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 msgid "In/Out"
 msgstr "“范围之内/之外”"
@@ -5152,7 +5145,7 @@ msgstr "网上交易风险"
 msgid "Interpretation"
 msgstr "释义"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2084
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2092
 msgid "Intraday contracts may not cross market open."
 msgstr "日内合约不能跨越开市。"
 
@@ -5219,7 +5212,7 @@ msgstr "无效的电子邮件地址"
 msgid "Invalid email and password combination."
 msgstr "无效的电子邮件地址和密码组合。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2234
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2242
 msgid "Invalid payout currency."
 msgstr "无效赔付币种。"
 
@@ -5232,7 +5225,7 @@ msgstr "无效期限输入！请输入在 0 和 #1 之间的期限"
 msgid "Invalid request"
 msgstr "无效请求"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2288
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2296
 msgid "Invalid stake"
 msgstr "无效投注金额"
 
@@ -6055,11 +6048,11 @@ msgstr "最后数字的预测"
 msgid "Last Digit Stats"
 msgstr "最后数字的统计数据"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:322
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:323
 msgid "Last Used"
 msgstr "上一次使用"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:363
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:364
 msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "显示 %2 最新 %1 跳点的最后统计数字"
 
@@ -6075,10 +6068,6 @@ msgstr "世界各地有关金融合约的法律各不相同，本网站访客有
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
 msgid "Learn about one of the fastest growing sectors of the finance industry."
 msgstr "了解金融行业发展最快的一个领域。"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
-msgid "Learn about the different ways to trade on the markets."
-msgstr "了解各种不同的交易方式。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
 msgid "Learn about the simplicity, transparency and flexibility of binary trading."
@@ -6431,7 +6420,7 @@ msgid "Market exit price"
 msgstr "平仓价"
 
 #. ($safer_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2703
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2711
 msgid "Market holiday during the contract period. Select an expiry date after %1."
 msgstr "该合约期限内的市场假日。在 %1之后选择到期日。"
 
@@ -6613,18 +6602,18 @@ msgstr "遗漏"
 msgid "Missing market data for contract duration"
 msgstr "合约期间的遗漏市场数据"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2046
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2097
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2587
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2054
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2105
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2595
 msgid "Missing market data for contract period."
 msgstr "合约期间的遗漏市场数据。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1270
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1278
 msgid "Missing market data for entry spot."
 msgstr "入市现价的遗漏市场数据。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2061
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2073
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2069
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2081
 msgid "Missing market data for exit spot."
 msgstr "退出现价的遗漏市场数据。"
 
@@ -6758,7 +6747,7 @@ msgstr "我的账户"
 msgid "Mycrowd - for Binary.com traders"
 msgstr "Mycrowd - Binary.com 交易者专用"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:320
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:321
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:12
 msgid "Name"
 msgstr "姓名"
@@ -6806,7 +6795,7 @@ msgstr "净收益"
 msgid "Network Status"
 msgstr "网络状态"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:323
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:324
 msgid "Never Used"
 msgstr "从未使用过"
 
@@ -6833,7 +6822,7 @@ msgstr "新密码"
 msgid "New password is same as old password."
 msgstr "新密码与旧密码相同。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:317
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:318
 msgid "New token created."
 msgstr "已创建新口令牌。"
 
@@ -6981,14 +6970,14 @@ msgstr "交易新手可使用我们的直观视觉式平台学习交易、练习
 msgid "Now"
 msgstr "现在"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:362
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:363
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/tick.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/last_digit_info.html.tt:9
 msgid "Number of ticks"
 msgstr "跳动点数目"
 
 #. ($min_tick, $max_tick)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2574
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2582
 msgid "Number of ticks must be between %1 and %2"
 msgstr "跳动点数目须在%1 与 %2之间"
 
@@ -7030,7 +7019,7 @@ msgstr "Office worker"
 msgid "Ok"
 msgstr "确定"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:355
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:356
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:305
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v2/Accounts.pm:194
 msgid "Old password is wrong."
@@ -7096,6 +7085,12 @@ msgstr "在线货币兑换 "
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:252
 msgid "Only %1 are allowed."
+msgstr "只允许 %1 。"
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:315
+#, fuzzy
+#| msgid "Only %1 are allowed."
+msgid "Only 2 decimal points are allowed."
 msgstr "只允许 %1 。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
@@ -7509,12 +7504,12 @@ msgstr "赔付"
 msgid "Payout has moved in your favour from %1 to %2."
 msgstr "赔付变得对您有利，从 %1 变为 %2。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2263
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2271
 msgid "Payout may not have more than two decimal places."
 msgstr "赔付额的小数点后不超过两位数。"
 
 #. (to_monetary_number_format($payout_min, 1)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1559
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1567
 msgid "Payout must be between %1 and %2."
 msgstr "赔付额须在%1 与 %2之间。"
 
@@ -7613,7 +7608,7 @@ msgstr "无论您有什么想法，请发送邮件至 <a href=\"mailto:%1\">%1</
 msgid "Please enter a date that is at least 6 months from now."
 msgstr "请输入至少6个月后的日期。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:345
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:346
 msgid "Please enter a number between 0 and %1"
 msgstr "请输入0和%1之间的数字"
 
@@ -7648,7 +7643,7 @@ msgstr "请输入有效姓名。"
 msgid "Please enter amount."
 msgstr "Please enter amount."
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:344
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:345
 msgid "Please enter an integer value"
 msgstr "请输入整数"
 
@@ -7807,7 +7802,7 @@ msgstr "请选择“赔付额”或“投注额”选项。"
 msgid "Please select a payment agent"
 msgstr "请选择支付代理"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:348
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:349
 msgid "Please select a valid date"
 msgstr "请选择ั有效日期"
 
@@ -7954,7 +7949,7 @@ msgstr "强大而简单"
 msgid "Pre-contract Document"
 msgstr "Pre-contract Document"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:336
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:337
 msgid "Predict the direction<br />and purchase"
 msgstr "预测价格走向<br />并购入"
 
@@ -7974,8 +7969,8 @@ msgstr "表示您证券组合中未平仓合约的最大总赔付额。如果达
 msgid "Prevailing market price cannot be determined at this time."
 msgstr "现行市价目前无法确定。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1281
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2777
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1289
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2785
 msgid "Prevailing market price cannot be determined."
 msgstr "现行市价无法确定。"
 
@@ -8481,27 +8476,27 @@ msgstr "表示您的投资组合中未平仓合约的最大数量。您投资组
 msgid "Represents the maximum volume of contracts that you may purchase in any given trading day."
 msgstr "表示任一给定交易日您可以买入的最大合约数量。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2752
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2760
 msgid "Resale of this contract is not offered due to end-of-year market holidays."
 msgstr "因为年底市场休假，该合约不能转售。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2702
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2710
 msgid "Resale of this contract is not offered due to market holiday during contract period."
 msgstr "因为合约期限内存在市场假日，该合约不能转售。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2722
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2730
 msgid "Resale of this contract is not offered due to market holidays during contract period."
 msgstr "因为合约期限内存在市场假日，该合约不能转售。"
 
 #. ($shortest->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2623
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2631
 msgid "Resale of this contract is not offered with less than %1 remaining."
 msgstr "不允许转售少于%1的合约。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2199
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2618
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2674
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2874
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2207
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2626
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2682
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2882
 msgid "Resale of this contract is not offered."
 msgstr "该合约不能转售。"
 
@@ -8623,8 +8618,7 @@ msgid "Rise"
 msgstr "上涨"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:177
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:104
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:36
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:38
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "Rise/Fall"
 msgstr "“上涨/下跌”合约"
@@ -8756,20 +8750,20 @@ msgstr "安全隐私"
 msgid "Select Country"
 msgstr "选择国家"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:361
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:362
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/last_digit_info.html.tt:5
 msgid "Select market"
 msgstr "选择市场"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:332
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:333
 msgid "Select your market"
 msgstr "选择市场"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:334
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:335
 msgid "Select your trade type"
 msgstr "选择交易类型"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:333
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:334
 msgid "Select your underlying asset"
 msgstr "选择基础资产"
 
@@ -8852,7 +8846,7 @@ msgstr "九月"
 msgid "September"
 msgstr "九月"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:346
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:347
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:294
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:409
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:721
@@ -9076,8 +9070,8 @@ msgstr "对不起，在加载表格时出错了。如果问题持续出现，请
 msgid "Sorry, an error occurred while processing your account."
 msgstr "对不起，在处理您的账户时出错。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:194
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:255
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:198
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:259
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:499
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:518
 msgid "Sorry, an error occurred while processing your request."
@@ -9164,7 +9158,7 @@ msgstr "对不起，我们的支付处理器在验证您的个人信息时出现
 msgid "Sorry, this feature is available to virtual accounts only"
 msgstr "对不起，此功能仅适用虚拟账户"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:339
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:340
 msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "对不起，此功能仅适用虚拟账户。"
 
@@ -9314,7 +9308,7 @@ msgstr "投注资金"
 msgid "Start Time"
 msgstr "开始时间"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:212
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:205
 msgid "Start Trading"
 msgstr "开始交易"
 
@@ -9333,17 +9327,17 @@ msgstr "开始时间"
 msgid "Start time %1 must be before end time %2"
 msgstr "开始时间 %1 必须早于到期时间%2"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2390
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2398
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:380
 msgid "Start time is in the past"
 msgstr "开始时间是在过去"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2382
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2390
 msgid "Start time is invalid."
 msgstr "开始时间无效。"
 
 #. ($forward_starting_blackout->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2423
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2431
 msgid "Start time on forward-starting contracts must be more than %1 from now."
 msgstr "远期起点合约的开始时间必须距离现在超过 %1。"
 
@@ -9379,7 +9373,7 @@ msgstr "统计"
 msgid "Stay informed. %1 offers daily market reports and market research, as well as frequent trading webinars."
 msgstr "通过 %1 的每日市场报告及市场研究，还有经常举行的在线讨论会及时掌握最新动态。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:145
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:79
 msgid "Stays Between/Goes Outside"
 msgstr "“保持在范围之内/超出范围之外”"
 
@@ -9387,7 +9381,7 @@ msgstr "“保持在范围之内/超出范围之外”"
 msgid "Stays Between/Goes Outside trades"
 msgstr "“保持在范围之内/超出范围之外”的交易"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:330
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:331
 msgid "Step"
 msgstr "步骤"
 
@@ -9456,7 +9450,7 @@ msgid "Stop Loss Level"
 msgstr "止损价位"
 
 #. ($min, $max, $unit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:475
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:490
 msgid "Stop Loss must be between %1 and %2 %3"
 msgstr "止损须在%1 与 %2 %3之间"
 
@@ -9465,7 +9459,7 @@ msgid "Stop Profit Level"
 msgstr "止盈价位"
 
 #. ($min, $max, $unit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:501
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:516
 msgid "Stop Profit must be between %1 and %2 %3"
 msgstr "止盈须在%1 与 %2 %3之间"
 
@@ -10167,7 +10161,7 @@ msgid "The contract has expired"
 msgstr "合约已到期"
 
 #. ($ny_1600->time_hhmm)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2875
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2883
 msgid "The contract is not available after %1 GMT."
 msgstr "该合约在格林威治标准时间 %1 过后失效。"
 
@@ -10260,7 +10254,7 @@ msgstr "306美元亏损是以退出和进场价位的相差额乘以每一点的
 msgid "The market exit price is the price in effect at the end of the contract period."
 msgstr "市场平仓价为合约期限到期时的有效价格。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2396
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2404
 msgid "The market must be open at the start time."
 msgstr "市场必须在开始时间已经开市。"
 
@@ -10273,7 +10267,7 @@ msgstr "本 %1 网站所包含的各种材料（包括但不限于所有文章�
 msgid "The maximum loss that may be incurred by any Client is the amount of money paid by oneself to the Company."
 msgstr "客户可能蒙受的最大损失就是其向本公司支付的金额。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:319
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:320
 msgid "The maximum number of tokens (%1) has been reached."
 msgstr "已达令牌 (%1) 最大限数。"
 
@@ -10324,10 +10318,8 @@ msgstr "所提供的货币 %1无效。"
 
 #. ($currency)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:961
-#, fuzzy
-#| msgid "The provided currency %1 is not the default currency"
 msgid "The provided currency %1 is not applicable for this account."
-msgstr "所提供的货币 %1不是预设货币"
+msgstr "所提供的货币 %1不可在此账户使用。"
 
 #. ($currency)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1023
@@ -10596,6 +10588,8 @@ msgstr "目前该交易无法正确验证。"
 msgid "This contract has already expired."
 msgstr "合约已经到期。"
 
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1085
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:297
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:46
 msgid "This contract has been sold."
 msgstr "此合约已卖出。"
@@ -10604,7 +10598,7 @@ msgstr "此合约已卖出。"
 msgid "This contract has expired."
 msgstr "此合约已到期。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1090
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1098
 msgid "This contract is affected by corporate action."
 msgstr "该合约已受共同行为所影响。"
 
@@ -10621,7 +10615,7 @@ msgstr "此账户不可交易该合约。"
 msgid "This contract lost"
 msgstr "此合约亏损"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2307
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2315
 msgid "This contract offers no return."
 msgstr "该合约不提供回报。"
 
@@ -10699,11 +10693,11 @@ msgstr "我们当前正在为每个新版本招募额外测试人员的原因，
 msgid "This market closes early today at"
 msgstr "此市场今日在下列时间提前收市"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2396
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2404
 msgid "This market is presently closed."
 msgstr "此市场目前已收市。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:460
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:475
 msgid "This market is presently closed. Try out the Random Indices which are always open."
 msgstr "此市场当前已经关闭。 尝试总是开放的随机指数。"
 
@@ -10729,7 +10723,7 @@ msgstr "本优惠不能和其他任何优惠一起使用。"
 msgid "This promotion is only available to new Clients. Existing or former Clients do not qualify. It is only available once to each Client."
 msgstr "本促销活动仅适用于新客户。现有或以往客户不符合条件。每一客户仅能获得一次。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2200
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2208
 msgid "This trade is not offered."
 msgstr "不提供此交易。"
 
@@ -10855,12 +10849,12 @@ msgstr "如要重新设置密码，在下面的栏目中输入您注册的电子
 msgid "Today's Bet"
 msgstr "今日预测"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:321
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:322
 msgid "Token"
 msgstr "令牌"
 
 #. ($safer_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2723
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2731
 msgid "Too many market holidays during the contract period. Select an expiry date after %1."
 msgstr "该合约期限内有太多市场假日，请在 %1之后选择到期日。"
 
@@ -10880,9 +10874,8 @@ msgstr "每月净收入总额"
 msgid "Total Profit/Loss"
 msgstr "利润/亏损合计"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:131
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:132
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:62
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:65
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:66
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 msgid "Touch/No Touch"
@@ -10940,22 +10933,6 @@ msgstr "交易各种市况"
 msgid "Trade in the world's financial markets in a simple, user-friendly platform."
 msgstr "在提供简单、人性化的全球性金融市场平台进行交易。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:37
-msgid "Trade on whether a market will RISE or FALL from its current spot price."
-msgstr "交易基于预测市场是否会在当前现价基础上上涨或下跌。"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:77
-msgid "Trade on whether a market will STAY BETWEEN or GO OUTSIDE two price targets."
-msgstr "交易基于预测市场是否会维持在两个目标价范围之内或超出该区间范围。"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:64
-msgid "Trade on whether a market will TOUCH or NOT TOUCH a predetermined price target anytime during the contract period."
-msgstr "交易基于预测市场在合约期限内是否会触及或不触及预设目标价。"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:50
-msgid "Trade on whether a market will finish HIGHER or LOWER than a predetermined price target."
-msgstr "交易基于预测市场收盘价是否会高于或低于预设目标价。"
-
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/responsible_trading.html.haml:1
 msgid "Trade only with money you can afford to lose. Do not trade with borrowed money."
 msgstr "根据您的风险承受能力进行交易。切勿借钱交易。"
@@ -10979,13 +10956,6 @@ msgstr "交易"
 msgid "Trading Experience"
 msgstr "Trading Experience"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:167
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:90
-#: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/resources/contract_guide.html.tt:2
-msgid "Trading Guide"
-msgstr "交易指南"
-
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:237
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:56
 msgid "Trading Limits"
@@ -10997,12 +10967,12 @@ msgid "Trading Rules"
 msgstr "交易规则"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:160
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:187
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2174
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2441
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2454
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2470
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2693
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:121
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2182
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2449
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2462
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2478
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2701
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:29
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/resources/market_timesws.html.tt:2
@@ -11034,17 +11004,17 @@ msgid "Trading is Suspended"
 msgstr "交易暂停"
 
 #. ($blackout_time)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2414
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2422
 msgid "Trading is available after the first %1 of the session."
 msgstr "交易在交易时段第一个 %1 后可用。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2637
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2675
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2645
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2683
 msgid "Trading is not offered for this duration."
 msgstr "不在此段期间提供交易。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2129
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2192
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2137
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2200
 msgid "Trading is suspended at the moment."
 msgstr "当前交易暂停。"
 
@@ -11053,39 +11023,39 @@ msgid "Trading manual"
 msgstr "Trading manual"
 
 #. ($self->underlying->translated_display_name)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:451
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:466
 msgid "Trading on %1 is not offered for this contract type."
 msgstr "此类合约不在%1提供交易。"
 
 #. ($underlying->translated_display_name()
 #. ($translated_name)
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:420
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2136
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2144
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2172
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2152
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2180
 msgid "Trading on %1 is suspended at the moment."
 msgstr "%1 的当前交易暂停。"
 
 #. ($self->underlying->translated_display_name)
 #. ($self->underlying->translated_display_name()
 #. ($translated_name)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1368
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1376
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:140
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2154
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2163
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2785
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2162
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2171
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2793
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:201
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:242
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:435
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:450
 msgid "Trading on %1 is suspended due to missing market data."
 msgstr "由于市场数据丢失，%1 交易暂停。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2452
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2460
 msgid "Trading on this contract type is suspended for the last one hour of the session."
 msgstr "此种合约交易时段最后一小时暂停交易。"
 
 #. ($localized_eod_blackout_start->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2439
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2447
 msgid "Trading suspended for the last %1 of the session."
 msgstr "交易时段最后 %1 暂停交易。"
 
@@ -11094,7 +11064,7 @@ msgstr "交易时段最后 %1 暂停交易。"
 msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact <a href=\"%1\">customer support</a>."
 msgstr "金融市场交易可能使人上瘾。请填写下表以限制您对本网站的参与，或发送签名信或传真到我们的客户支持团队。一旦设定好后，您只能紧缩您的限制。限制只能在 7 天后取消或放宽，除了自我禁止期在您确认后就不能取消或更改。若要解除或增加您的限制，请联系 <a href=\"%1\">客服部</a>。"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:197
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:190
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:144
 msgid "TradingView"
@@ -11175,8 +11145,8 @@ msgstr "试添加更多数字。"
 msgid "Try it now"
 msgstr "立即体验"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2404
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2415
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2412
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2423
 msgid "Try out the Random Indices which are always open."
 msgstr "尝试总是开放的随机指数。"
 
@@ -11371,7 +11341,7 @@ msgstr "水电煤账单（最近 3 个月内）"
 msgid "Valletta, the capital of Malta"
 msgstr "马耳他首都瓦莱塔"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:103
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:37
 msgid "Variable return"
 msgstr "可变回报"
 
@@ -11418,7 +11388,7 @@ msgstr "版本39。最后修改时间为 2015年12月4日。"
 msgid "View"
 msgstr "查看"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2885
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2893
 msgid "View Asset Index"
 msgstr "查看资产指数"
 
@@ -11502,7 +11472,7 @@ msgstr "虚拟账户"
 msgid "Visit our"
 msgstr "访问我们的"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:328
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:329
 msgid "Walkthrough Guide"
 msgstr "攻略指南"
 
@@ -11588,8 +11558,8 @@ msgstr "在选择如何为您获取最佳执行方案时，我们须考虑到几
 msgid "We could not authenticate your account online. Please proceed to the <a href=\"%1\">manual authentication section</a>. If you would like to register additional credit cards, please contact <a class=\"pjaxload\" href=\"%2\">customer support</a>."
 msgstr "我们未能在线验证您的账户。请继续<a href=\"%1\">手动验证</a>。如果您要注册额外的信用卡，请联系<a class=\"pjaxload\" href=\"%2\">客户支持人员</a>。"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1378
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1469
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1386
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1477
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Digitdiff.pm:50
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Digitmatch.pm:51
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/BarrierBuilder.pm:21
@@ -11742,7 +11712,7 @@ msgstr "对不起，由于连接问题，我们的系统未能在线验证您的
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/charting/index.html.haml:1
 msgid "Web version"
-msgstr ""
+msgstr "网站版本"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:66
@@ -11759,7 +11729,7 @@ msgstr "网站"
 msgid "Website exclusion is currently set to <strong>%1.</strong>"
 msgstr "网站禁止当前设置为 <strong>%1。</strong>"
 
-#: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:190
+#: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:183
 #: /home/git/translations/binary-static-www2/src/templates/haml/charting/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:140
@@ -11876,7 +11846,7 @@ msgstr "当我们与您订立合约时，我们会采取负责任的行动，通
 msgid "When you are satisfied with the trade price, instantly execute your trade."
 msgstr "一旦您对交易价格感到满意，请立刻就执行交易。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:352
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:353
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
 msgstr "当您点选“Ok”后，您将被禁止在此网站交易，直到选定期限结束为止。"
 
@@ -12251,11 +12221,11 @@ msgstr "您已订阅交易更新。"
 msgid "You are being given the better price."
 msgstr "正在为您获取更好的价格。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:366
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:367
 msgid "You are currently logged in to your real money account with %1 (%2)."
 msgstr "您现已登录您的 %1(%2)真实资金账户。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:367
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:368
 msgid "You are currently logged in to your virtual money account (%2)."
 msgstr "您现已登录您的虚拟资金账户(%2)。"
 
@@ -12328,7 +12298,7 @@ msgstr "对于不受 %1 支持的支付方式或本地货币， 您可通过使�
 msgid "You cannot transfer to account %1, as their account is currently disabled."
 msgstr "您不能转账至账户 %1，因为此账户目前已禁用。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:347
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:348
 msgid "You did not change anything."
 msgstr "您没做任何更改。"
 
@@ -12550,11 +12520,11 @@ msgstr "您所提出的大多数问题可在<a href='%1' target='_blank'>常见�
 msgid "You're using a Virtual Account."
 msgstr "您正在使用虚拟账户。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:369
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:370
 msgid "Your %1 account is unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
 msgstr "您的%1 账户不可用。如有任何问题，请联系<a href=\"%1\">客户支持人员</a>。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:370
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:371
 msgid "Your %1 accounts are unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
 msgstr "您的%1账户不可用。如有任何问题，请联系<a href=\"%1\">客户支持人员</a>。"
 
@@ -12607,7 +12577,7 @@ msgstr "您的账户已超过免费推广代码的交易限额，如果要继续
 msgid "Your account has no country of residence."
 msgstr "您的账户没输入居住国。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:358
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:359
 msgid "Your account has no trading activity."
 msgstr "您的账户没交易活动。"
 
@@ -12710,7 +12680,7 @@ msgstr "您的收银台已被锁定。"
 msgid "Your cashier was not locked."
 msgstr "您的收银台没有被锁定。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:343
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:344
 msgid "Your changes have been updated."
 msgstr "您的更改已成功更新。"
 
@@ -12973,7 +12943,7 @@ msgstr "对客户在特定时段买入任何合约的限制。"
 msgid "apostrophe"
 msgstr "撇号"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1997
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2005
 msgid "barrier"
 msgstr "障碍"
 
@@ -13061,7 +13031,7 @@ msgstr "说明"
 msgid "first tick"
 msgstr "首个跳动点"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1997
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2005
 msgid "high barrier"
 msgstr "高障碍"
 
@@ -13112,7 +13082,7 @@ msgstr "信件"
 msgid "loading..."
 msgstr "加载中……"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1997
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2005
 msgid "low barrier"
 msgstr "低障碍"
 
@@ -13135,7 +13105,7 @@ msgstr "最短可用期限"
 msgid "minimum is"
 msgstr "最小为"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1994
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2002
 msgid "minus"
 msgstr "减去"
 
@@ -13200,7 +13170,7 @@ msgstr "密码"
 msgid "period"
 msgstr "周期"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1994
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2002
 msgid "plus"
 msgstr "加"
 
@@ -13925,7 +13895,7 @@ msgstr "特斯拉汽车公司"
 
 #: Underlying Symbol USCT
 msgid "Citigroup Inc."
-msgstr ""
+msgstr "花旗集团"
 
 #: Underlying Symbol USBDU
 msgid "Baidu Inc."
@@ -13933,7 +13903,7 @@ msgstr "百度公司"
 
 #: Underlying Symbol FPMIC
 msgid "Michelin"
-msgstr ""
+msgstr "米其林轮胎"
 
 #: Underlying Symbol USVISA
 msgid "VISA Inc."
@@ -13941,11 +13911,11 @@ msgstr "威士卡公司"
 
 #: Underlying Symbol DECOMMBK
 msgid "Commerzbank"
-msgstr ""
+msgstr "德国商业银行"
 
 #: Underlying Symbol USVIPSHP
 msgid "Vipshop Holdings Limited"
-msgstr ""
+msgstr "唯品会控股有限公司"
 
 #: Underlying Symbol FPTECHNIP
 msgid "Technip oil equipment and services"
@@ -13953,7 +13923,7 @@ msgstr "德希尼布石油器材服务公司"
 
 #: Underlying Symbol DETKAG
 msgid "Thyssenkrupp SS"
-msgstr ""
+msgstr "蒂森克虏伯股份公司"
 
 #: Underlying Symbol USCTRP
 msgid "Ctrip.com International Ltd."
@@ -14007,7 +13977,7 @@ msgstr "领英公司"
 
 #: Underlying Symbol AUSUN
 msgid "SUNCORP GROUP LIMITED"
-msgstr ""
+msgstr "新确集团有限公司"
 
 #: Underlying Symbol INRIL
 msgid "Reliance Industries Ltd"
@@ -14035,7 +14005,7 @@ msgstr "塔塔汽车公司"
 
 #: Underlying Symbol USUKU
 msgid "Youku Tudou Inc."
-msgstr ""
+msgstr "优酷土豆股份有限公司"
 
 #: Underlying Symbol NAHEIA
 msgid "Heineken"
@@ -14043,7 +14013,7 @@ msgstr "喜力"
 
 #: Underlying Symbol UKANH
 msgid "Al Noor Hospitals Group plc"
-msgstr ""
+msgstr "Al Noor 医院集团"
 
 #: Underlying Symbol USDD
 msgid "E.I du Pont de Nemours & company"
@@ -14083,7 +14053,7 @@ msgstr "沃尔格林博兹联合公司"
 
 #: Underlying Symbol USSFUN
 msgid "SouFun Holdings Limited"
-msgstr ""
+msgstr "搜房网有限公司"
 
 #: Underlying Symbol USAIG
 msgid "American International Group Inc."
@@ -14107,7 +14077,7 @@ msgstr "福泰制药公司"
 
 #: Underlying Symbol USQHO
 msgid "Qihoo 360 Technology Company Limited"
-msgstr ""
+msgstr "奇虎360科技有限公司"
 
 #: Underlying Symbol DEALV
 msgid "Allianz SE"
@@ -14139,7 +14109,7 @@ msgstr "新东方教育科技集团"
 
 #: Underlying Symbol USAMX
 msgid "American Express Company"
-msgstr ""
+msgstr "美国运通公司"
 
 #: Underlying Symbol UKVIV
 msgid "Aviva plc"
@@ -14147,7 +14117,7 @@ msgstr "英杰华集团"
 
 #: Underlying Symbol USGMO
 msgid "Keurig Green Mountain Inc."
-msgstr ""
+msgstr "绿山咖啡公司"
 
 #: Underlying Symbol AUCCL
 msgid "Coca-cola Amatil Limited"
@@ -14155,11 +14125,11 @@ msgstr "可口可乐阿马提尔有限公司"
 
 #: Underlying Symbol AUAGL
 msgid "AGL Energy Limited"
-msgstr ""
+msgstr "AGL能源公司"
 
 #: Underlying Symbol USYNDX
 msgid "Yandex N.V."
-msgstr ""
+msgstr "俄罗斯搜索引擎公司Yandex N.V."
 
 #: Underlying Symbol NAINGA
 msgid "ING"
@@ -14187,7 +14157,7 @@ msgstr "赛诺菲"
 
 #: Underlying Symbol DESAP
 msgid "SAP SE"
-msgstr ""
+msgstr "SAP SE应用软件公司"
 
 #: Underlying Symbol USATHM
 msgid "Autohome Inc."
@@ -14211,7 +14181,7 @@ msgstr "宝洁公司"
 
 #: Underlying Symbol USFB
 msgid "Facebook Inc."
-msgstr ""
+msgstr "脸书公司"
 
 #: Underlying Symbol FPDG
 msgid "Vinci"
@@ -14223,7 +14193,7 @@ msgstr "法国电力公司"
 
 #: Underlying Symbol USVGUS
 msgid "Virgin America Inc."
-msgstr ""
+msgstr "维珍美国航空公司"
 
 #: Underlying Symbol USKING
 msgid "King Digital Entertainment plc"
@@ -14239,7 +14209,7 @@ msgstr "帝国烟草集团"
 
 #: Underlying Symbol FPARC
 msgid "ArcelorMittal steel"
-msgstr ""
+msgstr "安赛乐米塔尔钢铁公司"
 
 #: Underlying Symbol FPUNI
 msgid "Unibail-Rodamco SE"
@@ -14271,7 +14241,7 @@ msgstr "印孚瑟斯有限公司"
 
 #: Underlying Symbol USSRVNW
 msgid "ServiceNow Inc."
-msgstr ""
+msgstr "ServiceNow Inc.云处理服务供应商"
 
 #: Underlying Symbol NARDSA
 msgid "Royal Dutch Shell"
@@ -14279,7 +14249,7 @@ msgstr "荷兰皇家壳牌公司"
 
 #: Underlying Symbol AUTPM
 msgid "TPG Telecom Limited"
-msgstr ""
+msgstr "TPG电讯有限公司"
 
 #: Underlying Symbol UKNTG
 msgid "National Grid plc"
@@ -14311,7 +14281,7 @@ msgstr "麦德龙集团"
 
 #: Underlying Symbol AUCWN
 msgid "Crown Resorts Limited"
-msgstr ""
+msgstr "皇冠度假酒店集团"
 
 #: Underlying Symbol USJPM
 msgid "JP Morgan Chase & Co."
@@ -14323,7 +14293,7 @@ msgstr "GoPro公司"
 
 #: Underlying Symbol USJMEI
 msgid "Jumei International Holding Limited"
-msgstr ""
+msgstr "聚美国际控股有限公司"
 
 #: Underlying Symbol USPBYI
 msgid "Puma Biotechnology Inc."
@@ -14334,10 +14304,8 @@ msgid "Santos LimitedStar Stock"
 msgstr "桑托斯股票"
 
 #: Underlying Symbol USILLM
-#, fuzzy
-#| msgid "Intuit Inc"
 msgid "Illumina Inc."
-msgstr "Intuit 公司"
+msgstr "Illumina 公司"
 
 #: Underlying Symbol FPEI
 msgid "Essilor International"
@@ -14352,14 +14320,12 @@ msgid "Credit Agricole"
 msgstr "法国农业信贷银行"
 
 #: Underlying Symbol USEBY
-#, fuzzy
-#| msgid "Apple Inc."
 msgid "eBay Inc."
-msgstr "苹果公司。"
+msgstr "电子海湾公司"
 
 #: Underlying Symbol USEA
 msgid "Electronic Arts Inc."
-msgstr ""
+msgstr "美国艺电公司"
 
 #: Underlying Symbol AUNAB
 msgid "National Australia Bank Ltd"
@@ -14379,7 +14345,7 @@ msgstr "瓦卢瑞克钢管公司"
 
 #: Underlying Symbol FPLEG
 msgid "Legrand electrical components & equipm"
-msgstr ""
+msgstr "罗格朗电器设备有限公司"
 
 #: Underlying Symbol USGRPN
 msgid "Groupon Inc."
@@ -14406,10 +14372,8 @@ msgid "CBS Corporation"
 msgstr "哥伦比亚广播公司"
 
 #: Underlying Symbol INTATASTEEL
-#, fuzzy
-#| msgid "Data Feed"
 msgid "Tata Steels"
-msgstr "数据源"
+msgstr "塔塔钢铁公司"
 
 #: Underlying Symbol USHD
 msgid "The Home Depot Inc."
@@ -14429,23 +14393,23 @@ msgstr "国际贸易中心有限公司"
 
 #: Underlying Symbol USAAIR
 msgid "American Airlines Group Inc."
-msgstr ""
+msgstr "美国航空公司"
 
 #: Underlying Symbol DEEOAN
 msgid "E.ON SE"
-msgstr ""
+msgstr "意昂集团"
 
 #: Underlying Symbol DERHO
 msgid "Roche Holding AG"
-msgstr ""
+msgstr "罗氏制药公司"
 
 #: Underlying Symbol USPPR
 msgid "Voya Prime Rate Trust."
-msgstr ""
+msgstr "荷兰国际最优惠利率信托"
 
 #: Underlying Symbol USYY
 msgid "YY Inc."
-msgstr ""
+msgstr "欢聚时代公司"
 
 #: Underlying Symbol USAMZN
 msgid "Amazon Corporation"
@@ -14457,11 +14421,11 @@ msgstr "哈里伯顿公司"
 
 #: Underlying Symbol USPTSH
 msgid "Potash Corp of Saskatchewan Inc."
-msgstr ""
+msgstr "加拿大钾肥公司"
 
 #: Underlying Symbol FPSOLV
 msgid "Solvay chemicals"
-msgstr ""
+msgstr "索尔维化学有限公司"
 
 #: Underlying Symbol AUWBC
 msgid "Westpac Banking Co."
@@ -14485,7 +14449,7 @@ msgstr "诺基亚公司"
 
 #: Underlying Symbol FPGEM
 msgid "Gemalto cyber security"
-msgstr ""
+msgstr "金雅拓网络安全公司"
 
 #: Underlying Symbol USNKE
 msgid "Nike Inc."
@@ -14501,11 +14465,11 @@ msgstr "澳新银行集团有限公司"
 
 #: Underlying Symbol AUORI
 msgid "Orica Limited"
-msgstr ""
+msgstr "澳瑞凯公司"
 
 #: Underlying Symbol DEGGQ
 msgid "GOOGLE INC. A DL"
-msgstr ""
+msgstr "谷歌公司"
 
 #: Underlying Symbol NAASML
 msgid "ASML Holding"
@@ -14513,7 +14477,7 @@ msgstr "阿斯麦公司"
 
 #: Underlying Symbol AUAZJ
 msgid "Aurizon Holdings Limited"
-msgstr ""
+msgstr "Aurizon 控股公司"
 
 #: Underlying Symbol USORCL
 msgid "Oracle"
@@ -14521,31 +14485,27 @@ msgstr "甲骨文公司"
 
 #: Underlying Symbol USGLD
 msgid "Gilead Sciensec Inc."
-msgstr ""
+msgstr "吉利德科学公司"
 
 #: Underlying Symbol FPKER
 msgid "Kering"
 msgstr "开云集团"
 
 #: Underlying Symbol USDLT
-#, fuzzy
-#| msgid "Delete All Lines"
 msgid "Delta Air Lines Inc."
-msgstr "删除所有线"
+msgstr "达美航空公司"
 
 #: Underlying Symbol DEVOWGEN
 msgid "Volkswagen AG"
-msgstr ""
+msgstr "大众集团"
 
 #: Underlying Symbol UKBARC
 msgid "Barclays plc"
 msgstr "巴克莱银行"
 
 #: Underlying Symbol USVFC
-#, fuzzy
-#| msgid "Corporate Actions"
 msgid "VF Corporation"
-msgstr "共同行为"
+msgstr "威富公司"
 
 #: Underlying Symbol BBGBLB
 msgid "Groupe Bruxelles Lambert"
@@ -14553,15 +14513,15 @@ msgstr "蓝博特布鲁塞尔集团"
 
 #: Underlying Symbol USMS
 msgid "Morgan Stanley"
-msgstr ""
+msgstr "摩根士丹利公司"
 
 #: Underlying Symbol AUMQG
 msgid "MACQUARIE GROUP LIMITED"
-msgstr ""
+msgstr "麦格理集团有限公司"
 
 #: Underlying Symbol AUTLS
 msgid "TELSTRA CORPORATION LIMITED"
-msgstr ""
+msgstr "Telstra澳电讯公司"
 
 #: Underlying Symbol NAUNA
 msgid "Unilever"
@@ -14581,7 +14541,7 @@ msgstr "推特公司"
 
 #: Underlying Symbol AUQBE
 msgid "QBE INSURANCE GROUP LIMITED"
-msgstr ""
+msgstr "昆士兰保险集团股份有限公司"
 
 #: Underlying Symbol FPVIV
 msgid "Vivendi"
@@ -14593,7 +14553,7 @@ msgstr "万事达公司"
 
 #: Underlying Symbol AUSHL
 msgid "Sonic Healthcare Limited"
-msgstr ""
+msgstr "索尼克保健有限公司"
 
 #: Underlying Symbol FPSU
 msgid "Schneider Electric"
@@ -14609,53 +14569,43 @@ msgstr "沃达丰集团"
 
 #: Underlying Symbol UKSPX
 msgid "Spirax-Sarco Engineering plc"
-msgstr ""
+msgstr "斯派莎克工程公司"
 
 #: Underlying Symbol INSUNPHARMA
 msgid "Sun Pharma"
-msgstr ""
+msgstr "太阳制药"
 
 #: Underlying Symbol USMMM
-#, fuzzy
-#| msgid "Our Company"
 msgid "3M Company"
-msgstr "我们公司"
+msgstr "3M公司"
 
 #: Underlying Symbol UKPSN
-#, fuzzy
-#| msgid "Pearson"
 msgid "Pearson plc"
-msgstr "皮尔森"
+msgstr "皮尔森公司"
 
 #: Underlying Symbol USGM
-#, fuzzy
-#| msgid "General Electric Company"
 msgid "General Motors Company"
-msgstr "通用电气公司"
+msgstr "通用汽车公司"
 
 #: Underlying Symbol USNTES
 msgid "NetEase Inc."
-msgstr ""
+msgstr "网易公司"
 
 #: Underlying Symbol USXOM
 msgid "ExxonMobil"
 msgstr "埃克森美孚公司"
 
 #: Underlying Symbol DEDLG
-#, fuzzy
-#| msgid "Semiconductors Index"
 msgid "Dialog Semiconductor plc"
-msgstr "半导体指数"
+msgstr "戴乐格半导体公司"
 
 #: Underlying Symbol BBBELG
 msgid "Belgacom"
 msgstr "移动比利时"
 
 #: Underlying Symbol USNTFLX
-#, fuzzy
-#| msgid "Pfizer Inc."
 msgid "Netflix Inc."
-msgstr "辉瑞公司"
+msgstr "网飞公司"
 
 #: Underlying Symbol FPGSZ
 msgid "GDF Suez"
@@ -14666,10 +14616,8 @@ msgid "PowerShares QQQ"
 msgstr "PowerShares纳斯达克100指数ETF"
 
 #: Underlying Symbol USFTBT
-#, fuzzy
-#| msgid "Intuit Inc"
 msgid "Fitbit Inc."
-msgstr "Intuit 公司"
+msgstr "Fitbit 公司"
 
 #: Underlying Symbol UKSTAN
 msgid "Standard Chartered plc"
@@ -14681,7 +14629,7 @@ msgstr "玛莎百货集团"
 
 #: Underlying Symbol USMANU
 msgid "Manchester United plc"
-msgstr ""
+msgstr "曼联集团"
 
 #: Underlying Symbol USCISCO
 msgid "Cisco Systems Inc."
@@ -14689,7 +14637,7 @@ msgstr "思科系统公司"
 
 #: Underlying Symbol AUAWC
 msgid "ALUMINA LIMITED"
-msgstr ""
+msgstr "氧化铝有限公司"
 
 #: Underlying Symbol FPRNO
 msgid "Renault"
@@ -14697,15 +14645,15 @@ msgstr "雷诺汽车"
 
 #: Underlying Symbol USCYN
 msgid "Cynapsus Therapeutics"
-msgstr ""
+msgstr "Cynapsus Therapeutics 制药公司"
 
 #: Underlying Symbol DERHOFIVE
 msgid "Roche Holding Ag-Genusschein"
-msgstr ""
+msgstr "罗氏公司"
 
 #: Underlying Symbol USDANG
 msgid "E-Commerce China Dangdang Inc."
-msgstr ""
+msgstr "当当网"
 
 #: Underlying Symbol USCVX
 msgid "Chevron Co."
@@ -14713,31 +14661,27 @@ msgstr "雪佛兰公司"
 
 #: Underlying Symbol FPCAP
 msgid "Capgemini computer services"
-msgstr ""
+msgstr "凯捷电脑服务"
 
 #: Underlying Symbol USFRRRI
 msgid "FERRARI N V COM"
-msgstr ""
+msgstr "法拉利公司"
 
 #: Underlying Symbol DEDTELE
-#, fuzzy
-#| msgid "Deutsche Bank AG"
 msgid "Deutsche Telekom AG"
-msgstr "德意志银行"
+msgstr "德国电信公司"
 
 #: Underlying Symbol USBOA
 msgid "Bank of America Corporation"
-msgstr ""
+msgstr "美国银行公司"
 
 #: Underlying Symbol UKRLSRYC
-#, fuzzy
-#| msgid "HSBC Holdings plc"
 msgid "Rolls-Royce Holdings plc"
-msgstr "汇丰控股公司（HSBC Holding Plc）"
+msgstr "勞斯萊斯股份有限公司"
 
 #: Underlying Symbol USPETRO
 msgid "PetroChina Limited"
-msgstr ""
+msgstr "中国石油天然气股份有限公司"
 
 #: Underlying Symbol USMRK
 msgid "Merck & Co. Inc."
@@ -14749,29 +14693,23 @@ msgstr "美光科技有限公司"
 
 #: Underlying Symbol USARMR
 msgid "Under Armour Inc."
-msgstr ""
+msgstr "安德玛公司"
 
 #: Underlying Symbol FPBO
-#, fuzzy
-#| msgid "Buy a contract"
 msgid "Bouygues heavy construction"
-msgstr "买入一份合约"
+msgstr "布依格建筑"
 
 #: Underlying Symbol AUASX
-#, fuzzy
-#| msgid "Limit"
 msgid "ASX Limited"
-msgstr "限额"
+msgstr "ASX 有限公司"
 
 #: Underlying Symbol USTYTA
-#, fuzzy
-#| msgid "Toyota Motor"
 msgid "Toyota Motor Corporation"
-msgstr "丰田汽车"
+msgstr "丰田汽车公司"
 
 #: Underlying Symbol USALIBA
 msgid "Alibaba Group Holding Limited"
-msgstr ""
+msgstr "阿里巴巴集团控股有限公司"
 
 #: Underlying Symbol AUCSL
 msgid "CSL Ltd"
@@ -14783,7 +14721,7 @@ msgstr "家乐福超市"
 
 #: Underlying Symbol AURIO
 msgid "RIO TINTO LIMITED"
-msgstr ""
+msgstr "力拓集團"
 
 #: Underlying Symbol FPFP
 msgid "TOTAL"
@@ -14791,7 +14729,7 @@ msgstr "道达尔公司"
 
 #: Underlying Symbol FPVEO
 msgid "Veolia Environnement water"
-msgstr ""
+msgstr "法国威立雅集团"
 
 #: Underlying Symbol FPCS
 msgid "AXA"
@@ -14799,7 +14737,7 @@ msgstr "法国安盛集团"
 
 #: Underlying Symbol DEBEIERSDORF
 msgid "Beiersdorf AG O.N"
-msgstr ""
+msgstr "拜尔斯道夫公司"
 
 #: Underlying Symbol USKO
 msgid "The Coca-Cola Company"
@@ -14811,21 +14749,19 @@ msgstr "拜耳公司"
 
 #: Underlying Symbol DEACB
 msgid "Alpha Bank S.A."
-msgstr ""
+msgstr "阿尔法银行"
 
 #: Underlying Symbol BBUCB
 msgid "UCB"
 msgstr "比利时联合化工集团"
 
 #: Underlying Symbol USNVAR
-#, fuzzy
-#| msgid "Pfizer Inc."
 msgid "Univar Inc."
-msgstr "辉瑞公司"
+msgstr "尤尼威尔公司"
 
 #: Underlying Symbol AUWOW
 msgid "WOOLWORTHS LIMITED"
-msgstr ""
+msgstr "澳大利亚伍尔沃斯公司"
 
 #: Underlying Symbol UKGSK
 msgid "GlaxoSmithKline plc"
@@ -14833,15 +14769,15 @@ msgstr "葛兰素史克公司"
 
 #: Underlying Symbol AUWES
 msgid "WESFARMERS LIMITED"
-msgstr ""
+msgstr "澳大利亚西农集团"
 
 #: Underlying Symbol USWRKD
 msgid "Workday Inc."
-msgstr ""
+msgstr "工作日公司"
 
 #: Underlying Symbol AUAMC
 msgid "Amcor Ltd"
-msgstr ""
+msgstr "安姆科公司"
 
 #: Underlying Symbol UKGLEN
 msgid "Glencore Xstrat"
@@ -14849,29 +14785,27 @@ msgstr "嘉能可超达"
 
 #: Underlying Symbol FPST
 msgid "STMicroelectronics semiconductors"
-msgstr ""
+msgstr "意法半导体"
 
 #: Underlying Symbol USSLRCT
 msgid "SolarCity Corporation"
-msgstr ""
+msgstr "阳光城太阳能公司"
 
 #: Underlying Symbol USCHMO
 msgid "China Mobile Limited"
-msgstr ""
+msgstr "中国移动有限公司"
 
 #: Underlying Symbol USSONY
 msgid "Sony Corporation"
 msgstr "索尼公司"
 
 #: Underlying Symbol USYHOO
-#, fuzzy
-#| msgid "Google Inc."
 msgid "Yahoo! Inc."
-msgstr "谷歌公司。"
+msgstr "雅虎公司"
 
 #: Underlying Symbol USSHU
 msgid "Sohu.com Inc."
-msgstr ""
+msgstr "搜狐网络有限责任公司"
 
 #: Underlying Symbol UKDGE
 msgid "Diageo plc"
@@ -14879,7 +14813,7 @@ msgstr "英国帝亚吉欧公司"
 
 #: Underlying Symbol INMARUTI
 msgid "Maruti Suzuki"
-msgstr ""
+msgstr "玛鲁蒂铃木公司"
 
 #: Underlying Symbol AUCTX
 msgid "Caltex Australia Limited"
@@ -14898,14 +14832,12 @@ msgid "L'Oreal"
 msgstr "欧莱雅集团"
 
 #: Underlying Symbol AUFMG
-#, fuzzy
-#| msgid "Home Retail Group"
 msgid "Fortescue Metals Group"
-msgstr "家悦采购集团"
+msgstr "福蒂斯丘金属集团"
 
 #: Underlying Symbol AUNWS
 msgid "NEWS CORPORATION."
-msgstr ""
+msgstr "新闻集团"
 
 #: Underlying Symbol FPMC
 msgid "Moet Hennessy Louis Vuitton"
@@ -14913,13 +14845,11 @@ msgstr "酩悦·轩尼诗-路易·威登集团"
 
 #: Underlying Symbol USCAT
 msgid "Caterpillar Inc."
-msgstr ""
+msgstr "卡特彼勒有限公司"
 
 #: Underlying Symbol USPANW
-#, fuzzy
-#| msgid "Wal-Mart Stores Inc."
 msgid "Palo Alto Networks Inc."
-msgstr "沃尔玛百货有限公司"
+msgstr "帕洛阿尔托网络公司"
 
 #: Underlying Symbol FPGLE
 msgid "Societe Generale"
@@ -14927,7 +14857,7 @@ msgstr "法国兴业银行"
 
 #: Underlying Symbol UKABF
 msgid "Associated British foods plc"
-msgstr ""
+msgstr "英国联合食品集团"
 
 #: Underlying Symbol USMSFT
 msgid "Microsoft"
@@ -14935,7 +14865,7 @@ msgstr "微软"
 
 #: Underlying Symbol USMOMO
 msgid "MOMO Inc."
-msgstr ""
+msgstr "陌陌科技有限公司"
 
 #: Underlying Symbol USGE
 msgid "General Electric Company"
@@ -14943,11 +14873,11 @@ msgstr "通用电气公司"
 
 #: Underlying Symbol AUQAN
 msgid "Qantas Airways Limited"
-msgstr ""
+msgstr "澳洲航空公司"
 
 #: Underlying Symbol USJD
 msgid "JD.com Inc."
-msgstr ""
+msgstr "京东商城电子商务有限公司"
 
 #: Underlying Symbol UKRIO
 msgid "Rio Tinto plc"
@@ -14958,30 +14888,24 @@ msgid "Intel"
 msgstr "英特尔公司"
 
 #: Underlying Symbol FPALST
-#, fuzzy
-#| msgid "Global Industrial Index"
 msgid "Alstom industrial machinery"
-msgstr "全球行业指数"
+msgstr "阿尔斯通工业机械"
 
 #: Underlying Symbol USGOOG
 msgid "Google Inc."
 msgstr "谷歌公司。"
 
 #: Underlying Symbol DEBMW
-#, fuzzy
-#| msgid "IBM"
 msgid "BMW"
-msgstr "IBM"
+msgstr "宝马集团"
 
 #: Underlying Symbol USWMT
 msgid "Wal-Mart Stores Inc."
 msgstr "沃尔玛百货有限公司"
 
 #: Underlying Symbol USNDSK
-#, fuzzy
-#| msgid "Corporate Actions"
 msgid "Sandisk Corporation"
-msgstr "共同行为"
+msgstr "闪迪公司"
 
 #: Underlying Symbol USAAPL
 msgid "Apple Inc."
@@ -14989,21 +14913,19 @@ msgstr "苹果公司。"
 
 #: Underlying Symbol INBHARTIARTL
 msgid "Bharti Airtel"
-msgstr ""
+msgstr "印度巴帝电信"
 
 #: Underlying Symbol FPPE
 msgid "Peugeot S.A."
-msgstr ""
+msgstr "标致股份有限公司"
 
 #: Underlying Symbol UKBT
-#, fuzzy
-#| msgid "BG Group plc"
 msgid "Bt Group plc"
-msgstr "英国天然气集团公司"
+msgstr "英国电信公司"
 
 #: Underlying Symbol USUBS
 msgid "UBS AG"
-msgstr ""
+msgstr "瑞银集团"
 
 #: Underlying Symbol frxXPTAUD
 msgid "XPT/AUD"
@@ -15690,6 +15612,27 @@ msgstr "如果%3一直到%5时处于%7至%6之外，将获得%1%2的赔付额。
 #: Translation for contract type description (UPORDOWN - intraday)
 msgid "%1 %2 payout if %3 goes outside %7 and %6 through %5 after %4."
 msgstr "如果%3在%4过后一直到%5时处于%7与%6之外，将获得%1%2的赔付额。"
+
+#~ msgid "%1 gives you many different ways to trade on the markets. Learn more about each contract type by clicking on the links below."
+#~ msgstr "%1 让您可以在市场上以多种不同方式交易。点击下方链接查看关于每种合约类型的详情。"
+
+#~ msgid "Learn about the different ways to trade on the markets."
+#~ msgstr "了解各种不同的交易方式。"
+
+#~ msgid "Trade on whether a market will RISE or FALL from its current spot price."
+#~ msgstr "交易基于预测市场是否会在当前现价基础上上涨或下跌。"
+
+#~ msgid "Trade on whether a market will STAY BETWEEN or GO OUTSIDE two price targets."
+#~ msgstr "交易基于预测市场是否会维持在两个目标价范围之内或超出该区间范围。"
+
+#~ msgid "Trade on whether a market will TOUCH or NOT TOUCH a predetermined price target anytime during the contract period."
+#~ msgstr "交易基于预测市场在合约期限内是否会触及或不触及预设目标价。"
+
+#~ msgid "Trade on whether a market will finish HIGHER or LOWER than a predetermined price target."
+#~ msgstr "交易基于预测市场收盘价是否会高于或低于预设目标价。"
+
+#~ msgid "Trading Guide"
+#~ msgstr "交易指南"
 
 #~ msgid " has been credited to your Virtual money account"
 #~ msgstr " 已记入您的虚拟资金账户"
