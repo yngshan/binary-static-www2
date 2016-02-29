@@ -33,24 +33,24 @@ var LoginHistoryUI = (function(){
         var verOffset, ver;
         if ((verOffset = userAgent.indexOf("OPR")) != -1){
             browser = "Opera";
-            ver = userAgent.substring(verOffset+4);
+            ver = userAgent.substring(verOffset+4).split(" ")[0];
         } else if ((verOffset = userAgent.indexOf("Chrome")) != -1){
             browser = "Chrome";
-            ver = userAgent.substring(verOffset+7);
+            ver = userAgent.substring(verOffset+7).split(" ")[0];
         } else if ((verOffset = userAgent.indexOf("Safari")) != -1){
             browser = "Safari";
-            ver = userAgent.substring(verOffset+7);
+            ver = userAgent.substring(verOffset+7).split(" ")[0];
         } else if ((verOffset = userAgent.indexOf("Firefox")) != -1){
             browser = "Firefox";
-            ver = userAgent.substring(verOffset+8);
+            ver = userAgent.substring(verOffset+8).split(" ")[0];
         } else if ((verOffset = userAgent.indexOf("MSIE")) != -1){
             browser = "Internet Explorer";
-            ver = userAgent.substring(verOffset+5);
+            ver = userAgent.substring(verOffset+5).split(" ")[0];
         }
         var status = data['status'] === 1 ? text.localize('Successful') : text.localize('Failed');
-        var $row = Table.createFlexTableRow([browser, timestamp, ip, status], columns, "data");
+        var browserString = browser + " v" + ver;
+        var $row = Table.createFlexTableRow([browserString, timestamp, ip, status], columns, "data");
         $row.children(".timestamp").first().append('<br>' + history[1]);
-        $row.children(".browser").first().append('<br>' + ver);
         return $row[0];
     }
     
