@@ -2,12 +2,12 @@ var LoginHistoryUI = (function(){
     "use strict";
     
     var tableID = "login-history-table",
-        columns = ["browser","timestamp","ip","status"];
+        columns = ["timestamp","browser","ip","status"];
     
     function createEmptyTable(){
         var header = [
-            text.localize("Browser"),
             text.localize("Date & Time"),
+            text.localize("Browser"),
             text.localize("IP Location"),
             text.localize("Status"),
         ];
@@ -49,7 +49,7 @@ var LoginHistoryUI = (function(){
         }
         var status = data['status'] === 1 ? text.localize('Successful') : text.localize('Failed');
         var browserString = browser + " v" + ver;
-        var $row = Table.createFlexTableRow([browserString, timestamp, ip, status], columns, "data");
+        var $row = Table.createFlexTableRow([timestamp, browserString, ip, status], columns, "data");
         $row.children(".timestamp").first().append('<br>' + history[1]);
         return $row[0];
     }
