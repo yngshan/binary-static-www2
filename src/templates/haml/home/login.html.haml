@@ -21,10 +21,6 @@
         - if (flash('error') and flash('error')->{password}) {
           %p.errorfield= flash('error')->{password}
         - }
-    - if (flash('error')) {
-      .grd-grid-12.grd-parent.grd-row-padding
-        #login-fail= l('Binary.com now requires your email and password to log in. If you have both a real-money and a virtual-money account, please use the password from your real-money account.')
-    - }
     .grd-parent.grd-grid-12
       .grd-grid-4
       .grd-grid-8
