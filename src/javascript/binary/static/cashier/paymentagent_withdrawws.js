@@ -46,7 +46,7 @@ var PaymentAgentWithdrawWS = (function() {
           verificationCode = $.cookie('verify_token');
           $.removeCookie('verify_token', {path: '/', domain: '.' + document.domain.split('.').slice(-2).join('.')});
         } else {
-          showPageError(Content.localize().textTokenMissing, Content.localize().textClickHereToRestart.replace('%1', page.url.url_for('paymentagent/request_withdrawws')));
+          showPageError(Content.localize().textTokenMissing, Content.localize().textClickHereToRestart.replace('[_1]', page.url.url_for('paymentagent/request_withdrawws')));
           return false;
         }
 
@@ -111,8 +111,11 @@ var PaymentAgentWithdrawWS = (function() {
 
         // Amount
         if(!isRequiredError(fieldIDs.txtAmount)){
-            if(!(/(^[0-9\.]+$)/).test(amount) || !$.isNumeric(amount)) {
+            if(!(/^\d+(\.\d+)?$/).test(amount) || !$.isNumeric(amount)) {
                 showError(fieldIDs.txtAmount, Content.errorMessage('reg', [numbers]));
+            }
+            else if(!(/^\d+(\.\d{1,2})?$/).test(amount)) {
+                showError(fieldIDs.txtAmount, text.localize('Only 2 decimal points are allowed.'));
             }
             else if(amount < minAmount) {
                 showError(fieldIDs.txtAmount, text.localize('Invalid amount, minimum is') + ' ' + withdrawCurrency + ' ' + minAmount);
