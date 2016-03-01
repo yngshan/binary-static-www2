@@ -155,13 +155,13 @@ var MyAccountWS = (function() {
         });
 
         if(disabledAccount.length > 0) {
-            var msgSingular = text.localize('Your [_1] account is unavailable. For any questions please contact <a href="[_2]">Customer Support</a>.'),
-                msgPlural   = text.localize('Your [_1] accounts are unavailable. For any questions please contact <a href="[_2]">Customer Support</a>.');
+            var msgSingular = text.localize('Your [_1] account is unavailable. For any questions please contact [_2].'),
+                msgPlural   = text.localize('Your [_1] accounts are unavailable. For any questions please contact [_2].');
             $('<p/>', {class: 'notice-msg'})
                 .html(
                     (disabledAccount.length === 1 ? msgSingular : msgPlural)
                         .replace('[_1]', disabledAccount.join(', '))
-                        .replace('[_2]', page.url.url_for('contact'))
+                        .replace('[_2]', $('<a/>', {class: 'pjaxload', href: page.url.url_for('contact'), text: text.localize('Customer Support')}).prop('outerHTML'))
                 )
                 .insertAfter($(welcomeTextID));
         }

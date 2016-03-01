@@ -35,9 +35,9 @@ var TNCApproval = (function() {
         $('#tnc_image').attr('src', page.url.url_for_static('images/pages/cashier/protection-icon.svg'));
         $('#tnc_approval').removeClass(hiddenClass);
         $('#tnc-message').html(
-            text.localize('[_1] has updated its <a class="pjaxload" href="[_2]">Terms & Conditions</a>. By clicking OK, you confirm that you have read and accepted the updated <a class="pjaxload" href="[_2]">Terms & Conditions</a>.')
+            text.localize('[_1] has updated its [_2]. By clicking OK, you confirm that you have read and accepted the updated [_2].')
                 .replace('[_1]', page.client.get_storage_value('landing_company_name'))
-                .replace(/\[_2\]/g, page.url.url_for('terms-and-conditions'))
+                .replace(/\[_2\]/g, $('<a/>', {class: 'pjaxload', href: page.url.url_for('terms-and-conditions'), text: text.localize('Terms & Conditions')}).prop('outerHTML'))
         );
         $('#btn-accept').text(text.localize('OK'));
     };
