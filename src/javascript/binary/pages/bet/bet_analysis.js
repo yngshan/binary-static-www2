@@ -23,6 +23,7 @@ var BetAnalysis = function () {
                         that.tab_explanation.render(tab);
                         shown_some_tab = true;
                     } else if(id == 'tab_last_digit') {
+                        $('#tab_last_digit').removeClass("invisible");
                         Symbols.getSymbols();
                         shown_some_tab = true;
                     } else if(id == 'tab_graph') {
