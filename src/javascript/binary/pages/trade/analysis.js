@@ -33,8 +33,7 @@ var TradingAnalysis = (function() {
                     '" class="tm-a">' + text.localize('Explanation') + '</a>' +
                   '</li>' +
                   '<li id="tab_last_digit" class="invisible tm-li">' +
-                    '<a href="' + page.url.url_for('trade/last_digit_info?underlying=' + $('#underlying').val() +
-                    '&ajax_only=1') + '" class="tm-a">' +
+                    '<a href="#" class="tm-a">' +
                     text.localize('Last Digit Stats') + '</a>' +
                   '</li>' +
                   '<li id="tab_japan_info" class="invisible tm-li last">' +
