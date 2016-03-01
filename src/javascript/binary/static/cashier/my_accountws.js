@@ -68,7 +68,7 @@ var MyAccountWS = (function() {
                 .text(
                     text.localize('Deposit [_1] [_2] virtual money into your account [_3]')
                         .replace('[_1]', TUser.get().currency)
-                        .replace('[_2]', ' 10000')
+                        .replace('[_2]', '10000')
                         .replace('[_3]', loginid)
                 );
             $(virtualTopupID).removeClass(hiddenClass);
