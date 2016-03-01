@@ -38,10 +38,10 @@
     .section-content
       .grd-grid-12
         %h1= l('Bank your way')
-        %a.pjaxload.button{:href => url_for('/cashier')}
+        %a.pjaxload.button{:href => url_for('cashier/payment_methods')}
           %span= l('View payment methods')
         %p= l('Trade with ease with [_1]\'s wide range of deposit and withdrawal methods. Your funds will be segregated and held in AAA-rated banks.', stash->{website_name})
-        %a.pjaxload.button{:href => url_for('/cashier')}
+        %a.pjaxload.button{:href => url_for('/cashier/payment_methods')}
           %img.responsive{:src => url_for('images/pages/tour/tour-flexible-banking.png')}
 
   .section
