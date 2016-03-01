@@ -59,6 +59,8 @@ var RealityCheck = (function() {
             LocalStore.set('reality_check.ack', 0);
             BinarySocket.send({"logout": "1"});
         });
+
+        $('input[type=number]').numeric();
     }
 
     function closePopUp() {
