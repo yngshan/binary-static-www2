@@ -113,7 +113,7 @@ var MyAccountWS = (function() {
 
             GTM.push_data_layer(data);
 
-            window.history.replaceState('My Account', title, newUrl);
+            window.history.replaceState('My Account', document.title, newUrl);
         }
     };
 
