@@ -2,7 +2,11 @@ var MyAccountWS = (function() {
     "use strict";
 
     var loginid,
-        isReal;
+        isReal,
+        get_account_status,
+        is_authenticated_payment_agent,
+        terms_conditions_version,
+        client_tnc_status;
     var hiddenClass,
         welcomeTextID,
         virtualTopupID,
@@ -16,7 +20,8 @@ var MyAccountWS = (function() {
 
         loginid = page.client.loginid || $.cookie('loginid');
 
-        BinarySocket.send({"get_settings": 1});
+        BinarySocket.send({"get_settings"      : 1});
+        BinarySocket.send({"website_status"    : 1});
         BinarySocket.send({"get_account_status": 1});
 
         //checkDisabledAccount();
@@ -25,25 +30,45 @@ var MyAccountWS = (function() {
     var responseGetSettings = function(response) {
         var get_settings = response.get_settings;
 
-        showWelcomeMessage();
-        if(!isReal) {
-            showTopUpLink();
-        }
-        else {
-            if(get_settings.is_authenticated_payment_agent) {
-                $('#payment_agent').removeClass(hiddenClass);
-            }
-            showNoticeMsg();
-        }
+        client_tnc_status = get_settings.client_tnc_status || '-';
+        is_authenticated_payment_agent = get_settings.is_authenticated_payment_agent;
+
+        checkAll();
 
         addGTMDataLayer(get_settings);
     };
 
     var responseAccountStatus = function(response) {
-        if(response.get_account_status[0] === 'unwelcome'){
+        get_account_status = response.get_account_status;
+        checkAll();
+    };
+
+    var checkAll = function() {
+        if(!terms_conditions_version || !client_tnc_status || !get_account_status) {
+            return;
+        }
+
+        if(isReal && terms_conditions_version !== client_tnc_status) {
+            window.location.href = page.url.url_for('user/tnc_approvalws');
+            return;
+        }
+
+        showWelcomeMessage();
+        if(!isReal) {
+            showTopUpLink();
+        }
+        else {
+            if(is_authenticated_payment_agent) {
+                $('#payment_agent').removeClass(hiddenClass);
+            }
+            showNoticeMsg();
+        }
+
+        if(get_account_status[0] === 'unwelcome'){
             $(authButtonID).removeClass(hiddenClass);
         }
 
+        $('#cashier-portfolio, #profit-statement').removeClass(hiddenClass);
         $('#loading').remove();
     };
 
@@ -130,13 +155,13 @@ var MyAccountWS = (function() {
         });
 
         if(disabledAccount.length > 0) {
-            var msgSingular = text.localize('Your [_1] account is unavailable. For any questions please contact <a href="[_2]">Customer Support</a>.'),
-                msgPlural   = text.localize('Your [_1] accounts are unavailable. For any questions please contact <a href="[_2]">Customer Support</a>.');
+            var msgSingular = text.localize('Your [_1] account is unavailable. For any questions please contact [_2].'),
+                msgPlural   = text.localize('Your [_1] accounts are unavailable. For any questions please contact [_2].');
             $('<p/>', {class: 'notice-msg'})
                 .html(
                     (disabledAccount.length === 1 ? msgSingular : msgPlural)
                         .replace('[_1]', disabledAccount.join(', '))
-                        .replace('[_2]', page.url.url_for('contact'))
+                        .replace('[_2]', $('<a/>', {class: 'pjaxload', href: page.url.url_for('contact'), text: text.localize('Customer Support')}).prop('outerHTML'))
                 )
                 .insertAfter($(welcomeTextID));
         }
@@ -161,6 +186,10 @@ var MyAccountWS = (function() {
                 break;
             case 'landing_company_details':
                 showWelcomeMessage();
+                break;
+            case 'website_status':
+                terms_conditions_version = response.website_status.terms_conditions_version;
+                checkAll();
                 break;
             default:
                 break;

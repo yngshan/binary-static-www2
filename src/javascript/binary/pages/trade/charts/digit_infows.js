@@ -163,7 +163,7 @@ BetAnalysis.DigitInfoWS.prototype = {
         if(this.chart &&  $('#last_digit_histo').html()){
             this.chart.xAxis[0].update({
                 title:{
-                    text: $('#last_digit_title').html().replace('%2', $('[name=underlying] option:selected').text()).replace('%1',spots.length),
+                    text: $('#last_digit_title').html().replace('[_2]', $('[name=underlying] option:selected').text()).replace('[_1]',spots.length),
                 }
             }, true);
             this.chart.series[0].name = underlying;
