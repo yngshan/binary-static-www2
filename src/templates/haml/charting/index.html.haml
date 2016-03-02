@@ -2,14 +2,14 @@
 -   title => l('Charting'),
 - );
 
-.grd-grid-12
+.grd-grid-12.charting-page
   %h1= l('Charting')
   %p= l('[_1] provides a variety of charts to help you determine what markets to trade on. Try them out.',stash->{website_name})
-  .grd-grid-12.grd-hide-mobile
+  .grd-grid-12.grd-parent
     .grd-grid-12
       %h2= l('Webtrader')
       %p= l('Flexible charting platform with a variety of customisable features.')
-      .grd-grid-6.grd-grid-mobile-12.grd-parent.ja-hide
+      .grd-grid-6.grd-grid-mobile-12.grd-grid-phablet-8.grd-parent.ja-hide
         .grd-grid-4.grd-grid-mobile-8
           %a{:href => '//webtrader.binary.com', :target => '_blank'}
             %img.responsive.chart-type-icon{:src => url_for('images/pages/charting/webtrader.svg')}
