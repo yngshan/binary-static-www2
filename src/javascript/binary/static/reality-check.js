@@ -60,7 +60,7 @@ var RealityCheck = (function() {
             BinarySocket.send({"logout": "1"});
         });
 
-        $('#realityDuration').numeric();
+        $('#realityDuration').keypress(onlyNumericOnKeypress);
     }
 
     function closePopUp() {
