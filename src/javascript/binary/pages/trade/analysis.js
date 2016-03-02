@@ -119,7 +119,7 @@ var TradingAnalysis = (function() {
                 if (currentTab == 'tab_last_digit') {
                     var underlying = $('[name=underlying] option:selected').val() || $('#underlying option:selected').val();
                     var tick = $('[name=tick_count]').val() || 100;
-                    trading_digit_info = BetAnalysis.tab_last_digitws;
+                    trading_digit_info = TradingAnalysis.tab_last_digitws;
                     var request = JSON.parse('{"ticks_history":"'+ underlying +'",'+
                                               '"end": "latest",'+
                                               '"count": '+ tick +','+

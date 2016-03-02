@@ -1,4 +1,4 @@
-BetAnalysis.DigitInfoWS = function() {
+TradingAnalysis.DigitInfoWS = function() {
     this.chart_config = {
         chart: {
                 renderTo:'last_digit_histo',
@@ -87,7 +87,7 @@ BetAnalysis.DigitInfoWS = function() {
     this.prev_max_index = -1;
 };
 
-BetAnalysis.DigitInfoWS.prototype = {
+TradingAnalysis.DigitInfoWS.prototype = {
     add_content: function(underlying){
         var domain = document.domain.split('.').slice(-2).join('.'),
             underlyings =[];
@@ -276,4 +276,4 @@ BetAnalysis.DigitInfoWS.prototype = {
     }
 };
 
-BetAnalysis.tab_last_digitws = new BetAnalysis.DigitInfoWS();
+TradingAnalysis.tab_last_digitws = new TradingAnalysis.DigitInfoWS();
