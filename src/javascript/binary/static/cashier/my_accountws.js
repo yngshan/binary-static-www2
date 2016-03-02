@@ -110,20 +110,25 @@ var MyAccountWS = (function() {
 
     var addGTMDataLayer = function(get_settings) {
         var is_login = page.url.param('login'),
-            is_newaccount = page.url.param('newaccounttype');
+            is_newaccount = window.new_account;
         if(is_login || is_newaccount) {
+            window.new_account = undefined;
             var oldUrl = window.location.href;
             var newUrl = oldUrl.replace(/(login=true&|newaccounttype=real&|newaccounttype=virtual&)/gi, '');
-            var data   = {};
+
             var affiliateToken = $.cookie('affiliate_tracking');
             if (affiliateToken) {
-                dataLayer.push({'bom_affiliate_token': affiliateToken});
+                GTM.push_data_layer({'bom_affiliate_token': JSON.parse(affiliateToken).t});
             }
-            data['bom_country'] = get_settings.country;
-            data['bom_email']   = get_settings.email;
-            data['url']         = oldUrl;
-            data['bom_today']   = Math.floor(Date.now() / 1000);
-            data['event']       = is_newaccount ? 'new_account' : 'log_in';
+
+            var data = {
+                'visitorID'   : page.client.loginid,
+                'bom_country' : get_settings.country,
+                'bom_email'   : get_settings.email,
+                'url'         : oldUrl,
+                'bom_today'   : Math.floor(Date.now() / 1000),
+                'event'       : is_newaccount ? 'new_account' : 'log_in'
+            };
 
             if(is_newaccount) {
                 data['bom_date_joined'] = data['bom_today'];

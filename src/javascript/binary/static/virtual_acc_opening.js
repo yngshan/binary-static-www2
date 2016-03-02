@@ -47,13 +47,15 @@ pjax_config_page("new_account/virtualws", function(){
                     var error = response.error;
 
                     if (type === 'new_account_virtual' && !error){
-                      GTM.push_data_layer({
-                        'event'         : 'new_account',
-                        'visitorID'     : response.new_account_virtual.client_id,
-                        'bom_country'   : $('#residence option:selected').text(),
-                        'bom_today'     : Math.floor(Date.now() / 1000),
-                        'bom_email'     : email
-                      });
+                      // set a flag to push to gtm in my_account
+                      window.new_account = true;
+                      // GTM.push_data_layer({
+                      //   'event'         : 'new_account',
+                      //   'visitorID'     : response.new_account_virtual.client_id,
+                      //   'bom_country'   : $('#residence option:selected').text(),
+                      //   'bom_today'     : Math.floor(Date.now() / 1000),
+                      //   'bom_email'     : email
+                      // });
                       form.setAttribute('action', '/login');
                       form.setAttribute('method', 'POST');
                       virtualForm.unbind('submit');
