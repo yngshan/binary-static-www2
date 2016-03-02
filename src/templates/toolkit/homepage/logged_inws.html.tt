@@ -33,7 +33,7 @@
     </div>
 </div>
 
-<div class="grd-grid-6 grd-grid-mobile-12 grd-parent" id="cashier-portfolio">
+<div class="grd-grid-6 grd-grid-mobile-12 grd-parent invisible" id="cashier-portfolio">
     <div class="grd-grid-6 grd-parent">
         <div class="grd-grid-8 grd-with-padding">
             <a href="[% request.url_for('/cashier') %]" class="pjaxload">
@@ -44,7 +44,7 @@
             <h4>
                 <a href="[% request.url_for('/cashier') %]" class="pjaxload">[% l('Cashier') %]</a>
             </h4>
-            <p>[% l('Make a deposit or withdraw') %]</p>
+            <p>[% l('Make a deposit or withdraw.') %]</p>
         </div>
     </div>
     <div class="grd-grid-6 grd-parent">
@@ -62,7 +62,7 @@
     </div>
 </div>
 
-<div class="grd-grid-6 grd-grid-mobile-12 grd-parent" id="profit-statement">
+<div class="grd-grid-6 grd-grid-mobile-12 grd-parent invisible" id="profit-statement">
     <div class="grd-grid-6 grd-parent">
         <div class="grd-grid-8 grd-with-padding">
             <a href="[% request.url_for('/user/profit_tablews') %]" class="pjaxload">

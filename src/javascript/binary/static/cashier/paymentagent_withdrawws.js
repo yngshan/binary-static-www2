@@ -14,6 +14,7 @@ var PaymentAgentWithdrawWS = (function() {
         minAmount,
         maxAmount;
 
+    var verificationCode;
 
     var init = function() {
         containerID = '#paymentagent_withdrawal';
@@ -42,7 +43,11 @@ var PaymentAgentWithdrawWS = (function() {
         }
 
         if ($.cookie('verify_token')) {
+          verificationCode = $.cookie('verify_token');
           $.removeCookie('verify_token', {path: '/', domain: '.' + document.domain.split('.').slice(-2).join('.')});
+        } else {
+          showPageError(Content.localize().textTokenMissing, Content.localize().textClickHereToRestart.replace('[_1]', page.url.url_for('paymentagent/request_withdrawws')));
+          return false;
         }
 
         var residence = $.cookie('residence');
@@ -106,8 +111,11 @@ var PaymentAgentWithdrawWS = (function() {
 
         // Amount
         if(!isRequiredError(fieldIDs.txtAmount)){
-            if(!(/(^[0-9\.]+$)/).test(amount) || !$.isNumeric(amount)) {
+            if(!(/^\d+(\.\d+)?$/).test(amount) || !$.isNumeric(amount)) {
                 showError(fieldIDs.txtAmount, Content.errorMessage('reg', [numbers]));
+            }
+            else if(!(/^\d+(\.\d{1,2})?$/).test(amount)) {
+                showError(fieldIDs.txtAmount, text.localize('Only 2 decimal points are allowed.'));
             }
             else if(amount < minAmount) {
                 showError(fieldIDs.txtAmount, text.localize('Invalid amount, minimum is') + ' ' + withdrawCurrency + ' ' + minAmount);
@@ -160,14 +168,14 @@ var PaymentAgentWithdrawWS = (function() {
     // ----------------------------
     var withdrawRequest = function(isDryRun) {
         var dry_run = isDryRun ? 1 : 0;
-
         BinarySocket.send({
             "paymentagent_withdraw" : 1,
             "paymentagent_loginid"  : formData.agent,
             "currency"    : formData.currency,
             "amount"      : formData.amount,
             "description" : formData.desc,
-            "dry_run"     : dry_run
+            "dry_run"     : dry_run,
+            "verification_code": verificationCode
         });
     };
 
@@ -220,9 +228,12 @@ var PaymentAgentWithdrawWS = (function() {
     // -----------------------------
     // ----- Message Functions -----
     // -----------------------------
-    var showPageError = function(errMsg) {
+    var showPageError = function(errMsg, noticeMsg) {
         setActiveView(viewIDs.error);
         $(viewIDs.error + ' > p').html(errMsg);
+        if (noticeMsg) {
+          $(viewIDs.error).append($('<p/>', {html: noticeMsg}));
+        }
     };
 
     var showError = function(fieldID, errMsg) {
