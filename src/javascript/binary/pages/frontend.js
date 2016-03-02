@@ -254,7 +254,20 @@ function dropDownNumbers(select, startNum, endNum) {
 }
 
 function dropDownMonths(select, startNum, endNum) {
-    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var months = [
+        text.localize("Jan"),
+        text.localize("Feb"),
+        text.localize("Mar"),
+        text.localize("Apr"),
+        text.localize("May"),
+        text.localize("Jun"),
+        text.localize("Jul"),
+        text.localize("Aug"),
+        text.localize("Sep"),
+        text.localize("Oct"),
+        text.localize("Nov"),
+        text.localize("Dec")
+    ];
     select.appendChild(document.createElement("option"));
     for (i = startNum; i <= endNum; i++){
         var option = document.createElement("option");
@@ -273,17 +286,15 @@ function dropDownMonths(select, startNum, endNum) {
 
 function generateBirthDate(){
     var days    = document.getElementById('dobdd'),
-        months    = document.getElementById('dobmm'),
+        months  = document.getElementById('dobmm'),
         year    = document.getElementById('dobyy');
     //days
     dropDownNumbers(days, 1, 31);
     //months
     dropDownMonths(months, 1, 12);
-
     var currentYear = new Date().getFullYear();
     var startYear = currentYear - 100;
     var endYear = currentYear - 17;
-
     //years
     dropDownNumbers(year, startYear, endYear);
     return;
@@ -309,14 +320,14 @@ function handle_residence_state_ws(){
       if (response) {
         var type = response.msg_type;
         var residenceDisabled = $('#residence-disabled');
-        if (response.msg_type === 'get_settings') {
+        if (type === 'get_settings') {
           var country = response.get_settings.country_code;
           if (country && country !== null) {
             page.client.residence = country;
             generateBirthDate();
             generateState();
             return;
-          } else {
+          } else if (document.getElementById('move-residence-here')) {
             var residenceForm = $('#residence-form');
             $('#real-form').hide();
             residenceDisabled.insertAfter('#move-residence-here');
@@ -343,6 +354,18 @@ function handle_residence_state_ws(){
             return;
           } else {
             errorElement.setAttribute('style', 'display:none');
+            BinarySocket.send({landing_company: page.client.residence});
+            return;
+          }
+        } else if (type === 'landing_company') {
+          $.cookie('residence', page.client.residence, {domain: '.' + document.domain.split('.').slice(-2).join('.'), path: '/'});
+          if (response.landing_company.hasOwnProperty('financial_company') && !response.landing_company.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'maltainvest') {
+            window.location.href = page.url.url_for('new_account/maltainvest');
+            return;
+          } else if (response.landing_company.hasOwnProperty('financial_company') && !response.landing_company.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'japan') {
+            window.location.href = page.url.url_for('new_account/japanws');
+            return;
+          } else if (!$('#real-form').is(':visible')) {
             $('#residence-form').hide();
             residenceDisabled.insertAfter('#move-residence-back');
             $('#error-residence').insertAfter('#residence-disabled');
@@ -369,16 +392,16 @@ function handle_residence_state_ws(){
               residence_list = response.residence_list;
           if (residence_list.length > 0){
             for (i = 0; i < residence_list.length; i++) {
-              if (residence_list[i].disabled) {
+              if (residence_list[i].disabled  && select) {
                 appendTextValueChild(select, residence_list[i].text, residence_list[i].value, 'disabled');
-              } else {
+              } else if (select) {
                 appendTextValueChild(select, residence_list[i].text, residence_list[i].value);
               }
               if (phoneElement && residence_list[i].phone_idd && residenceValue === residence_list[i].value){
                 phoneElement.value = '+' + residence_list[i].phone_idd;
               }
             }
-            if (residenceValue){
+            if (residenceValue && select){
                 select.value = residenceValue;
             }
           }
@@ -389,17 +412,6 @@ function handle_residence_state_ws(){
   });
 }
 
-function getSettings() {
-  BinarySocket.send({get_settings:1});
-  return;
-}
-
-function setResidenceWs(){
-  BinarySocket.send({residence_list:1});
-  return;
-}
-
-//pass select element to generate list of states
 function generateState() {
     var state = document.getElementById('address-state');
     appendTextValueChild(state, Content.localize().textSelect, '');
@@ -440,11 +452,6 @@ function Trim(str){
   while(str.charAt(0) == (" ") ){str = str.substring(1);}
   while(str.charAt(str.length-1) ==" " ){str = str.substring(0,str.length-1);}
   return str;
-}
-
-//remove wrong json affiliate_tracking
-if ($.cookie('affiliate_tracking')) {
-  $.removeCookie('affiliate_tracking');
 }
 
 pjax_config_page('/$|/home', function() {
@@ -569,9 +576,14 @@ pjax_config_page('/bulk-trader-facility', function() {
     };
 });
 
-pjax_config_page('/terms-and-condition', function() {
+pjax_config_page('/terms-and-conditions', function() {
     return {
         onLoad: function() {
+            if (page.language() === 'JA' && /^jp/.test(window.location.pathname)) {
+              window.location.href = page.url.url_for('terms-and-conditions-jp');
+            } else if (page.language() === 'EN' && /jp/.test(window.location.pathname)) {
+              window.location.href = page.url.url_for('terms-and-conditions');
+            }
             var year = document.getElementsByClassName('currentYear');
             for (i = 0; i < year.length; i++){
               year[i].innerHTML = new Date().getFullYear();
