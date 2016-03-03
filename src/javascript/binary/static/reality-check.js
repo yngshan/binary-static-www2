@@ -22,14 +22,17 @@ var RealityCheck = (function() {
 
     function updateFrequency(mins) {
         var ms;
-        if (mins > 9999) {
-            $('#realityDuration').val(9999);
-            ms = 9999 * 60 * 1000;
-            LocalStore.set('reality_check.interval', ms);
+        if (mins > 120) {
+            $('#realityDuration').val(120);
+            ms = 120 * 60 * 1000;
+        } else if (mins < 10) {
+            $('#realityDuration').val(10);
+            ms = 10 * 60 * 1000;
         } else {
             ms = mins * 60 * 1000;
-            LocalStore.set('reality_check.interval', ms);
         }
+
+        LocalStore.set('reality_check.interval', ms);
     }
 
     function displayPopUp(div) {
@@ -61,9 +64,6 @@ var RealityCheck = (function() {
         });
 
         $('#realityDuration').keypress(onlyNumericOnKeypress);
-        $('#realityDuration').change(function(e) {
-            minMaxOnInput(e, 10, 9999);
-        });
     }
 
     function closePopUp() {
