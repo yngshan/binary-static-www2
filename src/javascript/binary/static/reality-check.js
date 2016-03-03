@@ -4,6 +4,7 @@ var RealityCheck = (function() {
     var reality_freq_url  = page.url.url_for('user/reality_check_frequency');
     var defaultFrequencyInMin = 60;
     var loginTime;
+    var hiddenClass = 'invisible';
 
     function computeIntervalForNextPopup(loginTime, interval) {
         var currentTime = Date.now();
@@ -25,9 +26,6 @@ var RealityCheck = (function() {
         if (mins > 120) {
             $('#realityDuration').val(120);
             ms = 120 * 60 * 1000;
-        } else if (mins < 10) {
-            $('#realityDuration').val(10);
-            ms = 10 * 60 * 1000;
         } else {
             ms = mins * 60 * 1000;
         }
@@ -48,13 +46,22 @@ var RealityCheck = (function() {
         wrapper.appendTo(lightboxDiv);
         lightboxDiv.appendTo('body');
 
+        var $msg = $('p.error-msg');
+
         var inputBox = lightboxDiv.find('#realityDuration');
         inputBox.val(currentFrequencyInMS() / 60 / 1000);
         inputBox.keyup(function(e) {
+            $msg.addClass(hiddenClass);
             updateFrequency(e.target.value);
         });
 
         lightboxDiv.find('#continue').click(function() {
+            if (inputBox.val() < 10) {
+                $msg.text('Please enter number bigger or equal to 10');
+                $msg.removeClass(hiddenClass);
+                return;
+            }
+
             LocalStore.set('reality_check.ack', 1);
             closePopUp();
         });
@@ -63,7 +70,7 @@ var RealityCheck = (function() {
             BinarySocket.send({"logout": "1"});
         });
 
-        $('#realityDuration').keypress(onlyNumericOnKeypress);
+        inputBox.keypress(onlyNumericOnKeypress);
     }
 
     function closePopUp() {
