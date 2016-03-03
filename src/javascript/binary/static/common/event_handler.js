@@ -1,4 +1,4 @@
-function onlyNumericOnKeypress(ev, min, max) {
+function onlyNumericOnKeypress(ev) {
     var key = ev.keyCode;
     var char = String.fromCharCode(ev.which);
     if(
@@ -8,19 +8,5 @@ function onlyNumericOnKeypress(ev, min, max) {
 
         ev.returnValue = false;
         ev.preventDefault();
-    }
-}
-
-function minMaxOnInput(ev, min, max) {
-    if (min) {
-        if (+ev.target.value < min) {
-            ev.target.value = min;
-        }
-    }
-
-    if (max) {
-        if (+ev.target.value > min) {
-            ev.target.value = max;
-        }
     }
 }

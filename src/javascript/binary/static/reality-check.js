@@ -46,7 +46,7 @@ var RealityCheck = (function() {
         wrapper.appendTo(lightboxDiv);
         lightboxDiv.appendTo('body');
 
-        var $msg = $('p.error-msg');
+        var $msg = lightboxDiv.find('p.error-msg');
 
         var inputBox = lightboxDiv.find('#realityDuration');
         inputBox.val(currentFrequencyInMS() / 60 / 1000);
