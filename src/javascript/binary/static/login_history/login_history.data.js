@@ -1,7 +1,7 @@
 var LoginHistoryData = (function(){
     "use strict";
     
-    function get(limit){
+    function getHistory(limit){
         var request = {login_history: 1};
         if(limit){
             $.extend(request,limit);
@@ -10,6 +10,6 @@ var LoginHistoryData = (function(){
     }
     
     return{
-      get: get
+      getHistory: getHistory,
     };
 }());

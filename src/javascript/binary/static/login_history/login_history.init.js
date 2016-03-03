@@ -50,7 +50,7 @@ var LoginHistoryWS = (function(){
     }
 
     function getNextBatch(){
-        LoginHistoryData.get({limit: 50});
+        LoginHistoryData.getHistory({limit: 50});
         pending = true;
     }
 
@@ -100,7 +100,7 @@ var LoginHistoryWS = (function(){
         historyReceived = 0;
         historyConsumed = 0;
 
-        $(".error-msg").text("");
+        $("#login_history-ws-container .error-msg").text("");
 
         LoginHistoryUI.clearTableContent();
     }
