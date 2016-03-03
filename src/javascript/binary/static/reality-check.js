@@ -60,8 +60,9 @@ var RealityCheck = (function() {
             BinarySocket.send({"logout": "1"});
         });
 
-        $('#realityDuration').keypress(function(e) {
-            onlyNumericOnKeypress(e, 10, 9999);
+        $('#realityDuration').keypress(onlyNumericOnKeypress);
+        $('#realityDuration').change(function(e) {
+            minMaxOnInput(e, 10, 9999);
         });
     }
 
