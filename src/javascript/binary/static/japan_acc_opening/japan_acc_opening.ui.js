@@ -114,7 +114,7 @@ var JapanAccOpeningUI = function () {
 
     ValidAccountOpening.checkDate(elementObj['dobdd'], elementObj['dobmm'], elementObj['dobyy'], errorObj['dobdd']);
 
-    if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|]+/.test(elementObj['postcode'].value)) {
+    if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|\w]+/.test(elementObj['postcode'].value)) {
       errorObj['postcode'].innerHTML = text.localize('Please follow the pattern 3 numbers, a dash, followed by 4 numbers.');
       Validate.displayErrorMessage(errorObj['postcode']);
       window.accountErrorCounter++;
@@ -123,13 +123,13 @@ var JapanAccOpeningUI = function () {
     ValidAccountOpening.checkTel(elementObj['tel'], errorObj['tel']);
     ValidAccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
 
-    if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,]+/.test(elementObj['limit'].value)) {
+    if (/[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|\w]+/.test(elementObj['limit'].value)) {
       errorObj['limit'].innerHTML = Content.errorMessage('reg', [numbers]);
       Validate.displayErrorMessage(errorObj['limit']);
       window.accountErrorCounter++;
     }
 
-    if (elementObj['amount'].offsetParent !== null && /[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,]+/.test(elementObj['amount'].value)) {
+    if (elementObj['amount'].offsetParent !== null && /[`~!@#$%^&*)(_=+\[}{\]\\\/";:\?><,|\w]+/.test(elementObj['amount'].value)) {
       errorObj['amount'].innerHTML = Content.errorMessage('reg', [numbers]);
       Validate.displayErrorMessage(errorObj['amount']);
       window.accountErrorCounter++;
