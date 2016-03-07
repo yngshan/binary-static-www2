@@ -6,7 +6,7 @@ var IPHistoryUI = (function(){
 
     function createEmptyTable(){
         var header = [
-            text.localize("Date & Time"),
+            text.localize("Date and Time"),
             text.localize("Browser"),
             text.localize("IP Location"),
             text.localize("Status"),
