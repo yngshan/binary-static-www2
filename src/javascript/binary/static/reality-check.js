@@ -57,7 +57,8 @@ var RealityCheck = (function() {
 
         lightboxDiv.find('#continue').click(function() {
             if (inputBox.val() < 10) {
-                $msg.text('Please enter number bigger or equal to 10');
+                var minimumValueMsg = Content.errorMessage('number_not_less_than', 10);
+                $msg.text(minimumValueMsg);
                 $msg.removeClass(hiddenClass);
                 return;
             }
