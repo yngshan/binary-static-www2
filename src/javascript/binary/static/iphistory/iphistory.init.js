@@ -1,4 +1,4 @@
-var LoginHistoryWS = (function(){
+var IPHistory = (function(){
     "use strict";
 
     //Batch refer to number of data get from ws service per request
@@ -30,8 +30,8 @@ var LoginHistoryWS = (function(){
         historyReceived += currentBatch.length;
 
         if (!tableExist()) {
-            LoginHistoryUI.createEmptyTable().appendTo("#login_history-ws-container");
-            LoginHistoryUI.updateTable(getNextChunk());
+            IPHistoryUI.createEmptyTable().appendTo("#login_history-ws-container");
+            IPHistoryUI.updateTable(getNextChunk());
 
             // Show a message when the table is empty
             if ((historyReceived === 0) && (currentBatch.length === 0)) {
@@ -50,7 +50,7 @@ var LoginHistoryWS = (function(){
     }
 
     function getNextBatch(){
-        LoginHistoryData.getHistory({limit: 50});
+        IPHistoryData.getHistory({limit: 50});
         pending = true;
     }
 
@@ -78,14 +78,14 @@ var LoginHistoryWS = (function(){
             if (pFromTop < hidableHeight(70)) {
                 return;
             }
-            
+
             /*if (finishedConsumed() && !noMoreData && !pending) {
                 getNextBatchStatement();
                 return;
             }*/
 
             if (!finishedConsumed()){
-                LoginHistoryUI.updateTable(getNextChunk());
+                IPHistoryUI.updateTable(getNextChunk());
             }
         });
     }
@@ -102,7 +102,7 @@ var LoginHistoryWS = (function(){
 
         $("#login_history-ws-container .error-msg").text("");
 
-        LoginHistoryUI.clearTableContent();
+        IPHistoryUI.clearTableContent();
     }
 
     function initPage(){

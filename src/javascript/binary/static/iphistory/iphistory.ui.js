@@ -1,9 +1,9 @@
-var LoginHistoryUI = (function(){
+var IPHistoryUI = (function(){
     "use strict";
-    
+
     var tableID = "login-history-table",
         columns = ["timestamp","browser","ip","status"];
-    
+
     function createEmptyTable(){
         var header = [
             text.localize("Date & Time"),
@@ -19,11 +19,11 @@ var LoginHistoryUI = (function(){
         var $table = Table.createFlexTable(data,metadata,header);
         return $table;
     }
-    
+
     function updateTable(history){
         Table.appendTableBody(tableID, history, createRow);
     }
-    
+
     function createRow(data){
         var userAgent = data['environment'];
         var history = userAgent.split(' ');
@@ -53,12 +53,12 @@ var LoginHistoryUI = (function(){
         $row.children(".timestamp").first().append('<br>' + history[1]);
         return $row[0];
     }
-    
+
     function clearTableContent(){
         Table.clearTableBody(tableID);
         $("#" + tableID +">tfoot").hide();
     }
-    
+
     return{
         createEmptyTable: createEmptyTable,
         updateTable: updateTable,

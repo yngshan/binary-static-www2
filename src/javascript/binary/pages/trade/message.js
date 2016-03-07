@@ -41,7 +41,7 @@ var Message = (function () {
                 ProfitTableWS.profitTableHandler(response);
             } else if (type === 'error') {
                 $(".error-msg").text(response.error.message);
-            } 
+            }
         } else {
 
             console.log('some error occured');

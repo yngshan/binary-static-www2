@@ -1,4 +1,4 @@
-pjax_config_page("user/historyws", function(){
+pjax_config_page("user/iphistoryws", function(){
     return {
         onLoad: function() {
             if (!getCookieItem('login')) {
@@ -12,16 +12,16 @@ pjax_config_page("user/historyws", function(){
                     if (response) {
                         var type = response.msg_type;
                         if (type === 'login_history'){
-                            LoginHistoryWS.responseHandler(response);
+                            IPHistory.responseHandler(response);
                         }
                     }
                 }
             });
             Content.populate();
-            LoginHistoryWS.init();
+            IPHistory.init();
         },
         onUnload: function(){
-            LoginHistoryWS.clean();
+            IPHistory.clean();
         }
     };
 });

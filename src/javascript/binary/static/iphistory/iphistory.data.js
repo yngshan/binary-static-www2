@@ -1,6 +1,6 @@
-var LoginHistoryData = (function(){
+var IPHistoryData = (function(){
     "use strict";
-    
+
     function getHistory(limit){
         var request = {login_history: 1};
         if(limit){
@@ -8,7 +8,7 @@ var LoginHistoryData = (function(){
         }
         BinarySocket.send(request);
     }
-    
+
     return{
       getHistory: getHistory,
     };
