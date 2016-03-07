@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-06 03:04+0000\n"
+"PO-Revision-Date: 2016-03-07 10:19+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary/static/zh_TW/>\n"
+"Language-Team: Chinese (Taiwan) "
+"<https://hosted.weblate.org/projects/binary/static/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,7 +97,7 @@ msgstr "與訪客首次接觸時，%1 即擁有該客戶。作為聯盟會員，
 #, fuzzy
 #| msgid "Cashier password"
 msgid "%1 cashier password updated"
-msgstr "收銀台密碼"
+msgstr "%1收銀台密碼已更新"
 
 #. (request.website.display_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transfer.html.tt:31
@@ -135,7 +136,7 @@ msgstr "%1 在任一時間內均有數千名客戶交易各類金融產品，該
 #, fuzzy
 #| msgid "%1 has updated its <a class=\"pjaxload\" href=\"%2\">Terms & Conditions</a>. By clicking OK, you confirm that you have read and accepted the updated <a class=\"pjaxload\" href=\"%2\">Terms & Conditions</a>."
 msgid "%1 has updated its %2. By clicking OK, you confirm that you have read and accepted the updated %2."
-msgstr "%1已經更新了其<a class=\"pjaxload\" href=\"%2\">條款和條件</a>。通過點選OK按鈕，您確定已經閱讀和接受此更新<a class=\"pjaxload\" href=\"%2\">條款和條件</a>。"
+msgstr "%1已經更新了其%2條款和條件。通過點選OK按鈕，您確定已經閱讀和接受此更新%2條款和條件。"
 
 #. (landing_company, tnc_page_url)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_conditions_approval_message.html.tt:11
@@ -280,8 +281,9 @@ msgstr "%1 每天處理超過百萬筆交易(包括虛擬帳戶)。"
 
 #. ($client->loginid)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:432
+#, fuzzy
 msgid "%1-Failed attempt to unlock cashier section"
-msgstr ""
+msgstr "%1-收銀台無法解鎖"
 
 #. (stash('broker_name')
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
@@ -2407,7 +2409,7 @@ msgstr "如您希望通過預測市場是否會從目前水平上漲或下跌而
 #, fuzzy
 #| msgid "Choose a Name:"
 msgid "Choose Scopes:"
-msgstr "選擇名稱:"
+msgstr "選擇範圍:"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 msgid "Choose Stays In/Out to profit from the market staying inside or going outside two price targets any time during the contract period."
@@ -5428,7 +5430,9 @@ msgstr "所有客戶都有責任閱讀並理解本法律通知，以及通過本
 #, fuzzy
 #| msgid "It is understood that we or any of our directors, officers or employees thereof may have an interest, relationship or arrangement that is material in relation to any trade effected on behalf of you and it is agreed that any person so interested shall be entitled to retain any benefit or profit received and shall not be liable to account therefore to you by reason only of such conflict."
 msgid "It is understood that Binary Group companies, as trading counterparty, have an interest, relationship or arrangement that is material in relation to any trade effected on behalf of you and it is agreed that any company so interested shall be entitled to retain any benefit or profit received and shall not be liable to account therefore to you by reason only of such conflict."
-msgstr "眾所理解的是我們或我們的任一股東、職員或員工在替您進行任何交易時可能會發生相關的利益、關係或安排。僅此同意任何相關人士須有權保留所收到的利益或盈利，及此衝突不須對您承擔任何責任。"
+msgstr ""
+"眾所理解的是訂約方Binary集團各公司在替您進行任何交易時會發生相關的利益、關係或安排。僅此同意任何相關公司須有權保留所收到的利益或盈利，及此衝突不須對"
+"您承擔任何責任。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/promocode.html.tt:46
 msgid "It will be released to your account upon approval."
@@ -7556,7 +7560,7 @@ msgstr "密碼積分是: %1。通過積分是: 20。"
 #, fuzzy
 #| msgid "Password should have letters and numbers."
 msgid "Password should have letters and numbers and at least 6 characters."
-msgstr "密碼須包含字母與數字。"
+msgstr "密碼須包含字母、數字及至少6個字元。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:276
 msgid "Password should have letters and numbers."
@@ -7687,7 +7691,7 @@ msgstr "Perl 模組"
 #, fuzzy
 #| msgid "Permission denied."
 msgid "Permission denied, requiring %1"
-msgstr "權限不足。"
+msgstr "權限不足，需有%1"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:60
 msgid "Permission denied."
@@ -7851,8 +7855,9 @@ msgid "Please fill in the Login ID and Amount you wish to transfer to your Clien
 msgstr "請在下表中填寫登入ID 以及您希望轉給客戶的金額："
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:363
+#, fuzzy
 msgid "Please follow the pattern 3 numbers, a dash, followed by 4 numbers."
-msgstr ""
+msgstr "請依照此模式:3個數字，一破折號，接着是4個數字。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:295
 msgid "Please input a valid date"
@@ -9872,7 +9877,7 @@ msgstr "條款和條件"
 #, fuzzy
 #| msgid "Terms and Conditions"
 msgid "Terms and Conditions Approval"
-msgstr "條款和條件"
+msgstr "條款和條件審批"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/japan.pm:186
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:457
@@ -10663,8 +10668,9 @@ msgid "There was an error processing the request."
 msgstr "處理要求時出錯。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:362
+#, fuzzy
 msgid "There was some invalid character in an input field."
-msgstr ""
+msgstr "某字欄的輸入字元無效。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:246
 msgid "Therefore you may not withdraw any additional funds."
@@ -11589,7 +11595,7 @@ msgstr "驗證您的提款要求 - %1"
 #, fuzzy
 #| msgid "Version 39. Last modified 2015-12-04."
 msgid "Version 39. Last modified 2016-03-01."
-msgstr "版本39。最後修改時間為 2015年12月4日。"
+msgstr "版本39。最後修改時間為 2016年03月01日。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:190
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/analyse_link.html.tt:4
@@ -12098,7 +12104,10 @@ msgstr "我們鼓勵新創意，不鼓勵安全、老套的想法。您可以按
 #, fuzzy
 #| msgid "Where our arrangements to manage conflicts are not or cannot be sufficient to be reasonably confident that risks of damage to a client’s interest will be prevented we aim to disclose the general nature or sources of conflicts. This is aimed at allowing the client the opportunity to consider whether to ask for more information or to continue with the service; we do not aim to provide detailed, highly specific or comprehensive information."
 msgid "Where our arrangements to manage conflicts are not or cannot be sufficient to be reasonably confident that risks of damage to a client’s interest will be prevented we aim to disclose the general nature or sources of conflicts. This is aimed at allowing the client the opportunity to consider whether to ask for more information by sending an email to compliance<b></b>@<i></i>binary.com, or to continue with the service; we do not aim to provide detailed, highly specific or comprehensive information."
-msgstr "我們致力於提供完善的管理措施以盡力防止客戶利益虧損，其中若有不到之處，我們會將衝突起源的一般性質揭露。目的是要讓客戶有機會考慮是否需要更詳細的資訊或繼續使用該項服務。我們並不旨在提供詳盡、高度具體或全面性資訊。"
+msgstr ""
+"我們致力於提供完善的管理措施以盡力防止客戶利益虧損，其中若有不到之處，我們會將衝突起源的一般性質揭露。目的是要讓客戶有機會考慮是否需要發送電子郵件到com"
+"pliance<b> 1</b> 2@<i> 3</i> "
+"4binary.com索取更詳細的資訊或繼續使用該項服務。我們並不旨在提供詳盡、高度具體或全面性資訊。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "Where supportive colleagues are like a second family."
@@ -12732,13 +12741,13 @@ msgstr "您正在使用虛擬帳戶。"
 #, fuzzy
 #| msgid "Your %1 account is unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
 msgid "Your %1 account is unavailable. For any questions please contact %2."
-msgstr "您的%1帳戶不可用。如有任何問題，請聯繫<a href=\"%2\">客戶支援人員</a>。"
+msgstr "您的%1帳戶不可用。如有任何問題，請聯繫%2。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:375
 #, fuzzy
 #| msgid "Your %1 accounts are unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
 msgid "Your %1 accounts are unavailable. For any questions please contact %2."
-msgstr "您的%1帳戶不可用。如有任何問題，請聯繫<a href=\"%2\">客戶支援人員</a>。"
+msgstr "您的%1帳戶不可用。如有任何問題，請聯繫%2。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:241
 msgid "Your %1 day withdrawal limit is currently EUR %2. (or equivalent in other currency)."
