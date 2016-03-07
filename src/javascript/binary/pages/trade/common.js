@@ -901,11 +901,7 @@ function showHighchart(){
   }
   var div = document.createElement('div');
   div.className = 'grd-grid-12 chart_div';
-  if (window.chartonly && window.chartonly === 'chartonly') {
-    div.innerHTML = '<p class="error-msg">' + text.localize('Chart is not available for this underlying.') + '</p>';
-    document.getElementById('trade_live_chart').appendChild(div);
-    return;
-  } else {
+  if (window.chartAllowed) {
     div.innerHTML = '<table width="600px" align="center"><tr id="highchart_duration"><td width="25%">' +
                     Content.localize().textDuration + ':</td><td width="25%"><select id="time_period"><option value="1t">1 ' +
                     Content.localize().textTickResultLabel.toLowerCase() + '</option><option value="1m" selected="selected">1 ' + text.localize("minute").toLowerCase() +
@@ -920,6 +916,10 @@ function showHighchart(){
                     '<iframe src="" width="100%" height="520" id="chart_frame" style="overflow-y : hidden;" scrolling="no"></iframe></td></tr></table>';
     document.getElementById('trade_live_chart').appendChild(div);
     setUnderlyingTime();
+  } else {
+    div.innerHTML = '<p class="error-msg">' + text.localize('Chart is not available for this underlying.') + '</p>';
+    document.getElementById('trade_live_chart').appendChild(div);
+    return;
   }
 }
 
