@@ -110,7 +110,6 @@ var TradingAnalysis = (function() {
             if (currentTab === 'tab_graph') {
                 if (document.getElementById('underlying')){
                     showHighchart();
-                    setUnderlyingTime();
                 } else {
                     BetAnalysis.tab_live_chart.reset();
                     BetAnalysis.tab_live_chart.render(true);
