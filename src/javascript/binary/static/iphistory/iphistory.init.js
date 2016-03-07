@@ -23,29 +23,34 @@ var IPHistory = (function(){
     };
 
     function responseHandler(response){
-        pending = false;
+        if (response.hasOwnProperty('error') && response.error.message) {
+          document.getElementById('err').textContent = response.error.message;
+          return;
+        } else {
+          pending = false;
 
-        var login_history = response.login_history;
-        currentBatch = login_history;
-        historyReceived += currentBatch.length;
+          var login_history = response.login_history;
+          currentBatch = login_history;
+          historyReceived += currentBatch.length;
 
-        if (!tableExist()) {
-            IPHistoryUI.createEmptyTable().appendTo("#login_history-ws-container");
-            IPHistoryUI.updateTable(getNextChunk());
+          if (!tableExist()) {
+              IPHistoryUI.createEmptyTable().appendTo("#login_history-ws-container");
+              IPHistoryUI.updateTable(getNextChunk());
 
-            // Show a message when the table is empty
-            if ((historyReceived === 0) && (currentBatch.length === 0)) {
-                $('#login-history-table tbody')
-                    .append($('<tr/>', {class: "flex-tr"})
-                        .append($('<td/>', {colspan: 6})
-                            .append($('<p/>', {class: "notice-msg center", text: text.localize("Your account has no Login/Logout activity.")})
-                            )
-                        )
-                    );
-            }
+              // Show a message when the table is empty
+              if ((historyReceived === 0) && (currentBatch.length === 0)) {
+                  $('#login-history-table tbody')
+                      .append($('<tr/>', {class: "flex-tr"})
+                          .append($('<td/>', {colspan: 6})
+                              .append($('<p/>', {class: "notice-msg center", text: text.localize("Your account has no Login/Logout activity.")})
+                              )
+                          )
+                      );
+              }
 
-            var titleElement = document.getElementById("login_history-title").firstElementChild;
-            titleElement.textContent = text.localize(titleElement.textContent);
+              var titleElement = document.getElementById("login_history-title").firstElementChild;
+              titleElement.textContent = text.localize(titleElement.textContent);
+          }
         }
     }
 
