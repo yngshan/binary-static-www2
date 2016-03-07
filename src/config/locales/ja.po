@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-03 07:14+0000\n"
-"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/binary/static/ja/>\n"
+"PO-Revision-Date: 2016-03-07 10:41+0000\n"
+"Last-Translator: Masanari Higashiyama <higashiyama@regentmarkets.com>\n"
+"Language-Team: Japanese "
+"<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -93,10 +94,9 @@ msgstr "当社は、訪問者に始めて接触する窓口での顧客の所有
 #. ($client->loginid)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:406
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:454
-#, fuzzy
 #| msgid "Cashier password"
 msgid "%1 cashier password updated"
-msgstr "キャッシャーパスワード"
+msgstr "入出金パスワードを更新しました"
 
 #. (request.website.display_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transfer.html.tt:31
@@ -283,7 +283,7 @@ msgstr "当システムは1日に1万を超えるお取引（仮想アカウン�
 #. ($client->loginid)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:432
 msgid "%1-Failed attempt to unlock cashier section"
-msgstr ""
+msgstr "入出金の解除に失敗しました"
 
 #. (stash('broker_name')
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
@@ -644,7 +644,8 @@ msgstr ""
 #. ($r->url_for('/cashier/forward')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:284
 msgid "<p>Sorry, an error has occurred. Please <a href=\"%1\">try accessing our Cashier</a> again.</p>"
-msgstr "<p>申し訳ございませんがエラー発生につき、改めて<a href=\"%1\">キャッシャーへアクセス</a>して下さいますようお願いいたします。</p>"
+msgstr ""
+"<p>申し訳ございませんがエラー発生につき、改めて<a href=\"%1\">入出金</a>操作をして下さいますようお願いいたします。</p>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:89
 msgid ""
@@ -1444,7 +1445,7 @@ msgstr "「レンジ内」のトレードタイプでは、トレード終値が
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/settings_securityws.html.haml:1
 msgid "An additional password can be used to restrict access to the cashier."
-msgstr "キャッシャーへのアクセスを制限するために、追加パスワードを使用することができます。"
+msgstr "入出金へのアクセスを制限するために、追加パスワードを使用することができます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "An advanced university degree in Mathematics, Physics or Engineering"
@@ -1826,7 +1827,7 @@ msgstr "ご入金方法"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/index.html.haml:1
 msgid "Bank-wire, credit card, e-cash wallet"
-msgstr "銀行振込、クレジットカード、eキャッシュウォレット"
+msgstr "銀行振込にて対応しております"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_application.html.tt:35
 msgid "Bank/Credit Union/Building Society/Credit/Debit Card statement or passbook (within last 3 months)."
@@ -2323,11 +2324,11 @@ msgstr "配当金"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:85
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:45
 msgid "Cashier"
-msgstr "キャッシャー"
+msgstr "入出金"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/settings_securityws.html.haml:1
 msgid "Cashier password"
-msgstr "キャッシャーパスワード"
+msgstr "入出金パスワード"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:25
 msgid "Certain limits are imposed as to the acceptable levels for barrier/strike prices of contracts. Typically, the barrier/strike may not be too close nor too far from the current underlying market level."
@@ -3635,23 +3636,23 @@ msgstr "eキャッシュ"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:140
 msgid "E.g. 03-1234-5678"
-msgstr ""
+msgstr "例　03-1234-5678 (半角)"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:83
 msgid "E.g. 123-4567"
-msgstr ""
+msgstr "例　123-4567 (半角)"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:128
 msgid "E.g. Building name, apartment number etc (Optional)"
-msgstr ""
+msgstr "例　バイナリー１０１号室 (全角)"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:116
 msgid "E.g. Hiroo"
-msgstr ""
+msgstr "例　広尾１ー１ー１ (全角)"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:104
 msgid "E.g. Shibuya-ku"
-msgstr ""
+msgstr "例　渋谷区"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "EGR Operator Award "
@@ -3746,7 +3747,7 @@ msgstr "どの関係者からも、他の関係者への１週間の書面の通
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/session_expired.html.tt:8
 msgid "Either you left the cashier idle for a while or we were not able to log you in properly."
-msgstr "一定時間以上のキャッシャーへの無操作状態が続いたか、適切なログインが施されませんでした。"
+msgstr "一定時間以上の入出金画面での無操作状態が続いたか、適切なログインが施されませんでした。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:38
 msgid "Eligible Counterparty"
@@ -5056,7 +5057,9 @@ msgstr "取引を開始にあたり、当社はお客様の居住国を確認す
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/authenticate_to_withdraw.html.tt:2
 msgid "In order to complete your withdrawal, you must authenticate your account. Once you have done so, please proceed to the Cashier and try withdrawing again."
-msgstr "ご出金リクエストを完了するためには、お客様のご口座をアップグレードする必要があります。ご口座のアップグレード完了した後、改めてキャッシャーからご出金リクエストを完了して下さい。"
+msgstr ""
+"ご出金リクエストを完了するためには、お客様のご口座をアップグレードする必要があります。ご口座のアップグレード完了した後、改めて入出金画面からご出金リクエス"
+"トを完了して下さい。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/email_verification.html.haml:1
 msgid "In order to proceed, please verify your email address."
@@ -6343,7 +6346,7 @@ msgstr "ライブチャット："
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/settings_securityws.html.haml:1
 msgid "Lock Cashier"
-msgstr "ロックキャッシャー"
+msgstr "入出金をロック"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/header.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:79
@@ -6522,7 +6525,7 @@ msgstr "潜在顧客やビジネスパートナーをターゲットとするソ
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Manage the company’s cashier system"
-msgstr "当社のキャッシャーシステム管理"
+msgstr "当社の入出金システム管理"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:28
 msgid "Manage your account access and security settings."
@@ -7783,7 +7786,7 @@ msgstr "次のステップへお進みいただくためにメールアドレス
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/doughflow_currency_choice.html.tt:3
 msgid "Please choose which currency you would like to transact in."
-msgstr "希望お取引通貨をお選び下さい。"
+msgstr "日本円にてお手続きできます"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:266
 msgid "Please click on the verification link sent to your email, or click <a class=\"pjaxload\" href=\"%1\">here</a> to restart the verification process."
@@ -7901,7 +7904,7 @@ msgstr "下記フォームにログインIDとご希望の送金額をご入力�
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:363
 msgid "Please follow the pattern 3 numbers, a dash, followed by 4 numbers."
-msgstr ""
+msgstr "ハイフンを入れて半角で入力してください"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:295
 msgid "Please input a valid date"
@@ -8678,7 +8681,7 @@ msgstr "関連分野（金融サービスが好ましい）での実務経験"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/session_expired.html.tt:12
 msgid "Reload Cashier"
-msgstr "キャッシャーの再読込"
+msgstr "入出金の再読込"
 
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Plack.pm:261
 msgid "Reload page"
@@ -9423,7 +9426,7 @@ msgstr "所定回数以上、不正なデータを入力されてしまいまし
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:443
 msgid "Sorry, you have entered an incorrect cashier password"
-msgstr "申し訳ございませんが、ご入力頂いたキャッシャー・パスワードに誤りがあります"
+msgstr "申し訳ございませんが、ご入力頂いた入出金パスワードに誤りがあります"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1293
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1333
@@ -9876,7 +9879,7 @@ msgstr "お電話"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:105
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:173
 msgid "Telephone"
-msgstr "お電話番号"
+msgstr "電話番号"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:110
 msgid "Telephone conversations may be recorded and/or monitored by designated staff for quality and antifraud purposes."
@@ -10804,7 +10807,7 @@ msgstr "リクエスト処理時にエラーが発生しました。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:362
 msgid "There was some invalid character in an input field."
-msgstr ""
+msgstr "入力された文字に使用できない文字が含まれています。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:246
 msgid "Therefore you may not withdraw any additional funds."
@@ -10893,7 +10896,7 @@ msgstr "当文書"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:473
 msgid "This Payment Agent cashier section is locked."
-msgstr "この決済サービスのキャッシャーセクションはロックされました。"
+msgstr "この決済サービスの入出金はロックされました。"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:776
 msgid "This URL is invalid."
@@ -10925,7 +10928,7 @@ msgstr "このボーナスは下記の条件を満たした場合に付与され
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:254
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:894
 msgid "This client cashier section is locked."
-msgstr "この顧客のキャッシャーはロックされています。"
+msgstr "この顧客の入出金はロックされています。"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1221
 msgid "This contract cannot be properly validated at this time."
@@ -11000,12 +11003,14 @@ msgstr "こちらはデモ口座です。リアル口座へ切り替えて入金
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:412
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:460
 msgid "This is an automated message to alert you that a change was made to your cashier settings section of your account %1 from IP address %2. If you did not perform this update please login to your account and update settings."
-msgstr "これはIPアドレス%2からお客様の口座%1のキャッシャー設定セクションで変更がありましたことを警告する自動メッセージです。この変更にお心当たりのない場合は、口座にログインしていただき、設定を変更してください。"
+msgstr ""
+"これはIPアドレス%2からお客様の口座%1の入出金設定セクションで変更がありましたことを警告する自動メッセージです。この変更にお心当たりのない場合は、口座"
+"にログインしていただき、設定を変更してください。"
 
 #. ($client->loginid,                            $client_ip)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:438
 msgid "This is an automated message to alert you to the fact that there was a failed attempt to unlock the Cashier/Settings section of your account %1 from IP address %2"
-msgstr "警告！お客様のご口座%1に対しIPアドレス%2からキャッシャーの設定ページを解除しようとした事象が検出されました。"
+msgstr "警告！お客様のご口座%1に対しIPアドレス%2から入出金の設定ページを解除しようとした事象が検出されました。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/barrier.html.tt:23
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/barrier.html.tt:42
@@ -11179,7 +11184,7 @@ msgstr "お客様情報の変更をご希望される場合は<a href=\"%1\">カ
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/session_expired.html.tt:9
 msgid "To continue using our cashier system, please try accessing it again:"
-msgstr "キャッシャーを引き続きご利用するには、また改めてアクセスして下さい："
+msgstr "入出金を引き続きご利用するには、また改めてアクセスして下さい："
 
 #. (url_for('/affiliate/signup')
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/white_labels.html.haml:1
@@ -11265,7 +11270,7 @@ msgstr "ご利用方法"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:140
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:78
 msgid "Town/City"
-msgstr "市町村名"
+msgstr "市区町村"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/nav.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:57
@@ -13049,38 +13054,38 @@ msgstr "ボーナスはお客様のご口座に３営業日以内に付与され
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:113
 msgid "Your cashier is locked"
-msgstr "キャッシャーはロックされています"
+msgstr "入出金はロックされています"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:212
 msgid "Your cashier is locked as per your request"
-msgstr "リクエストによりキャッシャーがロックされました。"
+msgstr "お客様からのリクエストにより入出金がロックされました。"
 
 #. ($r->url_for('/user/settings/securityws')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:118
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:817
 msgid "Your cashier is locked as per your request - to unlock it, please <a href=\"%1\">click here</a>."
-msgstr "お客様のキャッシャーはリクエストによりロックしました。 - 解除するには<a href=\"%1\">こちらをクリック</a>してください。"
+msgstr "お客様の入出金はリクエストによりロックしました。 - 解除するには<a href=\"%1\">こちらをクリック</a>してください。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:422
 msgid "Your cashier is locked as per your request."
-msgstr "リクエストによりキャッシャーがロックされました。"
+msgstr "リクエストにより入出金がロックされました。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:258
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:898
 msgid "Your cashier section is locked."
-msgstr "キャッシャーはロックされています。"
+msgstr "入出金はロックされています。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/session_expired.html.tt:7
 msgid "Your cashier session has expired"
-msgstr "キャッシャー処理の期限が切れました"
+msgstr "入出金処理の期限が切れました"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:386
 msgid "Your cashier was locked."
-msgstr "キャッシャーがロックされました"
+msgstr "入出金がロックされました"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:421
 msgid "Your cashier was not locked."
-msgstr "キャッシャーはロックされていません"
+msgstr "入出金はロックされていません"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:344
 msgid "Your changes have been updated."
@@ -13137,7 +13142,9 @@ msgstr "資金は安全に管理されます"
 #. ('support@binary.com')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:111
 msgid "Your identity documents have passed their expiration date. Kindly send a scan of a valid ID to <a href=\"mailto:%1\">%1</a> to unlock your cashier."
-msgstr "ご提出頂いた身分証明書の有効期限が切れてしまいましたので、キャッシャーは現在ロックされています。新たな身分証明書を<a href=\"mailto:%1\">%1</a>までご送付して下さい。"
+msgstr ""
+"ご提出頂いた身分証明書の有効期限が切れてしまいましたので、入出金は現在ロックされています。新たな身分証明書を<a href=\"mailto:%1\""
+">%1</a>までご送付して下さい。"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1954
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:60
