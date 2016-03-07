@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: I 18N\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-07 09:39+0000\n"
-"Last-Translator: Khalik Pratama <khalik@binary.com>\n"
+"PO-Revision-Date: 2016-03-07 10:39+0000\n"
+"Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
 "Language-Team: Indonesian "
 "<https://hosted.weblate.org/projects/binary/static/id/>\n"
 "Language: id\n"
@@ -94,10 +94,9 @@ msgstr "%1 mengasumsikan kepemilikan Pelanggan sebagai di titik kontak pertama d
 #. ($client->loginid)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:406
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:454
-#, fuzzy
 #| msgid "Cashier password"
 msgid "%1 cashier password updated"
-msgstr "Kata sandi Kasir"
+msgstr "Sandi kasir %1 sudah diperbarui"
 
 #. (request.website.display_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transfer.html.tt:31
@@ -133,10 +132,11 @@ msgid "%1 has thousands of clients taking a variety of positions on the financia
 msgstr "%1 memiliki ribuan klien yang membeli beberapa posisi pada pasar finansial pada setiap saat yang menghasilkan margin kecil pada trading ini."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:379
-#, fuzzy
 #| msgid "%1 has updated its <a class=\"pjaxload\" href=\"%2\">Terms & Conditions</a>. By clicking OK, you confirm that you have read and accepted the updated <a class=\"pjaxload\" href=\"%2\">Terms & Conditions</a>."
 msgid "%1 has updated its %2. By clicking OK, you confirm that you have read and accepted the updated %2."
-msgstr "%1 telah memperbarui <a class=\"pjaxload\" href=\"%2\">Syarat & Ketentuannya</a>. Dengan mengklik OK, berarti Anda telah membaca dan menerima <a class=\"pjaxload\" href=\"%2\">Syarat & Ketentuan terbaru</a>."
+msgstr ""
+"%1 telah memperbarui %2. Dengan mengklik OK, berarti Anda sudah membaca dan "
+"menyetujui %2 terbaru."
 
 #. (landing_company, tnc_page_url)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_conditions_approval_message.html.tt:11
@@ -282,7 +282,7 @@ msgstr "Sistem %1 telah memproses lebih dari 1 juta transaksi/hari (termasuk pad
 #. ($client->loginid)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:432
 msgid "%1-Failed attempt to unlock cashier section"
-msgstr ""
+msgstr "%1-Percobaan membuka bagian kasir gagal"
 
 #. (stash('broker_name')
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
@@ -2405,10 +2405,9 @@ msgid "Choose Rise/Fall when you want to profit from the market rising or fallin
 msgstr "Pilih Naik/Turun untuk memperoleh keuntungan berdasakan kenaikan atau penurunan pasar dari level terkini."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:24
-#, fuzzy
 #| msgid "Choose a Name:"
 msgid "Choose Scopes:"
-msgstr "Pilih Nama:"
+msgstr "Pilih Cangkupan:"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 msgid "Choose Stays In/Out to profit from the market staying inside or going outside two price targets any time during the contract period."
@@ -3611,23 +3610,23 @@ msgstr "E-cash"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:140
 msgid "E.g. 03-1234-5678"
-msgstr ""
+msgstr "Contoh: 03-1234-5678"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:83
 msgid "E.g. 123-4567"
-msgstr ""
+msgstr "Contoh: 123-4567"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:128
 msgid "E.g. Building name, apartment number etc (Optional)"
-msgstr ""
+msgstr "Contoh: Nama gedung, nomor apartemen dll (Tidak wajib)"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:116
 msgid "E.g. Hiroo"
-msgstr ""
+msgstr "Contoh: Hiroo"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:104
 msgid "E.g. Shibuya-ku"
-msgstr ""
+msgstr "Contoh: Shibuya-ku"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "EGR Operator Award "
@@ -5428,10 +5427,14 @@ msgid "It is the responsibility of each Client to read and understand this legal
 msgstr "Adalah merupakan tanggung jawab masing-masing klien untuk membaca dan memahami pemberitahuan resmi dan syarat serta kondisi ini sesuai dengan akuisisi kontrak yang diatur melalui situs ini."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/conflicts_policy.html.tt:8
-#, fuzzy
 #| msgid "It is understood that we or any of our directors, officers or employees thereof may have an interest, relationship or arrangement that is material in relation to any trade effected on behalf of you and it is agreed that any person so interested shall be entitled to retain any benefit or profit received and shall not be liable to account therefore to you by reason only of such conflict."
 msgid "It is understood that Binary Group companies, as trading counterparty, have an interest, relationship or arrangement that is material in relation to any trade effected on behalf of you and it is agreed that any company so interested shall be entitled to retain any benefit or profit received and shall not be liable to account therefore to you by reason only of such conflict."
-msgstr "Sudah memahami bahwa kami atau direksi, pejabat atau karyawan yang mungkin memiliki kepentingan, hubungan atau pengaturan secara material, berkaitan dengan setiap trading yang dilakukan atas nama Anda dan telah menyepakati bahwa setiap orang yang tertarik berhak untuk mempertahankan manfaat atau keuntungan yang diterima dan tidak bertanggung jawab kepada akun Anda hanya dengan alasan konflik tersebut."
+msgstr ""
+"Sudah dipahami bahwa grup perusahaan Binary, sebagai pihak berlawanan, "
+"memiliki kepentingan, hubungan atau pengaturan yang bersifat material dalam "
+"kaitannya dengan kontrak yang terlibat atas nama Anda dan sepakat jika ada "
+"perusahaan yang menahan manfaat atau keuntungan Anda maka Binary tidak "
+"bertanggung jawab atas alasan apapun pada konflik sedemikian."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/promocode.html.tt:46
 msgid "It will be released to your account upon approval."
@@ -7279,10 +7282,9 @@ msgid "Open positions"
 msgstr "Posisi berjalan"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/open_source_projects.html.haml:1
-#, fuzzy
 #| msgid "open-Source projects"
 msgid "Open-source projects"
-msgstr "Proyek open source"
+msgstr "Proyek open-source"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/beginners_faq.html.haml:1
 msgid "Opening an account"
@@ -7559,10 +7561,9 @@ msgid "Password score is: %1. Passing score is: 20."
 msgstr "Skor kata sandi: %1. Skor lulus adalah: 20."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:286
-#, fuzzy
 #| msgid "Password should have letters and numbers."
 msgid "Password should have letters and numbers and at least 6 characters."
-msgstr "Kata sandi harus terdiri dari huruf dan angka."
+msgstr "Kata sandi harus memiliki huruf dan angka dan minimal 6 karakter."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:276
 msgid "Password should have letters and numbers."
@@ -7690,10 +7691,9 @@ msgstr "Modul perl"
 
 #. ($descriptor->{require_scope})
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:414
-#, fuzzy
 #| msgid "Permission denied."
 msgid "Permission denied, requiring %1"
-msgstr "Izin ditolak."
+msgstr "Izin ditolak, memerlukan %1"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:60
 msgid "Permission denied."
@@ -7858,7 +7858,7 @@ msgstr "Silahkan isi Login ID dan jumlah yang ingin Anda transfer ke klien Anda 
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:363
 msgid "Please follow the pattern 3 numbers, a dash, followed by 4 numbers."
-msgstr ""
+msgstr "Silahkan ikuti pola 3 angka, garis, diikuti oleh 4 angka."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:295
 msgid "Please input a valid date"
@@ -9862,10 +9862,9 @@ msgid "Terms"
 msgstr "Persyaratan"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:380
-#, fuzzy
 #| msgid "Terms and Conditions"
 msgid "Terms & Conditions"
-msgstr "Syarat dan Kondisi"
+msgstr "Syarat & Ketentuan"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:192
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:204
@@ -9880,10 +9879,9 @@ msgid "Terms and Conditions"
 msgstr "Syarat dan Kondisi"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:910
-#, fuzzy
 #| msgid "Terms and Conditions"
 msgid "Terms and Conditions Approval"
-msgstr "Syarat dan Kondisi"
+msgstr "Syarat dan Ketentuan Persetujuan"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/japan.pm:186
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:457
@@ -10682,7 +10680,7 @@ msgstr "Transaksi tidak terproses."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:362
 msgid "There was some invalid character in an input field."
-msgstr ""
+msgstr "Terdapat beberapa karakter yang tidak berlaku pada kolom input."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:246
 msgid "Therefore you may not withdraw any additional funds."
@@ -11604,10 +11602,9 @@ msgid "Verify your withdrawal request - %1"
 msgstr "Verifikasi permintaan penarikan Anda - %1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:4
-#, fuzzy
 #| msgid "Version 39. Last modified 2015-12-04."
 msgid "Version 39. Last modified 2016-03-01."
-msgstr "Version 39. Diubah terakhir pada 04-12-2015."
+msgstr "Version 39. Diubah terakhir pada 01-03-2016."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:190
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/analyse_link.html.tt:4
@@ -12113,10 +12110,17 @@ msgid "Where new ideas trump safe, old ones. And you’re free to work your way,
 msgstr "Terbuka kepada berbagai ide. Dan Anda bebas bekerja dengan gaya Anda, bebas dari hirarki dan birokrasi."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/conflicts_policy.html.tt:22
-#, fuzzy
 #| msgid "Where our arrangements to manage conflicts are not or cannot be sufficient to be reasonably confident that risks of damage to a client’s interest will be prevented we aim to disclose the general nature or sources of conflicts. This is aimed at allowing the client the opportunity to consider whether to ask for more information or to continue with the service; we do not aim to provide detailed, highly specific or comprehensive information."
 msgid "Where our arrangements to manage conflicts are not or cannot be sufficient to be reasonably confident that risks of damage to a client’s interest will be prevented we aim to disclose the general nature or sources of conflicts. This is aimed at allowing the client the opportunity to consider whether to ask for more information by sending an email to compliance<b></b>@<i></i>binary.com, or to continue with the service; we do not aim to provide detailed, highly specific or comprehensive information."
-msgstr "Dimana persiapan kami untuk mengelola konflik yang tidak atau tidak dapat cukup untuk menjadi cukup yakin bahwa risiko kerusakan kepentingan klien akan dicegah kami bertujuan untuk mengungkapkan sifat umum atau sumber konflik. Ini bertujuan untuk memungkinkan klien kesempatan untuk mempertimbangkan apakah akan meminta informasi lebih lanjut atau untuk melanjutkan dengan layanan; kita tidak bertujuan untuk memberikan informasi rinci, sangat spesifik atau komprehensif."
+msgstr ""
+"Dimana persiapan kami untuk mengelola konflik yang tidak atau tidak dapat "
+"cukup untuk menjadi cukup yakin bahwa risiko kerusakan kepentingan klien "
+"akan dicegah kami bertujuan untuk mengungkapkan sifat umum atau sumber "
+"konflik. Ini bertujuan untuk memungkinkan klien kesempatan untuk "
+"mempertimbangkan apakah akan meminta informasi lebih lanjut dengan "
+"mengirimkan email ke compliance<b></b>@<i></i>binary.com, atau untuk "
+"melanjutkan dengan layanan; kita tidak bertujuan untuk memberikan informasi "
+"rinci, sangat spesifik atau komprehensif."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "Where supportive colleagues are like a second family."
@@ -14174,10 +14178,9 @@ msgid "International Consolidated Airlines Group SA"
 msgstr "International Consolidated Airlines Group SA"
 
 #: Underlying Symbol DEDUE
-#, fuzzy
 #| msgid "Drr AG"
 msgid "Drr AG"
-msgstr "Duerr AG"
+msgstr "Drr AG"
 
 #: Underlying Symbol INHDFC
 msgid "HDFC Bank Ltd"
