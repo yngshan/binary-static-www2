@@ -300,6 +300,8 @@ function contractTypeDisplayMapping(type) {
     var obj = {
         CALL: "top",
         PUT: "bottom",
+        CALLE: "top",
+        PUTE: "bottom",
         ASIANU: "top",
         ASIAND: "bottom",
         DIGITMATCH: "top",
@@ -308,6 +310,8 @@ function contractTypeDisplayMapping(type) {
         DIGITODD: "bottom",
         DIGITOVER: "top",
         DIGITUNDER: "bottom",
+        EXPIRYRANGEE: "top",
+        EXPIRYMISSE: "bottom",
         EXPIRYRANGE: "top",
         EXPIRYMISS: "bottom",
         RANGE: "top",
