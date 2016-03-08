@@ -314,8 +314,6 @@ function contractTypeDisplayMapping(type) {
         EXPIRYMISSE: "bottom",
         EXPIRYRANGE: "top",
         EXPIRYMISS: "bottom",
-        EXPIRYRANGEE: "top",
-        EXPIRYMISSE: "bottom",
         RANGE: "top",
         UPORDOWN: "bottom",
         ONETOUCH: "top",
