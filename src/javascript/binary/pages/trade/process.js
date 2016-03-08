@@ -86,20 +86,15 @@ function processMarketUnderlying() {
 function processContract(contracts) {
     'use strict';
     window.chartAllowed = true;
+    var feedLicense = contracts.contracts_for.feed_license;
+    if (feedLicense && feedLicense === 'chartonly') {
+      window.chartAllowed = false;
+    }
 
     document.getElementById('trading_socket_container').classList.add('show');
     document.getElementById('trading_init_progress').style.display = 'none';
 
     Contract.setContracts(contracts);
-
-    if (typeof contracts.contracts_for !== 'undefined') {
-        Tick.setQuote(contracts.contracts_for.spot);
-        Tick.display(contracts.contracts_for.spot);
-        var feedLicense = contracts.contracts_for.feed_license;
-        if (feedLicense && feedLicense === 'chartonly') {
-          window.chartAllowed = false;
-        }
-    }
 
     var contract_categories = Contract.contractForms();
     var formname;
