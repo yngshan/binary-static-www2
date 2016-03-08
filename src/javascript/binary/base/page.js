@@ -11,7 +11,7 @@ var GTM = (function() {
             pjax      : page.is_loaded_by_pjax,
             url       : document.URL,
             event     : 'page_load',
-            is_legacy : 'false', //TODO: remove
+            is_legacy : 'false',
         };
         if(page.client.is_logged_in) {
             data_layer_info['visitorID'] = page.client.loginid;
@@ -70,7 +70,7 @@ var GTM = (function() {
                 }
             });
             gtm_params['url'] = document.URL;
-            gtm_params['is_legacy'] = 'true'; //TODO: remove
+            gtm_params['is_legacy'] = 'true';
 
             var entry = {};
             entry['params'] = gtm_params;

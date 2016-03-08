@@ -48,7 +48,7 @@ pjax_config_page("new_account/virtualws", function(){
 
                     if (type === 'new_account_virtual' && !error){
                       // set a flag to push to gtm in my_account
-                      window.new_account = true;
+                      localStorage.setItem('new_account', '1');
                       // GTM.push_data_layer({
                       //   'event'         : 'new_account',
                       //   'visitorID'     : response.new_account_virtual.client_id,

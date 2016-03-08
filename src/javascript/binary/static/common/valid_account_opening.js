@@ -37,7 +37,7 @@ var ValidAccountOpening = (function(){
       $.cookie('loginid_list', loginid + ':R:E+' + oldCookieValue, {domain: cookie_domain, path:'/'});
       $.cookie('loginid', loginid, {domain: cookie_domain, path:'/'});
       // set a flag to push to gtm in my_account
-      window.new_account = true;
+      localStorage.setItem('new_account', '1');
       //push to gtm
       // var age = new Date().getFullYear() - document.getElementById('dobyy').value;
       // document.getElementById('event').innerHTML = 'new_account';

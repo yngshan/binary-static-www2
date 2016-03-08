@@ -110,9 +110,9 @@ var MyAccountWS = (function() {
 
     var addGTMDataLayer = function(get_settings) {
         var is_login = page.url.param('login'),
-            is_newaccount = window.new_account;
+            is_newaccount = localStorage.getItem('new_account') === '1';
         if(is_login || is_newaccount) {
-            window.new_account = undefined;
+            localStorage.removeItem('new_account');
             var oldUrl = window.location.href;
             var newUrl = oldUrl.replace(/(login=true&|newaccounttype=real&|newaccounttype=virtual&)/gi, '');
 
