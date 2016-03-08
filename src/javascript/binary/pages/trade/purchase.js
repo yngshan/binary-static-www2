@@ -96,9 +96,11 @@ var Purchase = (function () {
                 button.textContent = Content.localize().textContractConfirmationButton;
                 button.setAttribute('contract_id', receipt['contract_id']);
                 button.show();
+                $('.open_contract_detailsws').attr('contract_id', receipt['contract_id']).removeClass('invisible');
             }
             else{
                 button.hide();
+                $('.open_contract_detailsws').addClass('invisible');
             }
         }
 
