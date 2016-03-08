@@ -147,7 +147,7 @@ var ViewPopupWS = (function() {
         containerSetText('pnl_point'        , contract.profit_point.toFixed(2));
 
         if(!contract.is_ended) {
-            contract.sell_level = contract.entry_level + contract.profit * contract.direction; //TODO: to be changed
+            contract.sell_level = contract.entry_level + contract.profit_point * contract.direction; //TODO: to be changed
             containerSetText('sell_level', contract.sell_level.toFixed(contract.decPlaces));
         }
         else {
@@ -160,7 +160,7 @@ var ViewPopupWS = (function() {
     };
 
     var makeTemplateSpread = function() {
-        $Container = $('<div/>');//.append($('<div/>', {id: 'is_spread_contract'}));
+        $Container = $('<div/>');
         $Container.prepend($('<div/>', {id: 'sell_bet_desc', class: 'popup_bet_desc drag-handle', text: text.localize('Contract Information')}));
 
         var $table = $('<table><tbody></tbody></table>');
@@ -238,7 +238,7 @@ var ViewPopupWS = (function() {
         normalUpdate();
 
         if(!chartStarted) {
-            ViewPopupUI.sell_at_market($Container, contract.underlying);
+            ViewPopupUI.show_chart($Container, contract.underlying);
             chartStarted = true;
         }
     };
@@ -276,7 +276,7 @@ var ViewPopupWS = (function() {
         if(!isSold && just_sold) {
             isSold = true;
             containerSetText('trade_details_sold_date', '', {'epoch_time': contract.sell_spot_time});
-            ViewPopupUI.sell_at_market($Container, contract.underlying);
+            ViewPopupUI.show_chart($Container, contract.underlying);
         }
         if(is_ended) {
             contractEndedNormal(parseFloat(profit_loss) > 0);
@@ -341,10 +341,6 @@ var ViewPopupWS = (function() {
             'payout'             : contract.payout,
             'currency'           : contract.currency,
             'contract_id'        : contract.contract_id,
-            //'stream_url'         : 'https://www.binaryqa34.com/push/price/',
-            //'sell_channel'       : 'P_CALL-1457076980_FRXAUDJPY_1457112980_S0P_0_c_USD_EN',
-            //'error_message'      : 'Contract cannot be sold at this time.',
-            //'submit_url'         : 'https://www.binaryqa34.com/d/trade.cgi?l=EN',
             'is_immediate'       : '0',
             'is_negative'        : '0',
             'trade_feed_delay'   : '60'
@@ -384,17 +380,6 @@ var ViewPopupWS = (function() {
 
     var epochToDateTime = function(epoch) {
         return moment.utc(epoch * 1000).format('YYYY-MM-DD HH:mm:ss');
-    };
-
-    var makeTooltip = function(value, tooltip, attributes) {
-        var attrs = '';
-        if(attributes && Object.keys(attributes).length > 0) {
-            $.each(attributes, function(prop, value){
-                attrs += ' ' + prop + '="' + value + '"';
-            });
-        }
-        // return '<div rel="tooltip" title="' + tooltip + '"' + attrs + '>' + value + '</div>';
-        return '<div' + attrs + '>' + value + '</div>';
     };
 
     // ===== Tools =====
@@ -452,8 +437,6 @@ var ViewPopupWS = (function() {
             $Container.find('#errMsg').text(response.error.message).removeClass(hiddenClass);
             return;
         }
-        // if(response.echo_req.hasOwnProperty('passthrough')) {
-        //     if(response.echo_req.passthrough.hasOwnProperty('spread')) {
         if(contractType === 'spread') {
             $Container.find('#spread_sell').parent().addClass(hiddenClass);
         }
@@ -464,7 +447,7 @@ var ViewPopupWS = (function() {
                 '<br />' +
                 text.localize('Your transaction reference number is [_1]').replace('[_1]', response.sell.transaction_id)
             );
-            ViewPopupUI.sell_at_market($Container, contract.underlying);
+            ViewPopupUI.show_chart($Container, contract.underlying);
         }
     };
 
@@ -511,10 +494,10 @@ var ViewPopupWS = (function() {
 
     // ----- Proposal -----
     var responseProposal = function(response) {
-        // if(response.hasOwnProperty('error')) {
-        //     $Container.find('#errMsg').text(response.error.message).removeClass(hiddenClass);
-        //     return;
-        // }
+        if(response.hasOwnProperty('error')) {
+            $Container.find('#errMsg').text(response.error.message).removeClass(hiddenClass);
+            return;
+        }
         if(response.echo_req.hasOwnProperty('passthrough')) {
             if(response.echo_req.passthrough.hasOwnProperty('spread') && Object.keys(proposal).length === 0) {
                 proposal = response.proposal;
