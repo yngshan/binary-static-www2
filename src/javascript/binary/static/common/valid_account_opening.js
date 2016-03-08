@@ -29,8 +29,6 @@ var ValidAccountOpening = (function(){
       return;
     } else {
       var loginid = message.client_id;
-      // Record that client viewed updated Terms & Conditions
-      BinarySocket.send({"tnc_approval" : "1"});
       //set cookies
       var oldCookieValue = $.cookie('loginid_list');
       var cookie_domain = '.' + document.domain.split('.').slice(-2).join('.');
