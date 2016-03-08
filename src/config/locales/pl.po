@@ -7,14 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-04 11:39+0000\n"
-"Last-Translator: Anna Płochocka <plochocka.anna@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/binary/static/pl/>\n"
+"PO-Revision-Date: 2016-03-08 19:35+0000\n"
+"Last-Translator: Ewelina Bruździak <e.bruzdziak@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/binary/static/pl/>"
+"\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.5-dev\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -97,7 +99,7 @@ msgstr "Przyjmuje się, że w momencie pierwszej wizyty klient należy do %1. Pa
 #, fuzzy
 #| msgid "Cashier password"
 msgid "%1 cashier password updated"
-msgstr "Hasło do sekcji Kasjer"
+msgstr "Hasło do sekcji Kasjer %1 zostało zaktualizowane"
 
 #. (request.website.display_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transfer.html.tt:31
@@ -136,7 +138,9 @@ msgstr "%1 ma tysiące klientów, zawierających transakcje na rynkach finansowy
 #, fuzzy
 #| msgid "%1 has updated its <a class=\"pjaxload\" href=\"%2\">Terms & Conditions</a>. By clicking OK, you confirm that you have read and accepted the updated <a class=\"pjaxload\" href=\"%2\">Terms & Conditions</a>."
 msgid "%1 has updated its %2. By clicking OK, you confirm that you have read and accepted the updated %2."
-msgstr "Firma %1 zaktualizowała swój <a class=\"pjaxload\" href=\"%2\">Regulamin</a>. Kliknięcie OK oznacza, że zapoznałeś/aś się z zaktualizowanym <a class=\"pjaxload\" href=\"%2\">Regulaminem</a> i wyrażasz zgodę na jego postanowienia."
+msgstr ""
+"Firma %1 zaktualizowała swój %2. Kliknięcie OK oznacza, że zapoznałeś/aś się "
+"z zaktualizowanym %2 i wyrażasz zgodę na jego postanowienia."
 
 #. (landing_company, tnc_page_url)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_conditions_approval_message.html.tt:11
@@ -281,8 +285,9 @@ msgstr "Systemy %1 przetwarzają obecnie ponad 1 milion transakcji dziennie (z u
 
 #. ($client->loginid)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:432
+#, fuzzy
 msgid "%1-Failed attempt to unlock cashier section"
-msgstr ""
+msgstr "%1-Nieudana próba odblokowania sekcji Kasjer"
 
 #. (stash('broker_name')
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
@@ -2516,9 +2521,8 @@ msgid "Choose Rise/Fall when you want to profit from the market rising or fallin
 msgstr "Wybierz zakład typu \"wzrost/spadek\", jeśli chcesz zyskać, gdy rynek zyska lub straci w stosunku do obecnego poziomu."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:24
-#, fuzzy
 msgid "Choose Scopes:"
-msgstr "Wybierz nazwę:"
+msgstr "Wybierz zakres:"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 msgid "Choose Stays In/Out to profit from the market staying inside or going outside two price targets any time during the contract period."
@@ -3773,23 +3777,23 @@ msgstr "E-gotówka"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:140
 msgid "E.g. 03-1234-5678"
-msgstr ""
+msgstr "Np. 03-1234-5678"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:83
 msgid "E.g. 123-4567"
-msgstr ""
+msgstr "Np. 123-4567"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:128
 msgid "E.g. Building name, apartment number etc (Optional)"
-msgstr ""
+msgstr "Np. Nazwa budynku, numer lokalu itp. (opcjonalnie)"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:116
 msgid "E.g. Hiroo"
-msgstr ""
+msgstr "Np. Hiroo"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:104
 msgid "E.g. Shibuya-ku"
-msgstr ""
+msgstr "Np. Shibuya-ku"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 #, fuzzy
@@ -5713,10 +5717,15 @@ msgid "It is the responsibility of each Client to read and understand this legal
 msgstr "Obowiązkiem każdego Klienta jest przeczytanie i zrozumienie niniejszej informacji prawnej oraz regulaminu, na mocy których regulowane jest pozyskiwanie kontraktów finansowych za pośrednictwem tego portalu."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/conflicts_policy.html.tt:8
-#, fuzzy
 #| msgid "It is understood that we or any of our directors, officers or employees thereof may have an interest, relationship or arrangement that is material in relation to any trade effected on behalf of you and it is agreed that any person so interested shall be entitled to retain any benefit or profit received and shall not be liable to account therefore to you by reason only of such conflict."
 msgid "It is understood that Binary Group companies, as trading counterparty, have an interest, relationship or arrangement that is material in relation to any trade effected on behalf of you and it is agreed that any company so interested shall be entitled to retain any benefit or profit received and shall not be liable to account therefore to you by reason only of such conflict."
-msgstr "Uznaje się, że my i wszyscy nasi dyrektorzy oraz pracownicy mogą posiadać interes, związek lub relację, które są znaczące w stosunku do jakiejkolwiek transakcji realizowanej w Twoim imieniu i uzgadnia się, że jakakolwiek osoba posiadająca taki interes jest uprawniona do zatrzymania wszelkich uzyskanych korzyści i zysków i nie jest zobowiązana do rozliczenia się z Tobą jedynie z uwagi na taki konflikt."
+msgstr ""
+"Uznaje się, że spółki grupy Binary Group, jako kontrahenci handlowi, mogą "
+"posiadać interes, związek lub relację, które są znaczące w stosunku do "
+"jakiejkolwiek transakcji realizowanej w Twoim imieniu i uzgadnia się, że "
+"spółka posiadająca taki interes jest uprawniona do zatrzymania wszelkich "
+"uzyskanych korzyści i zysków i nie jest zobowiązana do rozliczenia się z "
+"Tobą jedynie z uwagi na taki konflikt."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/promocode.html.tt:46
 msgid "It will be released to your account upon approval."
@@ -7607,7 +7616,7 @@ msgstr "Wolne stanowiska"
 #, fuzzy
 #| msgid "open-Source projects"
 msgid "Open-source projects"
-msgstr "projekty open-source"
+msgstr "Projekty open-source"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/beginners_faq.html.haml:1
 msgid "Opening an account"
@@ -7894,7 +7903,8 @@ msgstr "Ocena tego hasła to: %1. Akceptowalna ocena to: 20."
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:286
 #, fuzzy
 msgid "Password should have letters and numbers and at least 6 characters."
-msgstr "Hasło powinno składać się z liter i cyfr."
+msgstr ""
+"Hasło powinno składać się z liter i cyfr i zawierać co najmniej 6 znaków."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:276
 #, fuzzy
@@ -8210,8 +8220,9 @@ msgid "Please fill in the Login ID and Amount you wish to transfer to your Clien
 msgstr "W formularzu poniżej wpisz login i kwotę, którą chcesz przekazać swojemu Klientowi:"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:363
+#, fuzzy
 msgid "Please follow the pattern 3 numbers, a dash, followed by 4 numbers."
-msgstr ""
+msgstr "Proszę zastosować schemat: 3 cyfry, myślnik, 4 cyfry."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:295
 msgid "Please input a valid date"
@@ -10210,7 +10221,6 @@ msgid "Terms"
 msgstr "Warunki"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:380
-#, fuzzy
 #| msgid "Terms and Conditions"
 msgid "Terms & Conditions"
 msgstr "Regulamin"
@@ -10228,10 +10238,9 @@ msgid "Terms and Conditions"
 msgstr "Regulamin"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:910
-#, fuzzy
 #| msgid "Terms and Conditions"
 msgid "Terms and Conditions Approval"
-msgstr "Regulamin"
+msgstr "Akceptacja regulaminu"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/japan.pm:186
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:457
@@ -11022,8 +11031,9 @@ msgid "There was an error processing the request."
 msgstr "Wystąpił błąd podczas przetwarzania Twojego wniosku."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:362
+#, fuzzy
 msgid "There was some invalid character in an input field."
-msgstr ""
+msgstr "Nieprawidłowy znak w polu wpisywania."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:246
 msgid "Therefore you may not withdraw any additional funds."
@@ -11945,10 +11955,9 @@ msgid "Verify your withdrawal request - %1"
 msgstr "Zweryfikuj swój wniosek o wypłatę - %1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:4
-#, fuzzy
 #| msgid "Version 39. Last modified 2015-12-04."
 msgid "Version 39. Last modified 2016-03-01."
-msgstr "Wersja 39. Ostatnio zmieniana dnia 04.12.2015 r."
+msgstr "Wersja 39. Ostatnio zmieniana dnia 01.03.2016 r."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:190
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/analyse_link.html.tt:4
@@ -12454,10 +12463,17 @@ msgid "Where new ideas trump safe, old ones. And you’re free to work your way,
 msgstr "Nowe pomysły pojawiają się same. A Ty możesz pracować tak, jak chcesz, bez zbędnych zależności służbowych i biurokracji."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/conflicts_policy.html.tt:22
-#, fuzzy
 #| msgid "Where our arrangements to manage conflicts are not or cannot be sufficient to be reasonably confident that risks of damage to a client’s interest will be prevented we aim to disclose the general nature or sources of conflicts. This is aimed at allowing the client the opportunity to consider whether to ask for more information or to continue with the service; we do not aim to provide detailed, highly specific or comprehensive information."
 msgid "Where our arrangements to manage conflicts are not or cannot be sufficient to be reasonably confident that risks of damage to a client’s interest will be prevented we aim to disclose the general nature or sources of conflicts. This is aimed at allowing the client the opportunity to consider whether to ask for more information by sending an email to compliance<b></b>@<i></i>binary.com, or to continue with the service; we do not aim to provide detailed, highly specific or comprehensive information."
-msgstr "W przypadku, gdy nasze rozwiązania w zakresie zarządzania konfliktami nie są wystarczające lub nie mogą być wystarczające, by stwierdzić, że skutecznie zapobiegamy ryzyku naruszenia interesu klienta, dążymy do ujawnienie ogólnej natury sporów i ich źródeł. Ma to na celu zapewnienie klientowi możliwości rozważenia, czy chce poprosić o więcej informacji, czy kontynuować korzystanie z usługi; nie zapewniamy szczegółowych, bardzo konkretnych i wyczerpujących informacji."
+msgstr ""
+"W przypadku, gdy nasze rozwiązania w zakresie zarządzania konfliktami nie są "
+"wystarczające lub nie mogą być wystarczające, by stwierdzić, że skutecznie "
+"zapobiegamy ryzyku naruszenia interesu klienta, dążymy do ujawnienie ogólnej "
+"natury sporów i ich źródeł. Ma to na celu zapewnienie klientowi możliwości "
+"rozważenia, czy chce poprosić o więcej informacji, wysyłając wiadomość e-"
+"mailową na adres: compliance<b></b>@<i></i>binary.com, czy kontynuować "
+"korzystanie z usługi; nie zapewniamy szczegółowych, bardzo konkretnych i "
+"wyczerpujących informacji."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "Where supportive colleagues are like a second family."
@@ -13088,16 +13104,18 @@ msgid "You're using a Virtual Account."
 msgstr "Korzystasz z konta z wirtualnymi pieniędzmi."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:374
-#, fuzzy
 #| msgid "Your %1 account is unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
 msgid "Your %1 account is unavailable. For any questions please contact %2."
-msgstr "Twoje konto %1 jest niedostępne. W przypadku jakichkolwiek pytań prosimy o kontakt z <a href=\"%2\">działem obsługi klienta</a>."
+msgstr ""
+"Twoje konto %1 jest niedostępne. W przypadku jakichkolwiek pytań prosimy o "
+"kontakt z %2."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:375
-#, fuzzy
 #| msgid "Your %1 accounts are unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
 msgid "Your %1 accounts are unavailable. For any questions please contact %2."
-msgstr "Twoje konta %1 są niedostępne. W przypadku jakichkolwiek pytań prosimy o kontakt z <a href=\"%2\">działem obsługi klienta</a>."
+msgstr ""
+"Twoje konta %1 są niedostępne. W przypadku jakichkolwiek pytań prosimy o "
+"kontakt z %2."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:241
 msgid "Your %1 day withdrawal limit is currently EUR %2. (or equivalent in other currency)."
