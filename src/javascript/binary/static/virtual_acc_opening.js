@@ -49,13 +49,7 @@ pjax_config_page("new_account/virtualws", function(){
                     if (type === 'new_account_virtual' && !error){
                       // set a flag to push to gtm in my_account
                       localStorage.setItem('new_account', '1');
-                      // GTM.push_data_layer({
-                      //   'event'         : 'new_account',
-                      //   'visitorID'     : response.new_account_virtual.client_id,
-                      //   'bom_country'   : $('#residence option:selected').text(),
-                      //   'bom_today'     : Math.floor(Date.now() / 1000),
-                      //   'bom_email'     : email
-                      // });
+
                       form.setAttribute('action', '/login');
                       form.setAttribute('method', 'POST');
                       virtualForm.unbind('submit');

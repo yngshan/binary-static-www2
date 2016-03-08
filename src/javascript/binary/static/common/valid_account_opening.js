@@ -36,24 +36,6 @@ var ValidAccountOpening = (function(){
       $.cookie('loginid', loginid, {domain: cookie_domain, path:'/'});
       // set a flag to push to gtm in my_account
       localStorage.setItem('new_account', '1');
-      //push to gtm
-      // var age = new Date().getFullYear() - document.getElementById('dobyy').value;
-      // document.getElementById('event').innerHTML = 'new_account';
-      // GTM.push_data_layer({
-      //   'event'         : 'new_account',
-      //   'visitorID'     : loginid,
-      //   'bom_age'       : age,
-      //   'bom_country'   : $('#residence-disabled option[value="' + page.client.residence + '"]').html(),
-      //   'bom_today'     : Math.floor(Date.now() / 1000),
-      //   'bom_email'     : page.user.email,
-      //   'bom_firstname' : document.getElementById('fname').value,
-      //   'bom_lastname'  : document.getElementById('lname').value,
-      //   'bom_phone'     : document.getElementById('tel').value
-      // });
-      // var affiliateToken = $.cookie('affiliate_tracking');
-      // if (affiliateToken) {
-      //   GTM.push_data_layer({'bom_affiliate_token': JSON.parse(affiliateToken).t});
-      // }
       //generate dropdown list and switch
       page.client.clear_storage_values();
       var option = new Option('Real Account (' + loginid + ')', loginid);
