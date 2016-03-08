@@ -300,6 +300,8 @@ function contractTypeDisplayMapping(type) {
     var obj = {
         CALL: "top",
         PUT: "bottom",
+        CALLE: "top",
+        PUTE: "bottom",
         ASIANU: "top",
         ASIAND: "bottom",
         DIGITMATCH: "top",
@@ -446,6 +448,11 @@ function getContractCategoryTree(elements){
         ],
         'spreads'
     ];
+
+    // Temp hack. Should be deleted after japan release
+    if (typeof is_japan === 'function') {
+        delete tree[2];
+    }
 
     if(elements){
         tree = tree.map(function(e){
