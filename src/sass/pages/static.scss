@@ -53,3 +53,9 @@
     display: none;
   }
 }
+
+#api_token {
+  abbr {
+    @include BIDIR_PROP(margin-right, margin-left, 15px);
+  }
+}
