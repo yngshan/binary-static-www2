@@ -134,7 +134,8 @@ var Content = (function () {
             textUnavailableReal: text.localize('Sorry, account opening is unavailable.'),
             textMessageMinRequired: text.localize('Minimum of [_1] characters required.'),
             textFeatureUnavailable: text.localize('Sorry, this feature is not available.'),
-            textMessagePasswordScore: text.localize( 'Password score is: [_1]. Passing score is: 20.')
+            textMessagePasswordScore: text.localize( 'Password score is: [_1]. Passing score is: 20.'),
+            textShouldNotLessThan: text.localize('Please enter a number greater or equal to [_1].')
         };
 
         var starTime = document.getElementById('start_time_label');
@@ -321,6 +322,9 @@ var Content = (function () {
             case 'pass':
                 if(param)
                     msg = localize.textMessagePasswordScore.replace('[_1]', param);
+                break;
+            case 'number_not_less_than':
+                msg = localize.textShouldNotLessThan.replace('[_1]', param);
                 break;
             default:
                 break;
