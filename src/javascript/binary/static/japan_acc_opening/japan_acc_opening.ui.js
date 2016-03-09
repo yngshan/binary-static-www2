@@ -122,12 +122,12 @@ var JapanAccOpeningUI = function () {
 
     if (tel.value.replace(/\+| /g,'').length < 6) {
       errorTel.innerHTML = Content.errorMessage('min', 6);
-      Validate.displayErrorMessage(errorTel);
+      Validate.displayErrorMessage(errorObj['tel']);
       window.accountErrorCounter++;
     } else if (!/^\+?[0-9\s-]{6,35}$/.test(tel.value)){
       initializeValues();
       errorTel.innerHTML = Content.errorMessage('reg', [numbers, space, hyphen]);
-      Validate.displayErrorMessage(errorTel);
+      Validate.displayErrorMessage(errorObj['tel']);
       window.accountErrorCounter++;
     }
     ValidAccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
