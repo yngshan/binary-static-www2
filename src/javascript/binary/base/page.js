@@ -142,9 +142,9 @@ var Client = function() {
 };
 
 Client.prototype = {
-    redirect_if_logout: function(redirectPage) {
+    redirect_if_logout: function() {
         if(!this.is_logged_in) {
-            window.location.href = page.url.url_for(redirectPage || 'login');
+            window.location.href = page.url.url_for('login');
         }
         return !this.is_logged_in;
     },
