@@ -130,6 +130,10 @@ var RealityCheck = (function() {
     }
 
     function init() {
+        if (!page.client.require_reality_check()) {
+            return;
+        }
+
         // to change old interpretation of reality_check
         if (LocalStore.get('reality_check.ack') > 1) {
             LocalStore.set('reality_check.ack', 0);
