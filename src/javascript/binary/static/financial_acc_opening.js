@@ -2,12 +2,10 @@ pjax_config_page("new_account/maltainvestws", function(){
   return {
     onLoad: function() {
       Content.populate();
-      if (!$.cookie('login')) {
-          window.location.href = page.url.url_for('login');
+      if (page.client.redirect_if_logout()) {
           return;
       }
-      if (page.client.type !== 'real') {
-        window.location.href = page.url.url_for('user/my_accountws');
+      if (page.client.redirect_if_is_virtual('user/my_accountws')) {
         return;
       }
       for (i = 0; i < page.user.loginid_array.length; i++){
