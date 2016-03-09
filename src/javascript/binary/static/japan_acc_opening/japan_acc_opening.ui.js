@@ -120,11 +120,11 @@ var JapanAccOpeningUI = function () {
       window.accountErrorCounter++;
     }
 
-    if (tel.value.replace(/\+| /g,'').length < 6) {
+    if (elementObj['tel'].value.replace(/\+| /g,'').length < 6) {
       errorObj['tel'].innerHTML = Content.errorMessage('min', 6);
       Validate.displayErrorMessage(errorObj['tel']);
       window.accountErrorCounter++;
-    } else if (!/^\+?[0-9\s-]{6,35}$/.test(tel.value)){
+    } else if (!/^\+?[0-9\s-]{6,35}$/.test(elementObj['tel'].value)){
       errorObj['tel'].innerHTML = Content.errorMessage('reg', [numbers, space, hyphen]);
       Validate.displayErrorMessage(errorObj['tel']);
       window.accountErrorCounter++;
