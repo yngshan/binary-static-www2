@@ -121,12 +121,11 @@ var JapanAccOpeningUI = function () {
     }
 
     if (tel.value.replace(/\+| /g,'').length < 6) {
-      errorTel.innerHTML = Content.errorMessage('min', 6);
+      errorObj['tel'].innerHTML = Content.errorMessage('min', 6);
       Validate.displayErrorMessage(errorObj['tel']);
       window.accountErrorCounter++;
     } else if (!/^\+?[0-9\s-]{6,35}$/.test(tel.value)){
-      initializeValues();
-      errorTel.innerHTML = Content.errorMessage('reg', [numbers, space, hyphen]);
+      errorObj['tel'].innerHTML = Content.errorMessage('reg', [numbers, space, hyphen]);
       Validate.displayErrorMessage(errorObj['tel']);
       window.accountErrorCounter++;
     }
