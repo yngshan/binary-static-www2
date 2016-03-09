@@ -37,6 +37,11 @@ var RealityCheck = (function() {
         if ($('#reality-check').length > 0) {
             return;
         }
+
+        if (div.find('#reality-check-content').length == 0) {
+            return;
+        }
+
         LocalStore.set('reality_check.close', 'false');
         var lightboxDiv = $("<div id='reality-check' class='lightbox'></div>");
 

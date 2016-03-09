@@ -240,7 +240,7 @@ Client.prototype = {
     },
     clear_storage_values: function() {
         var that  = this;
-        var items = ['currencies', 'allowed_markets', 'landing_company_name', 'is_virtual'];
+        var items = ['currencies', 'allowed_markets', 'landing_company_name', 'is_virtual', 'has_reality_check'];
         items.forEach(function(item) {
             that.set_storage_value(item, '');
         });
