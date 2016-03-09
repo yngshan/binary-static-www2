@@ -9,7 +9,7 @@ var IPHistoryUI = (function(){
             text.localize("Date and Time"),
             text.localize("Action"),
             text.localize("Browser"),
-            text.localize("IP Location"),
+            text.localize("IP Address"),
             text.localize("Status"),
         ];
         var metadata = {
