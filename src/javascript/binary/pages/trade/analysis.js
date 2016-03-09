@@ -53,7 +53,7 @@ var TradingAnalysis = (function() {
               '</div>' +
             '</div>' +
           '</div>';
-        if (formName === 'digits') {
+        if (formName === 'digits' || formName === 'overunder' || formName === 'evenodd') {
             $('#tab_last_digit').removeClass("invisible");
         }
         sessionStorage.setItem('currentAnalysisTab', getActiveTab());
