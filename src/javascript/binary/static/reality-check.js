@@ -38,7 +38,7 @@ var RealityCheck = (function() {
             return;
         }
 
-        if (div.find('#reality-check-content').length == 0) {
+        if (div.find('#reality-check-content').length === 0) {
             return;
         }
 
