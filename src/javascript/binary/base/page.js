@@ -189,10 +189,10 @@ Client.prototype = {
         // allowed markets
         if(this.is_logged_in) {
             if(
-                !TUser.get().is_virtual
-                && !this.get_storage_value('allowed_markets')
-                && TUser.get().landing_company_name
-                && !this.get_storage_value('has_reality_check')
+                !TUser.get().is_virtual &&
+                !this.get_storage_value('allowed_markets') &&
+                TUser.get().landing_company_name &&
+                !this.get_storage_value('has_reality_check')
             ) {
                 $('#topMenuStartBetting').addClass('invisible');
                 BinarySocket.send({
