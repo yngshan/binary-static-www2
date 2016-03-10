@@ -1,37 +1,43 @@
 var securityws = (function(){
 
     "use strict";
-    var $form ;
+    var $form,
+        init_done;
 
     var clearErrors = function(){
         $("#SecuritySuccessMsg").text('');
         $("#client_message_content").text('');
         $("#client_message_content").hide();
-
     };
 
     var init = function(){
+        init_done = true;
+
         $form   = $("#changeCashierLock");
+
+        clearErrors();
+
+        if(page.client.is_virtual()) {
+            $form.hide();
+            $('#SecuritySuccessMsg').addClass('notice-msg center').text(Content.localize().textFeatureUnavailable);
+            return;
+        }
+
         $("#repasswordrow").show();
         $("#changeCashierLock").show();
 
-        clearErrors();
         $form.find("button").attr("value","Update");
 
+        var loginToken = CommonData.getApiToken();
         $form.find("button").on("click", function(e){
             e.preventDefault();
             e.stopPropagation();
             if(validateForm() === false){
                 return false;
             }
-            if($(this).attr("value") === "Update"){
-                BinarySocket.send({"authorize": $.cookie('login'), "passthrough": {"value": "lock_password"}});
-            }
-            else{
-                BinarySocket.send({"authorize": $.cookie('login'), "passthrough": {"value": "unlock_password"}});
-            }
+            BinarySocket.send({"authorize": loginToken, "passthrough": {"value": $(this).attr("value") === "Update" ? "lock_password" : "unlock_password"}});
         });
-        BinarySocket.send({"authorize": $.cookie('login'), "passthrough": {"value": "is_locked"}});
+        BinarySocket.send({"authorize": loginToken, "passthrough": {"value": "is_locked"}});
     };
 
     var validateForm = function(){
@@ -78,6 +84,11 @@ var securityws = (function(){
                             "passthrough" : {"value" : "lock_status"}
                         });
                         break ;
+                default:
+                        if(!init_done) {
+                            init();
+                        }
+                        break;
             }
         }
     };
@@ -98,7 +109,7 @@ var securityws = (function(){
             }
             else if(parseInt(resvalue) === 0){
                 $("#repasswordrow").show();
-                $("legend").text(text.localize("lock Cashier"));
+                $("legend").text(text.localize("Lock Cashier"));
                 $("#lockInfo").text(text.localize("An additional password can be used to restrict access to the cashier."));
                 $form.find("button").attr("value","Update");
                 $form.find("button").html(text.localize("Update"));
@@ -111,13 +122,12 @@ var securityws = (function(){
                   $('#password-meter').remove();
                 }
             }
-
         }
         else{
             if("error" in response) {
                 if("message" in response.error) {
                     $("#client_message_content").show();
-                    $("#client_message_content").text(text.localize(response.error.message));
+                    $("#client_message_content").text(response.error.message);
                 }
                 return false;
             }
@@ -159,27 +169,24 @@ var securityws = (function(){
 pjax_config_page("user/settings/securityws", function() {
     return {
         onLoad: function() {
-          if (!getCookieItem('login')) {
-              window.location.href = page.url.url_for('login');
-              return;
-          }
-          if((/VRT/.test($.cookie('loginid')))){
-              window.location.href = ("/");
-          }
+            if (page.client.redirect_if_logout()) {
+                return;
+            }
 
-          Content.populate();
+            Content.populate();
 
-          BinarySocket.init({
+            BinarySocket.init({
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);
                     if (response) {
                         securityws.SecurityApiResponse(response);
-
                     }
                 }
             });
 
-            securityws.init();
+            if(page.client.get_storage_value('is_virtual').length > 0) {
+                securityws.init();
+            }
         }
     };
 });
