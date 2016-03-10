@@ -30,9 +30,18 @@ var IPHistoryUI = (function(){
         var history = userAgent.split(' ');
         var timestamp = history[0];
         var ip = history[2].split('=')[1];
-        var browser = "Unknown";
-        var verOffset, ver;
-        if ((verOffset = userAgent.indexOf("OPR")) != -1){
+        var browser = "Unknown",
+            ver = "Unknown",
+            verOffset = 0;
+        if (/(msie|trident)/i.test(userAgent)){
+            browser = "Internet Explorer";
+            verOffset = /(msie)/i.test(userAgent) ? userAgent.indexOf("MSIE") : verOffset;
+            verOffset = /(trident)/i.test(userAgent) ? userAgent.indexOf("Trident") : verOffset;
+            ver = userAgent.substring(verOffset+13).split(" ")[0].split(":")[1].split(")")[0];
+        } else if ((verOffset = userAgent.indexOf("Edge")) != -1) {
+            browser = "Edge";
+            ver = userAgent.substring(verOffset).split("/")[1].split(" ")[0];
+        } else if ((verOffset = userAgent.indexOf("OPR")) != -1){
             browser = "Opera";
             ver = userAgent.substring(verOffset+4).split(" ")[0];
         } else if ((verOffset = userAgent.indexOf("Chrome")) != -1){
@@ -44,9 +53,6 @@ var IPHistoryUI = (function(){
         } else if ((verOffset = userAgent.indexOf("Firefox")) != -1){
             browser = "Firefox";
             ver = userAgent.substring(verOffset+8).split(" ")[0];
-        } else if ((verOffset = userAgent.indexOf("MSIE")) != -1){
-            browser = "Internet Explorer";
-            ver = userAgent.substring(verOffset+5).split(" ")[0];
         }
         var status = data['status'] === 1 ? text.localize('Successful') : text.localize('Failed');
         var browserString = browser + " v" + ver;
