@@ -45,7 +45,7 @@ var TickDisplay = function() {
             if ($self.contract_category.match('asian')) {
                 $self.ticks_needed = $self.number_of_ticks;
                 $self.x_indicators = {
-                    '_0': { label: 'Tick 1', id: 'start_tick'},
+                    '_0': { label: 'Entry Spot', id: 'start_tick'},
                 };
                 $self.x_indicators['_' + exit_tick_index] = {
                     label: 'Exit Spot',
