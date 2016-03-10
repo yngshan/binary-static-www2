@@ -17,10 +17,19 @@ var ValidAccountOpening = (function(){
   var handler = function(response, message) {
     if (response.error) {
       var errorMessage = response.error.message;
+      //IMPORTANT: change the code check later when shuwn yuan's changes are implemented
+      if (response.error.code === 'invalid' && document.getElementById('financial-form')) {
+        $('#financial-form').addClass('hidden');
+        $('#financial-risk').removeClass('hidden');
+        return;
+      }
       if (document.getElementById('real-form')) {
         $('#real-form').remove();
       } else if (document.getElementById('japan-form')) {
         $('#japan-form').remove();
+      } else if (document.getElementById('financial-form')) {
+        $('#financial-form').remove();
+        $('#financial-risk').remove();
       }
       var error = document.getElementsByClassName('notice-msg')[0];
       error.innerHTML = (response.msg_type === 'sanity_check') ? text.localize('There was some invalid character in an input field.') : errorMessage;

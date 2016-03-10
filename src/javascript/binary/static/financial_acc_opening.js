@@ -5,13 +5,12 @@ pjax_config_page("new_account/maltainvestws", function(){
       if (page.client.redirect_if_logout()) {
           return;
       }
-      if (page.client.redirect_if_is_virtual('user/my_accountws')) {
-        return;
-      }
       for (i = 0; i < page.user.loginid_array.length; i++){
-        if (page.user.loginid_array[i].hasOwnProperty('non_financial') && page.user.loginid_array[i].non_financial === false){
+        if (page.user.loginid_array[i].financial){
           window.location.href = page.url.url_for('user/my_accountws');
           return;
+        } else if (page.user.loginid_array[i].non_financial){
+          $('.security').hide();
         }
       }
       handle_residence_state_ws();
@@ -19,6 +18,23 @@ pjax_config_page("new_account/maltainvestws", function(){
       BinarySocket.send({get_settings:1});
       $('#financial-form').submit(function(evt) {
         evt.preventDefault();
+        if (FinancialAccOpeningUI.checkValidity()){
+          BinarySocket.init({
+            onmessage: function(msg){
+              var response = JSON.parse(msg.data);
+              if (response) {
+                var error = response.error;
+                if (response.msg_type === 'new_account_maltainvest'){
+                  ValidAccountOpening.handler(response, response.new_account_maltainvest);
+                }
+              }
+            }
+          });
+        }
+      });
+      $('#financial-risk').submit(function(evt) {
+        evt.preventDefault();
+        window.acceptRisk = true;
         if (FinancialAccOpeningUI.checkValidity()){
           BinarySocket.init({
             onmessage: function(msg){

@@ -122,7 +122,7 @@
                         </div>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="security">
                         <legend id="security">[% l('Security') %]</legend>
                         <div class="grd-row-padding row clear">
                             <div class="grd-grid-4 form_label">
@@ -424,6 +424,29 @@
                         </span>
                     </fieldset>
                 </form>
+
+                <form id="financial-risk" class="hidden">
+                  <fieldset id="risk-disclaimer-section">
+                    <div class="grd-grid-12">
+                      <p>
+                        [% l('<strong>Appropriateness Test: WARNING:</strong> In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved).') %]
+                      </p>
+                      <p>
+                        [% l('On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you.') %]
+                      </p>
+                      <p>
+                        [% l('By clicking <strong>Accept</strong> below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate.') %]
+                      </p>
+                      <p class="center-aligned">
+                        <span class="button">
+                          <button class="button" id="accept-risk-submit" type="submit">[% l('Accept') %]</button>
+                        </span>
+                        <a class="button pjaxload" href="[% request.url_for('/user/my_accountws') %]"><span>[% l('Decline') %]</span></a>
+                      </p>
+                    </div>
+                  </fieldset>
+                </form>
+
                 <div class="errorbox rbox" id="client_message" style="display:none">
                     <div class="rbox-wrap">
                         <div class="grd-grid-12 rbox-content" id="client_message_content">

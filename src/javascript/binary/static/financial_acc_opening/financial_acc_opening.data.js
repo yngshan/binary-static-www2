@@ -13,8 +13,6 @@ var FinancialAccOpeningData = (function(){
             address_state: elementObj['state'].value,
             address_postcode: elementObj['postcode'].value,
             phone: elementObj['tel'].value,
-            secret_question: elementObj['question'].value,
-            secret_answer: elementObj['answer'].value,
             forex_trading_experience: elementObj['forexExperience'].value,
             forex_trading_frequency: elementObj['forexFrequency'].value,
             indices_trading_experience: elementObj['indicesExperience'].value,
@@ -31,12 +29,22 @@ var FinancialAccOpeningData = (function(){
             education_level: elementObj['education'].value,
             income_source: elementObj['incomeSource'].value,
             net_income: elementObj['income'].value,
-            estimated_worth: elementObj['netWorth'].value,
-            accept_risk: 1
+            estimated_worth: elementObj['netWorth'].value
         };
 
         if ($.cookie('affiliate_tracking')) {
           req.affiliate_token = JSON.parse($.cookie('affiliate_tracking')).t;
+        }
+
+        if (elementObj['answer'].value !== '') {
+          req.secret_question = elementObj['question'].value;
+          req.secret_answer = elementObj['answer'].value;
+        }
+
+        if (window.acceptRisk) {
+          req.accept_risk = 1;
+        } else {
+          req.accept_risk = 0;
         }
 
         BinarySocket.send(req);

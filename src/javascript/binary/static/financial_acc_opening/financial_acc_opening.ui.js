@@ -102,7 +102,9 @@ var FinancialAccOpeningUI = (function(){
     }
 
     ValidAccountOpening.checkTel(elementObj['tel'], errorObj['tel']);
-    ValidAccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
+    if (elementObj['answer'].offsetParent !== null) {
+      ValidAccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
+    }
 
     for (key in elementObj){
       if (elementObj[key].offsetParent !== null && key !== 'address2' && key !== 'postcode' && key !== 'state') {
