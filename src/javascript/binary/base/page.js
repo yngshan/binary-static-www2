@@ -1013,7 +1013,15 @@ Page.prototype = {
         this.on_click_acc_transfer();
         if(getCookieItem('login')){
             ViewBalance.init();
-            RealityCheck.init();
+            BinarySocket.init({
+                onmessage: function(msg) {
+                    var response = JSON.parse(msg.data);
+                    if (response.msg_type === 'landing_company_details') {
+                        RealityCheck.init();
+                    }
+                }
+            });
+            BinarySocket.send({landing_company_details: TUser.get().landing_company_name});
         }
         $('#current_width').val(get_container_width());//This should probably not be here.
     },
