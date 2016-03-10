@@ -75,10 +75,25 @@ var KnowledgeTestUI = (function () {
         return $tableContainer;
     }
 
+    function createResultUI(score, time) {
+
+        var $resultTable = $('<table></table>', { class: 'kv-pairs'});
+        var $scoreRow = $('<tr></tr>').append($('<td>Score</td>')).append($('<td>'+ score + '</td>'));
+
+        var submitDate = (new Date(time)).toLocaleDateString();
+
+        var $dateRow = $('<tr></tr>').append($('<td>Date</td>')).append($('<td>'+ submitDate + '</td>'));
+
+        $resultTable.append($scoreRow).append($dateRow);
+
+        return $resultTable;
+    }
+
     return {
         createTrueFalseBox: createTrueFalseBox,
         createQuestionRow: createQuestionRow,
-        createQuestionTable: createQuestionTable
+        createQuestionTable: createQuestionTable,
+        createResultUI: createResultUI
     };
 }());
 

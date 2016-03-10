@@ -9,6 +9,8 @@ var KnowledgeTest = (function() {
     var resultScore = 0;
 
     var $knowledgeTestMsg = $('#knowledge-test-msg');
+    var passMsg = 'Congratulations, you have pass the test, our Customer Support will contact you shortly';
+    var failMsg = 'Sorry, you have failed the test, please try again after 24 hours.';
 
     function questionAnswerHandler(ev) {
         var selected = ev.target.value;
@@ -18,7 +20,9 @@ var KnowledgeTest = (function() {
 
     function submitHandler() {
         if (Object.keys(submitted).length !== 20) {
-            $knowledgeTestMsg.text(text.localize('You need to finish all 20 questions.'));
+            $knowledgeTestMsg
+                .addClass('notice-msg')
+                .text(text.localize('You need to finish all 20 questions.'));
             $("html, body").animate({ scrollTop: 0 }, "slow");
             return;
         }
@@ -30,11 +34,8 @@ var KnowledgeTest = (function() {
             }
         }
 
-        if (resultScore >= 14) {
-            createResult(true);
-        } else {
-            createResult(false);
-        }
+        // use now as temp, need from backend
+        createResult(resultScore, Date.now());
 
         $("html, body").animate({ scrollTop: 0 }, "slow");
     }
@@ -49,24 +50,27 @@ var KnowledgeTest = (function() {
         $('#knowledge-test-submit').click(submitHandler);
     }
 
-    function createResult(pass) {
+    function createResult(score, time) {
         $('#knowledge-test-header').text(text.localize('Knowledge Test Result'));
-        if (pass) {
+        if (score > 14) {
             $knowledgeTestMsg
-                .text(text.localize('Congratulations, you have pass the test, our Customer Support will contact you shortly'));
+                .text(text.localize(passMsg));
         } else {
-            for (var j = 0 ; j < randomPicks.length ; j ++) {
-                var table = KnowledgeTestUI.createQuestionTable(randomPicks[j], true);
-                $('#section' + (j + 1) + '-result').append(table);
-            }
+            //for (var j = 0 ; j < randomPicks.length ; j ++) {
+            //    var table = KnowledgeTestUI.createQuestionTable(randomPicks[j], true);
+            //    $('#section' + (j + 1) + '-result').append(table);
+            //}
 
             $knowledgeTestMsg
-                .text(text.localize('Sorry, you have failed the test, please try again after 24 hours.'));
+                .text(text.localize(failMsg));
 
             // only show if client failed
-            $('#knowledge-test-result').removeClass(hiddenClass);
+            // $('#knowledge-test-result').removeClass(hiddenClass);
         }
 
+        var $resultTable = KnowledgeTestUI.createResultUI(score, time);
+
+        $('#knowledge-test-container').append($resultTable);
         $('#knowledge-test-questions').addClass(hiddenClass);
     }
 
