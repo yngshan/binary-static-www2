@@ -464,8 +464,9 @@ var KnowledgeTestData = (function() {
 
         var randomPicks = [];
         for (var i = 0 ; i < 4 ; i ++) {
-            var randomId = Math.floor(Math.random() * 100) % availables.length;
-            var randomPick = questions[randomId];
+            var randomIndex = Math.floor(Math.random() * 100) % availables.length;
+            var randomQid = availables[randomIndex];
+            var randomPick = questions[randomQid];
             randomPicks.push(randomPick);
             availables.splice(randomId, 1);
         }
