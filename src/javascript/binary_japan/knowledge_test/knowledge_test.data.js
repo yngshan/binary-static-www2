@@ -279,174 +279,174 @@ var KnowledgeTestData = (function() {
             {
                 question: "How're you today?",
                 answer: true,
-                id: 1,
+                id: 61,
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 2
+                id: 62
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 3
+                id: 63
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 4
+                id: 64
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 5
+                id: 65
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 6
+                id: 66
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 7
+                id: 67
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 8
+                id: 68
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 9
+                id: 69
             },
             {
                 question: "How're you today?",
-                answer: true, id: 10
+                answer: true, id: 70
             },
             {
                 question: "How're you today?",
-                answer: true, id: 11
+                answer: true, id: 71
             },
             {
                 question: "How're you today?",
-                answer: true, id: 12
+                answer: true, id: 72
             },
             {
                 question: "How're you today?",
-                answer: true, id: 13
+                answer: true, id: 73
             },
             {
                 question: "How're you today?",
-                answer: true, id: 14
+                answer: true, id: 74
             },
             {
                 question: "How're you today?",
-                answer: true, id: 15
+                answer: true, id: 75
             },
             {
                 question: "How're you today?",
-                answer: true, id: 16
+                answer: true, id: 76
             },
             {
                 question: "How're you today?",
-                answer: true, id: 17
+                answer: true, id: 77
             },
             {
                 question: "How're you today?",
-                answer: true, id: 18
+                answer: true, id: 78
             },
             {
                 question: "How're you today?",
-                answer: true, id: 19
+                answer: true, id: 79
             },
             {
                 question: "How're you today?",
-                answer: true, id: 20
+                answer: true, id: 80
             },
         ],
         section5:[
             {
                 question: "How're you today?",
                 answer: true,
-                id: 1,
+                id: 81,
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 2
+                id: 82
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 3
+                id: 83
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 4
+                id: 84
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 5
+                id: 85
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 6
+                id: 86
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 7
+                id: 87
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 8
+                id: 88
             },
             {
                 question: "How're you today?",
                 answer: true,
-                id: 9
+                id: 89
             },
             {
                 question: "How're you today?",
-                answer: true, id: 10
+                answer: true, id: 90
             },
             {
                 question: "How're you today?",
-                answer: true, id: 11
+                answer: true, id: 91
             },
             {
                 question: "How're you today?",
-                answer: true, id: 12
+                answer: true, id: 92
             },
             {
                 question: "How're you today?",
-                answer: true, id: 13
+                answer: true, id: 93
             },
             {
                 question: "How're you today?",
-                answer: true, id: 14
+                answer: true, id: 94
             },
             {
                 question: "How're you today?",
-                answer: true, id: 15
+                answer: true, id: 95
             },
             {
                 question: "How're you today?",
-                answer: true, id: 16
+                answer: true, id: 96
             },
             {
                 question: "How're you today?",
-                answer: true, id: 17
+                answer: true, id: 97
             },
             {
                 question: "How're you today?",
-                answer: true, id: 18
+                answer: true, id: 98
             },
             {
                 question: "How're you today?",
@@ -454,7 +454,7 @@ var KnowledgeTestData = (function() {
             },
             {
                 question: "How're you today?",
-                answer: true, id: 20
+                answer: true, id: 100
             },
         ],
     };
@@ -468,7 +468,7 @@ var KnowledgeTestData = (function() {
             var randomQid = availables[randomIndex];
             var randomPick = questions[randomQid];
             randomPicks.push(randomPick);
-            availables.splice(randomId, 1);
+            availables.splice(randomIndex, 1);
         }
 
         return randomPicks;
@@ -496,6 +496,10 @@ var KnowledgeTestData = (function() {
 
     function getClientStatus() {
         // pending test?
+    }
+
+    function allowedToTakeTest() {
+        return true;
     }
 
     return {

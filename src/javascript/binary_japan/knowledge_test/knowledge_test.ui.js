@@ -1,7 +1,8 @@
 var KnowledgeTestUI = (function () {
     "use strict";
 
-    function createTrueFalseBox(qid) {
+    function createTrueFalseBox(question, showAnswer) {
+        var qid = question.id;
         var trueId = qid + 'true';
         var falseId = qid + 'false';
 
@@ -23,13 +24,23 @@ var KnowledgeTestUI = (function () {
         var $falseLabel = $('<label></label>', {class: 'img-holder false', for: falseId, value: '0'});
         var $falseTd = $('<td></td>').append($falseButton).append($falseLabel);
 
+        if (showAnswer) {
+            if (question.answer) {
+                $trueButton.prop('checked', true);
+            } else {
+                $falseButton.prop('checked', true);
+            }
+            $trueButton.attr('disabled', true);
+            $falseButton.attr('disabled', true);
+        }
+
         return [$trueTd, $falseTd];
     }
 
-    function createQuestionRow(no, question) {
-        var $questionRow = $('<tr></tr>', {id: no, class: 'question'});
-        var $questionData = $('<td></td>').text(text.localize(question.question));
-        var trueFalse = createTrueFalseBox(question.id);
+    function createQuestionRow(questionNo, question, showAnswer) {
+        var $questionRow = $('<tr></tr>', {id: questionNo, class: 'question'});
+        var $questionData = $('<td></td>').text(text.localize(question.question + ' ' + question.id));
+        var trueFalse = createTrueFalseBox(question, showAnswer);
 
         return $questionRow
             .append($questionData)
@@ -37,7 +48,7 @@ var KnowledgeTestUI = (function () {
             .append(trueFalse[1]);
     }
 
-    function createQuestionTable(questions) {
+    function createQuestionTable(questions, showAnswer) {
         var $header = $('<tr></tr>');
         var $questionColHeader = $('<th></th>', {id: 'question-header', class: 'question-col'})
             .text(text.localize('Questions'));
@@ -57,7 +68,7 @@ var KnowledgeTestUI = (function () {
 
         $tableContainer.append($header);
         questions.forEach(function(question, questionNo) {
-            var qr = createQuestionRow(questionNo, question);
+            var qr = createQuestionRow(questionNo, question, showAnswer);
             $tableContainer.append(qr);
         });
 

@@ -1,21 +1,43 @@
 <div id="knowledge-test-container">
-    <h1>[% l('Knowledge Test') %]</h1>
-    <p>[% l('Please complete the following questions.') %]</p>
-    <div id="section1">
-        <h2>[% l('Section 1: xxx') %]</h2>
-    </div>
-    <div id="section2">
-        <h2>[% l('Section 2: xxx') %]</h2>
-    </div>
-    <div id="section3">
-        <h2>[% l('Section 3: xxx') %]</h2>
-    </div>
-    <div id="section4">
-        <h2>[% l('Section 4: xxx') %]</h2>
-    </div>
-    <div id="section5">
-        <h2>[% l('Section 5: xxx') %]</h2>
-    </div>
+    <h1 id="knowledge-test-header">[% l('Knowledge Test') %]</h1>
+    <p id="knowledge-test-msg">[% l('Please complete the following questions.') %]</p>
 
-    <button class="button button-focus" id="knowledge-test-submit">[% l('Submit') %]</button>
+    <div id="knowledge-test-answer" class="invisible">
+        <div id="section1-result">
+            <h2>[% l('Section 1: xxx') %]</h2>
+        </div>
+        <div id="section2-result">
+            <h2>[% l('Section 2: xxx') %]</h2>
+        </div>
+        <div id="section3-result">
+            <h2>[% l('Section 3: xxx') %]</h2>
+        </div>
+        <div id="section4-result">
+            <h2>[% l('Section 4: xxx') %]</h2>
+        </div>
+        <div id="section5-result">
+            <h2>[% l('Section 5: xxx') %]</h2>
+        </div>
+    </div>
+    <div id="knowledge-test-questions">
+        <div id="section1-question">
+            <h2>[% l('Section 1: xxx') %]</h2>
+        </div>
+        <div id="section2-question">
+            <h2>[% l('Section 2: xxx') %]</h2>
+        </div>
+        <div id="section3-question">
+            <h2>[% l('Section 3: xxx') %]</h2>
+        </div>
+        <div id="section4-question">
+            <h2>[% l('Section 4: xxx') %]</h2>
+        </div>
+        <div id="section5-question">
+            <h2>[% l('Section 5: xxx') %]</h2>
+        </div>
+
+        <span class="button">
+            <button id="knowledge-test-submit" class="button">[% l('Submit') %]</button>
+        </span>
+    </div>
 </div>
