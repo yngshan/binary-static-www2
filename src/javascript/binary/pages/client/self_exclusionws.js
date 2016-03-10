@@ -12,17 +12,17 @@ var SelfExlusionWS = (function() {
         isValid;
 
     var init = function() {
-        if(page.client.is_virtual()) {
-            $('#selfExclusionDesc').addClass(hiddenClass);
-            showPageError(Content.localize().textFeatureUnavailable, true);
-            return;
-        }
-
         $form       = $('#frmSelfExclusion');
         $loading    = $('#loading');
         dateID      = 'exclude_until';
         errorClass  = 'errorfield';
         hiddenClass = 'hidden';
+
+        if(page.client.is_virtual()) {
+            $('#selfExclusionDesc').addClass(hiddenClass);
+            showPageError(Content.localize().textFeatureUnavailable, true);
+            return;
+        }
 
         showLoadingImage($loading);
 
