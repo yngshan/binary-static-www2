@@ -2,12 +2,15 @@ var KnowledgeTestUI = (function () {
     "use strict";
 
     function createTrueFalseBox(qid) {
-        var $trueButton = $('<input />', {type: 'radio', name: qid, class: 'true', value: '1'});
-        var $trueLabel = $('<label></label>', {class: 'img-holder'});
+        var trueId = qid + 'true';
+        var falseId = qid + 'false';
+
+        var $trueButton = $('<input />', {type: 'radio', name: qid, id: trueId, value: '1'});
+        var $trueLabel = $('<label></label>', {class: 'img-holder true', for: trueId, value: '1'});
         var $trueTd = $('<td></td>').append($trueButton).append($trueLabel);
 
-        var $falseButton = $('<input />', {type: 'radio', name: qid, class: 'false',  value: '0'});
-        var $falseLabel = $('<label></label>', {class: 'img-holder'});
+        var $falseButton = $('<input />', {type: 'radio', name: qid, id: falseId, value: '0'});
+        var $falseLabel = $('<label></label>', {class: 'img-holder false', for: falseId, value: '0'});
         var $falseTd = $('<td></td>').append($falseButton).append($falseLabel);
 
         return [$trueTd, $falseTd];

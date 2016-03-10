@@ -489,6 +489,14 @@ var KnowledgeTestData = (function() {
         ];
     }
 
+    function sendResult(results) {
+
+    }
+
+    function getClientStatus() {
+        // pending test?
+    }
+
     return {
         questions: questions,
         randomPick20: randomPick20,

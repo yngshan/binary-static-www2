@@ -4,11 +4,31 @@ var KnowledgeTest = (function() {
     var submitted = {};
     var randomPicks = [];
     var randomPicksAnswer = {};
+    var resultScore = 0;
 
     function questionAnswerHandler(ev) {
         var selected = ev.target.value;
         var qid = ev.target.name;
-        submitted[qid] = selected;
+        submitted[qid] = selected === '1';
+    }
+
+    function submitHandler() {
+        if (Object.keys(submitted).length !== 20) {
+            console.log('You hve not finished');
+            return;
+        }
+
+        for (var k in submitted) {
+            if (submitted.hasOwnProperty(k)) {
+                resultScore += submitted[k] === randomPicksAnswer[k] ? 1 : 0;
+            }
+        }
+
+        if (resultScore >= 14) {
+            console.log('pass');
+        } else {
+            console.log('fail');
+        }
     }
 
     function createQuestionsTable() {
@@ -31,6 +51,7 @@ var KnowledgeTest = (function() {
 
         createQuestionsTable();
         $('#knowledge-test-container input[type=radio]').click(questionAnswerHandler);
+        $('#knowledge-test-submit').click(submitHandler);
     }
 
     return {
