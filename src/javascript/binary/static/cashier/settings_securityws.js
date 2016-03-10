@@ -109,7 +109,7 @@ var securityws = (function(){
             }
             else if(parseInt(resvalue) === 0){
                 $("#repasswordrow").show();
-                $("legend").text(text.localize("lock Cashier"));
+                $("legend").text(text.localize("Lock Cashier"));
                 $("#lockInfo").text(text.localize("An additional password can be used to restrict access to the cashier."));
                 $form.find("button").attr("value","Update");
                 $form.find("button").html(text.localize("Update"));
@@ -127,7 +127,7 @@ var securityws = (function(){
             if("error" in response) {
                 if("message" in response.error) {
                     $("#client_message_content").show();
-                    $("#client_message_content").text(text.localize(response.error.message));
+                    $("#client_message_content").text(response.error.message);
                 }
                 return false;
             }
@@ -172,9 +172,9 @@ pjax_config_page("user/settings/securityws", function() {
             if (page.client.redirect_if_logout()) {
                 return;
             }
-  
+
             Content.populate();
-  
+
             BinarySocket.init({
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);
