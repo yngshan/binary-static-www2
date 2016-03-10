@@ -81,7 +81,9 @@ var KnowledgeTestData = (function() {
                 question: "If you sell a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you need to payout 1,000 yen, then your profit will be minus 500 yen after subtracting the 500 yen that was received as a fee from the option buyer.",
                 answer: true,
                 id: 16
-            },
+            }
+        ],
+        section2:[
             {
                 question: "To avoid or hedge the future price of an underlying asset which you hold, you should buy a call option",
                 answer: false,
@@ -99,8 +101,6 @@ var KnowledgeTestData = (function() {
                 question: "Predicts that width of up-down of underlying asset is small and  in order to obtain the benefit also moving in either direction of rising and falling, granted together both of the call option that exercise price is higher than underlying asset and the put option that exercise price is lower than underlying asset price.",
                 answer: true, id: 20
             },
-        ],
-        section2:[
             {
                 question: "Covered option is holding the underlying assets which like covering sell position of options and sell the it.",
                 answer: true,
@@ -151,6 +151,9 @@ var KnowledgeTestData = (function() {
                 answer: true,
                 id: 30
             },
+
+        ],
+        section3:[
             {
                 question: "Trading period (expiration) of binary option is 2 hours and more. All of the transactions are established at the start of the trading period and the established position will be settled only by judge.?",
                 answer: false,
@@ -201,8 +204,6 @@ var KnowledgeTestData = (function() {
                 answer: false,
                 id: 40
             },
-        ],
-        section3:[
             {
                 question: "For a put option, if the underlying asset price is higher than the option exercise price, it is known as an in-the-money option.?",
                 answer: false,
@@ -252,7 +253,9 @@ var KnowledgeTestData = (function() {
                 question: "Unless special arrangements are made, cooling-off will not be available after OTC binary options trading contract has been made.?",
                 answer: true,
                 id: 50
-            },
+            }
+        ],
+        section4:[
             {
                 question: "If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller.?",
                 answer: false,
@@ -294,8 +297,6 @@ var KnowledgeTestData = (function() {
                 question: "Maximum loss of buyer at binary options is an optional fee, maximum loss of the seller will be the amount subtracted the option fee from the payout amount.?",
                 answer: true, id: 60
             },
-        ],
-        section4:[
             {
                 question: "Based on the probability of profit is obtained by the exercise, it can not be said that cheaper options is advantageous unconditionally.?",
                 answer: true,
@@ -345,6 +346,9 @@ var KnowledgeTestData = (function() {
                 question: "Price of the option, the price of the underlying asset, price fluctuation rate of the underlying assets, the time until the exercise date, subject to any of the impact of interest rates.?",
                 answer: true, id: 70
             },
+
+        ],
+        section5:[
             {
                 question: "The price of an option can be affected by the underlying asset price, by the volatility rate of the underlying asset, or by the time remaining to the exercise time.?",
                 answer: true, id: 71
@@ -385,8 +389,6 @@ var KnowledgeTestData = (function() {
                 question: "For a plain vanilla option, as the time to the exercise point shortens, the price of the option will decrease.?",
                 answer: true, id: 80
             },
-        ],
-        section5:[
             {
                 question: "An option price is the sum of the intrinsic-value and the time-value.?",
                 answer: true,
