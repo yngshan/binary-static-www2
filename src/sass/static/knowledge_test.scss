@@ -1,0 +1,48 @@
+#knowledge-test-container {
+  input[type=radio] {
+    margin:0;padding:0;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+
+    :active + .img-holder {
+      opacity: 0.9;
+    }
+
+    :checked + .img-holder {
+      -webkit-filter: none;
+      -moz-filter: none;
+      filter: none;
+    }
+  }
+
+  .img-holder {
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+    -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+    filter: brightness(1.8) grayscale(1) opacity(.7);
+
+    :hover {
+      -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+      -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+      filter: brightness(1.2) grayscale(.5) opacity(.9);
+    }
+  }
+
+  .true {
+    background-image: url('../images/small-green-check.png');
+  }
+
+  .false {
+    background-image: url('../images/small-red-x.png');
+  }
+
+
+}

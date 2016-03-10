@@ -3,11 +3,11 @@ var KnowledgeTestUI = (function () {
 
     function createTrueFalseBox(qid) {
         var $trueButton = $('<input />', {type: 'radio', name: qid, class: 'true', value: '1'});
-        var $trueLabel = $('<label></label>');
+        var $trueLabel = $('<label></label>', {class: 'img-holder'});
         var $trueTd = $('<td></td>').append($trueButton).append($trueLabel);
 
         var $falseButton = $('<input />', {type: 'radio', name: qid, class: 'false',  value: '0'});
-        var $falseLabel = $('<label></label>');
+        var $falseLabel = $('<label></label>', {class: 'img-holder'});
         var $falseTd = $('<td></td>').append($falseButton).append($falseLabel);
 
         return [$trueTd, $falseTd];

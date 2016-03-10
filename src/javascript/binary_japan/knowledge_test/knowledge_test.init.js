@@ -31,7 +31,6 @@ var KnowledgeTest = (function() {
 
         createQuestionsTable();
         $('#knowledge-test-container input[type=radio]').click(questionAnswerHandler);
-
     }
 
     return {
