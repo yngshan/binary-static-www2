@@ -493,6 +493,6 @@ var KnowledgeTestData = (function() {
         questions: questions,
         randomPick20: randomPick20,
         answerIsCorrect: answerIsCorrect
-    }
+    };
 }());
 
