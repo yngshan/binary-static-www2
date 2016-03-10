@@ -103,9 +103,9 @@ var ValidAccountOpening = (function(){
       errorTel.innerHTML = Content.errorMessage('min', 6);
       Validate.displayErrorMessage(errorTel);
       window.accountErrorCounter++;
-    } else if (!/^\+?[\d-\s]+$/.test(tel.value)){
+    } else if (!/^\+?[0-9\s]{6,35}$/.test(tel.value)){
       initializeValues();
-      errorTel.innerHTML = Content.errorMessage('reg', [numbers, space, hyphen]);
+      errorTel.innerHTML = Content.errorMessage('reg', [numbers, space]);
       Validate.displayErrorMessage(errorTel);
       window.accountErrorCounter++;
     }
