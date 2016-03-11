@@ -85,7 +85,7 @@ var TickDisplay = function() {
                     height: config.minimize ? 143 : null,
                     backgroundColor: null,
                     events: { load: $self.plot(config.plot_from, config.plot_to) },
-                    marginLeft: 45,
+                    marginLeft: 100
                 },
                 credits: {enabled: false},
                 tooltip: {
