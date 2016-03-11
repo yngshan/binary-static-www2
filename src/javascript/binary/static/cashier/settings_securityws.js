@@ -13,7 +13,14 @@ var securityws = (function(){
 
     var init = function(){
         init_done = true;
-        if(page.client.redirect_if_is_virtual('user/settingsws')) {
+
+        $form   = $("#changeCashierLock");
+
+        clearErrors();
+
+        if(page.client.is_virtual()) {
+            $form.hide();
+            $('#SecuritySuccessMsg').addClass('notice-msg center').text(Content.localize().textFeatureUnavailable);
             return;
         }
 
@@ -101,7 +108,7 @@ var securityws = (function(){
             }
             else if(parseInt(resvalue) === 0){
                 $("#repasswordrow").show();
-                $("legend").text(text.localize("lock Cashier"));
+                $("legend").text(text.localize("Lock Cashier"));
                 $("#lockInfo").text(text.localize("An additional password can be used to restrict access to the cashier."));
                 $form.find("button").attr("value","Update");
                 $form.find("button").html(text.localize("Update"));
