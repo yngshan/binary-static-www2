@@ -33,7 +33,7 @@ var KnowledgeTest = (function() {
                 resultScore += submitted[k] === randomPicksAnswer[k] ? 1 : 0;
             }
         }
-
+        KnowledgeTestData.sendResult(resultScore);
         // use now as temp, need from backend
         createResult(resultScore, Date.now());
 
@@ -53,19 +53,9 @@ var KnowledgeTest = (function() {
     function createResult(score, time) {
         $('#knowledge-test-header').text(text.localize('Knowledge Test Result'));
         if (score > 14) {
-            $knowledgeTestMsg
-                .text(text.localize(passMsg));
+            $knowledgeTestMsg.text(text.localize(passMsg));
         } else {
-            //for (var j = 0 ; j < randomPicks.length ; j ++) {
-            //    var table = KnowledgeTestUI.createQuestionTable(randomPicks[j], true);
-            //    $('#section' + (j + 1) + '-result').append(table);
-            //}
-
-            $knowledgeTestMsg
-                .text(text.localize(failMsg));
-
-            // only show if client failed
-            // $('#knowledge-test-result').removeClass(hiddenClass);
+            $knowledgeTestMsg.text(text.localize(failMsg));
         }
 
         var $resultTable = KnowledgeTestUI.createResultUI(score, time);

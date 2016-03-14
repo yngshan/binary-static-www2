@@ -513,20 +513,14 @@ var KnowledgeTestData = (function() {
     }
 
     function sendResult(results) {
-
-    }
-
-    function getClientStatus() {
-        // pending test?
-    }
-
-    function allowedToTakeTest() {
-        return true;
+        var status = results >= 14 ? 'pass' : 'fail';
+        BinarySocket.send({jp_knowledge_test: 1, score: results, status: status});
     }
 
     return {
         questions: questions,
         randomPick20: randomPick20,
+        sendResult: sendResult
     };
 }());
 
