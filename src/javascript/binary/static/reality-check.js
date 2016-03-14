@@ -38,10 +38,6 @@ var RealityCheck = (function() {
             return;
         }
 
-        if (div.find('#reality-check-content').length === 0) {
-            return;
-        }
-
         LocalStore.set('reality_check.close', 'false');
         var lightboxDiv = $("<div id='reality-check' class='lightbox'></div>");
 
@@ -96,7 +92,9 @@ var RealityCheck = (function() {
             dataType: 'html',
             method: 'POST',
             success: function(realityFreqText) {
-                displayPopUp($(realityFreqText));
+                if (realityFreqText.includes('reality-check-content')) {
+                    displayPopUp($(realityFreqText));
+                }
             },
             error: function(xhr) {
                 return;
@@ -110,7 +108,9 @@ var RealityCheck = (function() {
             dataType: 'html',
             method: 'POST',
             success: function(realityCheckText) {
-                displayPopUp($(realityCheckText));
+                if (realityCheckText.includes('reality-check-content')) {
+                    displayPopUp($(realityCheckText));
+                }
             },
             error: function(xhr) {
                 return;
@@ -138,7 +138,7 @@ var RealityCheck = (function() {
         if (!page.client.require_reality_check()) {
             return;
         }
-
+        
         // to change old interpretation of reality_check
         if (LocalStore.get('reality_check.ack') > 1) {
             LocalStore.set('reality_check.ack', 0);
