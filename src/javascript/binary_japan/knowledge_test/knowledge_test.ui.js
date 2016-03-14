@@ -13,7 +13,7 @@ var KnowledgeTestUI = (function () {
             value: '1'
         });
         var $trueLabel = $('<label></label>', {class: 'img-holder true', for: trueId, value: '1'});
-        var $trueTd = $('<td></td>').append($trueButton).append($trueLabel);
+        var $trueTd = $('<td></td>').append($trueButton);
 
         var $falseButton = $('<input />', {
             type: 'radio',
@@ -22,7 +22,7 @@ var KnowledgeTestUI = (function () {
             value: '0'
         });
         var $falseLabel = $('<label></label>', {class: 'img-holder false', for: falseId, value: '0'});
-        var $falseTd = $('<td></td>').append($falseButton).append($falseLabel);
+        var $falseTd = $('<td></td>').append($falseButton);
 
         if (showAnswer) {
             if (question.answer) {
