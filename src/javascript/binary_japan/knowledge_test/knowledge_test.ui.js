@@ -89,11 +89,19 @@ var KnowledgeTestUI = (function () {
         return $resultTable;
     }
 
+    function createErrorDiv(nextTestEpoch) {
+        var nextTestDate = new Date(nextTestEpoch * 1000);
+        var fullMsg = 'Dear customer, you are not allowed to take knowledge test until ' + nextTestDate.toISOString();
+        var $errorDiv = $('<div></div>').text(text.localize(fullMsg));
+        return $errorDiv;
+    }
+
     return {
         createTrueFalseBox: createTrueFalseBox,
         createQuestionRow: createQuestionRow,
         createQuestionTable: createQuestionTable,
-        createResultUI: createResultUI
+        createResultUI: createResultUI,
+        createErrorDiv: createErrorDiv
     };
 }());
 
