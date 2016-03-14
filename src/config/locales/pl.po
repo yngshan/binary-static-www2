@@ -7,14 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-11 19:36+0000\n"
-"Last-Translator: Anna Płochocka <plochocka.anna@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/binary/static/pl/>\n"
+"PO-Revision-Date: 2016-03-14 21:48+0000\n"
+"Last-Translator: Ewelina Bruździak <e.bruzdziak@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/binary/static/pl/>"
+"\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -5133,10 +5135,12 @@ msgid "If you select \"Touches\", you win the payout if the market touches the <
 msgstr "Jeśli wybierzesz „osiągnie”, zdobędziesz wypłatę, gdy cena rynkowa osiągnie <strong>limit</strong> w dowolnym momencie w czasie <strong>trwania kontraktu</strong>."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/overunder.html.tt:5
-#, fuzzy
 #| msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
-msgstr "Jeśli wybierzesz „zgadza się”, zdobędziesz wypłatę, gdy <strong>ostatnia cyfra</strong> ostatniego najmniejszego przyrostu ceny będzie <strong>taka sama</strong> jak Twoje <strong>przewidywania.</strong>"
+msgstr ""
+"Jeśli wybierzesz „poniżej”, zdobędziesz wypłatę, gdy <strong>ostatnia "
+"cyfra</strong> ostatniego najmniejszego przyrostu ceny będzie <strong>"
+"mniejsza niż cyfra przewidywana przez Ciebie.</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/runbet-updown.html.tt:5
 msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
@@ -8083,9 +8087,8 @@ msgid "Please enter a number between 0 and %1."
 msgstr "Proszę wpisać liczbę od 0 do %1."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:395
-#, fuzzy
 msgid "Please enter a number greater or equal to %1."
-msgstr "Proszę wpisać liczbę większą niż 0"
+msgstr "Proszę wpisać liczbę większą lub równą %1."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_frequency.html.haml:1
@@ -11556,10 +11559,9 @@ msgstr "Handel jest w tej chwili wstrzymany."
 #. ($self->underlying->translated_display_name,                        Date::Utility->new($tentative->{blankout})
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2510
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2589
-#, fuzzy
 #| msgid "Trading is suspended at the moment."
 msgid "Trading is suspended for %1 from %2 to %3"
-msgstr "Handel jest w tej chwili wstrzymany."
+msgstr "Handel jest wstrzymany dla %1 od %2 do %3"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:452
 msgid "Trading manual"
