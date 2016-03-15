@@ -3,8 +3,17 @@
     border: 1px solid #DEDEDE;
 }
 
-#sell_popup_container.spread_popup {
-    width: 300px;
+#sell_popup_container {
+    &.spread_popup {
+        width: 300px;
+    }
+    &.message_popup {
+        width: 500px;
+        line-height: 25px;
+    }
+    &.tick_popup {
+        min-height: 460px;
+    }
 }
 
 #sell_popup_container {
@@ -188,7 +197,7 @@
             padding: 0px;
             border-left: 1px solid $COLOR_DARK_GRAY;
             th {
-                line-height: 20px;
+                line-height: 24px;
                 border-bottom-color: $COLOR_DARK_GRAY;
             }
             #trade_details_profit_loss {

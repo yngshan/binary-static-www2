@@ -27,15 +27,18 @@ var ViewPopupUI = (function() {
             }
             return this._container;
         },
-        cleanup: function (cancel_prev_req) {
-            while(window.forget_ids && window.forget_ids.length > 0) {
-                var id = window.forget_ids.pop();
+        cleanup: function () {
+            this.forget_streams();
+            this.close_container();
+            this._init();
+        },
+        forget_streams: function() {
+            while(window.stream_ids && window.stream_ids.length > 0) {
+                var id = window.stream_ids.pop();
                 if(id && id.length > 0) {
                     BinarySocket.send({"forget": id});
                 }
             }
-            this.close_container();
-            this._init();
         },
         close_container: function () {
             if (live_chart && typeof live_chart !== "undefined") {
@@ -72,9 +75,12 @@ var ViewPopupUI = (function() {
             button.removeAttr('disabled');
             button.fadeTo(0, 1);
         },
-        show_inpage_popup: function (data) {
-            var con = this.container(true);
+        show_inpage_popup: function (data, containerClass, dragHandle) {
             var that = this;
+            var con = this.container(true);
+            if(containerClass) {
+                con.addClass(containerClass);
+            }
             if (data) {
                 $('.inpage_popup_content', con).html(data);
             }
@@ -82,18 +88,14 @@ var ViewPopupUI = (function() {
             con.css('position', 'fixed').css('z-index', get_highest_zindex() + 100);
             body.append(con);
             con.show();
-            if ($('#sell_bet_desc', con).length > 0) {
-                con.draggable({
-                    stop: function() {
-                        that.reposition_confirmation_ondrag();
-                    },
-                    handle: '#sell_bet_desc, #sell_details_table',
-                    scroll: false,
-                });
-                $('#sell_bet_desc, #sell_details_table').disableSelection();
-            } else {
-                con.draggable();
-            }
+            con.draggable({
+                stop: function() {
+                    that.reposition_confirmation_ondrag();
+                },
+                handle: dragHandle,
+                scroll: false,
+            });
+            $(dragHandle).disableSelection();
             this.reposition_confirmation();
             return con;
         },
@@ -112,7 +114,7 @@ var ViewPopupUI = (function() {
             var con = this.container();
             var win_ = $(window);
             var x_min = 50;
-            var y_min = 50;
+            var y_min = 500;
             if(win_.width() < 767) { //To be responsive, on mobiles and phablets we show popup as full screen.
                 x_min = 0;
                 y_min = 0;
@@ -122,6 +124,7 @@ var ViewPopupUI = (function() {
             }
             if (y === undefined) {
                 y = Math.min(Math.floor((win_.height() - con.height()) / 2), y_min) + win_.scrollTop();
+                if(y < win_.scrollTop()) {y = win_.scrollTop();}
             }
             con.offset({left: x, top: y});
         },
@@ -193,22 +196,6 @@ var ViewPopupUI = (function() {
             }
             that.add_time_indicators(liveChartConfig);
             that.reposition_confirmation();
-        },
-        show_spread_popup: function(data) {
-            var that = this;
-            var con = that.container(true);
-            con.addClass('spread_popup');
-            data = '<div class="inpage_popup_content_box">' + data + '</div>';
-            if (data) {
-                $('.inpage_popup_content', con).html(data);
-            }
-            var body = $(document.body);
-            con.css('position', 'fixed').css('z-index', get_highest_zindex() + 100);
-            body.append(con);
-            con.show();
-            con.draggable();
-            this.reposition_confirmation();
-            return con;
         },
         get_date_from_seconds: function(seconds) {
             var date = new Date(seconds*1000);
