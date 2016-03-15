@@ -103,13 +103,11 @@ var KnowledgeTest = (function() {
                             break;
                         case 'jp_knowledge_test_fail': if (Date.now() >= jpStatus.next_test_epoch * 1000) {
                             // show Knowledge Test cannot be taken
-                            showDisallowedMsg(jpStatus.next_test_epoch)
+                            showDisallowedMsg(jpStatus.next_test_epoch);
                         }
                             break;
                         default: showDisallowedMsg(jpStatus.next_test_epoch);
                     }
-                } else {
-                    showDisallowedMsg(jpStatus.next_test_epoch);
                 }
             }
         });
