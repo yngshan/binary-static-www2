@@ -52,6 +52,7 @@ var KnowledgeTest = (function() {
         $('#knowledge-test-questions input[type=radio]').click(questionAnswerHandler);
         $('#knowledge-test-submit').click(submitHandler);
         $knowledgeTestQuestions.removeClass(hiddenClass);
+        $knowledgeTestMsg.text(text.localize('Please complete the following questions.'));
     }
 
     function showResult(score, time) {
@@ -69,8 +70,16 @@ var KnowledgeTest = (function() {
     }
 
     function showDisallowedMsg(nextTestEpoch) {
+        var nextTestDate = new Date(nextTestEpoch * 1000);
+        var msg = 'Dear customer, you are not allowed to take knowledge test until ' + nextTestDate.toISOString();
         $knowledgeTestQuestions.addClass(hiddenClass);
-        $knowledgeContainer.append(KnowledgeTestUI.createErrorDiv(nextTestEpoch));
+        $knowledgeTestMsg.text(text.localize(msg));
+    }
+
+    function showCompletedMsg() {
+        var msg = "Dear customer, you've already completed the knowledge test, please proceed to next step.";
+        $knowledgeTestQuestions.addClass(hiddenClass);
+        $knowledgeTestMsg.text(text.localize(msg));
     }
 
     function populateQuestions() {
@@ -98,6 +107,11 @@ var KnowledgeTest = (function() {
                 if (type === 'get_settings' && passthrough === 'knowledgetest') {
                     var jpStatus = response.get_settings.jp_account_status;
 
+                    if (!jpStatus) {
+                        window.location.href = page.url.url_for('/');
+                        return;
+                    }
+
                     switch(jpStatus.status) {
                         case 'jp_knowledge_test_pending': populateQuestions();
                             break;
@@ -106,7 +120,12 @@ var KnowledgeTest = (function() {
                             showDisallowedMsg(jpStatus.next_test_epoch);
                         }
                             break;
-                        default: showDisallowedMsg(jpStatus.next_test_epoch);
+                        case 'jp_activation_pending': showCompletedMsg();
+                            break;
+                        default: {
+                            console.warn('Unexpected jp status');
+                            window.location.href = page.url.url_for('/');
+                        }
                     }
                 }
             }
