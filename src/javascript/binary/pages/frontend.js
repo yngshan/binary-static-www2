@@ -436,12 +436,6 @@ function replaceQueryParam(param, newval, search) {
     return (query.length > 2 ? query + "&" : "?") + (newval ? param + "=" + newval : '');
 }
 
-if (page.language() === 'JA' && !$.cookie('MyJACookie')) {
-  var str = window.location.search;
-  str = replaceQueryParam('l', 'EN', str);
-  window.location = window.location.pathname + str;
-}
-
 // returns true if internet explorer browser
 function isIE() {
   return /(msie|trident|edge)/i.test(window.navigator.userAgent) && !window.opera;
