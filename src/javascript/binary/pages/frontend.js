@@ -429,13 +429,6 @@ function getUrlVars() {
     return vars;
 }
 
-function replaceQueryParam(param, newval, search) {
-    var regex = new RegExp("([?;&])" + param + "[^&;]*[;&]?");
-    var query = search.replace(regex, "$1").replace(/&$/, '');
-
-    return (query.length > 2 ? query + "&" : "?") + (newval ? param + "=" + newval : '');
-}
-
 // returns true if internet explorer browser
 function isIE() {
   return /(msie|trident|edge)/i.test(window.navigator.userAgent) && !window.opera;
