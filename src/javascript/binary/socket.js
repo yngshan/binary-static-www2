@@ -141,18 +141,20 @@ function BinarySocketClass() {
                             events.onauth();
                         }
                         send({balance:1, subscribe: 1});
+                        send({landing_company_details: TUser.get().landing_company_name});
                         sendBufferedSends();
                     }
                 } else if (type === 'balance') {
-                   ViewBalanceUI.updateBalances(response);
+                    ViewBalanceUI.updateBalances(response);
                 } else if (type === 'time') {
-                   page.header.time_counter(response);
+                    page.header.time_counter(response);
                 } else if (type === 'logout') {
-                   page.header.do_logout(response);
-                } else if (type === 'landing_company_details' && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.handler === 'page.client') {
-                   page.client.response_landing_company_details(response);
+                    page.header.do_logout(response);
+                } else if (type === 'landing_company_details') {
+                    page.client.response_landing_company_details(response);
+                    RealityCheck.init();
                 } else if (type === 'payout_currencies' && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.handler === 'page.client') {
-                   page.client.response_payout_currencies(response);
+                    page.client.response_payout_currencies(response);
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code && response.error.code === 'RateLimit') {
