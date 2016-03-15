@@ -59,7 +59,7 @@ var ViewPopupWS = (function() {
             getTickHistory(contract.underlying, contract.date_start - 60, contract.date_start - 1, 1);
         }
         // ----- Spread -----
-        else if(contract.shortcode.indexOf('SPREAD') === 0) {
+        else if(contract.shortcode.toUpperCase().indexOf('SPREAD') === 0) {
             contractType = 'spread';
             getTickHistory(contract.underlying, contract.date_start + 1, contract.date_start + 60, 0);
 
@@ -68,6 +68,7 @@ var ViewPopupWS = (function() {
             contract.per_point   = details[1];
             contract.stop_loss   = details[3];
             contract.stop_profit = details[4];
+            contract.is_point    = details[5] === 'POINT';
 
             socketSend({
                 "proposal"        : 1,
@@ -107,7 +108,7 @@ var ViewPopupWS = (function() {
             "symbol"              : contract.underlying,
             "number_of_ticks"     : contract.tick_count,
             "previous_tick_epoch" : history.times[0],
-            "contract_category"   : (/ASIAN/.test(contract.shortcode) ? 'asian' : /DIGIT/.test(contract.shortcode) ? 'digits' : 'callput'),
+            "contract_category"   : ((/asian/i).test(contract.shortcode) ? 'asian' : (/digit/i).test(contract.shortcode) ? 'digits' : 'callput'),
             "longcode"            : contract.longcode,
             "display_decimals"    : history.prices[0].split('.')[1].length || 2,
             "display_symbol"      : contract.underlying,
@@ -155,8 +156,8 @@ var ViewPopupWS = (function() {
         contract.status            = text.localize(contract.is_ended ? 'Closed' : 'Open');
         contract.profit            = contract.sell_price ? parseFloat(contract.sell_price) - parseFloat(contract.buy_price) : parseFloat(contract.bid_price) - parseFloat(contract.ask_price);
         contract.profit_point      = contract.profit / contract.per_point;
-        contract.stop_loss_level   = contract.entry_level + contract.stop_loss * (- contract.direction);
-        contract.stop_profit_level = contract.entry_level + contract.stop_profit * contract.direction;
+        contract.stop_loss_level   = contract.entry_level + contract.stop_loss   / (contract.is_point ? 1 : contract.per_point) * (- contract.direction);
+        contract.stop_profit_level = contract.entry_level + contract.stop_profit / (contract.is_point ? 1 : contract.per_point) * contract.direction;
     };
 
     var spreadUpdate = function() {
