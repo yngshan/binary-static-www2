@@ -158,6 +158,9 @@ Client.prototype = {
     is_virtual: function() {
         return this.get_storage_value('is_virtual') === '1';
     },
+    require_reality_check: function() {
+        return this.get_storage_value('has_reality_check') === '1';
+    },
     get_storage_value: function(key) {
         return LocalStore.get('client.' + key) || '';
     },
@@ -185,7 +188,12 @@ Client.prototype = {
 
         // allowed markets
         if(this.is_logged_in) {
-            if(!TUser.get().is_virtual && !this.get_storage_value('allowed_markets') && TUser.get().landing_company_name) {
+            if(
+                !this.get_storage_value('is_virtual') &&
+                !this.get_storage_value('allowed_markets') &&
+                TUser.get().landing_company_name &&
+                !this.get_storage_value('has_reality_check')
+            ) {
                 $('#topMenuStartBetting').addClass('invisible');
                 BinarySocket.send({
                     'landing_company_details': TUser.get().landing_company_name,
@@ -212,9 +220,11 @@ Client.prototype = {
         if (!response.hasOwnProperty('error')) {
             var allowed_markets = response.landing_company_details.legal_allowed_markets;
             var company = response.landing_company_details.name;
+            var has_reality_check = response.landing_company_details.has_reality_check;
 
             this.set_storage_value('allowed_markets', allowed_markets.length === 0 ? '' : allowed_markets.join(','));
             this.set_storage_value('landing_company_name', company);
+            this.set_storage_value('has_reality_check', has_reality_check);
 
             page.header.menu.disable_not_allowed_markets();
             page.header.menu.register_dynamic_links();
@@ -230,7 +240,7 @@ Client.prototype = {
     },
     clear_storage_values: function() {
         var that  = this;
-        var items = ['currencies', 'allowed_markets', 'landing_company_name', 'is_virtual'];
+        var items = ['currencies', 'allowed_markets', 'landing_company_name', 'is_virtual', 'has_reality_check'];
         items.forEach(function(item) {
             that.set_storage_value(item, '');
         });
@@ -1002,7 +1012,6 @@ Page.prototype = {
         this.on_click_acc_transfer();
         if(getCookieItem('login')){
             ViewBalance.init();
-            RealityCheck.init();
         }
         $('#current_width').val(get_container_width());//This should probably not be here.
     },
