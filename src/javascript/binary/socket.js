@@ -142,6 +142,7 @@ function BinarySocketClass() {
                         }
                         send({balance:1, subscribe: 1});
                         send({landing_company_details: TUser.get().landing_company_name});
+                        send({get_settings: 1});
                         sendBufferedSends();
                     }
                 } else if (type === 'balance') {

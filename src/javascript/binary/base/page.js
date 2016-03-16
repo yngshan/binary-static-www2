@@ -1012,9 +1012,6 @@ Page.prototype = {
         this.on_click_acc_transfer();
         if(getCookieItem('login')){
             ViewBalance.init();
-            if (getCookieItem('residence') === 'jp') {
-                BinarySocket.send({get_settings: 1});           // TODO: should store all data somewhere
-            }
         }
         $('#current_width').val(get_container_width());//This should probably not be here.
     },

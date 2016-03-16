@@ -136,6 +136,17 @@ var KnowledgeTest = (function() {
                             window.location.href = page.url.url_for('/');
                         }
                     }
+                } else if (type === 'jp_knowledge_test') {
+                    if (!response.error) {
+                        showResult(resultScore, response.jp_knowledge_test.test_taken_epoch * 1000);
+                        $("html, body").animate({ scrollTop: 0 }, "slow");
+
+                        if (response.echo_req.status === 'pass') {
+                            $('#knowledgetest-link').addClass(hiddenClass);
+                        }
+                    } else {
+                        console.error('something wrong from server');
+                    }
                 }
             }
         });
