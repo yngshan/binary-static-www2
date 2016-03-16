@@ -63,21 +63,14 @@ var StatementUI = (function(){
             var $viewButtonSpan = Button.createBinaryStyledButton();
             var $viewButton = $viewButtonSpan.children(".button").first();
             $viewButton.text(text.localize("View"));
-            $viewButton.addClass("open_contract_details");
+            $viewButton.addClass("open_contract_detailsws");
             $viewButton.attr("contract_id", transaction["contract_id"]);
-
-            var $viewButtonSpan2 = Button.createBinaryStyledButton();
-            var $viewButton2 = $viewButtonSpan2.children(".button").first();
-            $viewButton2.text(text.localize("View_ws"));
-            $viewButton2.addClass("open_contract_detailsws");
-            $viewButton2.attr("contract_id", transaction["contract_id"]);
 
             $statementRow.
                 children(".desc").
                 first().
                 append("<br>").
-                append($viewButtonSpan).
-                append($viewButtonSpan2);    
+                append($viewButtonSpan);    
         }
 
         return $statementRow[0];        //return DOM instead of jquery object

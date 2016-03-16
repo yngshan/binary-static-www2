@@ -420,7 +420,7 @@ var ViewPopupWS = (function() {
 
     var showErrorPopup = function(response) {
         showMessagePopup(text.localize('Sorry, an error occurred while processing your request.'), 'There was an error', 'notice-msg');
-        console.warn(response); // TODO: remove for production
+        console.log(response);
     };
 
     var sellSetVisibility = function(show) {
