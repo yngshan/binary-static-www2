@@ -65,9 +65,18 @@ var KnowledgeTest = (function() {
         $('#knowledge-test-questions').addClass(hiddenClass);
     }
 
-    function showDisallowedMsg(nextTestEpoch) {
+    function showDisallowedMsg(jpStatus) {
+        var nextTestEpoch = jpStatus.next_test_epoch;
+        var lastTestEpoch = jpStatus.last_test_epoch;
+
         var nextTestDate = new Date(nextTestEpoch * 1000);
-        var msg = 'Dear customer, you are not allowed to take knowledge test until ' + nextTestDate.toLocaleString();
+        var lastTestDate = new Date(lastTestEpoch * 1000);
+
+        var msg = 'Dear customer, you are not allowed to take knowledge test until ' +
+            nextTestDate.toLocaleString() +
+            '\nLast test taken at ' +
+            lastTestDate.toLocaleString();
+
         $('#knowledge-test-questions').addClass(hiddenClass);
         $('#knowledge-test-msg').text(text.localize(msg));
     }
@@ -115,7 +124,7 @@ var KnowledgeTest = (function() {
                             // show Knowledge Test cannot be taken
                             populateQuestions();
                         } else {
-                            showDisallowedMsg(jpStatus.next_test_epoch);
+                            showDisallowedMsg(jpStatus);
                         }
                             break;
                         case 'jp_activation_pending': showCompletedMsg();
