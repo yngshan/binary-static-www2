@@ -157,12 +157,16 @@ function BinarySocketClass() {
                     page.client.response_payout_currencies(response);
                 }
                 if (response.hasOwnProperty('error')) {
-                    if(response.error && response.error.code && response.error.code === 'RateLimit') {
+                    if(response.error && response.error.code) {
+                      if (response.error.code === 'RateLimit') {
                         $('#ratelimit-error-message')
                             .css('display', 'block')
                             .on('click', '#ratelimit-refresh-link', function () {
                                 window.location.reload();
                             });
+                      } else if (response.error.code === 'InvalidToken') {
+                        BinarySocket.send({'logout': '1'});
+                      }
                     }
                 }
                 if(typeof events.onmessage === 'function'){
