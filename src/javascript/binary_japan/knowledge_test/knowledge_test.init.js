@@ -8,10 +8,6 @@ var KnowledgeTest = (function() {
     var randomPicksAnswer = {};
     var resultScore = 0;
 
-    var $knowledgeTestMsg = $('#knowledge-test-msg');
-    var $knowledgeTestQuestions = $('#knowledge-test-questions');
-    var $knowledgeContainer = $('#knowledge-test-container');
-
     var passMsg = 'Congratulations, you have pass the test, our Customer Support will contact you shortly';
     var failMsg = 'Sorry, you have failed the test, please try again after 24 hours.';
 
@@ -23,7 +19,7 @@ var KnowledgeTest = (function() {
 
     function submitHandler() {
         if (Object.keys(submitted).length !== 20) {
-            $knowledgeTestMsg
+            $('#knowledge-test-msg')
                 .addClass('notice-msg')
                 .text(text.localize('You need to finish all 20 questions.'));
             $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -51,35 +47,35 @@ var KnowledgeTest = (function() {
 
         $('#knowledge-test-questions input[type=radio]').click(questionAnswerHandler);
         $('#knowledge-test-submit').click(submitHandler);
-        $knowledgeTestQuestions.removeClass(hiddenClass);
-        $knowledgeTestMsg.text(text.localize('Please complete the following questions.'));
+        $('#knowledge-test-questions').removeClass(hiddenClass);
+        $('#knowledge-test-msg').text(text.localize('Please complete the following questions.'));
     }
 
     function showResult(score, time) {
         $('#knowledge-test-header').text(text.localize('Knowledge Test Result'));
         if (score > 14) {
-            $knowledgeTestMsg.text(text.localize(passMsg));
+            $('#knowledge-test-msg').text(text.localize(passMsg));
         } else {
-            $knowledgeTestMsg.text(text.localize(failMsg));
+            $('#knowledge-test-msg').text(text.localize(failMsg));
         }
 
         var $resultTable = KnowledgeTestUI.createResultUI(score, time);
 
-        $knowledgeContainer.append($resultTable);
-        $knowledgeTestQuestions.addClass(hiddenClass);
+        $('#knowledge-test-container').append($resultTable);
+        $('#knowledge-test-questions').addClass(hiddenClass);
     }
 
     function showDisallowedMsg(nextTestEpoch) {
         var nextTestDate = new Date(nextTestEpoch * 1000);
-        var msg = 'Dear customer, you are not allowed to take knowledge test until ' + nextTestDate.toISOString();
-        $knowledgeTestQuestions.addClass(hiddenClass);
-        $knowledgeTestMsg.text(text.localize(msg));
+        var msg = 'Dear customer, you are not allowed to take knowledge test until ' + nextTestDate.toLocaleString();
+        $('#knowledge-test-questions').addClass(hiddenClass);
+        $('#knowledge-test-msg').text(text.localize(msg));
     }
 
     function showCompletedMsg() {
         var msg = "Dear customer, you've already completed the knowledge test, please proceed to next step.";
-        $knowledgeTestQuestions.addClass(hiddenClass);
-        $knowledgeTestMsg.text(text.localize(msg));
+        $('#knowledge-test-questions').addClass(hiddenClass);
+        $('#knowledge-test-msg').text(text.localize(msg));
     }
 
     function populateQuestions() {
@@ -115,8 +111,10 @@ var KnowledgeTest = (function() {
                     switch(jpStatus.status) {
                         case 'jp_knowledge_test_pending': populateQuestions();
                             break;
-                        case 'jp_knowledge_test_fail': if (Date.now() >= jpStatus.next_test_epoch * 1000) {
+                        case 'jp_knowledge_test_fail': if (Date.now() >= (jpStatus.next_test_epoch * 1000)) {
                             // show Knowledge Test cannot be taken
+                            populateQuestions();
+                        } else {
                             showDisallowedMsg(jpStatus.next_test_epoch);
                         }
                             break;
@@ -134,7 +132,23 @@ var KnowledgeTest = (function() {
         BinarySocket.send({get_settings: 1, passthrough: {key: 'knowledgetest'}});
     }
 
+    function showKnowledgeTestTopBarIfValid(jpStatus) {
+        if (!jpStatus) {
+            return;
+        }
+        switch (jpStatus.status) {
+            case 'jp_knowledge_test_pending': KnowledgeTestUI.createKnowledgeTestLink();
+                break;
+            case 'jp_knowledge_test_fail': if (Date.now() >= (jpStatus.next_test_epoch * 1000)) {
+                KnowledgeTestUI.createKnowledgeTestLink();
+            }
+                break;
+            default: return;
+        }
+    }
+
     return {
-        init: init
+        init: init,
+        showKnowledgeTestTopBarIfValid: showKnowledgeTestTopBarIfValid
     };
 }());

@@ -89,17 +89,27 @@ var KnowledgeTestUI = (function () {
         return $resultTable;
     }
 
-    function createErrorDiv(nextTestEpoch) {
-        var nextTestDate = new Date(nextTestEpoch * 1000);
-        var fullMsg = 'Dear customer, you are not allowed to take knowledge test until ' + nextTestDate.toISOString();
-        var $errorDiv = $('<div></div>').text(text.localize(fullMsg));
-        return $errorDiv;
-    }
-
     function createAlreadyCompleteDiv() {
         var msg = "Dear customer, you've already completed the knowledge test, please proceed to next step.";
         var $completeDiv = $('<div></div>').text(text.localize(msg));
         return $completeDiv;
+    }
+
+    function createKnowledgeTestLink() {
+        // change topbar to knowledge test link
+        var $topbarmsg = $('#topbar-msg');
+        if ($topbarmsg.length <= 0) {
+            return;         // topbar not exist, do nothing
+        }
+
+        var $knowledgeTestLink = $('<a></a>', {
+            class: 'pjaxload',
+            id: 'knowledgetest-link',
+            href: '/new_account/knowledgetest'
+        }).text(text.localize('Take knowledge test'));
+
+        $topbarmsg.children('a').addClass('invisible');
+        $topbarmsg.append($knowledgeTestLink);
     }
 
     return {
@@ -107,8 +117,8 @@ var KnowledgeTestUI = (function () {
         createQuestionRow: createQuestionRow,
         createQuestionTable: createQuestionTable,
         createResultUI: createResultUI,
-        createErrorDiv: createErrorDiv,
-        createAlreadyCompleteDiv: createAlreadyCompleteDiv
+        createAlreadyCompleteDiv: createAlreadyCompleteDiv,
+        createKnowledgeTestLink: createKnowledgeTestLink,
     };
 }());
 
