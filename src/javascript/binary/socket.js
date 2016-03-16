@@ -155,6 +155,8 @@ function BinarySocketClass() {
                     RealityCheck.init();
                 } else if (type === 'payout_currencies' && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.handler === 'page.client') {
                     page.client.response_payout_currencies(response);
+                } else if (type === 'get_settings') {
+                    KnowledgeTest.showKnowledgeTestTopBarIfValid(response.get_settings.jp_account_status);
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code && response.error.code === 'RateLimit') {
