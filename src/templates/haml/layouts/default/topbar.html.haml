@@ -1,7 +1,7 @@
 #topbar.dark-blue
   .grd-container
     .grd-parent
-      .grd-grid-6.grd-grid-mobile-12.by_client_type.client_virtual{ :class => 'upgrademessage', :style => 'display: none;'}
+      .grd-grid-6.grd-grid-mobile-12.by_client_type.client_virtual{ :id => 'topbar-msg' :class => 'upgrademessage', :style => 'display: none;'}
         %span.grd-hide-mobile
           %span#virtual-text= l("You're using a Virtual Account.")
         %a#virtual-upgrade-link.pjaxload.with_login_cookies.pulser{:href =>url_for("new_account/realws") }= l('Upgrade to a Real Account')
