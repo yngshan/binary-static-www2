@@ -105,7 +105,7 @@ var KnowledgeTestUI = (function () {
         var $knowledgeTestLink = $('<a></a>', {
             class: 'pjaxload',
             id: 'knowledgetest-link',
-            href: '/new_account/knowledgetest'
+            href: '/new_account/knowledge_test'
         }).text(text.localize('Take knowledge test'));
 
         $topbarmsg.children('a').addClass('invisible');

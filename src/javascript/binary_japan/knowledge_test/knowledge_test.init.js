@@ -72,10 +72,12 @@ var KnowledgeTest = (function() {
         var nextTestDate = new Date(nextTestEpoch * 1000);
         var lastTestDate = new Date(lastTestEpoch * 1000);
 
-        var msg = 'Dear customer, you are not allowed to take knowledge test until ' +
-            nextTestDate.toLocaleString() +
-            '\nLast test taken at ' +
-            lastTestDate.toLocaleString();
+        var msgTemplate =
+            'Dear customer, you are not allowed to take knowledge test until [_1].\nLast test taken at [_2].';
+
+        var msg = text.localize(msgTemplate)
+            .replace('[_1]', nextTestDate.toLocaleString())
+            .replace('[_2]', lastTestDate.toLocaleString());
 
         $('#knowledge-test-questions').addClass(hiddenClass);
         $('#knowledge-test-msg').text(text.localize(msg));
