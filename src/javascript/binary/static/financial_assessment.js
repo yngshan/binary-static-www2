@@ -3,12 +3,12 @@ var FinancialAssessmentws = (function(){
    
     var init = function(){
         LocalizeText();
-        $("#assessment_form").removeClass('invisible');
         $("#assessment_form").on("submit",function(event) {
             event.preventDefault();
             submitForm();
             return false;
         });
+        BinarySocket.send(JSON.parse("{\"get_financial_assessment\" : 1}"));
     };
    
     // For translating strings
@@ -33,9 +33,9 @@ var FinancialAssessmentws = (function(){
         $('#assessment_form select').each(function(){
             data[$(this).attr("id")] = $(this).val();
         });
-        console.log(data['estimated_worth']);
-        console.log(data['net_income']);
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
         BinarySocket.send(data);
+        
     };
     
     var showLoadingImg = function(){
@@ -43,13 +43,52 @@ var FinancialAssessmentws = (function(){
         $("#assessment_form").addClass('invisible');
     };
     
-    var hideLoadingImg = function(){
+    var hideLoadingImg = function(show_form){
         $("#loading").remove();
-        $("#assessment_form").removeClass('invisible');
+        if(typeof show_form === 'undefined')
+            show_form = true;
+        if(show_form)
+            $("#assessment_form").removeClass('invisible');
+    };
+    
+    var responseGetAssessment = function(response){
+        hideLoadingImg();
+        for(var key in response.get_financial_assessment){
+            if(key){
+                var val = response.get_financial_assessment[key];
+                $("#"+key).val(val);
+            }
+        }
+    };
+    
+    var displayErrors = function(errors){
+        $(".errorfield").each(function(){$(this).text('');});
+        for(var key in errors.details){
+            if(key){
+                var error = errors.details[key];
+                $("#error"+key).text(text.localize(error));
+            }
+        }  
+        hideLoadingImg();
+    };
+    
+    var responseOnSuccess = function(){
+        $("#heading").hide();
+        hideLoadingImg(false);
+        $("#response_on_success").text(text.localize("Your details have been updated."))
+            .removeClass("invisible");
     };
     
     var apiResponse = function(response){
-        console.log(response);
+        if(response.msg_type === 'get_financial_assessment'){
+            responseGetAssessment(response);
+        }
+        else if(response.msg_type === 'set_financial_assessment' && 'error' in response){
+            displayErrors(response.error);
+        }
+        else if(response.msg_type === 'set_financial_assessment'){
+            responseOnSuccess();
+        }
     };
     return {
         init : init,
@@ -73,7 +112,7 @@ pjax_config_page("user/assessmentws", function() {
                     }
                 }
             });
-
+            showLoadingImage($('<div/>', {id: 'loading'}).insertAfter('#heading'));
             FinancialAssessmentws.init();
         }
     };

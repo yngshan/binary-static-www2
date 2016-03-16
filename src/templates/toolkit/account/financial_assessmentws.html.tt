@@ -1,7 +1,7 @@
 <div class="grd-grid-12">
 
     <h1 id="heading">Financial Assessment</h1>
-
+    <p class = "invisible" id="response_on_success"></p>
     <form class="formObject grd-row-padding invisible" id="assessment_form" name="assessment_form">
         <div class="rbox form">
             <div class="rbox-wrap">
@@ -15,11 +15,11 @@
                         <div class="grd-grid-8">
                             <select id="forex_trading_experience" name="forex_trading_experience">
                                 <option value="">Please select</option>
-                                <option value="0-1 year" selected="">0-1 year</option>
+                                <option value="0-1 year" >0-1 year</option>
                                 <option value="1-2 years">1-2 years</option>
                                 <option value="Over 3 years">Over 3 years</option>
                             </select>
-                            <p class="errorfield" id="errorforexexperience"></p>
+                            <p class="errorfield" id="errorforex_trading_experience"></p>
                         </div>
                     </div>
 
@@ -30,11 +30,11 @@
                         <div class="grd-grid-8">
                             <select id="forex_trading_frequency" name="forex_trading_frequency">
                                 <option value="">Please select</option>
-                                <option value="0-5 transactions in the past 12 months" selected="">0-5 transactions in the past 12 months</option>
+                                <option value="0-5 transactions in the past 12 months" >0-5 transactions in the past 12 months</option>
                                 <option value="6-10 transactions in the past 12 months">6-10 transactions in the past 12 months</option>
                                 <option value="40 transactions or more in the past 12 months">40 transactions or more in the past 12 months</option>
                             </select>
-                            <p class="errorfield" id="errorforexfrequency"></p>
+                            <p class="errorfield" id="errorforex_trading_frequency"></p>
                         </div>
                     </div>
 
@@ -45,11 +45,11 @@
                         <div class="grd-grid-8">
                             <select id="indices_trading_experience" name="indices_trading_experience">
                                 <option value="">Please select</option>
-                                <option value="0-1 year" selected="">0-1 year</option>
+                                <option value="0-1 year" >0-1 year</option>
                                 <option value="1-2 years">1-2 years</option>
                                 <option value="Over 3 years">Over 3 years</option>
                             </select>
-                            <p class="errorfield" id="errorindicesexperience"></p>
+                            <p class="errorfield" id="errorindices_trading_experience"></p>
                         </div>
                     </div>
 
@@ -61,10 +61,10 @@
                             <select id="indices_trading_frequency" name="indices_trading_frequency">
                                 <option value="">Please select</option>
                                 <option value="0-5 transactions in the past 12 months">0-5 transactions in the past 12 months</option>
-                                <option value="6-10 transactions in the past 12 months" selected="">6-10 transactions in the past 12 months</option>
+                                <option value="6-10 transactions in the past 12 months" >6-10 transactions in the past 12 months</option>
                                 <option value="40 transactions or more in the past 12 months">40 transactions or more in the past 12 months</option>
                             </select>
-                            <p class="errorfield" id="errorindicesfrequency"></p>
+                            <p class="errorfield" id="errorindices_trading_frequency"></p>
                         </div>
                     </div>
 
@@ -76,10 +76,10 @@
                             <select id="commodities_trading_experience" name="commodities_trading_experience">
                                 <option value="">Please select</option>
                                 <option value="0-1 year">0-1 year</option>
-                                <option value="1-2 years" selected="">1-2 years</option>
+                                <option value="1-2 years" >1-2 years</option>
                                 <option value="Over 3 years">Over 3 years</option>
                             </select>
-                            <p class="errorfield" id="errorcommoditiesexperience"></p>
+                            <p class="errorfield" id="errorcommodities_trading_experience"></p>
                         </div>
                     </div>
 
@@ -92,9 +92,9 @@
                                 <option value="">Please select</option>
                                 <option value="0-5 transactions in the past 12 months">0-5 transactions in the past 12 months</option>
                                 <option value="6-10 transactions in the past 12 months">6-10 transactions in the past 12 months</option>
-                                <option value="40 transactions or more in the past 12 months" selected="">40 transactions or more in the past 12 months</option>
+                                <option value="40 transactions or more in the past 12 months" >40 transactions or more in the past 12 months</option>
                             </select>
-                            <p class="errorfield" id="errorcommoditiesfrequency"></p>
+                            <p class="errorfield" id="errorcommodities_trading_frequency"></p>
                         </div>
                     </div>
 
@@ -106,10 +106,10 @@
                             <select id="stocks_trading_experience" name="stocks_trading_experience">
                                 <option value="">Please select</option>
                                 <option value="0-1 year">0-1 year</option>
-                                <option value="1-2 years" selected="">1-2 years</option>
+                                <option value="1-2 years" >1-2 years</option>
                                 <option value="Over 3 years">Over 3 years</option>
                             </select>
-                            <p class="errorfield" id="errorstocksexperience"></p>
+                            <p class="errorfield" id="errorstocks_trading_experience"></p>
                         </div>
                     </div>
 
@@ -121,10 +121,10 @@
                             <select id="stocks_trading_frequency" name="stocks_trading_frequency">
                                 <option value="">Please select</option>
                                 <option value="0-5 transactions in the past 12 months">0-5 transactions in the past 12 months</option>
-                                <option value="6-10 transactions in the past 12 months" selected="">6-10 transactions in the past 12 months</option>
+                                <option value="6-10 transactions in the past 12 months" >6-10 transactions in the past 12 months</option>
                                 <option value="40 transactions or more in the past 12 months">40 transactions or more in the past 12 months</option>
                             </select>
-                            <p class="errorfield" id="errorstocksfrequency"></p>
+                            <p class="errorfield" id="errorstocks_trading_frequency"></p>
                         </div>
                     </div>
                     <div class="grd-row-padding row clear">
@@ -135,10 +135,10 @@
                             <select id="other_derivatives_trading_experience" name="other_derivatives_trading_experience">
                                 <option value="">Please select</option>
                                 <option value="0-1 year">0-1 year</option>
-                                <option value="1-2 years" selected="">1-2 years</option>
+                                <option value="1-2 years" >1-2 years</option>
                                 <option value="Over 3 years">Over 3 years</option>
                             </select>
-                            <p class="errorfield" id="errorotherderivativesexperience"></p>
+                            <p class="errorfield" id="errorother_derivatives_trading_experience"></p>
                         </div>
                     </div>
                     <div class="grd-row-padding row clear">
@@ -149,10 +149,10 @@
                             <select id="other_derivatives_trading_frequency" name="other_derivatives_trading_frequency">
                                 <option value="">Please select</option>
                                 <option value="0-5 transactions in the past 12 months">0-5 transactions in the past 12 months</option>
-                                <option value="6-10 transactions in the past 12 months" selected="">6-10 transactions in the past 12 months</option>
+                                <option value="6-10 transactions in the past 12 months" >6-10 transactions in the past 12 months</option>
                                 <option value="40 transactions or more in the past 12 months">40 transactions or more in the past 12 months</option>
                             </select>
-                            <p class="errorfield" id="errorotherderivativesfrequency"></p>
+                            <p class="errorfield" id="errorother_derivatives_trading_frequency"></p>
                         </div>
                     </div>
                     <div class="grd-row-padding row clear">
@@ -163,10 +163,10 @@
                             <select id="other_instruments_trading_experience" name="other_instruments_trading_experience">
                                 <option value="">Please select</option>
                                 <option value="0-1 year">0-1 year</option>
-                                <option value="1-2 years" selected="">1-2 years</option>
+                                <option value="1-2 years" >1-2 years</option>
                                 <option value="Over 3 years">Over 3 years</option>
                             </select>
-                            <p class="errorfield" id="errorotherinstrumentsexperience"></p>
+                            <p class="errorfield" id="errorother_instruments_trading_experience"></p>
                         </div>
                     </div>
                     <div class="grd-row-padding row clear">
@@ -177,10 +177,10 @@
                             <select id="other_instruments_trading_frequency" name="other_instruments_trading_frequency">
                                 <option value="">Please select</option>
                                 <option value="0-5 transactions in the past 12 months">0-5 transactions in the past 12 months</option>
-                                <option value="6-10 transactions in the past 12 months" selected="">6-10 transactions in the past 12 months</option>
+                                <option value="6-10 transactions in the past 12 months" >6-10 transactions in the past 12 months</option>
                                 <option value="40 transactions or more in the past 12 months">40 transactions or more in the past 12 months</option>
                             </select>
-                            <p class="errorfield" id="errorotherinstrumentsfrequency"></p>
+                            <p class="errorfield" id="errorother_instruments_trading_frequency"></p>
                         </div>
                     </div>
                     <div class="grd-row-padding row clear">
@@ -191,13 +191,13 @@
                             <select id="employment_industry" name="employment_industry">
                                 <option value="">Please select</option>
                                 <option value="Construction">Construction</option>
-                                <option value="Education" selected="">Education</option>
+                                <option value="Education" >Education</option>
                                 <option value="Finance">Finance</option>
                                 <option value="Health">Health</option>
                                 <option value="Tourism">Tourism</option>
                                 <option value="Other">Other</option>
                             </select>
-                            <p class="errorfield" id="errorempindustry"></p>
+                            <p class="errorfield" id="erroremployment_industry"></p>
                         </div>
                     </div>
                     <div class="grd-row-padding row clear">
@@ -208,10 +208,10 @@
                             <select id="education_level" name="education_level">
                                 <option value="">Please select</option>
                                 <option value="Primary">Primary</option>
-                                <option value="Secondary" selected="">Secondary</option>
+                                <option value="Secondary" >Secondary</option>
                                 <option value="Tertiary">Tertiary</option>
                             </select>
-                            <p class="errorfield" id="erroreducationlevel"></p>
+                            <p class="errorfield" id="erroreducation_level"></p>
                         </div>
                     </div>
                     <div class="grd-row-padding row clear">
@@ -222,12 +222,12 @@
                             <select id="income_source" name="income_source">
                                 <option value="">Please select</option>
                                 <option value="Salaried Employee">Salaried Employee</option>
-                                <option value="Self-Employed" selected="">Self-Employed</option>
+                                <option value="Self-Employed" >Self-Employed</option>
                                 <option value="Investments &amp; Dividends">Investments &amp; Dividends</option>
                                 <option value="Pension">Pension</option>
                                 <option value="Other">Other</option>
                             </select>
-                            <p class="errorfield" id="errorincomesource"></p>
+                            <p class="errorfield" id="errorincome_source"></p>
                         </div>
                     </div>
                     <div class="grd-row-padding row clear">
@@ -237,12 +237,12 @@
                         <div class="grd-grid-8">
                             <select id="net_income" name="net_income">
                                 <option value="">Please select</option>
-                                <option value="Less than $25,000">Less than $25,000</option>
-                                <option value="$25,000 - $100,000" selected="">$25,000 - $100,000</option>
-                                <option value="$100,000 - $500,000">$100,000 - $500,000</option>
-                                <option value="Over $500,000">Over $500,001</option>
+                                <option value="Less than &#36;25,000">Less than &#36;25,000</option>
+                                <option value="&#36;25,000 - &#36;100,000" >&#36;25,000 - &#36;100,000</option>
+                                <option value="&#36;100,000 - &#36;500,000">&#36;100,000 - &#36;500,000</option>
+                                <option value="Over &#36;500,000">Over &#36;500,001</option>
                             </select>
-                            <p class="errorfield" id="errornetincome"></p>
+                            <p class="errorfield" id="errornet_income"></p>
                         </div>
                     </div>
                     <div class="grd-row-padding row clear">
@@ -252,12 +252,12 @@
                         <div class="grd-grid-8">
                             <select id="estimated_worth" name="estimated_worth">
                                 <option value="">Please select</option>
-                                <option value="Less than $100,000">Less than $100,000</option>
-                                <option value="$$$$1212100,000 - $250,000" selected="">$100,000 - $250,000</option>
-                                <option value="$250,000 - $1,000,000">$250,000 - $1,000,000</option>
-                                <option value="Over $1,000,000">Over $1,000,000</option>
+                                <option value="Less than &#36;100,000">Less than &#36;100,000</option>
+                                <option value="&#36;100,000 - &#36;250,000" >&#36;100,000 - &#36;250,000</option>
+                                <option value="&#36;250,000 - &#36;1,000,000">&#36;250,000 - &#36;1,000,000</option>
+                                <option value="Over &#36;1,000,000">Over &#36;1,000,000</option>
                             </select>
-                            <p class="errorfield" id="errorestimatedworth"></p>
+                            <p class="errorfield" id="errorestimated_worth"></p>
                         </div>
                     </div>
                 </fieldset>
