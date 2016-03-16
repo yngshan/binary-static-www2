@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-14 09:43+0000\n"
+"PO-Revision-Date: 2016-03-16 01:35+0000\n"
 "Last-Translator: Masanari Higashiyama <higashiyama@regentmarkets.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
@@ -95,7 +95,7 @@ msgstr "当社は、訪問者に始めて接触する窓口での顧客の所有
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:391
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:439
 msgid "%1 cashier password updated"
-msgstr "%1キャッシャーパスワードを更新しました"
+msgstr "%1入出金パスワードを更新しました"
 
 #. (request.website.display_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transfer.html.tt:31
@@ -2290,7 +2290,7 @@ msgstr "設定、制限、バランスシート、購入履歴などの口座ア
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:36
 msgid "Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords."
-msgstr "決済サービスでのご出金、口座間の資金送金、キャッシャーパスワードの設定/削除をご利用いただけます。"
+msgstr "決済サービスでのご出金、口座間の資金送金、入出金パスワードの設定/削除をご利用いただけます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:88
 msgid "Can you customize a banner for my site?"
@@ -3029,7 +3029,7 @@ msgstr "市場情報、リアルタイム取引戦略と履歴分析にアクセ
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:203
 msgid "Credit/Debit"
-msgstr "クレジット/デビット"
+msgstr "支払/受取"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:147
 msgid "Credit/Debit Card"
@@ -3460,10 +3460,9 @@ msgid "DevOps Engineering"
 msgstr "DevOpsエンジニア"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:406
-#, fuzzy
 #| msgid "DevOps Manager / Team Lead"
 msgid "DevOps Manager"
-msgstr "DevOps マネージャー / チームリーダー"
+msgstr "開発運用マネージャー"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "DevOps Manager / Team Lead"
@@ -4344,7 +4343,7 @@ msgstr "３年連続でBetOnMarkets.comは、Shares Magazine UKから最も優�
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:282
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:387
 msgid "Foreign currency deposit"
-msgstr "外貨貯金"
+msgstr "外貨預金"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:405
 msgid "Forest Chart"
@@ -4531,10 +4530,9 @@ msgid "Give Me More Money!"
 msgstr "もっと利益を得たい！"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:428
-#, fuzzy
 #| msgid "Customer Service Representatives"
 msgid "Global Customer Service Representatives"
-msgstr "カスタマーサポート担当"
+msgstr "グローバル・カスタマーサポート担当"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
@@ -9335,7 +9333,7 @@ msgstr "申し訳ございませんが、エラーが発生しました。状況
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:321
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:959
 msgid "Sorry, client balance will exceed limits with this payment."
-msgstr ""
+msgstr "申し訳ございません。この出金は口座残高の制限を超えております。"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1424
 msgid "Sorry, contracts on Random Indices are not available in your country of residence"
@@ -11412,10 +11410,9 @@ msgstr "現在、トレードの提供を一時的に停止しております。
 #. ($self->underlying->translated_display_name,                        Date::Utility->new($tentative->{blankout})
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2510
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2589
-#, fuzzy
 #| msgid "Trading is suspended at the moment."
 msgid "Trading is suspended for %1 from %2 to %3"
-msgstr "現在、トレードの提供を一時的に停止しております。"
+msgstr "現在、取引を%2から%3まで一時的に停止しております。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:452
 msgid "Trading manual"
@@ -11658,7 +11655,7 @@ msgstr "他にお勧されない場合に限り、個人顧客として扱わせ
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:398
 msgid "Unlock Cashier"
-msgstr "キャッシャーロック解除"
+msgstr "入出金ロック解除"
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:436
 msgid "Unrecognised request."
@@ -13098,7 +13095,7 @@ msgstr "お客様の入出金はリクエストによりロックしました。
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:399
 msgid "Your cashier is locked as per your request - to unlock it, please enter the password."
-msgstr "お客様のキャッシャーはリクエストにより、ロックされました。 - 解除するにはパスワードをご入力ください。"
+msgstr "お客様の入出金はリクエストにより、ロックされました。 - 解除するにはパスワードをご入力ください。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:429
 msgid "Your cashier is locked as per your request."
@@ -13291,7 +13288,9 @@ msgstr "あなたのトークンが無効になりました。 認証プロセ�
 #. ($c->stash('request')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:352
 msgid "Your token has expired. If you require further assistance, please contact our <a href=\"%1\"><strong>Customer Support</strong></a>."
-msgstr "トークンの有効期限が切れています。サポートが必要な場合は、 <a href=\"%1\"><strong>カスタマーサポート</strong></a>までご連絡ください。"
+msgstr ""
+"認証の有効期限が切れました。お手数ですが、もう一度、最初から同じメールアドレスを入力し、最新のリンクを取得してください。サポートが必要な場合は、 <a "
+"href=\"%1\"><strong>カスタマーサポート</strong></a>までご連絡ください。"
 
 #. (($mode eq 'login' ? 'since login' : 'for the recent 48 hours')
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check.html.haml:1
@@ -14397,7 +14396,6 @@ msgid "International Consolidated Airlines Group SA"
 msgstr "International Consolidated Airlines Group SA"
 
 #: Underlying Symbol DEDUE
-#, fuzzy
 #| msgid "Drr AG"
 msgid "Drr AG"
 msgstr "Drr AG"
