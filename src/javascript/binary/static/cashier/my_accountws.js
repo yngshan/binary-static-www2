@@ -179,6 +179,9 @@ var MyAccountWS = (function() {
 
     var apiResponse = function(response) {
         if('error' in response){
+            if (response.error.code === 'InvalidToken') {
+              send({'logout': '1'});
+            }
             if('message' in response.error) {
                 console.log(response.error.message);
             }
