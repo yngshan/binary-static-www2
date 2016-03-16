@@ -310,6 +310,8 @@ function contractTypeDisplayMapping(type) {
         DIGITODD: "bottom",
         DIGITOVER: "top",
         DIGITUNDER: "bottom",
+        EXPIRYRANGEE: "top",
+        EXPIRYMISSE: "bottom",
         EXPIRYRANGE: "top",
         EXPIRYMISS: "bottom",
         RANGE: "top",
