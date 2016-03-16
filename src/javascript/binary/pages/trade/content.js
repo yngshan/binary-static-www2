@@ -282,11 +282,11 @@ var Content = (function () {
     };
 
     var limitsTranslation = function(){
-        var titleElement = document.getElementById("limits-title").firstElementChild;
+        var titleElement = document.getElementById("limits-ws-container").firstElementChild;
         titleElement.textContent = localize.textLimits;
 
-        if(TUser.get().loginid){
-            var loginId = TUser.get().loginid;
+        if(page.client.is_logged_in && !page.client.is_virtual()){
+            var loginId = page.client.loginid;
 
             var tradingLimits = document.getElementById("trading-limits");
             tradingLimits.textContent = loginId + " - " + localize.textTradingLimits;
