@@ -144,7 +144,7 @@ var MyAccountWS = (function() {
             }
 
             if(isReal) {
-                data['bom_age']       = parseInt((moment(str).unix() - get_settings.date_of_birth) / 31557600);
+                data['bom_age']       = parseInt((moment().unix() - get_settings.date_of_birth) / 31557600);
                 data['bom_firstname'] = get_settings.first_name;
                 data['bom_lastname']  = get_settings.last_name;
                 data['bom_phone']     = get_settings.phone;
