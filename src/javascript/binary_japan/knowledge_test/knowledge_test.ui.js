@@ -80,7 +80,7 @@ var KnowledgeTestUI = (function () {
         var $resultTable = $('<table></table>', { class: 'kv-pairs'});
         var $scoreRow = $('<tr></tr>').append($('<td>Score</td>')).append($('<td>'+ score + '</td>'));
 
-        var submitDate = (new Date(time)).toLocaleString();
+        var submitDate = (new Date(time)).toUTCString();
 
         var $dateRow = $('<tr></tr>').append($('<td>Date</td>')).append($('<td>'+ submitDate + '</td>'));
 

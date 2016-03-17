@@ -72,8 +72,8 @@ var KnowledgeTest = (function() {
             'Dear customer, you are not allowed to take knowledge test until [_1].\nLast test taken at [_2].';
 
         var msg = text.localize(msgTemplate)
-            .replace('[_1]', nextTestDate.toLocaleString())
-            .replace('[_2]', lastTestDate.toLocaleString());
+            .replace('[_1]', nextTestDate.toUTCString())
+            .replace('[_2]', lastTestDate.toUTCString());
 
         $('#knowledge-test-questions').addClass(hiddenClass);
         $('#knowledge-test-msg').text(text.localize(msg));
