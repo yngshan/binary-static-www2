@@ -28,6 +28,7 @@ var ValidAccountOpening = (function(){
       return;
     } else if (getCookieItem('residence') === 'jp') {
       window.location.href = page.url.url_for('new_account/knowledge_testws');
+      $('#topbar-msg').children('a').addClass('invisible');
     } else {     // jp account require more steps to have real account
       var loginid = message.client_id;
       //set cookies

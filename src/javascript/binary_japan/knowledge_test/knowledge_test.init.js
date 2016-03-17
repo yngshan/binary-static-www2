@@ -49,7 +49,7 @@ var KnowledgeTest = (function() {
 
     function showResult(score, time) {
         $('#knowledge-test-header').text(text.localize('Knowledge Test Result'));
-        if (score > 14) {
+        if (score >= 14) {
             $('#knowledge-test-msg').text(text.localize(passMsg));
         } else {
             $('#knowledge-test-msg').text(text.localize(failMsg));
