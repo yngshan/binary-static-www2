@@ -163,7 +163,24 @@ function BinarySocketClass() {
                 } else if (type === 'payout_currencies' && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.handler === 'page.client') {
                     page.client.response_payout_currencies(response);
                 } else if (type === 'get_settings') {
-                    KnowledgeTest.showKnowledgeTestTopBarIfValid(response.get_settings.jp_account_status);
+                    var jpStatus = response.get_settings.jp_account_status;
+
+                    if (jpStatus) {
+                        switch (jpStatus.status) {
+                            case 'jp_knowledge_test_pending': page.client.set_storage_value('jp_test_allowed', 1);
+                                break;
+                            case 'jp_knowledge_test_fail':
+                                if (Date.now() >= (jpStatus.next_test_epoch * 1000)) {
+                                    page.client.set_storage_value('jp_test_allowed', 1);
+                                } else {
+                                    page.client.set_storage_value('jp_test_allowed', 0);
+                                }
+                                break;
+                            default: page.client.set_storage_value('jp_test_allowed', 0);
+                        }
+
+                        KnowledgeTest.showKnowledgeTestTopBarIfValid(jpStatus);
+                    }
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code) {

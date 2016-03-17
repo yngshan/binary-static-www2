@@ -18,11 +18,21 @@ var KnowledgeTest = (function() {
     }
 
     function submitHandler() {
-        if (Object.keys(submitted).length !== 20) {
+        var answeredQid = Object.keys(submitted).map(function(k) {return +k;});
+        if (answeredQid.length !== 20) {
             $('#knowledge-test-msg')
                 .addClass('notice-msg')
                 .text(text.localize('You need to finish all 20 questions.'));
-            $("html, body").animate({ scrollTop: 0 }, "slow");
+
+            // $("html, body").animate({ scrollTop: 0 }, "slow");
+
+            var allQid = [].concat.apply([], randomPicks).map(function(q) {
+                return q.id;
+            });
+            var unAnswered = allQid.find(function(q){
+                return answeredQid.indexOf(q) === -1;
+            });
+            window.location.href = '#' + unAnswered;
             return;
         }
 
@@ -138,6 +148,7 @@ var KnowledgeTest = (function() {
                         $("html, body").animate({ scrollTop: 0 }, "slow");
 
                         $('#knowledgetest-link').addClass(hiddenClass);     // hide it anyway
+                        page.client.set_storage('jp_test_allowed', 0);
                     } else {
                         console.error('something wrong from server');
                     }
