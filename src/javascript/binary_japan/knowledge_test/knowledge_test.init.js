@@ -71,6 +71,11 @@ var KnowledgeTest = (function() {
         $('#knowledge-test-questions').addClass(hiddenClass);
     }
 
+    function showMsgOnly(msg) {
+        $('#knowledge-test-questions').addClass(hiddenClass);
+        $('#knowledge-test-msg').text(text.localize(msg));
+    }
+
     function showDisallowedMsg(jpStatus) {
         var nextTestEpoch = jpStatus.next_test_epoch;
         var lastTestEpoch = jpStatus.last_test_epoch;
@@ -85,14 +90,12 @@ var KnowledgeTest = (function() {
             .replace('[_1]', nextTestDate.toUTCString())
             .replace('[_2]', lastTestDate.toUTCString());
 
-        $('#knowledge-test-questions').addClass(hiddenClass);
-        $('#knowledge-test-msg').text(text.localize(msg));
+        showMsgOnly(msg);
     }
 
     function showCompletedMsg() {
         var msg = "Dear customer, you've already completed the knowledge test, please proceed to next step.";
-        $('#knowledge-test-questions').addClass(hiddenClass);
-        $('#knowledge-test-msg').text(text.localize(msg));
+        showMsgOnly(msg);
     }
 
     function populateQuestions() {
@@ -148,9 +151,9 @@ var KnowledgeTest = (function() {
                         $("html, body").animate({ scrollTop: 0 }, "slow");
 
                         $('#knowledgetest-link').addClass(hiddenClass);     // hide it anyway
-                        page.client.set_storage('jp_test_allowed', 0);
-                    } else {
-                        console.error('something wrong from server');
+                        localStorage.setItem('jp_test_allowed', 0);
+                    } else if (response.error.code === 'TestUnavailableNow') {
+                        showMsgOnly('The test is unavailable now, test can only be taken again on next business day with respect of most recent test.');
                     }
                 }
             }

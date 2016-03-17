@@ -157,6 +157,7 @@ function BinarySocketClass() {
                     page.header.time_counter(response);
                 } else if (type === 'logout') {
                     page.header.do_logout(response);
+                    localStorage.removeItem('jp_test_allowed');
                 } else if (type === 'landing_company_details') {
                     page.client.response_landing_company_details(response);
                     RealityCheck.init();
@@ -167,19 +168,21 @@ function BinarySocketClass() {
 
                     if (jpStatus) {
                         switch (jpStatus.status) {
-                            case 'jp_knowledge_test_pending': page.client.set_storage_value('jp_test_allowed', 1);
+                            case 'jp_knowledge_test_pending': localStorage.setItem('jp_test_allowed', 1);
                                 break;
                             case 'jp_knowledge_test_fail':
                                 if (Date.now() >= (jpStatus.next_test_epoch * 1000)) {
-                                    page.client.set_storage_value('jp_test_allowed', 1);
+                                    localStorage.setItem('jp_test_allowed', 1);
                                 } else {
-                                    page.client.set_storage_value('jp_test_allowed', 0);
+                                    localStorage.setItem('jp_test_allowed', 0);
                                 }
                                 break;
-                            default: page.client.set_storage_value('jp_test_allowed', 0);
+                            default: localStorage.setItem('jp_test_allowed', 0);
                         }
 
                         KnowledgeTest.showKnowledgeTestTopBarIfValid(jpStatus);
+                    } else {
+                        localStorage.removeItem('jp_test_allowed');
                     }
                 }
                 if (response.hasOwnProperty('error')) {

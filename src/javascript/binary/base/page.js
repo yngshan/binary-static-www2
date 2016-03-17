@@ -924,7 +924,7 @@ Contents.prototype = {
 
             if (page.client.is_virtual()) {
                 var show_upgrade = true;
-                if (page.client.get_storage_value('jp_test_allowed')) {
+                if (localStorage.getItem('jp_test_allowed')) {
                     $('#virtual-upgrade-link').addClass('invisible');
                     $('#vr-japan-upgrade-link').addClass('invisible');
                     $('#vr-financial-upgrade-link').addClass('invisible');
