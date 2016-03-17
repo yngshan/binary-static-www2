@@ -137,9 +137,7 @@ var KnowledgeTest = (function() {
                         showResult(resultScore, response.jp_knowledge_test.test_taken_epoch * 1000);
                         $("html, body").animate({ scrollTop: 0 }, "slow");
 
-                        if (response.echo_req.status === 'pass') {
-                            $('#knowledgetest-link').addClass(hiddenClass);
-                        }
+                        $('#knowledgetest-link').addClass(hiddenClass);     // hide it anyway
                     } else {
                         console.error('something wrong from server');
                     }
@@ -161,7 +159,7 @@ var KnowledgeTest = (function() {
                 KnowledgeTestUI.createKnowledgeTestLink();
             }
                 break;
-            case 'jp_activation_pending': $('#topbar-msg').children('a').addClass('invisible');
+            case 'jp_activation_pending': $('#topbar-msg').children('a').addClass(hiddenClass);
                 break;
             default: return;
         }
