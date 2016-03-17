@@ -72,7 +72,6 @@ var TickDisplay = function() {
             } else {
                 $self.x_indicators = {};
             }
-
         },
         initialize_chart: function(config) {
             var $self = this;
@@ -278,7 +277,6 @@ var TickDisplay = function() {
                     $self.lose();
                 }
             }
-
         },
         win: function() {
             var $self = this;
