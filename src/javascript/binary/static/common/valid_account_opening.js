@@ -26,7 +26,9 @@ var ValidAccountOpening = (function(){
       error.innerHTML = (response.msg_type === 'sanity_check') ? text.localize('There was some invalid character in an input field.') : errorMessage;
       error.parentNode.parentNode.parentNode.setAttribute('style', 'display:block');
       return;
-    } else if (getCookieItem('residence') !== 'jp') {     // jp account require more steps to have real account
+    } else if (getCookieItem('residence') === 'jp') {
+      window.location.href = page.url.url_for('new_account/knowledge_testws');
+    } else {     // jp account require more steps to have real account
       var loginid = message.client_id;
       //set cookies
       var oldCookieValue = $.cookie('loginid_list');

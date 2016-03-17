@@ -1,6 +1,8 @@
 var JapanAccOpeningUI = function () {
   "use strict";
 
+    var elementObj;
+
   function checkValidity() {
     window.accountErrorCounter = 0;
     var letters = Content.localize().textLetters,
@@ -10,7 +12,7 @@ var JapanAccOpeningUI = function () {
         period = Content.localize().textPeriod,
         apost = Content.localize().textApost;
 
-    var elementObj = {
+    elementObj = {
         gender: document.getElementById('gender'),
         fname: document.getElementById('fname'),
         lname: document.getElementById('lname'),
