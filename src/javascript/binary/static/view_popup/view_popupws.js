@@ -7,6 +7,8 @@ var ViewPopupWS = (function() {
         history,
         proposal,
         nextTickEpoch,
+        nextTickReqCount,
+        nextTickReqMax,
         isSold,
         isSellClicked,
         chartStarted;
@@ -26,6 +28,8 @@ var ViewPopupWS = (function() {
         history       = {};
         proposal      = {};
         nextTickEpoch = '';
+        nextTickReqCount = 0;
+        nextTickReqMax   = 3;
         isSold        = false;
         isSellClicked = false;
         chartStarted  = false;
@@ -558,7 +562,12 @@ var ViewPopupWS = (function() {
                             normalShowContract();
                         }
                         else {
-                            socketSend(response.echo_req);
+                            if(nextTickReqCount < nextTickReqMax) {
+                                socketSend(response.echo_req);
+                            }
+                            else {
+                                showErrorPopup(response);
+                            }
                         }
                     }
                 }
@@ -598,6 +607,9 @@ var ViewPopupWS = (function() {
     var socketSend = function(req) {
         if(!req.hasOwnProperty('passthrough')) {
             req.passthrough = {};
+        }
+        else {
+            nextTickReqCount += req.passthrough.hasOwnProperty('next_tick') ? 1 : 0;
         }
         req.passthrough['dispatch_to'] = 'ViewPopupWS';
         BinarySocket.send(req);
