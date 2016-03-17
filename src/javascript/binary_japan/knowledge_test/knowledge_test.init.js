@@ -33,10 +33,6 @@ var KnowledgeTest = (function() {
             }
         }
         KnowledgeTestData.sendResult(resultScore);
-        // use now as temp, need from backend
-        showResult(resultScore, Date.now());
-
-        $("html, body").animate({ scrollTop: 0 }, "slow");
     }
 
     function showQuestionsTable() {
@@ -164,6 +160,8 @@ var KnowledgeTest = (function() {
             case 'jp_knowledge_test_fail': if (Date.now() >= (jpStatus.next_test_epoch * 1000)) {
                 KnowledgeTestUI.createKnowledgeTestLink();
             }
+                break;
+            case 'jp_activation_pending': $('#topbar-msg').children('a').addClass('invisible');
                 break;
             default: return;
         }

@@ -80,7 +80,7 @@ var KnowledgeTestUI = (function () {
         var $resultTable = $('<table></table>', { class: 'kv-pairs'});
         var $scoreRow = $('<tr></tr>').append($('<td>Score</td>')).append($('<td>'+ score + '</td>'));
 
-        var submitDate = (new Date(time)).toISOString();
+        var submitDate = (new Date(time)).toLocaleString();
 
         var $dateRow = $('<tr></tr>').append($('<td>Date</td>')).append($('<td>'+ submitDate + '</td>'));
 
@@ -105,7 +105,7 @@ var KnowledgeTestUI = (function () {
         var $knowledgeTestLink = $('<a></a>', {
             class: 'pjaxload',
             id: 'knowledgetest-link',
-            href: '/new_account/knowledge_test'
+            href: '/new_account/knowledge_testws'
         }).text(text.localize('Take knowledge test'));
 
         $topbarmsg.children('a').addClass('invisible');
