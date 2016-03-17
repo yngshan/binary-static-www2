@@ -28,14 +28,33 @@ var FinancialAssessmentws = (function(){
     };
     
     var submitForm = function(){
+        if(!validateForm()){
+            return;
+        }
         var data = {'set_financial_assessment' : 1};
         showLoadingImg();
         $('#assessment_form select').each(function(){
             data[$(this).attr("id")] = $(this).val();
         });
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
+        $('html, body').animate({ scrollTop: 0 }, 'fast');
         BinarySocket.send(data);
         
+    };
+    
+    var validateForm = function(){
+        var isValid = true,
+            errors = {};
+        $('#assessment_form select').each(function(){
+            if($(this).val() === ''){
+                isValid = false;
+                errors[$(this).attr("id")] = text.localize('Please select a value.');
+            }
+        });
+        if(!isValid){
+            displayErrors(errors);
+        }
+        
+        return isValid;
     };
     
     var showLoadingImg = function(){
@@ -45,8 +64,9 @@ var FinancialAssessmentws = (function(){
     
     var hideLoadingImg = function(show_form){
         $("#loading").remove();
-        if(typeof show_form === 'undefined')
+        if(typeof show_form === 'undefined'){
             show_form = true;
+        }
         if(show_form)
             $("#assessment_form").removeClass('invisible');
     };
@@ -62,14 +82,19 @@ var FinancialAssessmentws = (function(){
     };
     
     var displayErrors = function(errors){
+        var id;
         $(".errorfield").each(function(){$(this).text('');});
-        for(var key in errors.details){
+        for(var key in errors){
             if(key){
-                var error = errors.details[key];
+                var error = errors[key];
                 $("#error"+key).text(text.localize(error));
+                id = key;
             }
         }  
         hideLoadingImg();
+        $('html, body').animate({
+            scrollTop: $("#"+id).offset().top
+        }, 'fast');
     };
     
     var responseOnSuccess = function(){
@@ -84,7 +109,7 @@ var FinancialAssessmentws = (function(){
             responseGetAssessment(response);
         }
         else if(response.msg_type === 'set_financial_assessment' && 'error' in response){
-            displayErrors(response.error);
+            displayErrors(response.error.details);
         }
         else if(response.msg_type === 'set_financial_assessment'){
             responseOnSuccess();
