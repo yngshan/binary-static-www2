@@ -924,6 +924,12 @@ Contents.prototype = {
 
             if (page.client.is_virtual()) {
                 var show_upgrade = true;
+                if (localStorage.getItem('jp_test_allowed')) {
+                    $('#virtual-upgrade-link').addClass('invisible');
+                    $('#vr-japan-upgrade-link').addClass('invisible');
+                    $('#vr-financial-upgrade-link').addClass('invisible');
+                    show_upgrade = false;           // do not show upgrade for user that filled up form
+                }
                 for (var i=0;i<loginid_array.length;i++) {
                     if (loginid_array[i].real) {
                         $('#virtual-upgrade-link').addClass('invisible');
