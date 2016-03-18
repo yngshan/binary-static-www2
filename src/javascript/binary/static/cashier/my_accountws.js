@@ -180,7 +180,7 @@ var MyAccountWS = (function() {
     var apiResponse = function(response) {
         if('error' in response){
             if('message' in response.error) {
-                console.log(response.error.message);
+                console.warn(response.error.message);
             }
             return false;
         }
