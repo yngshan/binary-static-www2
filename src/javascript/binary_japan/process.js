@@ -19,7 +19,7 @@ if (typeof is_japan === 'function') {
 
         Durations.display();
 
-        processPriceRequest();
+        // processPriceRequest();
 
     };
 }

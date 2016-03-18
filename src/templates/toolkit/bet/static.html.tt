@@ -2,7 +2,7 @@
 <script>function is_japan(){}</script>
 [% END %]
 
-<div id="trading_socket_container" class="tab-menu-wrap">
+<div id="trading_socket_container" class="tab-menu-wrap [% IF is_japan %]japan[% END %]">
    <p id="markets_closed_msg" class="notice-msg center hidden">[% l('All markets are closed now. Please try again later.') %]</p>
    <div id="loading_container" class="overlay_container">
    </div>
@@ -64,14 +64,6 @@
                            </div>
                         </div>
                      </div>
-                     <div class="row" id="jbarrier_row">
-                        <div class="col form_label">
-                           <label for="jbarrier" id="jbarrier_label"></label>
-                        </div>
-                        <div class="big-col">
-                           <select id="jbarrier" name="H"></select>
-                        </div>
-                     </div>
                      <div class="row barrier_class" id="barrier_row">
                         <div class="col form_label">
                            <label for="H" id="barrier_label">
@@ -84,14 +76,6 @@
                            <abbr rel="tooltip" id="indicative_barrier_tooltip"></abbr>
                         </div>
                      </div>
-                     <div class="row" id="jhigh_barrier_row">
-                        <div class="col form_label">
-                           <label for="jbarrier_high" id="jbarrier_high_label"></label>
-                        </div>
-                        <div class="big-col">
-                           <select id="jbarrier_high" type="text" name="H"></select>
-                        </div>
-                     </div>
                      <div class="row barrier_class" id="high_barrier_row">
                         <div class="col form_label">
                            <label for="H" id="barrier_high_label">
@@ -102,14 +86,6 @@
                         <div class="big-col">
                            <input id="barrier_high" type="text" name="H" pattern="^\+\d+(\.\d{1,5})?|\d+(\.\d{1,5})?$" title="maximum of 5 decimal points allowed" />
                            <abbr rel="tooltip" id="indicative_high_barrier_tooltip"></abbr>
-                        </div>
-                     </div>
-                     <div class="row" id="jlow_barrier_row">
-                        <div class="col form_label">
-                           <label for="jbarrier_low" id="jbarrier_low_label"></label>
-                        </div>
-                        <div class="big-col">
-                           <select id="jbarrier_low" type="text" name="H"></select>
                         </div>
                      </div>
                      <div class="row barrier_class" id="low_barrier_row">
@@ -187,6 +163,9 @@
                         </div>
                      </div>
                   </form>
+               </div>
+               <div id="pricing_table_container" class="row">
+                  <div id="pricing_table"></div>
                </div>
             </div>
          </div>

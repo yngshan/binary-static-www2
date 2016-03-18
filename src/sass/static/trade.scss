@@ -497,6 +497,81 @@
   }
 }
 
+#trading_socket_container.japan{
+  #contract_prices_container{
+    display: none;
+  }
+  #pricing_table {
+    width: 100%;
+  }
+  .multiplier2 input {
+    width: 29px;
+  }
+  .multiplier1{
+    text-align: center;
+  }
+  .col.pricing_table_cell,
+  .col.exercise_price,
+  .col.barrier{
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    display: flex;
+  }
+  .col.barrier{
+    border: 1px solid $COLOR_GRAY;
+  }
+  .col.buy_cell{
+    border-top: 1px solid $COLOR_GRAY;
+    border-bottom: 1px solid $COLOR_GRAY;
+  }
+  .col.sell_cell{
+    border-top: 1px solid $COLOR_GRAY;
+    border-bottom: 1px solid $COLOR_GRAY;
+    border-right: 1px solid $COLOR_GRAY;
+  }
+  .pricing_table_cell .button {
+    color: $COLOR_WHITE;
+    padding: 6px;
+    margin: 0;
+    border-radius: 5px;
+  }
+  .pricing_table_cell.buy_cell .button{
+    background: $COLOR_GREEN;
+  }
+  .pricing_table_cell.sell_cell .button{
+    background: $COLOR_DARK_GRAY;
+  }
+  #contract_container #contract_form_container .col.button{
+    margin: 0;
+  }
+  #contract_container #contract_form_container .col.multiplier1{
+    margin: 0 5px;
+  }
+  #contract_container #contract_form_container .pricing_table_row > .col{
+    margin: 0;
+    padding: 5px 0;
+  }
+  .pricing_table_row{
+    padding: 0;
+    margin-top: -1px;
+  }
+  #contract_container #contract_form_container .pricing_table_row .col.pricing_table_cell{
+    padding-left: 5px;
+  }
+  #contract_form_content{
+    width: 310px;
+  }
+
+  .pricing_table_cell.price_rise{
+    background: #89CCE8;
+  }
+
+  .pricing_table_cell.price_fall{
+    background: #FAD7D7;
+  }
+}
+
 @media all and (max-width: 480px) {
   #trading_socket_container {
     #contract_market_form_container {

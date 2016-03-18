@@ -135,7 +135,10 @@ var Content = (function () {
             textMessageMinRequired: text.localize('Minimum of [_1] characters required.'),
             textFeatureUnavailable: text.localize('Sorry, this feature is not available.'),
             textMessagePasswordScore: text.localize( 'Password score is: [_1]. Passing score is: 20.'),
-            textShouldNotLessThan: text.localize('Please enter a number greater or equal to [_1].')
+            textShouldNotLessThan: text.localize('Please enter a number greater or equal to [_1].'),
+            textExercisePrice: text.localize('Exercise price'),
+            textBuy: text.localize('Buy'),
+            textSell: text.localize('Sell'),
         };
 
         var starTime = document.getElementById('start_time_label');
