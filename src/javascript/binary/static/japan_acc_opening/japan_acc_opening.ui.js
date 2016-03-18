@@ -1,6 +1,8 @@
 var JapanAccOpeningUI = function () {
   "use strict";
 
+    var elementObj;
+
   function checkValidity() {
     window.accountErrorCounter = 0;
     var letters = Content.localize().textLetters,
@@ -10,7 +12,7 @@ var JapanAccOpeningUI = function () {
         period = Content.localize().textPeriod,
         apost = Content.localize().textApost;
 
-    var elementObj = {
+    elementObj = {
         gender: document.getElementById('gender'),
         fname: document.getElementById('fname'),
         lname: document.getElementById('lname'),
@@ -159,7 +161,6 @@ var JapanAccOpeningUI = function () {
     }
 
     if (window.accountErrorCounter === 0) {
-      JapanAccOpeningData.getJapanAcc(elementObj);
       for (key in errorObj) {
         if (errorObj[key].offsetParent !== null) {
           errorObj[key].setAttribute('style', 'display:none');
@@ -170,7 +171,12 @@ var JapanAccOpeningUI = function () {
     return 0;
   }
 
+    function fireRequest() {
+        JapanAccOpeningData.getJapanAcc(elementObj);
+    }
+
   return {
-    checkValidity: checkValidity
+    checkValidity: checkValidity,
+      fireRequest: fireRequest,
   };
 }();
