@@ -426,7 +426,7 @@
                 </form>
 
                 <form id="financial-risk" class="hidden">
-                  <fieldset id="risk-disclaimer-section">
+                  <fieldset>
                     <div class="grd-grid-12">
                       <p>
                         [% l('<strong>Appropriateness Test: WARNING:</strong> In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved).') %]
@@ -439,7 +439,7 @@
                       </p>
                       <p class="center-aligned">
                         <span class="button">
-                          <button class="button" id="accept-risk-submit" type="submit">[% l('Accept') %]</button>
+                          <button class="button" type="submit">[% l('Accept') %]</button>
                         </span>
                         <a class="button pjaxload" href="[% request.url_for('/user/my_accountws') %]"><span>[% l('Decline') %]</span></a>
                       </p>

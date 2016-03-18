@@ -39,11 +39,6 @@ var ValidAccountOpening = (function(){
       $('#topbar-msg').children('a').addClass('invisible');
     } else {     // jp account require more steps to have real account
       var loginid = message.client_id;
-      //set cookies
-      var oldCookieValue = $.cookie('loginid_list');
-      var cookie_domain = '.' + document.domain.split('.').slice(-2).join('.');
-      $.cookie('loginid_list', loginid + ':R:E+' + oldCookieValue, {domain: cookie_domain, path:'/'});
-      $.cookie('loginid', loginid, {domain: cookie_domain, path:'/'});
       // set a flag to push to gtm in my_account
       localStorage.setItem('new_account', '1');
       //generate dropdown list and switch
