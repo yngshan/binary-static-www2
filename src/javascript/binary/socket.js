@@ -148,6 +148,7 @@ function BinarySocketClass() {
                         }
                         send({balance:1, subscribe: 1});
                         send({landing_company_details: TUser.get().landing_company_name});
+                        send({get_settings: 1});
                         sendBufferedSends();
                     }
                 } else if (type === 'balance') {
@@ -156,11 +157,33 @@ function BinarySocketClass() {
                     page.header.time_counter(response);
                 } else if (type === 'logout') {
                     page.header.do_logout(response);
+                    localStorage.removeItem('jp_test_allowed');
                 } else if (type === 'landing_company_details') {
                     page.client.response_landing_company_details(response);
                     RealityCheck.init();
                 } else if (type === 'payout_currencies' && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.handler === 'page.client') {
                     page.client.response_payout_currencies(response);
+                } else if (type === 'get_settings') {
+                    var jpStatus = response.get_settings.jp_account_status;
+
+                    if (jpStatus) {
+                        switch (jpStatus.status) {
+                            case 'jp_knowledge_test_pending': localStorage.setItem('jp_test_allowed', 1);
+                                break;
+                            case 'jp_knowledge_test_fail':
+                                if (Date.now() >= (jpStatus.next_test_epoch * 1000)) {
+                                    localStorage.setItem('jp_test_allowed', 1);
+                                } else {
+                                    localStorage.setItem('jp_test_allowed', 0);
+                                }
+                                break;
+                            default: localStorage.setItem('jp_test_allowed', 0);
+                        }
+
+                        KnowledgeTest.showKnowledgeTestTopBarIfValid(jpStatus);
+                    } else {
+                        localStorage.removeItem('jp_test_allowed');
+                    }
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code) {
