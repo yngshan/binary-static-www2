@@ -67,7 +67,7 @@ function BinarySocketClass() {
                 data.passthrough = {};
             }
             // temporary check
-            if(data.contracts_for || data.proposal){
+            if((data.contracts_for || data.proposal) && !data.passthrough.hasOwnProperty('dispatch_to')){
                 data.passthrough.req_number = ++req_number;
                 timeouts[req_number] = setTimeout(function(){
                     if(typeof reloadPage === 'function' && data.contracts_for){
@@ -125,9 +125,15 @@ function BinarySocketClass() {
         binarySocket.onmessage = function (msg){
             var response = JSON.parse(msg.data);
             if (response) {
-                if(response.hasOwnProperty('echo_req') && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.hasOwnProperty('req_number')){
-                    clearInterval(timeouts[response.echo_req.passthrough.req_number]);
-                    delete timeouts[response.echo_req.passthrough.req_number];
+                if(response.hasOwnProperty('echo_req') && response.echo_req.hasOwnProperty('passthrough')) {
+                    var passthrough = response.echo_req.passthrough;
+                    if(passthrough.hasOwnProperty('req_number')) {
+                        clearInterval(timeouts[response.echo_req.passthrough.req_number]);
+                        delete timeouts[response.echo_req.passthrough.req_number];
+                    }
+                    else if (passthrough.hasOwnProperty('dispatch_to') && passthrough.dispatch_to === 'ViewPopupWS') {
+                        ViewPopupWS.dispatch(response);
+                    }
                 }
                 var type = response.msg_type;
                 if (type === 'authorize') {
@@ -157,12 +163,16 @@ function BinarySocketClass() {
                     page.client.response_payout_currencies(response);
                 }
                 if (response.hasOwnProperty('error')) {
-                    if(response.error && response.error.code && response.error.code === 'RateLimit') {
+                    if(response.error && response.error.code) {
+                      if (response.error.code === 'RateLimit') {
                         $('#ratelimit-error-message')
                             .css('display', 'block')
                             .on('click', '#ratelimit-refresh-link', function () {
                                 window.location.reload();
                             });
+                      } else if (response.error.code === 'InvalidToken') {
+                        BinarySocket.send({'logout': '1'});
+                      }
                     }
                 }
                 if(typeof events.onmessage === 'function'){
