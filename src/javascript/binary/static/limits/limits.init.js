@@ -9,7 +9,7 @@ var LimitsWS = (function(){
         var already_withdraw = document.getElementById("already-withdraw");
         var withdrawal_limit_aggregate = document.getElementById("withdrawal-limit-aggregate");
 
-        if(limits['lifetime_limit'] === 99999999) {
+        if(limits['lifetime_limit'] === 99999999 && limits['num_of_days_limit'] === 99999999) {
             withdrawal_limit.textContent = Content.localize().textAuthenticatedWithdrawal;
         } else if(limits['num_of_days_limit'] === limits['lifetime_limit']) {
             withdrawal_limit.textContent = Content.localize().textWithdrawalLimits.replace('[_1]', TUser.get().currency || page.client.get_storage_value('currencies')).replace('[_2]', addComma(limits['num_of_days_limit']));
