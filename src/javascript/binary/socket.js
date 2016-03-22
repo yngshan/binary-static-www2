@@ -109,6 +109,7 @@ function BinarySocketClass() {
             else {
                 sendBufferedSends();
             }
+            checkClientsCountry();
 
             if(typeof events.onopen === 'function'){
                 events.onopen();
@@ -184,6 +185,10 @@ function BinarySocketClass() {
                     } else {
                         localStorage.removeItem('jp_test_allowed');
                     }
+                } else if (type === 'website_status') {
+                  if (response.website_status.clients_country) {
+                    localStorage.setItem('clients_country', response.website_status.clients_country);
+                  }
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code) {
