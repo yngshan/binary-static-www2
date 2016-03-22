@@ -441,24 +441,26 @@ function Trim(str){
   return str;
 }
 
+function changeLanguage(lang) {
+  str = window.location.search;
+  str = page.url.replaceQueryParam('l', lang, str);
+  window.location = window.location.pathname + str;
+}
+
 function checkClientsCountry() {
   var clients_country = localStorage.getItem('clients_country');
   if (clients_country) {
     var str;
     if (clients_country === 'jp') {
       if (page.language() !== 'JA') {
-        str = window.location.search;
-        str = page.url.replaceQueryParam('l', 'JA', str);
-        window.location = window.location.pathname + str;
+        changeLanguage('JA');
       }
       if (document.getElementById('language_select')) {
         $('#language_select').remove();
       }
     } else if (clients_country === 'id') {
       if (page.language() !== 'ID') {
-        str = window.location.search;
-        str = page.url.replaceQueryParam('l', 'ID', str);
-        window.location = window.location.pathname + str;
+        changeLanguage('ID');
       }
       if (document.getElementById('language_select')) {
         $('#language_select').remove();
