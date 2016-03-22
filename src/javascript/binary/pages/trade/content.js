@@ -139,6 +139,14 @@ var Content = (function () {
             textExercisePrice: text.localize('Exercise price'),
             textBuy: text.localize('Buy'),
             textSell: text.localize('Sell'),
+            textCALLE: text.localize('[_1] [_2] payout if [_3] is strictly higher or equal than [_4] at close  on [_5].'),
+            textPUTE: text.localize('[_1] [_2] payout if [_3] is strictly lower or equal than [_4] at close on [_5].'),
+            textNOTOUCH: text.localize('[_1] [_2] payout if [_3] does not touch [_4] through close on [_5].'),
+            textONETOUCH: text.localize('[_1] [_2] payout if [_3] touches [_4] through close on [_5].'),
+            textEXPIRYRANGE: text.localize('[_1] [_2] payout if [_3] ends strictly between [_4] to [_5] at close on [_6].'),
+            textEXPIRYMISS: text.localize('[_1] [_2] payout if [_3] ends otside [_4] to [_5] at close on [_6].'),
+            textRANGE: text.localize('[_1] [_2] payout if [_3] stays between [_4] to [_5] through close on [_6].'),
+            textUPORDOWN: text.localize('[_1] [_2] payout if [_3] goes ouside of  [_4] to [_5] through close on [_6].'),            
         };
 
         var starTime = document.getElementById('start_time_label');
@@ -196,6 +204,11 @@ var Content = (function () {
         var payoutOption = document.getElementById('payout_option');
         if (payoutOption) {
             payoutOption.textContent = localize.textPayout;
+        }
+
+        var japanPayout = document.getElementById('japan_payout');
+        if (japanPayout) {
+            japanPayout.textContent = localize.textPayout;
         }
 
         var stakeOption = document.getElementById('stake_option');

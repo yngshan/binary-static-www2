@@ -78,6 +78,9 @@
   label{
     line-height: 28px;
   }
+  #japan_payout_row{
+    display: none;
+  }
   #contract_market_form_container{
     height: 28px;
     .tm-li{
@@ -498,6 +501,9 @@
 }
 
 #trading_socket_container.japan{
+  .barrier {
+    flex: 2;
+  }
   #contract_prices_container{
     display: none;
   }
@@ -569,6 +575,26 @@
 
   .pricing_table_cell.price_fall{
     background: #FAD7D7;
+  }
+
+  #period {
+    width: 155px;
+  }
+
+  #payout_row{
+    display: none;
+  }
+
+  #japan_payout_row{
+    display: flex;
+  }
+
+  .price {
+    width: 50px;
+  }
+
+  #japan_payout{
+    margin-left: 22px;
   }
 }
 

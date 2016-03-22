@@ -1,5 +1,7 @@
 var PricingTable = (function() {
 
+    var prev_prices;
+
     var PricingTableCell = React.createClass({
         displayName: "PricingTableCell",
 
@@ -8,7 +10,7 @@ var PricingTable = (function() {
                 "div", { "className": "pricing_table_cell col row " + this.props.type + "_cell" + (this.props.dyn > 0 ? " price_rise" : (this.props.dyn < 0 ? " price_fall" : '')) },
                 (this.props.empty ? undefined : [
                     React.createElement(
-                        "div", { "className": "col price", "key": "price" },
+                        "div", { "className": "price", "key": "price" },
                         this.props.price
                     ),
                     React.createElement(
@@ -62,10 +64,10 @@ var PricingTable = (function() {
 
             return React.createElement(
                 "div", { "className": "pricing_table_row row" },
-                React.createElement(
-                    "div", { "className": "col exercise_price" },
-                    Content.localize().textExercisePrice
-                ),
+                // React.createElement(
+                //     "div", { "className": "col exercise_price" },
+                //     Content.localize().textExercisePrice
+                // ),
                 React.createElement(
                     "div", { "className": "col barrier" },
                     this.props.barrier
@@ -103,14 +105,13 @@ var PricingTable = (function() {
 
     function sendRequest(form) {
         if (form.contract_category && form.date_expiry && form.symbol) {
+            prev_prices = undefined;
             BinarySocket.send({
                 pricing_table: 1,
                 properties: form
             });
         }
     }
-
-    var prev_prices;
 
     function handleResponse(res) {
         var echo_req = res.echo_req;
