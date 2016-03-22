@@ -447,24 +447,23 @@ function changeLanguage(lang) {
   window.location = window.location.pathname + str;
 }
 
+function limitLanguage(lang) {
+  if (page.language() !== lang) {
+    changeLanguage(lang);
+  }
+  if (document.getElementById('language_select')) {
+    $('#language_select').remove();
+  }
+}
+
 function checkClientsCountry() {
   var clients_country = localStorage.getItem('clients_country');
   if (clients_country) {
     var str;
     if (clients_country === 'jp') {
-      if (page.language() !== 'JA') {
-        changeLanguage('JA');
-      }
-      if (document.getElementById('language_select')) {
-        $('#language_select').remove();
-      }
+      limitLanguage('JA');
     } else if (clients_country === 'id') {
-      if (page.language() !== 'ID') {
-        changeLanguage('ID');
-      }
-      if (document.getElementById('language_select')) {
-        $('#language_select').remove();
-      }
+      limitLanguage('ID');
     }
   } else {
     BinarySocket.init();
