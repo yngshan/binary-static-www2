@@ -12,7 +12,8 @@ var LimitsWS = (function(){
         if(limits['lifetime_limit'] === 99999999 && limits['num_of_days_limit'] === 99999999) {
             withdrawal_limit.textContent = Content.localize().textAuthenticatedWithdrawal;
         } else if(limits['num_of_days_limit'] === limits['lifetime_limit']) {
-            withdrawal_limit.textContent = Content.localize().textWithdrawalLimits.replace('[_1]', TUser.get().currency || page.client.get_storage_value('currencies')).replace('[_2]', addComma(limits['num_of_days_limit']));
+            var client_currency = (/^(iom|malta|maltainvest)$/i).test(TUser.get().landing_company_name) ? 'EUR' : TUser.get().currency || page.client.get_storage_value('currencies');
+            withdrawal_limit.textContent = Content.localize().textWithdrawalLimits.replace('[_1]', client_currency).replace('[_2]', addComma(limits['num_of_days_limit']));
             already_withdraw.textContent = Content.localize().textWithrawalAmount.replace('[_1]', addComma(limits["withdrawal_since_inception_monetary"])) + '.';
         } else {
             withdrawal_limit.textContent = Content.localize().textDayWithdrawalLimit.replace('[_1]', limits['num_of_days']).replace('[_2]', addComma(limits['num_of_days_limit']));
