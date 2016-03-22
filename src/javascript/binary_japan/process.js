@@ -1,25 +1,40 @@
 if (typeof is_japan === 'function') {
 
-    var processContractForm = function() {
+  var processPricingTableRequest = function() {
+    var symbol = $('#underlying').val();
+    var period = $('#period').val();
+    var res = period.split('_');
+    var date_expiry = res[1];
+    var formName = sessionStorage.getItem('formname');
+    var category = formName === 'higherlower' ? 'callput' : formName;
 
-        Contract.details(sessionStorage.getItem('formname'));
+    PricingTable.sendRequest({
+      symbol: symbol,
+      date_expiry: date_expiry,
+      contract_category: category,
+    });
+  };
 
-        StartDates.display();
+  var processContractForm = function() {
 
-        if (Periods) {
-            Periods.displayPeriods();
-        }
+    Contract.details(sessionStorage.getItem('formname'));
 
-        displayPrediction();
+    StartDates.display();
 
-        displaySpreads();
+    if (Periods) {
+      Periods.displayPeriods();
+    }
 
-        if (sessionStorage.getItem('amount')) $('#amount').val(sessionStorage.getItem('amount'));
-        if (sessionStorage.getItem('currency')) selectOption(sessionStorage.getItem('currency'), document.getElementById('currency'));
+    displayPrediction();
 
-        Durations.display();
+    displaySpreads();
 
-        // processPriceRequest();
+    if (sessionStorage.getItem('amount')) $('#amount').val(sessionStorage.getItem('amount'));
+    if (sessionStorage.getItem('currency')) selectOption(sessionStorage.getItem('currency'), document.getElementById('currency'));
 
-    };
+    Durations.display();
+
+    processPricingTableRequest();
+
+  };
 }

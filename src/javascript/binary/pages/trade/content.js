@@ -139,14 +139,14 @@ var Content = (function () {
             textExercisePrice: text.localize('Exercise price'),
             textBuy: text.localize('Buy'),
             textSell: text.localize('Sell'),
-            textCALLE: text.localize('[_1] [_2] payout if [_3] is strictly higher or equal than [_4] at close  on [_5].'),
-            textPUTE: text.localize('[_1] [_2] payout if [_3] is strictly lower or equal than [_4] at close on [_5].'),
-            textNOTOUCH: text.localize('[_1] [_2] payout if [_3] does not touch [_4] through close on [_5].'),
-            textONETOUCH: text.localize('[_1] [_2] payout if [_3] touches [_4] through close on [_5].'),
-            textEXPIRYRANGE: text.localize('[_1] [_2] payout if [_3] ends strictly between [_4] to [_5] at close on [_6].'),
-            textEXPIRYMISS: text.localize('[_1] [_2] payout if [_3] ends otside [_4] to [_5] at close on [_6].'),
-            textRANGE: text.localize('[_1] [_2] payout if [_3] stays between [_4] to [_5] through close on [_6].'),
-            textUPORDOWN: text.localize('[_1] [_2] payout if [_3] goes ouside of  [_4] to [_5] through close on [_6].'),            
+            textCALLE: text.localize('{currency} {sum} payout if {symbol} is strictly higher or equal than Exercise price at close  on {close}.'),
+            textPUTE: text.localize('{currency} {sum} payout if {symbol} is strictly lower or equal than Exercise price at close on {close}.'),
+            textNOTOUCH: text.localize('{currency} {sum} payout if {symbol} does not touch Exercise price through close on {close}.'),
+            textONETOUCH: text.localize('{currency} {sum} payout if {symbol} touches Exercise price through close on {close}.'),
+            textEXPIRYRANGE: text.localize('{currency} {sum} payout if {symbol} ends strictly between low and high values of Exercise price at close on {close}.'),
+            textEXPIRYMISS: text.localize('{currency} {sum} payout if {symbol} ends otside low and high values of Exercise price at close on {close}.'),
+            textRANGE: text.localize('{currency} {sum} payout if {symbol} stays between low and high values of Exercise price through close on {close}.'),
+            textUPORDOWN: text.localize('{currency} {sum} payout if {symbol} goes ouside of low and high values of Exercise price through close on {close}.'),            
         };
 
         var starTime = document.getElementById('start_time_label');
