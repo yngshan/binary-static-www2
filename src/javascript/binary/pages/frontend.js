@@ -465,6 +465,7 @@ function checkClientsCountry() {
       }
     }
   } else {
+    BinarySocket.init();
     BinarySocket.send({"website_status" : "1"});
   }
 }

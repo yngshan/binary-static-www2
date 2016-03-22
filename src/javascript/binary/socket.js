@@ -109,7 +109,6 @@ function BinarySocketClass() {
             else {
                 sendBufferedSends();
             }
-            checkClientsCountry();
 
             if(typeof events.onopen === 'function'){
                 events.onopen();

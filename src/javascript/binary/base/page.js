@@ -574,7 +574,7 @@ Header.prototype = {
         this.register_dynamic_links();
         this.simulate_input_placeholder_for_ie();
         this.logout_handler();
-        BinarySocket.init();
+        checkClientsCountry();
     },
     on_unload: function() {
         this.menu.reset();
