@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-23 09:36+0000\n"
-"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
+"PO-Revision-Date: 2016-03-23 10:13+0000\n"
+"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -3149,7 +3149,7 @@ msgstr "補償は入金額ではなく、入金者に基いて利用が可能と
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:385
 msgid "Covered option is holding the underlying assets which like covering sell position of options and sell the it."
-msgstr ""
+msgstr "カバ－ド・オプションとはオプションの売りポジションをカバ－するような原資産を保有し、オプションを売ることである。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:51
 msgid "Create"
@@ -5222,14 +5222,20 @@ msgstr "皆様からのご応募をお待ちしております。"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:377
 msgid "If you buy a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
 msgstr ""
+"権利行使価格１ドル100円、ペイアウト1,000円のドル円のコールバイナリーオプションを500円で買付し、判定価格が１ドル９９円となり権利行使が行われ、1"
+",000円のペイアウトを受け取った。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:379
 msgid "If you buy a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you receive a payout of 1,000 yen, then your profit can be calculated 500 yen after subtracting the 500 yen that was paid as a fee to the option seller."
 msgstr ""
+"ペイアウト1,000円のバイナリーコールオプションを500円で買付し、判定の結果、権利行使条件が満たされた場合には、買い手は売り手からペイアウトとして1,"
+"000円を受け取り、したがって買い手の損益は、売り手に支払った500円のオプション料を差し引き500円の利益となる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:378
 msgid "If you buy a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
 msgstr ""
+"権利行使価格１ドル100円、ペイアウト1,000円のドル円のプットバイナリーオプションを500円で買付し、判定価格が１ドル９９円となり権利行使が行われ、1"
+",000円のペイアウトを受け取った。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:13
 msgid "If you choose to enter into a Contract with us, it is important that you remain aware of the risks involved, that you have adequate investment resources to bear such risks and that you monitor your positions carefully."
@@ -5383,10 +5389,14 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:380
 msgid "If you sell a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you need to payout 1,000 yen, then your profit will be minus 500 yen after subtracting the 500 yen that was received as a fee from the option buyer."
 msgstr ""
+"ペイアウト1,000円のバイナリーコールオプションを500円で売付し、判定の結果、権利行使条件が満たされた場合には、売り手は買い手に対するペイアウトとして"
+"1,000円を支払わなければならず、したがって売り手の損益は、買い手から受け取った500円と差し引き500円の損失となる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:376
 msgid "If you sell a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option."
 msgstr ""
+"権利行使価格１ドル100円、ペイアウト1,000円のドル円のプットバイナリーオプションを500円で売付けし、判定価格が１ドル９９円となり権利行使が行われ、"
+"1,000円のペイアウトを支払った。"
 
 #. (broker_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:43
@@ -8676,15 +8686,17 @@ msgstr "方向性<br />を予測して購入"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:383
 msgid "Predicted that the underlying asset price is largely up-dean and in order to obtain the benefit also moving in either direction of rising send falling, obtained both options of the call options that exercise price is higher than the underlying asset price and tie put option that exercise prize is lower than underlying asset price."
 msgstr ""
+"原資産価格が大きく騰落することを予測し、上昇、下落、いずれの方向に動いても利益を得るため、原資産価格より権利行使価格が高いコールオプションと原資産価格より"
+"権利行使価格が低いプットオプションの２つのオプションを合わせて取得した。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:386
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:389
 msgid "Predicted the underlying asset price will decline than strike price at exit time and bought binary call options. "
-msgstr ""
+msgstr "判定時刻に、原資産価格が権利行使価格よりも下落していると予測し、バイナリーコールオプションを買い付けた。 "
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:387
 msgid "Predicted the underlying asset price will decline than strike price at exit time and bought binary put options. "
-msgstr ""
+msgstr "判定時刻に、原資産価格が権利行使価格よりも下落していると予測し、バイナリープットオプションを売付けた。 "
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:388
 msgid "Predicted the underlying asset price will raise than strike price at exit time and bought binary put options. "
@@ -8693,6 +8705,8 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:384
 msgid "Predicts that width of up-down of underlying asset is small and  in order to obtain the benefit also moving in either direction of rising and falling, granted together both of the call option that exercise price is higher than underlying asset and the put option that exercise price is lower than underlying asset price."
 msgstr ""
+"原資産価格の騰落幅が小さいと予測し、上昇、下落、いずれの方向に動いても利益を得るため、原資産価格より権利行使価格が高いコールオプションと原資産価格より権利"
+"行使価が低いプットオプションの２つのオプションを合わせて付与した。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Prepare periodic and special reports on sales within the region and maintain a reporting structure with affiliates to collect data"
@@ -11856,7 +11870,7 @@ msgstr "お客様の口座を認証いただくには、%1へメールを送信�
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:381
 msgid "To avoid or hedge the future price of an underlying asset which you hold, you should buy a call option"
-msgstr ""
+msgstr "保有する原資産の今後の価格下落を回避（ヘッジ）するため、原資産のコールオプションを取得した。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "To be considered for this mission critical leadership role, you’ll need to demonstrate a passion for open source technologies and a desire to test your talents in a dynamic and challenging work environment."
@@ -11873,7 +11887,7 @@ msgstr "上記のお客様情報の変更をご希望される場合は<a href=\
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:382
 msgid "To compensate for any rise in the price of an underlying asset that you intend to buy in future, you should buy a call option"
-msgstr ""
+msgstr "将来取得する予定の原資産の値上がりを補うため、原資産のコールオプションを取得した。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/session_expired.html.tt:9
 msgid "To continue using our cashier system, please try accessing it again:"
