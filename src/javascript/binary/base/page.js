@@ -576,6 +576,7 @@ Header.prototype = {
         this.logout_handler();
         if (isNotBackoffice()) {
           checkClientsCountry();
+          change_blog_link('id');
         }
     },
     on_unload: function() {
