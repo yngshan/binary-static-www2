@@ -476,10 +476,7 @@ function checkClientsCountry() {
 }
 
 function isNotBackoffice() {
-  if (/backoffice/.test(window.location.pathname)) {
-    return false;
-  }
-  return true;
+  return /backoffice/.test(window.location.pathname);
 }
 
 pjax_config_page('/$|/home', function() {
