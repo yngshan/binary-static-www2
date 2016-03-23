@@ -468,6 +468,8 @@ function checkClientsCountry() {
       limitLanguage('JA');
     } else if (clients_country === 'id') {
       limitLanguage('ID');
+    } else {
+      $('#language_select').show();
     }
   } else {
     BinarySocket.init();
