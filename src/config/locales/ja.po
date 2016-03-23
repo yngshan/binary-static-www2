@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-23 03:35+0000\n"
-"Last-Translator: Mark Tanser <mark@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-03-23 05:28+0000\n"
+"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -1036,15 +1036,15 @@ msgstr "バイナリーオプションは、事前に定められたリターン
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:449
 msgid "A binary option price cannot exceed the payout amount."
-msgstr ""
+msgstr "バイナリーオプションの価格はペイアウト額を上回ることはない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:454
 msgid "A binary option which is in-the-money will have a higher value than an option that is out-of-the-money because there will be a higher probability of receiving the payout amount."
-msgstr ""
+msgstr "インザマネーのバイナリーオプションは、ペイアウトを受け取る確率が高いため、アウトオブザマネーのバイナリーオプションよりも価格が高い。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:453
 msgid "A binary option which is out-of-the-money will have a lower price than an option which is in-the-money because the probability of receiving the payout amount is lower."
-msgstr ""
+msgstr "アウトオブザマネーのバイナリーオプションは、ペイアウトを受け取る確率が低いため、インザマネーのバイナリーオプションよりも価格が低い。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:396
 msgid "A bought or sold binary option may be closed-out before exercise time by selling or buying-back the option, or alternatively by cancelling."
@@ -1459,7 +1459,7 @@ msgstr "クライアントへ%1では直接利用できないEウォレットの
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:427
 msgid "Although binary option loss is limited, based on the assets of the investors, so as not to become excessive speculative trading, it is necessary to bear in mind the moderation in transactions."
-msgstr ""
+msgstr "バイナリーオプションは損失が限定的であるが、投資者自身の資産などを踏まえ、過度の投機的な取引とならぬよう、節度ある取引を心がける必要がある。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:399
 msgid "Although each traders determined the limit amount to deal with the customer, even if customer's transaction amount, loss with a certain period and open interest a customer held exceeds the reference, the transaction with the customer will not be discontinued or cancelled."
@@ -1471,7 +1471,7 @@ msgstr "当社は一部のお客様のアカウントの拒否、または閉鎖
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:423
 msgid "Although the options which is not be exercised will disappear at the exercise period, the option fee which seller received will remain for sellers."
-msgstr ""
+msgstr "権利行使期限が到来し、権利行使が行われないオプションは消滅するが、売り手が受け取ったオプション料はそのまま売り手のものとなる。"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1031
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/account_transferws.html.haml:1
@@ -1549,7 +1549,7 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:445
 msgid "An option price is the sum of the intrinsic-value and the time-value."
-msgstr ""
+msgstr "オプション価格は本源的価値に時間的価値を加えた値である。"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:655
 msgid "An oscillator that attempts to combine information for several different time periods into one number. Three different time periods are used, typically a 7-day period, a 14-day period, and a 28-day period. The resulting oscillator is \"bounded\" in that it moves between 0 and 100 with 50 as the centre line. 70 and 30 are used as overbought/oversold levels."
@@ -1743,19 +1743,19 @@ msgstr "「購入」ボタンをクリックすると即座に取引が口座に
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:455
 msgid "As the exercise deadline approaches, the price of an in-the-money binary option will move towards the payout amount."
-msgstr ""
+msgstr "権利行使期限が近づくにつれて、インザマネーのバイナリーオプションの価格は、ペイアウトの金額に近づく。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:456
 msgid "As the exercise deadline approaches, the price of an out-of-the-money binary option will move towards zero."
-msgstr ""
+msgstr "権利行使期限が近づくにつれて、アウトオブザマネーのバイナリーオプションの価格はゼロに近づく。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:443
 msgid "As the expected volatility of the underlying asset increases, a plain vanilla option price will move higher."
-msgstr ""
+msgstr "原資産の予測される価格変動率が高いほど、オプションの価格は高くなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:448
 msgid "As the time to the exercise point shortens, the time-value of a plain vanilla option decreases."
-msgstr ""
+msgstr "時間的価値は、オプションの権利行使期限までの時間が短くなるほど減少する。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/asian.html.tt:1
 msgid "Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period."
@@ -1997,7 +1997,7 @@ msgstr "バリアの値は両方のスポット価格をカバーするように
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:425
 msgid "Based on the probability of profit is obtained by the exercise, it can not be said that cheaper options is advantageous unconditionally."
-msgstr ""
+msgstr "権利行使により利益が得られる確率を踏まえれば、一概にオプション価格が安いものが有利とはいえない。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:31
 msgid "Be responsible for abiding by the same advertising laws, rules and regulations that the Company adheres to."
@@ -2161,7 +2161,7 @@ msgstr "バイナリー取引の基礎"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:426
 msgid "Binary options is lower risks and higher returns than plan options because loss of sellers is limited at binary options."
-msgstr ""
+msgstr "バイナリーオプションは、売り手の損失が限定されており、プレーンオプションに比べ、ローリスクハイリターンな取引といえる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:577
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:288
@@ -3573,7 +3573,7 @@ msgstr "全て消去してもよろしいですか？"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:460
 msgid "Delta refers to  a percentage change of the option price with respect to the change in the underlying asset price."
-msgstr ""
+msgstr "デルタとは、原資産価格の変化に対するオプション価値の変動割合をいう。"
 
 #: /home/git/regentmarkets/bom-backoffice/f_manager_confodeposit.cgi:273
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/index.html.haml:1
@@ -4206,7 +4206,7 @@ msgstr "約定にかかる時間はほんの数秒。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:422
 msgid "Exercise deadline is coming, but the option to exercise is not carried out and disappear, option premium the seller received will be as it is that of the seller."
-msgstr ""
+msgstr "権利行使期限が到来し、権利行使が行われないオプションは消滅するため、所有するオプションは価値がなくなる。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Exercise exceptional client relationship management skills to prevent fraudulent activities in payments processing and business transactions."
@@ -4536,7 +4536,7 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:444
 msgid "For a plain vanilla option, as the time to the exercise point shortens, the price of the option will decrease."
-msgstr ""
+msgstr "権利行使期限までの残り時間が短くなるほど、オプションの価格は低くなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:405
 msgid "For a put option, if the underlying asset price is higher than the option exercise price, it is known as an in-the-money option."
@@ -4557,7 +4557,7 @@ msgstr "不正出金に対するセキュリティ保護追加のため、出金
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:441
 msgid "For an in-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
-msgstr ""
+msgstr "インザマネーのオプションでは、原資産価格が権利行使価格から離れるほど、オプション価格は低くなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:412
 msgid "For an individual investor, all profits from OTC currency options trading are tax-free"
@@ -4569,7 +4569,7 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:440
 msgid "For an out-of-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
-msgstr ""
+msgstr "アウトオブザマネーのオプションでは、原資産価格が権利行使価格から離れるほど、オプション価格は低くなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:403
 msgid "For both call and put options, if the underlying asset price is the same as the exercise price, it is known as an at-the-money option."
@@ -4965,10 +4965,9 @@ msgid "Highlights the relationship between volume and price changes and is parti
 msgstr "量と価格の変動との間の関連性を強調し、トレンドの強さを分析するのに適した指標です。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:459
-#, fuzzy
 #| msgid "Each binary option is a prediction on the future movement of an underlying market."
 msgid "Historical volatility is a prediction of the future rate of change in the underlying asset"
-msgstr "バイナリーオプションは、取引対象の未来の動向の予想のことです。"
+msgstr "ヒストリカルボラティリティとは、原資産に対する将来の変動率を予測したボラティリティのことである。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_application.html.tt:8
 msgid "Home"
@@ -5138,7 +5137,7 @@ msgstr "アフィリエイト報酬算出の際にエラーが発生した場合
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:418
 msgid "If an option buyer wishes to exercise the option rights, the seller may still reject the deal."
-msgstr ""
+msgstr "オプションの売り手は、買い手が権利を行使した場合には、その決済を拒否することができる。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:127
 msgid "If any provision of this Agreement is held to be void or unenforceable in whole or part, the impugned provision (or part thereof) shall be deemed to be deleted from this Agreement and the remaining provisions (including the remainder of the affected provision) shall continue to be valid and applicable."
@@ -5146,7 +5145,7 @@ msgstr "本契約において法的効力が無い、または予見不可能で
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:442
 msgid "If implied volatility increases then the prices of both call and put types of plain vanilla options will increase."
-msgstr ""
+msgstr "オプションの価値は、ボラティリティが上昇すれば、コールオプションもプットオプションも共に上昇する。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:18
 msgid "If the Company is legally required to disclose your personal or financial information by law, regulation or pursuant to the order of a court of competent jurisdiction or a governmental agency, the Company  shall, unless legally prohibited, promptly notify you to that effect, in order to give you the opportunity to seek such protection for the information as it deems appropriate. Such required disclosure shall not be construed as a breach of this Terms and Conditions Agreement."
@@ -5154,19 +5153,21 @@ msgstr "管轄裁判所または政府機関の命に従い、法律により当
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:415
 msgid "If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller."
-msgstr ""
+msgstr "オプションの買い手は、権利行使をしなかった場合には、オプションの売り手にオプション料を支払わない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:416
 msgid "If the buyer of an option waives his right to exercise, a transaction in the underlying asset will not be dealt between the seller and the buyer."
-msgstr ""
+msgstr "オプションの買い手は、権利を放棄することができる。放棄した場合には、オプションの売り手との間での原資産の売買は成立しない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:437
 msgid "If the exercise prices and exercise times are the same for an American style and European style option, then the American style option will have a higher price."
-msgstr ""
+msgstr "権利行使価格、権利行使期間が同一のヨーロピアンタイプとアメリカンタイプのオプションでは、アメリカンタイプの方がオプション価格は高い。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:446
 msgid "If the underlying asset price is 100 yen, the exercise price is 80 yen, and the call option price is 45 yen, then it can be said that the option's intrinsic-value is 20 yen, and its time-value is 25 yen."
 msgstr ""
+"原資産価格100円、権利行使価格80円、オプション価格45円のときのコールオプションの本源的価値と時間的価値は本源的価値＝20円、時間的価値＝25円である"
+"。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "If we’re happy with your results, we’ll contact you for an interview and then do background and reference checks."
@@ -5400,10 +5401,9 @@ msgid "Imagine a workplace where your individuality, creativity and sense of adv
 msgstr "当社では、従業員の個性、創造性、そして挑戦する姿勢が重んじられ、評価されます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:458
-#, fuzzy
 #| msgid "Each binary option is a prediction on the future movement of an underlying market."
 msgid "Implied volatility is a prediction of the future rate of change in the underlying asset"
-msgstr "バイナリーオプションは、取引対象の未来の動向の予想のことです。"
+msgstr "インプライドボラティリティとは、原資産に対する将来の変動率を予測したボラティリティのことである。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/open_source_projects.html.haml:1
 msgid "Improve Binary.com’s front-end content"
@@ -5437,15 +5437,15 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:438
 msgid "In case of the right to buy the underlying asset (call option), when the underlying asset price falls, the option price will increase."
-msgstr ""
+msgstr "原資産を買う権利（コールオプション）の場合、原資産価格が下落すると、オプションの価格は高くなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:439
 msgid "In case of the right to sell the underlying asset (put option), when the underlying asset price rises, the option price will increase."
-msgstr ""
+msgstr "原資産を売る権利（プットオプション）の場合、原資産価格が上昇すると、オプションの価格は高くなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:428
 msgid "In case probability to receive the payout is 50% and magnification of payout for the investment is less than a 2-fold lower, than the expected rate will be  1 times lower and forecast recovery amount is less than the investment."
-msgstr ""
+msgstr "ペイアウトを受け取る確率が50％、投資額に対するペイアウトの倍率が2倍を下回る場合の期待収益率は1倍を下回り、予測回収額は投資額を下回る。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves’s vision is to create a market in the simplest of all derivatives contracts – the fixed-odds bet – and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities."
@@ -5457,11 +5457,11 @@ msgstr "外国為替市場では、任意の通貨が特定の通貨に対する
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:450
 msgid "In general a binary option price will not exceed the payout amount."
-msgstr ""
+msgstr "一般的には、インザマネーのバイナリーオプションの価格は、ペイアウト額を上回ることはない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:452
 msgid "In general the price of a binary option will be lower than the price of a plain vanilla option because the payout amount is fixed."
-msgstr ""
+msgstr "一般的には、バイナリーオプションの価格は、ペイアウト額が固定されるので、プレーンオプションの価格と比べて低くなる。"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1471
 msgid "In order for you to place contracts, we need to know your Residence (Country). Please update your settings."
@@ -5861,6 +5861,8 @@ msgstr "マン島"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:429
 msgid "It can not be said that binary option is unconditionally advantageous because the reason why investors will lose the full amount of investment at binary option, on the other hand part of investment will remain at FX."
 msgstr ""
+"投資者に不利な方向に動いた場合には、バイナリーオプションが投資額を全額失うのに比べ、ＦＸは投資額の一部が残る場合があるので、一概にバイナリーオプションが有"
+"利とはいえない。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:36
 msgid "It is important that you monitor all of your positions closely. It is your responsibility to monitor your positions and during the period that you have any open Contracts, you should always have the ability to access your Accounts."
@@ -7114,7 +7116,7 @@ msgstr "１日あたりのトレード購入可能金額"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:424
 msgid "Maximum loss of buyer at binary options is an optional fee, maximum loss of the seller will be the amount subtracted the option fee from the payout amount."
-msgstr ""
+msgstr "バイナリーオプションの買い手の最大損失額はオプション料であり、売り手の最大損失額はペイアウト額からオプション料を差し引いた額となる。"
 
 #. ($email)
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:258
@@ -7793,10 +7795,15 @@ msgstr "遅めに開場（%1）"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:461
 msgid "Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. Apart from the fixed exercise price, all other elements are changing constantly, so an understanding of the relationships between each element and changes in the options price is necessary for the management of options trading risk."
 msgstr ""
+"オプションの価格を形成する要素には原資産の価格、権利行使価格、権利行使期限までの期間の長さ、ボラティリティ、金利があるが、権利行使価格を除き、他の要素は刻"
+"々と変化し、オプションの価格も変化する。したがってオプション取引のリスクを管理していくためには、それぞれの要素の変化とオプション価格の変化の関係を理解する"
+"必要がある。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:462
 msgid "Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. However, when the remaining time to the exercise point is very short, there is no need to consider these when managing option trading risk, as all these elements are constant."
 msgstr ""
+"オプションの価格を形成する要素には原資産の価格、権利行使価格、権利行使期限までの期間の長さ、ボラティリティ、金利があるが、権利行使期限までの期間が短いオプ"
+"ションの場合、それぞれの要素はオプションの権利行使期限まで一定であるので、オプション取引のリスクを管理するときには、特に考慮する必要はない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:400
 msgid "Options may be either European or American style of exercise, and the one which can be exercised at only one expiry time is the European style option."
@@ -8708,15 +8715,16 @@ msgstr "価格が%1から%2に変化しました。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:432
 msgid "Price of OTC currency option is the calculated value based on multiple elements and is determined by relative trading basically."
-msgstr ""
+msgstr "店頭通貨オプションの価格は、複数の要素に基づく計算値であり、基本的には相対取引で価格は決定される。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:436
 msgid "Price of call option will be lower interest rates of the underlying assets is low, but the price of the put option, go up when the interest rates of the underlying assets is low."
-msgstr ""
+msgstr "コールオプションの価格は原資産の金利が低くなると下がるが、プットオプションの価格は、原資産の金利が低くなると上がる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:434
 msgid "Price of the option, the price of the underlying asset, price fluctuation rate of the underlying assets, the time until the exercise date, subject to any of the impact of interest rates."
 msgstr ""
+"店頭バイナリーオプション取引の場合、金融商品取引業者等が破たんすると、オプションの条件がインザマネーになっていたとしても権利行使が行えない可能性がある。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 msgid "Price the trade."
@@ -9097,6 +9105,8 @@ msgstr "参照番号"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:433
 msgid "Regarding to the OTC price of financial instruments, in case that financial instruments business operator suggests both of  bid and ask price (or trading price and cancellation price), generally there is a difference of them. This option will be wider as the expiration approaches."
 msgstr ""
+"次の文章のうち、金融商品の店頭取引の価格について、金融商品取引業者が買値と売値（又は買戻取価格、解約価格）の２つの価格をお客様に提示する場合、一般的には２"
+"つの価格には差（スプレッド）がある。このスプレッドはオプションの期限が近付くと広がる傾向がある。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Markets Group Ltd. renames to Binary Ltd."
@@ -10634,7 +10644,7 @@ msgstr "github上のオープンソース・プロジェクトである<a target
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:463
 msgid "The Black-Scholes model is widely used to calculate theoretical option prices."
-msgstr ""
+msgstr "オプション価格の理論式として、ブラック・ショールズ・モデルが広く用いられている。"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:588
 msgid "The CCI is a timing system that is best applied to commodity contracts, which have cyclical or seasonal tendencies. CCI does not determine the length of cycles - it is designed to detect when such cycles begin and end through the use of a statistical analysis which incorporates a moving average and a divisor reflecting both the possible and actual trading ranges."
@@ -10942,6 +10952,8 @@ msgstr "このボーナスは、ボーナスの付与条件となる入金金額
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:420
 msgid "The buyer of the plane option can waiver when incriminating, so the maximum loss of buyer is option fee and maximum earning is the amount subtracted by the difference of underlying asset price and exercise price from option fee. Therefore, when the underlying asset price is infinite, the profit will be infinite."
 msgstr ""
+"プレーンオプションの買い手は、自分に不利なときには権利放棄するので、買い手の最大損失額はオプション料、利益額は原資産価格と権利行使価格の差からオプション料"
+"を引いた額となり、原資産価格が無限大ならば、利益も無限大となる。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:48
 msgid "The calculation of the price to be paid (or the payout to be received) for financial contracts on this site at the time the financial contract is purchased or sold will be based on the Company's best estimate of market price movements and the expected level of interest rates, implied volatilities and other market conditions during the life of the financial contract, and is based on complex mathematics. The calculation will include a bias in favour of the Company. The financial contract prices (or the payout amounts) offered to Clients speculating on market or index prices may differ substantially from prices available in the primary markets where stock indices or commodities or contracts thereupon are traded, due to the bias favouring the Company in the price calculation system referred to above."
@@ -11010,7 +11022,7 @@ msgstr "当サイトのコンテンツは予告なしに変更される場合が
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:430
 msgid "The contents of the financial instruments of the OTC binary options are the same even transactions dealers handling financial instruments business are different."
-msgstr ""
+msgstr "店頭バイナリーオプションの金融商品としての内容は、取扱金融商品取引業者が異なっても同じである。"
 
 #. ($currency,                to_monetary_number_format($amount)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1125
@@ -11171,6 +11183,8 @@ msgstr "名前が取得されました。"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:419
 msgid "The option of the leverage effect, the buyer is likely to be obtained several times profit compared to the option fee, but the loss is limited to the option fee, when it comes to seller, profit is limited to the option fee, but loss will be likely to be doubled of option fee."
 msgstr ""
+"オプションのレバレッジ効果により、買い手はオプション料に比べ数倍の利益が得られる可能性があるが損失はオプション料に限られ、逆に売り手は利益がオプション料に"
+"限られるが損失はオプション料の数倍となる可能性がある。"
 
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Plack.pm:273
 msgid "The page has timed out. This may be due to a slow Internet connection, or to excess load on our servers.  Please try again in a few moments."
@@ -11207,15 +11221,15 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:431
 msgid "The price of OTC binary options of the same conditions, (sometimes) the price varies depending on transactions dealers handling financial instruments business."
-msgstr ""
+msgstr "同一条件の店頭バイナリーオプションの価格は、取扱金融商品取引業者により価格が異なる（場合がある）。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:457
 msgid "The price of a binary option is affected by not only the change in the underlying asset price, but also the change in remaining time to the exercise point."
-msgstr ""
+msgstr "バイナリーオプションの価格は、原資産価格の変化の影響を受けるとともに、権利行使期限までの残存時間の変化の影響も受ける。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:435
 msgid "The price of an option can be affected by the underlying asset price, by the volatility rate of the underlying asset, or by the time remaining to the exercise time."
-msgstr ""
+msgstr "オプションの価格は、原資産の価格、原資産の価格変動率、権利行使期限までの時間、金利のいずれの影響を受ける。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "The profit is the difference between the purchase price (the stake) and the payout on a winning trade."
@@ -11266,7 +11280,7 @@ msgstr "当社はルールや範囲を適切に修正または変更する権利
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:417
 msgid "The seller of an option should receive the option premium from the buyer, even if the buyer waives the right to exercise the option."
-msgstr ""
+msgstr "オプションの売り手は、買い手が権利行使を放棄した場合でも、買い手からオプション料を受け取ることができる。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:27
 msgid "The smoothing and filtering algorithms described above."
@@ -11317,7 +11331,7 @@ msgstr "現在の時刻は%1 %2です。%3の市場開場時間をご確認下�
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:447
 msgid "The time-value of an option represents the expected value of the option at the exercise point, and may be positive, even when the intrinsic-value is zero."
-msgstr ""
+msgstr "時間的価値は、オプションの残存期間を対象とした、将来の期待値であり、本源的価値がゼロであっても時間的価値はプラスとなる。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:55
 msgid "The token is invalid."
@@ -12290,11 +12304,11 @@ msgstr "他にお勧されない場合に限り、個人顧客として扱わせ
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:414
 msgid "Unless special arrangements are made, cooling-off will not be available after OTC binary options trading contract has been made."
-msgstr ""
+msgstr "特別の取り決めがなされる場合を除き、店頭バイナリーオプション取引契約成立（約定）後においてクーリングオフを行うことはできない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:451
 msgid "Unlike a plain vanilla option, an in-the-money binary option will have a lower price, the further away it is from the exercise point."
-msgstr ""
+msgstr "バイナリーオプションの場合、プレーンオプションとは異なり、インザマネーのときには、残存期間が長くなるほど、オプション価格は低くなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:502
 msgid "Unlock Cashier"
@@ -13003,6 +13017,8 @@ msgstr "マルタ共和国でもマレーシアでも、高い生活水準を得
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:421
 msgid "While seller of plan options is limited the earnings is the option fee, the difference of the underlying asset price and the strike price is a loss, if the underlying asset price is infinite, the loss will be infinite."
 msgstr ""
+"プレーンオプションの売り手は、利益額はオプション料に限定される一方、原資産価格と権利行使価格の差が損失となるので、原資産価格が無限大とすれば、その損失額も"
+"無限大となる。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/partners.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/white_labels.html.haml:1
