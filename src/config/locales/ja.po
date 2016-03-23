@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-22 02:20+0000\n"
+"PO-Revision-Date: 2016-03-23 03:18+0000\n"
 "Last-Translator: Masanari Higashiyama <higashiyama@regentmarkets.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/binary/static/ja/>\n"
+"Language-Team: Japanese "
+"<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1292,7 +1293,6 @@ msgid "Account balance: "
 msgstr "口座残高： "
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Authorize.pm:27
-#, fuzzy
 #| msgid "Your account is disabled"
 msgid "Account is dsiabled"
 msgstr "この口座は無効です"
@@ -1544,6 +1544,8 @@ msgstr "価格の乱高下を測定する指標です。高いATR値は高い変
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:365
 msgid "An option holder must buy ( or sell ) the underlying asset at a predetermined price within a specified period ( or at a specific time )."
 msgstr ""
+"オプションとは、一定の期間内（又は特定の期日）に、あらかじめ定めた価格によって原資産を買い取る（又は売り渡す）ことができる権利をいい、オプションの所有者は"
+"、一定の期間内（又は特定の期日）には、あらかじめ定めた価格によって原資産を必ず買い取らなければ（又は売り渡さなければ）ならない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:445
 msgid "An option price is the sum of the intrinsic-value and the time-value."
@@ -1965,10 +1967,9 @@ msgid "Barrier is out of acceptable range."
 msgstr "受付けレンジ外のバリア値"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/BarrierBuilder.pm:30
-#, fuzzy
 #| msgid "Barrier must be at least "
 msgid "Barrier must be an integer."
-msgstr "バリアの最小値 "
+msgstr "バリア値は整数です"
 
 #. ($min_allowed . ' pips away from the spot.')
 #. ($self->minimum_allowable_move . ' pips away from the spot.')
@@ -2210,7 +2211,9 @@ msgstr "Binary.comは常に進化、成長"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:576
 msgid "Binary.com earns a return from the difference between the total amount of all customers' payment and the total amount of all customers' receipts."
-msgstr "バイナリーオプション取引について、当社と取引する顧客全体が当社に支払う金額と顧客全体が当社から受け取る金額の差額が当社の収益の源泉となっていること。"
+msgstr ""
+"バイナリーオプション取引について、当社と取引する顧客全体が当社に支払う金額と顧客全体が当社から受け取る金額の差額が当社の収益の源泉となっていること。（契約"
+"締結前交付書面「店頭バイナリーオプション取引のリスク等重要事項について」-9参照）"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Binary.com has over 800,000 clients in its database and reaches the US$2 billion milestone in our 15th year, making us one of the leading binary options providers."
@@ -2665,7 +2668,7 @@ msgstr "その他の国（アメリカ、日本、コスタリカ、香港など
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/promocode.html.tt:23
 msgid "Clients may avail of this bonus only when a real money account is opened."
-msgstr "このボーナスは、リアルマネー口座を開設された場合にのみ適用されます。"
+msgstr "このボーナスは、リアル口座を開設された場合にのみ適用されます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/responsible_trading.html.haml:1
 msgid "Clients must be aware that underage gambling is an offence. If a client, upon age verification, is proven to be underage, will be deprived from any winnings and only deposits made shall be refunded."
@@ -3150,13 +3153,13 @@ msgstr "作成"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 msgid "Create Free Account"
-msgstr "無料口座開設"
+msgstr "デモ口座申込み"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:819
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:54
 msgid "Create New Account"
-msgstr "無料口座開設"
+msgstr "口座申込み"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:13
 msgid "Create New Token"
@@ -3900,7 +3903,7 @@ msgstr "各バイナリーでのお取引は事前にペイアウトが確定し
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:524
 msgid "Each option transaction has a specified expiry time and date, known as the judgment time."
-msgstr "本取引が期日のある取引であること。"
+msgstr "本取引が期日のある取引であること。（契約締結前交付書面「店頭バイナリーオプション取引のリスク等重要事項について」-2参照）"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:93
 msgid "Each party to this Agreement represents and warrants to the other that it has, and will retain throughout the Term all right, title and authority to enter into this Agreement, to grant to the other party the rights and licences granted in this Agreement and to perform all of its obligations under this Agreement."
@@ -5055,7 +5058,9 @@ msgstr "多種多様な入出金方法に対応しています。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:492
 msgid "I agree that I will trade OTC binary options using my own judgment and accept responsibility for any loss that may occur from the transaction, and that it is within a range acceptable with regard to the total value of my financial assets."
-msgstr "本取引により想定される損失額（中途売却または解約した場合の解約清算金（試算額）を含む。）を踏まえ、お客様が許容できる損失額及びお客様の資産の状況への影響に照らして、お客様自身が取引できる契約内容であることを確認したこと。"
+msgstr ""
+"本取引に関し、その対象となる金融指標等を含む基本的なスキームについて、十分な説明を受け、理解したこと。\n"
+"（契約締結前交付書面「店頭バイナリーオプション取引のリスクについての説明」参照）"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:438
 msgid "I confirm my agreement to the contents of all the documents listed below:"
@@ -5080,7 +5085,9 @@ msgstr "電子文書のみで発行される契約締結前文書や全ての利
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:505
 msgid "I understand and agree that, with regard to over-the-counter binary option trading, I have read and understand the general conditions and mechanisms for trading the contract, including details of the underlying financial index, before committing to a transaction."
-msgstr "本取引に関し、その対象となる金融指標等を含む基本的なスキームについて、十分な説明を受け、理解したこと。"
+msgstr ""
+"本取引により想定される損失額（中途売却または解約した場合の解約清算金（試算額）を含む。）を踏まえ、お客様が許容できる損失額及びお客様の資産の状況への影響に"
+"照らして、お客様自身が取引できる契約内容であることを確認したこと。（契約締結前交付書面「序文」参照）"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/beginners_faq.html.haml:1
 msgid "I'm new to binaries, where do I start?"
@@ -5104,15 +5111,22 @@ msgstr "潜在顧客およびビジネスパートナーの情報確認、関係
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:537
 msgid "If a customer holds a long position and the prediction goes wrong as of the judgment time, the invested principal amount will become zero value."
-msgstr "購入したバイナリーオプションについて、判定時刻において、予測が外れた場合には、投資元本がゼロになること。"
+msgstr ""
+"取引期間中のオプション価格は変動すること。（契約締結前交付書面「店頭バイナリーオプション取引のリスクについての説明」-④オプションの価格変動リスク参照）"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:563
 msgid "If a customer holds a short position and the prediction is incorrect as of the judgment time, the customer is required to pay the payout amount, and as that will be greater than the trade price that the customer originally received, this will cause a net loss."
-msgstr "売付したバイナリーオプションについて、判定時刻において、予測が外れた場合には、ペイアウト額を支払うこと、および支払うペイアウト額が受け取るオプション料以上の額となること。判定時刻前に買戻し（または解約）した場合には、買戻し額（精算額）が、売付時に受け取るオプション料を上回り、損失が生じるおそれがあること。"
+msgstr ""
+"売付したバイナリーオプションについて、判定時刻において、予測が外れた場合にはペイアウト額を支払うこと、および支払うペイアウト額が受け取るオプション料以上の"
+"額になること。また、同オプションを判定時刻前に買戻し（または解約）した場合には、買戻し額が売付時に受け取るオプション料を上回り、損失が生じるおそれがあるこ"
+"と。（参照先を後日、入力予定）"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:550
 msgid "If a customer sells back a long option position before the determination time, then the sale price may be lower than the original purchase price, so there is a possibility of a net loss."
-msgstr "購入したバイナリーオプションについて、判定時刻前に売却（または解約）した場合には、売却金額（清算金額）が、購入金額を下回り、損失が生じるおそれがあること。"
+msgstr ""
+"購入したバイナリーオプションについて、判定時刻において、予測が外れた場合には、投資元本がゼロになること。また、同オプションを判定時刻前に売却（または解約）"
+"した場合には、売却金額が購入金額を下回り、損失が生じるおそれがあること（契約締結前交付書面「店頭バイナリーオプション取引のリスク等重要事項について」-2及"
+"び8参照）"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "If all that sounds a bit daunting, you’re right. But it’s how we make sure we get the best people for our team."
@@ -5417,7 +5431,9 @@ msgstr "現行価格、公開されたオッズ、トレーディングソフト
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:589
 msgid "In carrying out OTC binary option trading, a customer needs expert knowledge such as the theoretical value of options, in order to make reasonable investment decisions."
-msgstr "バイナリーオプション取引について、合理的な投資判断をもって行うためには、オプション取引の理論的根拠などに関する専門知識が必要であること。"
+msgstr ""
+"バイナリーオプション取引について、合理的な投資判断をもって行うためには、オプション取引の理論的根拠などに関する専門知識が必要であること。（契約締結前交付書"
+"面「店頭バイナリーオプション取引のリスクについての説明」-①参照）"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:438
 msgid "In case of the right to buy the underlying asset (call option), when the underlying asset price falls, the option price will increase."
@@ -7722,7 +7738,7 @@ msgstr "Open"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:599
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:184
 msgid "Open Account"
-msgstr "ご口座の開設"
+msgstr "口座の申込み"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Open Positions"
@@ -9037,7 +9053,7 @@ msgstr "よくあるご質問事項に対する回答はこちらから"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:142
 msgid "Real Account"
-msgstr "リアルマネー口座番号"
+msgstr "リアル口座番号"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:846
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:855
@@ -9045,7 +9061,7 @@ msgstr "リアルマネー口座番号"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:2
 msgid "Real Money Account Opening"
-msgstr "リアルマネー口座の開設"
+msgstr "リアル口座の開設"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "Real-time prices, benchmarked against interbank options markets."
@@ -11026,7 +11042,7 @@ msgstr "ボーナスの通貨は、お客様が初めてご入金された通貨
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:514
 msgid "The customer agrees they understand each the following statements regarding OTC binary options trading:"
-msgstr "店頭バイナリーオプション取引に関する次の各項について理解されましたら、横のボックス欄にチェックを入れてください。"
+msgstr "本取引に関し、特に次に掲げる事項について、十分な説明を受け、理解したこと。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "The duration is the length of a purchased trade (see 'contract period')."
@@ -11825,7 +11841,9 @@ msgstr "ご口座アップグレードのお手続きを進めて頂くには、
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:482
 msgid "To open a trading account, our customers must confirm they fully understand the mechanisms and risks of transactions. Please acknowledge your understanding and agreement to each of the following statements, by placing a check mark in the boxes alongside."
-msgstr "取引口座を開設するには、お客様は取引の仕組みやリスクを十分に理解いただく必要があります。以下の各文章にご理解と同意をいただけましたら、横のボックス欄にチェックを入れてください。"
+msgstr ""
+"お客さまが当社とバイナリーオプション取引口座を開設にあたり、取引の仕組みやリスクを十分に理解いただく必要があります。下記事項につき、ご理解、同意いただけま"
+"したら、チェックをお願いいたします。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "To qualify, you’ll need an advanced university degree in Physics, Financial Engineering or Mathematics"
