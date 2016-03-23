@@ -99,4 +99,17 @@
             <p>[% l('View your login history.') %]</p>
         </div>
     </div>
+    <div class="grd-grid-3 grd-grid-mobile-6 grd-parent ja-hide">
+        <div class="grd-grid-8 grd-with-padding">
+            <a class="pjaxload" href="[% request.url_for('/user/applicationsws') %]">
+                <img class="responsive" src="[% request.url_for('images/pages/settings/applications.svg') %]">
+            </a>
+        </div>
+        <div class="grd-grid-12">
+            <h4>
+                <a class="pjaxload" href="[% request.url_for('/user/applicationsws') %]">[% l('Applications') %]</a>
+            </h4>
+            <p>[% l('Manage applications.') %]</p>
+        </div>
+    </div>
 </div>
