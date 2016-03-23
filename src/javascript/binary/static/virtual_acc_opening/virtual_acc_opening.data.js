@@ -1,14 +1,13 @@
 var VirtualAccOpeningData = (function(){
     "use strict";
 
-    function getDetails(email, password, residence){
-        var verificationCookie = $.cookie('verify_token');
+    function getDetails(email, password, residence, verificationCode){
         var req = {
                     new_account_virtual: 1,
                     email: email,
                     client_password: password,
                     residence: residence,
-                    verification_code: verificationCookie
+                    verification_code: verificationCode
                 };
 
         if ($.cookie('affiliate_tracking')) {
@@ -16,9 +15,6 @@ var VirtualAccOpeningData = (function(){
         }
 
         BinarySocket.send(req);
-        if (verificationCookie) {
-          $.removeCookie(verificationCookie, {path: '/', domain: '.' + document.domain.split('.').slice(-2).join('.')});
-        }
     }
 
     return {

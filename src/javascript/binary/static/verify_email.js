@@ -1,15 +1,11 @@
 if(document.getElementById('btn-verify-email')) {
-
+    var error = document.getElementById('signup_error');
     $('#verify-email-form').submit( function(evt){
       evt.preventDefault();
       var email = document.getElementById('email').value;
-      var error = document.getElementById('signup_error');
       Content.populate();
 
       if(!Validate.errorMessageEmail(email, error)) {
-        error.textContent = "";
-        error.styledisplay = 'none';
-
         BinarySocket.init({
             onmessage: function(msg){
                 var response = JSON.parse(msg.data);
@@ -18,13 +14,11 @@ if(document.getElementById('btn-verify-email')) {
                     var type = response.msg_type;
                     var wsError = response.error;
                     if (type === 'verify_email' && !wsError){
-                      error.textContent = Content.localize().textEmailSent;
-                      $('#email').hide();
-                      $('#btn-verify-email').hide();
+                      window.location.href = page.url.url_for('new_account/virtualws');
                     } else if (wsError && wsError.message) {
-                      error.textContent = wsError.message;
+                      error.innerHTML = wsError.message;
+                      error.style.display = 'inline-block';
                     }
-                    error.style.display = 'inline-block';
                 }
             }
         });

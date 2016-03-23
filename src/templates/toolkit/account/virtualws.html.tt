@@ -7,6 +7,16 @@
           <fieldset>
             <legend id="details">[% l('Details') %]</legend>
             <div class="grd-row-padding row clear">
+              <div class="grd-grid-4 form_label">
+                <label for="email">[% l('Verification token') %]</label>
+              </div>
+              <div class="grd-grid-8">
+                <input type="text" id="verification-code" maxlength="48"></input>
+                <div class="hint">[% l('Please check your email for the value of this token') %]</div>
+                <p class="errorfield" id="error-verification-code" style="display:none"></p>
+              </div>
+            </div>
+            <div class="grd-row-padding row clear">
               <div class="grd-grid-4  form_label">
                 <label for="email">[% l('Please re-enter your email') %]</label>
               </div>

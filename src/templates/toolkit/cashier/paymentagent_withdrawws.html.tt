@@ -31,6 +31,16 @@
             <form class="form rbox grd-row-padding" id="frmWithdrawal">
                 <fieldset>
 
+                  <div class="grd-row-padding row clear">
+                      <div class="grd-grid-4 form_label">
+                          <label for="verification-code">[% l('Verification Token') %]</label>
+                      </div>
+                      <div class="grd-grid-8">
+                          <input type="text" id="verification-code" maxlength="48"></input>
+                          <div class="hint">[% l('Please check your email for the value of this token') %]</div>
+                      </div>
+                  </div>
+
                     <div class="grd-row-padding row clear">
                         <div class="grd-grid-4 form_label">
                             <label for="ddlAgents">[% l('Transfer to Payment Agent') %]</label>
