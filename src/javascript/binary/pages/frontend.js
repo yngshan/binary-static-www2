@@ -486,7 +486,7 @@ function change_blog_link(lang) {
 }
 
 function isNotBackoffice() {
-  return /backoffice/.test(window.location.pathname);
+  return !/backoffice/.test(window.location.pathname);
 }
 
 pjax_config_page('/$|/home', function() {
