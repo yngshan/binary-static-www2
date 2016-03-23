@@ -574,8 +574,10 @@ Header.prototype = {
         this.register_dynamic_links();
         this.simulate_input_placeholder_for_ie();
         this.logout_handler();
-        checkClientsCountry();
-        change_blog_link('id');
+        if (isNotBackoffice()) {
+          checkClientsCountry();
+          change_blog_link('id');
+        }
     },
     on_unload: function() {
         this.menu.reset();
