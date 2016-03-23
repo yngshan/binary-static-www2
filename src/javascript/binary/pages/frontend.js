@@ -441,6 +441,36 @@ function Trim(str){
   return str;
 }
 
+function changeLanguage(lang) {
+  str = window.location.search;
+  str = page.url.replaceQueryParam('l', lang, str);
+  window.location = window.location.pathname + str;
+}
+
+function limitLanguage(lang) {
+  if (page.language() !== lang) {
+    changeLanguage(lang);
+  }
+  if (document.getElementById('language_select')) {
+    $('#language_select').remove();
+  }
+}
+
+function checkClientsCountry() {
+  var clients_country = localStorage.getItem('clients_country');
+  if (clients_country) {
+    var str;
+    if (clients_country === 'jp') {
+      limitLanguage('JA');
+    } else if (clients_country === 'id') {
+      limitLanguage('ID');
+    }
+  } else {
+    BinarySocket.init();
+    BinarySocket.send({"website_status" : "1"});
+  }
+}
+
 pjax_config_page('/$|/home', function() {
     return {
         onLoad: function() {
