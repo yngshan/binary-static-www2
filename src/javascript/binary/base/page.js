@@ -328,6 +328,11 @@ URL.prototype = {
         var param_hash= this.params_hash();
         return param_hash[name];
     },
+    replaceQueryParam: function (param, newval, search) {
+      var regex = new RegExp("([?;&])" + param + "[^&;]*[;&]?");
+      var query = search.replace(regex, "$1").replace(/&$/, '');
+      return (query.length > 2 ? query + "&" : "?") + (newval ? param + "=" + newval : '');
+    },
     param_if_valid: function(name) {
         if(this.is_valid) {
            return this.param(name);
@@ -569,6 +574,7 @@ Header.prototype = {
         this.register_dynamic_links();
         this.simulate_input_placeholder_for_ie();
         this.logout_handler();
+        checkClientsCountry();
     },
     on_unload: function() {
         this.menu.reset();
