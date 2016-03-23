@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-23 05:37+0000\n"
-"Last-Translator: Masanari Higashiyama <higashiyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-03-23 09:36+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:390
 msgid " At buying call option, break-even point is the price added option fee of a unit of the underlying asset to exercise price."
-msgstr ""
+msgstr " コールオプション購入時の損益分岐点は、権利行使価格に追加される原資産単位のオプション料の価格です。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:391
 msgid " At buying put option, break-even point is the price minuses option fee of a unit of the underlying asset to exercise price."
-msgstr ""
+msgstr " プットオプション購入時の損益分岐点は、権利行使価格から差し引かれる原資産単位のオプション料の価格です。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:47
 msgid "\"Binary\" or \"digital\" options are options that pay a pre-determined, fixed amount, depending on whether or not an event occurs at the time the Binary Option expires. Binary Options can have only one of two possible outcomes and allow you to take a simple \"Yes or No\" approach. Like traditional options, Binary Options are based on an underlying asset such as currencies, commodities, indexes or stocks, however one of the most significant differences from traditional options, among others, is that there can be only two outcomes for the option, either the client is paid the return upon the occurrence of the event, or the client loses the investment amount as determined in each option."
@@ -2883,10 +2883,9 @@ msgid "Conflicts Policy"
 msgstr "利益相反ポリシー"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:465
-#, fuzzy
 #| msgid "A member of our Customer Support Team will contact you shortly."
 msgid "Congratulations, you have pass the test, our Customer Support will contact you shortly"
-msgstr "カスタマーサポートのスタッフより早急にご連絡いたします。"
+msgstr "おめでとうございます。テストに合格されましたので、カスタマーサポートよりすぐにご連絡させていただきます。"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:428
 msgid "Connection failure. Please try again later."
@@ -2949,16 +2948,14 @@ msgid "Contract Details"
 msgstr "トレード詳細情報"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:542
-#, fuzzy
 #| msgid "Contract expired"
 msgid "Contract Expiry"
 msgstr "取引終了"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:541
-#, fuzzy
 #| msgid "Contract Confirmation"
 msgid "Contract Information"
-msgstr "トレード確定"
+msgstr "お取引情報"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:37
 msgid "Contract Payouts"
@@ -2990,10 +2987,9 @@ msgid "Contract has already expired."
 msgstr "トレードは既に終了しました。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:553
-#, fuzzy
 #| msgid "Contract started"
 msgid "Contract is not started yet"
-msgstr "トレード開始"
+msgstr "トレードはまだ開始していません"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1594
 msgid "Contract market price is too close to final payout."
@@ -3029,10 +3025,9 @@ msgid "Contract started"
 msgstr "トレード開始"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:565
-#, fuzzy
 #| msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr "注意：当社のサーバへリクエストが受理された際の優勢な市場価格にてトレードを売ることが可能です。この価格は示唆された価格と異なる場合があります。"
+msgstr "当社のサーバでリクエストが受理された場合、その時点での市場価格でトレードを売ることができます。この価格は表示価格と異なる場合があります。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:52
 msgid "Contracts"
@@ -3217,10 +3212,9 @@ msgid "Currency"
 msgstr "通貨"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:543
-#, fuzzy
 #| msgid "Currency"
 msgid "Current"
-msgstr "通貨"
+msgstr "現在"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:550
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:31
@@ -3386,6 +3380,37 @@ msgid ""
 "\n"
 "support@binary.com"
 msgstr ""
+"%1 %2様\n"
+"\n"
+"おめでとうございます！バイナリーオプション取引の知識テストに合格されました。\n"
+"\n"
+"口座開設の次の手順としまして、お客様の身元確認書類を拝見し、取引口座開設の資格の有無を判断させていただきます。確認書類を受け取り次第、当社のコンプライアン"
+"ス部門とリスク管理部門にて審査が行われます。\n"
+"\n"
+"下記確認書類のうち1つをスキャンいただき、<u>そのコピーを添付してこのメールにご返信ください。</u>\n"
+"\n"
+"<ul>\n"
+"    <li><b>日本の運転免許書</b>：両面</li>\n"
+"    <li><b>健康保険書</b>：両面</li>\n"
+"    <li><b>住民基本台帳</b> "
+"別でパスポートサイズの写真を添付してください。他の家族の情報が書類に記載されている場合、スキャン時に紙でカバーして情報を伏せてください。</li>\n"
+"    <li><b>在留カード</b>：両面</li>\n"
+"</ul>\n"
+"\n"
+"当社へ提供された詳細と同じ現住所が書類に記載されていることを事前に確認してください。また、申請に遅れが生じないためにも、住所やその他の情報が確認しやすいよ"
+"うきちんと読み取られていることを確認してから添付してください。\n"
+"\n"
+"24時間以内に書類を確認し、完了後ご連絡させていただきます。\n"
+"\n"
+"Binary.comにて口座開設の申請をしていただき誠にありがとうございます。\n"
+"\n"
+"\n"
+"何卒、よろしくお願い致します。\n"
+"\n"
+"カスタマーサポート\n"
+"Binary 株式会社\n"
+"\n"
+"support@binary.com"
 
 #. ($client_name, $support_email)
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Client/IDAuthentication.pm:198
@@ -3528,10 +3553,14 @@ msgstr "親愛なるお客様へ <p style=\"margin-top:1em;line-height:200%;\">�
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:467
 msgid "Dear customer, you are not allowed to take knowledge test until %1.\\nLast test taken at %2."
 msgstr ""
+"親愛なるお客様へ\n"
+"%1まで知識テストを受けることができません。前回のテスト受験日%2。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:468
 msgid "Dear customer, you've already completed the knowledge test, please proceed to next step."
 msgstr ""
+"親愛なるお客様へ\n"
+"既に知識テストが完了しています。次のステップへお進みください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/about/index.html.haml:1
 msgid "Debt-free"
@@ -4019,10 +4048,9 @@ msgid "Email address"
 msgstr "メールアドレス"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:146
-#, fuzzy
 #| msgid "The re-entered email address is incorrect."
 msgid "Email address is incorrect."
-msgstr "再度ご入力いただいたメールアドレスが無効です。"
+msgstr "メールアドレスが正しくありません"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:59
 msgid "Email not given."
@@ -4229,6 +4257,7 @@ msgstr "権利行使期間"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:406
 msgid "Exercise price is the price which buy and sell underlying asset by exercise the right and in case of binary option, it is basic price to judge the presence (exist) of payout."
 msgstr ""
+"権利行使価格とは権利を行使することで原資産を売り買いする価格のことをいい、バイナリーオプションにおいてはペイアウトの有無を判定する基準値段です。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:547
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:19
@@ -4241,7 +4270,7 @@ msgstr "終値"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:407
 msgid "Exit price is the underlying asset price at exercise time and it's the price to judge the presence (exist) of payout by comparing with exercise price."
-msgstr ""
+msgstr "判定価格とは権利行使時間の原資産の価格のことをいます。権利行使価格と比較することでぺイアウトの有無を判定する価格です。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/endsinout.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/higherlower.html.tt:1
@@ -7541,10 +7570,9 @@ msgid "Not publish any advertising material without the company’s consent. Any
 msgstr "お客様からの同意なしに広告を掲載することはありません。%1からのプロモーション広告は、お客様のウェブサイトに掲載される前に同意を伺う内容を送らさせていただくことになっています。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:564
-#, fuzzy
 #| msgid "Note:"
 msgid "Note"
-msgstr "注意："
+msgstr "注意"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:31
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
@@ -8434,10 +8462,9 @@ msgid "Please provide at least one self-exclusion setting."
 msgstr "ご希望される自己制限の対象を少なくとも１点選択して下さい。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:325
-#, fuzzy
 #| msgid "Please provide at least one self-exclusion setting."
 msgid "Please provide complete details for account opening."
-msgstr "ご希望される自己制限の対象を少なくとも１点選択して下さい。"
+msgstr "口座開設に必要な詳細情報をご入力ください。"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:821
 msgid "Please provide some information about yourself and your proposed services"
@@ -8548,10 +8575,9 @@ msgid "Please switch accounts to trade this market."
 msgstr "このマーケットで取引するには口座を切り替えてください。"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1508
-#, fuzzy
 #| msgid "Please switch accounts to trade this contract."
 msgid "Please switch accounts to trade this underlying."
-msgstr "このトレードを取引される場合は、口座をお切り替えください。"
+msgstr "この原資産で取引されるには、口座をお切り替えいただく必要があります。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/reset_password.html.tt:6
 msgid "Please take a moment to verify your identity by providing us with your date of birth, below."
@@ -9494,10 +9520,9 @@ msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:19
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:36
-#, fuzzy
 #| msgid "Session duration:"
 msgid "Section 5: Calculation"
-msgstr "セッション継続時間:"
+msgstr "第5章：算出"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:108
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:634
@@ -10030,10 +10055,9 @@ msgid "Sorry, you have excluded yourself until %1."
 msgstr "申し訳ございませんが、お客様は%1まで自己制限として除外されました。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:466
-#, fuzzy
 #| msgid "Sorry, you have already had too many unsuccessful attempts. Please try again in 5 minutes."
 msgid "Sorry, you have failed the test, please try again after 24 hours."
-msgstr "所定回数以上、不正なデータを入力されてしまいました。５分後に改めてお手続きを行って下さい。"
+msgstr "申し訳ございませんが、合格に達しませんでした。24時間以降に再度お試しください。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:928
 msgid "Sorry, you have open positions. Please close out all open positions before requesting additional funds."
@@ -11444,10 +11468,9 @@ msgid "There was a problem validating your address. Please fix the indicated fie
 msgstr "お客様のご住所の認証プロセスにて問題が発生しました。該当事項の訂正をお願いします。ご不明な点がございましたら<a href=\"%1\">カスタマーサポート</a>までお知らせ下さい。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:560
-#, fuzzy
 #| msgid "There is an error with this link."
 msgid "There was an error"
-msgstr "このリンクにはエラーがあります。"
+msgstr "エラーが発生しました"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/exception.html.haml:1
 msgid "There was an error and we were unable to process your request."
@@ -11593,16 +11616,14 @@ msgid "This contract cannot be properly validated at this time."
 msgstr "現在、このトレードを適切に確証することができません。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:558
-#, fuzzy
 #| msgid "This contract has expired."
 msgid "This contract has LOST"
-msgstr "このトレードは終了しました。"
+msgstr "このトレードは負け判定です"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:557
-#, fuzzy
 #| msgid "This contract lost"
 msgid "This contract has WON"
-msgstr "このトレードは負け判定"
+msgstr "このトレードは勝ち判定です"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/AmericanExpiry.pm:19
 msgid "This contract has already expired."
@@ -12055,10 +12076,9 @@ msgid "Trading is available after the first %1 of the session."
 msgstr "トレード・セッション開始後%1にてトレードが可能です。"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2640
-#, fuzzy
 #| msgid "Trading is not offered for this duration."
 msgid "Trading is not offered for this duration"
-msgstr "この取引期間のトレードは不可能です。"
+msgstr "この期間のトレードは提供されていません"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2716
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2754
@@ -13361,10 +13381,9 @@ msgid "You are not authorized for withdrawal via payment agent."
 msgstr "お客様は決済サービスでのご出金が許可されていません。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:142
-#, fuzzy
 #| msgid "There are no available Payment Agents."
 msgid "You are not eligible for Japan knowledge test."
-msgstr "There are no available Payment Agents."
+msgstr "お客様は日本版知識テストの対象ではありません"
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:22
@@ -13510,10 +13529,9 @@ msgid "You have sold the following contract:"
 msgstr "次の内容のトレードを転売されました："
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:562
-#, fuzzy
 #| msgid "You have sold the following contract:"
 msgid "You have sold this contract at %1 %2"
-msgstr "次の内容のトレードを転売されました："
+msgstr "%1 %2でこのトレードを売却しました"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:188
 msgid "You may choose to contact us to close your account held with the Company. Your account may be closed if you do not have any open trade positions and if you have complied with the requested \"Know Your Client\" procedures to enable you to withdraw any pending funds in your account."
@@ -13984,10 +14002,9 @@ msgid "Your token has been invalidated. Please click <a class=\"pjaxload\" href=
 msgstr "あなたのトークンが無効になりました。 認証プロセスを再開するには<a class=\"pjaxload\" href=\"%1\">こちら</a> をクリックしてください。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:138
-#, fuzzy
 #| msgid "Your documents are expired"
 msgid "Your token has expired."
-msgstr "文書の有効期限が切れています"
+msgstr "トークンの有効期限が切れています。"
 
 #. ($c->stash('request')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:352
@@ -15100,7 +15117,6 @@ msgid "International Consolidated Airlines Group SA"
 msgstr "International Consolidated Airlines Group SA"
 
 #: Underlying Symbol DEDUE
-#, fuzzy
 #| msgid "Drr AG"
 msgid "Drr AG"
 msgstr "Drr AG"
@@ -16436,10 +16452,9 @@ msgstr "%3が%plural(%5,%d tick,%d ticks)後に%6よりも正確に高い場合�
 #. %6 - High (or single) barrier
 #. %7 - Low barrier (when present)
 #: Translation for contract type description (CALLE - daily)
-#, fuzzy
 #| msgid "%1 %2 payout if %3 is strictly higher than %6 at %5."
 msgid "%1 %2 payout if %3 is higher than or equal to %6 at %5."
-msgstr "%3が%5の時点で%6よりも正確に高い場合に%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%5の時点で%6よりも高いかまたは同じ場合に%1 %2のペイアウトをお受け取りいただけます。"
 
 #. %1 - Payout Currency (example USD)
 #. %2 - Payout value (example 100)
@@ -16449,10 +16464,9 @@ msgstr "%3が%5の時点で%6よりも正確に高い場合に%1 %2のペイア�
 #. %6 - High (or single) barrier
 #. %7 - Low barrier (when present)
 #: Translation for contract type description (CALLE - intraday)
-#, fuzzy
 #| msgid "%1 %2 payout if %3 is strictly higher than %6 at %5 after %4."
 msgid "%1 %2 payout if %3 is higher than or equal to %6 at %5 after %4."
-msgstr "%3が%4後の%5の時点で%6より正確に高い場合に%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%4後の%5の時点で%6より高いかまたは同じ場合に%1 %2のペイアウトをお受け取りいただけます。"
 
 #. %1 - Payout Currency (example USD)
 #. %2 - Payout value (example 100)
@@ -16462,10 +16476,10 @@ msgstr "%3が%4後の%5の時点で%6より正確に高い場合に%1 %2のペ�
 #. %6 - High (or single) barrier
 #. %7 - Low barrier (when present)
 #: Translation for contract type description (CALLE - tick)
-#, fuzzy
 #| msgid "%1 %2 payout if %3 after %plural(%5,%d tick,%d ticks) is strictly higher than %6."
 msgid "%1 %2 payout if %3 after %plural(%5,%d tick,%d ticks) is higher than or equal to %6."
-msgstr "%3が%plural(%5,%d tick,%d ticks)後に%6よりも正確に高い場合に、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr ""
+"%3が%plural(%5,%d tick,%d ticks)後に%6より高いかまたは同じ場合に、%1 %2のペイアウトをお受け取りいただけます。"
 
 #: Translation for contract type "DIGITDIFF"
 msgid "differs"
@@ -16591,10 +16605,9 @@ msgstr "%3が%4後の%5の時点で%7と%6のレンジ外にある場合</strong
 #. %6 - High (or single) barrier
 #. %7 - Low barrier (when present)
 #: Translation for contract type description (EXPIRYMISSE - daily)
-#, fuzzy
 #| msgid "%1 %2 payout if %3 ends outside %7 to %6 at %5."
 msgid "%1 %2 payout if %3 ends on or outside %7 to %6 at %5."
-msgstr "%3が%5の時点で%7と%6のレンジ外にある場合</strong>、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%5の時点で%7と%6のちょうどかまたはその範囲外にある場合</strong>、%1 %2のペイアウトをお受け取りいただけます。"
 
 #. %1 - Payout Currency (example USD)
 #. %2 - Payout value (example 100)
@@ -16604,10 +16617,9 @@ msgstr "%3が%5の時点で%7と%6のレンジ外にある場合</strong>、%1 %
 #. %6 - High (or single) barrier
 #. %7 - Low barrier (when present)
 #: Translation for contract type description (EXPIRYMISSE - intraday)
-#, fuzzy
 #| msgid "%1 %2 payout if %3 ends outside %7 to %6 at %5 after %4."
 msgid "%1 %2 payout if %3 ends on or outside %7 to %6 at %5 after %4."
-msgstr "%3が%4後の%5の時点で%7と%6のレンジ外にある場合</strong>、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%4後の%5の時点で%7と%6のちょうどかまたはその範囲外にある場合</strong>、%1 %2のペイアウトをお受け取りいただけます。"
 
 #: Translation for contract type "EXPIRYRANGE"
 msgid "ends between"
@@ -16643,10 +16655,9 @@ msgstr "%3が%4後の%5の時点で正確に%7と%6の範囲内で終了した�
 #. %6 - High (or single) barrier
 #. %7 - Low barrier (when present)
 #: Translation for contract type description (EXPIRYRANGEE - daily)
-#, fuzzy
 #| msgid "%1 %2 payout if %3 ends strictly between %7 to %6 at %5."
 msgid "%1 %2 payout if %3 ends on or between %7 to %6 at %5."
-msgstr "%3が%5の時点で正確に%7と%6の範囲内で終了した場合、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%5の時点で%7と%6のちょうどかまたはその範囲内で終了した場合、%1 %2のペイアウトをお受け取りいただけます。"
 
 #. %1 - Payout Currency (example USD)
 #. %2 - Payout value (example 100)
@@ -16656,10 +16667,9 @@ msgstr "%3が%5の時点で正確に%7と%6の範囲内で終了した場合、%
 #. %6 - High (or single) barrier
 #. %7 - Low barrier (when present)
 #: Translation for contract type description (EXPIRYRANGEE - intraday)
-#, fuzzy
 #| msgid "%1 %2 payout if %3 ends strictly between %7 to %6 at %5 after %4."
 msgid "%1 %2 payout if %3 ends on or between %7 to %6 at %5 after %4."
-msgstr "%3が%4後の%5の時点で正確に%7と%6の範囲内で終了した場合に、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%4後の%5の時点で%7と%6のちょうどかまたはその範囲内で終了した場合に、%1 %2のペイアウトをお受け取りいただけます。"
 
 #: Translation for contract type "NOTOUCH"
 msgid "does not touch"
@@ -16758,10 +16768,9 @@ msgstr "%3が%plural(%5,%d tick,%d ticks)後に%6よりも正確に低い場合�
 #. %6 - High (or single) barrier
 #. %7 - Low barrier (when present)
 #: Translation for contract type description (PUTE - daily)
-#, fuzzy
 #| msgid "%1 %2 payout if %3 is strictly lower than %6 at %5."
 msgid "%1 %2 payout if %3 is lower than or equal to %6 at %5."
-msgstr "%3が%5の時点で正確に%6よりも低い場合、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%5の時点で%6よりも低いかまたは同じ場合、%1 %2のペイアウトをお受け取りいただけます。"
 
 #. %1 - Payout Currency (example USD)
 #. %2 - Payout value (example 100)
@@ -16771,10 +16780,9 @@ msgstr "%3が%5の時点で正確に%6よりも低い場合、%1 %2のペイア�
 #. %6 - High (or single) barrier
 #. %7 - Low barrier (when present)
 #: Translation for contract type description (PUTE - intraday)
-#, fuzzy
 #| msgid "%1 %2 payout if %3 is strictly lower than %6 at %5 after %4."
 msgid "%1 %2 payout if %3 is lower than or equal to %6 at %5 after %4."
-msgstr "%3が%4後の%5で正確に%6よりも低い場合、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%4後の%5の時点で%6よりも低いかまたは同じ場合、%1 %2のペイアウトをお受け取りいただけます。"
 
 #. %1 - Payout Currency (example USD)
 #. %2 - Payout value (example 100)
@@ -16784,10 +16792,10 @@ msgstr "%3が%4後の%5で正確に%6よりも低い場合、%1 %2のペイア�
 #. %6 - High (or single) barrier
 #. %7 - Low barrier (when present)
 #: Translation for contract type description (PUTE - tick)
-#, fuzzy
 #| msgid "%1 %2 payout if %3 after %plural(%5,%d tick,%d ticks) is strictly lower than %6."
 msgid "%1 %2 payout if %3 after %plural(%5,%d tick,%d ticks) is lower than or equal to %6."
-msgstr "%3が%plural(%5,%d tick,%d ticks)後に%6よりも正確に低い場合に、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr ""
+"%3が%plural(%5,%d tick,%d ticks)後に%6よりも低いかまたは同じ場合に、%1 %2のペイアウトをお受け取りいただけます。"
 
 #: Translation for contract type "RANGE"
 msgid "stays between"
