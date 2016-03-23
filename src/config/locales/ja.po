@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-23 10:13+0000\n"
-"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-03-23 14:10+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -1228,6 +1228,8 @@ msgstr "参考情報"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:411
 msgid "About OTC currency for binary options trading, summarizes the profit and loss result of all transactions that have been made between the customer, to publish the information in the company's home page, at any time while the customer is doing the transaction before the start, or the transaction, the information Make sure, for that you're willing to trade under the calm judgment, we are committed to a variety of environmental improvement."
 msgstr ""
+"店頭通貨バイナリーオプション取引に関して、お客様が取引を開始される前または取引の合間に冷静な判断の下取引を行っていただけるよう当社のホームページで情報公開"
+"するために全取引の損益結果をまとめ、様々な環境改善に努めています。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/about/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
@@ -4558,11 +4560,11 @@ msgstr "拒否された入金のフォローアップ"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:401
 msgid "For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an in-the-money option."
-msgstr ""
+msgstr "コールオプションにおいて原資産の価格がオプションの権利行使価格よりも高い場合、これをイン・ザ・マネーオプションという。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:402
 msgid "For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an out-of-the-money option."
-msgstr ""
+msgstr "コールオプションにおいて原資産の価格がオプションの権利行使価格よりも高い場合、これをアウト・オブ・ザ・マネーオプションという。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:373
 msgid "For a currency binary option which has the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes weaker is known as a dollar-put binary option"
@@ -4578,11 +4580,11 @@ msgstr "権利行使期限までの残り時間が短くなるほど、オプシ
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:405
 msgid "For a put option, if the underlying asset price is higher than the option exercise price, it is known as an in-the-money option."
-msgstr ""
+msgstr "プットオプションにおいて原資産の価格がオプションの権利行使価格よりも高い場合、これをイン・ザ・マネーオプションという。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:404
 msgid "For a put option, if the underlying asset price is lower than the option exercise price, it is known as an out-of-the-money option."
-msgstr ""
+msgstr "プットオプションにおいて原資産の価格がオプションの権利行使価格よりも低い場合に、これをアウト・オブ・ザ・マネーオプションという。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_request_withdrawws.html.tt:8
 msgid "For added security protection against unauthorised withdrawals, an email containing a secure link to the payment agent withdrawals page has been sent to your email <span id='client_email'></span>. Please check your email to access this link."
@@ -4599,11 +4601,11 @@ msgstr "インザマネーのオプションでは、原資産価格が権利行
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:412
 msgid "For an individual investor, all profits from OTC currency options trading are tax-free"
-msgstr ""
+msgstr "個人の投資家は店頭通貨オプション取引の全ての利益が非課税となる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:413
 msgid "For an individual investor, profits and losses from OTC currency options traing cannot be combined with profits and losses from margin FX and securities-related OTC options."
-msgstr ""
+msgstr "個人の投資家は店頭通貨オプション取引の損益をマージンFXや有価証券店頭オプションの損益と組み合わせることはできない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:440
 msgid "For an out-of-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
@@ -4611,7 +4613,7 @@ msgstr "アウトオブザマネーのオプションでは、原資産価格が
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:403
 msgid "For both call and put options, if the underlying asset price is the same as the exercise price, it is known as an at-the-money option."
-msgstr ""
+msgstr "コールオプションとプットオプション双方において、原資産価格が権利行使価格と同じ場合、これをアット・ザ・マネーという。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:44
 msgid "For contracts which expire at market close, we will use the official closing value of the market to settle your contract and update your results at settlement time."
@@ -4931,7 +4933,7 @@ msgstr "健全性"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:392
 msgid "Hedge you used for binary option is needed to be conducted as compensation part of loss of  the hedged asset because payout is fixed."
-msgstr ""
+msgstr "ペイアウトが固定されているため、バイナリーオプションに用いたヘッジはヘッジ対象資産の損失の補償の一部として実施される必要がある。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:375
 msgid "Hedging"
@@ -6629,11 +6631,11 @@ msgstr "敬具"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:219
 msgid "Kindly send us your documents for verification."
-msgstr ""
+msgstr "本人確認のため書類を当社までご送付ください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:2
 msgid "Knowledge Test"
-msgstr ""
+msgstr "知識テスト"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge and experience in the financial services industry"
@@ -6654,7 +6656,7 @@ msgstr "確率論・確率論的計算・数値解析法・モンテカルロシ
 #. ($next_dt->date . ' ' . $next_dt->time)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:151
 msgid "Knowledge test is unavailable now, you may take the test on %1"
-msgstr ""
+msgstr "知識テストは現在ご利用いただけません。前回%1日に受験されています。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:70
 msgid "LOG OUT"
@@ -7857,6 +7859,8 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:400
 msgid "Options may be either European or American style of exercise, and the one which can be exercised at only one expiry time is the European style option."
 msgstr ""
+"オプションにはヨーロピアンまたはアメリカンのいずれかの権利行使スタイルがあり、唯一判定時間にのみ権利を行使できるものがヨーロピアンスタイルオプションである"
+"。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_frequency.html.haml:1
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
@@ -8700,7 +8704,7 @@ msgstr "判定時刻に、原資産価格が権利行使価格よりも下落し
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:388
 msgid "Predicted the underlying asset price will raise than strike price at exit time and bought binary put options. "
-msgstr ""
+msgstr "判定時に原資産価格が権利行使価格よりも高くなると予測したので、バイナリープットオプションを購入した。 "
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:384
 msgid "Predicts that width of up-down of underlying asset is small and  in order to obtain the benefit also moving in either direction of rising and falling, granted together both of the call option that exercise price is higher than underlying asset and the put option that exercise price is lower than underlying asset price."
@@ -9515,22 +9519,22 @@ msgstr "秘密のご質問"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:24
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:7
 msgid "Section 1: Structure"
-msgstr ""
+msgstr "第一章：構成"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:10
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:27
 msgid "Section 2: Method"
-msgstr ""
+msgstr "第二章：メソッド"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:13
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:30
 msgid "Section 3: Outline"
-msgstr ""
+msgstr "第三章：概要"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:16
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:33
 msgid "Section 4: Risk"
-msgstr ""
+msgstr "第四章：リスク"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:19
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:36
@@ -9717,6 +9721,8 @@ msgstr "ショート"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:398
 msgid "Short positions of currency-related binary option is conducted transactions by depositing necessary margin requirement to trader in advance. If the margin shortage after the transaction established, it is necessary to deposit the additional margin to the trader"
 msgstr ""
+"通貨関連バイナリーオプションのショートポジションは、事前にトレーダーに必要なマージンを入金させることで取引が行われる。取引確立後にマージンが不足している場"
+"合、トレーダーは追加のマージンを入金する必要がある。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:397
 msgid "Short positions of currency-related binary options, unlike the short positions of the other currency-related option, will not be loss cut because it is not a financial instruments subjected to loss cut regulation."
@@ -12150,6 +12156,7 @@ msgstr "セッション最後の１時間以内では、この種類のトレー
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:395
 msgid "Trading period (expiration) of binary option is 2 hours and more. All of the transactions are established at the start of the trading period and the established position will be settled only by judge."
 msgstr ""
+"バイナリーオプションの取引期間（有効期限）は2時間以上である。全取引は取引期間が始まると確立され、確立されたポジションは判定によってのみ決定される。"
 
 #. ($localized_eod_blackout_start->as_string)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2486
