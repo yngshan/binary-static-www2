@@ -143,8 +143,8 @@ var Content = (function () {
             textPUTE: text.localize('{currency} {sum} payout if {symbol} is strictly lower or equal than Exercise price at close on {close}.'),
             textNOTOUCH: text.localize('{currency} {sum} payout if {symbol} does not touch Exercise price through close on {close}.'),
             textONETOUCH: text.localize('{currency} {sum} payout if {symbol} touches Exercise price through close on {close}.'),
-            textEXPIRYRANGE: text.localize('{currency} {sum} payout if {symbol} ends strictly between low and high values of Exercise price at close on {close}.'),
-            textEXPIRYMISS: text.localize('{currency} {sum} payout if {symbol} ends otside low and high values of Exercise price at close on {close}.'),
+            textEXPIRYRANGEE: text.localize('{currency} {sum} payout if {symbol} ends on or between (including) low and high values of Exercise price at close on {close}.'),
+            textEXPIRYMISSE: text.localize('{currency} {sum} payout if {symbol} ends on or otside (including) low and high values of Exercise price at close on {close}.'),
             textRANGE: text.localize('{currency} {sum} payout if {symbol} stays between low and high values of Exercise price through close on {close}.'),
             textUPORDOWN: text.localize('{currency} {sum} payout if {symbol} goes ouside of low and high values of Exercise price through close on {close}.'),            
         };

@@ -1,8 +1,10 @@
 var PricingTable = (function() {
 
-  var prev_prices = {};
-  var current_prices = {};
-  var multiplier = {};
+  var state = {
+    prev_prices: {},
+    prices: {},
+    multiplier: {},
+  };
 
   var ContractDescription = React.createClass({
     displayName: 'ContractDescription',
@@ -35,7 +37,7 @@ var PricingTable = (function() {
 
     render: function render() {
       var price = parseInt(this.props.price);
-      var inactive = price !== 1000 && price !== 0 ? '' : ' inactive';
+      var inactive = this.props.is_active && price !== 1000 && price !== 0 ? '' : ' inactive';
       return React.createElement(
         "div", {
           "className": "pricing_table_cell col row " +
@@ -58,7 +60,16 @@ var PricingTable = (function() {
           ),
           React.createElement(
             "div", { "className": "col multiplier2", "key": "multiplier2" },
-            React.createElement("input", { defaultValue: "1" })
+            React.createElement("input", {
+              defaultValue: "1",
+              onChange: handleMultiplierChange({
+                value: e.target.value,
+                barrier: this.props.barrier,
+                symbol: this.props.symbol,
+                category: this.props.category,
+                date_expiry: this.props.date_expiry,
+              })
+            })
           )
         ])
       );
@@ -71,10 +82,10 @@ var PricingTable = (function() {
 
     render: function render() {
       var types = Object.keys(this.props.values);
-      var buy1 = React.createElement(PricingTableCell, { multiplier: (multiplier ? multiplier : undefined), type: "buy", is_active: 0, price: 1000 });
-      var sell1 = React.createElement(PricingTableCell, { multiplier: (multiplier ? multiplier : undefined), type: "sell", is_active: 0, price: 0 });
-      var buy2 = React.createElement(PricingTableCell, { multiplier: (multiplier ? multiplier : undefined), type: "buy", is_active: 0, price: 1000 });
-      var sell2 = React.createElement(PricingTableCell, { multiplier: (multiplier ? multiplier : undefined), type: "sell", is_active: 0, price: 0 });
+      var buy1 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "buy", is_active: 0, price: 1000 });
+      var sell1 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 0, price: 0 });
+      var buy2 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "buy", is_active: 0, price: 1000 });
+      var sell2 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 0, price: 0 });
 
       for (var i = 0; i < types.length; i++) {
         var type = types[i];
@@ -89,23 +100,20 @@ var PricingTable = (function() {
         }
 
         if (position === 'top') {
-          buy1 = React.createElement(PricingTableCell, { multiplier: (multiplier ? multiplier : undefined), type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
-          sell1 = React.createElement(PricingTableCell, { multiplier: (multiplier ? multiplier : undefined), type: "sell", is_active: 1, price: 1000 - this.props.values[type], dyn: dyn });
+          buy1 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
+          sell1 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 0, price: 1000 - this.props.values[type], dyn: dyn });
         } else {
-          buy2 = React.createElement(PricingTableCell, { multiplier: (multiplier ? multiplier : undefined), type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
-          sell2 = React.createElement(PricingTableCell, { multiplier: (multiplier ? multiplier : undefined), type: "sell", is_active: 1, price: 1000 - this.props.values[type], dyn: dyn });
+          buy2 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
+          sell2 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 0, price: 1000 - this.props.values[type], dyn: dyn });
         }
       }
 
+      var barrier = this.props.barrier.replace(/_/, ' - ');
       return React.createElement(
         "div", { "className": "pricing_table_row row" },
-        // React.createElement(
-        //     "div", { "className": "col exercise_price" },
-        //     Content.localize().textExercisePrice
-        // ),
         React.createElement(
           "div", { "className": "col barrier" },
-          this.props.barrier
+          barrier
         ),
         buy1,
         sell1,
@@ -143,8 +151,11 @@ var PricingTable = (function() {
     if (form.contract_category && form.date_expiry && form.symbol) {
       $('#pricing_table').hide();
       $('#contract_description1').hide();
-      $('#contract_description2').hide();
-      prev_prices = {};
+      state.prev_prices = {};
+      state.prices = {};
+      state.category = form.contract_category;
+      state.date_expiry = form.date_expiry;
+      state.symbol = form.symbol;
       BinarySocket.send({
         pricing_table: 1,
         properties: form
@@ -152,77 +163,78 @@ var PricingTable = (function() {
     }
   }
 
-  function handleResponse(res) {
-    var echo_req = res.echo_req;
-    // if (_getStoredCategory() === echo_req.contract_category &&
-    //     sessionStorage.getItem('underlying') === echo_req.symbol &&
-    //     sessionStorage.getItem('expiry_date') === echo_req.expiry_date
-    // ) {
-
-
-    var formName = sessionStorage.getItem('formname');
-    var category = formName === 'higherlower' ? 'callput' : formName;
-    var contractTypes = Contract.contractType()[category];
-
-    var symbol = $('#underlying').val();
-    var close = $("#period option:selected").text();
-    close = close.replace(/\s+\(.+$/, '');
-
-    if (contractTypes) {
-
-      Object.keys(contractTypes).forEach(function(type) {
-        var contractName = contractTypes[type];
-        var longCode = {
-          mask: Content.localize()['text' + type],
-          values: {
-            currency: 'JPY',
-            sum: 1000,
-            symbol: symbol,
-            close: close,
-          },
-        };
-
-        var position = contractTypeDisplayMapping(type);
-        var positionIndex = position === 'top' ? 1 : 2;
-
-        ReactDOM.render(
-          React.createElement(ContractDescription, {
-            longCode: longCode,
-            type: type,
-            contractName: contractName,
-          }),
-          document.getElementById('contract_description' + positionIndex)
-        );
-        $('#contract_description' + positionIndex).css('display', 'flex');
-      });
+  function handleMultiplierChange(props) {
+    if (!state[props.symbol]) {
+      state[props.symbol] = {};
     }
-
-    ReactDOM.render(
-      React.createElement(PricingTable, {
-        prices: res.pricing_table.prices,
-        prev_prices: prev_prices,
-        multiplier: multiplier,
-      }),
-      document.getElementById('pricing_table')
-    );
-
-    $('#pricing_table').show();
-
-    prev_prices = res.pricing_table.prices;
-
-    // }
+    if (!state[props.symbol][props.category]) {
+      state[props.symbol][props.category] = {};
+    }
+    if (!state[props.symbol][props.category]) {
+      state[props.symbol][props.category] = {};
+    }
+    if (!state[props.symbol][props.category][props.date_expiry]) {
+      state[props.symbol][props.category][props.date_expiry] = {};
+    }
+    state[props.symbol][props.category][props.date_expiry][props.barrier] = props.value;
   }
 
-  function _getStoredCategory() {
-    var contract_category = sessionStorage.getItem('formname');
-    if (sessionStorage.getItem('formname') === 'risefall' || sessionStorage.getItem('formname') === 'higherlower') {
-      contract_category = 'callput';
+  function handleResponse(res) {
+    var echo_req = res.echo_req;
+
+    if (state.category === echo_req.properties.contract_category &&
+      state.date_expiry === echo_req.properties.date_expiry &&
+      state.symbol === echo_req.properties.symbol) {
+
+      state.prev_prices = state.prices;
+      state.prices = res.pricing_table.prices;
+
+      var contractTypes = Contract.contractType()[state.category];
+      var close = $("#period option:selected").text();
+      close = close.replace(/\s+\(.+$/, '');
+
+      if (contractTypes) {
+
+        Object.keys(contractTypes).forEach(function(type) {
+          var contractName = contractTypes[type];
+          var longCode = {
+            mask: Content.localize()['text' + type],
+            values: {
+              currency: 'JPY',
+              sum: 1000,
+              symbol: state.symbol,
+              close: close,
+            },
+          };
+
+          var position = contractTypeDisplayMapping(type);
+          var positionIndex = position === 'top' ? 1 : 2;
+
+          ReactDOM.render(
+            React.createElement(ContractDescription, {
+              longCode: longCode,
+              type: type,
+              contractName: contractName,
+            }),
+            document.getElementById('contract_description' + positionIndex)
+          );
+          $('#contract_description' + positionIndex).css('display', 'flex');
+        });
+      }
+
+      ReactDOM.render(
+        React.createElement(PricingTable, state),
+        document.getElementById('pricing_table')
+      );
+
+      $('#pricing_table').show();
     }
-    return contract_category;
+
   }
 
   return {
     sendRequest: sendRequest,
     handleResponse: handleResponse,
+    state: state,
   };
 })();

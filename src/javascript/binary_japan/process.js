@@ -1,6 +1,13 @@
 if (typeof is_japan === 'function') {
 
+  var processForgetTables = function() {
+    BinarySocket.send({
+      forget_all: 'pricing_table',
+    });
+  };
+
   var processPricingTableRequest = function() {
+    processForgetTables();
     var symbol = $('#underlying').val();
     var period = $('#period').val();
     var res = period.split('_');
