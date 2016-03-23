@@ -462,11 +462,11 @@ function limitLanguage(lang) {
 
 function checkClientsCountry() {
   var clients_country = localStorage.getItem('clients_country');
-  if (clients_country || page.language() === 'ID' || page.language() === 'JA') {
+  if (clients_country) {
     var str;
-    if (clients_country === 'jp' || page.language() === 'JA') {
+    if (clients_country === 'jp') {
       limitLanguage('JA');
-    } else if (clients_country === 'id' || page.language() === 'ID') {
+    } else if (clients_country === 'id') {
       limitLanguage('ID');
     }
   } else {
