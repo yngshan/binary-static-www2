@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-23 05:28+0000\n"
-"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-03-23 05:37+0000\n"
+"Last-Translator: Masanari Higashiyama <higashiyama@regentmarkets.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -979,6 +979,8 @@ msgstr "==フリーダイヤル=="
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:368
 msgid "A  Net Settlement type of option is one where the underlying asset does not include yen, but the option fee and settlement are paid in yen; it therefore requires some definition of how the settlement amounts will be calculated and converted to yen."
 msgstr ""
+"円以外の通貨ペアを原資産とする差金決済型の通貨オプションであって、オプション料や権利行使時の決済が円により行われるものは、対象とする通貨ペアによる決済額を"
+"算出し、円転のための計算をして金額を確定する仕組みとなっている。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "A Bachelor’s degree in Computer Science, or an equivalent combination of technical education, training and work experience"
@@ -991,14 +993,21 @@ msgstr "ビジネスまたは関連した分野の学士号をお持ちの方"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:369
 msgid "A Binary Option contains the right for the buyer to receive a certain fixed amount if the market price reaches the exercise price by the exercise time, but it does not contain any rights to sell or buy the underlying asset."
 msgstr ""
+"バイナリーオプションは、権利行使期日の原資産価格が権利行使価格に達した場合、あらかじめ定めた一定額のペイアウトを受け取ることのできる権利であり、対象となる"
+"原資産を売買する権利ではない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:372
 msgid "A Currency Binary Option is one where there is a target for a particular currency pair, so a strike price for the exchange rate is agreed, and a payout will be due if the judgment price meets the conditions of being over or under the target strike price, depending on the option type, by the exercise time."
 msgstr ""
+"通貨バイナリーオプションは、通貨ペアを対象とし、通貨ペアの交換レートを権利行使価格として、権利行使時点の両通貨のレートが権利行使価格を上回るか、下回るかに"
+"より、権利行使によるペイアウトの有無を判定し、決済するオプションである。たとえば、ドル円のコールバイナリーオプションは、ドルを基準とし、権利行使価格に対し"
+"て判定価格がドル高＝円安となればペイアウトとなり、判定価格がドル安＝円高となればペイアウトは発生しない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:366
 msgid "A Currency Option confers the right to sell one currency in exchange for another currency as the underlying asset. For example, the right to sell Yen and buy Dollars is known as a Yen Put / Dollar Call Option, or just Yen Put for short; and the opposite right to buy Yen and sell Dollar is called a Yen Call / Dollar Put Option, or just Yen Call for short."
 msgstr ""
+"通貨オプションとは、通貨を原資産とし、一方の通貨を売って、他方の通貨を買う権利である。たとえば円とドルをペアとする場合、円を売ってドルを買うものを、円プッ"
+"ト／ドルコールオプション、略してドルコールオプションと呼び、ドルを売って円を買うものを、円コール／ドルプットオプション、略してドルプットオプションと呼ぶ。"
 
 #. ($params->{website_name})
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:93
@@ -4528,11 +4537,11 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:373
 msgid "For a currency binary option which has the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes weaker is known as a dollar-put binary option"
-msgstr ""
+msgstr "通貨バイナリーオプションのうち、例えばドル円を原資産とし、円安になればペイアウトを受け取る権利は、ドル円のバイナリープットオプションと呼ぶ。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:374
 msgid "For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option"
-msgstr ""
+msgstr "通貨バイナリーオプションのうち、例えばドル円を原資産とし、円高になればペイアウトを受け取る権利は、ドル円のバイナリープットオプションと呼ぶ。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:444
 msgid "For a plain vanilla option, as the time to the exercise point shortens, the price of the option will decrease."
@@ -5339,6 +5348,8 @@ msgstr "もし特定の<strong>終了時間</strong>を選択した場合は、�
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:375
 msgid "If you sell a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option."
 msgstr ""
+"権利行使価格１ドル100円、ペイアウト1,000円のドル円のコールバイナリーオプションを500円で売付けし、判定価格が１ドル９９円となり権利行使が行われ、"
+"1,000円のペイアウトを支払った。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:380
 msgid "If you sell a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you need to payout 1,000 yen, then your profit will be minus 500 yen after subtracting the 500 yen that was received as a fee from the option buyer."
@@ -11371,6 +11382,9 @@ msgstr "取引を実行"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:371
 msgid "There are many types of Binary Option, including some such as Range Binary Options and Touch or No-Touch Binary Options which do not always require automatic payment at Exercise Time and which will be settled earlier if certain conditions have been met. However, in all cases, for a payment to be required, the option must end In The Money."
 msgstr ""
+"バイナリーオプションには、単にオプションの満期を権利行使時刻として定め、権利行使時刻にインザマネーの場合に限り自動的に権利行使が行われ、オプションの買い手"
+"にペイアウトが支払われる、一般的な内容のもののほか、レンジバイナリーオプションやワンタッチバイナリーオプション、ノータッチバイナリーオプションなどの複数の"
+"種類がある。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_list.html.tt:26
 msgid "There are no available Payment Agents."
@@ -11398,10 +11412,14 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:370
 msgid "There are some types of Binary Option, such as Range Binary Options, Touch or No-Touch Binary Options, that are exceptions to the general rule where payment is made at a known exercise time. For these types of option a payment is made automatically at Exit Time when certain conditions have been met."
 msgstr ""
+"バイナリーオプションには、オプションの満期を権利行使時刻として定め、権利行使時刻に自動的に権利行使が行われ、オプションの買い手にペイアウトが支払われる一般"
+"的なバイナリーオプションのほか、レンジバイナリーオプション、ワンタッチバイナリーオプション、ノータッチバイナリーオプションなどの複数の種類がある。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:367
 msgid "There are two types of option delivery: One requires exchanging the underlying asset, and the other requires a payment which depends on the difference between the fair market price and the exercise price. A Binary Option is the second type where if the fair market price meets certain conditions with respect to the exercise price, then an agreed fixed amount will be paid to the option buyer."
 msgstr ""
+"オプションには、権利行使によって、実際に原資産を受け渡すものと、原資産の時価と権利行使価格の差額を授受するものがある。このうち、原資産の時価と権利行使価格"
+"が一定の条件を満たした場合には一定の金銭を支払うものをバイナリーオプションと呼ぶ。"
 
 #. (underlying.translated_display_name, start_date.date)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/intraday_prices.html.tt:28
