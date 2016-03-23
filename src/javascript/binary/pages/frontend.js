@@ -453,16 +453,20 @@ function limitLanguage(lang) {
   }
   if (document.getElementById('language_select')) {
     $('#language_select').remove();
+    $('#gmt-clock').removeClass();
+    $('#gmt-clock').addClass('grd-grid-6 grd-grid-mobile-12');
+    $('#contact-us').removeClass();
+    $('#contact-us').addClass('grd-grid-6 grd-hide-mobile');
   }
 }
 
 function checkClientsCountry() {
   var clients_country = localStorage.getItem('clients_country');
-  if (clients_country) {
+  if (clients_country || page.language() === 'ID' || page.language() === 'JA') {
     var str;
-    if (clients_country === 'jp') {
+    if (clients_country === 'jp' || page.language() === 'JA') {
       limitLanguage('JA');
-    } else if (clients_country === 'id') {
+    } else if (clients_country === 'id' || page.language() === 'ID') {
       limitLanguage('ID');
     }
   } else {
