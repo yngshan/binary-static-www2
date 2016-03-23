@@ -41,6 +41,7 @@ var PaymentAgentWithdrawWS = (function() {
             return false;
         }
 
+        BinarySocket.send({verify_email:page.user.email, type:'paymentagent_withdraw'});
         var residence = $.cookie('residence');
         BinarySocket.send({"paymentagent_list": residence});
 
