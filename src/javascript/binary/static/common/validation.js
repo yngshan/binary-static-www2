@@ -66,14 +66,14 @@ var Validate = (function(){
     return false;
   }
 
-  //give error message for invalid verification code, needs DOM element of error and value of verification code
+  //give error message for invalid verification token, needs DOM element of error and value of verification token
   function errorMessageToken(token, error) {
     if (token === "") {
       error.textContent = Content.errorMessage('req');
       displayErrorMessage(error);
       return true;
     } else if (!validateToken(token)) {
-      error.textContent = Content.errorMessage('valid', text.localize('verification code'));
+      error.textContent = Content.errorMessage('valid', text.localize('verification token'));
       displayErrorMessage(error);
       return true;
     }
