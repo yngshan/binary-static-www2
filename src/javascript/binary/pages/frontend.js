@@ -475,6 +475,13 @@ function checkClientsCountry() {
   }
 }
 
+function isNotBackoffice() {
+  if (/backoffice/.test(window.location.pathname)) {
+    return false;
+  }
+  return true;
+}
+
 pjax_config_page('/$|/home', function() {
     return {
         onLoad: function() {
