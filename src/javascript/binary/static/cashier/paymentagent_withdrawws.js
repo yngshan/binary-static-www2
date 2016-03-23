@@ -90,7 +90,8 @@ var PaymentAgentWithdrawWS = (function() {
 
         var agent  = $(fieldIDs.ddlAgents).val(),
             amount = $(fieldIDs.txtAmount).val().trim(),
-            desc   = $(fieldIDs.txtDesc).val().trim();
+            desc   = $(fieldIDs.txtDesc).val().trim(),
+            token  = $(fieldIDs.verificationCode).val().trim();
 
         var letters = Content.localize().textLetters,
             numbers = Content.localize().textNumbers,
@@ -100,6 +101,13 @@ var PaymentAgentWithdrawWS = (function() {
 
         // Payment Agent
         isRequiredError(fieldIDs.ddlAgents);
+
+        // verification token
+        if(!isRequiredError(fieldIDs.verificationCode)){
+          if (token.length !== 48) {
+            showError(fieldIDs.verificationCode, Content.errorMessage('valid', text.localize('verification token')));
+          }
+        }
 
         // Amount
         if(!isRequiredError(fieldIDs.txtAmount)){
@@ -124,11 +132,12 @@ var PaymentAgentWithdrawWS = (function() {
 
         if(isValid) {
             return {
-                agent    : agent,
-                agentname: $(fieldIDs.ddlAgents + ' option:selected').text(),
-                currency : withdrawCurrency,
-                amount   : amount,
-                desc     : desc
+                agent             : agent,
+                agentname         : $(fieldIDs.ddlAgents + ' option:selected').text(),
+                currency          : withdrawCurrency,
+                amount            : amount,
+                desc              : desc,
+                verificationCode : token
             };
         }
         else {
@@ -167,7 +176,7 @@ var PaymentAgentWithdrawWS = (function() {
             "amount"                : formData.amount,
             "description"           : formData.desc,
             "dry_run"               : dry_run,
-            "verification_code"     : verificationCode
+            "verification_code"     : formData.verificationCode
         });
     };
 
