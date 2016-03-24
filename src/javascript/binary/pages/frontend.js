@@ -326,6 +326,38 @@ function handle_residence_state_ws(){
             page.client.residence = country;
             generateBirthDate();
             generateState();
+            if (/maltainvestws/.test(window.location.pathname)) {
+              var settings = response.get_settings;
+              var title = document.getElementById('title'),
+                  fname = document.getElementById('fname'),
+                  lname = document.getElementById('lname'),
+                  dobdd = document.getElementById('dobdd'),
+                  dobmm = document.getElementById('dobmm'),
+                  dobyy = document.getElementById('dobyy');
+              var inputs = document.getElementsByClassName('input-disabled');
+              if (settings.salutation) {
+                title.value = settings.salutation;
+                fname.value = settings.first_name;
+                lname.value = settings.last_name;
+                var day = moment.utc(settings.date_of_birth * 1000).format('DD');
+                dobdd.value = /^0/.test(day) ? day.replace('0','') : day;
+                dobmm.value = moment.utc(settings.date_of_birth * 1000).format('MM');
+                dobyy.value = moment.utc(settings.date_of_birth * 1000).format('YYYY');
+                for (i = 0; i < inputs.length; i++) {
+                    inputs[i].disabled = true;
+                }
+                document.getElementById('address1').value = settings.address_line_1;
+                document.getElementById('address2').value = settings.address_line_2;
+                document.getElementById('address-town').value = settings.address_city;
+                window.state = settings.address_state;
+                document.getElementById('address-postcode').value = settings.address_postcode;
+                document.getElementById('tel').value = settings.phone;
+              } else {
+                for (i = 0; i < inputs.length; i++) {
+                    inputs[i].disabled = false;
+                }
+              }
+            }
             return;
           } else if (document.getElementById('move-residence-here')) {
             var residenceForm = $('#residence-form');
@@ -360,7 +392,7 @@ function handle_residence_state_ws(){
         } else if (type === 'landing_company') {
           $.cookie('residence', page.client.residence, {domain: '.' + document.domain.split('.').slice(-2).join('.'), path: '/'});
           if (response.landing_company.hasOwnProperty('financial_company') && !response.landing_company.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'maltainvest') {
-            window.location.href = page.url.url_for('new_account/maltainvest');
+            window.location.href = page.url.url_for('new_account/maltainvestws');
             return;
           } else if (response.landing_company.hasOwnProperty('financial_company') && !response.landing_company.hasOwnProperty('gaming_company') && response.landing_company.financial_company.shortcode === 'japan') {
             window.location.href = page.url.url_for('new_account/japanws');
@@ -383,6 +415,9 @@ function handle_residence_state_ws(){
                 appendTextValueChild(select, states_list[i].text, states_list[i].value);
             }
             select.parentNode.parentNode.setAttribute('style', 'display:block');
+            if (window.state) {
+              select.value = window.state;
+            }
           }
           return;
         } else if (type === 'residence_list'){
@@ -397,7 +432,7 @@ function handle_residence_state_ws(){
               } else if (select) {
                 appendTextValueChild(select, residence_list[i].text, residence_list[i].value);
               }
-              if (phoneElement && residence_list[i].phone_idd && residenceValue === residence_list[i].value){
+              if (phoneElement && phoneElement.value === '' && residence_list[i].phone_idd && residenceValue === residence_list[i].value){
                 phoneElement.value = '+' + residence_list[i].phone_idd;
               }
             }
