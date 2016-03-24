@@ -512,8 +512,16 @@ function checkClientsCountry() {
   }
 }
 
+
+function change_blog_link(lang) {
+  var regex = new RegExp(lang);
+  if (!regex.test($('.blog a').attr('href'))) {
+    $('.blog a').attr('href', $('.blog a').attr('href') + '/' + lang + '/');
+  }
+}
+
 function isNotBackoffice() {
-  return /backoffice/.test(window.location.pathname);
+  return !/backoffice/.test(window.location.pathname);
 }
 
 pjax_config_page('/$|/home', function() {
