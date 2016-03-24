@@ -75,12 +75,7 @@
                   </div>
                 </div>
                 <div id="client-logged-out" class="grd-grid-3 grd-grid-mobile-9 grd-grid-phablet-10 grd-no-gutter-left by_client_type client_logged_out">
-                    <a class="button">
-                        <span class="button">[% l('Log in') %]</span>
-                    </a>
-                    <span id="login-links">
-                        <a class="pjaxload" id="lost-password" href="[% request.url_for('/user/lost_password') %]">[% l("Lost password?") %]</a>
-                    </span>
+                    <a id="btn_login" class="button" href="javascript:;">[% l('Log in') %]</a>
                 </div>
                 <div class='grd-grid-1 grd-hide grd-show-mobile grd-no-gutter-mobile grd-show-phablet'>
                     <div id='mobile-menu-icon-container'>

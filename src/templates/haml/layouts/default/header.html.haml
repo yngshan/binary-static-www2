@@ -1,6 +1,4 @@
 - stash (
--    emailholder => l('Email'),
--    pwdholder   => l('Password'),
 -    logintext   => l('Log in'),
 - );
 #header
@@ -22,13 +20,7 @@
             %div#balance
             %a.logout{:href => 'javascript:;'}= l('Log out')
       .grd-grid-3.grd-grid-mobile-9.grd-grid-phablet-10.grd-no-gutter-left.by_client_type.client_logged_out#client-logged-out
-        %form#login-form{:action => url_for('/login'), :method => 'post'}
-          %span#login-fields
-            %input{:name => 'email', :type => 'text', :placeholder => stash('emailholder')}
-            %input{:name => 'password', :type => 'password', :placeholder => stash('pwdholder')}
-            %input{:type => 'submit', :value => stash('logintext')}
-          %span#login-links
-            %a.pjaxload#lost-password{:href=>url_for('/user/lost_passwordws')}= l('Lost password?')
+        %a{:id => 'btn_login', :class => 'button', :href => 'javascript:;'}= stash('logintext')
       .grd-grid-1.grd-hide.grd-show-mobile.grd-no-gutter-mobile.grd-show-phablet
         #mobile-menu-icon-container
           %a{:href => '#mobile-menu', :id => 'mobile-menu-icon'}
