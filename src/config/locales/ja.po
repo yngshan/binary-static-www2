@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-23 14:10+0000\n"
-"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
+"PO-Revision-Date: 2016-03-24 01:39+0000\n"
+"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -1475,6 +1475,8 @@ msgstr "バイナリーオプションは損失が限定的であるが、投資
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:399
 msgid "Although each traders determined the limit amount to deal with the customer, even if customer's transaction amount, loss with a certain period and open interest a customer held exceeds the reference, the transaction with the customer will not be discontinued or cancelled."
 msgstr ""
+"各業者は顧客との取引に限度額を定めているが、顧客の一定期間の取引額や損失額、顧客が保有する建玉が基準を超えた場合であっても、顧客との取引を中断あるいは中止"
+"することはない。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:142
 msgid "Although the Company has and retains all rights to refuse or to close a Client’s account, the Company does warrant that all contractual obligations already made, shall be honoured."
@@ -4259,7 +4261,7 @@ msgstr "権利行使期間"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:406
 msgid "Exercise price is the price which buy and sell underlying asset by exercise the right and in case of binary option, it is basic price to judge the presence (exist) of payout."
 msgstr ""
-"権利行使価格とは権利を行使することで原資産を売り買いする価格のことをいい、バイナリーオプションにおいてはペイアウトの有無を判定する基準値段です。"
+"権利行使価格とは、権利行使により原資産を購入または売却する価格であり、バイナリーオプションの場合には、ペイアウトの発生の有無を判断する基準価格である。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:547
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:19
@@ -4272,7 +4274,7 @@ msgstr "終値"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:407
 msgid "Exit price is the underlying asset price at exercise time and it's the price to judge the presence (exist) of payout by comparing with exercise price."
-msgstr "判定価格とは権利行使時間の原資産の価格のことをいます。権利行使価格と比較することでぺイアウトの有無を判定する価格です。"
+msgstr "判定価格とは、権利行使時点の原資産価格であり、権利行使価格と比較し、ペイアウトの有無を判断するための価格をいう。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/endsinout.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/higherlower.html.tt:1
@@ -4560,11 +4562,11 @@ msgstr "拒否された入金のフォローアップ"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:401
 msgid "For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an in-the-money option."
-msgstr "コールオプションにおいて原資産の価格がオプションの権利行使価格よりも高い場合、これをイン・ザ・マネーオプションという。"
+msgstr "コールオプションにおいて、原資産の価格が権利行使価格を上回っている状態をインザマネーという。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:402
 msgid "For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an out-of-the-money option."
-msgstr "コールオプションにおいて原資産の価格がオプションの権利行使価格よりも高い場合、これをアウト・オブ・ザ・マネーオプションという。"
+msgstr "コールオプションにおいて、原資産の価格が権利行使価格を上回っている状態をアウトオブザマネーという。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:373
 msgid "For a currency binary option which has the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes weaker is known as a dollar-put binary option"
@@ -5563,6 +5565,9 @@ msgstr "詳細説明欄ではエージェントの決済方法、振込先の口
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:409
 msgid "In the OTC currency binary options trading, if the exchange rate during the trading period move to one direction more than expected, that there is no exercise price which can continue appropriate trading around at-the-money, there is possible to add the exercise price on the way. However, even if the exercise price has been added, do the exercise price will continue trading using up to it, also the transaction price will not be affected by the additional impact of the exercise price."
 msgstr ""
+"店頭通貨バイナリーオプション取引では、取引期間中の為替レートが一方向に想定以上に動き、アットザマネー周辺で適切な取引が継続できる権利行使価格が無くなった場"
+"合には、途中で権利行使価格を追加することがある。ただし、権利行使価格が追加された場合であっても、それまで利用した権利行使価格は引き続き取引を行い、またその"
+"取引価格が、権利行使価格の追加の影響を受けることはない。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/about/index.html.haml:1
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A."
@@ -7858,9 +7863,7 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:400
 msgid "Options may be either European or American style of exercise, and the one which can be exercised at only one expiry time is the European style option."
-msgstr ""
-"オプションにはヨーロピアンまたはアメリカンのいずれかの権利行使スタイルがあり、唯一判定時間にのみ権利を行使できるものがヨーロピアンスタイルオプションである"
-"。"
+msgstr "オプション取引にはヨ－ロピアンタイプとアメリカンタイプがあり、権利行使期間の満期時だけに権利行使できるものをヨーロピアンタイプという。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_frequency.html.haml:1
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
@@ -9721,12 +9724,14 @@ msgstr "ショート"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:398
 msgid "Short positions of currency-related binary option is conducted transactions by depositing necessary margin requirement to trader in advance. If the margin shortage after the transaction established, it is necessary to deposit the additional margin to the trader"
 msgstr ""
-"通貨関連バイナリーオプションのショートポジションは、事前にトレーダーに必要なマージンを入金させることで取引が行われる。取引確立後にマージンが不足している場"
-"合、トレーダーは追加のマージンを入金する必要がある。"
+"通貨関連バイナリーオプションのショートポジションは、あらかじめ必要証拠金を業者に預託して取引を行い、取引成立後に証拠金が不足した場合には追加証拠金を業者に"
+"預託する必要がある。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:397
 msgid "Short positions of currency-related binary options, unlike the short positions of the other currency-related option, will not be loss cut because it is not a financial instruments subjected to loss cut regulation."
 msgstr ""
+"通貨関連バイナリーオプションのショートポジションは、他の通貨関連オプションのショートポジションとは異なり、ロスカット規制の対象となる金融商品ではないため、"
+"ロスカットされることはない。"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:675
 msgid "Short summary of your Payment Agent service"
@@ -11138,6 +11143,8 @@ msgstr "エントリースポット価格とは、購入トレードの開始価
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:410
 msgid "The exit price is important in binary options. In case of handling the OTC currency-related binary options trading for personal, company inspects if mistakes and intentional operation has not been performed inspection for exit price the company determined and also checking whether there is an error in the data in case that the company use the rate data provided by third company."
 msgstr ""
+"バイナリーオプション取引では、判定価格が重要である。個人向け店頭通貨関連バイナリーオプション取引を取り扱う場合には、自社が決定する判定価格について、ミスや"
+"作為的な操作が行われていないか自ら点検するほか、第三者の提供するレートデータを用いる場合でも、データに誤りがないか点検している。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "The expiry price is the price of the underlying when the contract expires."
@@ -11263,6 +11270,8 @@ msgstr "払い戻し金額とは、トレードに勝った際に支払われる
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:408
 msgid "The payout is the amount that seller of the option paid to the buyer as a result of exercising the right, when the predetermined exercise conditions meet and the amount paid like that called payout amount."
 msgstr ""
+"ペイアウトとは、バイナリーオプションにおいて、あらかじめ定められた権利行使条件を満たし、権利行使が行われた結果、オプションの売り手が買い手にあらかじめ定め"
+"た金銭を支払うことをいい、支払われる額をペイアウト額という。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:6
 msgid "The personal information that we obtain about you assists us in servicing your account. We know you may be concerned about what we do with this information, and with financial information about your account. The following outlines our privacy practices."
@@ -12451,10 +12460,16 @@ msgstr "当ウェブサイトを使用して、お客様は最も柔軟な価格
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:394
 msgid "Using two options, if get  binary call option which exercise price is higher and binary put option which exercise price is lower, its possible to obtain profit in case that exit price is out side of the price range made by exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is out side of the predetermined price."
 msgstr ""
+"２つのオプションを用い、権利行使価格の高いバイナリーコールオプションと権利行使価格の低いバイナリープットオプションを取得すれば、判定価格が２つのオプション"
+"の権利行使価格で作られた価格帯の外となった場合に収益が得られ、判定価格が所定の価格帯の外であった場合にペイアウトとなるレンジバイナリーオプションに似た投資"
+"を行うことができる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:393
 msgid "Using two options, if obtain  binary put option which exercise price is higher and binary call option which exercise price is lower, its possible to obtain profit in case that exit price is between the exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is in side of the predetermined price."
 msgstr ""
+"２つのオプションを用い、権利行使価格の高いバイナリープットオプションと権利行使価格の低いバイナリーコールオプションを取得すれば、判定価格が２つのオプション"
+"の権利行使価格の間となった場合に収益が得られ、判定価格が所定の価格帯の中であった場合にペイアウトとなるレンジバイナリーオプションに似た投資を行うことができ"
+"る。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_application.html.tt:34
 msgid "Utility bill (within last 3 months)"
