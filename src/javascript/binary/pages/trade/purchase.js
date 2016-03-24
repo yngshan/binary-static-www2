@@ -115,7 +115,7 @@ var Purchase = (function () {
 
             var tick_spots = Tick.spots();
             var last_quote = tick_spots[Object.keys(tick_spots)[0]];
-            var decimal_points = last_quote.toString().split(',')[1].length;
+            var decimal_points = last_quote.toString().split('.')[1].length;
 
             WSTickDisplay.initialize({
                 symbol:passthrough.symbol,
