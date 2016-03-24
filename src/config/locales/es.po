@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-09 14:40+0000\n"
+"PO-Revision-Date: 2016-03-24 20:43+0000\n"
 "Last-Translator: olga borg <olga@binary.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/binary/static/es/>\n"
+"Language-Team: Spanish "
+"<https://hosted.weblate.org/projects/binary/static/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.5-dev\n"
+"X-Generator: Weblate 2.6-dev\n"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:391
 msgid " At buying call option, break-even point is the price added option fee of a unit of the underlying asset to exercise price."
@@ -1369,7 +1370,7 @@ msgstr "Límite ajustado 2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:36
 msgid "Admin"
-msgstr ""
+msgstr "Administrador"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Administering the company’s semi-annual performance appraisal process"
@@ -1847,10 +1848,9 @@ msgid "Authentication of your account is not required at this time.  We will not
 msgstr "La autenticación de su cuenta no es necesaria en este momento. Le notificaremos por correo electrónico si se requiere autenticación."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:224
-#, fuzzy
 #| msgid "to your account."
 msgid "Authorise your account."
-msgstr "a su cuenta."
+msgstr "Autorice su cuenta."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:3
 msgid "Available payment methods"
@@ -2323,10 +2323,9 @@ msgid "Browse"
 msgstr "Examinar"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:491
-#, fuzzy
 #| msgid "Browse"
 msgid "Browser"
-msgstr "Examinar"
+msgstr "Navegador"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:560
 msgid "Building Number"
@@ -2381,18 +2380,27 @@ msgstr "¿Puedo ofrecer a mis referencias un incentivo para que se registren a t
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:32
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr ""
+"Se puede utilizar para comprar y vender contratos, renovar compras caducadas "
+"y recargar las cuentas de dinero virtual."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:34
 msgid "Can be used to open accounts, set settings, manage token usage, and more."
 msgstr ""
+"Se puede utilizar para abrir cuentas, configurar ajustes, administrar el uso "
+"de token y mucho más."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:30
 msgid "Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more."
 msgstr ""
+"Se puede utilizar para ver la actividad de la cuenta, incluyendo la "
+"configuración, límites, balances, historial de compras del contratos, y "
+"mucho más."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:36
 msgid "Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords."
 msgstr ""
+"Se puede utilizar para retirar fondos a los agentes de pago, transferir "
+"fondos entre cuentas y establecer / cancelar contraseñas del cajero."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:88
 msgid "Can you customize a banner for my site?"
@@ -2616,6 +2624,8 @@ msgstr "Seleccione el pago"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:7
 msgid "Choose the specific type of API token that you need, based on the capabilities that you wish to make available."
 msgstr ""
+"Elija el tipo específico de token de la API que necesita, basándose en las "
+"capacidades que desea hacer disponibles."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
 msgid "Choose the underlying market"
@@ -3288,10 +3298,9 @@ msgid "Date"
 msgstr "Fecha"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:490
-#, fuzzy
 #| msgid "End Time"
 msgid "Date and Time"
-msgstr "Hora de finalización"
+msgstr "Fecha y Hora"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1600
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:360
@@ -4326,10 +4335,9 @@ msgid "Facility that allows you to set limits on your account."
 msgstr "Un ajuste que le permite establecer límites en su cuenta."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:495
-#, fuzzy
 #| msgid "Login Failed"
 msgid "Failed"
-msgstr "Error de inicio de sesión"
+msgstr "Fallado"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:58
 msgid "Failed to update trade description."
@@ -5231,10 +5239,12 @@ msgid "If you select \"Ends Outside\", you win the payout if the <strong>exit sp
 msgstr "Si selecciona \"Finaliza fuera\", ganará el pago si el <strong>precio de salida</strong> es O BIEN estrictamente superior a la <strong>barrera superior</strong> O estrictamente inferior a la <strong>barrera inferior</strong>."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/evenodd.html.tt:2
-#, fuzzy
 #| msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
-msgstr "Si selecciona \"Coincide\", ganará el pago si el <strong>último dígito</strong> del último intervalo <strong>coincide</strong> con su <strong>predicción.</strong>"
+msgstr ""
+"Si selecciona \"Par\", ganará el pago si el <strong>último dígito</strong> "
+"del último intervalo es un número <strong>par (por ejemplo: 2, 4, 6, 8 o "
+"0).</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/risefall.html.tt:5
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/ticks.html.tt:5
@@ -5258,16 +5268,19 @@ msgid "If you select \"Matches\", you will win the payout if the <strong>last di
 msgstr "Si selecciona \"Coincide\", ganará el pago si el <strong>último dígito</strong> del último intervalo <strong>coincide</strong> con su <strong>predicción.</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/evenodd.html.tt:5
-#, fuzzy
 #| msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
-msgstr "Si selecciona \"Coincide\", ganará el pago si el <strong>último dígito</strong> del último intervalo <strong>coincide</strong> con su <strong>predicción.</strong>"
+msgstr ""
+"Si selecciona \"Impar\", ganará el pago si el <strong>último dígito</strong> "
+"del último intervalo es un <strong>número impar (por ejemplo: 1, 3, 5, 7 o "
+"9).</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/overunder.html.tt:2
-#, fuzzy
 #| msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
-msgstr "Si selecciona \"Coincide\", ganará el pago si el <strong>último dígito</strong> del último intervalo <strong>coincide</strong> con su <strong>predicción.</strong>"
+msgstr ""
+"Si selecciona \"Sobre\", ganará el pago si el <strong>último dígito</strong> "
+"del último intervalo es <strong>mayor a su predicción.</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/risefall.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/ticks.html.tt:2
@@ -5283,10 +5296,11 @@ msgid "If you select \"Touches\", you win the payout if the market touches the <
 msgstr "Si selecciona \"Toca\", gana el pago si el mercado toca la <strong>barrera</strong> especificada en cualquier momento durante el <strong>plazo del contrato</strong>."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/overunder.html.tt:5
-#, fuzzy
 #| msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgid "If you select \"Under\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>less than your prediction.</strong>"
-msgstr "Si selecciona \"Coincide\", ganará el pago si el <strong>último dígito</strong> del último intervalo <strong>coincide</strong> con su <strong>predicción.</strong>"
+msgstr ""
+"Si selecciona \"Debajo\", ganará el pago si el <strong>último dígito</strong>"
+" del último intervalo es <strong>menora su predicción.</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/runbet-updown.html.tt:5
 msgid "If you select \"falls\", you win the payout if the market price is lower than the <strong>entry spot</strong>."
@@ -5451,10 +5465,11 @@ msgid "In order for you to place contracts, we need to know your Residence (Coun
 msgstr "Aviso importante: Para que usted pueda colocar contratos, necesitamos saber su domicilio (país). Actualice su configuración."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:4
-#, fuzzy
 #| msgid "To provide access to your account to a third-party application, you may use the following API token:"
 msgid "In order to access our mobile apps and other third-party applications, you'll first need to generate an API Token."
-msgstr "Para facilitar el acceso a su cuenta para una aplicación de terceros, puede utilizar el siguiente token de API:"
+msgstr ""
+"Con acceder a nuestras aplicaciones móviles y otras aplicaciones de "
+"terceros, primero debe generar un token de la API:"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/authenticate_to_withdraw.html.tt:2
 msgid "In order to complete your withdrawal, you must authenticate your account. Once you have done so, please proceed to the Cashier and try withdrawing again."
@@ -6795,10 +6810,9 @@ msgstr "Error de inicio de sesión"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:497
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:882
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:97
-#, fuzzy
 #| msgid "Group History"
 msgid "Login History"
-msgstr "Historia corporativa"
+msgstr "Historial de accesos"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check.html.haml:1
 msgid "Login ID"
@@ -7161,7 +7175,7 @@ msgstr "Mínimo de %1 caracteres requeridos."
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:34
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:27
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Un mínimo de seis letras minúsculas y mayúsculas con los números"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:294
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:35
@@ -8030,12 +8044,13 @@ msgstr "La fuerza de la contraseña es: %1. El puntaje para aprobar es: 20."
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:175
 msgid "Password should be at least six characters, including lower and uppercase letters with numbers."
 msgstr ""
+"La contraseña debe tener al menos seis caracteres, incluyendo letras "
+"minúsculas y mayúsculas con números."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:278
-#, fuzzy
 #| msgid "Password should have letters and numbers."
 msgid "Password should have lower and uppercase letters with numbers."
-msgstr "La contraseña debe tener letras y números."
+msgstr "La contraseña debe tener letras minúsculas y mayúsculas con números."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:131
@@ -8235,10 +8250,9 @@ msgid "Please enter a number between 0 and %1."
 msgstr "Por favor, ingrese un valor entre 0 y %1."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:500
-#, fuzzy
 #| msgid "Please enter a number greater than 0"
 msgid "Please enter a number greater or equal to %1."
-msgstr "Por favor ingrese un valor mayor a 0"
+msgstr "Por favor ingrese un valor mayor o igual a %1."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_frequency.html.haml:1
@@ -9006,10 +9020,9 @@ msgid "Re-enter your password"
 msgstr "Vuelva a teclear su contraseña"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:30
-#, fuzzy
 #| msgid "Read More"
 msgid "Read"
-msgstr "Leer más"
+msgstr "Leer"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
@@ -9691,6 +9704,8 @@ msgstr "Simplemente cambie alguno de sus parámetros y el precio del contrato ca
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:6
 msgid "Simply click on \"Create\" to generate your token; then copy and paste it into the app."
 msgstr ""
+"Simplemente haga clic en \"Crear\" para generar el token; a continuación, "
+"cópielo y péguelo en la aplicación."
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
@@ -9871,10 +9886,11 @@ msgstr "Lo sentimos, la moneda de agente de pago %2 no está disponible para ret
 
 #. ($currency, $limit)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:880
-#, fuzzy
 #| msgid "Sorry, the aggregate payouts of contracts on your account cannot exceed %2%1."
 msgid "Sorry, the aggregate payouts of contracts on your account cannot exceed %1%2."
-msgstr "Lo sentimos, los pagos totales de contratos en su cuenta no pueden exceder %2%1."
+msgstr ""
+"Lo sentimos, los pagos totales de contratos en su cuenta no pueden exceder "
+"%1%2."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:238
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:908
@@ -10298,10 +10314,9 @@ msgid "Substantial experience in a senior marketing or advertising role"
 msgstr "Una experiencia importante en marketing o publicidad en cargo de responsabilidad"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:494
-#, fuzzy
 #| msgid "Update successful"
 msgid "Successful"
-msgstr "Actualización aceptada"
+msgstr "Exitoso"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/copyright.html.tt:12
 msgid "Such materials may be copied and distributed on a limited basis for noncommercial purposes only, provided that any material copied remains intact and that all copies include the following notice in a clearly visible position: &ldquo;Copyright 1999-<span class='currentYear'></span> Binary Ltd. All rights reserved.&rdquo;"
@@ -10493,6 +10508,8 @@ msgstr "Gracias. Se envió su solicitud y nuestro equipo la examinará cuanto an
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:270
 msgid "Thanks for signing up! Check your inbox now, to verify your email."
 msgstr ""
+"¡Gracias por registrarse! Compruebe su bandeja de entrada ahora para "
+"verificar su correo electrónico."
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
@@ -12353,10 +12370,9 @@ msgid "View your historical transactions."
 msgstr "Vea su historial de transacciones."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:99
-#, fuzzy
 #| msgid "View your open positions."
 msgid "View your login history."
-msgstr "Vea sus posiciones abiertas."
+msgstr "Vea su historial de accesos."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:60
 msgid "View your open positions."
@@ -13515,10 +13531,9 @@ msgid "Your account has exceeded the trading limit with free promo code, please 
 msgstr "Su cuenta ha excedido el límite de inversiones con el código promocional gratuito, por favor realice un depósito si desea continuar invirtiendo."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:496
-#, fuzzy
 #| msgid "Your account has no trading activity."
 msgid "Your account has no Login/Logout activity."
-msgstr "Su cuenta no tiene actividad comercial."
+msgstr "Su cuenta no tiene actividad de accesos/cierres de sesión."
 
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:208
 msgid "Your account has no country of residence."
@@ -14894,10 +14909,9 @@ msgid "International Consolidated Airlines Group SA"
 msgstr "International Consolidated Airlines Group SA"
 
 #: Underlying Symbol DEDUE
-#, fuzzy
 #| msgid "Drr AG"
 msgid "Drr AG"
-msgstr "Durr AG"
+msgstr "Drr AG"
 
 #: Underlying Symbol INHDFC
 msgid "HDFC Bank Ltd"
