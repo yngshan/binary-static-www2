@@ -33,13 +33,9 @@ var Applications = (function(){
         }
     }
     
-    function getNextBatch(){
-        ApplicationsData.getApplications();
-    }
-    
     function initPage(){
         showLoadingImage($('<div/>', {id: 'loading'}).insertAfter('#applications-title'));
-        getNextBatch();
+        ApplicationsData.getApplications();
     }
     
     function initTable(){
@@ -47,13 +43,9 @@ var Applications = (function(){
         ApplicationsUI.clearTableContent();
     }
 
-    function cleanPageState(){
-        initTable();
-    }
-
     return {
         init: initPage,
         responseHandler: responseHandler,
-        clean: cleanPageState
+        clean: initTable
     };
 }());
