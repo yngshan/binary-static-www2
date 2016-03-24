@@ -441,6 +441,54 @@ function Trim(str){
   return str;
 }
 
+function changeLanguage(lang) {
+  str = window.location.search;
+  str = page.url.replaceQueryParam('l', lang, str);
+  window.location = window.location.pathname + str;
+}
+
+function limitLanguage(lang) {
+  if (page.language() !== lang) {
+    changeLanguage(lang);
+  }
+  if (document.getElementById('language_select')) {
+    $('#language_select').remove();
+    $('#gmt-clock').removeClass();
+    $('#gmt-clock').addClass('grd-grid-6 grd-grid-mobile-12');
+    $('#contact-us').removeClass();
+    $('#contact-us').addClass('grd-grid-6 grd-hide-mobile');
+  }
+}
+
+function checkClientsCountry() {
+  var clients_country = localStorage.getItem('clients_country');
+  if (clients_country) {
+    var str;
+    if (clients_country === 'jp') {
+      limitLanguage('JA');
+    } else if (clients_country === 'id') {
+      limitLanguage('ID');
+    } else {
+      $('#language_select').show();
+    }
+  } else {
+    BinarySocket.init();
+    BinarySocket.send({"website_status" : "1"});
+  }
+}
+
+
+function change_blog_link(lang) {
+  var regex = new RegExp(lang);
+  if (!regex.test($('.blog a').attr('href'))) {
+    $('.blog a').attr('href', $('.blog a').attr('href') + '/' + lang + '/');
+  }
+}
+
+function isNotBackoffice() {
+  return !/backoffice/.test(window.location.pathname);
+}
+
 pjax_config_page('/$|/home', function() {
     return {
         onLoad: function() {

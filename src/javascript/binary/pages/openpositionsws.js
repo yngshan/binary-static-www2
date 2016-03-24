@@ -96,7 +96,7 @@ var PortfolioWS =  (function() {
 
         var status_class = '';
         var no_resale_html = '';
-        if(proposal.is_expired == 1 || proposal.is_sold == 1) {
+        if(proposal.is_sold == 1) {
             $td.parent('tr').remove();
             if($('#portfolio-dynamic tr').length === 0) {
                 BinarySocket.send({"portfolio":1});
