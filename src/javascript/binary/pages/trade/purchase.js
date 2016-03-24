@@ -120,6 +120,7 @@ var Purchase = (function () {
                 display_symbol:Symbols.getName(passthrough.symbol),
                 contract_start:receipt['start_time'],
                 decimal:3,
+                display_decimals: 4,
                 contract_sentiment:contract_sentiment,
                 price:passthrough['ask-price'],
                 payout:receipt['payout'],
