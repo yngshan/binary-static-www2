@@ -112,6 +112,11 @@ var Purchase = (function () {
             else{
                 contract_sentiment = 'down';
             }
+
+            var spots = Tick.spots();
+            var lastQuote = spots[Object.keys(spots)[0]];
+            var decimal_points = lastQuote.toString().split(',')[1].length;
+
             WSTickDisplay.initialize({
                 symbol:passthrough.symbol,
                 number_of_ticks:passthrough.duration,
@@ -119,8 +124,7 @@ var Purchase = (function () {
                 contract_category:sessionStorage.getItem('formname')==='asian' ? 'asian' : 'callput',
                 display_symbol:Symbols.getName(passthrough.symbol),
                 contract_start:receipt['start_time'],
-                decimal:3,
-                display_decimals: 4,
+                display_decimals: decimal_points || 2,
                 contract_sentiment:contract_sentiment,
                 price:passthrough['ask-price'],
                 payout:receipt['payout'],
