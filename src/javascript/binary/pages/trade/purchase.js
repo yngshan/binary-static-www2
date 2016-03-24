@@ -115,10 +115,11 @@ var Purchase = (function () {
 
             //calculate number of decimals needed to display tick-chart according to the spot
             //value of the underlying
-            var tick_spots = Tick.spots();
             var decimal_points = 2;
-            if ( tick_spots.length > 0 ) {
-                var last_quote = tick_spots[Object.keys(tick_spots)[0]].toString();
+            var tick_spots = Tick.spots();
+            var tick_spot_epochs = Object.keys(tick_spots);
+            if ( tick_spot_epochs.length > 0 ) {
+                var last_quote = tick_spots[tick_spot_epochs[0]].toString();
                 
                 if ( last_quote.indexOf(".") != -1 ) {
                     decimal_points = last_quote.split('.')[1].length;
