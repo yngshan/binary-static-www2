@@ -113,9 +113,9 @@ var Purchase = (function () {
                 contract_sentiment = 'down';
             }
 
-            var spots = Tick.spots();
-            var lastQuote = spots[Object.keys(spots)[0]];
-            var decimal_points = lastQuote.toString().split(',')[1].length;
+            var tick_spots = Tick.spots();
+            var last_quote = tick_spots[Object.keys(tick_spots)[0]];
+            var decimal_points = last_quote.toString().split(',')[1].length;
 
             WSTickDisplay.initialize({
                 symbol:passthrough.symbol,
