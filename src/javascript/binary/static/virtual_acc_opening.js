@@ -58,9 +58,9 @@ pjax_config_page("new_account/virtualws", function(){
                   } else if (type === 'error' || error) {
                     if (error.code === 'InvalidToken') {
                       virtualForm.empty();
-                      var errorText = '',
-                          noticeText = '<p>' + text.localize('Your token has been invalidated. Please click <a class="pjaxload" href="[_1]">here</a> to restart the verification process.').replace('[_1]', page.url.url_for('')) + '</p>';
-                      virtualForm.html(errorText + noticeText);
+                      $('.notice-message').remove();
+                      var noticeText = '<p>' + Content.localize().textClickHereToRestart.replace('[_1]', page.url.url_for('')) + '</p>';
+                      virtualForm.html(noticeText);
                       return;
                     } else if (error.code === 'PasswordError') {
                       errorAccount.textContent = text.localize('Password is not strong enough.');
