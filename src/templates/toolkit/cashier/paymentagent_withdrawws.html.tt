@@ -36,7 +36,7 @@
                           <label for="verification-code">[% l('Verification Token') %]</label>
                       </div>
                       <div class="grd-grid-8">
-                          <input type="text" id="verification-code" maxlength="48"></input>
+                          <input type="text" id="verification-code" maxlength="48" autocomplete="off"></input>
                           <div class="hint">[% l('Please check your email for the value of this token') %]</div>
                       </div>
                   </div>

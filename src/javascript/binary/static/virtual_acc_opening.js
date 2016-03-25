@@ -11,8 +11,7 @@ pjax_config_page("new_account/virtualws", function(){
       handle_residence_state_ws();
       BinarySocket.send({residence_list:1});
       var form = document.getElementById('virtual-form');
-      var errorEmail = document.getElementById('error-email'),
-          errorPassword = document.getElementById('error-password'),
+      var errorPassword = document.getElementById('error-password'),
           errorRPassword = document.getElementById('error-r-password'),
           errorResidence = document.getElementById('error-residence'),
           errorAccount = document.getElementById('error-account-opening'),
@@ -30,18 +29,16 @@ pjax_config_page("new_account/virtualws", function(){
         virtualForm.submit( function(evt) {
           evt.preventDefault();
 
-          var email            = document.getElementById('email').value,
-              verificationCode = document.getElementById('verification-code').value,
+          var verificationCode = document.getElementById('verification-code').value,
               residence        = document.getElementById('residence').value,
               password         = document.getElementById('password').value,
               rPassword        = document.getElementById('r-password').value;
 
           Validate.errorMessageResidence(residence, errorResidence);
-          Validate.errorMessageEmail(email, errorEmail);
           Validate.errorMessageToken(verificationCode, errorVerificationCode);
           Validate.hideErrorMessage(errorAccount);
 
-          if (Validate.errorMessagePassword(password, rPassword, errorPassword, errorRPassword) && !Validate.errorMessageEmail(email, errorEmail) && !Validate.errorMessageResidence(residence, errorResidence)){
+          if (Validate.errorMessagePassword(password, rPassword, errorPassword, errorRPassword) && !Validate.errorMessageResidence(residence, errorResidence)){
             BinarySocket.init({
               onmessage: function(msg){
                 var response = JSON.parse(msg.data);
@@ -53,43 +50,29 @@ pjax_config_page("new_account/virtualws", function(){
                     // set a flag to push to gtm in my_account
                     localStorage.setItem('new_account', '1');
 
+                    document.getElementById('email').value = response.new_account_virtual.email;
                     form.setAttribute('action', '/login');
                     form.setAttribute('method', 'POST');
                     virtualForm.unbind('submit');
                     form.submit();
                   } else if (type === 'error' || error) {
-                    if (error.code === 'InvalidAccount') {
-                      errorAccount.textContent = error.message;
-                      Validate.displayErrorMessage(errorAccount);
-                      return;
-                    } else if (error.code === 'InsufficientAccountDetails') {
-                      errorAccount.textContent = error.message;
-                      Validate.displayErrorMessage(errorAccount);
-                      return;
-                    } else if (error.code === 'duplicate email') {
-                      errorEmail.textContent = Content.localize().textDuplicatedEmail;
-                    } else if (error.code === 'InvalidToken' || error.code === 'InvalidEmail') {
+                    if (error.code === 'InvalidToken') {
                       virtualForm.empty();
                       var errorText = '',
                           noticeText = '<p>' + text.localize('Your token has been invalidated. Please click <a class="pjaxload" href="[_1]">here</a> to restart the verification process.').replace('[_1]', page.url.url_for('')) + '</p>';
-                      if (error.code === 'InvalidEmail') {
-                          errorText = '<p class="errorfield">' + text.localize('The re-entered email address is incorrect.') + '</p>';
-                      }
                       virtualForm.html(errorText + noticeText);
                       return;
                     } else if (error.code === 'PasswordError') {
-                      errorEmail.textContent = text.localize('Password is not strong enough.');
-                    } else if (error.details && error.details.verification_code && /required/.test(error.details.verification_code)) {
-                      errorEmail.textContent = Content.localize().textTokenMissing;
+                      errorAccount.textContent = text.localize('Password is not strong enough.');
                     } else if (error.message) {
-                      errorEmail.textContent = error.message;
+                      errorAccount.textContent = error.message;
                     }
-                    Validate.displayErrorMessage(errorEmail);
+                    Validate.displayErrorMessage(errorAccount);
                   }
                 }
               }
             });
-            VirtualAccOpeningData.getDetails(email, password, residence, verificationCode);
+            VirtualAccOpeningData.getDetails(password, residence, verificationCode);
           }
         });
       }
