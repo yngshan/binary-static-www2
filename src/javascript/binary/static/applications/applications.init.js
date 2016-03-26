@@ -12,24 +12,28 @@ var Applications = (function(){
         } else {
 
             var applications = response.oauth_apps;
-          
+            
             if (!tableExist()) {
                 $("#loading").remove();
-                // Show a message when the table is empty
                 ApplicationsUI.createEmptyTable().appendTo("#applications-ws-container");
                 var titleElement = document.getElementById("applications-title").firstElementChild;
                 titleElement.textContent = text.localize(titleElement.textContent);
             }
+            
+            // Show a message when the table is empty
             if (applications.length === 0) {
-                  $('#applications-table tbody')
-                      .append($('<tr/>', {class: "flex-tr"})
-                          .append($('<td/>', {colspan: 6})
-                              .append($('<p/>', {class: "notice-msg center", text: text.localize("You have not granted access to any apps.")})
-                              )
-                          )
-                      );
+                console.log("Zero");
+                $('#applications-table tbody')
+                    .append($('<tr/>', {class: "flex-tr"})
+                        .append($('<td/>', {colspan: 7})
+                            .append($('<p/>', {class: "notice-msg center", text: text.localize("You have not granted access to any applications.")})
+                            )
+                        )
+                    );
             }
-            ApplicationsUI.createTable(applications);
+            else{
+                ApplicationsUI.createTable(applications);
+            }
         }
     }
     

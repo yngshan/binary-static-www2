@@ -27,7 +27,7 @@ var ApplicationsUI = (function(){
     function createRow(data){
         var name = data.name,
             permissions = data.scopes.join(", "),
-            last_used = data.last_used ? moment.utc(data.last_used).format("Do MMMM YY") : text.localize("Never"),
+            last_used = data.last_used ? moment.utc(data.last_used).format("YYYY-MM-DD HH:mm:ss") : text.localize("Never"),
             action = '';
         var $row = Table.createFlexTableRow([name,permissions,last_used,action], columns,"data");
         var $viewButtonSpan = Button.createBinaryStyledButton();
