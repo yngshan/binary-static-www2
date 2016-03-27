@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: I 18N\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-24 02:33+0000\n"
+"PO-Revision-Date: 2016-03-27 19:06+0000\n"
 "Last-Translator: Pham Minh Hieu <hphamv7@gmail.com>\n"
-"Language-Team: Vietnamese <https://hosted.weblate.org/projects/binary/static/vi/>\n"
+"Language-Team: Vietnamese "
+"<https://hosted.weblate.org/projects/binary/static/vi/>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,9 +59,8 @@ msgid "$250,000 - $1,000,000"
 msgstr "$250,000 - $1,000,000"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:343
-#, fuzzy
 msgid "%1 %2 has been credited to your Virtual money account %3"
-msgstr "%1 %2 vừa được cộng thêm vào tài khoản tiền ảo của bạn %3"
+msgstr "%1 %2 vừa được cộng thêm vào tài khoản tiền Ảo %3 của bạn"
 
 #. ($days, $hours, $minutes)
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check.html.haml:1
@@ -4895,6 +4895,9 @@ msgstr "Giá Giao ngay thoát ra"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:408
 msgid "Exit price is the underlying asset price at exercise time and it's the price to judge the presence (exist) of payout by comparing with exercise price."
 msgstr ""
+"Giá rút khỏi thị trường là giá của tài sản cơ sở tại thời điểm đặt giá và đó "
+"là mức giá để đánh giá có tiền thưởng hay không bằng cách so sánh với giá "
+"thực hiện."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/endsinout.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/higherlower.html.tt:1
@@ -5288,6 +5291,9 @@ msgstr "Nhằm tăng cường bảo vệ khỏi việc rút tiền trái phép, 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:442
 msgid "For an in-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
 msgstr ""
+"Với quyền chọn đang nằm trong vùng có tiền, khi giá thực hiện quyền chọn mà "
+"càng nằm xa so với giá của tài sản cơ sở thì giá của quyền chọn này sẽ càng "
+"thấp."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:413
 msgid "For an individual investor, all profits from OTC currency options trading are tax-free"
@@ -5300,10 +5306,14 @@ msgstr "Đối với một nhà đầu tư cá nhân, lợi nhuận và thua l�
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:441
 msgid "For an out-of-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
 msgstr ""
+"Với quyền chọn đang ở vùng mất tiền, khi giá thực hiện quyền chọn càng nằm "
+"xa so với giá của tài sản cơ sở thì giá của quyền chọn này càng thấp."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:404
 msgid "For both call and put options, if the underlying asset price is the same as the exercise price, it is known as an at-the-money option."
 msgstr ""
+"Với cả quyền chọn mua và quyền chọn bán, nếu giá của tài sản cơ sở chính "
+"bằng giá thực hiện thì đó là quyền chọn hòa vốn."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:44
 msgid "For contracts which expire at market close, we will use the official closing value of the market to settle your contract and update your results at settlement time."
@@ -5629,6 +5639,9 @@ msgstr "Sức khỏe"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:393
 msgid "Hedge you used for binary option is needed to be conducted as compensation part of loss of  the hedged asset because payout is fixed."
 msgstr ""
+"Hàng rào giới hạn mà bạn sử dụng trong hợp đồng quyền chọn nhị phân cần được "
+"kiểm soát như là mức bồi thường cho các tài sản bị thua lỗ  vì tiền lãi là "
+"cố định."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:375
 msgid "Hedging"
@@ -5864,6 +5877,8 @@ msgstr "Nếu việc tính toán lợi nhuận cổ phiếu của bạn 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:419
 msgid "If an option buyer wishes to exercise the option rights, the seller may still reject the deal."
 msgstr ""
+"Nếu trong một quyền chọn mà  người mua muốn thực hiện quyền chọn này, người "
+"bán vẫn có quyền từ chối giao dịch."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:127
 msgid "If any provision of this Agreement is held to be void or unenforceable in whole or part, the impugned provision (or part thereof) shall be deemed to be deleted from this Agreement and the remaining provisions (including the remainder of the affected provision) shall continue to be valid and applicable."
@@ -5872,6 +5887,8 @@ msgstr "Nếu có bất cứ điều khoản nào trong Hiệp định bi
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:443
 msgid "If implied volatility increases then the prices of both call and put types of plain vanilla options will increase."
 msgstr ""
+"Nếu biến động ngầm tăng thì sau đó giá của cả quyền chọn thông thường bán và "
+"mua đều sẽ tăng."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:18
 msgid "If the Company is legally required to disclose your personal or financial information by law, regulation or pursuant to the order of a court of competent jurisdiction or a governmental agency, the Company  shall, unless legally prohibited, promptly notify you to that effect, in order to give you the opportunity to seek such protection for the information as it deems appropriate. Such required disclosure shall not be construed as a breach of this Terms and Conditions Agreement."
@@ -5880,18 +5897,27 @@ msgstr "Nếu Công ty được yêu cầu phải tiết lộ thông tin cá n
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:416
 msgid "If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller."
 msgstr ""
+"Nếu người mua trong 1 quyền chọn không thực hiện các quyền lợi của quyền "
+"chọn đó, người bán sẽ không phải trả bất cứ phí nào."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:417
 msgid "If the buyer of an option waives his right to exercise, a transaction in the underlying asset will not be dealt between the seller and the buyer."
 msgstr ""
+"Nếu người mua bỏ qua quyền thực hiện của 1 quyền chọn, người mua và người "
+"bán sẽ không thể thực hiện giao dịch tài sản cơ sở."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:438
 msgid "If the exercise prices and exercise times are the same for an American style and European style option, then the American style option will have a higher price."
 msgstr ""
+"Nếu giá thực hiện và thời điểm thực hiện giá là giống nhau giữa quyền chọn "
+"kiểu Mỹ và quyền chọn kiểu Châu Âu, thì quyền chọn kiểu Mỹ sẽ có giá cao hơn."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:447
 msgid "If the underlying asset price is 100 yen, the exercise price is 80 yen, and the call option price is 45 yen, then it can be said that the option's intrinsic-value is 20 yen, and its time-value is 25 yen."
 msgstr ""
+"Nếu giá của tài sản cơ sở là 100 Yên, giá thực hiện là 80 Yên, và giá quyền "
+"chọn mua là 45 Yên, thì có thể nói rằng giá trị thực của quyền chọn này là "
+"20 Yên, và giá trị thời gian nó là 25 Yên."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "If we’re happy with your results, we’ll contact you for an interview and then do background and reference checks."
@@ -5908,14 +5934,28 @@ msgstr "Nếu như bạn có, chúng tôi muốn nhận tin từ bạn."
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:378
 msgid "If you buy a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
 msgstr ""
+"Nếu bạn mua 1 quyền chọn mua nhị phân tiền tệ với mức giá là 500 Yên, với "
+"đơn vị cơ sở là đồng Đô-la so với đồng Yên, tiền thưởng là 1,000 Yên, và giá "
+"thực hiện là 100, vậy nếu giá quyết định tại thời điểm thực hiện giá là 99, "
+"bạn sẽ nhận được mức tiền thưởng là 1,000 Yên từ người bán của quyền chọn "
+"này."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:380
 msgid "If you buy a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you receive a payout of 1,000 yen, then your profit can be calculated 500 yen after subtracting the 500 yen that was paid as a fee to the option seller."
 msgstr ""
+"Nếu bạn mua một quyền chọn nhị phân tiền tệ với mức giá 500 Yên, và giá "
+"quyết định đạt điều kiện để bạn nhận được mức tiền thưởng là 1,000 Yên, thì "
+"mức lợi nhuận của bạn sẽ là 500 Yên sau khi đã trừ đi 500 Yên mà bạn phải "
+"trả phí cho người bán quyền chọn này."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:379
 msgid "If you buy a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
 msgstr ""
+"Nếu bạn mua một quyền chọn bán nhị phân tiền tệ với mức giá 500 Yên, với đơn "
+"vị cơ sở là đồng Đô-la so với đồng Yên, mức tiền thưởng là 1,000 yên, và giá "
+"thực hiện là 100, thì nếu giá quyết định tại thời điểm thực hiện giá là 99, "
+"bạn sẽ nhận được mức tiền thưởng là 1,000 Yên từ người bán của quyền chọn "
+"này."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:13
 msgid "If you choose to enter into a Contract with us, it is important that you remain aware of the risks involved, that you have adequate investment resources to bear such risks and that you monitor your positions carefully."
@@ -6071,14 +6111,26 @@ msgstr "Nếu bạn chọn <strong>thời gian kết thúc cụ thể</stro
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:376
 msgid "If you sell a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option."
 msgstr ""
+"Nếu bạn bán một quyền chon mua nhị phân tiền tệ với mức giá 500 Yên, với đơn "
+"vị cơ sở là đồng Đô-la so với đồng Yên, số tiền thưởng là 1,000 Yên, và giá "
+"thực hiện là 100,  vậy nếu giá quyết định tại thời điểm thực hiện giá là 99, "
+"bạn sẽ phải trả 1,000 Yên cho người mua quyền chọn này."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:381
 msgid "If you sell a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you need to payout 1,000 yen, then your profit will be minus 500 yen after subtracting the 500 yen that was received as a fee from the option buyer."
 msgstr ""
+"Nếu bạn bán một quyền chọn nhị phân tiền tệ với mức giá 500 yên, và giá "
+"quyết định thỏa mãn điều kiện sao cho bạn có được số tiền thưởng 1,000 Yên, "
+"thì lợi nhuận của bạn sẽ là 500 Yên sau khi đã trừ đi 500 Yên mà người mua "
+"phải trả để nhận được quyền chọn này."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:377
 msgid "If you sell a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option."
 msgstr ""
+"Nếu bạn bán một quyền chọn bán nhị phân tiền tệ với mức giá 500 yên, với đơn "
+"vị cơ sở là đồng Đô-la so với đồng Yên, số tiền thưởng là 1,000 Yên, và giá "
+"thực hiện là 100, vậy nếu giá quyết định tại thời điểm thực hiện giá là 99, "
+"bạn sẽ phải trả 1,000 Yên cho người mua quyền chọn này."
 
 #. (broker_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:43
@@ -6168,6 +6220,8 @@ msgstr "In carrying out OTC binary option trading, a customer needs expert knowl
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:439
 msgid "In case of the right to buy the underlying asset (call option), when the underlying asset price falls, the option price will increase."
 msgstr ""
+"Trong trường hợp mua tài sản cơ sở (quyền chọn mua), khi giá của tài sản cơ "
+"sở giảm, thì giá của quyền chọn này sẽ tăng."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:440
 msgid "In case of the right to sell the underlying asset (put option), when the underlying asset price rises, the option price will increase."
@@ -6176,6 +6230,9 @@ msgstr "Trong trường hợp có quyền bán tài sản cơ sở (quyền ch�
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:429
 msgid "In case probability to receive the payout is 50% and magnification of payout for the investment is less than a 2-fold lower, than the expected rate will be  1 times lower and forecast recovery amount is less than the investment."
 msgstr ""
+"Trong trường hợp khả năng nhận được tiền thưởng là 50% và số tiền thưởng so "
+"với số tiền đầu tư là ít hơn 2 lần, thì tỷ giá kỳ vọng sẽ ít hơn 1 lần và số "
+"tiền bù đắp dự báo sẽ ít hơn so với số tiền đầu tư."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves’s vision is to create a market in the simplest of all derivatives contracts – the fixed-odds bet – and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities."
@@ -6188,6 +6245,8 @@ msgstr "Trong thị trường ngoại tệ, nhà giao dịch có thể giao
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:451
 msgid "In general a binary option price will not exceed the payout amount."
 msgstr ""
+"Thông thường thì giá của quyền chọn nhị phân sẽ không vượt quá số tiền "
+"thưởng của quyền chọn này."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:453
 msgid "In general the price of a binary option will be lower than the price of a plain vanilla option because the payout amount is fixed."
@@ -6241,6 +6300,13 @@ msgstr "Trong mục 'Hướng dẫn thêm' vui lòng nhập chi tiết phư�
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:410
 msgid "In the OTC currency binary options trading, if the exchange rate during the trading period move to one direction more than expected, that there is no exercise price which can continue appropriate trading around at-the-money, there is possible to add the exercise price on the way. However, even if the exercise price has been added, do the exercise price will continue trading using up to it, also the transaction price will not be affected by the additional impact of the exercise price."
 msgstr ""
+"Trong giao dịch quyền chọn nhị phân tiền tệ OTC, nếu tỷ giá hối đoái trong "
+"suốt thời kỳ giao dịch di chuyển tới một hướng khác so với kỳ vọng, sẽ không "
+"có giá thực hiện liên tiếp thích hợp để giao dịch tại xung quanh vùng hòa "
+"vốn, thì có thể chèn thêm giá thực hiện trong khi giao dịch. Tuy nhiên, thậm "
+"chí khi mà giá thực hiện được thêm vào, sẽ tiếp tục giao dịch sử dụng giá "
+"gần nhất, và giá giao dịch cũng sẽ không bị ảnh hưởng bởi tác động của giá "
+"được thêm vào này."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/about/index.html.haml:1
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A."
@@ -6592,6 +6658,10 @@ msgstr "Đảo Man"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:430
 msgid "It can not be said that binary option is unconditionally advantageous because the reason why investors will lose the full amount of investment at binary option, on the other hand part of investment will remain at FX."
 msgstr ""
+"Không thể nói rằng quyền chọn nhị phân có lợi một cách vô điều kiện bởi vì "
+"lý do tại sao các nhà đầu tư bị thua lỗ hết tất cả số tiền đầu tư vào quyền "
+"chọn nhị phân, một mặt khác là một phần của sự đầu tư vẫn được thực hiện "
+"trên thị trường chứng khoán."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:36
 msgid "It is important that you monitor all of your positions closely. It is your responsibility to monitor your positions and during the period that you have any open Contracts, you should always have the ability to access your Accounts."
@@ -7298,11 +7368,11 @@ msgstr "Trân trọng,"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:219
 msgid "Kindly send us your documents for verification."
-msgstr ""
+msgstr "Vui lòng gửi các giấy tờ của bạn cho chúng tôi để xác minh."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:2
 msgid "Knowledge Test"
-msgstr ""
+msgstr "Bài kiểm tra Kiến thức"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge and experience in the financial services industry"
@@ -7324,6 +7394,8 @@ msgstr "Biết về lý thuyết xác suất, giải tích ngẫu nhiên, phươ
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:151
 msgid "Knowledge test is unavailable now, you may take the test on %1"
 msgstr ""
+"Bài kiểm tra Kiến thức hiện nay không có sẵn, bạn có thể làm bài kiểm tra "
+"này trên %1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:70
 msgid "LOG OUT"
@@ -7839,6 +7911,9 @@ msgstr "Thu nhập hàng ngày tối đa"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:425
 msgid "Maximum loss of buyer at binary options is an optional fee, maximum loss of the seller will be the amount subtracted the option fee from the payout amount."
 msgstr ""
+"Số tiền thua lỗ tối đa của người mua quyền chọn nhị phân là chi phí phát "
+"sinh, số tiền thua lỗ tối đa của người bán sẽ là số tiền này trừ đi chi phí "
+"quyền chọn từ số tiền thưởng."
 
 #. ($email)
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:258
@@ -8521,14 +8596,27 @@ msgstr "Mở muộn (vào lúc  %1)"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:462
 msgid "Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. Apart from the fixed exercise price, all other elements are changing constantly, so an understanding of the relationships between each element and changes in the options price is necessary for the management of options trading risk."
 msgstr ""
+"Giá quyền chọn thông thường phụ thuộc vào các thành phần như là giá của tài "
+"sản cố định, giá thực hiện, độ dài thời gian đến điểm thực hiện giá, mức "
+"biến động giá, và tỷ lệ lãi suất. Khác với giá thực hiện được cố định, tất "
+"cả các thành phần khác thay đổi một cách liên tục, vì vậy việc hiểu rõ mối "
+"quan hệ giữa các thành phần và sự thay đổi của giá quyền chọn là vô cùng cần "
+"thiết trong việc quản lý rủi ro của giao dịch quyền chọn."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:463
 msgid "Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. However, when the remaining time to the exercise point is very short, there is no need to consider these when managing option trading risk, as all these elements are constant."
 msgstr ""
+"Giá quyền chọn thông thường phụ thuộc vào các yếu tố như là giá của tài sản "
+"cố định, giá thực hiện, độ dài thời gian đến điểm đặt giá, mức độ biến động, "
+"và tỷ lệ lãi suất. Tuy nhiên, khi thời gian còn lại để tiến tới điểm đặt giá "
+"là rất ngắn, thì bạn không cần cân nhắc tới những yếu tố trên khi quản lý "
+"rủi ro của giao dịch quyền chọn, vì tất cả các yếu tố trên đều là hằng số."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:401
 msgid "Options may be either European or American style of exercise, and the one which can be exercised at only one expiry time is the European style option."
 msgstr ""
+"Quyền chọn có thể được thực hiện theo kiểu Châu Âu hoặc kiểu Mỹ, và quyền "
+"chọn mà chỉ được thực hiện tại ngày đáo hạn là quyền chọn kiểu Châu Âu."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_frequency.html.haml:1
 msgid "Options trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such an addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis."
@@ -8995,7 +9083,11 @@ msgstr "Xin vui lòng xác nhận chi tiết giao dịch để hoàn thà
 #. (affiliate_email)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:103
 msgid "Please contact us with whatever is on your mind at <a href=\"mailto:%1\">%1</a>. We’d be happy to hear from you and willing to assist you. So, feel free to share your ideas and suggestions with us."
-msgstr "Vui lòng liên hệ với chúng tôi bất cứ điều gì bạn muốn tại <a href=\"mailto:%1\">%1</a>. Chúng tôi luôn lắng nghe và sẵn sàng giúp đỡ bạn. Vì thế, đừng ngần ngại hãy chia sẻ ý kiến và gợi ý của bạn với chúng tôi."
+msgstr ""
+"Vui lòng liên hệ với chúng tôi bất cứ điều gì bạn muốn tại <a "
+"href=\"mailto:%1\">%1</a>. Chúng tôi luôn lắng nghe và sẵn sàng hỗ trợ "
+"bạn. Vì thế, đừng ngần ngại hãy chia sẻ ý kiến và yêu cầu của bạ"
+"n với chúng tôi."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:136
 msgid "Please enter a date that is at least 6 months from now."
@@ -9011,10 +9103,9 @@ msgid "Please enter a number between 0 and %1."
 msgstr "Vui lòng nhập một số giữa 0 và %1."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:500
-#, fuzzy
 #| msgid "Please enter a number greater than 0"
 msgid "Please enter a number greater or equal to %1."
-msgstr "Vui lòng nhập một số lớn hơn 0"
+msgstr "Vui lòng nhập một số lớn hơn hoặc bằng %1."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_frequency.html.haml:1
@@ -9066,11 +9157,11 @@ msgstr "Vui lòng nhập Tên Đăng nhập để chuyển tiền."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:669
 msgid "Please enter the country where you want to offer your service"
-msgstr "Vui lòng nhập quốc gia nơi bạn muốn đặt dịch vụ"
+msgstr "Vui lòng nhập quốc gia nơi bạn muốn cung cấp dịch vụ của bạn"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1679
 msgid "Please enter the first line of your home address."
-msgstr "Vui lòng nhập dòng đầu tiên của địa chỉ nhà bạn."
+msgstr "Vui lòng nhập vào dòng đầu tiên địa chỉ của nhà bạn."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:17
 msgid "Please enter your current password."
@@ -9092,7 +9183,9 @@ msgstr "Vui lòng nhập họ của bạn."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transfer.html.tt:22
 msgid "Please fill in the Login ID and Amount you wish to transfer to your Client in the form below:"
-msgstr "Vui lòng điền tên Đăng nhập vá Số tiền bạn muốn chuyển cho Khách hàng của mình  trong bản mẫu dưới đây:"
+msgstr ""
+"Vui lòng điền tên Đăng nhập vá Số tiền bạn muốn chuyển cho Khách "
+"hàng của mình trong bản mẫu dưới đây:"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:365
 msgid "Please follow the pattern 3 numbers, a dash, followed by 4 numbers."
@@ -9129,22 +9222,45 @@ msgstr "Vui lòng chú ý rằng hóa đơn thanh toán điện thoại d
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:11
 msgid "Please note that our website generates log files that record the IP addresses of accesses to your account. This information is gathered with the sole purpose of assisting in the unlikely event of a need to investigate accesses to your account by unauthorised users. Additionally we may verify certain of the information you supply in the account opening form, or otherwise, with third-party information providers."
-msgstr "Vui lòng chú ý rằng trang web của chúng tôi có tệp tin mà có thể ghi lại địa chỉ máy tính cá nhân khi đăng nhập vào tài khoản của bạn. Những thông tin này được tập trung lại với mục đích duy nhất là hỗ trợ điều tra việc truy cập vào tài khoản của bạn bởi người dùng không có quyền. Thêm nữa, chúng tôi sẽ xác minh thông tin nhất định bạn đã khai trong bản mẫu đăng kí mở tài khoản, hoặc với người cung cấp thông tin bên thứu ba."
+msgstr ""
+"Vui lòng chú ý rằng trang web của chúng tôi có tệp tin mà có thể "
+"ghi lại địa chỉ máy tính cá nhân khi đăng nhập vào tài khoản của "
+"bạn. Những thông tin này được tập hợp lại với mục đích duy nhất là"
+" hỗ trợ điều tra việc truy cập vào tài khoản của bạn bởi người "
+"dùng không có quyền. Thêm nữa, chúng tôi có thể xác minh một số thông "
+"tin nhất định mà bạn đã khai trong bản mẫu đăng kí mở tài khoản, "
+"hoặc với người cung cấp thông tin bên thứ ba."
 
 #. ($r->url_for("/cashier/authenticate", {o => 'id'})
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:824
 msgid "Please note that to apply to become a Payment Agent, you must <a href=\"%1\">Authenticate your Account</a> first."
-msgstr "Vui lòng lưu ý rằng việc đăng khí để trả thành một Đại lý Thanh toán, bạn cần phải <a href=\"%1\">Xác nhận Tài khoản của bạn </a> trước.."
+msgstr ""
+"Vui lòng lưu ý rằng để đăng ký trở thành thành một Đại lý Thanh toá"
+"n, trước tiên bạn cần phải <a href=\"%1\">Xác thực Tài khoản của bạn "
+"</a>."
 
 #. (broker_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:37
 msgid "Please note that weekend quotes are ignored for the purpose of contract settlement. During weekends, the forex markets may occasionally generate prices, however these prices are often artificial (traders sometimes take advantage of the illiquidity of the markets during weekends to push up or down prices). To avoid settling prices based on such artificial prices, it is %1's policy not to count weekend prices towards contract settlement values (except for the random indices, which are open during weekends)."
-msgstr "Vui lòng chú ý rằng yết giá cuối tuần bị bỏ qua với mục đích quyết toán hợp đồng. Cuối tuần, thị trường ngoại hối thi thoảng vẫn đưa ra giá, tuy nhiên những giá này thường là nhân tạo (thi thoảng nhà giao dịch tận dụng tính thanh khoản kém của thị trường vào dịp cuối tuần để tăng hoặc giảm giá). Để tránh quyết toán giá dựa trên giá nhân tạo này, sẽ có chính sách %1 không quyết toán giá hợp đồng vào những ngày cuối tuần (ngoại trừ chỉ số ngẫu nhiên, được mở suốt cuối tuần)."
+msgstr ""
+"Vui lòng chú ý rằng yết giá cuối tuần bị bỏ qua với mục đích "
+"quyết toán hợp đồng. Cuối tuần, thị trường ngoại hối thi thoảng "
+"vẫn đưa ra giá, tuy nhiên những giá này thường mang tính nhân tạo ("
+"thi thoảng nhà giao dịch tận dụng tính thanh khoản kém của thị "
+"trường vào dịp cuối tuần để tăng hoặc giảm giá). Để tránh quyết "
+"toán giá dựa trên giá nhân tạo này, %1 đưa ra chính sách không tính "
+"giá cuối tuần vào giá trị quyết toán của hợp đồng (ngoại trừ chỉ số ngẫ"
+"u nhiên, được mở suốt cuối tuần)."
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:12
 msgid "Please note that you may update your personal information at any time by logging into the \"Settings\" section of your account. It is your responsibility to ensure that %1 is promptly and continually informed of any change in your personal information."
-msgstr "Vui lòng chú ý rằng bạn có thể cập nhật thông tin cá nhân của mình bất kì lúc nào bằng cách đăng nhập vào khu vực \"Thiết lập) trong tài khoản. Bạn phải có trách nhiệm đảm bảo rằng bạn sẽ phải thông báo kịp thời và liên tục nếu có bất cứ sự thay đổi nào về thông tin cá nhân của mình."
+msgstr ""
+"Vui lòng chú ý rằng bạn có thể cập nhật thông tin cá nhân của mì"
+"nh bất kì lúc nào bằng cách đăng nhập vào khu vực \"Cài đặt\" trong "
+"tài khoản của bạn. Bạn phải có trách nhiệm đảm bảo rằng bạn sẽ "
+"phải thông báo kịp thời và liên tục nếu có bất cứ sự thay đổi nà"
+"o về thông tin cá nhân của mình."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:589
 msgid "Please note that your settings have been updated as follows:"
@@ -9159,14 +9275,15 @@ msgid "Please provide at least one self-exclusion setting."
 msgstr "Vui lòng cung cấp ít nhất một thiết lập tự loại trừ."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:325
-#, fuzzy
 #| msgid "Please provide at least one self-exclusion setting."
 msgid "Please provide complete details for account opening."
-msgstr "Vui lòng cung cấp ít nhất một thiết lập tự loại trừ."
+msgstr "Vui lòng hoàn thành những thông tin chi tiết sau để mở tài khoản."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:821
 msgid "Please provide some information about yourself and your proposed services"
-msgstr "Xin cung cấp một số thông tin về bản thân bạn và dịch vụ bạn muốn sử dụng"
+msgstr ""
+"Vui lòng cung cấp một số thông tin về bản thân bạn và các dịch vụ "
+"bạn muốn sử dụng"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:29
 msgid "Please provide us with the following information:"
@@ -9178,11 +9295,19 @@ msgstr "Vui lòng nhập lại email của bạn"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:60
 msgid "Please refer to the following commission plan."
-msgstr "Vui lòng tham khảo dự thảo hoa hồng sau."
+msgstr "Vui lòng tham khảo dự thảo tiền hoa hồng ở dưới đây."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/responsible_trading.html.haml:1
 msgid "Please remember at all times that trading binary options can be an exciting activity, but we have a moral duty to remind you of the risks you may run. Options trading can become a real addiction, as can any other activity pushed to its limits. We kindly ask you to engage in a careful self-analysis to check if you are at risk. To avoid the danger of such an addiction, it is important that you follow some basic principles and guidelines."
-msgstr "Vui lòng nhớ rằng giao dịch hợp đồng quyền chọn nhị phân có thể là một hoạt động thú vị vào bất cứ lúc nào, nhưng chúng tôi có trách nhiệm nhắc bạn rủi ro mà bạn có thể gặp phải. Giao dịch quyền chọn có thể bị nghiện, như những hoạt động khác muốn cố gắng để đạt được tới giới hạn. Chúng tôi muốn bạn tự phân tích cẩn thận để kiểm tra xem liệu bạn có đang bị rủi ro hay không. Để tránh nguy hại, quan trọng là bạn nên tuân theo một số nguyên tắc và hướng dẫn cơ bản."
+msgstr ""
+"Vui lòng nhớ rằng giao dịch hợp đồng quyền chọn nhị phân có thể "
+"là một hoạt động thú vị vào bất cứ lúc nào, nhưng chúng tôi có "
+"trách nhiệm nhắc bạn rủi ro mà bạn có thể gặp phải. Giao dịch "
+"quyền chọn có thể bị nghiện, như những hoạt động khác muốn cố gắ"
+"ng để đạt được tới giới hạn. Chúng tôi muốn bạn tự phân tích cẩn "
+"thận để kiểm tra xem liệu bạn có đang gặp rủi ro hay không. Để trá"
+"nh nguy hại của việc gây nghiện này, quan trọng là bạn nên tuân theo mộ"
+"t số nguyên tắc và hướng dẫn cơ bản."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:298
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:137
@@ -9270,7 +9395,8 @@ msgstr "Vui lòng điền tên quốc gia của bạn."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_frequency.html.haml:1
 msgid "Please specify your preferred reality-check interval in minutes "
-msgstr "Hãy xác định khoảng thời gian kiểm tra thực tế ưa thích của bạn trong vài phút "
+msgstr ""
+"Hãy chỉ rõ khoảng thời gian kiểm tra thực tế ưa thích của bạn vào biên bản "
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:264
 msgid "Please submit a valid %1."
@@ -9290,10 +9416,9 @@ msgid "Please switch accounts to trade this market."
 msgstr "Vui lòng chuyển đổi tài khoản để giao dịch thị trường này."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1514
-#, fuzzy
 #| msgid "Please switch accounts to trade this contract."
 msgid "Please switch accounts to trade this underlying."
-msgstr "Vui lòng chuyển đổi tài khoản để giao dịch hợp đồng này."
+msgstr "Vui lòng chuyển đổi tài khoản để giao dịch với đơn vị cơ sở này."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/reset_password.html.tt:6
 msgid "Please take a moment to verify your identity by providing us with your date of birth, below."
@@ -9306,7 +9431,7 @@ msgstr "Vui lòng thử lại."
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/reset_password.html.tt:11
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/reset_password.html.tt:16
 msgid "Please type your chosen password twice into the fields below:"
-msgstr "Vui lòng nhập mật khẩu đã chọn hai lần vào các trường dưới đây:"
+msgstr "Vui lòng nhập hai lần mật khẩu đã chọn vào các ô dưới đây:"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:381
 msgid "Please use a different password than your login password."
@@ -9315,7 +9440,9 @@ msgstr "Vui lòng sử dụng một mật khẩu khác với mật khẩu đăng
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1490
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1515
 msgid "Please use only letters, spaces, hyphens, full-stops or apostrophes."
-msgstr "Vui lòng chỉ sử dụng chữ, khoảng trắng, dấu gạch nối, dấu chấm hoặc dấu nháy."
+msgstr ""
+"Vui lòng chỉ sử dụng các chữ cái, khoảng trắng, dấu gạch nối, dấu "
+"chấm hoặc dấu nháy."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:56
 msgid "Please wait.<br />Your request is being processed."
@@ -9355,27 +9482,31 @@ msgstr "Mã bưu điện/ZIP"
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:211
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1805
 msgid "Postcode is required for UK residents."
-msgstr "Mã bưu điện được yêu cầu là mã cư trú của Anh."
+msgstr "Mã bưu điện được yêu cầu đối với công dân Vương quốc Anh."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1800
 msgid "Postcode must be less than 20 characters long and may not contain \"+\"."
-msgstr "Mã bưu điện cần phải dài ít nhất 20 kí tự và không được chứa dấu\"+\"."
+msgstr ""
+"Mã bưu điện cần phải dài ít hơn 20 kí tự và không được chứa dấu\""
+"+\"."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:182
 msgid "Potential Payout"
-msgstr "Tiền thưởng Tiềm ẩn"
+msgstr "Tiền thưởng Tiềm năng"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:184
 msgid "Potential Profit"
-msgstr "Lợi nhuận tiềm ẩn"
+msgstr "Lợi nhuận Tiềm năng"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check.html.haml:1
 msgid "Potential profit"
-msgstr "Lợi nhuận tiềm ẩn"
+msgstr "Lợi nhuận tiềm năng"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/spread_bets.html.haml:1
 msgid "Potential profit and losses are limited to stop profit and stop loss levels respectively."
-msgstr "Lợi nhuận và thua lỗ tiền năng được giới hạn tới mức lợi nhuận tới hạn và thua lỗ tới hạn tương ứng."
+msgstr ""
+"Lợi nhuận và thua lỗ tiềm năng được giới hạn tới mức lợi nhuận "
+"tới hạn và thua lỗ tới hạn tương ứng."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "Power & simplicity"
@@ -9393,27 +9524,45 @@ msgstr "Dự đoán khuynh hướng<br />và trả giá"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:384
 msgid "Predicted that the underlying asset price is largely up-dean and in order to obtain the benefit also moving in either direction of rising send falling, obtained both options of the call options that exercise price is higher than the underlying asset price and tie put option that exercise prize is lower than underlying asset price."
 msgstr ""
+"Việc dự đoán được giá của tài sản cơ sở là vô cùng cần thiết và để giành "
+"được lợi nhuận cũng như quyết định xu hướng tăng hay giảm, bạn hãy giành lấy "
+"cả hai quyền chọn của quyền chọn mua khi mà giá thực hiện cao hơn so với giá "
+"tài sản cơ sở và  hãy giành lấy quyền chọn bán nếu giá thực hiện thấp hơn so "
+"với giá tài sản cơ sở."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:387
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:390
 msgid "Predicted the underlying asset price will decline than strike price at exit time and bought binary call options. "
 msgstr ""
+"Khi bạn dự đoán giá của tài sản cơ sở sẽ giảm so với giá thực hiện tại thời "
+"điểm rút khỏi thị trường thì hãy mua quyền chọn mua nhị phân. "
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:388
 msgid "Predicted the underlying asset price will decline than strike price at exit time and bought binary put options. "
 msgstr ""
+"Khi bạn dự đoán là giá của tài sản cơ sở sẽ giảm so với giá thực hiện tại "
+"thời điểm rút khỏi thị trường thì hãy mua quyền chọn bán nhị phân. "
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:389
 msgid "Predicted the underlying asset price will raise than strike price at exit time and bought binary put options. "
 msgstr ""
+"Khi bạn dự đoán giá của tài sản cơ sở sẽ tăng so với giá thực hiện tại thời "
+"điểm rút khỏi thị trường thì hãy bán quyền chọn bán nhị phân. "
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:385
 msgid "Predicts that width of up-down of underlying asset is small and  in order to obtain the benefit also moving in either direction of rising and falling, granted together both of the call option that exercise price is higher than underlying asset and the put option that exercise price is lower than underlying asset price."
 msgstr ""
+"Khi bạn dự đoán biên độ dao động của tài sản cố định là nhỏ và để có được "
+"lợi nhuận cũng như sự dịch chuyển của một trong hai xu hướng lên hoặc xuống, "
+"bạn hãy chuyển nhượng lại quyền chọn mua có giá thực hiện cao hơn so với giá "
+"của tài sản cơ sở và nhượng lại quyền chọn bán có giá thực hiện thấp hơn so "
+"với giá của tài sản cơ sở."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Prepare periodic and special reports on sales within the region and maintain a reporting structure with affiliates to collect data"
-msgstr "Chuẩn bị báo cáo định kỳ và báo cáo dành riêng cho bán hàng trong khu vực và sử dụng một mẫu báo cáo với các chi nhánh để thu thập dữ liệu"
+msgstr ""
+"Chuẩn bị các báo cáo định kỳ và báo cáo dành riêng cho bán hàng trong khu "
+"vực và sử dụng một mẫu báo cáo với các chi nhánh để thu thập dữ liệu"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Preparing the periodic and special reports required to ensure legal and regulatory compliance in the jurisdictions within which we operate"
@@ -9442,7 +9591,9 @@ msgstr "Ngày trước"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Previous experience with financial and/or binary options trading websites"
-msgstr "Đã có kinh nghiệm về tài chính và/hoặc website giao dịch quyền chọn nhị phân"
+msgstr ""
+"Đã có kinh nghiệm về tài chính và/hoặc các trang web giao dịch quyền chọn "
+"nhị phân"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Previous experience with financial/binary options website services"
@@ -9460,7 +9611,7 @@ msgstr "Giá"
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:447
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:650
 msgid "Price Oscillator"
-msgstr "Chỉ số giá Oscillator"
+msgstr "Chỉ số tốc độ thay đổi giá Oscillator"
 
 #. (to_monetary_number_format($transaction_parameters->{price})
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1363
@@ -9470,14 +9621,22 @@ msgstr "Giá đã được chuyển tới điểm mong muốn của bạn
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:433
 msgid "Price of OTC currency option is the calculated value based on multiple elements and is determined by relative trading basically."
 msgstr ""
+"Giá của quyền chọn tiền tệ OTC là một giá trị được tính toán dựa trên rất "
+"nhiều các thành phần và cơ bản được xác định bởi giao dịch có liên quan."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:437
 msgid "Price of call option will be lower interest rates of the underlying assets is low, but the price of the put option, go up when the interest rates of the underlying assets is low."
 msgstr ""
+"Giá của quyền chọn mua sẽ giảm đi khi tỷ lệ lãi suất của tài sản cơ sở thấp; "
+"nhưng ngược lại, giá của quyền chọn bán sẽ tăng khi tỷ lệ lãi suất của tài "
+"sản cơ sở thấp."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:435
 msgid "Price of the option, the price of the underlying asset, price fluctuation rate of the underlying assets, the time until the exercise date, subject to any of the impact of interest rates."
 msgstr ""
+"Giá của quyền chọn, giá của tài sản cơ sở, mức biến động giá của tài sản cơ "
+"sở, thời gian tính đến thời điểm thực hiện giá thì đều chịu tác động của bất "
+"cứ thay đổi nào của tỷ lệ lãi suất."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 msgid "Price the trade."
@@ -9504,7 +9663,9 @@ msgstr "In biểu đồ"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Prior experience in the financial services industry is preferred, as is an interest in Information Technology and/or Software Development"
-msgstr "Kinh nghiệm trong ngành công nghiệp dịch vụ tài chính là một lợi thế, như là quan tâm đến Công Nghệ Thông Tin và/hoặc Phát Triển Phần Mềm"
+msgstr ""
+"Kinh nghiệm trong ngành công nghiệp dịch vụ tài chính là một lợi thế, như là "
+"đam mê về Công Nghệ Thông Tin và/hoặc Phát Triển Phần Mềm"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/tac.html.tt:24
@@ -9534,7 +9695,7 @@ msgstr "Xử lý bản dịch nội dung trang web khi không có phiên dich vi
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:39
 msgid "Processing Time"
-msgstr "Thời gian xử lý"
+msgstr "Thời gian Xử lý"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:296
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:39
@@ -9570,7 +9731,7 @@ msgstr "Lợi nhuận/Thua lỗ"
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:685
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:74
 msgid "Profit Table"
-msgstr "Bảng lợi nhuận"
+msgstr "Bảng Lợi nhuận"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:212
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:39
@@ -9584,7 +9745,11 @@ msgstr "Lợi nhuận/Thua lỗ (điểm)"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:33
 msgid "Prominently incorporate and continually display the most up-to-date Links provided to you by the Company on your Site and you shall not alter the form, location or operation of the Links without the Company's prior consent"
-msgstr "Công ty luôn cung cấp cho bạn trang web hiển thị liên tục những Đường dẫn cập nhật nhất và kết hợp nổi bật nhất, bạn sẽ không được thay thế định dạng, vị trí hoặc vận hành của đường Dẫn mà không có sự đồng ý trước của Công ty"
+msgstr ""
+"Công ty luôn cung cấp cho bạn những Đường dẫn cập nhật nhất và kết "
+"hợp nổi bật nhất trên trang Web của bạn, bạn sẽ không được thay đổi "
+"định dạng, vị trí hoặc hoạt động của đường Dẫn mà không có sự đồ"
+"ng ý trước của Công ty"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Promote the company using social media and other online channels"
@@ -9601,7 +9766,9 @@ msgstr "Bằng chứng của địa chỉ"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Proofread and correct the content appearing on the company’s website, blogs and social media outlets, from English to the regional language and vice versa"
-msgstr "Kiểm tra và sửa nội dung trên trang web, blog, phương tiện truyền thông xã hội của công ty từ tiếng Anh sang tiếng Việt và ngược lại"
+msgstr ""
+"Kiểm tra và sửa nội dung trên trang web, blog, phương tiện truyền thông xã "
+"hội của công ty, từ tiếng Anh sang tiếng Việt và ngược lại"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Proofread existing content used on the company’s blogs and social media outlets"
@@ -9618,7 +9785,9 @@ msgstr "Không thể xác định được rào cản thích hợp."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Proven knowledge of auditing standards, procedures, laws, rules and regulations are an added advantage"
-msgstr "Chứng minh được kiến thức kiểm toán tiêu chuẩn, thủ tục, pháp luật, quy tắc và quy định là một lợi thế"
+msgstr ""
+"Chứng minh được kiến thức về các tiêu chuẩn của kiểm toán, thủ tục, pháp "
+"luật, quy tắc và quy định là một lợi thế"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Provide administrative support in areas related to vendor management, event planning, accounting, and human resources administration."
@@ -9630,11 +9799,11 @@ msgstr "Cung cấp cho Công ty tất cả những dữ liệu và thông 
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_application.html.tt:22
 msgid "Provide us with the following documentation:"
-msgstr "Cung câp cho chúng tôi những hồ sơ sau:"
+msgstr "Cung cấp cho chúng tôi những hồ sơ sau:"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:333
 msgid "Public and corporation bond"
-msgstr "Trái phiếu công và trái phiếu công ty"
+msgstr "Trái phiếu chính phủ và trái phiếu công ty"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:61
 msgid "Public worker"
@@ -9667,7 +9836,7 @@ msgstr "Giá Mua giao ngay"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:113
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:523
 msgid "Purchase Time"
-msgstr "Thời Gian mua"
+msgstr "Thời gian Mua"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:832
 msgid "Purchase of this contract would cause you to exceed our payout limit for open contracts of this type. To continue please consider to sell a few contracts at the market or trade in different contract types."
@@ -9694,21 +9863,29 @@ msgstr "Purpose of trading"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/responsible_trading.html.haml:1
 msgid "Put a limit on your winnings. Once you have reached it put some aside and trade with the rest of the money."
-msgstr "Hãy đặt giới hạn cho hợp đồng mà bạn đang thắng. Khi bạn đã đạt tới mức đó, hãy để một số sang bên và tiếp tục giao dịch với số tiền còn lại."
+msgstr ""
+"Hãy đặt giới hạn cho hợp đồng mà bạn đang thắng. Khi bạn đã đạt "
+"tới mức đó, hãy để một số tiền sang bên và tiếp tục giao dịch vớ"
+"i số tiền còn lại."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Qualified applicants should have global experience in recruitment administration, excellent administrative skills, and the ability to work in a fast-paced entrepreneurial environment. We are seeking a true professional capable of making an impact by supporting and advancing HR best practices throughout the company’s global operations."
-msgstr "Ứng viên đủ điều kiện phải có kinh nghiệm toàn cầu trong quản lý tuyển dụng, kỹ năng quản trị tốt và khả năng làm việc trong một môi trường kinh doanh cường độ cao. Chúng tôi đang tìm kiếm một chuyên gia thực sự, có khả năng hỗ trợ và đề xuất với HR hệ thống thực hành tốt nhất trong toàn bộ hoạt động toàn cầu của công ty."
+msgstr ""
+"Ứng viên đủ điều kiện phải có kinh nghiệm toàn cầu trong quản lý tuyển dụng, "
+"kỹ năng quản trị tốt và khả năng làm việc trong một môi trường kinh doanh "
+"cường độ cao. Chúng tôi đang tìm kiếm một chuyên gia thực sự, có khả năng hỗ "
+"trợ và đề xuất hệ thống thực hành tốt nhất về nguồn nhân lực trong suốt toàn "
+"bộ hoạt động toàn cầu của công ty."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:514
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Quality Assurance"
-msgstr "Quản Lý Chất Lượng"
+msgstr "Đảm bảo Chất Lượng"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:515
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Quality Assurance Engineer"
-msgstr "Kỹ Sư Quản Lý Chất Lượng"
+msgstr "Kỹ sư Đảm bảo Chất lượng"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:516
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
@@ -9727,7 +9904,7 @@ msgstr "Phân tích Định lượng"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:517
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Quantitative Developer"
-msgstr "Lập Trình Định Lượng"
+msgstr "Lập Trình viên Định lượng"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:426
 msgid "Quote"
@@ -9740,15 +9917,15 @@ msgstr "Ngẫu nhiên"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "Random 100 Index"
-msgstr "100 chỉ số Ngẫu nhiên"
+msgstr "100 Chỉ số Ngẫu nhiên"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "Random 25 Index"
-msgstr "25 chỉ số ngẫu nhiên"
+msgstr "25 Chỉ số Ngẫu nhiên"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "Random 50 Index"
-msgstr "50 chỉ số ngẫu nhiên"
+msgstr "50 Chỉ số Ngẫu nhiên"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "Random 75 Index"
@@ -9761,11 +9938,11 @@ msgstr "Gấu Ngẫu nhiên"
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "Random Indices"
-msgstr "Chỉ số Ngẫu nhiên"
+msgstr "Các chỉ số Ngẫu nhiên"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "Random Markets"
-msgstr "Thị trường Ngẫu nhiên"
+msgstr "Các thị trường Ngẫu nhiên"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "Random Moon"
@@ -9790,7 +9967,7 @@ msgstr "Yang Ngẫu nhiên"
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:480
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:621
 msgid "Rate of Change"
-msgstr "Tỉ lệ trao đổi"
+msgstr "Tỉ lệ Thay đổi"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:35
 msgid "Re-enter password"
@@ -9799,7 +9976,7 @@ msgstr "Nhập lại mật khẩu"
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/settings_securityws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 msgid "Re-enter your password"
-msgstr "Nhập lại mật khẩu"
+msgstr "Nhập lại mật khẩu của bạn"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:30
 msgid "Read"
@@ -9860,6 +10037,10 @@ msgstr "Tham khảo."
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:434
 msgid "Regarding to the OTC price of financial instruments, in case that financial instruments business operator suggests both of  bid and ask price (or trading price and cancellation price), generally there is a difference of them. This option will be wider as the expiration approaches."
 msgstr ""
+"Liên quan tới giá OTC của các công cụ tài chính, trong trường hợp các nhà "
+"kinh doanh các công cụ tài chính yêu cầu cả về giá mua và giá bán (hay giá "
+"giao dịch và giá hủy bỏ), nhìn chung có sự khác nhau giữa chúng. Quyền chọn "
+"này sẽ nhiều hơn khi sắp đến ngày đáo hạn."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Markets Group Ltd. renames to Binary Ltd."
@@ -9867,7 +10048,9 @@ msgstr "Công ty TNHH Regent Markets Group đổi tên thành công ty TNHH Bi
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Markets Group Ltd. renames to Binary Ltd., harmonising company and website branding throughout the organisation."
-msgstr "Công ty TNHH Regent Markets Group đổi tên thành công ty Binary, xây dựng trang web và công ty hài hòa trong tổ chức."
+msgstr ""
+"Công ty TNHH Regent Markets Group đổi tên thành công ty TNHH Binary, xây "
+"dựng trang web và công ty hài hòa trong tổ chức."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Markets acquires BetsForTraders client base"
@@ -9875,7 +10058,12 @@ msgstr "Regent Markets mua lại cơ sở dữ liệu khách hàng của Be
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Markets files for a patent in March 2000 on the basis of our unique position as the sole serious competitor in the business of fixed-odds financial betting. In May, we register the trading name BetOnMarkets and move to Malta to receive an internet betting licence."
-msgstr "Regent Markets có bằng sáng chế tháng 3 năm 2000, chúng tôi có vị trí duy nhất so với các đối thủ cạnh tranh đáng gờm trong lĩnh vực cá cược tài chính tỉ lệ cược cố định. Trong thàng Năm, chúng tôi sẽ đăng kí tên giao dịch BetOnMarkets và tới Malta để nhận giấy phép kinh doanh cá cược trực tuyến."
+msgstr ""
+"Regent Markets có bằng sáng chế tháng 3 năm 2000, chúng tôi đứng vị "
+"trí thứ nhất so với các đối thủ cạnh tranh đáng gờm trong lĩnh vực "
+"cá cược tài chính tỉ lệ cược cố định. Trong tháng Năm, chúng tôi "
+"đăng kí tên giao dịch BetOnMarkets và tới Malta để nhận giấy phép "
+"kinh doanh cá cược trực tuyến."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Markets files for patent, and registers BetOnMarkets trading name"
@@ -9883,7 +10071,9 @@ msgstr "Regent Markets đã có bằng sáng chế, và đăng kí tên g
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Markets granted US patent for ‘Betting system and method’"
-msgstr "Regent Markets được cấp bằng sáng chế của Mỹ về \"phương thức và hệ thống Cá cược\""
+msgstr ""
+"Regent Markets được cấp bằng sáng chế của Mỹ về 'Phương thức và hệ"
+" thống Cá cược'"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Markets granted two new US patents"
@@ -9899,7 +10089,9 @@ msgstr "Regent Markets lấy được giấy phép của Đảo Man"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Markets receives funding to provide on-line financial betting services"
-msgstr "Regent Markets nhận tiền để cung cấp dịch vụ cá cược tài chính trực tuyến"
+msgstr ""
+"Regent Markets nhận tiền để cung cấp các dịch vụ cá cược tài chính "
+"trực tuyến"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Markets sets up a programming centre in Cyberjaya, Malaysia"
@@ -9908,7 +10100,10 @@ msgstr "Regent Markets thiết lập trung tâm lập trình ở Cyberjaya,
 #. (('http://www.regentpac.com/ICMServlet/download/13-1907-3066/EAnnt-ThirdPartiesSale(04Mar2015)
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Pacific Group Ltd., the Hong Kong-listed founding shareholder of Binary.com, <a href=\"%1\" target=\"_blank\">disposes of its stake</a> at a valuation of US$ 50.5 million."
-msgstr "Công ty TNHH Regent Pacific Group, cổ đông của Binary.com được sáng lập ở Hồng Kông, <a href=\"%1\" target=\"_blank\"> có vốn</a> trị giá  50.5 triệu Đô la Mỹ."
+msgstr ""
+"Công ty TNHH Regent Pacific Group, cổ đông sáng lập Binary. com tại Hồng "
+"Kong, <a href=\"%1\" target=\"_blank\"> có vốn góp</a> trị giá  50.5 "
+"triệu Đô la Mỹ."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Regent Pacific transaction"
@@ -9926,20 +10121,25 @@ msgstr "Đăng kí để trở thành một nhân viên kiểm định qua đư�
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Related experience in the financial services industry"
-msgstr "Kinh nghiệm liên quan đến ngành công nghiệp dịch vụ tài chính"
+msgstr "Có kinh nghiệm liên quan đến ngành công nghiệp dịch vụ tài chính"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:478
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:616
 msgid "Relative Strength Index"
-msgstr "Chỉ số Sức mạnh tương đối"
+msgstr "Chỉ số Sức mạnh Tương đối"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Relevant experience in the use of Quant programming libraries and frameworks (Quantlib, PricingPartners, FINCAD, and NumeriX), and quant pricing platforms (SuperDerivatives and FENICS) would be a plus"
-msgstr "Kinh nghiệm liên quan đến việc sử dụng thư viện chương trình Quant và framworks (Quantlib, PricingPartners, FINCAD, and NumeriX), và nền tảng định giá quant (SuperDerivatives and FENICS) là một lợi thế"
+msgstr ""
+"Có kinh nghiệm liên quan đến việc sử dụng thư viện chương trình Quant và các "
+"chương trình khung (Quantlib, PricingPartners, FINCAD, và NumeriX), và nền "
+"tảng định giá quant (SuperDerivatives and FENICS) là một lợi thế"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Relevant work experience in a related field (financial services preferred)"
-msgstr "Kinh nghiệm làm việc có liên quan đến một lĩnh vực liên quan (ưu tiên dịch vụ tài chính)"
+msgstr ""
+"Có kinh nghiệm làm việc thích hợp về một lĩnh vực liên quan (ưu tiên dịch vụ "
+"tài chính)"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/session_expired.html.tt:12
 msgid "Reload Cashier"
@@ -9963,7 +10163,9 @@ msgstr "Hãy trình bày số hợp đồng xuất sắc tối đa có
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:235
 msgid "Represents the maximum volume of contracts that you may purchase in any given trading day."
-msgstr "Hiển thị khối lượng hợp đồng tối đa bạn có thể mua trong ngày giao dịch."
+msgstr ""
+"Hiển thị số lượng hợp đồng tối đa bạn có thể mua trong ngày giao "
+"dịch."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2831
 msgid "Resale of this contract is not offered due to end-of-year market holidays."
@@ -9995,7 +10197,7 @@ msgstr "Giá bán lại"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/verification_email_sent.html.haml:1
 msgid "Resend Verification Email"
-msgstr "Gửi lại Email xác minh"
+msgstr "Gửi lại Email Xác minh"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/lost_password.html.haml:1
 msgid "Reset Password"
@@ -10027,15 +10229,20 @@ msgstr "Chịu trách nhiệm triển khai phần cứng và phần mềm, an ni
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/responsible_trading.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:124
 msgid "Responsible Trading"
-msgstr "Giao dịch có trách nhiệm"
+msgstr "Giao dịch có Trách nhiệm"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Responsible for supporting the Group’s global recruiting and talent management needs and a broad array of HR-related administrative tasks."
-msgstr "Chịu trách nhiệm hỗ trợ Nhóm tuyển dụng toàn cầu, quản lý năng lực và vai trò quản trị liên quan tới nhân sự."
+msgstr ""
+"Chịu trách nhiệm hỗ trợ nhu cầu tuyển dụng toàn cầu của Tập đoàn, quản lý "
+"nhân tài và nhóm quản trị sắp xếp các vấn đề liên quan tới nhân sự."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Responsible for the design and creative direction of the company's website's content and the production of marketing materials in an innovative group."
-msgstr "Chịu trách nhiệm thiết kế và những ý tưởng sáng tạo cho nội dung trên website của công ty và chuẩn bị các tài liệu marketing trong một nhóm sáng tạo."
+msgstr ""
+"Chịu trách nhiệm thiết kế và những ý tưởng sáng tạo cho nội dung trên "
+"website của công ty và chuẩn bị các tài liệu marketing trong một nhóm cải "
+"tiến."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Responsible for the pricing of binary options offered on the Binary.com website and the risk management and profitability of its options book."
@@ -10043,19 +10250,27 @@ msgstr "Chịu trách nhiệm về định giá của các quyền chọn nhị 
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Responsible for the processing of client payments, assisting with the management accounts of the companies within our group, and more."
-msgstr "Chịu trách nhiệm về việc xử lý thanh toán của khách hàng, hỗ trợ quản lý tài khoản của công ty trong phạm vi nhóm hoặc rộng hơn."
+msgstr ""
+"Chịu trách nhiệm về việc xử lý thanh toán của khách hàng, hỗ trợ quản lý tài "
+"khoản của công ty trong phạm vi nhóm, và rộng hơn."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Responsible for the recruiting, training and development of employees and affiliates to achieve assigned sales and marketing objectives"
-msgstr "Chịu trách nhiệm tuyển dụng, đào tạo và phát triển nguồn nhân lực và các chi nhánh để đạt được chỉ tiêu kinh doanh và marketing"
+msgstr ""
+"Chịu trách nhiệm tuyển dụng, đào tạo và phát triển nguồn nhân lực và các chi "
+"nhánh để đạt được chỉ tiêu kinh doanh và marketing đã được giao."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Responsible for the recruiting, training and development of employees and affiliates to achieve assigned sales and marketing objectives."
-msgstr "Chịu trách nhiệm tuyển dụng, đào tạo và phát triển nguồn nhân lực và các chi nhánh để đạt được chỉ tiêu kinh doanh và marketing."
+msgstr ""
+"Chịu trách nhiệm tuyển dụng, đào tạo và phát triển nguồn nhân lực và các chi "
+"nhánh để đạt được chỉ tiêu kinh doanh và marketing đã được giao."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Responsible for the risk management and derivatives pricing of the company, including implementation and maintenance."
-msgstr "Chịu trách nhiệm quản lý rủi ro và định giá phát sinh của công ty, bao gồm việc triển khai và bảo trì."
+msgstr ""
+"Chịu trách nhiệm quản lý rủi ro và định giá vốn phái sinh của công ty, bao "
+"gồm việc triển khai và bảo trì."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:32
 msgid "Retail Clients"
@@ -10063,7 +10278,7 @@ msgstr "Khách hàng Bán lẻ"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:450
 msgid "Retracement Percentages"
-msgstr "Phần trăm thoái lui"
+msgstr "Phần trăm Thoái lui"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:524
 msgid "Retry"
@@ -10078,24 +10293,32 @@ msgstr "Lợi nhuận"
 #. (url_for('trade.cgi?market=forex&form_name=risefall')
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "Returns above 100% on simple <a href='%1' class='pjaxload'>rise/fall</a> contracts."
-msgstr "Lợi nhuận trên 100% dựa trên hợp đồng <a href='%1' class='pjaxload'>tăng/giảm</a> đơn giản."
+msgstr ""
+"Doanh thu trên 100% dựa trên hợp đồng <a href='%1' "
+"class='pjaxload'>tăng/giảm</a> đơn giản."
 
 #. (url_for('trade.cgi?market=forex&form_name=higherlower')
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "Returns above 1000% on <a href='%1' class='pjaxload'>higher/lower</a> and <a href='%2' class='pjaxload'>touch/no-touch</a> trades."
-msgstr "Doanh thu trên 1000% dựa trên <a href='%1' class='pjaxload'>giao dịch</a> cap hơn/thấp hơn <a href='%2' class='pjaxload'>và</a> chạm/không chạm."
+msgstr ""
+"Doanh thu trên 1000% dựa trên <a href='%1' class='pjaxload'>giao dịch</a> "
+"cao hơn/thấp hơn và <a href='%2' class='pjaxload'> chạm/không chạm."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Review suspicious account transactions"
-msgstr "Kiểm tra lại các giao dịch tài khoản đáng ngờ"
+msgstr "Kiểm tra lại các giao dịch tài khoản đáng nghi ngờ"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Review, develop and enhance Perl, C++ and R codes used in options pricing, volatility forecasts, and risk management program"
-msgstr "Đánh giá, phát triển, cải tiến Perl, C++ và mã R sử dụng trong tùy chọn định giá, dự báo biến động và chương trình quản lý rủi ro"
+msgstr ""
+"Đánh giá, phát triển, cải tiến Perl, C++ và mã R sử dụng trong định giá các "
+"hợp đồng quyền chọn, dự báo biến động giá và chương trình quản lý rủi ro"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Review, develop and enhance codes used in option pricing and real time risk management programs"
-msgstr "Đánh giá, phát triển, cải tiến mã sử dụng trong tùy chọn định giá và các chương trình quản lý rủi ro thời gian thực"
+msgstr ""
+"Đánh giá, phát triển, cải tiến các mã sử dụng trong việc định giá quyền chọn "
+"và các chương trình quản lý rủi ro thời gian thực"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:533
 msgid "Right click to add studies, lines, overlays and more. You can save your work by choosing Workspace from the top menu"
@@ -10109,7 +10332,9 @@ msgstr "Tăng/Giảm"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/ContractForm.pm:642
 msgid "Rise/Fall contracts of less than 5 minutes duration are only available when you select \"Now\" as the start time."
-msgstr "Hợp đồng Tăng/Giảm trong khoảng thời gian ít hơn 5 phút luôn có khi bạn chọn \"Bây giờ\" làm thời gian bắt đầu."
+msgstr ""
+"Tăng/Giảm các hợp đồng trong khoảng thời gian ít hơn 5 phút chỉ khả "
+"dụng khi bạn chọn nút \"Bây giờ\" làm thời gian bắt đầu."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "Rise/Fall trades"
@@ -10118,7 +10343,7 @@ msgstr "Giao dịch Tăng/Giảm"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/tac.html.tt:26
 msgid "Risk Disclaimer"
-msgstr "Miễn trách nhiệm rủi ro"
+msgstr "Miễn trách nhiệm Rủi ro"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/risk.html.tt:2
 msgid "Risk For Binary Option Trading"
@@ -10134,7 +10359,7 @@ msgstr "Risks for binary option trading"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:72
 msgid "Risks of Investment Products"
-msgstr "Rủi ro của Sản phẩm Đầu tư"
+msgstr "Rủi ro của các Sản phẩm Đầu tư"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Run daily payments reports and report suspected fraud"
@@ -10161,7 +10386,7 @@ msgstr "Ngày Bán hàng"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:211
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/sell_success_ajax.html.tt:11
 msgid "Sale Price"
-msgstr "Giá bán hàng"
+msgstr "Giá Bán hàng"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:79
 msgid "Saturday"
@@ -10194,7 +10419,10 @@ msgstr "Lưu theo định dạng SVG"
 #. (broker_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:26
 msgid "Seasoned traders can use the %1 platform for the full advantage of the wide range of trading and analysis tools we have on offer."
-msgstr "Người giao dịch dày dặn có thể sử dụng sàn giao dịch %1 để tận dụng hàng loạt các công cụ phân tích và giao dịch mà chúng tôi cung cấp."
+msgstr ""
+"Người giao dịch dày dặn có thể sử dụng sàn giao dịch %1 để tận "
+"dụng triệt để hàng loạt các công cụ phân tích và giao dịch mà chú"
+"ng tôi cung cấp."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1705
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:123
@@ -10221,29 +10449,28 @@ msgstr "Câu hỏi bí mật"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:24
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:7
 msgid "Section 1: Structure"
-msgstr ""
+msgstr "Phần 1: Cấu trúc"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:10
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:27
 msgid "Section 2: Method"
-msgstr ""
+msgstr "Phần 2: Phương pháp"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:13
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:30
 msgid "Section 3: Outline"
-msgstr ""
+msgstr "Phần 3: Những điểm chính"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:16
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:33
 msgid "Section 4: Risk"
-msgstr ""
+msgstr "Phần 4: Rủi ro"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:19
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:36
-#, fuzzy
 #| msgid "Session duration:"
 msgid "Section 5: Calculation"
-msgstr "Thời hạn phiên:"
+msgstr "Phần 5: Tính toán"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:108
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:634
@@ -10289,18 +10516,18 @@ msgstr "Chọn tài sản cơ sở của bạn"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:40
 msgid "Self Exclusion"
-msgstr "Tự loại trừ"
+msgstr "Tự Loại trừ"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:603
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:688
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:365
 msgid "Self-Employed"
-msgstr "Self-employed"
+msgstr "Tự kinh doanh"
 
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:23
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:2
 msgid "Self-Exclusion Facilities"
-msgstr "Thiết bị tự loại trừ"
+msgstr "Thiết bị Tự loại trừ"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:62
 msgid "Self-employed"
@@ -10316,7 +10543,7 @@ msgstr "Giá Bán"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:475
 msgid "Sell Spot"
-msgstr "Bán Giá giao ngay"
+msgstr "Giá Bán giao ngay"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:467
 msgid "Sell Time"
@@ -10348,12 +10575,14 @@ msgstr "Gửi chúng tôi CV và thư xin việc mô tả mối quan tâm n
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_list.html.tt:10
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_listws.html.tt:11
 msgid "Send your funds to the payment agent. The deposited funds, less the agent's commission, will show up in your account."
-msgstr "Gửi tiền cho đại lý thanh toán. tiền đã nộp, ít hơn hoa hồng của đại lý, sẽ được hiển thị trong tài khoản của bạn."
+msgstr ""
+"Gửi tiền của bạn cho đại lý thanh toán. Tiền đã nộp, ít hơn hoa hồ"
+"ng của đại lý, sẽ được hiển thị trong tài khoản của bạn."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:512
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Senior Front-End Developer"
-msgstr "Lập Trình Viên Front-End"
+msgstr "Lập Trình Viên Front-End có kinh nghiệm"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:513
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
@@ -10385,7 +10614,7 @@ msgstr "Giới hạn thời gian phiên hiện tại được thiết lậ
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:275
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:94
 msgid "Session duration limit, in minutes"
-msgstr "Giới hạn thời gian phiên trong vài phút"
+msgstr "Giới hạn thời gian phiên, trong vài phút"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check.html.haml:1
 msgid "Session duration:"
@@ -10399,7 +10628,7 @@ msgstr "Thiết lập giới hạn tiền gửi và thua lỗ của khách hàng
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:766
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:2
 msgid "Settings"
-msgstr "Thiết lập"
+msgstr "Cài đặt"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:307
 msgid "Settles"
@@ -10411,7 +10640,7 @@ msgstr "Quyết toán"
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:699
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:709
 msgid "Sharp Prices. Smart Trading."
-msgstr "Giá sắc bén: Giao dịch thông minh."
+msgstr "Giá sắc bén. Giao dịch thông minh."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
@@ -10421,7 +10650,7 @@ msgstr "Giá sắc bén"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:216
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1151
 msgid "Short"
-msgstr "Vị thế Bán"
+msgstr "Ngắn"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:399
 msgid "Short positions of currency-related binary option is conducted transactions by depositing necessary margin requirement to trader in advance. If the margin shortage after the transaction established, it is necessary to deposit the additional margin to the trader"
@@ -10433,7 +10662,7 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:675
 msgid "Short summary of your Payment Agent service"
-msgstr "Tóm tắt ngắn về dịch vụ Đại lý thanh toán của bạn"
+msgstr "Tóm tắt sơ lược về dịch vụ Đại lý Thanh toán của bạn"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:54
 msgid "Should a disruption occur in the data feeds which cannot be readily rectified by the Company, the Company reserves the right to refund the contract purchase."
@@ -10463,7 +10692,7 @@ msgstr "Hiển thị đại lý thanh toán cho:"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/user_testing.html.haml:1
 msgid "Sign Up to Test Our Platform"
-msgstr "Đăng kí để trải nghiệm nền tảng của chúng tôi"
+msgstr "Đăng kí để Trải nghiệm Sàn giao dịch của chúng tôi"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/main.html.tt:14
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/main.html.tt:37
@@ -10473,7 +10702,9 @@ msgstr "Đăng nhập"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Significant experience in, Social Media, Marketing, and/or advertising"
-msgstr "Nhiều kinh nghiệm trong lĩnh vực Truyền thông xã hội, Marketing hoặc quảng cáo"
+msgstr ""
+"Nhiều kinh nghiệm trong lĩnh vực, Truyền thông Xã hội, Marketing, và/hoặc "
+"quảng cáo"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:410
 msgid "Simple Moving Average"
@@ -10490,16 +10721,26 @@ msgstr "Đơn giản thay đổi bất kì thông số nào và giá giao
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:6
 msgid "Simply click on \"Create\" to generate your token; then copy and paste it into the app."
-msgstr "Chỉ cần nhấp vào \"Tạo\" để tạo ra các mã token của bạn; sau đó sao chép và dán nó vào ứng dụng."
+msgstr ""
+"Chỉ cần nhấp vào nút \"Tạo\" để tạo ra các mã token của bạn; sau đó sao chép "
+"và dán nó vào ứng dụng."
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Since all dealing on the %1 website is fully automated, our pricing and risk management algorithms must take full account of real-time pricing parameters, data feed irregularities and latencies."
-msgstr "Kể từ khi tất cả các giao dịch trên website %1 hoàn toàn tự động, thuật toán quản lý giá cả và rủi ro của chúng tôi đòi hỏi phải có bản báo cáo với đầy đủ các thông số định giá thời gian thực, dữ liệu nguồn cấp bất thường và âm thầm."
+msgstr ""
+"Vì tất cả các giao dịch trên trang web %1 hoàn toàn tự động, các thuật toán "
+"quản lý giá cả và rủi ro của chúng tôi đòi hỏi phải có các thông số định giá "
+"theo thời gian thực, nguồn dữ liệu bất thường và tiềm tàng."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:31
 msgid "Since their inception, 'binary options' has become a popular trading product. The numerous binary options trading platforms subsequently being created, support this growing trend. By becoming an affiliate now you can profit from the fast growth of interest in this new industry."
-msgstr "Từ khi ra đời, cá cược chứng khoán 'binary option' nhanh chóng trở thành sản phẩm giao dịch phổ biến. Hàng loạt sàn giao dịch chứng khoán binary option ra đời theo cấp số nhân và trở thành xu hướng. Trở thành nhà liên kết ngay hôm nay, bạn có thể có cơ hội kiếm lời nhanh chóng trong ngành công nghiệp mới này."
+msgstr ""
+"Từ khi ra đời, hợp đồng quyền chọn nhị phân 'binary option' nhanh chóng trở "
+"thành sản phẩm giao dịch phổ biến. Hàng loạt các sàn giao dịch chứng "
+"khoán quyền chọn nhị phân ra đời sau đó và trở thành một  xu hướng mới nổi. "
+"Hãy trở thành một nhà liên kết ngay hôm nay và bạn có thể có cơ hội kiếm "
+"lời nhanh chóng trong ngành công nghiệp mới này."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:70
 msgid "Since we exclusively deal on own account in Financial Products this means that we act as the execution venue and accordingly all transactions entered into with us will be executed outside a regulated market (stock exchange) or multilateral trading facility."
@@ -11418,6 +11659,8 @@ msgstr "Nội dung tĩnh của trang web Binary.com (CSS, Javascript) luôn co
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:464
 msgid "The Black-Scholes model is widely used to calculate theoretical option prices."
 msgstr ""
+"Mô hình Black-Scholes được sử dụng một cách rộng rãi trong việc tính giá "
+"quyền chọn về mặt lý thuyết."
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:588
 msgid "The CCI is a timing system that is best applied to commodity contracts, which have cyclical or seasonal tendencies. CCI does not determine the length of cycles - it is designed to detect when such cycles begin and end through the use of a statistical analysis which incorporates a moving average and a divisor reflecting both the possible and actual trading ranges."
@@ -11698,6 +11941,11 @@ msgstr "Tiền thưởng sẽ được cộng vào tài khoản khi khoản ti�
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:421
 msgid "The buyer of the plane option can waiver when incriminating, so the maximum loss of buyer is option fee and maximum earning is the amount subtracted by the difference of underlying asset price and exercise price from option fee. Therefore, when the underlying asset price is infinite, the profit will be infinite."
 msgstr ""
+"Người mua của quyền chọn thông thường có thể khước từ giao dịch, nên số tiền "
+"thua lỗ tối đa của người mua là chi phí quyền chọn và lợi nhuận tối đa là số "
+"tiền thu được của sự chênh lệch giữa tài sản cơ sở và giá thực hiện từ phí "
+"quyền chọn trừ cho nhau. Do đó, khi giá của tài sản cơ sở là vô cùng, lợi "
+"nhuận cũng sẽ là vô cùng."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:48
 msgid "The calculation of the price to be paid (or the payout to be received) for financial contracts on this site at the time the financial contract is purchased or sold will be based on the Company's best estimate of market price movements and the expected level of interest rates, implied volatilities and other market conditions during the life of the financial contract, and is based on complex mathematics. The calculation will include a bias in favour of the Company. The financial contract prices (or the payout amounts) offered to Clients speculating on market or index prices may differ substantially from prices available in the primary markets where stock indices or commodities or contracts thereupon are traded, due to the bias favouring the Company in the price calculation system referred to above."
@@ -11753,6 +12001,9 @@ msgstr "Nội dung trên trang web này có thể thay đổi bất cứ lúc n�
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:431
 msgid "The contents of the financial instruments of the OTC binary options are the same even transactions dealers handling financial instruments business are different."
 msgstr ""
+"Nội dung của các công cụ tài chính của các quyền chọn nhị phân OTC là giống "
+"nhau kể cả khi các nhà giao dịch người mà thực hiện kinh doanh các công cụ "
+"tài chính này là khác nhau."
 
 #. ($currency,                to_monetary_number_format($amount)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1128
@@ -11813,6 +12064,13 @@ msgstr "Giá giao ngay nhập vào là giá bắt đầu của giao dịc
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:411
 msgid "The exit price is important in binary options. In case of handling the OTC currency-related binary options trading for personal, company inspects if mistakes and intentional operation has not been performed inspection for exit price the company determined and also checking whether there is an error in the data in case that the company use the rate data provided by third company."
 msgstr ""
+"Giá rút khỏi thị trường rất quan trọng trong quyền chọn nhị phân.Trong "
+"trường hợp thực hiện giao dịch quyền chọn nhị phân liên quan đến tiền tệ OTC "
+"với khách hàng cá nhân, chúng tôi sẽ kiểm tra liệu có sai lầm hay hoạt động "
+"có chủ ý chưa được kiểm soát đối với giá rút khỏi thị trường hay không, công "
+"ty chúng tôi đã phát hiện ra và cũng đang kiểm tra liệu có lỗi dữ liệu nào "
+"hay không trong trường hợp loại dữ liệu được sử dụng được cung cấp bởi bên "
+"thứ 3."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "The expiry price is the price of the underlying when the contract expires."
@@ -11892,6 +12150,11 @@ msgstr "Tên đã được lấy."
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:420
 msgid "The option of the leverage effect, the buyer is likely to be obtained several times profit compared to the option fee, but the loss is limited to the option fee, when it comes to seller, profit is limited to the option fee, but loss will be likely to be doubled of option fee."
 msgstr ""
+"Quyền chọn có tác dụng đòn bẩy, người mua có khả năng nhận được lợi nhuận "
+"gấp vài lần so với chi phí quyền chọn, nhưng số tiền thua lỗ bị giới hạn về "
+"mức chi phí quyền chọn, đối với người bán, lợi nhuận thì được giới hạn tới "
+"mức chi phí quyền chọn, nhưng số tiền thua lỗ có thể gấp đôi chi phí quyền "
+"chọn."
 
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Plack.pm:273
 msgid "The page has timed out. This may be due to a slow Internet connection, or to excess load on our servers.  Please try again in a few moments."
@@ -11915,6 +12178,9 @@ msgstr "Tiền lãi là số tiền được trả cho một nhà giao dịch 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:409
 msgid "The payout is the amount that seller of the option paid to the buyer as a result of exercising the right, when the predetermined exercise conditions meet and the amount paid like that called payout amount."
 msgstr ""
+"Tiền thưởng là số tiền mà người bán quyền chọn phải trả cho người mua như là "
+"kết quả của việc người bán thực hiện thành công giao dịch, khi mà các điều "
+"kiện dự đoán là đúng và số tiền được trả như vậy được gọi là số tiền thưởng."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:6
 msgid "The personal information that we obtain about you assists us in servicing your account. We know you may be concerned about what we do with this information, and with financial information about your account. The following outlines our privacy practices."
@@ -11927,14 +12193,23 @@ msgstr "Sàn giao dịch cao cấp cho giao dịch quyền chọn nhị phân
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:432
 msgid "The price of OTC binary options of the same conditions, (sometimes) the price varies depending on transactions dealers handling financial instruments business."
 msgstr ""
+"Giá của quyền chọn nhị phân OTC trong cùng một điều kiện, (đôi khi) giá này "
+"rất khác nhau tùy thuộc vào các nhà giao dịch người mà thực hiện kinh doanh "
+"các công cụ tài chính."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:458
 msgid "The price of a binary option is affected by not only the change in the underlying asset price, but also the change in remaining time to the exercise point."
 msgstr ""
+"Giá của quyền chọn nhị phân bị tác động bởi không chỉ sự thay đổi của giá "
+"tài sản cơ sở, mà còn phụ thuộc vào sự thay đổi của thời gian còn lại để đạt "
+"tới điểm thực hiện giá."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:436
 msgid "The price of an option can be affected by the underlying asset price, by the volatility rate of the underlying asset, or by the time remaining to the exercise time."
 msgstr ""
+"Giá của một quyền chọn có thể bị ảnh hưởng bởi giá của tài sản cơ sở, bởi "
+"mức biến động giá của tài sản cơ sở, hoặc bởi thời gian còn lại để tiến tới "
+"thời gian thực hiện giá."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "The profit is the difference between the purchase price (the stake) and the payout on a winning trade."
@@ -11988,6 +12263,8 @@ msgstr "Được quyền chỉnh sửa hoặc thay đổi quy tắc và p
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:418
 msgid "The seller of an option should receive the option premium from the buyer, even if the buyer waives the right to exercise the option."
 msgstr ""
+"Người bán một quyền chọn phải nhận được tiền bảo hiểm quyền chọn từ người "
+"mua, kể cả khi người mua khước từ quyền thực hiện giao dịch."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:27
 msgid "The smoothing and filtering algorithms described above."
@@ -12021,6 +12298,9 @@ msgstr "Thời gian bây giờ là %1 %2 và thời gian mở cửa thị
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:448
 msgid "The time-value of an option represents the expected value of the option at the exercise point, and may be positive, even when the intrinsic-value is zero."
 msgstr ""
+"Giá trị thời gian của một quyền chọn thể hiện giá trị kỳ vọng của quyền chọn "
+"này tại thời điểm thực hiện giá, và có thể mang tính tích cực, kể cả khi giá "
+"trị nội tại của nó là 0."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:55
 msgid "The token is invalid."
@@ -12054,6 +12334,12 @@ msgstr "Sau đó, giao dịch"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:372
 msgid "There are many types of Binary Option, including some such as Range Binary Options and Touch or No-Touch Binary Options which do not always require automatic payment at Exercise Time and which will be settled earlier if certain conditions have been met. However, in all cases, for a payment to be required, the option must end In The Money."
 msgstr ""
+"Có rất nhiều loại Quyền chọn Nhị phân, bao gồm một số loại ví dụ như Quyền "
+"chọn Nhị phân Dải và Quyền chọn Nhị phân Chạm hoặc Không Chạm là những quyền "
+"chọn mà không bắt buộc phải luôn luôn thanh toán tại Thời gian Thực hiện giá "
+"và sẽ được thanh toán sớm hơn nếu một số điều kiện nhất định được thỏa mãn. "
+"Tuy nhiên, trong mọi trường hợp, với thanh toán được yêu cầu, quyền chọn này "
+"phải kết thúc tại vùng có tiền."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_list.html.tt:26
 msgid "There are no available Payment Agents."
@@ -12079,10 +12365,21 @@ msgstr "Có những rủi ro liên quan đến việc sử dụng một hệ th�
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:371
 msgid "There are some types of Binary Option, such as Range Binary Options, Touch or No-Touch Binary Options, that are exceptions to the general rule where payment is made at a known exercise time. For these types of option a payment is made automatically at Exit Time when certain conditions have been met."
 msgstr ""
+"Có một số loại Quyền chọn Nhị phân, ví dụ như là Quyền chọn Nhị phân Dải, "
+"Quyền chọn Nhị phân Chạm hoặc Không Chạm là những quyền chọn có ngoại lệ "
+"trong luật lệ thanh toán tại thời điểm thực hiện giá. Với những loại quyền "
+"chọn này thanh toán được thực hiện một cách tự động tại Thời điểm rút khỏi "
+"thị trường khi một số điều kiện nhất định được thỏa mãn."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:368
 msgid "There are two types of option delivery: One requires exchanging the underlying asset, and the other requires a payment which depends on the difference between the fair market price and the exercise price. A Binary Option is the second type where if the fair market price meets certain conditions with respect to the exercise price, then an agreed fixed amount will be paid to the option buyer."
 msgstr ""
+"Có hai loại chuyển nhượng quyền chọn: Một loại yêu cầu trao đổi tài sản cơ "
+"sở, và loại còn lại yêu cầu thanh toán cái mà phụ thuộc vào sự khác nhau "
+"giữa giá thị trường giao dịch và giá thực hiện. Một Quyền chọn Nhị phân "
+"thuộc loại thứ 2 thì khi giá thị trường giao dịch đáp ứng một số điều kiện "
+"nhất định so với giá thực hiện, và sau đó số tiền cố định đã được thỏa thuận "
+"sẽ được trả cho người mua quyền chọn."
 
 #. (underlying.translated_display_name, start_date.date)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/intraday_prices.html.tt:28
@@ -12484,6 +12781,8 @@ msgstr "Để xác thực tài khoản của bạn, vui lòng gửi email 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:382
 msgid "To avoid or hedge the future price of an underlying asset which you hold, you should buy a call option"
 msgstr ""
+"Để tránh hoặc tự bảo hiểm giá trong tương lai của một tài sản cơ sở mà bạn "
+"đang nắm giữ, bạn nên mua một quyền chọn mua"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "To be considered for this mission critical leadership role, you’ll need to demonstrate a passion for open source technologies and a desire to test your talents in a dynamic and challenging work environment."
@@ -12501,6 +12800,8 @@ msgstr "Để thay đổi tên, ngày sinh, nơi sinh, hoặc email, vui lo�
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:383
 msgid "To compensate for any rise in the price of an underlying asset that you intend to buy in future, you should buy a call option"
 msgstr ""
+"Để bù lại bất kỳ sự tăng giá nào của tài sản cố định mà bạn có ý định mua "
+"trong tương lai, bạn nên mua một quyền chọn mua"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/session_expired.html.tt:9
 msgid "To continue using our cashier system, please try accessing it again:"
@@ -12764,6 +13065,9 @@ msgstr "Giao dịch trên loại hợp đồng này bị đình chỉ một
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:396
 msgid "Trading period (expiration) of binary option is 2 hours and more. All of the transactions are established at the start of the trading period and the established position will be settled only by judge."
 msgstr ""
+"Kỳ giao dịch (kỳ đáo hạn) của một quyền chọn nhị phân là 2 tiếng và có thể "
+"nhiều hơn. Tất cả các giao dịch đều được tính từ thời điểm bắt đầu của kỳ "
+"giao dịch và vị trí bắt đầu sẽ chỉ được ấn định bởi trọng tài."
 
 #. ($localized_eod_blackout_start->as_string)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2486
@@ -12975,10 +13279,15 @@ msgstr "Trừ phi được yêu cầu, nếu không chúng tôi sẽ coi ba
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:415
 msgid "Unless special arrangements are made, cooling-off will not be available after OTC binary options trading contract has been made."
 msgstr ""
+"Trừ khi có những thỏa thuận đặc biệt được đưa ra, sau khi hợp đồng giao dịch "
+"quyền chọn nhị phân OTC được lập ra thì người mua không thể hủy quyết định "
+"giao dịch mua hàng của mình."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:452
 msgid "Unlike a plain vanilla option, an in-the-money binary option will have a lower price, the further away it is from the exercise point."
 msgstr ""
+"Không giống như quyền chọn thông thường, một quyền chọn nhị phân đang nằm ở "
+"vùng có tiền sẽ có giá thấp hơn khi nó càng nằm ở xa điểm thực hiện giá."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:503
 msgid "Unlock Cashier"
@@ -13063,10 +13372,22 @@ msgstr "Sử dụng trang web của chúng tôi, khách hàng có thể gi
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:395
 msgid "Using two options, if get  binary call option which exercise price is higher and binary put option which exercise price is lower, its possible to obtain profit in case that exit price is out side of the price range made by exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is out side of the predetermined price."
 msgstr ""
+"Khi thực hiện hai quyền chọn, quyền chọn nhị phân mua có giá thực hiện cao "
+"hơn và quyền chọn nhị phân bán có giá thực hiện thấp hơn, thì có thể có lợi "
+"nhuận trong trường hợp giá rút khỏi thị trường nằm ngoài vùng giá được tạo "
+"nên bởi giá thực hiện của hai quyền chọn này và có thể đầu tư lấy lãi vào "
+"quyền chọn dải trong trường hợp giá rút khỏi thị trường nằm ngoài vùng giá "
+"đã xác định trước."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:394
 msgid "Using two options, if obtain  binary put option which exercise price is higher and binary call option which exercise price is lower, its possible to obtain profit in case that exit price is between the exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is in side of the predetermined price."
 msgstr ""
+"Khi thực hiện hai quyền chọn, quyền chọn nhị phân bán có giá thực hiện cao "
+"hơn và quyền chọn nhị phân mua có giá thực hiện thấp hơn, có thể có lãi "
+"trong trường hợp giá rút khỏi thị trường nằm giữa 2 mức giá thực hiện của "
+"hai quyền chọn này và có thể đầu tư lấy lãi vào quyền chọn nhị phân dải "
+"trong trường hợp giá rút khỏi thị trường nằm trong vùng giá đã được xác định "
+"trước."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_application.html.tt:34
 msgid "Utility bill (within last 3 months)"
@@ -13997,7 +14318,7 @@ msgstr "Bạn không đượcquyền rút tiền qua đại lý thanh toá
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:142
 msgid "You are not eligible for Japan knowledge test."
-msgstr ""
+msgstr "Bạn không phù hợp để tham gia bài kiểm tra kiến thức Nhật bản."
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:22
