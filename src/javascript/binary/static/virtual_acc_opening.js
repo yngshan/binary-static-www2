@@ -38,7 +38,7 @@ pjax_config_page("new_account/virtualws", function(){
           Validate.errorMessageToken(verificationCode, errorVerificationCode);
           Validate.hideErrorMessage(errorAccount);
 
-          if (Validate.errorMessagePassword(password, rPassword, errorPassword, errorRPassword) && !Validate.errorMessageResidence(residence, errorResidence)){
+          if (Validate.errorMessagePassword(password, rPassword, errorPassword, errorRPassword) && !Validate.errorMessageResidence(residence, errorResidence) && Validate.validateToken(verificationCode, errorVerificationCode)){
             BinarySocket.init({
               onmessage: function(msg){
                 var response = JSON.parse(msg.data);
