@@ -16,11 +16,13 @@ var Applications = (function(){
             if (!tableExist()) {
                 $("#loading").remove();
                 ApplicationsUI.createEmptyTable().appendTo("#applications-ws-container");
-                var titleElement = document.getElementById("applications-title").firstElementChild;
+                var titleElement = document.getElementById("applications-title").firstElementChild,
+                    desc = document.getElementById("#description");
                 titleElement.textContent = text.localize(titleElement.textContent);
+                desc.textContent = text.localize(desc.textContent);
             }
             
-            // Show a message when the table is empty
+            // Show a message when the table is empty.
             if (applications.length === 0) {
                 ApplicationsUI.clearTableContent();
                 $('#applications-table tbody')
