@@ -980,14 +980,8 @@ Contents.prototype = {
                 }
                 if (show_financial) {
                     $('#financial-upgrade-link').removeClass('invisible');
-                    if ($('#investment_message').length > 0) {
-                        $('#investment_message').removeClass('invisible');
-                    }
                 } else {
                     $('#financial-upgrade-link').addClass('invisible');
-                    if ($('#investment_message').length > 0) {
-                        $('#investment_message').addClass('invisible');
-                    }
                 }
             }
         }
