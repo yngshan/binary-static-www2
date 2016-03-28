@@ -7,9 +7,10 @@ msgstr ""
 "Project-Id-Version: I 18N\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-24 09:28+0000\n"
-"Last-Translator: Khalik Pratama <khalik@binary.com>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/binary/static/id/>\n"
+"PO-Revision-Date: 2016-03-28 06:39+0000\n"
+"Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
+"Language-Team: Indonesian "
+"<https://hosted.weblate.org/projects/binary/static/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,10 +21,14 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:391
 msgid " At buying call option, break-even point is the price added option fee of a unit of the underlying asset to exercise price."
 msgstr ""
+"Pada posisi beli call option, break-even point adalah harga yang ditambahkan "
+"dengan biaya option sebuah unit dari harga dasar untuk melatih harga."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:392
 msgid " At buying put option, break-even point is the price minuses option fee of a unit of the underlying asset to exercise price."
 msgstr ""
+"Pada posisi beli put option, break-even point adalah harga yang dikurangi "
+"biaya option sebuah unit dari harga dasar untuk melatih harga."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:47
 msgid "\"Binary\" or \"digital\" options are options that pay a pre-determined, fixed amount, depending on whether or not an event occurs at the time the Binary Option expires. Binary Options can have only one of two possible outcomes and allow you to take a simple \"Yes or No\" approach. Like traditional options, Binary Options are based on an underlying asset such as currencies, commodities, indexes or stocks, however one of the most significant differences from traditional options, among others, is that there can be only two outcomes for the option, either the client is paid the return upon the occurrence of the event, or the client loses the investment amount as determined in each option."
@@ -1006,6 +1011,10 @@ msgstr "== Bebas Pulsa =="
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:369
 msgid "A  Net Settlement type of option is one where the underlying asset does not include yen, but the option fee and settlement are paid in yen; it therefore requires some definition of how the settlement amounts will be calculated and converted to yen."
 msgstr ""
+"Jenis penyelesaian bersih sebuah opsi adalah dimana aset dasar tidak "
+"termasuk yen, namun biaya opsi dan penyelesaian adalah dibayar dalam yen, "
+"maka diperlukan beberapa definisi mengenai cara perhitungan angka "
+"penyelesaian dan dikonversi ke yen."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "A Bachelor’s degree in Computer Science, or an equivalent combination of technical education, training and work experience"
@@ -1018,14 +1027,27 @@ msgstr "Sarjana dalam bisnis atau disiplin terkait"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:370
 msgid "A Binary Option contains the right for the buyer to receive a certain fixed amount if the market price reaches the exercise price by the exercise time, but it does not contain any rights to sell or buy the underlying asset."
 msgstr ""
+"Opsi Binary terdiri dari pembeli yang akan menerima jumlah tetap jika harga "
+"pasar mencapai harga yang telah ditetapkan sesuai dengan waktu tertentu "
+"namun tidak menjamin pembeli untuk dapat menjual atau membeli aset yang "
+"mendasari."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:373
 msgid "A Currency Binary Option is one where there is a target for a particular currency pair, so a strike price for the exchange rate is agreed, and a payout will be due if the judgment price meets the conditions of being over or under the target strike price, depending on the option type, by the exercise time."
 msgstr ""
+"Pada opsi Mata Uang Binary tersedia target bagi pasangan mata uang tertentu, "
+"dimana target harga nilai tukar disetujui dan hasil akan diterima jika "
+"analisa memenuhi syarat diatas atau dibawah target harga tergantung pada "
+"jenis opsi, berdasarkan periode waktu."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:367
 msgid "A Currency Option confers the right to sell one currency in exchange for another currency as the underlying asset. For example, the right to sell Yen and buy Dollars is known as a Yen Put / Dollar Call Option, or just Yen Put for short; and the opposite right to buy Yen and sell Dollar is called a Yen Call / Dollar Put Option, or just Yen Call for short."
 msgstr ""
+"Opsi Mata Uang memberi kesempatan untuk menjual satu mata uang dalam "
+"pertukaran dengan mata uang lain sebagai aset dasar. Contoh, penjualan Yen "
+"dan pembelian Dolar dikenal sebagai Yen Put/Dolar Call Option, atau hanya "
+"Yen Put secara singkat dan kesempatan membeli kebalikan yaitu Yen dan "
+"menjual Dolar disebut sebagai Opsi Yen Call/Dolar Put, atau hanya Yen Call."
 
 #. ($params->{website_name})
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:93
@@ -1063,19 +1085,28 @@ msgstr "Opsi binary adalah opsi yang memberikan hasil tetap yang ditentukan pada
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:450
 msgid "A binary option price cannot exceed the payout amount."
-msgstr ""
+msgstr "Harga opsi binary tidak dapat melebihi jumlah hasil."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:455
 msgid "A binary option which is in-the-money will have a higher value than an option that is out-of-the-money because there will be a higher probability of receiving the payout amount."
 msgstr ""
+"Opsi binary yang searah akan memiliki nilai yang lebih tinggi dibandingkan "
+"dengan opsi yang berlawanan arah karena memiliki kesempatan lebih tinggi "
+"untuk memperoleh hasil."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:454
 msgid "A binary option which is out-of-the-money will have a lower price than an option which is in-the-money because the probability of receiving the payout amount is lower."
 msgstr ""
+"Opsi binary yang berlawanan arah akan memiliki harga yang lebih rendah "
+"dibandingkan dengan opsi yang searah karena kesempatan untuk memperoleh "
+"hasil lebih rendah."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:397
 msgid "A bought or sold binary option may be closed-out before exercise time by selling or buying-back the option, or alternatively by cancelling."
 msgstr ""
+"Opsi binary yang dibeli atau dijual dapat ditutup sebelum mencapai waktu "
+"akhir dengan menjual atau membeli opsi, atau alternatif lain dengan "
+"membatalkan."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "A broad array of HR-related administrative tasks"
@@ -1117,6 +1148,8 @@ msgstr "Daftar jenis metode pembayaran yang akan Anda sediakan"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:465
 msgid "A modified version of the Black-Scholes model is widely used to calculate the theoretical prices of binary options."
 msgstr ""
+"Sebuah versi modifikasi dari model Black-Scholes secara luas digunakan untuk "
+"menghitung harga opsi binary."
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:576
 msgid "A momentum indicator showing the percent rate-of-change of a triple exponentially smoothed moving average. Like other oscillators, TRIX oscillates around a zero line."
@@ -1246,6 +1279,12 @@ msgstr "Tentang"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:412
 msgid "About OTC currency for binary options trading, summarizes the profit and loss result of all transactions that have been made between the customer, to publish the information in the company's home page, at any time while the customer is doing the transaction before the start, or the transaction, the information Make sure, for that you're willing to trade under the calm judgment, we are committed to a variety of environmental improvement."
 msgstr ""
+"Mengenai trading opsi binary pada mata uang OTC, merangkum laba rugi akibat "
+"semua transaksi yang telah dilakukan oleh pelanggan, untuk mempublikasikan "
+"informasi di halaman utama perusahaan, kapan saja pelanggan melakukan "
+"transaksi sebelum mulai maka perlu dipastikan bahwa Anda melakukan trading "
+"sepenuhnya dalam keadaan tenang, kami berkomitmen untuk berbagai perbaikan "
+"lingkungan."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/about/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
@@ -1321,10 +1360,9 @@ msgid "Account balance: "
 msgstr "Saldo akun Anda: "
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Authorize.pm:27
-#, fuzzy
 #| msgid "Your account is disabled"
 msgid "Account is dsiabled"
-msgstr "Akun Anda telah dibatalkan"
+msgstr "Akun telah dibatalkan"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:528
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
@@ -1488,6 +1526,9 @@ msgstr "Memberi Klien menggunakan metode e-wallet yang tidak di sediakan di %1"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:428
 msgid "Although binary option loss is limited, based on the assets of the investors, so as not to become excessive speculative trading, it is necessary to bear in mind the moderation in transactions."
 msgstr ""
+"Meskipun jumlah kerugian opsi binary adalah terbatas berdasarkan aset "
+"investor, namun untuk menghindari agar tidak menjadi trader dengan "
+"spekulatif berlebihan maka moderasi dalam transaksi sangat diperlukan."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:400
 msgid "Although each traders determined the limit amount to deal with the customer, even if customer's transaction amount, loss with a certain period and open interest a customer held exceeds the reference, the transaction with the customer will not be discontinued or cancelled."
@@ -1994,10 +2035,9 @@ msgid "Barrier is out of acceptable range."
 msgstr "Batasan adalah diluar rentang yang diterima."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/BarrierBuilder.pm:34
-#, fuzzy
 #| msgid "Barrier must be at least "
 msgid "Barrier must be an integer."
-msgstr "Batasan setidaknya "
+msgstr "Batas harus berupa bilangan bulat."
 
 #. ($min_allowed . ' pips away from the spot.')
 #. ($self->minimum_allowable_move . ' pips away from the spot.')
@@ -2888,10 +2928,11 @@ msgid "Conflicts Policy"
 msgstr "Konflik Kebijakan"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:466
-#, fuzzy
 #| msgid "A member of our Customer Support Team will contact you shortly."
 msgid "Congratulations, you have pass the test, our Customer Support will contact you shortly"
-msgstr "Anggota Tim Customer Support kami akan menghubungi anda sebentar lagi."
+msgstr ""
+"Selamat, Anda telah lulus tes, Customer Support kami akan segera menghubungi "
+"Anda"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:428
 msgid "Connection failure. Please try again later."
