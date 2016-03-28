@@ -157,6 +157,9 @@ InPagePopup.prototype._init_container = function() {
  * Reposition the popup on the screen. by default uses the center of the screen.
  */
 InPagePopup.prototype.reposition = function(x, y) {
+    if(!this._container) {
+        this._container = $('.inpage_popup_container');
+    }
     if (this._container) {
         var win_ = $(window);
         var container = this._container;

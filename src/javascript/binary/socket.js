@@ -115,7 +115,9 @@ function BinarySocketClass() {
             }
 
             if(isReady()=== true){
-                page.header.validate_cookies();
+                if(!page.is_login_popup()) {
+                    page.header.validate_cookies();
+                }
                 if (clock_started === false) {
                     page.header.start_clock_ws();
                 }
@@ -149,13 +151,15 @@ function BinarySocketClass() {
                     }
                     else {
                         authorized = true;
-                        page.client.response_authorize(response);
                         if(typeof events.onauth === 'function'){
                             events.onauth();
                         }
-                        send({balance:1, subscribe: 1});
-                        send({landing_company_details: TUser.get().landing_company_name});
-                        send({get_settings: 1});
+                        if(!page.is_login_popup()) {
+                            page.client.response_authorize(response);
+                            send({balance:1, subscribe: 1});
+                            send({landing_company_details: TUser.get().landing_company_name});
+                            send({get_settings: 1});
+                        }
                         sendBufferedSends();
                     }
                 } else if (type === 'balance') {
