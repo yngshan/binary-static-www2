@@ -439,6 +439,18 @@ function handle_residence_state_ws(){
             if (residenceValue && select){
                 select.value = residenceValue;
             }
+            if (document.getElementById('virtual-form')) {
+                BinarySocket.send({website_status:1});
+            }
+          }
+          return;
+        } else if (type === 'website_status') {
+          var status  = response.website_status;
+          if (status && status.clients_country) {
+            var clientCountry = $('#residence option[value="' + status.clients_country + '"]');
+            if (!clientCountry.attr('disabled')) {
+                clientCountry.attr('selected', 'selected');
+            }
           }
           return;
         }
@@ -524,10 +536,11 @@ function isNotBackoffice() {
   return !/backoffice/.test(window.location.pathname);
 }
 
-pjax_config_page('/$|/home', function() {
+pjax_config_page('/\?.+|/home', function() {
     return {
         onLoad: function() {
             check_login_hide_signup();
+            submit_email();
         }
     };
 });
