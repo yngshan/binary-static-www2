@@ -7,7 +7,7 @@ var ApplicationsUI = (function(){
         var header = [
                 text.localize("Name"),
                 text.localize("Permissions"),
-                text.localize("Last used"),
+                text.localize("Last Used"),
                 text.localize("Action")
             ];
         var metadata = {

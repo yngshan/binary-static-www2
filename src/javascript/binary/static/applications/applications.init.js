@@ -22,7 +22,7 @@ var Applications = (function(){
             
             // Show a message when the table is empty
             if (applications.length === 0) {
-                console.log("Zero");
+                ApplicationsUI.clearTableContent();
                 $('#applications-table tbody')
                     .append($('<tr/>', {class: "flex-tr"})
                         .append($('<td/>', {colspan: 7})
