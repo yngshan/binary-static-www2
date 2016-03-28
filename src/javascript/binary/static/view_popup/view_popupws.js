@@ -50,6 +50,10 @@ var ViewPopupWS = (function() {
     };
 
     var responseContract = function(response) {
+        if(response.hasOwnProperty('error')) {
+            showErrorPopup(response, response.error.message);
+            return;
+        }
         // In case of error such as legacy shortcode, this call is returning the error message
         // but no error field. To specify those cases, we check for other fields existence
         if(!response.proposal_open_contract ||
@@ -431,8 +435,11 @@ var ViewPopupWS = (function() {
         ViewPopupUI.show_inpage_popup('<div class="' + popupboxID + '">' + $con.html() + '</div>', 'message_popup', '#sell_bet_desc, #sell_content_wrapper');
     };
 
-    var showErrorPopup = function(response) {
-        showMessagePopup(text.localize('Sorry, an error occurred while processing your request.'), 'There was an error', 'notice-msg');
+    var showErrorPopup = function(response, message) {
+        if(!message || message.length === 0) {
+            message = 'Sorry, an error occurred while processing your request.';
+        }
+        showMessagePopup(text.localize(message), 'There was an error', 'notice-msg');
         console.log(response);
     };
 
