@@ -513,6 +513,10 @@ function checkClientsCountry() {
 }
 
 
+if (page.language() === 'ID') {
+  change_blog_link('id');
+}
+
 function change_blog_link(lang) {
   var regex = new RegExp(lang);
   if (!regex.test($('.blog a').attr('href'))) {
