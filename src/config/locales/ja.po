@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-28 09:33+0000\n"
-"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-03-28 13:47+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -654,6 +654,13 @@ msgid ""
 "</p>\n"
 "<p style='margin-top: 0;'>Enjoy trading with us on Binary.com.</p>\n"
 msgstr ""
+"<p style='font-weight: bold; margin-bottom: 0;'>デモ口座にご登録いただきありがとうございます！</p>\n"
+"<p style='margin-bottom: 0; margin-top: 0;'>次の認証トークンをフォームの%1にご入力ください：\n"
+"  <p style='margin-bottom: 0; margin-top: 0;'>\n"
+"    <span style='background: #f2f2f2; padding: 10px;'>%2</span>\n"
+"  </p>\n"
+"</p>\n"
+"<p style='margin-top: 0;'>Binary.comでのお取引をお楽しみください。</p>\n"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:73
 msgid ""
@@ -3364,10 +3371,9 @@ msgid "Date of birth"
 msgstr "生年月日"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:484
-#, fuzzy
 #| msgid "Your date of birth is invalid."
 msgid "Date of birth is required."
-msgstr "生年月日が無効です"
+msgstr "生年月日をご入力ください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:53
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:494
@@ -8394,10 +8400,9 @@ msgstr "0より大きい数字を入力してください。"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:103
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:123
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:83
-#, fuzzy
 #| msgid "Please enter a valid name."
 msgid "Please enter a number."
-msgstr "有効なお名前をご入力して下さい。"
+msgstr "数字をご入力ください。"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1344
 msgid "Please enter a password."
@@ -10004,10 +10009,9 @@ msgid "Sorry, contracts on Random Indices are not available in your country of r
 msgstr "申し訳ございませんが、お客様の居住地域にてランダムインデックスの取引はできません。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:243
-#, fuzzy
 #| msgid "Sorry, only USD is allowed."
 msgid "Sorry, it is not allowed."
-msgstr "申し訳ございませんが、米ドルのみ承ります。"
+msgstr "申し訳ございませんが、ご利用いただけません。"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:480
 msgid "Sorry, only UK residents can authenticate their identity online."
@@ -11205,10 +11209,9 @@ msgid "The easiest way to get started in the financial markets"
 msgstr "金融市場取引にアクセスする近道"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:491
-#, fuzzy
 #| msgid "The two passwords that you entered do not match."
 msgid "The email address and date of birth do not match."
-msgstr "ご入力頂いた各パスワードが合致しません。"
+msgstr "メールアドレスと生年月日が一致しません。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/spread_bets.html.haml:1
 msgid "The entry level for a long contract is 1001, which is entry spot + half spread. At exit, the spot is at 1100 and hence the exit level for a long contract is 1099, which is exit spot - half spread."
@@ -11344,10 +11347,9 @@ msgstr "お客様の口座のパスワード%1 は変更されました。この
 
 #. ($email)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:516
-#, fuzzy
 #| msgid "The password for your account %1 has been changed. This request originated from IP address %2. If this request was not performed by you, please immediately contact Customer Support."
 msgid "The password for your account %1 has been reset. If this request was not performed by you, please immediately contact Customer Support."
-msgstr "お客様の口座のパスワード%1 は変更されました。このリクエストはIPアドレス%2から発信されています。このリクエストにお心当たりがない場合は、即座にカスタマーサポートまでご連絡ください。"
+msgstr "ご口座%1のパスワードがリセットされました。このリクエストにお心当たりがない場合は、即座にカスタマーサポートまでご連絡ください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "The patent means Regent Markets is the recognised pioneer of binary betting. The patent helps protect our innovations."
@@ -14048,10 +14050,9 @@ msgid "Your password has been changed."
 msgstr "パスワードの変更を承りました。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:511
-#, fuzzy
 #| msgid "Your password has been changed."
 msgid "Your password has been reset."
-msgstr "パスワードの変更を承りました。"
+msgstr "パスワードがリセットされました。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/reset_password.html.tt:23
 msgid "Your password has been successfully reset. Please log into your account using your new password."
@@ -15229,7 +15230,6 @@ msgid "International Consolidated Airlines Group SA"
 msgstr "International Consolidated Airlines Group SA"
 
 #: Underlying Symbol DEDUE
-#, fuzzy
 #| msgid "Drr AG"
 msgid "Drr AG"
 msgstr "Drr AG"
