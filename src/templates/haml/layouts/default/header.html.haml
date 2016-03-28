@@ -14,12 +14,12 @@
         = include('layouts/default/nav')
       .grd-grid-3.grd-grid-mobile-9.grd-grid-phablet-10.by_client_type.client_virtual.client_real#client-logged-in{ :style => 'display: none;'}
         #logout
-          %form#loginid-switch-form{:action => url_for('loginid_switch'), :method => 'post'}
+          %form#loginid-switch-form{:action => url_for('loginid_switch')}
             #login-fields
               %select{:name => 'client_loginid', :id => 'client_loginid'}
             %div#balance
             %a.logout{:href => 'javascript:;'}= l('Log out')
-      .grd-grid-3.grd-grid-mobile-9.grd-grid-phablet-10.grd-no-gutter-left.by_client_type.client_logged_out#client-logged-out
+      .grd-grid-3.grd-grid-mobile-9.grd-grid-phablet-10.grd-no-gutter-left.by_client_type.client_logged_out.invisible#client-logged-out
         %a{:id => 'btn_login', :class => 'button', :href => 'javascript:;'}= stash('logintext')
       .grd-grid-1.grd-hide.grd-show-mobile.grd-no-gutter-mobile.grd-show-phablet
         #mobile-menu-icon-container

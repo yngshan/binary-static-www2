@@ -1049,9 +1049,35 @@ Page.prototype = {
     on_change_loginid: function() {
         var that = this;
         $('#client_loginid').on('change', function() {
-            page.client.clear_storage_values();
-            $('#loginid-switch-form').submit();
+            $(this).attr('disabled','disabled');
+            that.switch_loginid($(this).val());
         });
+    },
+    switch_loginid: function(loginid) {
+        if(!loginid || loginid.length === 0) {
+            return;
+        }
+        var tokens = JSON.parse(page.client.get_storage_value('tokens'));
+        if(!tokens || Object.keys(tokens).length === 0) {
+            return;
+        }
+        var token = tokens[loginid];
+        if(!token || token.length === 0) {
+            return;
+        }
+
+        // cleaning the previous values
+        page.client.clear_storage_values();
+        // set cookies: loginid, login
+        var cookie_expire = new Date();
+        cookie_expire.setDate(cookie_expire.getDate() + 2);
+        var cookie_loginid = new CookieStorage('loginid');
+        cookie_loginid.write(loginid, cookie_expire, true);
+        var cookie_login = new CookieStorage('login');
+        cookie_login.write(token, cookie_expire, true);
+        // set local storage
+        localStorage.setItem('active_loginid', loginid);
+        window.location.reload();
     },
     on_click_acc_transfer: function() {
         $('#acc_transfer_submit').on('click', function() {

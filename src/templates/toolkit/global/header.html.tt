@@ -64,7 +64,7 @@
                 </div>
                 <div id="client-logged-in" class="grd-grid-3 grd-grid-mobile-9 grd-grid-phablet-10 by_client_type client_real client_virtual" style="display: none">
                   <div id="logout">
-                    <form id="loginid-switch-form" action="[% request.url_for('loginid_switch?l=EN') %]" method="post">
+                    <form id="loginid-switch-form" action="[% request.url_for('loginid_switch?l=EN') %]">
                         <div id="login-fields">
                             <select id="client_loginid" name="client_loginid">
                             </select>
@@ -74,7 +74,7 @@
                     </form>
                   </div>
                 </div>
-                <div id="client-logged-out" class="grd-grid-3 grd-grid-mobile-9 grd-grid-phablet-10 grd-no-gutter-left by_client_type client_logged_out">
+                <div id="client-logged-out" class="grd-grid-3 grd-grid-mobile-9 grd-grid-phablet-10 grd-no-gutter-left by_client_type client_logged_out invisible">
                     <a id="btn_login" class="button" href="javascript:;">[% l('Log in') %]</a>
                 </div>
                 <div class='grd-grid-1 grd-hide grd-show-mobile grd-no-gutter-mobile grd-show-phablet'>
