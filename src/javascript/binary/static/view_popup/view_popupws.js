@@ -50,17 +50,15 @@ var ViewPopupWS = (function() {
     };
 
     var responseContract = function(response) {
-        if(response.hasOwnProperty('error')) {
-            showErrorPopup(response, response.error.message);
+        if(!response.proposal_open_contract || Object.keys(response.proposal_open_contract).length === 0) {
+            showErrorPopup(response);
             return;
         }
         // In case of error such as legacy shortcode, this call is returning the error message
         // but no error field. To specify those cases, we check for other fields existence
-        if(!response.proposal_open_contract ||
-            Object.keys(response.proposal_open_contract).length === 0 ||
-            !response.proposal_open_contract.hasOwnProperty('shortcode')) {
-                showErrorPopup(response);
-                return;
+        if(!response.proposal_open_contract.hasOwnProperty('shortcode')) {
+            showErrorPopup(response, response.proposal_open_contract.validation_error);
+            return;
         }
 
         $.extend(contract, response.proposal_open_contract);
