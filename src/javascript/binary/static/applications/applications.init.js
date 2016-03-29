@@ -17,7 +17,7 @@ var Applications = (function(){
                 $("#loading").remove();
                 ApplicationsUI.createEmptyTable().appendTo("#applications-ws-container");
                 var titleElement = document.getElementById("applications-title").firstElementChild,
-                    desc = document.getElementById("#description");
+                    desc = document.getElementById("description");
                 titleElement.textContent = text.localize(titleElement.textContent);
                 desc.textContent = text.localize(desc.textContent);
             }
