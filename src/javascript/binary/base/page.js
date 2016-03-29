@@ -91,8 +91,45 @@ var GTM = (function() {
         }
     };
 
+    var on_login = function(get_settings) {
+        if(localStorage.getItem('GTM_login') !== '1') {
+            return;
+        }
+
+        localStorage.removeItem('GTM_login');
+
+        var affiliateToken = $.cookie('affiliate_tracking');
+        if (affiliateToken) {
+            GTM.push_data_layer({'bom_affiliate_token': JSON.parse(affiliateToken).t});
+        }
+
+        var data = {
+            'visitorID'   : page.client.loginid,
+            'bom_country' : get_settings.country,
+            'bom_email'   : get_settings.email,
+            'url'         : window.location.href,
+            'bom_today'   : Math.floor(Date.now() / 1000),
+            'event'       : 'log_in'
+        };
+
+        if(!page.client.is_virtual()) {
+            data['bom_age']       = parseInt((moment().unix() - get_settings.date_of_birth) / 31557600);
+            data['bom_firstname'] = get_settings.first_name;
+            data['bom_lastname']  = get_settings.last_name;
+            data['bom_phone']     = get_settings.phone;
+        }
+
+        GTM.push_data_layer(data);
+    };
+
+    var set_login_flag = function() {
+        localStorage.setItem('GTM_login', '1');
+    };
+
     return {
-        push_data_layer : push_data_layer
+        push_data_layer : push_data_layer,
+        on_login        : on_login,
+        set_login_flag  : set_login_flag,
     };
 }());
 
@@ -1076,6 +1113,7 @@ Page.prototype = {
         var cookie_login = new CookieStorage('login');
         cookie_login.write(token, cookie_expire, true);
         // set local storage
+        GTM.set_login_flag();
         localStorage.setItem('active_loginid', loginid);
         window.location.reload();
     },
@@ -1150,7 +1188,7 @@ Page.prototype = {
             var $btn_login = $('#btn_login');
             if($btn_login.length > 0) {
                 var $contents = $('<div/>')
-                    .append($('<iframe/>', {src: page.url.url_for('oauth2/authorize', 'app_id=id-9VWQXlxqAwxb8lhwk7Sjrl9lOEixN'),  // TODO: replace with 'binarycom' for production
+                    .append($('<iframe/>', {src: page.url.url_for('oauth2/authorize', 'app_id=id-SXLFBG78C32rdZAmR8Kwpf6BTCFz8'),  // TODO: replace with 'binarycom' for production
                         style: 'background: url("' + page.url.url_for_static('/images/common/hourglass_1.gif') + '") no-repeat center;',
                         'onload': 'this.style.background="none"'}))
                     .append($('<a/>', {href: page.url.url_for('user/lost_password'), text: text.localize('Lost password?'), id: 'popup_lost_password'}));

@@ -8,6 +8,7 @@ var LoggedInHandler = (function() {
         $popup.find('a#popup_lost_password').remove();
         page.client.check_storage_values();
         storeTokens();
+        GTM.set_login_flag();
         parent.window.location.reload();
     };
 
