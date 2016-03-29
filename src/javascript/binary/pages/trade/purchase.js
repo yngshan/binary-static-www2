@@ -112,6 +112,20 @@ var Purchase = (function () {
             else{
                 contract_sentiment = 'down';
             }
+
+            //calculate number of decimals needed to display tick-chart according to the spot
+            //value of the underlying
+            var decimal_points = 2;
+            var tick_spots = Tick.spots();
+            var tick_spot_epochs = Object.keys(tick_spots);
+            if ( tick_spot_epochs.length > 0 ) {
+                var last_quote = tick_spots[tick_spot_epochs[0]].toString();
+                
+                if ( last_quote.indexOf(".") != -1 ) {
+                    decimal_points = last_quote.split('.')[1].length;
+                }
+            }
+
             WSTickDisplay.initialize({
                 symbol:passthrough.symbol,
                 number_of_ticks:passthrough.duration,
@@ -119,7 +133,7 @@ var Purchase = (function () {
                 contract_category:sessionStorage.getItem('formname')==='asian' ? 'asian' : 'callput',
                 display_symbol:Symbols.getName(passthrough.symbol),
                 contract_start:receipt['start_time'],
-                decimal:3,
+                display_decimals: decimal_points,
                 contract_sentiment:contract_sentiment,
                 price:passthrough['ask-price'],
                 payout:receipt['payout'],

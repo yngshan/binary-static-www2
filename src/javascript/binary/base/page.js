@@ -328,6 +328,11 @@ URL.prototype = {
         var param_hash= this.params_hash();
         return param_hash[name];
     },
+    replaceQueryParam: function (param, newval, search) {
+      var regex = new RegExp("([?;&])" + param + "[^&;]*[;&]?");
+      var query = search.replace(regex, "$1").replace(/&$/, '');
+      return (query.length > 2 ? query + "&" : "?") + (newval ? param + "=" + newval : '');
+    },
     param_if_valid: function(name) {
         if(this.is_valid) {
            return this.param(name);
@@ -410,7 +415,7 @@ Menu.prototype = {
                 this.show_main_menu();
             }
         } else {
-            var is_mojo_page = /^\/$|\/login|\/home|\/smart-indices|\/ad|\/open-source-projects|\/white-labels|\/bulk-trader-facility|\/partners|\/payment-agent|\/about-us|\/group-information|\/group-history|\/careers|\/contact|\/terms-and-conditions|\/terms-and-conditions-jp|\/responsible-trading|\/us_patents|\/lost_password|\/realws|\/virtualws|\/open-positions|\/job-details|\/user-testing|\/japanws$/.test(window.location.pathname);
+            var is_mojo_page = /^\/$|\/login|\/home|\/smart-indices|\/ad|\/open-source-projects|\/white-labels|\/bulk-trader-facility|\/partners|\/payment-agent|\/about-us|\/group-information|\/group-history|\/careers|\/contact|\/terms-and-conditions|\/terms-and-conditions-jp|\/responsible-trading|\/us_patents|\/lost_password|\/realws|\/virtualws|\/open-positions|\/job-details|\/user-testing|\/japanws|\/maltainvestws$/.test(window.location.pathname);
             if(!is_mojo_page) {
                 trading.addClass('active');
                 this.show_main_menu();
@@ -569,6 +574,10 @@ Header.prototype = {
         this.register_dynamic_links();
         this.simulate_input_placeholder_for_ie();
         this.logout_handler();
+        if (isNotBackoffice()) {
+          checkClientsCountry();
+          change_blog_link('id');
+        }
     },
     on_unload: function() {
         this.menu.reset();
@@ -660,10 +669,10 @@ Header.prototype = {
         var start_timestamp = response.time;
         var pass = response.echo_req.passthrough.client_time;
 
-        that.time_now = ((start_timestamp * 1000) + (moment().valueOf() - pass));
+        that.client_time_at_response = moment().valueOf();
+        that.server_time_at_response = ((start_timestamp * 1000) + (that.client_time_at_response - pass));
         var update_time = function() {
-            that.time_now += (moment().valueOf() - that.time_now);
-            clock.html(moment(that.time_now).utc().format("YYYY-MM-DD HH:mm") + " GMT");
+            clock.html(moment(that.server_time_at_response + moment().valueOf() - that.client_time_at_response).utc().format("YYYY-MM-DD HH:mm") + " GMT");
         };
         update_time();
 
