@@ -576,7 +576,6 @@ Header.prototype = {
         this.logout_handler();
         if (isNotBackoffice()) {
           checkClientsCountry();
-          change_blog_link('id');
         }
     },
     on_unload: function() {
@@ -934,33 +933,33 @@ Contents.prototype = {
             if (page.client.is_virtual()) {
                 var show_upgrade = true;
                 if (localStorage.getItem('jp_test_allowed')) {
-                    $('#virtual-upgrade-link').addClass('invisible');
-                    $('#vr-japan-upgrade-link').addClass('invisible');
-                    $('#vr-financial-upgrade-link').addClass('invisible');
+                    $('.virtual-upgrade-link').addClass('invisible');
+                    $('.vr-japan-upgrade-link').addClass('invisible');
+                    $('.vr-financial-upgrade-link').addClass('invisible');
                     show_upgrade = false;           // do not show upgrade for user that filled up form
                 }
                 for (var i=0;i<loginid_array.length;i++) {
                     if (loginid_array[i].real) {
-                        $('#virtual-upgrade-link').addClass('invisible');
-                        $('#vr-japan-upgrade-link').addClass('invisible');
-                        $('#vr-financial-upgrade-link').addClass('invisible');
+                        $('.virtual-upgrade-link').addClass('invisible');
+                        $('.vr-japan-upgrade-link').addClass('invisible');
+                        $('.vr-financial-upgrade-link').addClass('invisible');
                         show_upgrade = false;
                         break;
                     }
                 }
                 if (show_upgrade) {
                     if (c_config && c_config['gaming_company'] == 'none' && c_config['financial_company'] == 'maltainvest') {
-                        $('#vr-financial-upgrade-link').removeClass('invisible');
-                        $('#virtual-upgrade-link').addClass('invisible');
-                        $('#vr-japan-upgrade-link').addClass('invisible');
+                        $('.vr-financial-upgrade-link').removeClass('invisible');
+                        $('.virtual-upgrade-link').addClass('invisible');
+                        $('.vr-japan-upgrade-link').addClass('invisible');
                     } else if (c_config && c_config['gaming_company'] == 'none' && c_config['financial_company'] == 'japan') {
-                        $('#vr-japan-upgrade-link').removeClass('invisible');
-                        $('#virtual-upgrade-link').addClass('invisible');
-                        $('#vr-financial-upgrade-link').addClass('invisible');
+                        $('.vr-japan-upgrade-link').removeClass('invisible');
+                        $('.virtual-upgrade-link').addClass('invisible');
+                        $('.vr-financial-upgrade-link').addClass('invisible');
                     } else {
-                        $('#virtual-upgrade-link').removeClass('invisible');
-                        $('#vr-japan-upgrade-link').addClass('invisible');
-                        $('#vr-financial-upgrade-link').addClass('invisible');
+                        $('.virtual-upgrade-link').removeClass('invisible');
+                        $('.vr-japan-upgrade-link').addClass('invisible');
+                        $('.vr-financial-upgrade-link').addClass('invisible');
                     }
                 }
             } else {
@@ -979,15 +978,9 @@ Contents.prototype = {
                     }
                 }
                 if (show_financial) {
-                    $('#financial-upgrade-link').removeClass('invisible');
-                    if ($('#investment_message').length > 0) {
-                        $('#investment_message').removeClass('invisible');
-                    }
+                    $('.financial-upgrade-link').removeClass('invisible');
                 } else {
-                    $('#financial-upgrade-link').addClass('invisible');
-                    if ($('#investment_message').length > 0) {
-                        $('#investment_message').addClass('invisible');
-                    }
+                    $('.financial-upgrade-link').addClass('invisible');
                 }
             }
         }
