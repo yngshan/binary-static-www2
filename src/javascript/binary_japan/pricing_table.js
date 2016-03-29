@@ -63,7 +63,7 @@ var PricingTable = (function() {
             React.createElement("input", {
               defaultValue: "1",
               onChange: handleMultiplierChange({
-                value: e.target.value,
+                value: event.target.value,
                 barrier: this.props.barrier,
                 symbol: this.props.symbol,
                 category: this.props.category,
@@ -129,7 +129,7 @@ var PricingTable = (function() {
 
     render: function render() {
       var rows = [];
-      var barriers = Object.keys(this.props.prices).sort();
+      var barriers = Object.keys(this.props.prices).sort(function(a, b){return b-a;});
       for (var i = 0; i < barriers.length; i++) {
         var barrier = barriers[i];
         rows.push(React.createElement(PricingTableRow, {
