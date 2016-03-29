@@ -184,6 +184,13 @@ function BinarySocketClass() {
                     } else {
                         localStorage.removeItem('jp_test_allowed');
                     }
+                } else if (type === 'website_status') {
+                  if (response.website_status.clients_country) {
+                    localStorage.setItem('clients_country', response.website_status.clients_country);
+                    if (isNotBackoffice()) {
+                      checkClientsCountry();
+                    }
+                  }
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code) {
@@ -193,7 +200,7 @@ function BinarySocketClass() {
                             .on('click', '#ratelimit-refresh-link', function () {
                                 window.location.reload();
                             });
-                      } else if (response.error.code === 'InvalidToken') {
+                      } else if (response.error.code === 'InvalidToken' && type !== 'new_account_virtual' && type !== 'paymentagent_withdraw') {
                         BinarySocket.send({'logout': '1'});
                       }
                     }
