@@ -46,6 +46,7 @@ var ViewPopupUI = (function() {
             }
             if (this._container) {
                 this._container.hide().remove();
+                $('.popup_page_overlay').hide().remove();
                 this._container = null;
             }
         },
@@ -88,6 +89,8 @@ var ViewPopupUI = (function() {
             con.css('position', 'fixed').css('z-index', get_highest_zindex() + 100);
             body.append(con);
             con.show();
+            $(document.body).append($('<div/>', {class: 'popup_page_overlay'}));
+            $('.popup_page_overlay').click(function(){that.cleanup();});
             con.draggable({
                 stop: function() {
                     that.reposition_confirmation_ondrag();
