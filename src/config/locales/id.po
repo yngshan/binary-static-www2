@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: I 18N\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-29 09:32+0000\n"
+"PO-Revision-Date: 2016-03-30 07:39+0000\n"
 "Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
 "Language-Team: Indonesian "
 "<https://hosted.weblate.org/projects/binary/static/id/>\n"
@@ -663,7 +663,7 @@ msgstr ""
 "    <span style='background: #f2f2f2; padding: 10px;'>%2</span>\n"
 "  </p>\n"
 "</p>\n"
-"<p style='margin-top: 0;'>Nikmati trading bersama kami di Binary.com.</p>"
+"<p style='margin-top: 0;'>Nikmati trading bersama kami di Binary.com.</p>\n"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:73
 msgid ""
@@ -1818,7 +1818,7 @@ msgstr ""
 msgid "As the expected volatility of the underlying asset increases, a plain vanilla option price will move higher."
 msgstr ""
 "Sesuai harapan dimana volatilitas dari aset dasar meningkat, maka harga opsi "
-"vanilla akan bergerak naik. "
+"vanilla akan bergerak naik."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:449
 msgid "As the time to the exercise point shortens, the time-value of a plain vanilla option decreases."
@@ -4290,6 +4290,8 @@ msgstr "Periode latihan"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:407
 msgid "Exercise price is the price which buy and sell underlying asset by exercise the right and in case of binary option, it is basic price to judge the presence (exist) of payout."
 msgstr ""
+"Harga kontrak adalah harga beli dan jual aset dasar yang berlaku dan pada "
+"opsi binary, hal ini merupakan harga dasar yang akan mempengaruhi hasil."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:548
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:19
@@ -4303,6 +4305,8 @@ msgstr "Spot akhir"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:408
 msgid "Exit price is the underlying asset price at exercise time and it's the price to judge the presence (exist) of payout by comparing with exercise price."
 msgstr ""
+"Harga Exit adalah harga aset dasar pada waktu kontrak dan merupakan harga "
+"yang mempengaruhi hasil dengan membandingkan harga kontrak."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/endsinout.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/higherlower.html.tt:1
@@ -4614,22 +4618,34 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:374
 msgid "For a currency binary option which has the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes weaker is known as a dollar-put binary option"
 msgstr ""
+"Untuk opsi binary pada mata uang yang memiliki nilai tukar dasar bagi dolar "
+"melawan yen, hasil akan diterima jika yen melemah yaitu disebut sebagai opsi "
+"binary dolar-put"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:375
 msgid "For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option"
 msgstr ""
+"Untuk opsi binary pada mata uang yang memiliki nilai tukar dasar bagi dolar "
+"melawan yen, hasil akan diterima jika yen menguat yaitu disebut sebagai opsi "
+"binary dolar-put"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:445
 msgid "For a plain vanilla option, as the time to the exercise point shortens, the price of the option will decrease."
 msgstr ""
+"Untuk vanilla option, ketika waktu periode kontrak berkurang, maka harga "
+"opsi juga akan berkurang."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:406
 msgid "For a put option, if the underlying asset price is higher than the option exercise price, it is known as an in-the-money option."
 msgstr ""
+"Untuk opsi put, jika harga aset dasar lebih tinggi dari harga kontrak opsi, "
+"hal ini disebut sebagai in-the-money option."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:405
 msgid "For a put option, if the underlying asset price is lower than the option exercise price, it is known as an out-of-the-money option."
 msgstr ""
+"Untuk opsi put, jika harga aset dasar lebih rendah dari harga opsi, hal ini "
+"disebut sebagai out-of-the-money option."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_request_withdrawws.html.tt:8
 msgid "For added security protection against unauthorised withdrawals, an email containing a secure link to the payment agent withdrawals page has been sent to your email <span id='client_email'></span>. Please check your email to access this link."
@@ -4643,6 +4659,8 @@ msgstr "Untuk menambahkan perlindungan keamanan dari penarikan yang tidak sah, e
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:442
 msgid "For an in-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
 msgstr ""
+"Untuk in-the-money option, semakin jauh jarak antara harga aset dasar dengan "
+"harga opsi maka harga opsi akan menjadi semakin rendah."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:413
 msgid "For an individual investor, all profits from OTC currency options trading are tax-free"
@@ -4660,10 +4678,14 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:441
 msgid "For an out-of-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
 msgstr ""
+"Untuk out-of-the-money option, semakin jauh jarak antara harga aset dasar "
+"dan harga opsi maka harga opsi akan menjadi semakin rendah."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:404
 msgid "For both call and put options, if the underlying asset price is the same as the exercise price, it is known as an at-the-money option."
 msgstr ""
+"Untuk kedua opsi call dan put, jika harga aset dasar sama dengan harga "
+"kontrak, hal ini disebut sebagai at-the-money option."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:44
 msgid "For contracts which expire at market close, we will use the official closing value of the market to settle your contract and update your results at settlement time."
@@ -4987,6 +5009,8 @@ msgstr "Kesehatan"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:393
 msgid "Hedge you used for binary option is needed to be conducted as compensation part of loss of  the hedged asset because payout is fixed."
 msgstr ""
+"Hedge yang Anda gunakan untuk opsi binary sangat dibutuhkan sebagai "
+"kompensasi dari hilangnya aset lindung nilai karena hasil adalah tetap."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:375
 msgid "Hedging"
@@ -5222,6 +5246,8 @@ msgstr "Jika terjadi kesalahan didalam perhitungan pembagian komisi, Perusahaan 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:419
 msgid "If an option buyer wishes to exercise the option rights, the seller may still reject the deal."
 msgstr ""
+"Jika pembeli opsi ingin melakukan pembelian kontrak, penjual berhak untuk "
+"menolak permintaan."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:127
 msgid "If any provision of this Agreement is held to be void or unenforceable in whole or part, the impugned provision (or part thereof) shall be deemed to be deleted from this Agreement and the remaining provisions (including the remainder of the affected provision) shall continue to be valid and applicable."
@@ -5230,6 +5256,8 @@ msgstr "Jika ketentuan apapun dalam Perjanjian ini dianggap tidak berlaku atau t
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:443
 msgid "If implied volatility increases then the prices of both call and put types of plain vanilla options will increase."
 msgstr ""
+"Jika volatilitas meningkat maka harga call dan put pada vanilla options akan "
+"meningkat."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:18
 msgid "If the Company is legally required to disclose your personal or financial information by law, regulation or pursuant to the order of a court of competent jurisdiction or a governmental agency, the Company  shall, unless legally prohibited, promptly notify you to that effect, in order to give you the opportunity to seek such protection for the information as it deems appropriate. Such required disclosure shall not be construed as a breach of this Terms and Conditions Agreement."
@@ -5238,14 +5266,20 @@ msgstr "Jika Perusahaan diwajibkan secara hukum untuk menginformasikan data prib
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:416
 msgid "If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller."
 msgstr ""
+"Jika pembeli opsi tidak melakukan pembelian opsi, maka tidak tidak akan "
+"dikenakan biaya opsi pada penjual."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:417
 msgid "If the buyer of an option waives his right to exercise, a transaction in the underlying asset will not be dealt between the seller and the buyer."
 msgstr ""
+"Jika pembeli membatalkan pembelian kontrak, maka transaksi pada aset dasar "
+"tidak akan terjadi antara penjual dan pembeli."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:438
 msgid "If the exercise prices and exercise times are the same for an American style and European style option, then the American style option will have a higher price."
 msgstr ""
+"Jika harga kontrak dan waktu kontrak adalah sama pada jenis opsi Amerika dan "
+"Eropa, maka jenis opsi Amerika akan memiliki harga lebih tinggi."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:447
 msgid "If the underlying asset price is 100 yen, the exercise price is 80 yen, and the call option price is 45 yen, then it can be said that the option's intrinsic-value is 20 yen, and its time-value is 25 yen."
@@ -5269,10 +5303,18 @@ msgstr "Jika Anda sudah bersedia, hubungi kami segera."
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:378
 msgid "If you buy a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
 msgstr ""
+"Jika Anda membeli opsi call binary mata uang pada harga 500 yen, dimana "
+"dolar melawan yen, hasil sebesar 1,000 yen dan target harga 100, dan jika "
+"harga pada saat kontrak berakhir adalah 99, maka Anda akan menerima hasil "
+"sebesar 1,000 yen dari penjual opsi tersebut."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:380
 msgid "If you buy a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you receive a payout of 1,000 yen, then your profit can be calculated 500 yen after subtracting the 500 yen that was paid as a fee to the option seller."
 msgstr ""
+"JIka Anda membeli opsi binary mata uang pada harga 500 yen, dan harga "
+"penyelesaian sesuai dengan analisa maka Anda akan menerima hasil 1,000 yen, "
+"maka keuntungan bersih Anda adalah 500 setelah dikurangi dengan harga "
+"kontrak yang Anda bayarkan pada pembeli."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:379
 msgid "If you buy a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
@@ -8753,7 +8795,7 @@ msgstr ""
 msgid "Predicted the underlying asset price will decline than strike price at exit time and bought binary call options. "
 msgstr ""
 "Menganalisa harga aset dasar akan turun dari harga pasar pada saat kontrak "
-"berakhir dan membeli opsi call binary."
+"berakhir dan membeli opsi call binary. "
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:388
 msgid "Predicted the underlying asset price will decline than strike price at exit time and bought binary put options. "
