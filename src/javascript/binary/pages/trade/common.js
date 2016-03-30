@@ -953,5 +953,5 @@ function setUnderlyingTime() {
 }
 
 function chartFrameSource(underlying, highchart_time){
-  document.getElementById('chart_frame').src = 'https://webtrader.binary.com?affiliates=true&instrument=' + underlying + '&timePeriod=' + highchart_time.value + '&gtm=false';
+  document.getElementById('chart_frame').src = 'https://webtrader.binary.com?affiliates=true&instrument=' + underlying + '&timePeriod=' + highchart_time.value + '&gtm=true';
 }
