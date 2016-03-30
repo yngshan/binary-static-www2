@@ -108,13 +108,9 @@ var PasswordWS = (function(){
 
 })();
 
-pjax_config_page("user/change_password", function() {
+pjax_config_page_require_auth("user/change_password", function() {
     return {
         onLoad: function() {
-          if (page.client.redirect_if_logout()) {
-              return;
-          }
-
           Content.populate();
           if (isIE() === false) {
             $('#password').on('input', function() {

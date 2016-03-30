@@ -226,7 +226,7 @@ var PortfolioWS =  (function() {
 
 })();
 
-pjax_config_page("user/openpositionsws", function() {
+pjax_config_page_require_auth("user/openpositionsws", function() {
     return {
         onLoad: PortfolioWS.onLoad,
         onUnload: PortfolioWS.onUnload,

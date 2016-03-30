@@ -22,6 +22,7 @@ var InPagePopup = function(conf) {
     this._content = conf.content || '';
     this._page_overlay = conf.page_overlay || false;
     this._modal = conf.modal || false;
+    this._scroll = conf.scroll || false;
 };
 
 /**
@@ -147,6 +148,7 @@ InPagePopup.prototype._init_container = function() {
         if ( $(handle, container).length ) {
             drag_opts['handle'] = handle;
         }
+        drag_opts['scroll'] = this._scroll;
         container.draggable(drag_opts);
     }
     this.reposition();

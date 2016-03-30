@@ -1,6 +1,6 @@
 var ValidAccountOpening = (function(){
   var redirectCookie = function() {
-    if (page.client.redirect_if_logout()) {
+    if (page.client.show_login_if_logout(true)) {
         return;
     }
     if (!page.client.is_virtual()) {

@@ -162,13 +162,9 @@ var securityws = (function(){
     };
 })();
 
-pjax_config_page("user/settings/securityws", function() {
+pjax_config_page_require_auth("user/settings/securityws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
-                return;
-            }
-
             Content.populate();
 
             BinarySocket.init({

@@ -179,9 +179,13 @@ var Client = function() {
 };
 
 Client.prototype = {
-    redirect_if_logout: function() {
+    show_login_if_logout: function(shouldReplacePageContents) {
         if(!this.is_logged_in) {
-            window.location.href = page.url.url_for('login');
+            if(shouldReplacePageContents) {
+                $('#content > .grd-container').addClass('center').empty().append($('<p/>', {class: 'notice-msg', html: text.localize('Please <a class="login_link" href="javascript:;">login</a> to view this page')}));
+                $('.login_link').click(function(){page.show_login_popup();});
+            }
+            page.show_login_popup();
         }
         return !this.is_logged_in;
     },
@@ -941,6 +945,8 @@ Contents.prototype = {
                 $('#account-transfer-section').hide();
             }
         } else {
+            $('#btn_login').unbind('click').click(function(){page.show_login_popup();});
+
             $('.by_client_type.client_logged_out').removeClass('invisible');
             $('.by_client_type.client_logged_out').show();
 
@@ -1070,7 +1076,7 @@ Page.prototype = {
             LocalStore.set('reality_check.ack', 0);
         }
         $('#current_width').val(get_container_width());//This should probably not be here.
-        this.login_popup();
+        this.login_popup = this.make_login_popup();
     },
     on_unload: function() {
         this.header.on_unload();
@@ -1183,19 +1189,18 @@ Page.prototype = {
             domain: '.' + location.hostname.split('.').slice(-2).join('.')
         });
     },
-    login_popup: function() {
+    make_login_popup: function() {
+        var $contents = $('<div/>')
+            .append($('<iframe/>', {src: page.url.url_for('oauth2/authorize', 'app_id=id-SXLFBG78C32rdZAmR8Kwpf6BTCFz8'),  // TODO: replace with 'binarycom' for production
+                style: 'background: url("' + page.url.url_for_static('/images/common/hourglass_1.gif') + '") no-repeat center;',
+                'onload': 'this.style.background="none"'}))
+            .append($('<a/>', {href: page.url.url_for('user/lost_password'), text: text.localize('Lost password?'), id: 'popup_lost_password'}));
+        var popup = new InPagePopup({content: $contents.html(), container_class: 'login_popup', page_overlay: true, modal: true});
+        return popup;
+    },
+    show_login_popup: function() {
         if (!page.client.is_logged_in) {
-            var $btn_login = $('#btn_login');
-            if($btn_login.length > 0) {
-                var $contents = $('<div/>')
-                    .append($('<iframe/>', {src: page.url.url_for('oauth2/authorize', 'app_id=id-SXLFBG78C32rdZAmR8Kwpf6BTCFz8'),  // TODO: replace with 'binarycom' for production
-                        style: 'background: url("' + page.url.url_for_static('/images/common/hourglass_1.gif') + '") no-repeat center;',
-                        'onload': 'this.style.background="none"'}))
-                    .append($('<a/>', {href: page.url.url_for('user/lost_password'), text: text.localize('Lost password?'), id: 'popup_lost_password'}));
-                var popup = new InPagePopup({content: $contents.html(), container_class: 'login_popup', page_overlay: true, modal: true});
-                $btn_login.unbind('click');
-                popup.attach($btn_login);
-            }
+            this.login_popup.show();
         }
     },
     is_login_popup: function() {

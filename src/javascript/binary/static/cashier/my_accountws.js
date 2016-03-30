@@ -204,13 +204,9 @@ var MyAccountWS = (function() {
 }());
 
 
-pjax_config_page("user/my_accountws", function() {
+pjax_config_page_require_auth("user/my_accountws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
-                return;
-            }
-
             showLoadingImage($('<div/>', {id: 'loading'}).insertAfter('#welcome'));
 
             if(page.url.param('login')) {
