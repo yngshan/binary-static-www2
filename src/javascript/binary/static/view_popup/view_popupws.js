@@ -11,7 +11,8 @@ var ViewPopupWS = (function() {
         nextTickReqMax,
         isSold,
         isSellClicked,
-        chartStarted;
+        chartStarted,
+        chartOptions;
     var $Container,
         $loading,
         btnView,
@@ -200,13 +201,13 @@ var ViewPopupWS = (function() {
         sellSetVisibility(false);
         showWinLossStatus(is_win);
     };
- 
+
     var spreadMakeTemplate = function() {
         $Container = $('<div/>');
         $Container.prepend($('<div/>', {id: 'sell_bet_desc', class: 'popup_bet_desc drag-handle', text: text.localize('Contract Information')}));
 
         var $table = $('<table><tbody></tbody></table>');
-        var tbody = spreadRow('Status'              , 'status', (contract.is_ended ? 'loss' : 'profit')) + 
+        var tbody = spreadRow('Status'              , 'status', (contract.is_ended ? 'loss' : 'profit')) +
                     spreadRow('Entry Level'         , 'entry_level') +
                     spreadRow('Exit Level'          , 'exit_level', '', '', !contract.is_ended) +
                     spreadRow('Stop Loss Level'     , 'stop_loss_level') +
@@ -253,7 +254,7 @@ var ViewPopupWS = (function() {
         normalUpdate();
 
         if(!chartStarted) {
-            ViewPopupUI.show_chart($Container, contract.underlying);
+            Highchart.show_chart(chartOptions);
             chartStarted = true;
         }
     };
@@ -293,7 +294,7 @@ var ViewPopupWS = (function() {
         if(!isSold && user_sold) {
             isSold = true;
             containerSetText('trade_details_sold_date', '', {'epoch_time': contract.sell_spot_time});
-            ViewPopupUI.show_chart($Container, contract.underlying);
+            Highchart.show_chart(chartOptions);
         }
         if(is_ended) {
             normalContractEnded(parseFloat(profit_loss) >= 0);
@@ -315,7 +316,7 @@ var ViewPopupWS = (function() {
         sellSetVisibility(false);
         showWinLossStatus(is_win);
     };
- 
+
     var normalMakeTemplate = function() {
         $Container = $('<div/>').append($('<div/>', {id: wrapperID}));
         $Container.prepend($('<div/>', {id: 'sell_bet_desc', class: 'popup_bet_desc drag-handle', text: contract.longcode}));
@@ -352,20 +353,20 @@ var ViewPopupWS = (function() {
             .append($('<div/>', {id: 'sell_extra_info_data', class: hiddenClass}))
             .append($('<div/>', {id: 'errMsg', class: 'notice-msg ' + hiddenClass}));
 
-        containerSetText('sell_extra_info_data', '', {
+        chartOptions = {
             'barrier'            : contract.barrier || contract.high_barrier,
             'barrier2'           : contract.low_barrier || '',
             'path_dependent'     : contract.is_path_dependent > 0 ? '1' : '',
             'is_forward_starting': contract.is_forward_starting,
             'purchase_price'     : contract.buy_price,
-            'shortcode'          : contract.shortcode,
             'payout'             : contract.payout,
             'currency'           : contract.currency,
             'contract_id'        : contract.contract_id,
+            'underlying'         : contract.underlying,
             'is_immediate'       : '0',
             'is_negative'        : '0',
             'trade_feed_delay'   : '60'
-        });
+        };
 
         ViewPopupUI.show_inpage_popup('<div class="' + popupboxID + '">' + $Container.html() + '</div>', '', '#sell_bet_desc, #sell_details_table');
 

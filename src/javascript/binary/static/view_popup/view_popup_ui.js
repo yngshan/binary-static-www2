@@ -131,75 +131,6 @@ var ViewPopupUI = (function() {
             }
             con.offset({left: x, top: y});
         },
-        show_chart: function (con, symbol) {
-            var that = this;
-            var server_data = that.server_data();
-            var liveChartConfig = new LiveChartConfig({ renderTo: 'analysis_live_chart', symbol: symbol, with_trades: 0, shift: 0});
-            var time_obj = that.get_time_interval();
-            if(time_obj['is_live'] && time_obj['is_live'] === 1) {
-                 liveChartConfig.update( {
-                     live: '10min'
-                 });
-            } else {
-                var from_date, to_date;
-                if (server_data.is_forward_starting > 0) {
-                    if(server_data.trade_feed_delay > 0) {
-                        from_date = that.get_date_from_seconds(time_obj['from_time'] - parseInt(server_data.trade_feed_delay));
-                        to_date = that.get_date_from_seconds(time_obj['to_time'] + parseInt(server_data.trade_feed_delay));
-                    }
-                } else {
-                    from_date = that.get_date_from_seconds(time_obj['from_time'] - 5);
-                    to_date = that.get_date_from_seconds(time_obj['to_time']);
-                }
- 
-                var display_marker = false;
-                if(time_obj['to_time'] - time_obj['from_time'] <= _diff_end_start_time) {
-                    display_marker = true;
-                }
- 
-                if(time_obj['force_tick']) {
-                    liveChartConfig.update({
-                        force_tick: true,
-                    });
-                }
- 
-                liveChartConfig.update({
-                    interval: {
-                        from: from_date,
-                        to: to_date
-                    },
-                    with_markers: display_marker,
-                });
-            }
-            configure_livechart();
-            updateLiveChart(liveChartConfig);
-            var barrier,
-                purchase_time = $('#trade_details_purchase_date').attr('epoch_time');
-            if (!purchase_time) { // dont add barrier if its forward starting
-                if(server_data.barrier && server_data.barrier2) {
-                    if (liveChartConfig.has_indicator('high')) {
-                        live_chart.remove_indicator('high');
-                    }
-                    barrier = new LiveChartIndicator.Barrier({ name: "high", value: server_data.barrier, color: 'green', label: text.localize('High Barrier')});
-                    live_chart.add_indicator(barrier);
- 
-                    if (liveChartConfig.has_indicator('low')) {
-                        live_chart.remove_indicator('low');
-                    }
-                    barrier = new LiveChartIndicator.Barrier({ name: "low", value: server_data.barrier2, color: 'red', label: text.localize('Low Barrier')});
-                    live_chart.add_indicator(barrier);
- 
-                } else {
-                    if (liveChartConfig.has_indicator('barrier')) {
-                        live_chart.remove_indicator('barrier');
-                    }
-                    barrier = new LiveChartIndicator.Barrier({ name: "barrier", value: server_data.barrier, color: 'green', label: text.localize('Barrier')});
-                    live_chart.add_indicator(barrier);
-                }
-            }
-            that.add_time_indicators(liveChartConfig);
-            that.reposition_confirmation();
-        },
         get_date_from_seconds: function(seconds) {
             var date = new Date(seconds*1000);
             return date;
@@ -268,7 +199,7 @@ var ViewPopupUI = (function() {
                 if (liveChartConfig.has_indicator('entry_spot_time')) {
                     live_chart.remove_indicator('entry_spot_time');
                 }
-                
+
                 if (start_time && entry_spot_time < start_time) {
                     indicator = new LiveChartIndicator.Barrier({ name: "entry_spot_time", label: 'Entry Spot', value: that.get_date_from_seconds(parseInt(entry_spot_time)), color: '#e98024', axis: 'x'});
                 } else {
