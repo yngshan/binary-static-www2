@@ -46,7 +46,6 @@ var TradingAnalysis = (function() {
               '<div class="tab-content-wrapper" id="bet_bottom_content">' +
                 '<div id="tab_graph-content" class="toggle-content invisible">' +
                   '<div id="trade_live_chart"></div>' +
-                  '<div id="trade_high_chart"></div>' +
                 '</div>' +
                 '<div id="tab_explanation-content" class="toggle-content selectedTab"></div>' +
                 '<div id="tab_last_digit-content" class="toggle-content invisible "></div>' +

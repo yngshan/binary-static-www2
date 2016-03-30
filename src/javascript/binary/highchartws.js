@@ -99,7 +99,7 @@ var Highchart = (function() {
   }
 
   function show_chart(chartOptions) {
-
+      
   }
 
   return {
