@@ -24,7 +24,7 @@ var LostPassword = (function() {
         var type = response.msg_type;
         switch (type) {
             case 'verify_email': if (response.verify_email === 1) {
-                load_with_pjax('lost_passwordws_email_sent');
+                load_with_pjax('reset_passwordws');
             } else if (response.error) {
                 $("#email_error").removeClass(hiddenClass).text(text.localize('Invalid email format'));
             }
