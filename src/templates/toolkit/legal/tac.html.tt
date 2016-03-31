@@ -45,7 +45,7 @@
       </div>
       <div id="api-tac-tab-content" class="toggle-content[% IF selected_tab == 'api-tac-tab' +%][% ELSE +%] invisible[% END +%]">
         [% INCLUDE misc/api_tac_tab.html.tt %]
-      </di
+      </div>
 
       <div id="complaints-disputes-tac-tab-content" class="toggle-content[% IF selected_tab == 'complaints-disputes-tac-tab' +%][% ELSE +%] invisible[% END +%]">
         [% INCLUDE legal/complaints_disputes.html.tt %]
