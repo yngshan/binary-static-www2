@@ -252,12 +252,12 @@ var ViewPopupWS = (function() {
         containerSetText('trade_details_end_date'      , epochToDateTime(contract.date_expiry), {'epoch_time': contract.date_expiry});
         containerSetText('trade_details_purchase_price', contract.currency + ' ' + parseFloat(contract.buy_price).toFixed(2));
 
-        normalUpdate();
-
         if(!chartStarted) {
             Highchart.show_chart(contract);
             chartStarted = true;
         }
+
+        normalUpdate();
     };
 
     var normalUpdate = function() {
@@ -295,7 +295,7 @@ var ViewPopupWS = (function() {
         if(!isSold && user_sold) {
             isSold = true;
             containerSetText('trade_details_sold_date', '', {'epoch_time': contract.sell_spot_time});
-            Highchart.show_chart(contract);
+            Highchart.show_chart(contract, 'update');
         }
         if(is_ended) {
             normalContractEnded(parseFloat(profit_loss) >= 0);
@@ -353,6 +353,21 @@ var ViewPopupWS = (function() {
             .append($sections.html())
             .append($('<div/>', {id: 'sell_extra_info_data', class: hiddenClass}))
             .append($('<div/>', {id: 'errMsg', class: 'notice-msg ' + hiddenClass}));
+
+        containerSetText('sell_extra_info_data', '', {
+            'barrier'            : contract.barrier || contract.high_barrier,
+            'barrier2'           : contract.low_barrier || '',
+            'path_dependent'     : contract.is_path_dependent > 0 ? '1' : '',
+            'is_forward_starting': contract.is_forward_starting,
+            'purchase_price'     : contract.buy_price,
+            'shortcode'          : contract.shortcode,
+            'payout'             : contract.payout,
+            'currency'           : contract.currency,
+            'contract_id'        : contract.contract_id,
+            'is_immediate'       : '0',
+            'is_negative'        : '0',
+            'trade_feed_delay'   : '60'
+        });
 
         ViewPopupUI.show_inpage_popup('<div class="' + popupboxID + '">' + $Container.html() + '</div>', '', '#sell_bet_desc, #sell_details_table');
 

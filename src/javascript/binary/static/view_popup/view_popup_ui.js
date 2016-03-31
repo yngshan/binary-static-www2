@@ -207,12 +207,12 @@ var ViewPopupUI = (function() {
         get_epoch: function(elementID) {
             return $('#' + elementID).attr('epoch_time');
         },
-        get_time_interval: function(contract) {
+        get_time_interval: function() {
             var time_obj = {};
-            var start_time    = get_epoch(contract.date_start);
-            var purchase_time = get_epoch(contract.purchase_time);
-            var now_time      = get_epoch(contract.current_spot_time);
-            var end_time      = get_epoch(contract.date_expiry);
+            var start_time    = this.get_epoch('trade_details_start_date');
+            var purchase_time = this.get_epoch('trade_details_purchase_date');
+            var now_time      = this.get_epoch('trade_details_now_date');
+            var end_time      = this.get_epoch('trade_details_end_date');
             if(purchase_time) { // forward starting
                 time_obj['from_time'] = parseInt(purchase_time);
                 time_obj['to_time'] = parseInt(start_time);
