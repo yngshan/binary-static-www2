@@ -58,7 +58,7 @@ var SelfExlusionWS = (function() {
 
         if('error' in response) {
             if (response.error.code === 'ClientSelfExclusion') {
-              BinarySocket.send({logout: 1});
+                page.client.send_logout_request();
             }
             if('message' in response.error) {
                 showPageError(response.error.message, true);

@@ -147,7 +147,7 @@ function BinarySocketClass() {
                 if (type === 'authorize') {
                     if(response.hasOwnProperty('error')) {
                         LocalStore.set('reality_check.ack', 0);
-                       send({'logout': '1', passthrough: {'redirect': 'login'}});
+                        page.client.send_logout_request(true);
                     }
                     else {
                         authorized = true;
@@ -220,7 +220,7 @@ function BinarySocketClass() {
                           type !== 'new_account_virtual' &&
                           type !== 'paymentagent_withdraw' &&
                           type !== 'cashier') {
-                        BinarySocket.send({'logout': '1'});
+                            page.client.send_logout_request();
                       }
                     }
                 }

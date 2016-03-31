@@ -2,6 +2,7 @@ var LoggedInHandler = (function() {
     "use strict";
 
     var init = function() {
+        parent.window['is_logging_in'] = 1; // this flag is used in base.js to prevent auto-reloading the parent window by itself
         var $popup = window.parent.$('.login_popup');
         $popup.find('.close').hide();
         $popup.find('iframe').css({'background': ''});

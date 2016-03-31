@@ -182,10 +182,17 @@ Client.prototype = {
     show_login_if_logout: function(shouldReplacePageContents) {
         if(!this.is_logged_in) {
             if(shouldReplacePageContents) {
-                $('#content > .grd-container').addClass('center').empty().append($('<p/>', {class: 'notice-msg', html: text.localize('Please <a class="login_link" href="javascript:;">login</a> to view this page')}));
+                $('#content > .grd-container').addClass('center').empty()
+                    .append($('<p/>', {class: 'notice-msg', html: text.localize('Please [_1] to view this page')
+                        .replace('[_1]', '<a class="login_link" href="javascript:;">' + text.localize('login') + '</a>')}));
                 $('.login_link').click(function(){page.show_login_popup();});
             }
-            page.show_login_popup();
+            // do not open login popup automatically after user clicked logout button
+            if(!sessionStorage.getItem('logoutClicked')) {
+                page.show_login_popup();
+            } else {
+                sessionStorage.removeItem('logoutClicked');
+            }
         }
         return !this.is_logged_in;
     },
@@ -290,6 +297,12 @@ Client.prototype = {
     update_storage_values: function() {
         this.clear_storage_values();
         this.check_storage_values();
+    },
+    send_logout_request: function(showLoginPopup) {
+        if(showLoginPopup) {
+            sessionStorage.setItem('showLoginPopup', 1);
+        }
+        BinarySocket.send({'logout': '1'});
     },
 };
 
@@ -727,7 +740,8 @@ Header.prototype = {
     },
     logout_handler : function(){
         $('a.logout').unbind('click').click(function(){
-            BinarySocket.send({"logout": "1"});
+            sessionStorage.setItem('logoutClicked', 1);
+            page.client.send_logout_request();
         });
     },
     validate_cookies: function(){
@@ -736,12 +750,12 @@ Header.prototype = {
             var loginid = $.cookie("loginid");
 
             if(!client_form.is_loginid_valid(loginid)){
-                BinarySocket.send({"logout": "1"});
+                page.client.send_logout_request();
             }
 
             for(var i=0;i<accIds.length;i++){
                 if(!client_form.is_loginid_valid(accIds[i].split(":")[0])){
-                    BinarySocket.send({"logout": "1"});
+                    page.client.send_logout_request();
                 }
             }
         }
@@ -768,21 +782,7 @@ Header.prototype = {
                   $.removeCookie(c, {path: cookie_path[1]});
               }
             });
-            var redirectPage;
-                redirectCheck = 1;
-            if(response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.hasOwnProperty('redirect')) {
-                redirectPage = response.echo_req.passthrough.redirect;
-                regex = new RegExp(redirectPage);
-                if (regex.test(window.location.pathname)) {
-                  redirectCheck = 0;
-                }
-            }
-            else {
-                redirectPage = ''; //redirect to homepage
-            }
-            if (redirectCheck) {
-              window.location.href = page.url.url_for(redirectPage);
-            }
+            page.reload();
         }
     },
 };
@@ -1077,6 +1077,10 @@ Page.prototype = {
         }
         $('#current_width').val(get_container_width());//This should probably not be here.
         this.login_popup = this.make_login_popup();
+        if(sessionStorage.getItem('showLoginPopup')) {
+            sessionStorage.removeItem('showLoginPopup');
+            page.show_login_popup();
+        }
     },
     on_unload: function() {
         this.header.on_unload();
@@ -1121,7 +1125,7 @@ Page.prototype = {
         // set local storage
         GTM.set_login_flag();
         localStorage.setItem('active_loginid', loginid);
-        window.location.reload();
+        page.reload();
     },
     on_click_acc_transfer: function() {
         $('#acc_transfer_submit').on('click', function() {
@@ -1199,11 +1203,14 @@ Page.prototype = {
         return popup;
     },
     show_login_popup: function() {
-        if (!page.client.is_logged_in) {
+        if (!page.client.is_logged_in && !page.is_login_popup()) {
             this.login_popup.show();
         }
     },
     is_login_popup: function() {
         return /logged_in/.test(document.URL) || $('.login_popup').length > 0;
+    },
+    reload: function() {
+        window.location.reload();
     },
 };
