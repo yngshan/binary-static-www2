@@ -85,12 +85,12 @@ var KnowledgeTestData = (function() {
         ],
         section2:[
             {
-                question: "To avoid or hedge the future price of an underlying asset which you hold, you should buy a call option",
+                question: "To avoid or hedge the future price of an underlying asset which you hold, you should buy a call option.",
                 answer: false,
                 id: 17
             },
             {
-                question: "To compensate for any rise in the price of an underlying asset that you intend to buy in future, you should buy a call option",
+                question: "To compensate for any rise in the price of an underlying asset that you intend to buy in future, you should buy a call option.",
                 answer: true, id: 18
             },
             {
@@ -170,7 +170,7 @@ var KnowledgeTestData = (function() {
                 id: 33
             },
             {
-                question: "Short positions of currency-related binary option is conducted transactions by depositing necessary margin requirement to trader in advance. If the margin shortage after the transaction established, it is necessary to deposit the additional margin to the trader?",
+                question: "Short positions of currency-related binary option is conducted transactions by depositing necessary margin requirement to trader in advance. If the margin shortage after the transaction established, it is necessary to deposit the additional margin to the trader.",
                 answer: true,
                 id: 34
             },
@@ -240,7 +240,7 @@ var KnowledgeTestData = (function() {
                 id: 47
             },
             {
-                question: "For an individual investor, all profits from OTC currency options trading are tax-free?",
+                question: "For an individual investor, all profits from OTC currency options trading are tax-free.",
                 answer: false,
                 id: 48
             },
@@ -451,11 +451,11 @@ var KnowledgeTestData = (function() {
                 answer: true, id: 93
             },
             {
-                question: "Implied volatility is a prediction of the future rate of change in the underlying asset?",
+                question: "Implied volatility is a prediction of the future rate of change in the underlying asset.",
                 answer: true, id: 94
             },
             {
-                question: "Historical volatility is a prediction of the future rate of change in the underlying asset?",
+                question: "Historical volatility is a prediction of the future rate of change in the underlying asset.",
                 answer: false, id: 95
             },
             {
