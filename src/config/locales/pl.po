@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-31 10:46+0000\n"
-"Last-Translator: Anna Płochocka <plochocka.anna@gmail.com>\n"
+"PO-Revision-Date: 2016-03-31 10:58+0000\n"
+"Last-Translator: Ewelina Bruździak <e.bruzdziak@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/binary/static/pl/>"
 "\n"
 "Language: pl\n"
@@ -4418,10 +4418,9 @@ msgid "Facility that allows you to set limits on your account."
 msgstr "Opcja umożliwiająca ustawienie limitów na Twoim koncie."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:489
-#, fuzzy
 #| msgid "Login Failed"
 msgid "Failed"
-msgstr "Logowanie nie powiodło się"
+msgstr "Zakończone niepowodzeniem"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:58
 msgid "Failed to update trade description."
@@ -5380,10 +5379,12 @@ msgid "If you select \"Ends Outside\", you win the payout if the <strong>exit sp
 msgstr "Jeśli wybierzesz „zakończy się poza”, zdobędziesz wypłatę, gdy <strong>punkt wyjściowy</strong> jest ALBO znacząco wyższy niż <strong>wysoki limit</strong>, ALBO znacząco niższy niż <strong>niski limit</strong>."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/evenodd.html.tt:2
-#, fuzzy
 #| msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgid "If you select \"Even\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>even number (i.e., 2, 4, 6, 8, or 0).</strong>"
-msgstr "Jeśli wybierzesz „zgadza się”, zdobędziesz wypłatę, gdy <strong>ostatnia cyfra</strong> ostatniego najmniejszego przyrostu ceny będzie <strong>taka sama</strong> jak Twoje <strong>przewidywania.</strong>"
+msgstr ""
+"Jeśli wybierzesz „parzysta”, zdobędziesz wypłatę, gdy <strong>ostatnia "
+"cyfra</strong> ostatniego najmniejszego przyrostu ceny będzie <strong>cyfrą "
+"parzystą (np. 2, 4, 6, 8, 0).</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/risefall.html.tt:5
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/ticks.html.tt:5
@@ -5407,16 +5408,20 @@ msgid "If you select \"Matches\", you will win the payout if the <strong>last di
 msgstr "Jeśli wybierzesz „zgadza się”, zdobędziesz wypłatę, gdy <strong>ostatnia cyfra</strong> ostatniego najmniejszego przyrostu ceny będzie <strong>taka sama</strong> jak Twoje <strong>przewidywania.</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/evenodd.html.tt:5
-#, fuzzy
 #| msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgid "If you select \"Odd\", you will win the payout if the <strong>last digit</strong> of the last tick is an <strong>odd number (i.e., 1, 3, 5, 7, or 9).</strong>"
-msgstr "Jeśli wybierzesz „zgadza się”, zdobędziesz wypłatę, gdy <strong>ostatnia cyfra</strong> ostatniego najmniejszego przyrostu ceny będzie <strong>taka sama</strong> jak Twoje <strong>przewidywania.</strong>"
+msgstr ""
+"Jeśli wybierzesz „nieparzysta”, zdobędziesz wypłatę, gdy <strong>ostatnia "
+"cyfra</strong> ostatniego najmniejszego przyrostu ceny będzie <strong>liczbą "
+"nieparzystą (np. 1, 3, 5, 7, 9).</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/overunder.html.tt:2
-#, fuzzy
 #| msgid "If you select \"Matches\", you will win the payout if the <strong>last digit</strong> of the last tick is the <strong>same</strong> as your <strong>prediction.</strong>"
 msgid "If you select \"Over\", you will win the payout if the <strong>last digit</strong> of the last tick is <strong>greater than your prediction.</strong>"
-msgstr "Jeśli wybierzesz „zgadza się”, zdobędziesz wypłatę, gdy <strong>ostatnia cyfra</strong> ostatniego najmniejszego przyrostu ceny będzie <strong>taka sama</strong> jak Twoje <strong>przewidywania.</strong>"
+msgstr ""
+"Jeśli wybierzesz „ponad”, zdobędziesz wypłatę, gdy <strong>ostatnia "
+"cyfra</strong> ostatniego najmniejszego przyrostu ceny będzie <strong>"
+"większa niż cyfra przewidywana przez Ciebie.</strong>"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/risefall.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/ticks.html.tt:2
@@ -8311,11 +8316,12 @@ msgstr "Ocena tego hasła to: %1. Akceptowalna ocena to: 20."
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:175
 msgid "Password should be at least six characters, including lower and uppercase letters with numbers."
 msgstr ""
+"Hasło powinno składać się z minimum sześciu znaków i zawierać małe i wielkie "
+"litery oraz cyfry."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:273
-#, fuzzy
 msgid "Password should have lower and uppercase letters with numbers."
-msgstr "Hasło powinno składać się z liter i cyfr."
+msgstr "Hasło powinno zawierać wielkie i małe litery oraz cyfry."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:131
@@ -9336,7 +9342,7 @@ msgstr "Proszę ponownie wpisać hasło"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:30
 msgid "Read"
-msgstr ""
+msgstr "Odczyt"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
@@ -10028,6 +10034,8 @@ msgstr "Wystarczy zmienić dowolny z parametrów, a cena handlowa zmieni się b�
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:6
 msgid "Simply click on \"Create\" to generate your token; then copy and paste it into the app."
 msgstr ""
+"Aby wygenerować token, po prostu kliknij przycisk „Utwórz”. Następnie "
+"skopiuj go i wklej wewnątrz aplikacji."
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
@@ -10163,6 +10171,8 @@ msgstr "Przepraszamy, wystąpił błąd. Jeśli problem będzie nadal występowa
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:993
 msgid "Sorry, client balance will exceed limits with this payment."
 msgstr ""
+"Przepraszamy, ale ta płatność spowoduje przekroczenie limitów ustawionych "
+"dla saldo klienta."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1505
 msgid "Sorry, contracts on Random Indices are not available in your country of residence"
@@ -10215,10 +10225,11 @@ msgstr "Przepraszamy, ale waluta pośrednika płatności: %1 jest niedostępna d
 
 #. ($currency, $limit)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:880
-#, fuzzy
 #| msgid "Sorry, the aggregate payouts of contracts on your account cannot exceed %2%1."
 msgid "Sorry, the aggregate payouts of contracts on your account cannot exceed %1%2."
-msgstr "Przepraszamy, ale łączna wypłata kontaktów na Twoim koncie nie może przekraczać %1 %2."
+msgstr ""
+"Przepraszamy, ale łączna wypłata kontaktów na Twoim koncie nie może "
+"przekraczać %2 %1."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:908
 msgid "Sorry, the currency format is incorrect."
@@ -10643,10 +10654,9 @@ msgid "Substantial experience in a senior marketing or advertising role"
 msgstr "Duże doświadczenie na wyższym stanowisku związanym z marketingiem lub reklamą"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:488
-#, fuzzy
 #| msgid "Login Success"
 msgid "Successful"
-msgstr "Logowanie powiodło się"
+msgstr "Zakończono powodzeniem"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/copyright.html.tt:12
 msgid "Such materials may be copied and distributed on a limited basis for noncommercial purposes only, provided that any material copied remains intact and that all copies include the following notice in a clearly visible position: &ldquo;Copyright 1999-<span class='currentYear'></span> Binary Ltd. All rights reserved.&rdquo;"
@@ -12266,7 +12276,7 @@ msgstr "Handel jest w tej chwili wstrzymany."
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2537
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2616
 msgid "Trading is suspended for %1 from %2 to %3"
-msgstr "Handel jest wstrzymany dla %1 od %2 do %3"
+msgstr "Handel jest wstrzymany dla %1 od %2 do %3."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:452
 msgid "Trading manual"
