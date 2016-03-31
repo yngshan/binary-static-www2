@@ -213,7 +213,7 @@ BetForm.Barriers.Barrier.prototype = {
     },
     pipsized_value: function(value) {
         var pip_size = BetForm.attributes.pip_size();
-        return parseFloat(value).toFixed(pip_size);
+        return parseInt(value);
     },
     to_relative_value: function(barrier) {
         var spot = BetForm.spot.value();
