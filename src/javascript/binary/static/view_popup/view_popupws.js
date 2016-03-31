@@ -11,8 +11,7 @@ var ViewPopupWS = (function() {
         nextTickReqMax,
         isSold,
         isSellClicked,
-        chartStarted,
-        chartOptions;
+        chartStarted;
     var $Container,
         $loading,
         btnView,
@@ -254,7 +253,7 @@ var ViewPopupWS = (function() {
         normalUpdate();
 
         if(!chartStarted) {
-            Highchart.show_chart(chartOptions);
+            Highchart.show_chart(contract);
             chartStarted = true;
         }
     };
@@ -294,7 +293,7 @@ var ViewPopupWS = (function() {
         if(!isSold && user_sold) {
             isSold = true;
             containerSetText('trade_details_sold_date', '', {'epoch_time': contract.sell_spot_time});
-            Highchart.show_chart(chartOptions);
+            Highchart.show_chart(contract);
         }
         if(is_ended) {
             normalContractEnded(parseFloat(profit_loss) >= 0);
@@ -352,21 +351,6 @@ var ViewPopupWS = (function() {
             .append($sections.html())
             .append($('<div/>', {id: 'sell_extra_info_data', class: hiddenClass}))
             .append($('<div/>', {id: 'errMsg', class: 'notice-msg ' + hiddenClass}));
-
-        chartOptions = {
-            'barrier'            : contract.barrier || contract.high_barrier,
-            'barrier2'           : contract.low_barrier || '',
-            'path_dependent'     : contract.is_path_dependent > 0 ? '1' : '',
-            'is_forward_starting': contract.is_forward_starting,
-            'purchase_price'     : contract.buy_price,
-            'payout'             : contract.payout,
-            'currency'           : contract.currency,
-            'contract_id'        : contract.contract_id,
-            'underlying'         : contract.underlying,
-            'is_immediate'       : '0',
-            'is_negative'        : '0',
-            'trade_feed_delay'   : '60'
-        };
 
         ViewPopupUI.show_inpage_popup('<div class="' + popupboxID + '">' + $Container.html() + '</div>', '', '#sell_bet_desc, #sell_details_table');
 
@@ -653,11 +637,12 @@ var ViewPopupWS = (function() {
     };
 
     return {
-        init         : init,
-        dispatch     : dispatch,
-        tickUpdate   : tickUpdate,
-        spreadUpdate : spreadUpdate,
-        normalUpdate : normalUpdate
+        init                : init,
+        dispatch            : dispatch,
+        tickUpdate          : tickUpdate,
+        spreadUpdate        : spreadUpdate,
+        normalUpdate        : normalUpdate,
+        storeSubscriptionID : storeSubscriptionID
     };
 }());
 
