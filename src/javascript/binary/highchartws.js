@@ -34,7 +34,7 @@ var Highchart = (function() {
         },
         credits:{
           enabled: false
-        }
+        },
         tooltip:{ xDateFormat:'%A, %b %e, %H:%M:%S GMT' },
         xAxis: {
           type: 'datetime',
