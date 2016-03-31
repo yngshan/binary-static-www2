@@ -7,20 +7,19 @@ var ResetPassword = (function () {
         var pw2 = $('#reset-password2').val();
         var dob = $('#dob').val();
 
-        if (token === '') {
-            $('#reset-error').removeClass(hiddenClass).text(text.localize('Verification code is required.'));
+        if (token.length < 48) {
+            $('#verification-error').removeClass(hiddenClass).text(text.localize('Verification code format incorrect.'));
             return;
         }
 
-        // TODO: validate using validation.js
-        if (pw1 === '' && pw1 !== pw2) {
-            $('#reset-error').removeClass(hiddenClass).text(text.localize('Password does not match.'));
+        // use regex to validate password
+        if () {
             return;
         }
 
         var dobDate = new Date(dob);
         if (dob === '' && dobDate === 'Invalid Date') {
-            $('#reset-error').removeClass(hiddenClass).text(text.localize('Invalid date of birth.'));
+            $('#dob-error').removeClass(hiddenClass).text(text.localize('Invalid date of birth.'));
             return;
         }
 
@@ -33,7 +32,7 @@ var ResetPassword = (function () {
     }
 
     function onInput() {
-        $('#reset-error').addClass(hiddenClass);
+        $('.errorfield').addClass(hiddenClass);
     }
 
     function resetPasswordWSHandler(msg) {
