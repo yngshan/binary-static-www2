@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-03-31 04:04+0000\n"
-"Last-Translator: Masanari Higashiyama <higashiyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-03-31 05:14+0000\n"
+"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -656,8 +656,10 @@ msgid ""
 msgstr ""
 "<p style='font-weight: bold; margin-bottom: "
 "0;'>このたびは、Binary株式会社のデモ口座へお申し込みいただき、誠に有難うございます!</p>\n"
+"                                                                          "
+"当社はセキュリティー強化のため認証コードを送信致します。\n"
 "<p style='margin-bottom: 0; margin-top: "
-"0;'>下記のトークンをデモ口座申込みページ上のワンタイムパスワードの欄にご入力して下さい。\n"
+"0;'>下記認証コードをデモ口座申込みページ上の認証コード欄にご入力して下さい。\n"
 "  <p style='margin-bottom: 0; margin-top: 0;'>\n"
 "    <span style='background: #f2f2f2; padding: 10px;'>%2</span>\n"
 "  </p>\n"
@@ -12581,7 +12583,7 @@ msgstr "新パスワード（確認用）"
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:85
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:579
 msgid "Verify your email address - %1"
-msgstr "ワンタイムパスワードトークン発行-%1"
+msgstr "認証コード発行-%1"
 
 #. ($c->stash('website_name')
 #. ($params->{website_name})
@@ -14113,16 +14115,20 @@ msgstr "設定が正しく更新されました。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:285
 msgid "Your token has been invalidated. Please click <a class=\"pjaxload\" href=\"%1\">here</a> to restart the verification process."
-msgstr "あなたのトークンが無効になりました。 認証プロセスを再開するには<a class=\"pjaxload\" href=\"%1\">こちら</a> をクリックしてください。"
+msgstr ""
+"認証コードの有効期限が切れています。再度、<a class=\"pjaxload\" href=\"%1\">「最初からやり直し」</a> "
+"をクリックして認証コードを発行して下さい。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:138
 msgid "Your token has expired."
-msgstr "トークンの有効期限が切れています。"
+msgstr "認証コードの有効期限が切れています。"
 
 #. ($c->stash('request')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:352
 msgid "Your token has expired. If you require further assistance, please contact our <a href=\"%1\"><strong>Customer Support</strong></a>."
-msgstr "認証の有効期限が切れました。お手数ですが、もう一度、最初から同じメールアドレスを入力し、最新のリンクを取得してください。サポートが必要な場合は、 <a href=\"%1\"><strong>カスタマーサポート</strong></a>までご連絡ください。"
+msgstr ""
+"認証コードの有効期限が切れました。お手数ですが、もう一度、最初から同じメールアドレスを入力し、最新のリンクを取得してください。サポートが必要な場合は、 <"
+"a href=\"%1\"><strong>カスタマーサポート</strong></a>までご連絡ください。"
 
 #. (($mode eq 'login' ? 'since login' : 'for the recent 48 hours')
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check.html.haml:1
