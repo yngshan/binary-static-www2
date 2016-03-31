@@ -17,14 +17,14 @@ var ResetPassword = (function () {
         if (!r.test(pw1)) {
             $('#password-error1')
                 .removeClass(hiddenClass)
-                .text(text.localize('Password must contains at least 1 digit, 1 uppercase letter and 1 lowercase letter'));
+                .text(text.localize('Password must contains at least 1 digit, 1 uppercase letter and 1 lowercase letter.'));
             return;
         }
 
         if (pw1 !== pw2) {
             $('#password-error2')
                 .removeClass(hiddenClass)
-                .text(text.localize('Password does not match'));
+                .text(text.localize('Password does not match.'));
             return;
         }
 
