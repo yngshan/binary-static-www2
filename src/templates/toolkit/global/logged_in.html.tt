@@ -16,8 +16,6 @@
     </style>
 </head>
 <body onload="LoggedInHandler.init();">
-    [% google_tag_tracking_code %]
-    [% google_tag_declaration_code %]
     <div id="login_loading">
         <img class="spinner" src="[% request.url_for('images/pages/binary-symbol-logo.svg') %]" alt="" />
     </div>

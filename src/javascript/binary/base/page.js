@@ -38,10 +38,12 @@ var GTM = (function() {
         }
 
         // new implementation (all pages except the above list)
-        var info = gtm_data_layer_info(data && typeof(data) === 'object' ? data : null);
-        dataLayer[0] = info.data;
-        dataLayer.push(info.data);
-        dataLayer.push({"event": info.event});
+        if(!(/logged_in/i).test(window.location.pathname)) {
+            var info = gtm_data_layer_info(data && typeof(data) === 'object' ? data : null);
+            dataLayer[0] = info.data;
+            dataLayer.push(info.data);
+            dataLayer.push({"event": info.event});
+        }
     };
 
     var page_title = function() {
