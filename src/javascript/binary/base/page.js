@@ -1197,7 +1197,7 @@ Page.prototype = {
     },
     make_login_popup: function() {
         var $contents = $('<div/>')
-            .append($('<iframe/>', {src: page.url.url_for('oauth2/authorize', 'app_id=id-SXLFBG78C32rdZAmR8Kwpf6BTCFz8'),  // TODO: replace with 'binarycom' for production
+            .append($('<iframe/>', {src: page.url.url_for('oauth2/authorize', 'app_id=id-GRfEnNid02NgU61QMeRb718E0pACp'),  // TODO: replace with 'binarycom' for production
                 style: 'background: url("' + page.url.url_for_static('/images/common/hourglass_1.gif') + '") no-repeat center;',
                 'onload': 'this.style.background="none"'}))
             .append($('<a/>', {href: page.url.url_for('user/lost_password'), text: text.localize('Lost password?'), id: 'popup_lost_password'}));
