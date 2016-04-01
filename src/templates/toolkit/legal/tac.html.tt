@@ -6,7 +6,7 @@
   <div class="tab-menu">
     <div class="tab-menu-wrap grd-container">
       <ul id="legal-menu" class="tm-ul">
-        <li id="legal-tab" class="tm-li[% IF selected_tab == 'legal-tab' || selected_tab == 'legal-tac-tab' || selected_tab == 'betting-rules-tab' || selected_tab == 'promo-tac-tab' || selected_tab == 'affiliate-tac-tab' || selected_tab == 'complaints-disputes-tac-tab' +%] active[% END +%] first">
+        <li id="legal-tab" class="tm-li[% IF selected_tab == 'legal-tab' || selected_tab == 'legal-tac-tab' || selected_tab == 'betting-rules-tab' || selected_tab == 'promo-tac-tab' || selected_tab == 'affiliate-tac-tab' || selected_tab == 'api-tac-tab' || selected_tab == 'complaints-disputes-tac-tab' +%] active[% END +%] first">
           <span class="menu-wrap-a">
             <span class="menu-wrap-b"><a href="#legal-tab" class="tm-a first[% IF selected_tab == 'legal-tab' || selected_tab == 'legal-tac-tab' || selected_tab == 'betting-rules-tab' || selected_tab == 'promo-tac-tab' || selected_tab == 'affiliate-tac-tab' || selected_tab == 'complaints-disputes-tac-tab' +%] a-active[% END +%]">[% l('Terms and Conditions') %]</a></span>
           </span>
