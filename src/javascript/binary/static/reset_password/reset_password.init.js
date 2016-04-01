@@ -72,6 +72,8 @@ var ResetPassword = (function () {
         $('#reset').click(function () {
             submitResetPassword();
         });
+
+        PasswordMeter.attach($('#password-meter-container'));
     }
 
     return {
