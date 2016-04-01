@@ -662,6 +662,11 @@ Header.prototype = {
         return;
     },
     time_counter : function(response){
+        if(response.error){
+            console.log("Oops! The clock stopped, replacing batteries.");
+            page.header.start_clock_ws();
+            return;
+        }
         var that = this;
         var clock_handle;
         var clock = $('#gmt-clock');
