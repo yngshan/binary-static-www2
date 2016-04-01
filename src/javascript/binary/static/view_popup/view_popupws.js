@@ -253,8 +253,23 @@ var ViewPopupWS = (function() {
         containerSetText('trade_details_purchase_price', contract.currency + ' ' + parseFloat(contract.buy_price).toFixed(2));
 
         if(!chartStarted) {
-            Highchart.show_chart(contract);
-            chartStarted = true;
+            BinarySocket.init({
+              onmessage: function(msg){
+                var response = JSON.parse(msg.data);
+                if (response) {
+                  var type = response.msg_type;
+                  if ((type === 'forget_all') && response.echo_req.passthrough.hasOwnProperty('chart_tick')) {
+                    Highchart.show_chart(contract);
+                    chartStarted = true;
+                  }
+                }
+              }
+            });
+            if (TradePage.is_trading_page()) BinarySocket.send({"forget_all":"ticks", "passthrough": {'chart_tick' : 1}});
+            else {
+                Highchart.show_chart(contract);
+                chartStarted = true;
+            }
         }
 
         normalUpdate();
@@ -302,6 +317,7 @@ var ViewPopupWS = (function() {
             if(contract.is_valid_to_sell && contract.is_expired && !contract.is_sold && !isSellClicked) {
                 ViewPopupUI.forget_streams();
                 sellExpired();
+                Highchart.show_chart(contract, 'update');
             }
         }
 
