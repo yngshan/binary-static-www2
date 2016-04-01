@@ -22,14 +22,13 @@ var LostPassword = (function() {
     function lostPasswordWSHandler(msg) {
         var response = JSON.parse(msg.data);
         var type = response.msg_type;
-        switch (type) {
-            case 'verify_email': if (response.verify_email === 1) {
+
+        if (type === 'verify_email') {
+            if (response.verify_email === 1) {
                 load_with_pjax('reset_passwordws');
             } else if (response.error) {
                 $("#email_error").removeClass(hiddenClass).text(text.localize('Invalid email format'));
             }
-                break;
-            default: return;
         }
     }
 
