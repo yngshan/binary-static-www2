@@ -662,8 +662,7 @@ Header.prototype = {
         return;
     },
     time_counter : function(response){
-        if(response.error){
-            console.log("Oops! The clock stopped, replacing batteries.");
+        if(isNaN(response.echo_req.passthrough.client_time) || response.error){
             page.header.start_clock_ws();
             return;
         }
