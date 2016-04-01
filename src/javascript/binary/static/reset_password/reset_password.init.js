@@ -1,4 +1,6 @@
 var ResetPassword = (function () {
+    'use strict';
+
     var hiddenClass = 'invisible';
 
     function submitResetPassword() {
@@ -17,14 +19,14 @@ var ResetPassword = (function () {
         if (!r.test(pw1)) {
             $('#password-error1')
                 .removeClass(hiddenClass)
-                .text(text.localize('Password must contains at least 1 digit, 1 uppercase letter and 1 lowercase letter.'));
+                .text(text.localize('Password should have lower and uppercase letters with numbers.'));
             return;
         }
 
         if (pw1 !== pw2) {
             $('#password-error2')
                 .removeClass(hiddenClass)
-                .text(text.localize('Password does not match.'));
+                .text(Content.localize().textPasswordsNotMatching);
             return;
         }
 
@@ -50,8 +52,8 @@ var ResetPassword = (function () {
         var response = JSON.parse(msg.data);
         var type = response.msg_type;
 
-        switch (type) {
-            case 'reset_password': if (response.error) {
+        if (type === 'reset_password') {
+            if (response.error) {
                 $('#reset-error').removeClass(hiddenClass).text(response.error.message);
             } else {
                 $('#reset-form').addClass(hiddenClass);
@@ -59,8 +61,6 @@ var ResetPassword = (function () {
                     .text(text.localize('Your password has been successfully reset. ' +
                         'Please log into your account using your new password.'));
             }
-                break;
-            default: return;
         }
     }
     

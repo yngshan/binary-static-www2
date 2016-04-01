@@ -1,7 +1,7 @@
 var LostPassword = (function() {
-    "use strict";
+    'use strict';
 
-    var hiddenClass = "invisible";
+    var hiddenClass = 'invisible';
 
     function submitEmail() {
         var emailInput = $('#lp_email').val();
