@@ -31,17 +31,27 @@ var ResetPassword = (function () {
         }
 
         var dobDate = new Date(dob);
-        if (dob === '' || dobDate === 'Invalid Date') {
+        var isVirtual = page.client.is_virtual();
+        var dateValid = !(dob === '' || dobDate === 'Invalid Date');
+        if (!isVirtual && !dateValid) {
             $('#dob-error').removeClass(hiddenClass).text(text.localize('Invalid date of birth.'));
             return;
         }
 
-        BinarySocket.send({
-            reset_password: 1,
-            verification_code: token,
-            new_password: pw1,
-            date_of_birth: dob
-        });
+        if (isVirtual) {
+            BinarySocket.send({
+                reset_password: 1,
+                verification_code: token,
+                new_password: pw1
+            });
+        } else {
+            BinarySocket.send({
+                reset_password: 1,
+                verification_code: token,
+                new_password: pw1,
+                date_of_birth: dob
+            });
+        }
     }
 
     function onInput() {
@@ -65,15 +75,22 @@ var ResetPassword = (function () {
     }
     
     function init() {
+        Content.populate();
+        var $pmContainer = $('#password-meter-container');
+
         $('input').keydown(function () {
             onInput();
+        });
+
+        $('#reset-password1').keyup(function (ev) {
+            PasswordMeter.updateMeter($pmContainer, ev.target.value);
         });
 
         $('#reset').click(function () {
             submitResetPassword();
         });
 
-        PasswordMeter.attach($('#password-meter-container'));
+        PasswordMeter.attach($pmContainer);
     }
 
     return {
