@@ -43,26 +43,26 @@ var SettingsDetailsWS = (function() {
             BinarySocket.send({"states_list": residence, "passthrough": {"value": data.address_state}});
             if (page.client.residence === 'jp') {
                 $('#lblName').text((data.last_name || '') + ' ' + (data.first_name || ''));
-                $('#lblGender').text(data.gender || '');
-                $('#lblOccupation').text(data.occupation || '');
+                $('#lblGender').text(text.localize(data.gender) || '');
+                $('#lblOccupation').text(text.localize(data.occupation) || '');
                 $('#lblAddress1').text(data.address_line_1 || '');
                 $('#lblAddress2').text(data.address_line_2 || '');
                 $('#lblCity').text(data.address_city || '');
                 $('#lblPostcode').text(data.address_postcode || '');
                 $('#lblPhone').text(data.phone || '');
-                $('#lblAnnualIncome').text(data.annual_income || '');
-                $('#lblFinancialAsset').text(data.financial_asset || '');
+                $('#lblAnnualIncome').text(text.localize(data.annual_income) || '');
+                $('#lblFinancialAsset').text(text.localize(data.financial_asset) || '');
                 $('#lblDailyLossLimit').text(data.daily_loss_limit || '');
-                $('#lblEquities').text(data.trading_experience_equities || '');
-                $('#lblCommodities').text(data.trading_experience_commodities || '');
-                $('#lblForeignCurrencyDeposit').text(data.trading_experience_foreign_currency_deposit || '');
-                $('#lblMarginFX').text(data.trading_experience_margin_fx || '');
-                $('#lblInvestmentTrust').text(data.trading_experience_investment_trust || '');
-                $('#lblPublicCorporationBond').text(data.trading_experience_public_bond || '');
-                $('#lblDerivativeTrading').text(data.trading_experience_option_trading || '');
-                $('#lblPurposeOfTrading').text(data.trading_purpose || '');
+                $('#lblEquities').text(text.localize(data.trading_experience_equities) || '');
+                $('#lblCommodities').text(text.localize(data.trading_experience_commodities) || '');
+                $('#lblForeignCurrencyDeposit').text(text.localize(data.trading_experience_foreign_currency_deposit) || '');
+                $('#lblMarginFX').text(text.localize(data.trading_experience_margin_fx) || '');
+                $('#lblInvestmentTrust').text(text.localize(data.trading_experience_investment_trust) || '');
+                $('#lblPublicCorporationBond').text(text.localize(data.trading_experience_public_bond) || '');
+                $('#lblDerivativeTrading').text(text.localize(data.trading_experience_option_trading) || '');
+                $('#lblPurposeOfTrading').text(text.localize(data.trading_purpose) || '');
                 if (data.hedge_asset !== null && data.hedge_asset_amount !== null) {
-                  $('#lblHedgeAsset').text(data.hedge_asset || '');
+                  $('#lblHedgeAsset').text(text.localize(data.hedge_asset) || '');
                   $('#lblHedgeAssetAmount').text(data.hedge_asset_amount || '');
                   $('.hedge').css('display', 'block');
                 }
