@@ -129,7 +129,9 @@ var PricingTable = (function() {
 
     render: function render() {
       var rows = [];
-      var barriers = Object.keys(this.props.prices).sort(function(a, b){return b-a;});
+      var barriers = Object.keys(this.props.prices).sort(function(a, b) {
+        return b - a;
+      });
       for (var i = 0; i < barriers.length; i++) {
         var barrier = barriers[i];
         rows.push(React.createElement(PricingTableRow, {
@@ -158,7 +160,10 @@ var PricingTable = (function() {
       state.symbol = form.symbol;
       BinarySocket.send({
         pricing_table: 1,
-        properties: form
+        contract_category: form.contract_category,
+        date_expiry: form.date_expiry,
+        symbol: form.symbol,
+        type: 'japan',
       });
     }
   }
@@ -182,9 +187,9 @@ var PricingTable = (function() {
   function handleResponse(res) {
     var echo_req = res.echo_req;
 
-    if (state.category === echo_req.properties.contract_category &&
-      state.date_expiry === echo_req.properties.date_expiry &&
-      state.symbol === echo_req.properties.symbol) {
+    if (state.category === echo_req.contract_category &&
+      state.date_expiry === echo_req.date_expiry &&
+      state.symbol === echo_req.symbol) {
 
       state.prev_prices = state.prices;
       state.prices = res.pricing_table.prices;
@@ -197,28 +202,31 @@ var PricingTable = (function() {
 
         Object.keys(contractTypes).forEach(function(type) {
           var contractName = contractTypes[type];
-          var longCode = {
-            mask: Content.localize()['text' + type],
-            values: {
-              currency: 'JPY',
-              sum: 1000,
-              symbol: state.symbol,
-              close: close,
-            },
-          };
+          var mask = Content.localize()['text' + type];
+          if (mask) {
+            var longCode = {
+              mask: mask,
+              values: {
+                currency: 'JPY',
+                sum: 1000,
+                symbol: state.symbol,
+                close: close,
+              },
+            };
 
-          var position = contractTypeDisplayMapping(type);
-          var positionIndex = position === 'top' ? 1 : 2;
+            var position = contractTypeDisplayMapping(type);
+            var positionIndex = position === 'top' ? 1 : 2;
 
-          ReactDOM.render(
-            React.createElement(ContractDescription, {
-              longCode: longCode,
-              type: type,
-              contractName: contractName,
-            }),
-            document.getElementById('contract_description' + positionIndex)
-          );
-          $('#contract_description' + positionIndex).css('display', 'flex');
+            ReactDOM.render(
+              React.createElement(ContractDescription, {
+                longCode: longCode,
+                type: type,
+                contractName: contractName,
+              }),
+              document.getElementById('contract_description' + positionIndex)
+            );
+            $('#contract_description' + positionIndex).css('display', 'flex');
+          }
         });
       }
 
