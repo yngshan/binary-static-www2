@@ -17,7 +17,6 @@ var ViewPopupUI = (function() {
                 var con = $('<div class="inpage_popup_container inpage_popup_container_ws" id="sell_popup_container"><a class="close">x</a><div class="inpage_popup_content"></div></div>');
                 con.hide();
                 var _on_close = function () {
-                    if (TradePage.is_trading_page()) TradePage.onLoad();
                     that.cleanup(true);
                 };
                 con.find('a.close').on('click', function () { _on_close(); } );

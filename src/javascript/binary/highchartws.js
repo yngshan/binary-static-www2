@@ -20,7 +20,7 @@ var Highchart = (function() {
       var title = options.title;
       var el = document.getElementById('analysis_live_chart');
 
-      options = {
+      var chartOptions = {
         chart: {
           type: 'line',
           renderTo: el,
@@ -73,25 +73,25 @@ var Highchart = (function() {
         rangeSelector: { enabled: false },
       };
 
-      var chart = new Highcharts.Chart(options);
+      var chart = new Highcharts.Chart(chartOptions);
 
-      chart.addPlotLineX = function(options) {
+      chart.addPlotLineX = function(chartOptions) {
         chart.xAxis[0].addPlotLine({
-           value: options.value,
-           id: options.id || options.value,
-           label: {text: options.label || 'label', x: options.text_left ? -15 : 5},
-           color: options.color || '#e98024',
+           value: chartOptions.value,
+           id: chartOptions.id || chartOptions.value,
+           label: {text: chartOptions.label || 'label', x: chartOptions.text_left ? -15 : 5},
+           color: chartOptions.color || '#e98024',
            zIndex: 4,
-           width: options.width || 2,
+           width: chartOptions.width || 2,
         });
       };
 
-      chart.addPlotLineY = function(options) {
+      chart.addPlotLineY = function(chartOptions) {
         chart.yAxis[0].addPlotLine({
-          id: options.id || options.label,
-          value: options.value,
-          label: {text: options.label, align: 'center'},
-          color: options.color || 'green',
+          id: chartOptions.id || chartOptions.label,
+          value: chartOptions.value,
+          label: {text: chartOptions.label, align: 'center'},
+          color: chartOptions.color || 'green',
           zIndex: 4,
           width: 2,
         });
@@ -138,6 +138,9 @@ var Highchart = (function() {
                             if (contract.entry_tick_time && response.history.times[i] === contract.entry_tick_time.toString()) {
                                 options.min = response.history.times[i-2];
                                 break;
+                            } else if (contract.purchase_time && response.history.times[i] === contract.purchase_time.toString()) {
+                                options.min = response.history.times[i-2] || response.history.times[i-1];
+                                break;
                             }
                         }
                       }
@@ -159,9 +162,10 @@ var Highchart = (function() {
 
                   if (purchase_time !== start_time) draw_line_x(purchase_time, 'Purchase Time');
 
-                  draw_line_x(start_time, 'Start Time', 'textLeft');
-                  if (contract.entry_tick_time) draw_line_x(contract.entry_tick_time, 'Entry Spot');
-
+                  if (!is_sold || sell_time > start_time) {
+                    draw_line_x(start_time, 'Start Time', 'textLeft');
+                    if (contract.entry_tick_time) draw_line_x(contract.entry_tick_time, 'Entry Spot');
+                  }
 
                   if (contract.barrier) {
                       window.chart.addPlotLineY({value: contract.barrier*1, label: 'Barrier (' + contract.barrier + ')'});
@@ -172,14 +176,19 @@ var Highchart = (function() {
                 } else if (response.tick || response.ohlc) {
                   if (response.tick) {
                     options.tick = response.tick;
+                    if (is_sold && sell_time < end_time) {get_max_history(contract, response, sell_spot_time);}
+                    else if (is_expired && exit_tick_time) {get_max_history(contract, response, exit_tick_time);}
+                    else {get_max_history(contract, response, end_time);}
                   } else if (response.ohlc) {
                     options.ohlc = response.ohlc;
+                    if (is_sold && sell_time < end_time) {get_max_candle(contract, response, sell_spot_time);}
+                    else {get_max_candle(contract, response, end_time);}
                   }
                   update_chart(contract, options);
                 }
                 if (is_sold || is_expired) {
                   end_contract(contract);
-                  if (window.responseID) {
+                  if (response[type].id) {
                       BinarySocket.send({'forget':response[type].id});
                   }
                 }
@@ -223,7 +232,7 @@ var Highchart = (function() {
       request.style = 'candles';
     }
 
-    if(!contract.is_expired) {
+    if(!contract.is_expired && !contract.is_sold) {
         request.subscribe = 1;
     }
 
@@ -231,7 +240,7 @@ var Highchart = (function() {
   }
 
   function get_max_history(contract, response, end_time) {
-    if (contract.is_expired || contract.is_sold) {
+    if (response.history && response.history.times && (contract.is_expired || contract.is_sold)) {
       for (i = response.history.times.length; i >= 0; i--) {
           if (response.history.times[i] === end_time.toString()) {
               window.max = response.history.times[i+1];
@@ -270,7 +279,7 @@ var Highchart = (function() {
   function end_contract(contract) {
     initialize_values(contract);
     if (window.chart) {
-      if (exit_tick_time || is_expired) {
+      if (exit_tick_time || is_expired || is_sold) {
         if (sell_time && sell_time < end_time) {
           draw_line_x(sell_time, 'Sell Time', 'textLeft');
         } else if (!sell_time || sell_time >= end_time) {
