@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: I 18N\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-01 05:29+0000\n"
+"PO-Revision-Date: 2016-04-04 07:28+0000\n"
 "Last-Translator: Putri Kumala <putri@regentmarkets.com>\n"
 "Language-Team: Indonesian "
 "<https://hosted.weblate.org/projects/binary/static/id/>\n"
@@ -5623,11 +5623,13 @@ msgstr "Pada pasar valuta asing, para trader dapat membeli kontrak berdasarkan p
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:445
 msgid "In general a binary option price will not exceed the payout amount."
-msgstr ""
+msgstr "Pada dasarnya harga opsi binary tidak akan melebihi jumlah hasil."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:447
 msgid "In general the price of a binary option will be lower than the price of a plain vanilla option because the payout amount is fixed."
 msgstr ""
+"Pada dasarnya harga opsi binary akan lebih rendah dari harga opsi vanilla "
+"karena jumlah hasil adalah tetap."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1477
 msgid "In order for you to place contracts, we need to know your Residence (Country). Please update your settings."
@@ -6741,7 +6743,7 @@ msgstr "Salam Hormat,"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:219
 msgid "Kindly send us your documents for verification."
-msgstr ""
+msgstr "Silakan kirimkan dokumen Anda untuk verifikasi."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:2
 msgid "Knowledge Test"
@@ -7288,6 +7290,9 @@ msgstr "Maksimum turnover harian"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:419
 msgid "Maximum loss of buyer at binary options is an optional fee, maximum loss of the seller will be the amount subtracted the option fee from the payout amount."
 msgstr ""
+"Kerugian maksimum dari pembeli pada opsi binary adalah biaya opsional, "
+"kerugian maksimum dari penjual adalah jumlah pengurangan biaya opsi dari "
+"hasil."
 
 #. ($email)
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:258
@@ -7605,7 +7610,7 @@ msgstr "Permohonan Kata Sandi Baru"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:114
 msgid "New Sign-In Activity Detected"
-msgstr ""
+msgstr "Aktifitas Pengaksesan Baru Terdeteksi"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:25
 msgid "New password"
@@ -8863,10 +8868,14 @@ msgstr "Menganalisa harga aset dasar akan turun dari harga pasar pada saat kontr
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:382
 msgid "Predicted the underlying asset price will decline than strike price at exit time and bought binary put options. "
 msgstr ""
+"Memprediksi harga aset dasar akan menurun dari target harga pada waktu exit "
+"dan membeli opsi binary put."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:383
 msgid "Predicted the underlying asset price will raise than strike price at exit time and bought binary put options. "
 msgstr ""
+"Memprediksi harga aset dasar akan naik dari target harga pada waktu exit dan "
+"membeli opsi binary put."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:379
 msgid "Predicts that width of up-down of underlying asset is small and  in order to obtain the benefit also moving in either direction of rising and falling, granted together both of the call option that exercise price is higher than underlying asset and the put option that exercise price is lower than underlying asset price."
@@ -8931,6 +8940,8 @@ msgstr "Harga telah bergerak dari %1 ke %2."
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:427
 msgid "Price of OTC currency option is the calculated value based on multiple elements and is determined by relative trading basically."
 msgstr ""
+"Harga opsi mata uang OTC adalah nilai yang dihitung berdasarkan beberapa "
+"elemen dan ditentukan oleh trading secara relatif."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:431
 msgid "Price of call option will be lower interest rates of the underlying assets is low, but the price of the put option, go up when the interest rates of the underlying assets is low."
