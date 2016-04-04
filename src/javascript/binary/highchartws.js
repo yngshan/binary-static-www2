@@ -147,7 +147,7 @@ var Highchart = (function() {
                   } else if (response.candles) {
                       options.candles = response.candles;
                       for (i = 0; i < response.candles.length; i++) {
-                          if (econtract.ntry_tick_time && response.candles[i] && response.candles[i].epoch < contract.entry_tick_time && response.candles[i+1].epoch > entry_tick_time) {
+                          if (contract.entry_tick_time && response.candles[i] && response.candles[i].epoch < contract.entry_tick_time && response.candles[i+1].epoch > entry_tick_time) {
                               options.min = response.candles[i-1].epoch;
                               break;
                           }
@@ -159,7 +159,7 @@ var Highchart = (function() {
 
                   if (purchase_time !== start_time) draw_line_x(purchase_time, 'Purchase Time');
 
-                  draw_line_x(start_time, 'Start Time', 'text_left');
+                  draw_line_x(start_time, 'Start Time', 'textLeft');
                   if (contract.entry_tick_time) draw_line_x(contract.entry_tick_time, 'Entry Spot');
 
 
