@@ -662,6 +662,10 @@ Header.prototype = {
         return;
     },
     time_counter : function(response){
+        if(isNaN(response.echo_req.passthrough.client_time) || response.error){
+            page.header.start_clock_ws();
+            return;
+        }
         var that = this;
         var clock_handle;
         var clock = $('#gmt-clock');
