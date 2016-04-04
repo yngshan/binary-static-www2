@@ -144,6 +144,12 @@ var JapanAccOpeningUI = function () {
       window.accountErrorCounter++;
     }
 
+    if (elementObj['answer'].value.length < 2 ) {
+      errorObj['answer'].innerHTML = Content.errorMessage('min', 2);
+      Validate.displayErrorMessage(errorObj['answer']);
+      window.accountErrorCounter++;
+    }
+
     for (key in elementObj) {
       if (elementObj[key].offsetParent !== null && key !== 'address2') {
         if (/^$/.test(Trim(elementObj[key].value)) && elementObj[key].type !== 'checkbox') {
