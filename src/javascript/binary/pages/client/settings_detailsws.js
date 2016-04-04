@@ -52,7 +52,7 @@ var SettingsDetailsWS = (function() {
                 $('#lblPhone').text(data.phone || '');
                 $('#lblAnnualIncome').text(data.annual_income || '');
                 $('#lblFinancialAsset').text(data.financial_asset || '');
-                $('#lblDailyLossLimit').text(addComma(data.daily_loss_limit) || '');
+                $('#lblDailyLossLimit').text(data.daily_loss_limit || '');
                 $('#lblEquities').text(data.trading_experience_equities || '');
                 $('#lblCommodities').text(data.trading_experience_commodities || '');
                 $('#lblForeignCurrencyDeposit').text(data.trading_experience_foreign_currency_deposit || '');
