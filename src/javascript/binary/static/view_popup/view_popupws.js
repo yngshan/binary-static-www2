@@ -101,7 +101,6 @@ var ViewPopupWS = (function() {
             contractType = 'normal';
             if(Object.keys(history).length === 0) {
                 getTickHistory(contract.underlying, contract.date_start + 1, contract.date_start + 60, 0, {'next_tick': 1});
-                getTickHistory(contract.underlying, contract.date_start, contract.date_expiry, 1, {'normal': 1}, 60);
             }
             normalShowContract();
         }
@@ -238,7 +237,7 @@ var ViewPopupWS = (function() {
 
     // ===== Contract: Normal =====
     var normalShowContract = function() {
-        if(Object.keys(history).length === 0 || nextTickEpoch.length === 0) {
+        if(nextTickEpoch.length === 0) {
             return;
         }
 
@@ -359,7 +358,7 @@ var ViewPopupWS = (function() {
         $sections.find('#sell_details_table').append($(
             '<table>' +
                 '<tr><th colspan="2">' + text.localize('Contract Information') + '</th></tr>' +
-                    normalRow('Contract ID',    '', 'trade_details_contract_id') +
+                    // normalRow('Contract ID',    '', 'trade_details_contract_id') +
                     // normalRow('Reference ID',   '', 'trade_details_ref_id') +
                     normalRow('Start Time',     '', 'trade_details_start_date') +
                     normalRow('End Time',       '', 'trade_details_end_date') +
@@ -578,9 +577,13 @@ var ViewPopupWS = (function() {
         if(!start) {
             delete(req['start']);
         }
+        if(!count || count === 0) {
+            delete(req['count']);
+        }
         if(passthrough && Object.keys(passthrough).length > 0) {
             req.passthrough = passthrough;
         }
+        req.passthrough.contract_id = contractID;
         if(granularity > 0) {
             req.style = 'candles';
             req.granularity = granularity;
@@ -592,6 +595,9 @@ var ViewPopupWS = (function() {
         if(response.hasOwnProperty('error')) {
             // Sometimes when tick data or feed is not ready, the tick_history response returns with unclear error
             showErrorPopup(response);
+            return;
+        }
+        if(response.echo_req.passthrough && response.echo_req.passthrough.contract_id != contractID) {
             return;
         }
 
@@ -620,10 +626,6 @@ var ViewPopupWS = (function() {
                             }
                         }
                     }
-                }
-                else {
-                    history = response.candles;
-                    normalShowContract();
                 }
                 break;
         }
