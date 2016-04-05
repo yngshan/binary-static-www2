@@ -202,3 +202,8 @@ var Validate = (function(){
     errorMessageToken: errorMessageToken
   };
 }());
+
+function passwordValid(password) {
+  var r = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+  return r.test(password);
+}
