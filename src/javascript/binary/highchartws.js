@@ -41,14 +41,13 @@ var Highchart = (function() {
           categories:null,
           startOnTick: false,
           endOnTick: false,
-          min: options.min ? options.min*1000 : null,
-          max: window.max ? (window.max*1000) + 3 : null,
+          min: options.min ? parseInt(options.min)*1000 : null,
+          max: window.max ? (parseInt(window.max) + 3 )*1000 : null,
           labels: { overflow:"justify", format:"{value:%H:%M:%S}" }
         },
         yAxis: {
           labels: { align: 'left', x: 0, y: -2 },
-          title: '',
-          // gridLineWidth: 0,
+          title: ''
         },
         series: [{
           name: title,
@@ -155,10 +154,10 @@ var Highchart = (function() {
             } else if (response.candles) {
                 options.candles = response.candles;
                 for (i = 0; i < response.candles.length; i++) {
-                    if (contract.entry_tick_time && response.candles[i] && response.candles[i].epoch < contract.entry_tick_time && response.candles[i+1].epoch > contract.entry_tick_time) {
+                    if (contract.entry_tick_time && response.candles[i] && response.candles[i].epoch <= contract.entry_tick_time && response.candles[i+1].epoch > contract.entry_tick_time) {
                         options.min = response.candles[i-1].epoch;
                         break;
-                    } else if (contract.purchase_time && response.candles[i] && response.candles[i].epoch < contract.purchase_time && response.candles[i+1].epoch > contract.purchase_time) {
+                    } else if (contract.purchase_time && response.candles[i] && response.candles[i].epoch <= contract.purchase_time && response.candles[i+1].epoch > contract.purchase_time) {
                         options.min = response.candles[i-2].epoch || response.candles[i-1].epoch;
                         break;
                     }
@@ -267,13 +266,13 @@ var Highchart = (function() {
   function get_max_candle(contract, response, end_time) {
     if (contract.is_expired || contract.is_sold) {
       for (i = response.candles.length - 2; i >= 0; i--) {
-          if (entry_tick_time && response.candles[i] && response.candles[i].epoch > end_time && response.candles[i+1].epoch < end_time) {
+          if (entry_tick_time && response.candles[i] && response.candles[i].epoch <= end_time && response.candles[i+1].epoch > end_time) {
               window.max = response.candles[i+1].epoch;
               break;
           }
       }
     } else {
-      window.max = contract.date_expiry.toString();
+      window.max = contract.date_expiry;
     }
     return;
   }
