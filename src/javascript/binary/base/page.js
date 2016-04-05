@@ -662,6 +662,10 @@ Header.prototype = {
         return;
     },
     time_counter : function(response){
+        if(isNaN(response.echo_req.passthrough.client_time) || response.error){
+            page.header.start_clock_ws();
+            return;
+        }
         var that = this;
         var clock_handle;
         var clock = $('#gmt-clock');
@@ -1020,6 +1024,8 @@ Page.prototype = {
         this.on_click_acc_transfer();
         if(getCookieItem('login')){
             ViewBalance.init();
+        } else {
+            LocalStore.set('reality_check.ack', 0);
         }
         $('#current_width').val(get_container_width());//This should probably not be here.
     },
