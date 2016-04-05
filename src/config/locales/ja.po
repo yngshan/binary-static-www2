@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-05 11:00+0000\n"
-"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-04-05 19:20+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -64,10 +64,9 @@ msgstr "$250,000 - $1,000,000"
 
 #. (website, "<a href=\"https://developers.binary.com\" target=\"_blank\"> Application Program Interface</a>")
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:3
-#, fuzzy
 #| msgid "Terms and Conditions"
 msgid "%1 %2 (\"API\") Terms and Conditions"
-msgstr "店頭バイナリーオプション取引約款"
+msgstr "%1 %2 (\"API\") 利用規約"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:364
 msgid "%1 %2 has been credited to your Virtual money account %3"
@@ -660,10 +659,13 @@ msgid "<a href='%1' class='pjaxload'>Contact us</a> should you need further assi
 msgstr "ご不明な点がございましたら <a class=\"pjaxload\" href=\"%1\">カスタマーサポート</a> までご連絡下さい。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:112
-#, fuzzy
 #| msgid "Dear Valued Customer, <p style=\"margin-top:1em;line-height:200%;\">It appears that you have tried to register an email address that is already included in our system. If it was not you, simply ignore this email, or contact our customer support if you have any concerns.</p>"
 msgid "<div style=\"line-height:200%;color:#333333;font-size:15px;\"><p>Dear Valued Customer,</p><p>It appears that you have tried to register an email address that is already included in our system. If it was not you, simply ignore this email, or contact our customer support if you have any concerns.</p></div>"
-msgstr "お客様へ <p style=\"margin-top:1em;line-height:200%;\">お申し込み頂いたメールアドレスは既に当システムに登録済みです。この内容にお心あたりがない場合は無視していただくか、不明点がございましたら、カスタマーサポートまでご連絡ください。</p>"
+msgstr ""
+"<div style=\"line-height:200%;color:#333333;font-size:15px;\"><p>親愛なるお客様へ</p>"
+"\n"
+"<p>お申し込み頂いたメールアドレスは既に当システムに登録済みです。この内容にお心あたりがない場合は無視していただくか、ご不明点がございましたら、カスタマ"
+"ーサポートまでご連絡ください</p></div>"
 
 #: /home/git/regentmarkets/bom-backoffice/subs/subs_backoffice_clientdetails.pm:47
 msgid "<option value=\"\"></option><option value=\"01\">Jan</option><option value=\"02\">Feb</option><option value=\"03\">Mar</option><option value=\"04\">Apr</option><option value=\"05\">May</option><option value=\"06\">Jun</option><option value=\"07\">Jul</option><option value=\"08\">Aug</option><option value=\"09\">Sep</option><option value=\"10\">Oct</option><option value=\"11\">Nov</option><option value=\"12\">Dec</option>"
@@ -671,7 +673,6 @@ msgstr "<option value=\"\"></option><option value=\"01\">１月</option><option 
 
 #. ($params->{code}                                . '</span></p></p><p>Enjoy trading with us on Binary.com.</p>')
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:100
-#, fuzzy
 #| msgid ""
 #| "<p style='font-weight: bold; margin-bottom: 0;'>Thanks for signing up for a virtual account!</p>\n"
 #| "<p style='margin-bottom: 0; margin-top: 0;'>Enter the following verification token into the form to %1:\n"
@@ -682,14 +683,9 @@ msgstr "<option value=\"\"></option><option value=\"01\">１月</option><option 
 #| "<p style='margin-top: 0;'>Enjoy trading with us on Binary.com.</p>\n"
 msgid "<p style=\"font-weight: bold;\">Thanks for signing up for a virtual account!</p><p>Enter the following verification token into the form to create an account:<p><span style=\"background: #f2f2f2; padding: 10px;\">"
 msgstr ""
-"<p style='font-weight: bold; margin-bottom: 0;'>このたびは、Binary株式会社のデモ口座へお申し込みいただき、誠に有難うございます!</p>\n"
-"                                                                          当社はセキュリティー強化のため認証コードを送信致します。\n"
-"<p style='margin-bottom: 0; margin-top: 0;'>下記認証コードをデモ口座申込みページ上の認証コード欄にご入力して下さい。\n"
-"  <p style='margin-bottom: 0; margin-top: 0;'>\n"
-"    <span style='background: #f2f2f2; padding: 10px;'>%2</span>\n"
-"  </p>\n"
-"</p>\n"
-"<p style='margin-top: 0;'>Binary.comご不明点がございましたら、カスタマーサポートまでお問い合わせ下さい。。</p>\n"
+"<p style=\"font-weight: bold;\""
+">デモ口座へご登録いただきありがとうございます</p><p>下記認証コードをデモ口座申込みページ上の認証コード欄にご入力して下さい。<p>\n"
+"<span style=\"background: #f2f2f2; padding: 10px;\">"
 
 #. ($params->{code}                            . '</span></p></p>')
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:85
@@ -792,7 +788,6 @@ msgid "<span>All markets:</span> currencies, stocks, indices, and commodities."
 msgstr "<span>取引対象:</span> 外国為替市場の主要通貨ペア"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
-#, fuzzy
 #| msgid "<span>All payouts:</span> from $1 to $100,000."
 msgid "<span>All payouts:</span> from $1 to $50,000."
 msgstr "<span>ペイアウト</span>：1,000円〜1,000万円"
@@ -823,7 +818,6 @@ msgid "<strong>All markets</strong> - currencies, stock indices, and commodities
 msgstr "<strong>取引対象</strong>- 外国為替市場の主要通貨ペア"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/what_is_binary_trading.html.haml:1
-#, fuzzy
 #| msgid "<strong>All payouts</strong> - from $1 to $100,000."
 msgid "<strong>All payouts</strong> - from $1 to $50,000."
 msgstr "<strong>ペイアウト</strong>：1,000円〜1,000万円"
@@ -1030,7 +1024,6 @@ msgid "<strong>Touch/No Touch</strong> - where you can profit from the market to
 msgstr "<strong>タッチ/ノータッチ</strong>：バリア設定をした価格にタッチするか、タッチしないかを予想してください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
-#, fuzzy
 #| msgid "<strong>Trade to your budget</strong> - dip a toe in the water with $2 or go all out for $100,000."
 msgid "<strong>Trade to your budget</strong> - dip a toe in the water with $2 or go all out for $50,000."
 msgstr "<strong>ご予算に気兼ねなくトレード</strong>：お客さまの資産状況に合わせて、1,000円からお取引頂けます。"
@@ -1488,10 +1481,9 @@ msgid "Affiliate Program"
 msgstr "アフィリエイト"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:26
-#, fuzzy
 #| msgid "Agreement for documents"
 msgid "Agreement Restrictions"
-msgstr "交付書面等のご確認"
+msgstr "制限契約"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:406
 msgid "Agreement for documents"
@@ -1642,10 +1634,9 @@ msgid "Annual Income"
 msgstr "年間所得"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:210
-#, fuzzy
 #| msgid "Annual Income"
 msgid "Annual income"
-msgstr "年間所得"
+msgstr "年収"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "Another major award. This time we’re nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge."
@@ -1701,10 +1692,9 @@ msgstr "当社へのトラフィックの成長または増加に貢献が見込
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:647
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:802
-#, fuzzy
 #| msgid "Application Name"
 msgid "Applications"
-msgstr "アプリケーション名"
+msgstr "アプリケーション"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:705
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_application.html.tt:1
@@ -1939,10 +1929,9 @@ msgid "Authorise your account."
 msgstr "アカウント認証"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:84
-#, fuzzy
 #| msgid "An unrecognised application"
 msgid "Authorised Applications"
-msgstr "認識されていないアプリケーションです"
+msgstr "認識済みアプリケーション"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:3
 msgid "Available payment methods"
@@ -2272,10 +2261,9 @@ msgid "Binary.com Open-Source Projects"
 msgstr "Binary.comオープンソース・プロジェクト"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:109
-#, fuzzy
 #| msgid "Binary.com academy"
 msgid "Binary.com Property"
-msgstr "Binary.comアカデミー"
+msgstr "Binary.comプロパティ"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/white_labels.html.haml:1
 msgid "Binary.com White Labels"
@@ -2676,7 +2664,6 @@ msgid "Choose a password"
 msgstr "パスワード"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
-#, fuzzy
 #| msgid "Choose a payout from $1 to $100,000."
 msgid "Choose a payout from $1 to $50,000."
 msgstr "ペイアウトは1,000円から1,000万円まで選択可能です"
@@ -2962,10 +2949,9 @@ msgid "Conduct disaster and recovery planning and execution"
 msgstr "非常事態の際の復旧計画とその実行"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:199
-#, fuzzy
 #| msgid "Client's Liability"
 msgid "Confidentiality"
-msgstr "お客様の責任"
+msgstr "守秘義務"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:25
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/container/confirm_box_popup.html.tt:1
@@ -3052,10 +3038,9 @@ msgid "Contract Expiry"
 msgstr "取引終了"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:594
-#, fuzzy
 #| msgid "Contract"
 msgid "Contract ID"
-msgstr "トレード"
+msgstr "トレード ID"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:568
 msgid "Contract Information"
@@ -3887,7 +3872,6 @@ msgid "Disclaimer"
 msgstr "免責事項"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:167
-#, fuzzy
 #| msgid "Disclaimer"
 msgid "Disclaimers"
 msgstr "免責事項"
@@ -4624,7 +4608,6 @@ msgid "Financial Security"
 msgstr "安心できる資金保全"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:221
-#, fuzzy
 #| msgid "Financial Asset"
 msgid "Financial asset"
 msgstr "金融資産"
@@ -4890,10 +4873,9 @@ msgid "General"
 msgstr "総則"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:248
-#, fuzzy
 #| msgid "General Risks"
 msgid "General Provisions"
-msgstr "一般的なリスク"
+msgstr "一般条項"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:443
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/risk_warning.html.tt:2
