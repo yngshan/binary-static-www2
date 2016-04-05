@@ -138,6 +138,7 @@ function BinarySocketClass() {
                 var type = response.msg_type;
                 if (type === 'authorize') {
                     if(response.hasOwnProperty('error')) {
+                        LocalStore.set('reality_check.ack', 0);
                        send({'logout': '1', passthrough: {'redirect': 'login'}});
                     }
                     else {
@@ -155,6 +156,7 @@ function BinarySocketClass() {
                     ViewBalanceUI.updateBalances(response);
                 } else if (type === 'time') {
                     page.header.time_counter(response);
+                    ViewPopupWS.dispatch(response);
                 } else if (type === 'logout') {
                     page.header.do_logout(response);
                     localStorage.removeItem('jp_test_allowed');
