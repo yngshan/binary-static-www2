@@ -253,12 +253,6 @@ var ViewPopupWS = (function() {
         containerSetText('trade_details_end_date'      , epochToDateTime(contract.date_expiry), {'epoch_time': contract.date_expiry});
         containerSetText('trade_details_purchase_price', contract.currency + ' ' + parseFloat(contract.buy_price).toFixed(2));
 
-<<<<<<< HEAD
-=======
-        normalUpdateTimers(contract.current_spot_time, moment().valueOf());
-        normalUpdate();
-
->>>>>>> www2/master
         if(!chartStarted) {
             if (TradePage.is_trading_page()) socketSend({"forget_all":"ticks"});
             else {
@@ -267,6 +261,7 @@ var ViewPopupWS = (function() {
             }
         }
 
+        normalUpdateTimers(contract.current_spot_time, moment().valueOf());
         normalUpdate();
     };
 
@@ -340,7 +335,7 @@ var ViewPopupWS = (function() {
                     remained = remained % day_seconds;
                 }
                 containerSetText('trade_details_live_remaining',
-                    (days > 0 ? days + ' ' + text.localize(days > 1 ? 'days' : 'day') + ', ' : '') + 
+                    (days > 0 ? days + ' ' + text.localize(days > 1 ? 'days' : 'day') + ', ' : '') +
                     moment((remained) * 1000).utc().format('HH:mm:ss'));
             }
         };
