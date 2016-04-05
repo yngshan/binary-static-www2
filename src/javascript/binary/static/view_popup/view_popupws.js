@@ -332,7 +332,7 @@ var ViewPopupWS = (function() {
                     remained = remained % day_seconds;
                 }
                 containerSetText('trade_details_live_remaining',
-                    (days > 0 ? text.localize(days > 1 ? '[_1] days' : '[_1] day').replace('[_1]', days) + ', ' : '') + 
+                    (days > 0 ? days + ' ' + text.localize(days > 1 ? 'days' : 'day') + ', ' : '') + 
                     moment((remained) * 1000).utc().format('HH:mm:ss'));
             }
         };
