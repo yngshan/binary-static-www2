@@ -200,7 +200,7 @@ var ViewPopupWS = (function() {
         $Container.find('#sell_level').parent('tr').addClass(hiddenClass);
         $Container.find('#exit_level').text(contract.exit_level.toFixed(contract.decPlaces)).parent('tr').removeClass(hiddenClass);
         sellSetVisibility(false);
-        showWinLossStatus(is_win);
+        // showWinLossStatus(is_win);
     };
  
     var spreadMakeTemplate = function() {
@@ -321,7 +321,7 @@ var ViewPopupWS = (function() {
 
             var is_started = !contract.is_forward_starting || contract.current_spot_time > contract.date_start,
                 is_ended   = contract.is_expired || contract.is_sold;
-            if(!is_started || is_ended) {
+            if(!is_started || is_ended || now >= contract.date_expiry) {
                 containerSetText('trade_details_live_remaining', '-');
             } else {
                 var remained = contract.date_expiry - now,
@@ -344,11 +344,11 @@ var ViewPopupWS = (function() {
 
     var normalContractEnded = function(is_win) {
         containerSetText('trade_details_now_date'        , '', {'epoch_time': ''});
-        containerSetText('trade_details_current_title'   , text.localize('Contract Expiry'));
+        containerSetText('trade_details_current_title'   , text.localize(contract.sell_spot_time < contract.date_expiry ? 'Contract Sold' : 'Contract Expiry'));
         containerSetText('trade_details_indicative_label', text.localize('Price'));
         containerSetText('trade_details_message'         , '&nbsp;', {'epoch_time': ''});
         sellSetVisibility(false);
-        showWinLossStatus(is_win);
+        // showWinLossStatus(is_win);
     };
  
     var normalMakeTemplate = function() {
@@ -360,7 +360,7 @@ var ViewPopupWS = (function() {
             '<table>' +
                 '<tr><th colspan="2">' + text.localize('Contract Information') + '</th></tr>' +
                     normalRow('Contract ID',    '', 'trade_details_contract_id') +
-                    normalRow('Ref. ID',        '', 'trade_details_ref_id') +
+                    // normalRow('Reference ID',   '', 'trade_details_ref_id') +
                     normalRow('Start Time',     '', 'trade_details_start_date') +
                     normalRow('End Time',       '', 'trade_details_end_date') +
                     normalRow('Remaining Time', '', 'trade_details_live_remaining') +
