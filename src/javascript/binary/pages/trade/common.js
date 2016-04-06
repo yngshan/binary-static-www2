@@ -772,7 +772,7 @@ function displayTooltip(market, symbol){
         app = document.getElementById('androidApp');
     if (market.match(/^random/)){
         tip.show();
-        tip.setAttribute('target','/get-started/random-markets');
+        tip.setAttribute('target','/get-started/volidx-markets');
         if (guide) {
           guide.hide();
         }
@@ -785,13 +785,13 @@ function displayTooltip(market, symbol){
       tip.hide();
     }
     if (market.match(/^random_index/)){
-        tip.setAttribute('target','/get-started/random-markets#random-indices');
+        tip.setAttribute('target','/get-started/volidx-markets#random-indices');
     }
     if (market.match(/^random_daily/)){
-        tip.setAttribute('target','/get-started/random-markets#random-quotidians');
+        tip.setAttribute('target','/get-started/volidx-markets#random-quotidians');
     }
     if (market.match(/^random_nightly/)){
-        tip.setAttribute('target','/get-started/random-markets#random-nocturnes');
+        tip.setAttribute('target','/get-started/volidx-markets#random-nocturnes');
     }
     if (market.match(/^smart_fx/)){
         tip.show();

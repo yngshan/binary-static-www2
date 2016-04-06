@@ -1,23 +1,23 @@
 - stash(title => l('Volatility Index Markets'));
 
 .grd-container
-  .random-markets.static_full
+  .volidx-markets.static_full
     .grd-grid-3.grd-hide-mobile
       .sidebar
         %ul#sidebar-nav
           %li#sidebar-link-section-1.selected
-            %a{:href => "#what-are-random-markets"}= l('How to trade the volatility indices markets?')
+            %a{:href => "#what-are-volidx-markets"}= l('How to trade the volatility indices markets?')
           %li#sidebar-link-section-2
-            %a{:href => "#random-indices"}= l('Volatility Indices')
+            %a{:href => "#volidx-indices"}= l('Volatility Indices')
           %li#sidebar-link-section-3
-            %a{:href => "#random-quotidians"}= l('Varying Volatility')
+            %a{:href => "#volidx-quotidians"}= l('Varying Volatility')
           %li#sidebar-link-section-4
-            %a{:href => "#random-nocturnes"}= l('Constant Volatility with drift')
+            %a{:href => "#volidx-nocturnes"}= l('Constant Volatility with drift')
         .sidebar-button
-          %a.pjaxload{:href => url_for('trade.cgi?market=random')}= l('Place a volatility index trade')
+          %a.pjaxload{:href => url_for('trade.cgi?market=volidx')}= l('Place a volatility index trade')
     .grd-grid-9.grd-grid-mobile-12.grd-parent
       .section
-        %a#what-are-random-markets
+        %a#what-are-volidx-markets
         .section-content
           #section-1
             .grd-grid-12
@@ -26,41 +26,44 @@
             .grd-grid-7.grd-grid-mobile-12
               %ul.checked
                 %li
-                  %a.pjaxload{:href=>url_for("trade.cgi?market=random&form_name=risefall")}= l('Rise/Fall')
+                  %a.pjaxload{:href=>url_for("trade.cgi?market=volidx&form_name=risefall")}= l('Rise/Fall')
                 %li
-                  %a.pjaxload{:href=>url_for("trade.cgi?market=random&form_name=higherlower")}= l('Higher/Lower')
+                  %a.pjaxload{:href=>url_for("trade.cgi?market=volidx&form_name=higherlower")}= l('Higher/Lower')
                 %li
-                  %a.pjaxload{:href=>url_for("trade.cgi?market=random&form_name=touchnotouch")}= l('Touch/No Touch')
-                %li!= l('In/Out (<a href="[_1]">ends between/outside</a> and <a href="[_2]">stays between/goes outside</a>)', url_for("trade.cgi?market=random&form_name=endsinout"), url_for("trade.cgi?market=random&form_name=staysinout"))
+                  %a.pjaxload{:href=>url_for("trade.cgi?market=volidx&form_name=touchnotouch")}= l('Touch/No Touch')
+                %li!= l('In/Out (<a href="[_1]">ends between/outside</a> and <a href="[_2]">stays between/goes outside</a>)', url_for("trade.cgi?market=volidx&form_name=endsinout"), url_for("trade.cgi?market=volidx&form_name=staysinout"))
                 %li
-                  %a.pjaxload{:href=>url_for("trade.cgi?market=random&expiry_type=duration&form_name=asian&underlying_symbol=R_100&time=5t")}= l('Asians')
+                  %a.pjaxload{:href=>url_for("trade.cgi?market=volidx&expiry_type=duration&form_name=asian&underlying_symbol=R_100&time=5t")}= l('Asians')
                 %li
-                  %a.pjaxload{:href=>url_for("trade.cgi?market=random&expiry_type=duration&form_name=digits&underlying_symbol=R_100&time=5t")}= l('Digits')
+                  %a.pjaxload{:href=>url_for("trade.cgi?market=volidx&expiry_type=duration&form_name=digits&underlying_symbol=R_100&time=5t")}= l('Digits')
             .grd-grid-5.grd-grid-mobile-12
-              %img.responsive{:src => url_for('images/pages/get-started/get-started-random-markets.svg')}
+              %img.responsive{:src => url_for('images/pages/get-started/get-started-volidx-markets.svg')}
             .clearfix
             %p= l('Volatility Indices are further categorized into three types:');
-            %ul
-              %li l('Constant Volatility')
-              %li l('Varying Volatility')
-              %li l('Constant Volatility with drift')
+            %ul.bullet
+              %li 
+                != l('Constant Volatility')
+              %li 
+                != l('Varying Volatility')
+              %li 
+                != l('Constant Volatility with drift')
       .section
-        %a#random-indices
+        %a#volidx-indices
         .section-content
           #section-2
             .grd-grid-12
               %h1= l('Constant Volatility Indices')
               %p
-                != l('[_1]\'s Constant Volatility Indices are the [_2], [_3], [_4], and [_5]. These indices correspond to simulted markets with constant volatilities of 25%, 50%, 75% and 100%', stash->{website_name}, pjax_link_for(l('Volatility 25 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_25')), pjax_link_for(l('Volatility 50 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_50')), pjax_link_for(l('Volatility 75 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_75')), pjax_link_for(l('Volatility 100 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_100')))
-            #random-indices-container
+                != l('[_1]\'s Constant Volatility Indices are the [_2], [_3], [_4], and [_5]. These indices correspond to simulted markets with constant volatilities of 25%, 50%, 75% and 100%', stash->{website_name}, pjax_link_for(l('Volatility 25 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_25')), pjax_link_for(l('Volatility 50 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_50')), pjax_link_for(l('Volatility 75 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_75')), pjax_link_for(l('Volatility 100 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_100')))
+            #volidx-indices-container
               .grd-grid-8.grd-grid-mobile-12
                 %p
-                  != l('The [_1] is twice as volatile as the [_2], and four times as volatile as the [_3].', pjax_link_for(l('Volatility 100 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_100')), pjax_link_for(l('Volatility 50 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_50')), pjax_link_for(l('Volatility 25 Index'), url_for('trade.cgi?market=random&form_name=risefall&underlying_symbol=R_25')))
+                  != l('The [_1] is twice as volatile as the [_2], and four times as volatile as the [_3].', pjax_link_for(l('Volatility 100 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_100')), pjax_link_for(l('Volatility 50 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_50')), pjax_link_for(l('Volatility 25 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_25')))
               .grd-grid-4.grd-grid-mobile-12
-                %img.responsive{:src => url_for('images/pages/get-started/get-started-random-indices.svg')}
+                %img.responsive{:src => url_for('images/pages/get-started/get-started-volidx-indices.svg')}
             .clearfix
       .section
-        %a#random-quotidians
+        %a#volidx-quotidians
         .section-content
           #section-3
             .grd-grid-12
@@ -71,7 +74,7 @@
               %p
                 != l('Volatility Up 12GMT Index and Volatility Down 12GMT Index are similar to Volatility Up and Volatility Down respectively, except for starting at 1000 at 12:00 GMT each day.')
       .section
-        %a#random-nocturnes
+        %a#volidx-nocturnes
         .section-content
           #section-4
             .grd-grid-12
