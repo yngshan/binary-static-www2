@@ -7,14 +7,16 @@ msgstr ""
 "Project-Id-Version: BOM\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-04 09:12+0000\n"
-"Last-Translator: Sittie Hadjirah Sevilla <sittiebaser@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/binary/static/ru/>\n"
+"PO-Revision-Date: 2016-04-06 19:25+0000\n"
+"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
+"Language-Team: Russian "
+"<https://hosted.weblate.org/projects/binary/static/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.6-dev\n"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:47
@@ -1335,10 +1337,9 @@ msgid "Account balance: "
 msgstr "Баланс счета: "
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Authorize.pm:29
-#, fuzzy
 #| msgid "Your account is disabled"
 msgid "Account is dsiabled"
-msgstr "Ваш счет недоступен"
+msgstr "Ваш счет неактивен"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:554
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
@@ -1555,6 +1556,9 @@ msgstr "Можно использовать дополнительный пар�
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:120
 msgid "An additional sign-in has just been detected on your account %1 from the following IP address: %2. If this additional sign-in was not performed by you, and / or you have any related concerns, please contact our Customer Support team."
 msgstr ""
+"На Ваш счёт %1 только что был выполнен дополнительный вход со следующего "
+"IP-адреса: %2. Если вы не входили на свой счёт и/или у Вас возникли "
+"опасения, пожалуйста, свяжитесь с нашим отделом поддержки клиентов."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "An advanced university degree in Mathematics, Physics or Engineering"
@@ -1671,10 +1675,9 @@ msgstr "Любой человек, обладающий потенциалом �
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:647
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:802
-#, fuzzy
 #| msgid "Application Name"
 msgid "Applications"
-msgstr "Название приложения"
+msgstr "Приложения"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:705
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_application.html.tt:1
@@ -1902,17 +1905,18 @@ msgstr "Авторизация"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/authenticate.html.tt:39
 msgid "Authentication of your account is not required at this time.  We will notify you by email if authentication is required."
-msgstr "Авторизация Вашего счёта в данное время не требуется. Мы уведомим Вам по электронному адресу, если потребуется авторизация."
+msgstr ""
+"Авторизация Вашего счёта в данное время не требуется. Мы уведомим Ваc по "
+"электронному адресу, если потребуется авторизация."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:224
 msgid "Authorise your account."
 msgstr "Авторизуйте свой счет."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:84
-#, fuzzy
 #| msgid "An unrecognised application"
 msgid "Authorised Applications"
-msgstr "Неизвестное приложение"
+msgstr "Доступные приложения"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:3
 msgid "Available payment methods"
@@ -2023,10 +2027,9 @@ msgid "Barrier is out of acceptable range."
 msgstr "Барьер находится вне приемлемых рамок."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/BarrierBuilder.pm:34
-#, fuzzy
 #| msgid "Barrier must be at least "
 msgid "Barrier must be an integer."
-msgstr "Барьер должен быть по меньшей мере "
+msgstr "Барьер должен быть целым числом."
 
 #. ($min_allowed . ' pips away from the spot.')
 #. ($self->minimum_allowable_move . ' pips away from the spot.')
@@ -2638,10 +2641,9 @@ msgid "Choose a password"
 msgstr "Выберите пароль"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
-#, fuzzy
 #| msgid "Choose a payout from $1 to $100,000."
 msgid "Choose a payout from $1 to $50,000."
-msgstr "Выберите выплату от $1 до $100,000."
+msgstr "Выберите выплату от $1 до $50,000."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
 msgid "Choose a trade type"
@@ -3002,10 +3004,9 @@ msgid "Contract Details"
 msgstr "Подробности контракта"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:569
-#, fuzzy
 #| msgid "Contract expired"
 msgid "Contract Expiry"
-msgstr "Контракт закончился"
+msgstr "Срок истечения контракта"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:594
 #, fuzzy
@@ -3014,10 +3015,9 @@ msgid "Contract ID"
 msgstr "Контракт"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:568
-#, fuzzy
 #| msgid "Contract Confirmation"
 msgid "Contract Information"
-msgstr "Подтверждение контракта"
+msgstr "Детали контракта"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:37
 msgid "Contract Payouts"
@@ -3055,10 +3055,9 @@ msgid "Contract has already expired."
 msgstr "Контракт уже закончил свое действие."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:581
-#, fuzzy
 #| msgid "Contract started"
 msgid "Contract is not started yet"
-msgstr "Контракт начался"
+msgstr "Контракт ещё не начался"
 
 # 100%
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1626
@@ -3095,10 +3094,11 @@ msgid "Contract started"
 msgstr "Контракт начался"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:593
-#, fuzzy
 #| msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr "Внимание: контракт будет продан по цене, действительной на момент получения запроса нашими серверами. Эта цена может отличаться от указанной в настоящее время."
+msgstr ""
+"Контракт будет продан по цене, действующей на момент получения запроса "
+"нашими серверами. Эта цена может отличаться от указанной в настоящее время."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:52
 msgid "Contracts"
@@ -3416,10 +3416,9 @@ msgid "Date of birth"
 msgstr "Ваша дата рождения"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:486
-#, fuzzy
 #| msgid "Your date of birth is invalid."
 msgid "Date of birth is required."
-msgstr "Ваша дата рождения недействительна."
+msgstr "Необходимо указать дату рождения."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:53
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:494
@@ -3480,22 +3479,33 @@ msgstr ""
 "\n"
 "Congratulations on passing the knowledge test for binary options trading.\n"
 "\n"
-"In the next stage of our account opening process we are required to verify your identity documents and review your eligibility to open a trading account. This will be conducted by our Compliance and Risk Management department upon receipt of your identity documents.\n"
+"In the next stage of our account opening process we are required to verify "
+"your identity documents and review your eligibility to open a trading "
+"account. This will be conducted by our Compliance and Risk Management "
+"department upon receipt of your identity documents.\n"
 "\n"
-"Kindly <u> 1reply to this email and attach a scanned copy</u> 2 of one of the following approved forms of identity:\n"
+"Kindly <u>reply to this email and attach a scanned copy</u> of one of the "
+"following approved forms of identity:\n"
 "\n"
-"<ul> 3\n"
-"    <li> 4<b> 5Japan Driving license</b> 6, front and back sides</li> 7\n"
-"    <li> 8<b> 9Health Insurance card</b> 0, front and back side</li>\n"
-"    <li><b>Basic Resident register</b> and separate passport size photograph. If your document contains details of other family members please cover-over with a blank piece of paper when taking the scan</li>\n"
+"<ul>\n"
+"    <li><b>Japan Driving license</b>, front and back sides</li>\n"
+"    <li><b>Health Insurance card</b>, front and back side</li>\n"
+"    <li><b>Basic Resident register</b> and separate passport size "
+"photograph. If your document contains details of other family members please "
+"cover-over with a blank piece of paper when taking the scan</li>\n"
 "    <li><b>Residence Card</b>, front and back side</li>\n"
 "</ul>\n"
 "\n"
-"Please ensure the document contains details of your current address which matches the details that you provided in the basic information section earlier. Please also ensure that the address and other information is easily readable, as otherwise this may delay your application.\n"
+"Please ensure the document contains details of your current address which "
+"matches the details that you provided in the basic information section "
+"earlier. Please also ensure that the address and other information is easily "
+"readable, as otherwise this may delay your application.\n"
 "\n"
-"We will endeavor to verify your documents within 24 hours, and send you another email when this step has been completed.\n"
+"We will endeavor to verify your documents within 24 hours, and send you "
+"another email when this step has been completed.\n"
 "\n"
-"Once again, thank you very much for applying to open an account at Binary.com\n"
+"Once again, thank you very much for applying to open an account at Binary."
+"com\n"
 "\n"
 "\n"
 "Yours sincerely,\n"
@@ -4139,10 +4149,9 @@ msgid "Email address"
 msgstr "Эл. адрес"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:153
-#, fuzzy
 #| msgid "The re-entered email address is incorrect."
 msgid "Email address is incorrect."
-msgstr "Повторно введённый электронный адрес является неправильным."
+msgstr "Неправильный электронный адрес."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:63
 msgid "Email not given."
@@ -4567,10 +4576,9 @@ msgstr "Финансы"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:748
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:2
-#, fuzzy
 #| msgid "Virtual Account Opening"
 msgid "Financial Account Opening"
-msgstr "Открытие Демо-счета"
+msgstr "Открытие финансового счета"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:598
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:793
@@ -6621,10 +6629,9 @@ msgid "June"
 msgstr "Июнь"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:653
-#, fuzzy
 #| msgid "API token for third party applications."
 msgid "Keep track of your authorised applications."
-msgstr "Токен API для независимых приложений."
+msgstr "Следите за доступными приложениями."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/about/index.html.haml:1
 msgid "Key facts"
@@ -6640,13 +6647,12 @@ msgstr "С уважением,"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:219
 msgid "Kindly send us your documents for verification."
-msgstr ""
+msgstr "Kindly send us your documents for verification."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:2
-#, fuzzy
 #| msgid "Acknowledgement of"
 msgid "Knowledge Test"
-msgstr "Подтверждение"
+msgstr "Тест на знание"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge and experience in the financial services industry"
@@ -6667,7 +6673,7 @@ msgstr "Знание теории вероятностей, стохастиче
 #. ($next_dt->date . ' ' . $next_dt->time)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:151
 msgid "Knowledge test is unavailable now, you may take the test on %1"
-msgstr ""
+msgstr "Knowledge test is unavailable now, you may take the test on %1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:70
 msgid "LOG OUT"
@@ -7064,10 +7070,9 @@ msgid "Manage your account access and security settings."
 msgstr "Управление доступом к учетной записи и настройками безопасности."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:86
-#, fuzzy
 #| msgid "An unrecognised application"
 msgid "Manage your authorised applications."
-msgstr "Неизвестное приложение"
+msgstr "Управление доступными приложениями."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Managerial, analytical, organizational, financial, and verbal/written communication skills in both the regional language and English"
@@ -7510,10 +7515,9 @@ msgid "Network Status"
 msgstr "Статус сети"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:651
-#, fuzzy
 #| msgid "Never Used"
 msgid "Never"
-msgstr "Никогда не использовался"
+msgstr "Никогда"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:347
 msgid "Never Used"
@@ -7661,10 +7665,9 @@ msgstr "Не публиковать рекламные материалы без
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/spreads.html.tt:9
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/staysinout.html.tt:10
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/touchnotouch.html.tt:11
-#, fuzzy
 #| msgid "Note:"
 msgid "Note"
-msgstr "Примечание:"
+msgstr "Примечание"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:31
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
@@ -8346,10 +8349,9 @@ msgid "Permission denied."
 msgstr "Отказано в разрешении."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:649
-#, fuzzy
 #| msgid "Permission denied."
 msgid "Permissions"
-msgstr "Отказано в разрешении."
+msgstr "Разрешения"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:712
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:3
@@ -8384,10 +8386,9 @@ msgstr "Пожалуйста, согласитесь с Заявлением о 
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:18
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:39
-#, fuzzy
 #| msgid "Please check your email for the next step."
 msgid "Please check your email for the value of this token"
-msgstr "Пожалуйста, проверьте свой email для выполнения дальнейших шагов."
+msgstr "Пожалуйста, проверьте свой email; Вам должен прийти токен"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/doughflow_currency_choice.html.tt:3
 msgid "Please choose which currency you would like to transact in."
@@ -8432,10 +8433,9 @@ msgstr "Пожалуйста, введите цифру выше 0"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:103
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:123
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:83
-#, fuzzy
 #| msgid "Please enter a valid name."
 msgid "Please enter a number."
-msgstr "Пожалуйста, внесите правильное имя."
+msgstr "Пожалуйста, введите число."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1344
 msgid "Please enter a password."
@@ -8575,10 +8575,9 @@ msgid "Please provide at least one self-exclusion setting."
 msgstr "Пожалуйста, выберите по меньшей мере одну установку на само-ограничение."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:342
-#, fuzzy
 #| msgid "Please provide at least one self-exclusion setting."
 msgid "Please provide complete details for account opening."
-msgstr "Пожалуйста, выберите по меньшей мере одну установку на само-ограничение."
+msgstr "Пожалуйста, предоставьте полные данные для открытия счёта."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:821
 msgid "Please provide some information about yourself and your proposed services"
@@ -14837,7 +14836,7 @@ msgstr "входная спот-котировка минус %1"
 #. (abs $pips)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Strike.pm:246
 msgid "entry spot minus %plural(%1,1 pip, %d pips)"
-msgstr "входная спот-котировка минус  %plural(%1,1 пункт., %d пункт.)"
+msgstr "входн. спот-котировк. минус %plural(%1,1 пункт., %d пункт.)"
 
 #. ($abs_diff)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Strike.pm:251
@@ -14847,7 +14846,7 @@ msgstr "входная спот-котировка плюс %1"
 #. ($pips)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Strike.pm:245
 msgid "entry spot plus %plural(%1,1 pip, %d pips)"
-msgstr "входная спот-котировка плюс %plural(%1,1 пункт, %d пункт.)"
+msgstr "входн. спот-котировк. плюс %plural(%1,1 пункт, %d пункт.)"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1761
 msgid "explanation"
