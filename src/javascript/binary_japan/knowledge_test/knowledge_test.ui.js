@@ -109,7 +109,7 @@ var KnowledgeTestUI = (function () {
             class: 'pjaxload',
             id: 'knowledgetest-link',
             href: '/new_account/knowledge_testws'
-        }).text(text.localize('Take knowledge test'));
+        }).text(text.localize('{JAPAN ONLY}Take knowledge test'));
 
         $topbarmsg.children('a').addClass('invisible');
         $topbarmsg.append($knowledgeTestLink);
