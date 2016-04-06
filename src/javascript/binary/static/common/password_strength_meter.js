@@ -10,7 +10,7 @@ var PasswordMeter = (function(){
         if (isIE()) return;
         var $meter = $('<meter></meter>', {min: 0, max: 50, high: 20, low: 10, optimum: 50});
         $container
-            .append($meter)
+            .append($meter);
     }
 
     /**
