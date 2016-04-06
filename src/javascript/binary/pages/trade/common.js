@@ -773,14 +773,8 @@ function displayTooltip(market, symbol){
     if (market.match(/^random/)){
         tip.show();
         tip.setAttribute('target','/get-started/random-markets');
-        if (guide) {
-          guide.hide();
-        }
         app.show();
     } else {
-      if (guide) {
-        guide.show();
-      }
       app.hide();
       tip.hide();
     }

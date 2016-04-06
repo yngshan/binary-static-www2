@@ -29,6 +29,7 @@ var ViewPopupUI = (function() {
         },
         cleanup: function () {
             this.forget_streams();
+            this.clear_timer();
             this.close_container();
             this._init();
         },
@@ -38,6 +39,12 @@ var ViewPopupUI = (function() {
                 if(id && id.length > 0) {
                     BinarySocket.send({"forget": id});
                 }
+            }
+        },
+        clear_timer: function() {
+            if(window.ViewPopupTimerInterval) {
+                clearInterval(window.ViewPopupTimerInterval);
+                window.ViewPopupTimerInterval = undefined;
             }
         },
         close_container: function () {
@@ -268,7 +275,7 @@ var ViewPopupUI = (function() {
                 if (liveChartConfig.has_indicator('entry_spot_time')) {
                     live_chart.remove_indicator('entry_spot_time');
                 }
-                
+
                 if (start_time && entry_spot_time < start_time) {
                     indicator = new LiveChartIndicator.Barrier({ name: "entry_spot_time", label: 'Entry Spot', value: that.get_date_from_seconds(parseInt(entry_spot_time)), color: '#e98024', axis: 'x'});
                 } else {
