@@ -18,9 +18,13 @@ var ResetPassword = (function () {
         // use regex to validate password
 
         if (!passwordValid(pw1)) {
+            var errMsg = pw1.length < 6 ?
+                Content.errorMessage('range', '6-25') :
+                text.localize('Password should have lower and uppercase letters with numbers.');
+
             $('#password-error1')
                 .removeClass(hiddenClass)
-                .text(text.localize('Password should have lower and uppercase letters with numbers.'));
+                .text(errMsg);
             return;
         }
 
