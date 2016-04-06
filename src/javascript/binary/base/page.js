@@ -93,12 +93,15 @@ var GTM = (function() {
         }
     };
 
-    var on_login = function(get_settings) {
-        if(localStorage.getItem('GTM_login') !== '1') {
+    var event_handler = function(get_settings) {
+        var is_login      = localStorage.getItem('GTM_login')      === '1',
+            is_newaccount = localStorage.getItem('GTM_newaccount') === '1';
+        if(!is_login && !is_newaccount) {
             return;
         }
 
         localStorage.removeItem('GTM_login');
+        localStorage.removeItem('GTM_newaccount');
 
         var affiliateToken = $.cookie('affiliate_tracking');
         if (affiliateToken) {
@@ -111,16 +114,17 @@ var GTM = (function() {
             'bom_email'   : get_settings.email,
             'url'         : window.location.href,
             'bom_today'   : Math.floor(Date.now() / 1000),
-            'event'       : 'log_in'
+            'event'       : is_newaccount ? 'new_account' : 'log_in'
         };
-
+        if(is_newaccount) {
+            data['bom_date_joined'] = data['bom_today'];
+        }
         if(!page.client.is_virtual()) {
             data['bom_age']       = parseInt((moment().unix() - get_settings.date_of_birth) / 31557600);
             data['bom_firstname'] = get_settings.first_name;
             data['bom_lastname']  = get_settings.last_name;
             data['bom_phone']     = get_settings.phone;
         }
-
         GTM.push_data_layer(data);
     };
 
@@ -134,7 +138,7 @@ var GTM = (function() {
 
     return {
         push_data_layer     : push_data_layer,
-        on_login            : on_login,
+        event_handler       : event_handler,
         set_login_flag      : set_login_flag,
         set_newaccount_flag : set_newaccount_flag,
     };
