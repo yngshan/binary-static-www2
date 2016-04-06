@@ -128,10 +128,15 @@ var GTM = (function() {
         localStorage.setItem('GTM_login', '1');
     };
 
+    var set_newaccount_flag = function() {
+        localStorage.setItem('GTM_newaccount', '1');
+    };
+
     return {
-        push_data_layer : push_data_layer,
-        on_login        : on_login,
-        set_login_flag  : set_login_flag,
+        push_data_layer     : push_data_layer,
+        on_login            : on_login,
+        set_login_flag      : set_login_flag,
+        set_newaccount_flag : set_newaccount_flag,
     };
 }());
 
@@ -306,6 +311,48 @@ Client.prototype = {
         }
         BinarySocket.send({'logout': '1'});
     },
+    get_token: function(loginid) {
+        var token,
+            tokens = page.client.get_storage_value('tokens');
+        if(loginid && tokens) {
+            tokensObj = JSON.parse(tokens);
+            if(tokensObj.hasOwnProperty(loginid) && tokensObj[loginid]) {
+                token = tokensObj[loginid];
+            }
+        }
+        return token;
+    },
+    add_token: function(loginid, token) {
+        if(!loginid || !token || this.get_token(loginid)) {
+            return false;
+        }
+        var tokens = page.client.get_storage_value('tokens');
+        var tokensObj = tokens && tokens.length > 0 ? JSON.parse(tokens) : {};
+        tokensObj[loginid] = token;
+        this.set_storage_value('tokens', JSON.stringify(tokensObj));
+    },
+    set_cookie: function(cookieName, Value) {
+        var cookie_expire = new Date();
+        cookie_expire.setDate(cookie_expire.getDate() + 2);
+        var cookie = new CookieStorage(cookieName);
+        cookie.write(Value, cookie_expire, true);
+    },
+    process_new_account: function(email, loginid, token, is_virtual) {
+        if(!email || !loginid || !token) {
+            return;
+        }
+        // save token
+        this.add_token(loginid, token);
+        // set cookies
+        this.set_cookie('email'       , email);
+        this.set_cookie('login'       , token);
+        this.set_cookie('loginid'     , loginid);
+        this.set_cookie('loginid_list', is_virtual ? loginid + ':V:E' : loginid + ':R:E' + '+' + $.cookie('loginid_list'));
+        // set local storage
+        GTM.set_newaccount_flag();
+        localStorage.setItem('active_loginid', loginid);
+        window.location.href = page.url.url_for('trading');
+    }
 };
 
 var URL = function (url) { // jshint ignore:line
@@ -1106,24 +1153,17 @@ Page.prototype = {
         if(!loginid || loginid.length === 0) {
             return;
         }
-        var tokens = JSON.parse(page.client.get_storage_value('tokens'));
-        if(!tokens || Object.keys(tokens).length === 0) {
-            return;
-        }
-        var token = tokens[loginid];
+        var token = page.client.get_token(loginid);
         if(!token || token.length === 0) {
+            page.client.send_logout_request(true);
             return;
         }
 
         // cleaning the previous values
         page.client.clear_storage_values();
         // set cookies: loginid, login
-        var cookie_expire = new Date();
-        cookie_expire.setDate(cookie_expire.getDate() + 2);
-        var cookie_loginid = new CookieStorage('loginid');
-        cookie_loginid.write(loginid, cookie_expire, true);
-        var cookie_login = new CookieStorage('login');
-        cookie_login.write(token, cookie_expire, true);
+        page.client.set_cookie('loginid', loginid);
+        page.client.set_cookie('login'  , token);
         // set local storage
         GTM.set_login_flag();
         localStorage.setItem('active_loginid', loginid);
@@ -1197,7 +1237,7 @@ Page.prototype = {
     },
     make_login_popup: function() {
         var $contents = $('<div/>')
-            .append($('<iframe/>', {src: page.url.url_for('oauth2/authorize', 'app_id=id-GRfEnNid02NgU61QMeRb718E0pACp'),  // TODO: replace with 'binarycom' for production
+            .append($('<iframe/>', {src: page.url.url_for('oauth2/authorize', 'app_id=id-FDM59leEPafaMa7CntLZV6rliEyCE'),  // TODO: replace with 'binarycom' for production
                 style: 'background: url("' + page.url.url_for_static('/images/common/hourglass_1.gif') + '") no-repeat center;',
                 'onload': 'this.style.background="none"'}))
             .append($('<a/>', {href: page.url.url_for('user/lost_password'), text: text.localize('Lost password?'), id: 'popup_lost_password'}));
