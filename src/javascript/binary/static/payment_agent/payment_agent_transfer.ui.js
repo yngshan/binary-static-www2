@@ -51,7 +51,7 @@ var PaymentAgentTransferUI = (function () {
             .replace('[_1]', amount)
             .replace('[_2]', currency)
             .replace('[_3]', fromID)
-            .replace('[_4', toID);
+            .replace('[_4]', toID);
 
         $paTransferDoneConfirmMsg.text(confirmMsg);
         $paTransferDoneConfirmMsg.removeClass(hiddenClass);
