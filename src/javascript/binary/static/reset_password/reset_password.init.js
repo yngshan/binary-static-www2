@@ -73,7 +73,16 @@ var ResetPassword = (function () {
             }
         }
     }
-    
+
+    function haveRealAccountHandler() {
+        var isChecked = $('#have-real-account').is(':checked');
+        if (isChecked) {
+            $('#dob-field').removeClass(hiddenClass);
+        } else {
+            $('#dob-field').addClass(hiddenClass);
+        }
+    }
+
     function init() {
         Content.populate();
         var $pmContainer = $('#password-meter-container');
@@ -88,6 +97,10 @@ var ResetPassword = (function () {
 
         $('#reset').click(function () {
             submitResetPassword();
+        });
+
+        $('#have-real-account').click(function () {
+            haveRealAccountHandler();
         });
 
         PasswordMeter.attach($pmContainer);
