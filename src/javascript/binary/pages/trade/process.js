@@ -86,6 +86,7 @@ function processMarketUnderlying() {
 function processContract(contracts) {
     'use strict';
     if(contracts.hasOwnProperty('error') && contracts.error.code === 'InvalidSymbol') {
+        processForgetProposals();
         var container = document.getElementById('contract_confirmation_container'),
             message_container = document.getElementById('confirmation_message'),
             confirmation_error = document.getElementById('confirmation_error'),
