@@ -8,7 +8,7 @@ var PasswordMeter = (function(){
      */
     function attach($container) {
         if (isIE()) return;
-        var $meter = $('<meter></meter>', {min: 0, max: 50, high: 20, low: 10, optimum: 50});
+        var $meter = $('<meter></meter>', {id: 'password-meter', min: 0, max: 50, high: 20, low: 10, optimum: 50});
         $container
             .append($meter);
     }

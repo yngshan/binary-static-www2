@@ -17,7 +17,7 @@ var ResetPassword = (function () {
 
         // use regex to validate password
 
-        if (passwordValid(pw1)) {
+        if (!passwordValid(pw1)) {
             $('#password-error1')
                 .removeClass(hiddenClass)
                 .text(text.localize('Password should have lower and uppercase letters with numbers.'));
