@@ -3,11 +3,12 @@ var ResetPassword = (function () {
 
     var hiddenClass = 'invisible';
 
+    var dob;
+
     function submitResetPassword() {
         var token = $('#verification-code').val();
         var pw1 = $('#reset-password1').val();
         var pw2 = $('#reset-password2').val();
-        var dob = $('#dob').val();
 
         if (token.length < 48) {
             $('#verification-error').removeClass(hiddenClass).text(text.localize('Verification code format incorrect.'));
@@ -83,8 +84,17 @@ var ResetPassword = (function () {
         }
     }
 
+    function onDOBChange() {
+        var dd = $('#dobdd').val();
+        var mm = $('#dobmm').val();
+        var yy = $('#dobyy').val();
+
+        dob = yy + '-' + mm + '-' + dd;
+    }
+
     function init() {
         Content.populate();
+        generateBirthDate();
         var $pmContainer = $('#password-meter-container');
 
         $('input').keydown(function () {
@@ -101,6 +111,10 @@ var ResetPassword = (function () {
 
         $('#have-real-account').click(function () {
             haveRealAccountHandler();
+        });
+
+        $('select').change(function () {
+            onDOBChange();
         });
 
         PasswordMeter.attach($pmContainer);
