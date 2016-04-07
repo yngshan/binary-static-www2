@@ -115,7 +115,7 @@ function BinarySocketClass() {
             }
 
             if(isReady()=== true){
-                if(!page.is_login_popup()) {
+                if(!Login.is_login_popup()) {
                     page.header.validate_cookies();
                 }
                 if (clock_started === false) {
@@ -154,7 +154,7 @@ function BinarySocketClass() {
                         if(typeof events.onauth === 'function'){
                             events.onauth();
                         }
-                        if(!page.is_login_popup()) {
+                        if(!Login.is_login_popup()) {
                             page.client.response_authorize(response);
                             send({balance:1, subscribe: 1});
                             send({landing_company_details: TUser.get().landing_company_name});

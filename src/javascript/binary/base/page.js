@@ -196,11 +196,11 @@ Client.prototype = {
                 $('#content > .grd-container').addClass('center').empty()
                     .append($('<p/>', {class: 'notice-msg', html: text.localize('Please [_1] to view this page')
                         .replace('[_1]', '<a class="login_link" href="javascript:;">' + text.localize('login') + '</a>')}));
-                $('.login_link').click(function(){page.show_login_popup();});
+                $('.login_link').click(function(){Login.show_login_popup();});
             }
             // do not open login popup automatically after user clicked logout button
             if(!sessionStorage.getItem('logoutClicked')) {
-                page.show_login_popup();
+                Login.show_login_popup();
             } else {
                 sessionStorage.removeItem('logoutClicked');
             }
@@ -998,7 +998,7 @@ Contents.prototype = {
                 $('#account-transfer-section').hide();
             }
         } else {
-            $('#btn_login').unbind('click').click(function(){page.show_login_popup();});
+            $('#btn_login').unbind('click').click(function(){Login.show_login_popup();});
 
             $('.by_client_type.client_logged_out').removeClass('invisible');
             $('.by_client_type.client_logged_out').show();
@@ -1129,10 +1129,9 @@ Page.prototype = {
             LocalStore.set('reality_check.ack', 0);
         }
         $('#current_width').val(get_container_width());//This should probably not be here.
-        this.login_popup = this.make_login_popup();
         if(sessionStorage.getItem('showLoginPopup')) {
             sessionStorage.removeItem('showLoginPopup');
-            page.show_login_popup();
+            Login.show_login_popup();
         }
     },
     on_unload: function() {
@@ -1238,23 +1237,6 @@ Page.prototype = {
             path: '/',
             domain: '.' + location.hostname.split('.').slice(-2).join('.')
         });
-    },
-    make_login_popup: function() {
-        var $contents = $('<div/>')
-            .append($('<iframe/>', {src: page.url.url_for('oauth2/authorize', 'app_id=id-FDM59leEPafaMa7CntLZV6rliEyCE'),  // TODO: replace with 'binarycom' for production
-                style: 'background: url("' + page.url.url_for_static('/images/common/hourglass_1.gif') + '") no-repeat center;',
-                'onload': 'this.style.background="none"'}))
-            .append($('<a/>', {href: page.url.url_for('user/lost_password'), text: text.localize('Lost password?'), id: 'popup_lost_password'}));
-        var popup = new InPagePopup({content: $contents.html(), container_class: 'login_popup', page_overlay: true, modal: true});
-        return popup;
-    },
-    show_login_popup: function() {
-        if (!page.client.is_logged_in && !page.is_login_popup()) {
-            this.login_popup.show();
-        }
-    },
-    is_login_popup: function() {
-        return /logged_in/.test(document.URL) || $('.login_popup').length > 0;
     },
     reload: function() {
         window.location.reload();
