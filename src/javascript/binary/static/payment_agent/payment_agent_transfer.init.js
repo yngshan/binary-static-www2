@@ -92,6 +92,7 @@ var PaymentAgentTransfer = (function () {
             var bal = +(TUser.get().balance);
             if (amount > bal) {
                 $insufficientBalError.removeClass(hiddenClass);
+                return;
             }
 
             PaymentAgentTransferData.transfer(clientID, currency, amount, true);
