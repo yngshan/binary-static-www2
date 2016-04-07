@@ -415,7 +415,7 @@ Menu.prototype = {
                 this.show_main_menu();
             }
         } else {
-            var is_mojo_page = /^\/$|\/login|\/home|\/smart-indices|\/ad|\/open-source-projects|\/white-labels|\/bulk-trader-facility|\/partners|\/payment-agent|\/about-us|\/group-information|\/group-history|\/careers|\/contact|\/terms-and-conditions|\/terms-and-conditions-jp|\/responsible-trading|\/us_patents|\/lost_password|\/realws|\/virtualws|\/open-positions|\/job-details|\/user-testing|\/japanws$/.test(window.location.pathname);
+            var is_mojo_page = /^\/$|\/login|\/home|\/smart-indices|\/ad|\/open-source-projects|\/white-labels|\/bulk-trader-facility|\/partners|\/payment-agent|\/about-us|\/group-information|\/group-history|\/careers|\/contact|\/terms-and-conditions|\/terms-and-conditions-jp|\/responsible-trading|\/us_patents|\/lost_password|\/realws|\/virtualws|\/open-positions|\/job-details|\/user-testing|\/japanws|\/maltainvestws$/.test(window.location.pathname);
             if(!is_mojo_page) {
                 trading.addClass('active');
                 this.show_main_menu();
@@ -574,7 +574,9 @@ Header.prototype = {
         this.register_dynamic_links();
         this.simulate_input_placeholder_for_ie();
         this.logout_handler();
-        checkClientsCountry();
+        if (isNotBackoffice()) {
+          checkClientsCountry();
+        }
     },
     on_unload: function() {
         this.menu.reset();
@@ -660,16 +662,20 @@ Header.prototype = {
         return;
     },
     time_counter : function(response){
+        if(isNaN(response.echo_req.passthrough.client_time) || response.error){
+            page.header.start_clock_ws();
+            return;
+        }
         var that = this;
         var clock_handle;
         var clock = $('#gmt-clock');
         var start_timestamp = response.time;
         var pass = response.echo_req.passthrough.client_time;
 
-        that.time_now = ((start_timestamp * 1000) + (moment().valueOf() - pass));
+        that.client_time_at_response = moment().valueOf();
+        that.server_time_at_response = ((start_timestamp * 1000) + (that.client_time_at_response - pass));
         var update_time = function() {
-            that.time_now += (moment().valueOf() - that.time_now);
-            clock.html(moment(that.time_now).utc().format("YYYY-MM-DD HH:mm") + " GMT");
+            clock.html(moment(that.server_time_at_response + moment().valueOf() - that.client_time_at_response).utc().format("YYYY-MM-DD HH:mm") + " GMT");
         };
         update_time();
 
@@ -931,33 +937,33 @@ Contents.prototype = {
             if (page.client.is_virtual()) {
                 var show_upgrade = true;
                 if (localStorage.getItem('jp_test_allowed')) {
-                    $('#virtual-upgrade-link').addClass('invisible');
-                    $('#vr-japan-upgrade-link').addClass('invisible');
-                    $('#vr-financial-upgrade-link').addClass('invisible');
+                    $('.virtual-upgrade-link').addClass('invisible');
+                    $('.vr-japan-upgrade-link').addClass('invisible');
+                    $('.vr-financial-upgrade-link').addClass('invisible');
                     show_upgrade = false;           // do not show upgrade for user that filled up form
                 }
                 for (var i=0;i<loginid_array.length;i++) {
                     if (loginid_array[i].real) {
-                        $('#virtual-upgrade-link').addClass('invisible');
-                        $('#vr-japan-upgrade-link').addClass('invisible');
-                        $('#vr-financial-upgrade-link').addClass('invisible');
+                        $('.virtual-upgrade-link').addClass('invisible');
+                        $('.vr-japan-upgrade-link').addClass('invisible');
+                        $('.vr-financial-upgrade-link').addClass('invisible');
                         show_upgrade = false;
                         break;
                     }
                 }
                 if (show_upgrade) {
                     if (c_config && c_config['gaming_company'] == 'none' && c_config['financial_company'] == 'maltainvest') {
-                        $('#vr-financial-upgrade-link').removeClass('invisible');
-                        $('#virtual-upgrade-link').addClass('invisible');
-                        $('#vr-japan-upgrade-link').addClass('invisible');
+                        $('.vr-financial-upgrade-link').removeClass('invisible');
+                        $('.virtual-upgrade-link').addClass('invisible');
+                        $('.vr-japan-upgrade-link').addClass('invisible');
                     } else if (c_config && c_config['gaming_company'] == 'none' && c_config['financial_company'] == 'japan') {
-                        $('#vr-japan-upgrade-link').removeClass('invisible');
-                        $('#virtual-upgrade-link').addClass('invisible');
-                        $('#vr-financial-upgrade-link').addClass('invisible');
+                        $('.vr-japan-upgrade-link').removeClass('invisible');
+                        $('.virtual-upgrade-link').addClass('invisible');
+                        $('.vr-financial-upgrade-link').addClass('invisible');
                     } else {
-                        $('#virtual-upgrade-link').removeClass('invisible');
-                        $('#vr-japan-upgrade-link').addClass('invisible');
-                        $('#vr-financial-upgrade-link').addClass('invisible');
+                        $('.virtual-upgrade-link').removeClass('invisible');
+                        $('.vr-japan-upgrade-link').addClass('invisible');
+                        $('.vr-financial-upgrade-link').addClass('invisible');
                     }
                 }
             } else {
@@ -976,15 +982,9 @@ Contents.prototype = {
                     }
                 }
                 if (show_financial) {
-                    $('#financial-upgrade-link').removeClass('invisible');
-                    if ($('#investment_message').length > 0) {
-                        $('#investment_message').removeClass('invisible');
-                    }
+                    $('.financial-upgrade-link').removeClass('invisible');
                 } else {
-                    $('#financial-upgrade-link').addClass('invisible');
-                    if ($('#investment_message').length > 0) {
-                        $('#investment_message').addClass('invisible');
-                    }
+                    $('.financial-upgrade-link').addClass('invisible');
                 }
             }
         }
@@ -1024,6 +1024,8 @@ Page.prototype = {
         this.on_click_acc_transfer();
         if(getCookieItem('login')){
             ViewBalance.init();
+        } else {
+            LocalStore.set('reality_check.ack', 0);
         }
         $('#current_width').val(get_container_width());//This should probably not be here.
     },

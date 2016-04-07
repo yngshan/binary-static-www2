@@ -37,7 +37,15 @@ var Validate = (function(){
 
   //check validity of email
   function validateEmail(mail) {
-    if (/^\w+([\+\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
+    if (/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(mail)){
+      return true;
+    }
+    return false;
+  }
+
+  //check validity of token
+  function validateToken(token) {
+    if (token.length == 48) {
       return true;
     }
     return false;
@@ -51,6 +59,21 @@ var Validate = (function(){
       return true;
     } else if (!validateEmail(email)) {
       error.textContent = Content.errorMessage('valid', text.localize('email address'));
+      displayErrorMessage(error);
+      return true;
+    }
+    hideErrorMessage(error);
+    return false;
+  }
+
+  //give error message for invalid verification token, needs DOM element of error and value of verification token
+  function errorMessageToken(token, error) {
+    if (token === "") {
+      error.textContent = Content.errorMessage('req');
+      displayErrorMessage(error);
+      return true;
+    } else if (!validateToken(token)) {
+      error.textContent = Content.errorMessage('valid', text.localize('verification token'));
       displayErrorMessage(error);
       return true;
     }
@@ -167,6 +190,7 @@ var Validate = (function(){
     errorMessageEmail: errorMessageEmail,
     errorMessagePassword: errorMessagePassword,
     fieldNotEmpty: fieldNotEmpty,
-    errorMessageResidence: errorMessageResidence
+    errorMessageResidence: errorMessageResidence,
+    errorMessageToken: errorMessageToken
   };
 }());
