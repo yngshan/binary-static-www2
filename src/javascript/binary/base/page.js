@@ -38,7 +38,7 @@ var GTM = (function() {
         }
 
         // new implementation (all pages except the above list)
-        if(!(/logged_in/i).test(window.location.pathname)) {
+        if(!(/logged_inws/i).test(window.location.pathname)) {
             var info = gtm_data_layer_info(data && typeof(data) === 'object' ? data : null);
             dataLayer[0] = info.data;
             dataLayer.push(info.data);

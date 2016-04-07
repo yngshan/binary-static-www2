@@ -20,7 +20,7 @@
             %div#balance
             %a.logout{:href => 'javascript:;'}= l('Log out')
       .grd-grid-3.grd-grid-mobile-9.grd-grid-phablet-10.grd-no-gutter-left.by_client_type.client_logged_out.invisible#client-logged-out
-        %a{:id => 'btn_login', :class => 'button', :href => 'javascript:;'}= stash('logintext')
+        %div{:id => 'btn_login', :class => 'button'}= stash('logintext')
       .grd-grid-1.grd-hide.grd-show-mobile.grd-no-gutter-mobile.grd-show-phablet
         #mobile-menu-icon-container
           %a{:href => '#mobile-menu', :id => 'mobile-menu-icon'}
