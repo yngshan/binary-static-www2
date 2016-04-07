@@ -198,7 +198,12 @@ function passwordValid(password) {
   return r.test(password);
 }
 
-// return empty array if password is valid
+/**
+ * Use this if you want to separate validation logic with UI
+ * Use Validate.errorMessagePassword if you want to handle UI with validation together
+ * @param password      password
+ * @returns {Array}     array of error message, can be empty
+ */
 function showPasswordError(password) {
   var errMsgs = [];
   if (password.length < 6 || password.length > 25) {
