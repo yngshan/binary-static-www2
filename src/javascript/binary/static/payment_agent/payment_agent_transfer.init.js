@@ -1,13 +1,18 @@
 var PaymentAgentTransfer = (function () {
     var hiddenClass = 'invisible';
     function paymentAgentTransferHandler(response) {
-        if (response.error) {
-            $('#transfer_error_client_id').removeClass(hiddenClass);
-            $('#transfer_error_client_id').text(response.error.message);
-            return;
-        }
+        var req = response.echo_req;
 
-        var req;
+        if (response.error) {
+            if (req.dry_run === 1) {
+                $('#transfer_error_client_id').removeClass(hiddenClass);
+                $('#transfer_error_client_id').text(response.error.message);
+                return;    
+            } else {
+                PaymentAgentTransferUI.showTransferError(response.error.message);
+            }
+        }
+        
         if (response.paymentagent_transfer === 2) {
             PaymentAgentTransferUI.hideForm();
             PaymentAgentTransferUI.hideDone();
@@ -15,7 +20,6 @@ var PaymentAgentTransfer = (function () {
 
             PaymentAgentTransferUI.showConfirmation();
 
-            req = response.echo_req;
             PaymentAgentTransferUI
                 .updateConfirmView(response.client_to_full_name, req.transfer_to, req.amount, req.currency);
         }
@@ -27,7 +31,6 @@ var PaymentAgentTransfer = (function () {
 
             PaymentAgentTransferUI.showDone();
 
-            req = response.echo_req;
             PaymentAgentTransferUI.updateDoneView(TUser.get().loginid, req.transfer_to, req.amount, req.currency);
         }
     }
@@ -55,6 +58,7 @@ var PaymentAgentTransfer = (function () {
 
         var $clientIDError = $('#transfer_error_client_id');
         var $amountError = $('#transfer_error_amount');
+        var $insufficientBalError = $('#insufficient-balance-error');
 
         var $paConfirmTransferButton = $('#pa_confirm_transfer #confirm_transfer');
         var $paConfirmBackButton = $('#back_transfer');
@@ -85,6 +89,11 @@ var PaymentAgentTransfer = (function () {
                 return;
             }
 
+            var bal = +(TUser.get().balance);
+            if (amount > bal) {
+                $insufficientBalError.removeClass(hiddenClass);
+            }
+
             PaymentAgentTransferData.transfer(clientID, currency, amount, true);
         });
 
@@ -96,7 +105,7 @@ var PaymentAgentTransfer = (function () {
 
         $paConfirmBackButton.click(function() {
             PaymentAgentTransferUI.showForm();
-            PaymentAgentTransfer.showNotes();
+            PaymentAgentTransferUI.showNotes();
             PaymentAgentTransferUI.hideConfirmation();
             PaymentAgentTransferUI.hideDone();
         });
@@ -113,6 +122,7 @@ var PaymentAgentTransfer = (function () {
 
         $amountInput.keyup(function(ev){
             $amountError.addClass(hiddenClass);
+            $insufficientBalError.addClass(hiddenClass);
 
             if (ev.which === 13) {
                 $submitFormButton.click();

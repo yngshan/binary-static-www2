@@ -17,6 +17,7 @@
                 <td id="amount"></td>
             </tr>
         </table>
+        <p class="errorfield invisible"></p>
         <span class="button button-focus">
             <button id="back_transfer" class="button button-focus">[% l('Back') %]</button>
         </span>
@@ -77,6 +78,7 @@
                 </td>
             </tr>
         </table>
+        <p id="insufficient-balance-error" class="errorfield invisible">[% l('Insufficient balance') %]</p>
         <span class="button button-focus">
             <button class="button button-focus" id="submit" name="submit" type="submit" value="Submit">[% l('Submit') %]</button>
         </span>

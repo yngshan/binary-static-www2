@@ -14,6 +14,7 @@ var PaymentAgentTransferUI = (function () {
     }
     function showConfirmation() {
         $('#pa_confirm_transfer').removeClass(hiddenClass);
+        $('#pa_confirm_transfer .errorfield').addClass(hiddenClass);
     }
 
     function hideDone() {
@@ -39,6 +40,12 @@ var PaymentAgentTransferUI = (function () {
         $('#pa_confirm_transfer td#amount').html(currency + ' ' + amount);
     }
 
+    function showTransferError(err) {
+        $('#pa_confirm_transfer .errorfield')
+            .removeClass(hiddenClass)
+            .text(text.localize(err));
+    }
+
     function updateDoneView(fromID, toID, amount, currency) {
         var templateString = "Your request to transfer [_1] [_2] from [_3] to [_4] has been successfully processed.";
         var translated = text.localize(templateString);
@@ -61,6 +68,7 @@ var PaymentAgentTransferUI = (function () {
         showDone: showDone,
         hideNotes: hideNotes,
         showNotes: showNotes,
+        showTransferError: showTransferError,
         updateFormView: updateFormView,
         updateConfirmView: updateConfirmView,
         updateDoneView: updateDoneView
