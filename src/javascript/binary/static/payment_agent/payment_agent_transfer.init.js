@@ -96,6 +96,7 @@ var PaymentAgentTransfer = (function () {
 
         $paConfirmBackButton.click(function() {
             PaymentAgentTransferUI.showForm();
+            PaymentAgentTransfer.showNotes();
             PaymentAgentTransferUI.hideConfirmation();
             PaymentAgentTransferUI.hideDone();
         });
