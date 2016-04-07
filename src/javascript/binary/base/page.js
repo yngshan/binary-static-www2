@@ -265,6 +265,11 @@ Client.prototype = {
             }
         }
 
+        // website TNC version
+        if(!LocalStore.get('website.tnc_version')) {
+            BinarySocket.send({'website_status': 1});
+        }
+
         return is_ok;
     },
     response_payout_currencies: function(response) {
@@ -297,12 +302,26 @@ Client.prototype = {
         page.contents.activate_by_client_type();
         page.contents.topbar_message_visibility();
     },
+    check_tnc: function() {
+        if(!page.client.is_virtual() && sessionStorage.getItem('check_tnc') === '1') {
+            var client_tnc_status   = this.get_storage_value('tnc_status'),
+                website_tnc_version = LocalStore.get('website.tnc_version');
+            if(client_tnc_status && website_tnc_version) {
+                sessionStorage.removeItem('check_tnc');
+                if(client_tnc_status !== website_tnc_version) {
+                    sessionStorage.setItem('tnc_redirect', window.location.href);
+                    window.location.href = page.url.url_for('user/tnc_approvalws');
+                }
+            }
+        }
+    },
     clear_storage_values: function() {
         var that  = this;
-        var items = ['currencies', 'allowed_markets', 'landing_company_name', 'is_virtual', 'has_reality_check'];
+        var items = ['currencies', 'allowed_markets', 'landing_company_name', 'is_virtual', 'has_reality_check', 'tnc_status'];
         items.forEach(function(item) {
             that.set_storage_value(item, '');
         });
+        localStorage.removeItem('website.tnc_version');
         sessionStorage.setItem('currencies', '');
     },
     update_storage_values: function() {

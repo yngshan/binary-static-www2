@@ -177,7 +177,8 @@ function BinarySocketClass() {
                     page.client.response_payout_currencies(response);
                 } else if (type === 'get_settings') {
                     GTM.event_handler(response.get_settings);
-
+                    page.client.set_storage_value('tnc_status', response.get_settings.client_tnc_status || '-');
+                    page.client.check_tnc();
                     var jpStatus = response.get_settings.jp_account_status;
                     if (jpStatus) {
                         switch (jpStatus.status) {
@@ -198,6 +199,10 @@ function BinarySocketClass() {
                         localStorage.removeItem('jp_test_allowed');
                     }
                 } else if (type === 'website_status') {
+                    if(!response.hasOwnProperty('error')) {
+                        LocalStore.set('website.tnc_version', response.website_status.terms_conditions_version);
+                        page.client.check_tnc();
+                    }
                   if (response.website_status.clients_country) {
                     localStorage.setItem('clients_country', response.website_status.clients_country);
                     if (isNotBackoffice()) {
