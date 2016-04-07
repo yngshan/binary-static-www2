@@ -4,6 +4,7 @@ var PaymentAgentTransfer = (function () {
         if (response.error) {
             $('#transfer_error_client_id').removeClass(hiddenClass);
             $('#transfer_error_client_id').text(response.error.message);
+            return;
         }
 
         var req;

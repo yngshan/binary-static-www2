@@ -35,7 +35,8 @@
     </div>
 
     <div id="no_balance_error" class="invisible">
-        <p class="notice-msg">[% l('Please') %] <a href="https://www.binaryqa30.com/cashier?l=EN">[% l('deposit') %]</a> [% l('before transfer to client.') %]</p>
+        <p class="notice-msg">[% l('Please deposit before transfer to client.') %]</p>
+        <a href="/cashier?l=EN">[% l('Deposit') %]</a>
     </div>
 
     <div id="paymentagent_transfer">
