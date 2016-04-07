@@ -8,9 +8,9 @@ var LoggedInHandler = (function() {
         $popup.find('iframe').css({'background': ''});
         $popup.find('a#popup_lost_password').remove();
         //page.client.check_storage_values();
+        storeTokens();
         page.client.set_cookie('login', page.client.get_token(page.client.loginid));
         sessionStorage.setItem('check_tnc', '1');
-        storeTokens();
         GTM.set_login_flag();
         parent.window.location.reload();
     };
