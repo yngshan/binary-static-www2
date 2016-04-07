@@ -1,38 +1,33 @@
 var PaymentAgentTransferUI = (function () {
     "use strict";
     var hiddenClass = 'invisible';
-    var $paymentagentTransfer = $('#paymentagent_transfer');
-    var $paConfirmTransfer = $('#pa_confirm_transfer');
-    var $paTransferDone = $('#pa_transfer_done');
-    var $paymentagentTransferNotes = $('#paymentagent_transfer_notes');
-    var $paTransferDoneConfirmMsg = $('#pa_transfer_done > #confirm-msg');
-
+    
     function hideForm() {
-        $paymentagentTransfer.addClass(hiddenClass);
+        $('#paymentagent_transfer').addClass(hiddenClass);
     }
     function showForm() {
-        $paymentagentTransfer.removeClass(hiddenClass);
+        $('#paymentagent_transfer').removeClass(hiddenClass);
     }
 
     function hideConfirmation() {
-        $paConfirmTransfer.addClass(hiddenClass);
+        $('#pa_confirm_transfer').addClass(hiddenClass);
     }
     function showConfirmation() {
-        $paConfirmTransfer.removeClass(hiddenClass);
+        $('#pa_confirm_transfer').removeClass(hiddenClass);
     }
 
     function hideDone() {
-        $paTransferDone.addClass(hiddenClass);
+        $('#pa_transfer_done').addClass(hiddenClass);
     }
     function showDone() {
-        $paTransferDone.removeClass(hiddenClass);
+        $('#pa_transfer_done').removeClass(hiddenClass);
     }
 
     function hideNotes() {
-        $paymentagentTransferNotes.addClass(hiddenClass);
+        $('#paymentagent_transfer_notes').addClass(hiddenClass);
     }
     function showNotes() {
-        $paymentagentTransferNotes.removeClass(hiddenClass);
+        $('#paymentagent_transfer_notes').removeClass(hiddenClass);
     }
     function updateFormView(currency) {
         $('#paymentagent_transfer label[for="amount"]').text(text.localize('Amount') + ' ' + currency);
@@ -53,8 +48,8 @@ var PaymentAgentTransferUI = (function () {
             .replace('[_3]', fromID)
             .replace('[_4]', toID);
 
-        $paTransferDoneConfirmMsg.text(confirmMsg);
-        $paTransferDoneConfirmMsg.removeClass(hiddenClass);
+        $('#pa_transfer_done > #confirm-msg').text(confirmMsg);
+        $('#pa_transfer_done > #confirm-msg').removeClass(hiddenClass);
     }
 
     return {
