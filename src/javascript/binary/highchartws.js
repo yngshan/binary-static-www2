@@ -237,7 +237,7 @@ var Highchart = (function() {
             if (response.tick) {
               options.tick = response.tick;
               if (response.tick.epoch > start_time && !window.entry_time) {
-                  window.entry_time = response.epoch;
+                  window.entry_time = response.tick.epoch;
               }
               if (sell_time && sell_time < end_time) {get_max_history(contract, response, sell_spot_time);}
               else if (is_expired && exit_tick_time) {get_max_history(contract, response, exit_tick_time);}
