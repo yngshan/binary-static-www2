@@ -35,7 +35,7 @@ var LostPassword = (function() {
     }
 
     function init() {
-        $('#submit').click(function() {
+        $('#submit:enabled').click(function() {
             submitEmail();
         });
 
