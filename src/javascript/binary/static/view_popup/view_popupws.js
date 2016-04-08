@@ -300,14 +300,14 @@ var ViewPopupWS = (function() {
         if(!isSold && user_sold) {
             isSold = true;
             containerSetText('trade_details_sold_date', '', {'epoch_time': contract.sell_spot_time});
-            Highchart.show_chart(contract, 'update');
+            Highchart.show_chart(contract);
         }
         if(is_ended) {
             normalContractEnded(parseFloat(profit_loss) >= 0);
             if(contract.is_valid_to_sell && contract.is_expired && !contract.is_sold && !isSellClicked) {
                 ViewPopupUI.forget_streams();
                 sellExpired();
-                Highchart.show_chart(contract, 'update');
+                Highchart.show_chart(contract);
             }
         }
 
