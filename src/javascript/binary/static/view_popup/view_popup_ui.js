@@ -31,6 +31,7 @@ var ViewPopupUI = (function() {
             this.clear_timer();
             this.close_container();
             this._init();
+            Highchart.clear_values();
         },
         forget_streams: function() {
             while(window.stream_ids && window.stream_ids.length > 0) {

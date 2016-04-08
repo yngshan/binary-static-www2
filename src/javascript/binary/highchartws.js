@@ -64,17 +64,7 @@ var Highchart = (function() {
           }, {
               color: '#ccc'
           }],
-          zoneAxis: 'x',
-          marker: {
-            states: {
-              select: {
-                radius: 3
-              },
-              hover: {
-                radiusPlus: 3
-              }
-            }
-          }
+          zoneAxis: 'x'
         }],
         exporting: {enabled: false, enableImages: false},
         legend: {enabled: false},
@@ -94,6 +84,13 @@ var Highchart = (function() {
         rangeSelector: { enabled: false },
       };
 
+      if (options.history) {
+        chartOptions.subtitle = {
+          text: '<div style="display:inline-block;border:3px solid orange;border-radius:6px;width:4px;height:4px;"></div> Entry spot <div style="margin-left:10px;display:inline-block;background-color:orange;border-radius:6px;width:10px;height:10px;"></div> Exit spot',
+          align: 'right',
+          useHTML: true
+        };
+      }
       var chart = new Highcharts.Chart(chartOptions);
 
       chart.addPlotLineX = function(chartOptions) {
@@ -166,7 +163,7 @@ var Highchart = (function() {
                       if (contract.entry_tick_time && parseInt(response.history.times[i]) === contract.entry_tick_time) {
                           options.min = parseInt(response.history.times[i-1]);
                           break;
-                      } else if (contract.purchase_time && parseInt(response.history.times[i]) === contract.purchase_time) {
+                      } else if (contract.purchase_time && !start_time && parseInt(response.history.times[i]) === contract.purchase_time) {
                           options.min = parseInt(response.history.times[i-1]);
                           break;
                       } else if (start_time && parseInt(response.history.times[i]) < start_time && parseInt(response.history.times[i+1]) > start_time) {
@@ -254,9 +251,14 @@ var Highchart = (function() {
               update_chart(contract, options);
             }
           }
-          console.log('response time: ' + entry_tick_time + ' calculated time: ' + options.entry_tick_time + ' decided entry time: ' + window.entry_time);
           if (window.entry_time && now_time >= entry_time) {
             select_entry_tick(window.entry_time, response);
+            if (window.chart) {
+              window.chart.series[0].zones[0].value = parseInt(window.entry_time)*1000;
+              // force to redraw:
+              window.chart.isDirty = true;
+              window.chart.redraw();
+            }
           }
           if (is_sold || is_expired || sell_time) {
             end_contract(contract);
@@ -270,6 +272,14 @@ var Highchart = (function() {
   function show_chart(contract) {
       window.contract = contract;
       request_data(contract);
+  }
+
+  function clear_values() {
+    window.max = '';
+    window.entry_time = '';
+    window.exit_time = '';
+    window.responseID = '';
+    window.tick_type = '';
   }
 
   function request_data(contract) {
@@ -329,17 +339,10 @@ var Highchart = (function() {
 
   function select_entry_tick(value, response) {
     value = parseInt(value);
-    if (value && response.history) {
+    if (value && (response.history || response.tick)) {
       for (i = 0; i < chart.series[0].data.length; i++) {
         if (value*1000 === chart.series[0].data[i].x) {
-          chart.series[0].data[i].select(true, true);
-          return;
-        }
-      }
-    } else if (value && response.candles) {
-      for (i = 0; i < chart.series[0].data.length; i++) {
-        if (chart.series[0].data[i].x <= value*1000 && chart.series[0].data[i].x > value*1000) {
-          chart.series[0].data[i].select(true, true);
+          chart.series[0].data[i].update({marker: {fillColor: '#fff', lineColor: 'orange', lineWidth: 3, radius: 4, states: {hover: {fillColor: '#fff', lineColor: 'orange', lineWidth: 3, radius: 4}}}});
           return;
         }
       }
@@ -351,14 +354,7 @@ var Highchart = (function() {
     if (value && window.tick_type === 'history') {
       for (i = chart.series[0].data.length - 1; i >= 0; i--) {
         if (value*1000 === chart.series[0].data[i].x) {
-          chart.series[0].data[i].select(true, true);
-          return;
-        }
-      }
-    } else if (value && window.tick_type === 'candles') {
-      for (i = chart.series[0].data.length - 2; i >= 0; i--) {
-        if (chart.series[0].data[i].x <= value*1000 && chart.series[0].data[i].x > value) {
-          chart.series[0].data[i].select(true, true);
+          chart.series[0].data[i].update({marker: {fillColor: 'orange', lineColor: 'orange', lineWidth: 3, radius: 4, states: {hover: {fillColor: 'orange', lineColor: 'orange', lineWidth: 3, radius: 4}}}});
           return;
         }
       }
@@ -421,11 +417,7 @@ var Highchart = (function() {
     if (window.responseID) {
       BinarySocket.send({'forget':window.responseID});
     }
-    window.max = '';
-    window.entry_time = '';
-    window.exit_time = '';
-    window.responseID = '';
-    window.tick_type = '';
+    clear_values();
   }
 
   function calculate_granularity(end_time, now_time, purchase_time, start_time) {
@@ -467,7 +459,8 @@ var Highchart = (function() {
   }
 
   return {
-    show_chart : show_chart,
-    dispatch   : dispatch
+    show_chart   : show_chart,
+    dispatch     : dispatch,
+    clear_values : clear_values
   };
 }());
