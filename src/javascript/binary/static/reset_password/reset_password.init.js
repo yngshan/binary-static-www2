@@ -67,6 +67,7 @@ var ResetPassword = (function () {
                 date_of_birth: dob
             });
         }
+        $('#reset').prop('disabled', true);
     }
 
     function onInput() {
@@ -78,7 +79,9 @@ var ResetPassword = (function () {
         var type = response.msg_type;
 
         if (type === 'reset_password') {
+            $('#reset').prop('disabled', true);
             $('#reset-form').addClass(hiddenClass);
+            
             if (response.error) {
                 $('p.notice-msg').addClass(hiddenClass);
                 $('#reset-error').removeClass(hiddenClass);
