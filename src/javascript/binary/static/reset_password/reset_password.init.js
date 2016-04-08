@@ -2,7 +2,7 @@ var ResetPassword = (function () {
     'use strict';
 
     var hiddenClass = 'invisible';
-    var resetErrorTemplate = 'Failed to reset password. [error], please retry.';
+    var resetErrorTemplate = 'Failed to reset password. [error] Please retry.';
     var dob;
 
     function submitResetPassword() {
@@ -82,7 +82,15 @@ var ResetPassword = (function () {
             if (response.error) {
                 $('p.notice-msg').addClass(hiddenClass);
                 $('#reset-error').removeClass(hiddenClass);
-                var errMsg = resetErrorTemplate.replace('[error]', response.error.message);
+
+                // special handling as backend return inconsistent format
+                var errMsg;
+                if (response.error.code === 'InputValidationFailed') {
+                    errMsg = resetErrorTemplate.replace('[error]', text.localize('Token has expired.'));
+                } else {
+                    errMsg = resetErrorTemplate.replace('[error]', text.localize(response.error.message));
+                }
+
                 $('#reset-error-msg').text(errMsg);
             } else {
                 $('p.notice-msg')
