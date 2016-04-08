@@ -784,9 +784,6 @@ function displayTooltip(market, symbol){
     if (market.match(/^random_daily/)){
         tip.setAttribute('target','/get-started/volidx-markets#volidx-quotidians');
     }
-    if (market.match(/^random_nightly/)){
-        tip.setAttribute('target','/get-started/volidx-markets#volidx-nocturnes');
-    }
     if (market.match(/^smart_fx/)){
         tip.show();
         tip.setAttribute('target','/smart-indices#world-fx-indices');

@@ -8,11 +8,9 @@
           %li#sidebar-link-section-1.selected
             %a{:href => "#what-are-volidx-markets"}= l('How to trade the volatility indices markets?')
           %li#sidebar-link-section-2
-            %a{:href => "#volidx-indices"}= l('Volatility Indices')
+            %a{:href => "#volidx-indices"}= l('Continuous Indices')
           %li#sidebar-link-section-3
-            %a{:href => "#volidx-quotidians"}= l('Varying Volatility')
-          %li#sidebar-link-section-4
-            %a{:href => "#volidx-nocturnes"}= l('Constant Volatility with drift')
+            %a{:href => "#volidx-quotidians"}= l('Daily Reset Indices')
         .sidebar-button
           %a.pjaxload{:href => url_for('trade.cgi?market=volidx')}= l('Place a volatility index trade')
     .grd-grid-9.grd-grid-mobile-12.grd-parent
@@ -42,19 +40,17 @@
             %p= l('Volatility Indices are further categorized into three types:');
             %ul.bullet
               %li 
-                != l('Constant Volatility')
+                != l('Continuous Indices')
               %li 
-                != l('Varying Volatility')
-              %li 
-                != l('Constant Volatility with drift')
+                != l('Daily Reset Indices')
       .section
         %a#volidx-indices
         .section-content
           #section-2
             .grd-grid-12
-              %h1= l('Constant Volatility Indices')
+              %h1= l('Continuous Indices')
               %p
-                != l('[_1]\'s Constant Volatility Indices are the [_2], [_3], [_4], and [_5]. These indices correspond to simulted markets with constant volatilities of 25%, 50%, 75% and 100%', stash->{website_name}, pjax_link_for(l('Volatility 25 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_25')), pjax_link_for(l('Volatility 50 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_50')), pjax_link_for(l('Volatility 75 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_75')), pjax_link_for(l('Volatility 100 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_100')))
+                != l('[_1]\'s Continuous Indices are the [_2], [_3], [_4], and [_5]. These indices correspond to simulted markets with constant volatilities of 25%, 50%, 75% and 100%', stash->{website_name}, pjax_link_for(l('Volatility 25 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_25')), pjax_link_for(l('Volatility 50 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_50')), pjax_link_for(l('Volatility 75 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_75')), pjax_link_for(l('Volatility 100 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_100')))
             #volidx-indices-container
               .grd-grid-8.grd-grid-mobile-12
                 %p
@@ -67,19 +63,7 @@
         .section-content
           #section-3
             .grd-grid-12
-              %h1= l('Varying Volatility Indices')
-              %p.heading= l('[_1]\'s Varying Volatility Indices replicate markets with changing volatility throughout a trading day. The seasonal change in volatility during a day is observed in many financial markets, and these indices give users a chance to trade on similar conditions.', stash->{website_name})
+              %h1= l('Daily Reset Indices')
+              %p.heading= l('Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility.', stash->{website_name})
               %p
-                != l('Volatility Up and Volatility Down Indices start at 1000 at 00:00 GMT each day. The Volatility Up Index starts with a low volatility, and the volatility increases as the day progresses before reaching a high at 12:00 GMT and thereafter decreasing again. The Volatility Down Index starts with a high volatility, and the volatility decreases as the day progresses before reaching a low at 12:00 GMT and thereafter increasing again.')
-              %p
-                != l('Volatility Up 12GMT Index and Volatility Down 12GMT Index are similar to Volatility Up and Volatility Down respectively, except for starting at 1000 at 12:00 GMT each day.')
-      .section
-        %a#volidx-nocturnes
-        .section-content
-          #section-4
-            .grd-grid-12
-              %h1= l('Constant Volatility with Drift Indices')
-              %p
-                != l('Constant Volatility with Drift Indices replicate markets with a bullish and bearish trend, with a constant volatility.')
                 != l('Bull Market and Bear Market Indices start at 1000 at 00:00 GMT each day, replicating a bullish and bearish market respectively.')
-                != l('Bull Market 12GMT and Bear Market 12GMT Indices are similar to Bull Market and Bear Market Indices respectively, except for starting at 1000 at 12:00 GMT each day.')
