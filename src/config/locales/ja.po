@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-07 08:50+0000\n"
-"Last-Translator: Masanari Higashiyama <higashiyama@regentmarkets.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/binary/static/ja/>\n"
+"PO-Revision-Date: 2016-04-09 17:01+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
+"Language-Team: Japanese "
+"<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -677,11 +678,17 @@ msgstr ""
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:97
 msgid "<p style=\"line-height:200%;color:#333333;font-size:15px;\">Dear Valued Customer,</p><p>Before we can help you change your password, please help us to verify your identity by entering the following verification token into the password reset form:<p><span style=\"background: #f2f2f2; padding: 10px;\">"
 msgstr ""
+"<p style=\"line-height:200%;color:#333333;font-size:15px;\">親愛なるお客様へ</p>\n"
+"<p>パスワードご変更のお手伝いをさせて頂く前に、パスワードリセット申請ページに下記認証コードをご入力いただき、ご本人確認をお済ませください。<p>\n"
+"<span style=\"background: #f2f2f2; padding: 10px;\">"
 
 #. ($params->{code}                            . '</span></p></p>')
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:139
 msgid "<p style=\"line-height:200%;color:#333333;font-size:15px;\">Dear Valued Customer,</p><p>Please help us to verify your identity by entering the following verification token into the payment agent withdrawal form:<p><span style=\"background: #f2f2f2; padding: 10px;\">"
 msgstr ""
+"<p style=\"line-height:200%;color:#333333;font-size:15px;\">親愛なるお客様へ</p>\n"
+"<p>決済サービスでのご出金の申請ページに下記認証コードをご入力いただき、ご本人確認をお済ませください。<p>\n"
+"<span style=\"background: #f2f2f2; padding: 10px;\">"
 
 #. (purpose, code)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/send_verificationws.html.tt:1
@@ -1557,6 +1564,11 @@ msgstr "入出金へのアクセスを制限するために、追加パスワー
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:141
 msgid "An additional sign-in has just been detected on your account %1 from the following IP address: %2, country: %3 and browser: %4. If this additional sign-in was not performed by you, and / or you have any related concerns, please contact our Customer Support team."
 msgstr ""
+"お客様のご口座（%1）へ下記IPアドレスからのログインが検出されました。\n"
+"IPアドレス：%2\n"
+"国：%3\n"
+"ブラウザ：%4\n"
+"こちらのログインに身に覚えがない場合は、カスタマーサポートチームまでご連絡ください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "An advanced university degree in Mathematics, Physics or Engineering"
@@ -3044,10 +3056,9 @@ msgstr "現在トレードを売ることができません。"
 
 #. ($args->{contract_category})
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Japan/Contract.pm:42
-#, fuzzy
 #| msgid "Contract period"
 msgid "Contract category %1 invalid"
-msgstr "トレード期間"
+msgstr "トレードカテゴリ %1 が無効です。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:65
 msgid "Contract expired"
@@ -7800,10 +7811,9 @@ msgid "Once you click the 'Submit' button, the funds will be withdrawn from your
 msgstr "一旦「送信」ボタンをクリックされますと、資金はお客様の口座から出金され、お客様の%1口座に送金されます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:537
-#, fuzzy
 #| msgid "Once you click the 'Submit' button, the funds will be withdrawn from your account and transferred to your Client's %1 account."
 msgid "Once you click the 'Submit' button, the funds will be withdrawn from your account and transferred to your Client's account."
-msgstr "一旦「送信」ボタンをクリックされますと、資金はお客様の口座から出金され、お客様の%1口座に送金されます。"
+msgstr "一旦「送信」ボタンをクリックされますと、資金はお客様の口座から出金され、お客様の顧客の口座に送金されます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "One simple platform"
@@ -8038,10 +8048,9 @@ msgid "Our site can be filtered using a number of filtering systems available on
 msgstr "数多く存在するフィルターシステムを用いることで、当社のサイトへのアクセスを禁じるためのフィルタリングを行うことができます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:536
-#, fuzzy
 #| msgid "%1 does not charge any transfer fees."
 msgid "Our site does not charge any transfer fees."
-msgstr "当社はご入金、及びご出金時に手数料を課しません。"
+msgstr "当サイトはご入金、及びご出金時に手数料を請求することはありません。"
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:448
 msgid "Output validation failed: "
@@ -8393,10 +8402,9 @@ msgid "Please contact us with whatever is on your mind at <a href=\"mailto:%1\">
 msgstr "ご不明な点がございましたら、<a href=\"mailto:%1\">%1</a>までお問い合わせください。喜んでサポートさせていただきます。ご希望、ご要望等ございましたらお気軽にご連絡ください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:532
-#, fuzzy
 #| msgid "Please enter a town or city."
 msgid "Please deposit before transfer to client."
-msgstr "都市または街の名前をご入力して下さい。"
+msgstr "お客様へ送金される前にご入金をしてください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:136
 msgid "Please enter a date that is at least 6 months from now."
@@ -13496,7 +13504,6 @@ msgid "You are currently logged in to your virtual money account (%2)."
 msgstr "現在デモ口座(%2)にログインしています。"
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:110
-#, fuzzy
 #| msgid "You are either already subscribed or you have reached the limit for proposal subscription."
 msgid "You are either already subscribed or you have reached the limit for pricing table subscription."
 msgstr "既にご登録済みか、ご登録制限に達しています。"
@@ -14677,271 +14684,250 @@ msgid "you have sufficient experience and knowledge in matters of financial trad
 msgstr "当社サービスを通じて金融トレードを購入するメリットとリスクを評価でき、かつ当社サイトに掲載されている情報に依存せずに金融トレードを行ったことのあるような金融トレードにおける十分な経験と知識があります。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:403
-#, fuzzy
 #| msgid "[JAPAN ONLY]A  Net Settlement type of option is one where the underlying asset does not include yen, but the option fee and settlement are paid in yen; it therefore requires some definition of how the settlement amounts will be calculated and converted to yen."
 msgid "{JAPAN ONLY}A  Net Settlement type of option is one where the underlying asset does not include yen, but the option fee and settlement are paid in yen; it therefore requires some definition of how the settlement amounts will be calculated and converted to yen."
-msgstr "［日本限定］円以外の通貨ペアを原資産とする差金決済型の通貨オプションであって、オプション料や権利行使時の決済が円により行われるものは、対象とする通貨ペアによる決済額を算出し、円転のための計算をして金額を確定する仕組みとなっている。"
+msgstr ""
+"{日本限定｝円以外の通貨ペアを原資産とする差金決済型の通貨オプションであって、オプション料や権利行使時の決済が円により行われるものは、対象とする通貨ペアに"
+"よる決済額を算出し、円転のための計算をして金額を確定する仕組みとなっている。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:404
-#, fuzzy
 #| msgid "[JAPAN ONLY]A Binary Option contains the right for the buyer to receive a certain fixed amount if the market price reaches the exercise price by the exercise time, but it does not contain any rights to sell or buy the underlying asset."
 msgid "{JAPAN ONLY}A Binary Option contains the right for the buyer to receive a certain fixed amount if the market price reaches the exercise price by the exercise time, but it does not contain any rights to sell or buy the underlying asset."
-msgstr "［日本限定］バイナリーオプションは、権利行使期日の原資産価格が権利行使価格に達した場合、あらかじめ定めた一定額のペイアウトを受け取ることのできる権利であり、対象となる原資産を売買する権利ではない。"
+msgstr ""
+"｛日本限定｝バイナリーオプションは、権利行使期日の原資産価格が権利行使価格に達した場合、あらかじめ定めた一定額のペイアウトを受け取ることのできる権利であり"
+"、対象となる原資産を売買する権利ではない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:407
-#, fuzzy
 #| msgid "[JAPAN ONLY]A Currency Binary Option is one where there is a target for a particular currency pair, so a strike price for the exchange rate is agreed, and a payout will be due if the judgment price meets the conditions of being over or under the target strike price, depending on the option type, by the exercise time."
 msgid "{JAPAN ONLY}A Currency Binary Option is one where there is a target for a particular currency pair, so a strike price for the exchange rate is agreed, and a payout will be due if the judgment price meets the conditions of being over or under the target strike price, depending on the option type, by the exercise time."
-msgstr "［日本限定］通貨バイナリーオプションは、通貨ペアを対象とし、通貨ペアの交換レートを権利行使価格として、権利行使時点の両通貨のレートが権利行使価格を上回るか、下回るかにより、権利行使によるペイアウトの有無を判定し、決済するオプションである。たとえば、ドル円のコールバイナリーオプションは、ドルを基準とし、権利行使価格に対して判定価格がドル高＝円安となればペイアウトとなり、判定価格がドル安＝円高となればペイアウトは発生しない。"
+msgstr ""
+"｛日本限定｝通貨バイナリーオプションは、通貨ペアを対象とし、通貨ペアの交換レートを権利行使価格として、権利行使時点の両通貨のレートが権利行使価格を上回るか"
+"、下回るかにより、権利行使によるペイアウトの有無を判定し、決済するオプションである。たとえば、ドル円のコールバイナリーオプションは、ドルを基準とし、権利行"
+"使価格に対して判定価格がドル高＝円安となればペイアウトとなり、判定価格がドル安＝円高となればペイアウトは発生しない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:401
-#, fuzzy
 #| msgid "[JAPAN ONLY]A Currency Option confers the right to sell one currency in exchange for another currency as the underlying asset. For example, the right to sell Yen and buy Dollars is known as a Yen Put / Dollar Call Option, or just Yen Put for short; and the opposite right to buy Yen and sell Dollar is called a Yen Call / Dollar Put Option, or just Yen Call for short."
 msgid "{JAPAN ONLY}A Currency Option confers the right to sell one currency in exchange for another currency as the underlying asset. For example, the right to sell Yen and buy Dollars is known as a Yen Put / Dollar Call Option, or just Yen Put for short; and the opposite right to buy Yen and sell Dollar is called a Yen Call / Dollar Put Option, or just Yen Call for short."
-msgstr "［日本限定］通貨オプションとは、通貨を原資産とし、一方の通貨を売って、他方の通貨を買う権利である。たとえば円とドルをペアとする場合、円を売ってドルを買うものを、円プット／ドルコールオプション、略してドルコールオプションと呼び、ドルを売って円を買うものを、円コール／ドルプットオプション、略してドルプットオプションと呼ぶ。"
+msgstr ""
+"｛日本限定｝通貨オプションとは、通貨を原資産とし、一方の通貨を売って、他方の通貨を買う権利である。たとえば円とドルをペアとする場合、円を売ってドルを買うも"
+"のを、円プット／ドルコールオプション、略してドルコールオプションと呼び、ドルを売って円を買うものを、円コール／ドルプットオプション、略してドルプットオプシ"
+"ョンと呼ぶ。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:484
-#, fuzzy
 #| msgid "[JAPAN ONLY]A binary option price cannot exceed the payout amount."
 msgid "{JAPAN ONLY}A binary option price cannot exceed the payout amount."
-msgstr "［日本限定］バイナリーオプションの価格はペイアウト額を上回ることはない。"
+msgstr "｛日本限定｝バイナリーオプションの価格はペイアウト額を上回ることはない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:489
-#, fuzzy
 #| msgid "[JAPAN ONLY]A binary option which is in-the-money will have a higher value than an option that is out-of-the-money because there will be a higher probability of receiving the payout amount."
 msgid "{JAPAN ONLY}A binary option which is in-the-money will have a higher value than an option that is out-of-the-money because there will be a higher probability of receiving the payout amount."
-msgstr "［日本限定］インザマネーのバイナリーオプションは、ペイアウトを受け取る確率が高いため、アウトオブザマネーのバイナリーオプションよりも価格が高い。"
+msgstr ""
+"｛日本限定｝インザマネーのバイナリーオプションは、ペイアウトを受け取る確率が高いため、アウトオブザマネーのバイナリーオプションよりも価格が高い。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:488
-#, fuzzy
 #| msgid "[JAPAN ONLY]A binary option which is out-of-the-money will have a lower price than an option which is in-the-money because the probability of receiving the payout amount is lower."
 msgid "{JAPAN ONLY}A binary option which is out-of-the-money will have a lower price than an option which is in-the-money because the probability of receiving the payout amount is lower."
-msgstr "［日本限定］アウトオブザマネーのバイナリーオプションは、ペイアウトを受け取る確率が低いため、インザマネーのバイナリーオプションよりも価格が低い。"
+msgstr ""
+"｛日本限定｝アウトオブザマネーのバイナリーオプションは、ペイアウトを受け取る確率が低いため、インザマネーのバイナリーオプションよりも価格が低い。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:431
-#, fuzzy
 #| msgid "[JAPAN ONLY]A bought or sold binary option may be closed-out before exercise time by selling or buying-back the option, or alternatively by cancelling."
 msgid "{JAPAN ONLY}A bought or sold binary option may be closed-out before exercise time by selling or buying-back the option, or alternatively by cancelling."
-msgstr "［日本限定］買付または売付したバイナリーオプションは、反対売買（又は解約）により、判定時刻より前に決済することができる。"
+msgstr "｛日本限定｝買付または売付したバイナリーオプションは、反対売買（又は解約）により、判定時刻より前に決済することができる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:499
-#, fuzzy
 #| msgid "[JAPAN ONLY]A modified version of the Black-Scholes model is widely used to calculate the theoretical prices of binary options."
 msgid "{JAPAN ONLY}A modified version of the Black-Scholes model is widely used to calculate the theoretical prices of binary options."
-msgstr "［日本限定］バイナリーオプションの理論価格計算には、ブラック・ショールズ・モデルを修正した計算モデルが広く用いられている。"
+msgstr "｛日本限定｝バイナリーオプションの理論価格計算には、ブラック・ショールズ・モデルを修正した計算モデルが広く用いられている。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:446
-#, fuzzy
 #| msgid "[JAPAN ONLY]About OTC currency for binary options trading, summarizes the profit and loss result of all transactions that have been made between the customer, to publish the information in the company's home page, at any time while the customer is doing the transaction before the start, or the transaction, the information Make sure, for that you're willing to trade under the calm judgment, we are committed to a variety of environmental improvement."
 msgid "{JAPAN ONLY}About OTC currency for binary options trading, summarizes the profit and loss result of all transactions that have been made between the customer, to publish the information in the company's home page, at any time while the customer is doing the transaction before the start, or the transaction, the information Make sure, for that you're willing to trade under the calm judgment, we are committed to a variety of environmental improvement."
-msgstr "［日本限定］店頭通貨バイナリーオプション取引については、顧客との間で行われた全取引の損益結果をまとめ、自社のホームページにおいて情報を公開し、顧客が取引開始前、あるいは取引を行っている間いつでも、その情報を確認し、冷静な判断の下にお取引いただけるための、様々な環境整備に努めている。"
+msgstr ""
+"｛日本限定｝店頭通貨バイナリーオプション取引については、顧客との間で行われた全取引の損益結果をまとめ、自社のホームページにおいて情報を公開し、顧客が取引開"
+"始前、あるいは取引を行っている間いつでも、その情報を確認し、冷静な判断の下にお取引いただけるための、様々な環境整備に努めている。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:462
-#, fuzzy
 #| msgid "[JAPAN ONLY]Although binary option loss is limited, based on the assets of the investors, so as not to become excessive speculative trading, it is necessary to bear in mind the moderation in transactions."
 msgid "{JAPAN ONLY}Although binary option loss is limited, based on the assets of the investors, so as not to become excessive speculative trading, it is necessary to bear in mind the moderation in transactions."
-msgstr "［日本限定］バイナリーオプションは損失が限定的であるが、投資者自身の資産などを踏まえ、過度の投機的な取引とならぬよう、節度ある取引を心がける必要がある。"
+msgstr ""
+"｛日本限定｝バイナリーオプションは損失が限定的であるが、投資者自身の資産などを踏まえ、過度の投機的な取引とならぬよう、節度ある取引を心がける必要がある。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:434
-#, fuzzy
 #| msgid "[JAPAN ONLY]Although each traders determined the limit amount to deal with the customer, even if customer's transaction amount, loss with a certain period and open interest a customer held exceeds the reference, the transaction with the customer will not be discontinued or cancelled."
 msgid "{JAPAN ONLY}Although each traders determined the limit amount to deal with the customer, even if customer's transaction amount, loss with a certain period and open interest a customer held exceeds the reference, the transaction with the customer will not be discontinued or cancelled."
-msgstr "［日本限定］各業者は顧客との取引に限度額を定めているが、顧客の一定期間の取引額や損失額、顧客が保有する建玉が基準を超えた場合であっても、顧客との取引を中断あるいは中止することはない。"
+msgstr ""
+"｛日本限定｝各業者は顧客との取引に限度額を定めているが、顧客の一定期間の取引額や損失額、顧客が保有する建玉が基準を超えた場合であっても、顧客との取引を中断"
+"あるいは中止することはない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:458
-#, fuzzy
 #| msgid "[JAPAN ONLY]Although the options which is not be exercised will disappear at the exercise period, the option fee which seller received will remain for sellers."
 msgid "{JAPAN ONLY}Although the options which is not be exercised will disappear at the exercise period, the option fee which seller received will remain for sellers."
-msgstr "［日本限定］権利行使期限が到来し、権利行使が行われないオプションは消滅するが、売り手が受け取ったオプション料はそのまま売り手のものとなる。"
+msgstr "｛日本限定｝権利行使期限が到来し、権利行使が行われないオプションは消滅するが、売り手が受け取ったオプション料はそのまま売り手のものとなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:400
-#, fuzzy
 #| msgid "[JAPAN ONLY]An option holder must buy ( or sell ) the underlying asset at a predetermined price within a specified period ( or at a specific time )."
 msgid "{JAPAN ONLY}An option holder must buy ( or sell ) the underlying asset at a predetermined price within a specified period ( or at a specific time )."
-msgstr "［日本限定］オプションとは、一定の期間内（又は特定の期日）に、あらかじめ定めた価格によって原資産を買い取る（又は売り渡す）ことができる権利をいい、オプションの所有者は、一定の期間内（又は特定の期日）には、あらかじめ定めた価格によって原資産を必ず買い取らなければ（又は売り渡さなければ）ならない。"
+msgstr ""
+"｛日本限定｝オプションとは、一定の期間内（又は特定の期日）に、あらかじめ定めた価格によって原資産を買い取る（又は売り渡す）ことができる権利をいい、オプショ"
+"ンの所有者は、一定の期間内（又は特定の期日）には、あらかじめ定めた価格によって原資産を必ず買い取らなければ（又は売り渡さなければ）ならない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:480
-#, fuzzy
 #| msgid "[JAPAN ONLY]An option price is the sum of the intrinsic-value and the time-value."
 msgid "{JAPAN ONLY}An option price is the sum of the intrinsic-value and the time-value."
-msgstr "［日本限定］オプション価格は本源的価値に時間的価値を加えた値である。"
+msgstr "｛日本限定｝オプション価格は本源的価値に時間的価値を加えた値である。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:490
-#, fuzzy
 #| msgid "[JAPAN ONLY]As the exercise deadline approaches, the price of an in-the-money binary option will move towards the payout amount."
 msgid "{JAPAN ONLY}As the exercise deadline approaches, the price of an in-the-money binary option will move towards the payout amount."
-msgstr "［日本限定］権利行使期限が近づくにつれて、インザマネーのバイナリーオプションの価格は、ペイアウトの金額に近づく。"
+msgstr "｛日本限定｝権利行使期限が近づくにつれて、インザマネーのバイナリーオプションの価格は、ペイアウトの金額に近づく。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:491
-#, fuzzy
 #| msgid "[JAPAN ONLY]As the exercise deadline approaches, the price of an out-of-the-money binary option will move towards zero."
 msgid "{JAPAN ONLY}As the exercise deadline approaches, the price of an out-of-the-money binary option will move towards zero."
-msgstr "［日本限定］権利行使期限が近づくにつれて、アウトオブザマネーのバイナリーオプションの価格はゼロに近づく。"
+msgstr "｛日本限定｝権利行使期限が近づくにつれて、アウトオブザマネーのバイナリーオプションの価格はゼロに近づく。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:478
-#, fuzzy
 #| msgid "[JAPAN ONLY]As the expected volatility of the underlying asset increases, a plain vanilla option price will move higher."
 msgid "{JAPAN ONLY}As the expected volatility of the underlying asset increases, a plain vanilla option price will move higher."
-msgstr "［日本限定］原資産の予測される価格変動率が高いほど、オプションの価格は高くなる。"
+msgstr "｛日本限定｝原資産の予測される価格変動率が高いほど、オプションの価格は高くなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:483
-#, fuzzy
 #| msgid "[JAPAN ONLY]As the time to the exercise point shortens, the time-value of a plain vanilla option decreases."
 msgid "{JAPAN ONLY}As the time to the exercise point shortens, the time-value of a plain vanilla option decreases."
-msgstr "［日本限定］時間的価値は、オプションの権利行使期限までの時間が短くなるほど減少する。"
+msgstr "｛日本限定｝時間的価値は、オプションの権利行使期限までの時間が短くなるほど減少する。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:425
-#, fuzzy
 #| msgid "[JAPAN ONLY]At buying call option, break-even point is the price added option fee of a unit of the underlying asset to exercise price."
 msgid "{JAPAN ONLY}At buying call option, break-even point is the price added option fee of a unit of the underlying asset to exercise price."
-msgstr "［日本限定］ コールオプションの買いでは、権利行使価格に原資産１単位当たりのオプション料を加算した価格が損益分岐点である。"
+msgstr "｛日本限定｝コールオプションの買いでは、権利行使価格に原資産１単位当たりのオプション料を加算した価格が損益分岐点である。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:426
-#, fuzzy
 #| msgid "[JAPAN ONLY]At buying put option, break-even point is the price minuses option fee of a unit of the underlying asset to exercise price."
 msgid "{JAPAN ONLY}At buying put option, break-even point is the price minuses option fee of a unit of the underlying asset to exercise price."
-msgstr "［日本限定］ プットオプションの買いでは、権利行使価格に原資産1単位当たりのオプション料を減算した価格が損益分岐点である。"
+msgstr "｛日本限定｝プットオプションの買いでは、権利行使価格に原資産1単位当たりのオプション料を減算した価格が損益分岐点である。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:460
-#, fuzzy
 #| msgid "[JAPAN ONLY]Based on the probability of profit is obtained by the exercise, it can not be said that cheaper options is advantageous unconditionally."
 msgid "{JAPAN ONLY}Based on the probability of profit is obtained by the exercise, it can not be said that cheaper options is advantageous unconditionally."
-msgstr "［日本限定］権利行使により利益が得られる確率を踏まえれば、一概にオプション価格が安いものが有利とはいえない。"
+msgstr "｛日本限定｝権利行使により利益が得られる確率を踏まえれば、一概にオプション価格が安いものが有利とはいえない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:461
-#, fuzzy
 #| msgid "[JAPAN ONLY]Binary options is lower risks and higher returns than plan options because loss of sellers is limited at binary options."
 msgid "{JAPAN ONLY}Binary options is lower risks and higher returns than plan options because loss of sellers is limited at binary options."
-msgstr "［日本限定］バイナリーオプションは、売り手の損失が限定されており、プレーンオプションに比べ、ローリスクハイリターンな取引といえる。"
+msgstr "｛日本限定｝バイナリーオプションは、売り手の損失が限定されており、プレーンオプションに比べ、ローリスクハイリターンな取引といえる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:500
-#, fuzzy
 #| msgid "[JAPAN ONLY]Congratulations, you have pass the test, our Customer Support will contact you shortly."
 msgid "{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support will contact you shortly."
-msgstr "［日本限定］おめでとうございます。テストに合格されましたので、カスタマーサポートよりすぐにご連絡させていただきます。"
+msgstr "｛日本限定｝おめでとうございます。テストに合格されましたので、カスタマーサポートよりすぐにご連絡させていただきます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:420
-#, fuzzy
 #| msgid "[JAPAN ONLY]Covered option is holding the underlying assets which like covering sell position of options and sell the it."
 msgid "{JAPAN ONLY}Covered option is holding the underlying assets which like covering sell position of options and sell the it."
-msgstr "［日本限定］カバ－ド・オプションとはオプションの売りポジションをカバ－するような原資産を保有し、オプションを売ることである。"
+msgstr "｛日本限定｝カバ－ド・オプションとはオプションの売りポジションをカバ－するような原資産を保有し、オプションを売ることである。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:502
-#, fuzzy
 #| msgid "[JAPAN ONLY]Dear customer, you are not allowed to take knowledge test until %1.\\nLast test taken at %2."
 msgid "{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until %1.\\nLast test taken at %2."
-msgstr "［日本限定］知識確認テストの受験は1日1度のみとなっておりますので、%1以降に再受験して下さい。前回のテスト受験日%2."
+msgstr "｛日本限定｝知識確認テストの受験は1日1度のみとなっておりますので、%1以降に再受験して下さい。前回のテスト受験日%2."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:503
-#, fuzzy
 #| msgid "[JAPAN ONLY]Dear customer, you've already completed the knowledge test, please proceed to next step."
 msgid "{JAPAN ONLY}Dear customer, you've already completed the knowledge test, please proceed to next step."
 msgstr ""
-"［日本限定］\n"
+"｛日本限定｝\n"
 "お客様へ\n"
 "既に知識テストが完了しています。次のステップへお進みください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:495
-#, fuzzy
 #| msgid "[JAPAN ONLY]Delta refers to  a percentage change of the option price with respect to the change in the underlying asset price."
 msgid "{JAPAN ONLY}Delta refers to  a percentage change of the option price with respect to the change in the underlying asset price."
-msgstr "［日本限定］デルタとは、原資産価格の変化に対するオプション価値の変動割合をいう。"
+msgstr "｛日本限定｝デルタとは、原資産価格の変化に対するオプション価値の変動割合をいう。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:457
-#, fuzzy
 #| msgid "[JAPAN ONLY]Exercise deadline is coming, but the option to exercise is not carried out and disappear, option premium the seller received will be as it is that of the seller."
 msgid "{JAPAN ONLY}Exercise deadline is coming, but the option to exercise is not carried out and disappear, option premium the seller received will be as it is that of the seller."
-msgstr "［日本限定］権利行使期限が到来し、権利行使が行われないオプションは消滅するため、所有するオプションは価値がなくなる。"
+msgstr "｛日本限定｝権利行使期限が到来し、権利行使が行われないオプションは消滅するため、所有するオプションは価値がなくなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:441
-#, fuzzy
 #| msgid "[JAPAN ONLY]Exercise price is the price which buy and sell underlying asset by exercise the right and in case of binary option, it is basic price to judge the presence (exist) of payout."
 msgid "{JAPAN ONLY}Exercise price is the price which buy and sell underlying asset by exercise the right and in case of binary option, it is basic price to judge the presence (exist) of payout."
-msgstr "［日本限定］権利行使価格とは、権利行使により原資産を購入または売却する価格であり、バイナリーオプションの場合には、ペイアウトの発生の有無を判断する基準価格である。"
+msgstr ""
+"｛日本限定｝権利行使価格とは、権利行使により原資産を購入または売却する価格であり、バイナリーオプションの場合には、ペイアウトの発生の有無を判断する基準価格"
+"である。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:442
-#, fuzzy
 #| msgid "[JAPAN ONLY]Exit price is the underlying asset price at exercise time and it's the price to judge the presence (exist) of payout by comparing with exercise price."
 msgid "{JAPAN ONLY}Exit price is the underlying asset price at exercise time and it's the price to judge the presence (exist) of payout by comparing with exercise price."
-msgstr "［日本限定］判定価格とは、権利行使時点の原資産価格であり、権利行使価格と比較し、ペイアウトの有無を判断するための価格をいう。"
+msgstr "｛日本限定｝判定価格とは、権利行使時点の原資産価格であり、権利行使価格と比較し、ペイアウトの有無を判断するための価格をいう。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:436
-#, fuzzy
 #| msgid "[JAPAN ONLY]For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an in-the-money option."
 msgid "{JAPAN ONLY}For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an in-the-money option."
-msgstr "［日本限定］コールオプションにおいて、原資産の価格が権利行使価格を上回っている状態をインザマネーという。"
+msgstr "｛日本限定｝コールオプションにおいて、原資産の価格が権利行使価格を上回っている状態をインザマネーという。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:437
-#, fuzzy
 #| msgid "[JAPAN ONLY]For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an out-of-the-money option."
 msgid "{JAPAN ONLY}For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an out-of-the-money option."
-msgstr "［日本限定］コールオプションにおいて、原資産の価格が権利行使価格を上回っている状態をアウトオブザマネーという。"
+msgstr "｛日本限定｝コールオプションにおいて、原資産の価格が権利行使価格を上回っている状態をアウトオブザマネーという。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:408
-#, fuzzy
 #| msgid "[JAPAN ONLY]For a currency binary option which has the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes weaker is known as a dollar-put binary option."
 msgid "{JAPAN ONLY}For a currency binary option which has the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes weaker is known as a dollar-put binary option."
-msgstr "［日本限定］通貨バイナリーオプションのうち、例えばドル円を原資産とし、円安になればペイアウトを受け取る権利は、ドル円のバイナリープットオプションと呼ぶ。"
+msgstr ""
+"｛日本限定｝通貨バイナリーオプションのうち、例えばドル円を原資産とし、円安になればペイアウトを受け取る権利は、ドル円のバイナリープットオプションと呼ぶ。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:409
-#, fuzzy
 #| msgid "[JAPAN ONLY]For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option."
 msgid "{JAPAN ONLY}For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option."
-msgstr "［日本限定］通貨バイナリーオプションのうち、例えばドル円を原資産とし、円高になればペイアウトを受け取る権利は、ドル円のバイナリープットオプションと呼ぶ。"
+msgstr ""
+"｛日本限定｝通貨バイナリーオプションのうち、例えばドル円を原資産とし、円高になればペイアウトを受け取る権利は、ドル円のバイナリープットオプションと呼ぶ。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:479
-#, fuzzy
 #| msgid "[JAPAN ONLY]For a plain vanilla option, as the time to the exercise point shortens, the price of the option will decrease."
 msgid "{JAPAN ONLY}For a plain vanilla option, as the time to the exercise point shortens, the price of the option will decrease."
-msgstr "［日本限定］権利行使期限までの残り時間が短くなるほど、オプションの価格は低くなる。"
+msgstr "｛日本限定｝権利行使期限までの残り時間が短くなるほど、オプションの価格は低くなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:440
-#, fuzzy
 #| msgid "[JAPAN ONLY]For a put option, if the underlying asset price is higher than the option exercise price, it is known as an in-the-money option."
 msgid "{JAPAN ONLY}For a put option, if the underlying asset price is higher than the option exercise price, it is known as an in-the-money option."
-msgstr "［日本限定］プットオプションにおいて、原資産の価格が権利行使価格を上回っている状態をインザマネーという。"
+msgstr "｛日本限定｝プットオプションにおいて、原資産の価格が権利行使価格を上回っている状態をインザマネーという。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:439
-#, fuzzy
 #| msgid "[JAPAN ONLY]For a put option, if the underlying asset price is lower than the option exercise price, it is known as an out-of-the-money option."
 msgid "{JAPAN ONLY}For a put option, if the underlying asset price is lower than the option exercise price, it is known as an out-of-the-money option."
-msgstr "［日本限定］プットオプションにおいて、原資産の価格が権利行使価格を下回っている状態をアウトオブザマネーという。"
+msgstr "｛日本限定｝プットオプションにおいて、原資産の価格が権利行使価格を下回っている状態をアウトオブザマネーという。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:476
-#, fuzzy
 #| msgid "[JAPAN ONLY]For an in-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
 msgid "{JAPAN ONLY}For an in-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
-msgstr "［日本限定］インザマネーのオプションでは、原資産価格が権利行使価格から離れるほど、オプション価格は低くなる。"
+msgstr "｛日本限定｝インザマネーのオプションでは、原資産価格が権利行使価格から離れるほど、オプション価格は低くなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:447
-#, fuzzy
 #| msgid "[JAPAN ONLY]For an individual investor, all profits from OTC currency options trading are tax-free."
 msgid "{JAPAN ONLY}For an individual investor, all profits from OTC currency options trading are tax-free."
-msgstr "［日本限定］個人投資者の場合、通貨関連店頭オプション取引の利益は全て非課税である。"
+msgstr "｛日本限定｝個人投資者の場合、通貨関連店頭オプション取引の利益は全て非課税である。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:448
-#, fuzzy
 #| msgid "[JAPAN ONLY]For an individual investor, profits and losses from OTC currency options traing cannot be combined with profits and losses from margin FX and securities-related OTC options."
 msgid "{JAPAN ONLY}For an individual investor, profits and losses from OTC currency options traing cannot be combined with profits and losses from margin FX and securities-related OTC options."
-msgstr "［日本限定］個人投資者の場合、通貨関連店頭オプション取引の損益は、ＦＸや有価証券関連店頭オプションの損益と通算することができない。"
+msgstr "｛日本限定｝個人投資者の場合、通貨関連店頭オプション取引の損益は、ＦＸや有価証券関連店頭オプションの損益と通算することができない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:475
-#, fuzzy
 #| msgid "[JAPAN ONLY]For an out-of-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
 msgid "{JAPAN ONLY}For an out-of-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
-msgstr "［日本限定］アウトオブザマネーのオプションでは、原資産価格が権利行使価格から離れるほど、オプション価格は低くなる。"
+msgstr "｛日本限定｝アウトオブザマネーのオプションでは、原資産価格が権利行使価格から離れるほど、オプション価格は低くなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:438
-#, fuzzy
 #| msgid "[JAPAN ONLY]For both call and put options, if the underlying asset price is the same as the exercise price, it is known as an at-the-money option."
 msgid "{JAPAN ONLY}For both call and put options, if the underlying asset price is the same as the exercise price, it is known as an at-the-money option."
-msgstr "［日本限定］コールオプション、プットオプション共に、原資産の価格が権利行使価格と同じ状態をアットザマネーという。"
+msgstr "｛日本限定｝コールオプション、プットオプション共に、原資産の価格が権利行使価格と同じ状態をアットザマネーという。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:427
-#, fuzzy
 #| msgid "[JAPAN ONLY]Hedge you used for binary option is needed to be conducted as compensation part of loss of  the hedged asset because payout is fixed."
 msgid "{JAPAN ONLY}Hedge you used for binary option is needed to be conducted as compensation part of loss of  the hedged asset because payout is fixed."
-msgstr "［日本限定］ペイアウトは固定されているので、バイナリーオプションを利用したヘッジは、ヘッジ対象資産の損失の一部を補うものとして行う必要がある。"
+msgstr "｛日本限定｝ペイアウトは固定されているので、バイナリーオプションを利用したヘッジは、ヘッジ対象資産の損失の一部を補うものとして行う必要がある。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:494
 #, fuzzy
