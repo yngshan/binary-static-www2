@@ -91,6 +91,9 @@ var Highchart = (function() {
           useHTML: true
         };
       }
+      Highcharts.setOptions({
+        lang: {thousandsSep: ','}
+      });
       var chart = new Highcharts.Chart(chartOptions);
 
       chart.addPlotLineX = function(chartOptions) {
