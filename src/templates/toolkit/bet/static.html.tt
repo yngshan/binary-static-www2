@@ -178,11 +178,14 @@
                      </div>
                   </form>
                </div>
+               [% IF is_japan %]
                <div id="contract_description1"></div>
                <div id="contract_description2"></div>
                <div id="pricing_table_container" class="row">
                   <div id="pricing_table"></div>
                </div>
+               [% INCLUDE account/openpositionsws.html.tt %]
+               [% END %]
             </div>
          </div>
       </div>

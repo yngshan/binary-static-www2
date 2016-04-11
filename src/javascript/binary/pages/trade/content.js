@@ -37,7 +37,6 @@ var Content = (function () {
             textFormUpDown: text.localize('Up/Down'),
             textFormInOut: text.localize('In/Out'),
             textContractPeriod: text.localize('Contract period'),
-            textExercisePeriod: text.localize('Exercise price'),
             predictionLabel: text.localize('Last Digit Prediction'),
             textContractConfirmationPayout: text.localize('Potential Payout'),
             textContractConfirmationCost: text.localize('Total Cost'),
@@ -132,6 +131,8 @@ var Content = (function () {
             textMessagePasswordScore: text.localize( 'Password score is: [_1]. Passing score is: 20.'),
             textShouldNotLessThan: text.localize('Please enter a number greater or equal to [_1].'),
             textExercisePrice: text.localize('Exercise price'),
+            textPrices: text.localize('Prices'),
+            textLots: text.localize('Lots'),
             textBuy: text.localize('Buy'),
             textSell: text.localize('Sell'),
             textCALLE: text.localize('{currency} {sum} payout if {symbol} is strictly higher or equal than Exercise price at close  on {close}.'),
@@ -268,7 +269,7 @@ var Content = (function () {
 
         var jpbarrier_label = document.getElementById('jbarrier_label');
         if (jpbarrier_label) {
-            jpbarrier_label.textContent = localize.textExercisePeriod;
+            jpbarrier_label.textContent = localize.textExercisePrice;
         }
 
         var jpbarrier_high_label = document.getElementById('jbarrier_high_label');

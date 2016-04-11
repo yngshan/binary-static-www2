@@ -37,15 +37,32 @@ var PricingTable = (function() {
 
     render: function render() {
       var price = parseInt(this.props.price);
-      var inactive = this.props.is_active && price !== 1000 && price !== 0 ? '' : ' inactive';
+      var inactive = this.props.is_active && price !== 1000 && price !== 0 ? '' : 'inactive';
+      var multiplier = this.props.type === 'buy' ? React.createElement(
+        "div", { "className": "col multiplier2", "key": "multiplier2" },
+        React.createElement("input", {
+          defaultValue: "1",
+          onChange: handleMultiplierChange({
+            value: event.target.value,
+            barrier: this.props.barrier,
+            symbol: this.props.symbol,
+            category: this.props.category,
+            date_expiry: this.props.date_expiry,
+          })
+        })
+      ) : React.createElement("div", { "className": "col multiplier2", "key": "multiplier2", text: 1 });
+
       return React.createElement(
         "div", {
+          key: 'inactive',
           "className": "pricing_table_cell col row " +
             this.props.type + "_cell" +
-            (this.props.dyn > 0 ? " price_rise" : (this.props.dyn < 0 ? " price_fall" : '')) +
-            (inactive ? inactive : '')
+            (this.props.dyn > 0 ? " price_rise" : (this.props.dyn < 0 ? " price_fall" : ''))
         },
         (this.props.empty ? undefined : [
+          React.createElement(
+            "div", { "className": inactive }
+          ),
           React.createElement(
             "div", { "className": "price", "key": "price" },
             price
@@ -58,23 +75,60 @@ var PricingTable = (function() {
             "div", { "className": "col multiplier1", "key": "multiplier1" },
             "x"
           ),
-          React.createElement(
-            "div", { "className": "col multiplier2", "key": "multiplier2" },
-            React.createElement("input", {
-              defaultValue: "1",
-              onChange: handleMultiplierChange({
-                value: event.target.value,
-                barrier: this.props.barrier,
-                symbol: this.props.symbol,
-                category: this.props.category,
-                date_expiry: this.props.date_expiry,
-              })
-            })
-          )
+          multiplier
         ])
       );
     }
 
+  });
+
+  var PricingTableHeader = React.createClass({
+    displayName: "PricingTableHeader",
+    render: function render() {
+      var exercisePriceLabel = Content.localize().textExercisePrice;
+      var pricesLabel = Content.localize().textPrices;
+      var lotsLabel = Content.localize().textLots;
+
+      return React.createElement(
+        'div', { 'className': 'pricing_table_row row heading' },
+        React.createElement(
+          'div', { 'className': 'col' },
+          exercisePriceLabel
+        ),
+        React.createElement(
+          'div', { 'className': 'col' },
+          pricesLabel
+        ),
+        React.createElement(
+          'div', { 'className': 'col' },
+          lotsLabel
+        ),
+        React.createElement(
+          'div', { 'className': 'col' },
+          pricesLabel
+        ),
+        React.createElement(
+          'div', { 'className': 'col' },
+          lotsLabel
+        ),
+        React.createElement(
+          'div', { 'className': 'col' },
+          pricesLabel
+        ),
+        React.createElement(
+          'div', { 'className': 'col' },
+          lotsLabel
+        ),
+        React.createElement(
+          'div', { 'className': 'col' },
+          pricesLabel
+        ),
+        React.createElement(
+          'div', { 'className': 'col' },
+          lotsLabel
+        )
+      );
+    }
   });
 
   var PricingTableRow = React.createClass({
@@ -101,10 +155,10 @@ var PricingTable = (function() {
 
         if (position === 'top') {
           buy1 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
-          sell1 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 0, price: 1000 - this.props.values[type], dyn: dyn });
+          sell2 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 1, price: 1000 - this.props.values[type], dyn: dyn });
         } else {
           buy2 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
-          sell2 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 0, price: 1000 - this.props.values[type], dyn: dyn });
+          sell1 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 1, price: 1000 - this.props.values[type], dyn: dyn });
         }
       }
 
@@ -128,12 +182,16 @@ var PricingTable = (function() {
     displayName: "PricingTable",
 
     render: function render() {
-      var rows = [];
+      var rows = [
+        React.createElement(PricingTableHeader, { key: 0 })
+      ];
+
       var barriers = Object.keys(this.props.prices).sort(function(a, b) {
         return b - a;
       });
-      for (var i = 0; i < barriers.length; i++) {
-        var barrier = barriers[i];
+
+      for (var i = 1; i <= barriers.length; i++) {
+        var barrier = barriers[i - 1];
         rows.push(React.createElement(PricingTableRow, {
           key: i,
           barrier: barrier,
@@ -142,6 +200,7 @@ var PricingTable = (function() {
           prev_values: (this.props.prev_prices !== undefined ? this.props.prev_prices[barrier] : undefined)
         }));
       }
+
       return React.createElement(
         "div", { "className": "pricing_table" },
         rows

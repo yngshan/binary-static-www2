@@ -580,7 +580,7 @@
     background: $COLOR_GREEN;
   }
   .pricing_table_cell.sell_cell .button{
-    background: $COLOR_DARK_GRAY;
+    background: $COLOR_GRAY;
   }
   #contract_container #contract_form_container .col.button{
     margin: 0;
@@ -613,11 +613,19 @@
     color: $COLOR_WHITE;
   }
 
-  .pricing_table_cell.inactive{
-    background: $COLOR_DARK_GRAY;
-    color: $COLOR_WHITE;
-    opacity: .1;
+  .pricing_table_cell{
+    position: relative;
   } 
+
+  .inactive {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .8;
+    background: $COLOR_LIGHT_GRAY;
+  }
 
   #period {
     width: 155px;
