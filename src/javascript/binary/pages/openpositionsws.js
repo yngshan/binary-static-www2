@@ -96,8 +96,10 @@ var PortfolioWS =  (function() {
             BinarySocket.send({'portfolio': 1});
         }
         else if(response.transaction.action === 'sell') {
-            $("tr[data-contract_id='" + response.transaction.contract_id + "']").empty();
-            BinarySocket.send({'portfolio': 1});
+            $("tr[data-contract_id='" + response.transaction.contract_id + "']").remove();
+            if($('#portfolio-dynamic tr').length === 0) {
+                BinarySocket.send({"portfolio":1});
+            }
         }
     };
 
