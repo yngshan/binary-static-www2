@@ -203,30 +203,31 @@ var Highchart = (function() {
             } else {
               window.exit_time = end_time;
             }
+            if (window.update !== 'update') {
+              window.chart = init_chart(options);
 
-            window.chart = init_chart(options);
+              if (purchase_time !== start_time) draw_line_x(purchase_time, 'Purchase Time');
 
-            if (purchase_time !== start_time) draw_line_x(purchase_time, 'Purchase Time');
+              if (!is_sold || (sell_time && sell_time > start_time)) {
+                draw_line_x(start_time, 'Start Time');
+              }
 
-            if (!is_sold || (sell_time && sell_time > start_time)) {
-              draw_line_x(start_time, 'Start Time');
-            }
+              var duration = calculate_granularity(end_time, now_time, purchase_time, start_time)[1];
 
-            var duration = calculate_granularity(end_time, now_time, purchase_time, start_time)[1];
+              if (duration <= 24*60*60 && (!is_sold || (sell_time && sell_time >= end_time))) {
+                draw_line_x(end_time, 'End Time', 'textLeft');
+              }
 
-            if (duration <= 24*60*60 && (!is_sold || (sell_time && sell_time >= end_time))) {
-              draw_line_x(end_time, 'End Time', 'textLeft');
-            }
-
-            if (contract.barrier) {
-                window.chart.addPlotLineY({value: contract.barrier*1, label: 'Barrier (' + contract.barrier + ')'});
-                window.ymin = contract.barrier*1;
-                window.ymax = contract.barrier*1;
-            } else if (contract.high_barrier && contract.low_barrier) {
-                window.chart.addPlotLineY({value: contract.high_barrier*1, label: 'High Barrier (' + contract.high_barrier + ')'});
-                window.chart.addPlotLineY({value: contract.low_barrier*1, label: 'Low Barrier (' + contract.low_barrier + ')', color: 'red'});
-                window.ymin = contract.low_barrier*1;
-                window.ymax = contract.high_barrier*1;
+              if (contract.barrier) {
+                  window.chart.addPlotLineY({value: contract.barrier*1, label: 'Barrier (' + contract.barrier + ')'});
+                  window.ymin = contract.barrier*1;
+                  window.ymax = contract.barrier*1;
+              } else if (contract.high_barrier && contract.low_barrier) {
+                  window.chart.addPlotLineY({value: contract.high_barrier*1, label: 'High Barrier (' + contract.high_barrier + ')'});
+                  window.chart.addPlotLineY({value: contract.low_barrier*1, label: 'Low Barrier (' + contract.low_barrier + ')', color: 'red'});
+                  window.ymin = contract.low_barrier*1;
+                  window.ymax = contract.high_barrier*1;
+              }
             }
 
             find_min_max();
@@ -261,6 +262,19 @@ var Highchart = (function() {
             }
           }
           if (is_sold || is_expired || sell_time) {
+            if (window.exit_time) {
+              if (sell_time && sell_time < end_time) {
+                window.exit_time = sell_spot_time;
+              } else if (exit_tick_time) {
+                window.exit_time = exit_tick_time;
+              }
+              if (window.chart) {
+                window.chart.series[0].zones[1].value = parseInt(window.exit_time)*1000;
+                // force to redraw:
+                window.chart.isDirty = true;
+                window.chart.redraw();
+              }
+            }
             end_contract(contract);
           }
       } else if (type === 'ticks_history' && error) {
@@ -269,8 +283,11 @@ var Highchart = (function() {
     }
   };
 
-  function show_chart(contract) {
+  function show_chart(contract, update) {
       window.contract = contract;
+      if (update) {
+        window.update = 'update';
+      }
       request_data(contract);
   }
 
@@ -280,6 +297,7 @@ var Highchart = (function() {
     window.exit_time = '';
     window.responseID = '';
     window.tick_type = '';
+    window.update = '';
   }
 
   function request_data(contract) {
@@ -315,25 +333,27 @@ var Highchart = (function() {
   }
 
   function find_min_max(currentLow, currentHigh) {
-    var chartYmax = window.chart.yAxis[0].max,
-        chartYmin = window.chart.yAxis[0].min;
-    var margin = Math.max((chartYmax - chartYmin), window.ymax - window.ymin) * 0.005;
-    var ymax = -1,
-        ymin = -1;
-    if (chartYmax < window.ymax) {
-      ymax = window.ymax + margin;
+    if (window.chart && window.chart.yAxis[0]) {
+      var chartYmax = window.chart.yAxis[0].max,
+          chartYmin = window.chart.yAxis[0].min;
+      var margin = Math.max((chartYmax - chartYmin), window.ymax - window.ymin) * 0.005;
+      var ymax = -1,
+          ymin = -1;
+      if (chartYmax < window.ymax) {
+        ymax = window.ymax + margin;
+      }
+      if (chartYmin > window.ymin) {
+        ymin = window.ymin - margin;
+      }
+      currentHigh = currentHigh || currentLow;
+      if (currentHigh && currentHigh > chartYmax) {
+        ymax = null;
+      }
+      if (currentLow && currentLow < chartYmin) {
+        ymin = null;
+      }
+      chart.yAxis[0].setExtremes(ymin !== -1 ? ymin : chartYmin, ymax !== -1 ? ymax : chartYmax);
     }
-    if (chartYmin > window.ymin) {
-      ymin = window.ymin - margin;
-    }
-    currentHigh = currentHigh || currentLow;
-    if (currentHigh && currentHigh > chartYmax) {
-      ymax = null;
-    }
-    if (currentLow && currentLow < chartYmin) {
-      ymin = null;
-    }
-    chart.yAxis[0].setExtremes(ymin !== -1 ? ymin : chartYmin, ymax !== -1 ? ymax : chartYmax);
     return;
   }
 

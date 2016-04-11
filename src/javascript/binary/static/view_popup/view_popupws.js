@@ -282,14 +282,14 @@ var ViewPopupWS = (function() {
 
         if(!isSold && user_sold) {
             isSold = true;
-            Highchart.show_chart(contract);
+            Highchart.show_chart(contract, 'update');
         }
         if(is_ended) {
             normalContractEnded(parseFloat(profit_loss) >= 0);
             if(contract.is_valid_to_sell && contract.is_expired && !contract.is_sold && !isSellClicked) {
                 ViewPopupUI.forget_streams();
                 sellExpired();
-                Highchart.show_chart(contract);
+                Highchart.show_chart(contract, 'update');
             }
         }
 
