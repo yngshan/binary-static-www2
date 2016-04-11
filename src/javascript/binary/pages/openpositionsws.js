@@ -95,6 +95,10 @@ var PortfolioWS =  (function() {
             $('#portfolio-dynamic').empty();
             BinarySocket.send({'portfolio': 1});
         }
+        else if(response.transaction.action === 'sell') {
+            $("tr[data-contract_id='" + response.transaction.contract_id + "']").empty();
+            BinarySocket.send({'portfolio': 1});
+        }
     };
 
     var updateIndicative = function(data) {
