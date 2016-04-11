@@ -104,7 +104,7 @@ var ResetPassword = (function () {
                     .text(text.localize('Your password has been successfully reset. ' +
                         'Please log into your account using your new password.'));
                 window.setTimeout(function () {
-                    window.location.href = page.url.url_for('login');
+                    window.location.href = page.url.url_for('user/my_accountws');
                 }, 5000);
             }
         }
