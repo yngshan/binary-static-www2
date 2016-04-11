@@ -49,6 +49,8 @@ var Message = (function () {
                 PortfolioWS.updatePortfolio(response);
             } else if(type === 'proposal_open_contract'){
                 PortfolioWS.updateIndicative(response);
+            } else if(type === 'transaction'){
+                PortfolioWS.transactionResponseHandler(response);
             }
         } else {
 
