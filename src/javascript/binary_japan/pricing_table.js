@@ -3,7 +3,6 @@ var PricingTable = (function() {
   var state = {
     prev_prices: {},
     prices: {},
-    multiplier: {},
   };
 
   var ContractDescription = React.createClass({
@@ -38,19 +37,6 @@ var PricingTable = (function() {
     render: function render() {
       var price = parseInt(this.props.price);
       var inactive = this.props.is_active && price !== 1000 && price !== 0 ? '' : 'inactive';
-      var multiplier = this.props.type === 'buy' ? React.createElement(
-        "div", { "className": "col multiplier2", "key": "multiplier2" },
-        React.createElement("input", {
-          defaultValue: "1",
-          onChange: handleMultiplierChange({
-            value: event.target.value,
-            barrier: this.props.barrier,
-            symbol: this.props.symbol,
-            category: this.props.category,
-            date_expiry: this.props.date_expiry,
-          })
-        })
-      ) : React.createElement("div", { "className": "col multiplier2", "key": "multiplier2", text: 1 });
 
       return React.createElement(
         "div", {
@@ -61,21 +47,16 @@ var PricingTable = (function() {
         },
         (this.props.empty ? undefined : [
           React.createElement(
-            "div", { "className": inactive }
+            "div", { "className": inactive, key: 'inactive' }
           ),
           React.createElement(
             "div", { "className": "price", "key": "price" },
-            price
+            '¥' + price
           ),
-          React.createElement(
+          (this.props.type === 'buy' ? React.createElement(
             "div", { "className": "col button", "key": "button" },
-            Content.localize()['text' + (this.props.type === 'buy' ? 'Buy' : 'Sell')]
-          ),
-          React.createElement(
-            "div", { "className": "col multiplier1", "key": "multiplier1" },
-            "x"
-          ),
-          multiplier
+            Content.localize()['textBuy']
+          ) : undefined)
         ])
       );
     }
@@ -85,47 +66,31 @@ var PricingTable = (function() {
   var PricingTableHeader = React.createClass({
     displayName: "PricingTableHeader",
     render: function render() {
-      var exercisePriceLabel = Content.localize().textExercisePrice;
-      var pricesLabel = Content.localize().textPrices;
-      var lotsLabel = Content.localize().textLots;
+      var barrierLabel = Content.localize().textBarrier;
+      var buyPriceUnitLabel = Content.localize().textBuyPriceUnit;
+      var sellPriceUnitLabel = Content.localize().textSellPriceUnit;
 
       return React.createElement(
         'div', { 'className': 'pricing_table_row row heading' },
         React.createElement(
-          'div', { 'className': 'col' },
-          exercisePriceLabel
+          'div', { 'className': 'col exercise_price_h' },
+          barrierLabel
         ),
         React.createElement(
-          'div', { 'className': 'col' },
-          pricesLabel
+          'div', { 'className': 'col prices_h' },
+          buyPriceUnitLabel
         ),
         React.createElement(
-          'div', { 'className': 'col' },
-          lotsLabel
+          'div', { 'className': 'col prices_h' },
+          sellPriceUnitLabel
         ),
         React.createElement(
-          'div', { 'className': 'col' },
-          pricesLabel
+          'div', { 'className': 'col prices_h' },
+          buyPriceUnitLabel
         ),
         React.createElement(
-          'div', { 'className': 'col' },
-          lotsLabel
-        ),
-        React.createElement(
-          'div', { 'className': 'col' },
-          pricesLabel
-        ),
-        React.createElement(
-          'div', { 'className': 'col' },
-          lotsLabel
-        ),
-        React.createElement(
-          'div', { 'className': 'col' },
-          pricesLabel
-        ),
-        React.createElement(
-          'div', { 'className': 'col' },
-          lotsLabel
+          'div', { 'className': 'col prices_h' },
+          sellPriceUnitLabel
         )
       );
     }
@@ -136,10 +101,10 @@ var PricingTable = (function() {
 
     render: function render() {
       var types = Object.keys(this.props.values);
-      var buy1 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "buy", is_active: 0, price: 1000 });
-      var sell1 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 0, price: 0 });
-      var buy2 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "buy", is_active: 0, price: 1000 });
-      var sell2 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 0, price: 0 });
+      var buy1 = React.createElement(PricingTableCell, { type: "buy", is_active: 0, price: 1000 });
+      var sell1 = React.createElement(PricingTableCell, { type: "sell", is_active: 0, price: 0 });
+      var buy2 = React.createElement(PricingTableCell, { type: "buy", is_active: 0, price: 1000 });
+      var sell2 = React.createElement(PricingTableCell, { type: "sell", is_active: 0, price: 0 });
 
       for (var i = 0; i < types.length; i++) {
         var type = types[i];
@@ -154,11 +119,11 @@ var PricingTable = (function() {
         }
 
         if (position === 'top') {
-          buy1 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
-          sell2 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 1, price: 1000 - this.props.values[type], dyn: dyn });
+          buy1 = React.createElement(PricingTableCell, { type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
+          sell2 = React.createElement(PricingTableCell, { type: "sell", is_active: 1, price: 1000 - this.props.values[type], dyn: dyn });
         } else {
-          buy2 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
-          sell1 = React.createElement(PricingTableCell, { multiplier: this.props.multiplier, type: "sell", is_active: 1, price: 1000 - this.props.values[type], dyn: dyn });
+          buy2 = React.createElement(PricingTableCell, { type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
+          sell1 = React.createElement(PricingTableCell, { type: "sell", is_active: 1, price: 1000 - this.props.values[type], dyn: dyn });
         }
       }
 
@@ -195,7 +160,6 @@ var PricingTable = (function() {
         rows.push(React.createElement(PricingTableRow, {
           key: i,
           barrier: barrier,
-          multiplier: this.props.multiplier,
           values: this.props.prices[barrier],
           prev_values: (this.props.prev_prices !== undefined ? this.props.prev_prices[barrier] : undefined)
         }));
@@ -225,22 +189,6 @@ var PricingTable = (function() {
         type: 'japan',
       });
     }
-  }
-
-  function handleMultiplierChange(props) {
-    if (!state[props.symbol]) {
-      state[props.symbol] = {};
-    }
-    if (!state[props.symbol][props.category]) {
-      state[props.symbol][props.category] = {};
-    }
-    if (!state[props.symbol][props.category]) {
-      state[props.symbol][props.category] = {};
-    }
-    if (!state[props.symbol][props.category][props.date_expiry]) {
-      state[props.symbol][props.category][props.date_expiry] = {};
-    }
-    state[props.symbol][props.category][props.date_expiry][props.barrier] = props.value;
   }
 
   function handleResponse(res) {
@@ -305,3 +253,4 @@ var PricingTable = (function() {
     state: state,
   };
 })();
+

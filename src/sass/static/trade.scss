@@ -509,7 +509,7 @@
   .contract_longcode{
     float: left;
     width: 220px;
-    margin-top: 20px;
+    line-height: 1.5;
     margin-left: 10px;
   }
   #contract_form_content {
@@ -584,6 +584,7 @@
   }
   #contract_container #contract_form_container .col.button{
     margin: 0;
+    text-align: center;
   }
   #contract_container #contract_form_container .col.multiplier1{
     margin: 0 5px;
@@ -595,9 +596,28 @@
   .pricing_table_row{
     padding: 0;
     margin-top: -1px;
+    clear: left;
   }
+  .pricing_table_row.row.heading{
+    float: left;
+    clear: left;
+    display: block;
+  }
+
+  .pricing_table_row .exercise_price_h{
+    float: left;
+    width: 305px;
+    text-align: center;
+  }
+
+  .pricing_table_row .prices_h{
+    float: left;
+    width: 163px;
+    text-align: center;
+  }
+
   #contract_container #contract_form_container .pricing_table_row .col.pricing_table_cell{
-    padding-left: 5px;
+    padding: 5px;
   }
   #contract_form_content{
     width: 310px;
