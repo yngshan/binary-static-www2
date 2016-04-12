@@ -193,6 +193,8 @@ function BinarySocketClass() {
                       checkClientsCountry();
                     }
                   }
+                } else if (type === 'reality_check') {
+                    RealityCheck.realityCheckWSHandler(response);
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code) {

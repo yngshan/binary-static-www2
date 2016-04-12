@@ -1,4 +1,4 @@
-var RealityCheck = (function() {
+var RealityCheckXX = (function() {
     "use strict";
     var reality_check_url = page.url.url_for('user/reality_check');
     var reality_freq_url  = page.url.url_for('user/reality_check_frequency');
