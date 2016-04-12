@@ -171,7 +171,7 @@
          }
          var current = target.options[target.selectedIndex];
          if(selected !== current.value) {
-            sessionStorage.setItem('market', current.value);
+            Defaults.set('market', current.value);
          }
 
          if(current.disabled) { // there is no open market
@@ -549,7 +549,7 @@ function setFormPlaceholderContent(name) {
     'use strict';
     var formPlaceholder = document.getElementById('contract_form_nav_placeholder');
     if (formPlaceholder) {
-        name = name || sessionStorage.getItem('formname');
+        name = name || Defaults.get('formname');
         formPlaceholder.textContent = Contract.contractForms()[name];
     }
 }
@@ -630,7 +630,7 @@ function debounce(func, wait, immediate) {
  */
 function getDefaultMarket() {
     'use strict';
-    var mkt = sessionStorage.getItem('market');
+    var mkt = Defaults.get('market');
     var markets = Symbols.markets(1);
     if (!mkt || !markets[mkt] || !markets[mkt].is_active) {
         var sorted_markets = Object.keys(Symbols.markets()).filter(function(v){return markets[v].is_active;}).sort(function(a, b) {
@@ -868,22 +868,22 @@ function updateWarmChart(){
 }
 
 function reloadPage(){
-    sessionStorage.removeItem('market');
-    sessionStorage.removeItem('formname');
-    sessionStorage.removeItem('underlying');
+    Defaults.remove('market');
+    Defaults.remove('formname');
+    Defaults.remove('underlying');
 
-    sessionStorage.removeItem('expiry_type');
-    sessionStorage.removeItem('stop_loss');
-    sessionStorage.removeItem('stop_type');
-    sessionStorage.removeItem('stop_profit');
-    sessionStorage.removeItem('amount_per_point');
-    sessionStorage.removeItem('prediction');
-    sessionStorage.removeItem('amount');
-    sessionStorage.removeItem('amount_type');
-    sessionStorage.removeItem('currency');
-    sessionStorage.removeItem('duration_units');
-    sessionStorage.removeItem('diration_value');
-    sessionStorage.removeItem('date_start');
+    Defaults.remove('expiry_type');
+    Defaults.remove('stop_loss');
+    Defaults.remove('stop_type');
+    Defaults.remove('stop_profit');
+    Defaults.remove('amount_per_point');
+    Defaults.remove('prediction');
+    Defaults.remove('amount');
+    Defaults.remove('amount_type');
+    Defaults.remove('currency');
+    Defaults.remove('duration_units');
+    Defaults.remove('diration_value');
+    Defaults.remove('date_start');
 
     location.reload();
 }

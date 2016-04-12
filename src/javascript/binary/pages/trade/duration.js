@@ -19,7 +19,7 @@ var Durations = (function(){
     var displayDurations = function() {
 
         var startType;
-        if(sessionStorage.getItem('date_start') && StartDates.displayed() && moment(sessionStorage.getItem('date_start')*1000).isAfter(moment()) ){
+        if(Defaults.get('date_start') && StartDates.displayed() && moment(Defaults.get('date_start')*1000).isAfter(moment())) {
             startType = 'forward';
         }
         else {
@@ -180,8 +180,12 @@ var Durations = (function(){
 
     var displayEndTime = function(){
         var current_moment = moment().add(5, 'minutes').utc();
-        document.getElementById('expiry_date').value = current_moment.format('YYYY-MM-DD');
-        document.getElementById('expiry_time').value = current_moment.format('HH:mm');
+        var expiry_date = current_moment.format('YYYY-MM-DD'),
+            expiry_time = current_moment.format('HH:mm');
+        document.getElementById('expiry_date').value = expiry_date;
+        document.getElementById('expiry_time').value = expiry_time;
+        Defaults.set('expiry_date', expiry_date);
+        Defaults.set('expiry_time', expiry_time);
         Durations.setTime(current_moment.format('HH:mm'));
 
         durationPopulate();
@@ -220,7 +224,9 @@ var Durations = (function(){
             unitValue = selected_duration.amount;
         }
         document.getElementById('duration_amount').value = unitValue;
+        Defaults.set('duration_amount', unitValue);
         displayExpiryType(unit.value);
+        Defaults.set('duration_units', unit.value);
 
         // jquery for datepicker
         var amountElement = $('#duration_amount');
@@ -322,6 +328,7 @@ var Durations = (function(){
     var selectEndDate = function(end_date){
         var expiry_time = document.getElementById('expiry_time');
         $('#expiry_date').val(end_date);
+        Defaults.set('expiry_date', end_date);
         if(moment(end_date).isAfter(moment(),'day')){
             Durations.setTime('');
             StartDates.setNow();
@@ -335,7 +342,7 @@ var Durations = (function(){
             processPriceRequest();
         }
 
-        sessionStorage.setItem('end_date',end_date);
+        Defaults.set('end_date', end_date);
         Barriers.display();
     };
 
@@ -343,7 +350,7 @@ var Durations = (function(){
         display: displayDurations,
         displayEndTime: displayEndTime,
         populate: durationPopulate,
-        setTime: function(time){ $('#expiry_time').val(time); expiry_time = time; },
+        setTime: function(time){ $('#expiry_time').val(time); Defaults.set('expiry_time', time); expiry_time = time; },
         getTime: function(){ return expiry_time; },
         processTradingTimesAnswer: processTradingTimesAnswer,
         trading_times: function(){ return trading_times; },

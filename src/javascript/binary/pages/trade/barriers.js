@@ -11,10 +11,10 @@ var Barriers = (function () {
     var isBarrierUpdated = false;
 
     var display = function (barrierCategory) {
-        var barriers = Contract.barriers()[sessionStorage.getItem('underlying')],
+        var barriers = Contract.barriers()[Defaults.get('underlying')],
             formName = Contract.form();
 
-        if (barriers && formName && sessionStorage.getItem('formname')!=='risefall') {
+        if (barriers && formName && Defaults.get('formname')!=='risefall') {
             var barrier = barriers[formName];
             if(barrier) {
                 var unit = document.getElementById('duration_units'),

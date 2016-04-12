@@ -19,7 +19,7 @@ var TradingEvents = (function () {
 
         var make_price_request = 1;
         if (value === 'now') {
-            sessionStorage.removeItem('date_start');
+            Defaults.remove('date_start');
         } else {
             if ($('expiry_type').val() === 'endtime'){
                 make_price_request = -1;
@@ -27,7 +27,7 @@ var TradingEvents = (function () {
                 Durations.setTime(end_time.format("hh:mm"));
                 Durations.selectEndDate(end_time.format("YYYY-MM-DD"));
             }
-            sessionStorage.setItem('date_start', value);
+            Defaults.set('date_start', value);
         }
 
         Durations.display();
@@ -43,7 +43,7 @@ var TradingEvents = (function () {
 
         $('#expiry_type').val(value);
 
-        sessionStorage.setItem('expiry_type',value);
+        Defaults.set('expiry_type', value);
         var make_price_request = 0;
         if(value === 'endtime'){
             Durations.displayEndTime();
@@ -54,11 +54,12 @@ var TradingEvents = (function () {
         }
         else{
             Durations.display();
-            if(sessionStorage.getItem('duration_units')){
-                TradingEvents.onDurationUnitChange(sessionStorage.getItem('duration_units'));
+            if(Defaults.get('duration_units')){
+                TradingEvents.onDurationUnitChange(Defaults.get('duration_units'));
             }
-            if(sessionStorage.getItem('duration_amount') && sessionStorage.getItem('duration_amount') > $('#duration_minimum').text()){
-                $('#duration_amount').val(sessionStorage.getItem('duration_amount'));
+            var duration_amount = Defaults.get('duration_amount');
+            if(duration_amount && duration_amount > $('#duration_minimum').text()){
+                $('#duration_amount').val(duration_amount);
             }
             make_price_request = 1;
         }
@@ -73,7 +74,7 @@ var TradingEvents = (function () {
         }
         $('#duration_units').val(value);
         
-        sessionStorage.setItem('duration_units',value);
+        Defaults.set('duration_units', value);
         Durations.select_unit(value);
         Durations.populate();
 
@@ -88,12 +89,12 @@ var TradingEvents = (function () {
         var marketNavElement = document.getElementById('contract_markets');
         var onMarketChange = function(market){
             showPriceOverlay();
-            sessionStorage.setItem('market', market);
+            Defaults.set('market', market);
 
             // as different markets have different forms so remove from sessionStorage
             // it will default to proper one
-            sessionStorage.removeItem('formname');
-            sessionStorage.removeItem('underlying');
+            Defaults.remove('formname');
+            Defaults.remove('underlying');
             processMarket(1);
         };
 
@@ -119,7 +120,7 @@ var TradingEvents = (function () {
                 if (e.target && e.target.getAttribute('menuitem')) {
                     var clickedForm = e.target;
                     var isFormActive = clickedForm.classList.contains('active');
-                    sessionStorage.setItem('formname', clickedForm.getAttribute('menuitem'));
+                    Defaults.set('formname', clickedForm.getAttribute('menuitem'));
 
                     setFormPlaceholderContent();
                     // if form is already active then no need to send same request again
@@ -149,7 +150,7 @@ var TradingEvents = (function () {
                         e.target.selectedIndex = 0;
                     }
                     var underlying = e.target.value;
-                    sessionStorage.setItem('underlying', underlying);
+                    Defaults.set('underlying', underlying);
                     TradingAnalysis.request();
 
                     Tick.clean();
@@ -176,7 +177,7 @@ var TradingEvents = (function () {
             if (e.target.value % 1 !== 0 ) {
                 e.target.value = Math.floor(e.target.value);
             }
-            sessionStorage.setItem('duration_amount',e.target.value);
+            Defaults.set('duration_amount', e.target.value);
             Durations.select_amount(e.target.value);
             processPriceRequest();
             submitForm(document.getElementById('websocket_form'));
@@ -252,7 +253,7 @@ var TradingEvents = (function () {
                 if (isStandardFloat(e.target.value)) {
                     e.target.value = parseFloat(e.target.value).toFixed(2);
                 }
-                sessionStorage.setItem('amount', e.target.value);
+                Defaults.set('amount', e.target.value);
                 processPriceRequest();
                 submitForm(document.getElementById('websocket_form'));
             }));
@@ -280,7 +281,7 @@ var TradingEvents = (function () {
         var amountTypeElement = document.getElementById('amount_type');
         if (amountTypeElement) {
             amountTypeElement.addEventListener('change', function (e) {
-                sessionStorage.setItem('amount_type', e.target.value);
+                Defaults.set('amount_type', e.target.value);
                 processPriceRequest();
             });
         }
@@ -319,7 +320,7 @@ var TradingEvents = (function () {
         var currencyElement = document.getElementById('currency');
         if (currencyElement) {
             currencyElement.addEventListener('change', function (e) {
-                sessionStorage.setItem('currency', e.target.value);
+                Defaults.set('currency', e.target.value);
                 var stopTypeDollarLabel = document.getElementById('stop_type_dollar_label');
                 if (stopTypeDollarLabel && isVisible(stopTypeDollarLabel)) {
                     stopTypeDollarLabel.textContent = e.target.value;
@@ -415,7 +416,7 @@ var TradingEvents = (function () {
         if (predictionElement) {
 
             predictionElement.addEventListener('change', debounce( function (e) {
-                sessionStorage.setItem('prediction',e.target.value);
+                Defaults.set('prediction', e.target.value);
                 processPriceRequest();
                 submitForm(document.getElementById('websocket_form'));
             }));
@@ -430,7 +431,7 @@ var TradingEvents = (function () {
                 if (isStandardFloat(e.target.value)) {
                     e.target.value = parseFloat(e.target.value).toFixed(2);
                 }
-                sessionStorage.setItem('amount_per_point',e.target.value);
+                Defaults.set('amount_per_point',e.target.value);
                 processPriceRequest();
                 submitForm(document.getElementById('websocket_form'));
             }));
@@ -440,7 +441,7 @@ var TradingEvents = (function () {
          * attach an event to change in stop type for spreads
          */
         var stopTypeEvent = function (e) {
-            sessionStorage.setItem('stop_type',e.target.value);
+            Defaults.set('stop_type', e.target.value);
             processPriceRequest();
         };
 
@@ -460,7 +461,7 @@ var TradingEvents = (function () {
                 if (isStandardFloat(e.target.value)) {
                     e.target.value = parseFloat(e.target.value).toFixed(2);
                 }
-                sessionStorage.setItem('stop_loss',e.target.value);
+                Defaults.set('stop_loss',e.target.value);
                 processPriceRequest();
                 submitForm(document.getElementById('websocket_form'));
             }));
@@ -475,7 +476,7 @@ var TradingEvents = (function () {
                 if (isStandardFloat(e.target.value)) {
                     e.target.value = parseFloat(e.target.value).toFixed(2);
                 }
-                sessionStorage.setItem('stop_profit',e.target.value);
+                Defaults.set('stop_profit',e.target.value);
                 processPriceRequest();
                 submitForm(document.getElementById('websocket_form'));
             }));

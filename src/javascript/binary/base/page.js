@@ -376,7 +376,9 @@ URL.prototype = {
             var params = this.params();
             var param = params.length;
             while(param--) {
-                this._param_hash[params[param][0]] = params[param][1];
+                if(params[param][0]) {
+                    this._param_hash[params[param][0]] = params[param][1];
+                }
             }
         }
         return this._param_hash;
