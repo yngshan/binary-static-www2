@@ -770,7 +770,7 @@ function displayTooltip(market, symbol){
     var tip = document.getElementById('symbol_tip'),
         guide = document.getElementById('guideBtn'),
         app = document.getElementById('androidApp');
-    if (market.match(/^volidx/)){
+    if (market.match(/^volidx/) || market.match(/^random_index/) || market.match(/^random_daily/)){
         tip.show();
         tip.setAttribute('target','/get-started/volidx-markets');
         app.show();
