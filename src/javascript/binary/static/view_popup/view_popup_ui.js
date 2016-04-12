@@ -17,6 +17,10 @@ var ViewPopupUI = (function() {
                 con.hide();
                 var _on_close = function () {
                     that.cleanup(true);
+                    if(TradePage.is_trading_page()) {
+                        // Re-subscribe the trading page's tick stream which was unsubscribed by popup's chart
+                        BinarySocket.send({'ticks_history':$('#underlying').val(),'style':'ticks','end':'latest','count':20,'subscribe':1});
+                    }
                 };
                 con.find('a.close').on('click', function () { _on_close(); } );
                 $(document).on('keydown', function(e) {
