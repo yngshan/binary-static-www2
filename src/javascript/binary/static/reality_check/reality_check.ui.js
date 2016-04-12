@@ -73,7 +73,7 @@ var RealityCheckUI = (function () {
                     updateSummary(summary);
                     showIntervalOnPopUp();
                     $('#continue').click(RealityCheck.onContinueClick);
-                    $('#btn_logout').click(RealityCheck.onLogoutClick);
+                    $('button#btn_logout').click(RealityCheck.onLogoutClick);
                 }
             },
             error: function(xhr) {

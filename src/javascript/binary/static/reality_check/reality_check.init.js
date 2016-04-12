@@ -52,6 +52,7 @@ var RealityCheck = (function () {
         RealityCheckData.triggerCloseEvent();
         RealityCheckData.updateAck();
         RealityCheckUI.closePopUp();
+        startSummaryTimer();
     }
 
     function onLogoutClick() {
