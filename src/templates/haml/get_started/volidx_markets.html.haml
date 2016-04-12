@@ -37,7 +37,7 @@
             .grd-grid-5.grd-grid-mobile-12
               %img.responsive{:src => url_for('images/pages/get-started/get-started-volidx-markets.svg')}
             .clearfix
-            %p= l('Volatility Indices are further categorized into three types:');
+            %p= l('Volatility Indices are further categorized into two types:');
             %ul.bullet
               %li 
                 != l('Continuous Indices')
@@ -66,4 +66,4 @@
               %h1= l('Daily Reset Indices')
               %p.heading= l('Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility.', stash->{website_name})
               %p
-                != l('Bull Market and Bear Market Indices start at 1000 at 00:00 GMT each day, replicating a bullish and bearish market respectively.')
+                != l('Bull Market and Bear Market Indices start at 10:00 GMT and 00:00 GMT each day, replicating a bullish and bearish market respectively.')
