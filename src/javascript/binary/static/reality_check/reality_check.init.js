@@ -21,6 +21,7 @@ var RealityCheck = (function () {
     function startSummaryTimer() {
         var interval = RealityCheckData.getInterval();
         var toWait = computeIntervalForNextPopup(loginTime, interval);
+        
         window.setTimeout(function () {
             RealityCheckData.resetCloseValue();
             RealityCheckData.getSummaryAsync();
@@ -60,7 +61,6 @@ var RealityCheck = (function () {
     }
 
     function logout() {
-        RealityCheckData.clear();
         BinarySocket.send({"logout": "1"});
     }
 
