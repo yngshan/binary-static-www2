@@ -180,8 +180,8 @@ var Durations = (function(){
 
     var displayEndTime = function(){
         var current_moment = moment().add(5, 'minutes').utc();
-        var expiry_date = current_moment.format('YYYY-MM-DD'),
-            expiry_time = current_moment.format('HH:mm');
+        var expiry_date = Defaults.get('expiry_date') || current_moment.format('YYYY-MM-DD'),
+            expiry_time = Defaults.get('expiry_time') || current_moment.format('HH:mm');
         document.getElementById('expiry_date').value = expiry_date;
         document.getElementById('expiry_time').value = expiry_time;
         Defaults.set('expiry_date', expiry_date);
@@ -331,6 +331,7 @@ var Durations = (function(){
         Defaults.set('expiry_date', end_date);
         if(moment(end_date).isAfter(moment(),'day')){
             Durations.setTime('');
+            Defaults.remove('expiry_time');
             StartDates.setNow();
             expiry_time.hide();
             var date_start = StartDates.node();
@@ -338,6 +339,7 @@ var Durations = (function(){
         }
         else{
             Durations.setTime(expiry_time.value);
+            Defaults.set('expiry_time', expiry_time.value);
             expiry_time.show();
             processPriceRequest();
         }

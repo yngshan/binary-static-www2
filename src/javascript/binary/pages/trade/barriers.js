@@ -30,6 +30,9 @@ var Barriers = (function () {
                     document.getElementById('low_barrier_row').style.display = 'none';
                     document.getElementById('barrier_row').setAttribute('style', '');
 
+                    if(Defaults.get('barrier')) {
+                        barrier['barrier'] = Defaults.get('barrier');
+                    }
                     var elm = document.getElementById('barrier'),
                         tooltip = document.getElementById('barrier_tooltip'),
                         span = document.getElementById('barrier_span');
@@ -56,12 +59,19 @@ var Barriers = (function () {
                             indicativeBarrierTooltip.textContent = '';
                         }
                     }
+                    Defaults.set('barrier', elm.value);
                     return;
                 } else if (barrier.count === 2) {
                     document.getElementById('barrier_row').style.display = 'none';
                     document.getElementById('high_barrier_row').setAttribute('style', '');
                     document.getElementById('low_barrier_row').setAttribute('style', '');
 
+                    if(Defaults.get('barrier_high')) {
+                        barrier['barrier'] = Defaults.get('barrier_high');
+                    }
+                    if(Defaults.get('barrier_low')) {
+                        barrier['barrier1'] = Defaults.get('barrier_low');
+                    }
                     var high_elm = document.getElementById('barrier_high'),
                         low_elm = document.getElementById('barrier_low'),
                         high_tooltip = document.getElementById('barrier_high_tooltip'),
@@ -111,6 +121,8 @@ var Barriers = (function () {
                             indicativeLowBarrierTooltip.textContent = '';
                         }
                     }
+                    Defaults.set('barrier_high', high_elm.value);
+                    Defaults.set('barrier_low', low_elm.value);
                     return;
                 }
             }

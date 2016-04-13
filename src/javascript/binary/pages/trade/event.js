@@ -47,8 +47,8 @@ var TradingEvents = (function () {
         var make_price_request = 0;
         if(value === 'endtime'){
             Durations.displayEndTime();
-            if(sessionStorage.getItem('end_date')){
-                Durations.selectEndDate(sessionStorage.getItem('end_date'));
+            if(Defaults.get('end_date')){
+                Durations.selectEndDate(Defaults.get('end_date'));
                 make_price_request = -1;
             }
         }
@@ -382,6 +382,7 @@ var TradingEvents = (function () {
         var barrierElement = document.getElementById('barrier');
         if (barrierElement) {
             barrierElement.addEventListener('input', debounce( function (e) {
+                Defaults.set('barrier', e.target.value);
                 processPriceRequest();
                 submitForm(document.getElementById('websocket_form'));
             }));
@@ -393,6 +394,7 @@ var TradingEvents = (function () {
         var lowBarrierElement = document.getElementById('barrier_low');
         if (lowBarrierElement) {
             lowBarrierElement.addEventListener('input', debounce( function (e) {
+                Defaults.set('barrier_low', e.target.value);
                 processPriceRequest();
                 submitForm(document.getElementById('websocket_form'));
             }));
@@ -404,6 +406,7 @@ var TradingEvents = (function () {
         var highBarrierElement = document.getElementById('barrier_high');
         if (highBarrierElement) {
             highBarrierElement.addEventListener('input', debounce( function (e) {
+                Defaults.set('barrier_high', e.target.value);
                 processPriceRequest();
                 submitForm(document.getElementById('websocket_form'));
             }));
