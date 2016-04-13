@@ -33,10 +33,12 @@ var Defaults = (function(){
         }
     };
 
-    var removeDefault = function(key) {
-        sessionStorage.removeItem(key);
+    var removeDefault = function() {
         var params = page.url.params_hash();
-        delete(params[key]);
+        for (var i = 0; i < arguments.length; i++) {
+            sessionStorage.removeItem(arguments[i]);
+            delete(params[arguments[i]]);
+        }
         window.history.replaceState(null, null, window.location.pathname + '?' + page.url.params_hash_to_string(params));
     };
 

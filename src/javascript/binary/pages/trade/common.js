@@ -868,23 +868,9 @@ function updateWarmChart(){
 }
 
 function reloadPage(){
-    Defaults.remove('market');
-    Defaults.remove('formname');
-    Defaults.remove('underlying');
-
-    Defaults.remove('expiry_type');
-    Defaults.remove('stop_loss');
-    Defaults.remove('stop_type');
-    Defaults.remove('stop_profit');
-    Defaults.remove('amount_per_point');
-    Defaults.remove('prediction');
-    Defaults.remove('amount');
-    Defaults.remove('amount_type');
-    Defaults.remove('currency');
-    Defaults.remove('duration_units');
-    Defaults.remove('diration_value');
-    Defaults.remove('date_start');
-
+    Defaults.remove('market', 'formname', 'underlying',
+        'expiry_type', 'stop_loss', 'stop_type', 'stop_profit', 'amount_per_point', 'prediction',
+        'amount', 'amount_type', 'currency', 'duration_units', 'diration_value', 'date_start');
     location.reload();
 }
 

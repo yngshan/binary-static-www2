@@ -11,23 +11,18 @@ var TradingEvents = (function () {
 
 
     var onStartDateChange = function(value){
-
         if(!value || !$('#date_start').find('option[value='+value+']').length){
             return 0;
         }
         $('#date_start').val(value);
+        Defaults.set('date_start', value);
 
         var make_price_request = 1;
-        if (value === 'now') {
-            Defaults.remove('date_start');
-        } else {
-            if ($('expiry_type').val() === 'endtime'){
-                make_price_request = -1;
-                var end_time = moment(value*1000).utc().add(15,'minutes');
-                Durations.setTime(end_time.format("hh:mm"));
-                Durations.selectEndDate(end_time.format("YYYY-MM-DD"));
-            }
-            Defaults.set('date_start', value);
+        if (value !== 'now' && $('expiry_type').val() === 'endtime') {
+            make_price_request = -1;
+            var end_time = moment(value*1000).utc().add(15,'minutes');
+            Durations.setTime(end_time.format("hh:mm"));
+            Durations.selectEndDate(end_time.format("YYYY-MM-DD"));
         }
 
         Durations.display();
@@ -36,7 +31,6 @@ var TradingEvents = (function () {
     };
 
     var onExpiryTypeChange = function(value){
-
         if(!value || !$('#expiry_type').find('option[value='+value+']').length){
             value = 'duration';
         }
@@ -51,6 +45,8 @@ var TradingEvents = (function () {
                 Durations.selectEndDate(Defaults.get('end_date'));
                 make_price_request = -1;
             }
+            Defaults.remove('duration_units');
+            Defaults.remove('duration_amount');
         }
         else{
             Durations.display();
@@ -62,13 +58,14 @@ var TradingEvents = (function () {
                 $('#duration_amount').val(duration_amount);
             }
             make_price_request = 1;
+            Defaults.remove('expiry_date');
+            Defaults.remove('expiry_time');
         }
 
         return make_price_request;
     };
 
     var onDurationUnitChange = function(value){
-
         if(!value || !$('#duration_units').find('option[value='+value+']').length){
             return 0;
         }

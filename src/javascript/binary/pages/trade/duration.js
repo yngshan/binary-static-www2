@@ -29,6 +29,7 @@ var Durations = (function(){
         var durations = Contract.durations();
         if (durations === false) {
             document.getElementById('expiry_row').style.display = 'none';
+            Defaults.remove('expiry_type', 'duration_amount', 'duration_units', 'expiry_date', 'expiry_time');
             return false;
         }
 
@@ -186,7 +187,7 @@ var Durations = (function(){
         document.getElementById('expiry_time').value = expiry_time;
         Defaults.set('expiry_date', expiry_date);
         Defaults.set('expiry_time', expiry_time);
-        Durations.setTime(current_moment.format('HH:mm'));
+        Durations.setTime(expiry_time);
 
         durationPopulate();
     };
@@ -339,7 +340,7 @@ var Durations = (function(){
         }
         else{
             Durations.setTime(expiry_time.value);
-            Defaults.set('expiry_time', expiry_time.value);
+            Defaults.set('expiry_time', Defaults.get('expiry_time') || expiry_time.value);
             expiry_time.show();
             processPriceRequest();
         }

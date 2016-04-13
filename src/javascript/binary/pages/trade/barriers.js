@@ -60,6 +60,7 @@ var Barriers = (function () {
                         }
                     }
                     Defaults.set('barrier', elm.value);
+                    Defaults.remove('barrier_high', 'barrier_low');
                     return;
                 } else if (barrier.count === 2) {
                     document.getElementById('barrier_row').style.display = 'none';
@@ -123,6 +124,7 @@ var Barriers = (function () {
                     }
                     Defaults.set('barrier_high', high_elm.value);
                     Defaults.set('barrier_low', low_elm.value);
+                    Defaults.remove('barrier');
                     return;
                 }
             }
@@ -132,6 +134,7 @@ var Barriers = (function () {
         for (var i = 0; i < elements.length; i++){
             elements[i].style.display = 'none';
         }
+        Defaults.remove('barrier', 'barrier_high', 'barrier_low');
     };
 
     return {

@@ -166,7 +166,9 @@ function processContractForm() {
     var make_price_request = TradingEvents.onExpiryTypeChange(expiry_type);
 
     if (Defaults.get('amount')) $('#amount').val(Defaults.get('amount'));
+        else Defaults.set('amount', document.getElementById('amount').value);
     if (Defaults.get('amount_type')) selectOption(Defaults.get('amount_type'), document.getElementById('amount_type'));
+        else Defaults.set('amount_type', document.getElementById('amount_type').value);
     if (Defaults.get('currency')) selectOption(Defaults.get('currency'), document.getElementById('currency'));
 
     if (make_price_request >= 0) {
@@ -183,6 +185,7 @@ function displayPrediction() {
         }
     } else {
         predictionElement.hide();
+        Defaults.remove('prediction');
     }
 }
 
@@ -203,6 +206,21 @@ function displaySpreads() {
         amountPerPoint.show();
         spreadContainer.show();
         stopTypeDollarLabel.textContent = document.getElementById('currency').value;
+        if (Defaults.get('stop_type')) {
+            var el = document.querySelectorAll('input[name="stop_type"][value="' + Defaults.get('stop_type') + '"]');
+            if (el) {
+                el[0].setAttribute('checked', 'checked');
+            }
+        } else {
+            Defaults.set('stop_type', document.getElementById('stop_type_points').checked ? 'point' : 'dollar');
+        }
+        if (Defaults.get('amount_per_point')) amountPerPoint.value = Defaults.get('amount_per_point');
+            else Defaults.set('amount_per_point', amountPerPoint.value);
+        if (Defaults.get('stop_loss')) document.getElementById('stop_loss').value = Defaults.get('stop_loss');
+            else Defaults.set('stop_loss', document.getElementById('stop_loss').value);
+        if (Defaults.get('stop_profit')) document.getElementById('stop_profit').value = Defaults.get('stop_profit');
+            else Defaults.set('stop_profit', document.getElementById('stop_profit').value);
+        Defaults.remove('expiry_type', 'duration_amount', 'duration_units', 'expiry_date', 'expiry_time');
     } else {
         amountPerPointLabel.hide();
         amountPerPoint.hide();
@@ -210,22 +228,7 @@ function displaySpreads() {
         expiryTypeRow.show();
         amountType.show();
         amount.show();
-    }
-    if (Defaults.get('stop_type')) {
-        var el = document.querySelectorAll('input[name="stop_type"][value="' + sessionStorage.getItem('stop_type') + '"]');
-        if (el) {
-            console.log(el);
-            el[0].setAttribute('checked', 'checked');
-        }
-    }
-    if (Defaults.get('amount_per_point')) {
-        document.getElementById('amount_per_point').value = Defaults.get('amount_per_point');
-    }
-    if (Defaults.get('stop_loss')) {
-        document.getElementById('stop_loss').value = Defaults.get('stop_loss');
-    }
-    if (Defaults.get('stop_profit')) {
-        document.getElementById('stop_profit').value = Defaults.get('stop_profit');
+        Defaults.remove('amount_per_point', 'stop_type', 'stop_loss', 'stop_profit');
     }
 }
 
