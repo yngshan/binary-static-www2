@@ -3,6 +3,7 @@ var RealityCheckData = (function () {
 
     var defaultInterval = 60000;
     var durationTemplateString = '[_1] days [_2] hours [_3] minutes';
+    var tradingTimeTemplate = 'Your trading statistics since [_1].';
 
     function getSummaryAsync() {
         BinarySocket.send({reality_check: 1});
@@ -66,8 +67,9 @@ var RealityCheckData = (function () {
         var turnover = wsData.buy_amount + wsData.sell_amount;
         var profitLoss = wsData.sell_amount - wsData.buy_amount;
 
-
+        var startTimeString = tradingTimeTemplate.replace('[_1]', loginTime.format('YYYY-MM-DD HH:mm:ss GMT'));
         return {
+            startTimeString: startTimeString,
             loginTime: loginTime.format('YYYY-MM-DD HH:mm:ss GMT'),
             currentTime: currentTime.format('YYYY-MM-DD HH:mm:ss GMT'),
             sessionDuration: durationString,

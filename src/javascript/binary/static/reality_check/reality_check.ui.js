@@ -47,6 +47,7 @@ var RealityCheckUI = (function () {
     }
 
     function updateSummary(summary) {
+        $('#start-time').text(summary.startTimeString);
         $('#login-time').append(summary.loginTime);
         $('#current-time').append(summary.currentTime);
         $('#session-duration').append(summary.sessionDuration);
