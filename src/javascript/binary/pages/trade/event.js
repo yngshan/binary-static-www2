@@ -25,8 +25,6 @@ var TradingEvents = (function () {
             Durations.selectEndDate(end_time.format("YYYY-MM-DD"));
         }
 
-        Durations.display();
-
         return make_price_request;
     };
 
