@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-14 03:59+0000\n"
+"PO-Revision-Date: 2016-04-14 08:05+0000\n"
 "Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
@@ -768,7 +768,7 @@ msgstr "<span>幅広い取引期間:</span> 2時間以上から取引期間の�
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 msgid "<span>All market conditions:</span> up/down, touch/no-touch, stays in/goes out."
-msgstr "<span>どのような市場状況でもトレードが可能</span>： ラダー、タッチ/ノータッチ、レンジ内/レンジ外など。"
+msgstr "<span>どのような市場状況でもトレードが可能</span>： ラダー、タッチ、レンジなど。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 msgid "<span>All markets:</span> currencies, stocks, indices, and commodities."
@@ -857,11 +857,11 @@ msgstr "<strong>相場下落時</strong>：「ダウン」または「ラダー�
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
 msgid "<strong>Higher/Lower</strong> - predict if the market will end higher or lower than a price target."
-msgstr "<strong>ラダー高/ラダー低</strong>：設定価格より終了時の価格が上がるか、下がるかを予想してください。"
+msgstr "<strong>HIGH/LOW</strong>：設定価格より終了時の価格が上がるか、下がるかを予想してください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/binary_options_basics.html.haml:1
 msgid "<strong>Higher/Lower</strong> - where you can profit from the market ending higher or lower than a target price."
-msgstr "<strong>ラダー高/ラダー低</strong>：バリア設定をした価格より値上がりするか？値下がりするか？を予想して下さい。"
+msgstr "<strong>HIGH/LOW</strong>：バリア設定をした価格より値上がりするか？値下がりするか？を予想して下さい。"
 
 #. (request.website.display_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:100
@@ -876,11 +876,12 @@ msgstr "<strong>重要な免責事項</strong> -%1は、上記の決済サービ
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
 msgid "<strong>In/Out</strong> - predict if the market will stay inside two price targets, or end between or outside them."
-msgstr "<strong>レンジ内/レンジ外</strong>：上下にバリアを設定した価格内に留まるか、留まらないかを予想してください。"
+msgstr "<strong>END-IN/END-OUT</strong>：上下にバリアを設定した価格内に留まるか、留まらないかを予想してください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/binary_options_basics.html.haml:1
 msgid "<strong>In/Out</strong> - where you can profit from the market staying inside, or going outside, two price targets."
-msgstr "<strong>レンジ内/レンジ外</strong>：上下にバリアを設定した価格内に留まるか？留まらないか？を予想して利益を得ましょう。"
+msgstr ""
+"<strong>STAY-IN/BREAK-OUT</strong>：上下にバリアを設定した価格内に留まるか？留まらないか？を予想して利益を得ましょう。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 msgid "<strong>Instant access</strong> - open an account in minutes."
@@ -3509,8 +3510,8 @@ msgstr ""
 "おめでとうございます！バイナリーオプション取引の知識確認テストに合格されました。\n"
 "\n"
 "口座開設の次のステップとしまして、本人確認書類及びマイナンバー確認書類の提出をお願い致します。\n"
-"お手数ですが下記確認書類（本人確認書類）のうち1つとマイナンバー確認書類をコピーしていただき、<u>このメールに添付してご返信ください。</u><ul>"
-"\n"
+"お手数ですが下記確認書類（本人確認書類）のうちから1点とマイナンバー確認書類をコピーしていただき、<u>このメールに添付してご返信ください。</u><ul"
+">\n"
 "詳細につきましては、<a href=\"https://www.binary.com/get-started?l=JA\""
 ">こちら</a>で確認して下さい。\n"
 "\n"
@@ -6706,7 +6707,7 @@ msgstr "敬具"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:219
 msgid "Kindly send us your documents for verification."
-msgstr "本人確認のため書類を当社までご送付ください。"
+msgstr "本人確認書類ご提出依頼"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge and experience in the financial services industry"
@@ -14790,7 +14791,7 @@ msgstr "アウトオブザマネーのバイナリーオプションは、ペイ
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:433
 msgid "{JAPAN ONLY}A bought or sold binary option may be closed-out before exercise time by selling or buying-back the option, or alternatively by cancelling."
-msgstr "買付または売付したバイナリーオプションは、反対売買（又は解約）により、判定時刻より前に決済することができる。"
+msgstr "買付したバイナリーオプションは、反対売買（又は解約）により、判定時刻より前に決済することができる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:501
 msgid "{JAPAN ONLY}A modified version of the Black-Scholes model is widely used to calculate the theoretical prices of binary options."
@@ -14860,7 +14861,7 @@ msgstr "バイナリーオプションは、売り手の損失が限定されて
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:502
 msgid "{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support will contact you shortly."
-msgstr "｛日本限定｝おめでとうございます。テストに合格されましたので、カスタマーサポートよりすぐにご連絡させていただきます。"
+msgstr "おめでとうございます。テストに合格されましたので、カスタマーサポートよりメールにて口座開設の次のステップについてご連絡させていただきます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:422
 msgid "{JAPAN ONLY}Covered option is holding the underlying assets which like covering sell position of options and sell the it."
@@ -14892,7 +14893,7 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:444
 msgid "{JAPAN ONLY}Exit price is the underlying asset price at exercise time and it's the price to judge the presence (exist) of payout by comparing with exercise price."
-msgstr "判定価格とは、権利行使時点の原資産価格であり、権利行使価格と比較し、ペイアウトの有無を判断するための価格をいう。"
+msgstr "判定レートとは、権利行使時点の原資産価格であり、権利行使価格と比較し、ペイアウトの有無を判断するための価格をいう。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:438
 msgid "{JAPAN ONLY}For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an in-the-money option."
@@ -14987,21 +14988,21 @@ msgstr ""
 #| msgid "[JAPAN ONLY]If you buy a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
 msgid "{JAPAN ONLY}If you buy a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
 msgstr ""
-"権利行使価格１ドル100円、ペイアウト1,000円のドル円のコールバイナリーオプションを500円で買付し、判定レートが１ドル９９円となり権利行使が行われ、"
+"権利行使価格１ドル100円、ペイアウト1,000円のドル円のコールバイナリーオプションを500円で購入し、判定レートが１ドル９９円となり権利行使が行われ、"
 "1,000円のペイアウトを受け取った。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:416
 #| msgid "[JAPAN ONLY]If you buy a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you receive a payout of 1,000 yen, then your profit can be calculated 500 yen after subtracting the 500 yen that was paid as a fee to the option seller."
 msgid "{JAPAN ONLY}If you buy a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you receive a payout of 1,000 yen, then your profit can be calculated 500 yen after subtracting the 500 yen that was paid as a fee to the option seller."
 msgstr ""
-"ペイアウト1,000円のバイナリーコールオプションを500円で買付し、判定の結果、権利行使条件が満たされた場合には、買い手は売り手からペイアウトとして1,"
+"ペイアウト1,000円のバイナリーコールオプションを500円で購入し、判定の結果、権利行使条件が満たされた場合には、買い手は売り手からペイアウトとして1,"
 "000円を受け取り、したがって買い手の損益は、売り手に支払った500円のオプション料を差し引き500円の利益となる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:415
 #| msgid "[JAPAN ONLY]If you buy a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
 msgid "{JAPAN ONLY}If you buy a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
 msgstr ""
-"権利行使価格１ドル100円、ペイアウト1,000円のドル円のプットバイナリーオプションを500円で買付し、判定レートが１ドル９９円となり権利行使が行われ、"
+"権利行使価格１ドル100円、ペイアウト1,000円のドル円のプットバイナリーオプションを500円で購入し、判定レートが１ドル９９円となり権利行使が行われ、"
 "1,000円のペイアウトを受け取った。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:412
@@ -15022,8 +15023,8 @@ msgstr ""
 #| msgid "[JAPAN ONLY]If you sell a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option."
 msgid "{JAPAN ONLY}If you sell a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option."
 msgstr ""
-"権利行使価格１ドル100円、ペイアウト1,000円のドル円のプットバイナリーオプションを500円で売付けし、判定レートが１ドル９９円となり権利行使が行われ"
-"、1,000円のペイアウトを支払った。"
+"権利行使価格１ドル100円、ペイアウト1,000円のドル円のプットバイナリーオプションの購入代金500円を受け取り、判定レートが１ドル９９円となり権利行使"
+"が行われ、1,000円のペイアウトを支払った。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:495
 #| msgid "[JAPAN ONLY]Implied volatility is a prediction of the future rate of change in the underlying asset."
@@ -15074,11 +15075,11 @@ msgstr ""
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:2
 #| msgid "Knowledge Test"
 msgid "{JAPAN ONLY}Knowledge Test"
-msgstr "｛日本限定｝知識確認テスト"
+msgstr "知識確認テスト"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:395
 msgid "{JAPAN ONLY}Knowledge Test Result"
-msgstr "｛日本限定｝知識確認テスト結果"
+msgstr "知識確認テスト結果"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:461
 #| msgid "[JAPAN ONLY]Maximum loss of buyer at binary options is an optional fee, maximum loss of the seller will be the amount subtracted the option fee from the payout amount."
@@ -15107,7 +15108,16 @@ msgstr "オプション取引にはヨ－ロピアンタイプとアメリカン
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:506
 msgid "{JAPAN ONLY}Please complete the following questions."
-msgstr "｛日本限定｝以下の質問にお答えください。"
+msgstr ""
+"知識確認テスト用ディスクレーマー \n"
+" \n"
+"・この知識確認テストは、法令で義務付けられており、当社がお客様の事を知り、お客様がバイナリーオプション取引を行うことに適した投資者がどうかを判断したうえで"
+"、お客様との取引を開始するためのものです。 \n"
+"・バイナリーオプション投資を的確に行うにはオプション取引などデリバティブ取引に関わる知識や経験が必要です。 \n"
+"・本テストはオプション取引に関わる基礎的な知識の有無を確認する目的で行われます。 \n"
+"・本テストの結果により適正と判断し、取引を開始する場合は、その後当社との間に取引上のトラブルが生じたとしても、オプション取引に関わる知識が不足していたにも"
+"関わらず当社が取引を認めたことを訴因とはしないことに同意いただくものとします。 \n"
+"・問題の複写を禁止します。また、第三者に漏えいしないことに同意いただくものとします。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:420
 #| msgid "[JAPAN ONLY]Predicted that the underlying asset price is largely up-dean and in order to obtain the benefit also moving in either direction of rising send falling, obtained both options of the call options that exercise price is higher than the underlying asset price and tie put option that exercise prize is lower than underlying asset price."
