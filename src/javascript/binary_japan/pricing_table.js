@@ -37,6 +37,8 @@ var PricingTable = (function() {
     render: function render() {
       var price = parseInt(this.props.price);
       var inactive = this.props.is_active && price !== 1000 && price !== 0 ? '' : 'inactive';
+      var barrierArr = this.props.barrier ? this.props.barrier.split(/\-/).reverse() : [];
+      var props = this.props;
 
       return React.createElement(
         "div", {
@@ -54,7 +56,21 @@ var PricingTable = (function() {
             '¥' + price
           ),
           (this.props.type === 'buy' ? React.createElement(
-            "div", { "className": "col button", "key": "button" },
+            "div", {
+              "className": "col button",
+              "key": "button",
+              onClick: function() {
+                buyContract({
+                  price: price,
+                  amount: props.amount,
+                  contractType: props.contractType,
+                  symbol: props.symbol,
+                  dateExpiry: props.dateExpiry,
+                  barrier: barrierArr[0],
+                  barrier2: barrierArr[1],
+                });
+              }
+            },
             Content.localize()['textBuy']
           ) : undefined)
         ])
@@ -101,10 +117,12 @@ var PricingTable = (function() {
 
     render: function render() {
       var types = Object.keys(this.props.values);
-      var buy1 = React.createElement(PricingTableCell, { type: "buy", is_active: 0, price: 1000 });
-      var sell1 = React.createElement(PricingTableCell, { type: "sell", is_active: 0, price: 0 });
-      var buy2 = React.createElement(PricingTableCell, { type: "buy", is_active: 0, price: 1000 });
-      var sell2 = React.createElement(PricingTableCell, { type: "sell", is_active: 0, price: 0 });
+      var buy1 = React.createElement(PricingTableCell, { type: 'buy', is_active: 0, price: 1000 });
+      var sell1 = React.createElement(PricingTableCell, { type: 'sell', is_active: 0, price: 0 });
+      var buy2 = React.createElement(PricingTableCell, { type: 'buy', is_active: 0, price: 1000 });
+      var sell2 = React.createElement(PricingTableCell, { type: 'sell', is_active: 0, price: 0 });
+
+      var barrier = this.props.barrier.replace(/_/, ' - ');
 
       for (var i = 0; i < types.length; i++) {
         var type = types[i];
@@ -119,15 +137,54 @@ var PricingTable = (function() {
         }
 
         if (position === 'top') {
-          buy1 = React.createElement(PricingTableCell, { type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
-          sell2 = React.createElement(PricingTableCell, { type: "sell", is_active: 1, price: 1000 - this.props.values[type], dyn: dyn });
+          buy1 = React.createElement(PricingTableCell, {
+            type: 'buy',
+            is_active: 1,
+            price: this.props.values[type],
+            dyn: dyn,
+            barrier: barrier,
+            contractType: type,
+            amount: this.props.amount,
+            symbol: this.props.symbol,
+            dateExpiry: this.props.dateExpiry,
+          });
+          sell2 = React.createElement(PricingTableCell, {
+            type: 'sell',
+            is_active: 1,
+            price: 1000 - this.props.values[type],
+            dyn: dyn,
+            barrier: barrier,
+            contractType: type,
+            amount: this.props.amount,
+            symbol: this.props.symbol,
+            dateExpiry: this.props.dateExpiry,
+          });
         } else {
-          buy2 = React.createElement(PricingTableCell, { type: "buy", is_active: 1, price: this.props.values[type], dyn: dyn });
-          sell1 = React.createElement(PricingTableCell, { type: "sell", is_active: 1, price: 1000 - this.props.values[type], dyn: dyn });
+          buy2 = React.createElement(PricingTableCell, {
+            type: 'buy',
+            is_active: 1,
+            price: this.props.values[type],
+            dyn: dyn,
+            barrier: barrier,
+            contractType: type,
+            amount: this.props.amount,
+            symbol: this.props.symbol,
+            dateExpiry: this.props.dateExpiry,
+          });
+          sell1 = React.createElement(PricingTableCell, {
+            type: 'sell',
+            is_active: 1,
+            price: 1000 - this.props.values[type],
+            dyn: dyn,
+            barrier: barrier,
+            contractType: type,
+            amount: this.props.amount,
+            symbol: this.props.symbol,
+            dateExpiry: this.props.dateExpiry,
+          });
         }
       }
 
-      var barrier = this.props.barrier.replace(/_/, ' - ');
       return React.createElement(
         "div", { "className": "pricing_table_row row" },
         React.createElement(
@@ -161,7 +218,10 @@ var PricingTable = (function() {
           key: i,
           barrier: barrier,
           values: this.props.prices[barrier],
-          prev_values: (this.props.prev_prices !== undefined ? this.props.prev_prices[barrier] : undefined)
+          prev_values: (this.props.prev_prices !== undefined ? this.props.prev_prices[barrier] : undefined),
+          amount: this.props.amount,
+          dateExpiry: this.props.dateExpiry,
+          symbol: this.props.symbol,
         }));
       }
 
@@ -179,8 +239,9 @@ var PricingTable = (function() {
       state.prev_prices = {};
       state.prices = {};
       state.category = form.contract_category;
-      state.date_expiry = form.date_expiry;
+      state.dateExpiry = form.date_expiry;
       state.symbol = form.symbol;
+      state.amount = form.amount;
       BinarySocket.send({
         pricing_table: 1,
         contract_category: form.contract_category,
@@ -191,11 +252,35 @@ var PricingTable = (function() {
     }
   }
 
+  function buyContract(params) {
+    var buyContractParams = {
+      buy: 1,
+      price: params.price,
+      parameters: {
+        amount: params.amount,
+        basis: 'payout',
+        contract_type: params.contractType,
+        currency: 'JPY',
+        symbol: params.symbol,
+        date_expiry: params.dateExpiry,
+        barrier: params.barrier,
+      }
+    };
+
+    if (params.barrier2) {
+      buyContractParams.barrier2 = params.barrier2;
+    }
+
+    $('#trading_init_progress').show();
+
+    BinarySocket.send(buyContractParams);
+  }
+
   function handleResponse(res) {
     var echo_req = res.echo_req;
 
     if (state.category === echo_req.contract_category &&
-      state.date_expiry === echo_req.date_expiry &&
+      state.dateExpiry === echo_req.date_expiry &&
       state.symbol === echo_req.symbol) {
 
       state.prev_prices = state.prices;
@@ -244,13 +329,24 @@ var PricingTable = (function() {
 
       $('#pricing_table').show();
     }
+  }
 
+  function processBuy(res){
+    $('#trading_init_progress').hide();
+
+    if(res.error){
+      alert(res.error.message);
+    } else {
+      var button = $('<div />', { contract_id: res.buy.contract_id }).get(0);
+      ViewPopupWS.init(button);
+    }
   }
 
   return {
     sendRequest: sendRequest,
     handleResponse: handleResponse,
     state: state,
+    processBuy: processBuy
   };
 })();
 

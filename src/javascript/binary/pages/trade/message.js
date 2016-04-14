@@ -24,6 +24,9 @@ var Message = (function () {
             } else if (type === 'proposal') {
                 processProposal(response);
             } else if (type === 'buy') {
+                if(typeof is_japan === 'function'){
+                    PricingTable.processBuy(response);
+                }
                 Purchase.display(response);
             } else if (type === 'tick') {
                 processTick(response);

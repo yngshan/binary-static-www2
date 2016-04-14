@@ -205,9 +205,14 @@ var Content = (function() {
       payoutOption.textContent = localize.textPayout;
     }
 
-    var japanPayout = document.getElementById('japan_payout');
+    var japanUnit = document.getElementById('japan_unit_label');
+    if (japanUnit) {
+      japanUnit.textContent = localize.textUnits;
+    }
+
+    var japanPayout = document.getElementById('japan_payout_label');
     if (japanPayout) {
-      japanPayout.textContent = localize.textUnits;
+      japanPayout.textContent = localize.textPayout;
     }
 
     var stakeOption = document.getElementById('stake_option');
@@ -349,7 +354,8 @@ var Content = (function() {
 
   return {
     localize: function() {
-      return localize; },
+      return localize;
+    },
     populate: populate,
     statementTranslation: statementTranslation,
     profitTableTranslation: profitTableTranslation,

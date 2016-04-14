@@ -136,16 +136,21 @@
                         </div>
                      </div>
 
-                     <div class="row" id="japan_payout_row">
+                     <div class="row" id="japan_unit_row">
                         <div class="col form_label">
-                          <label for="japan_payout" id="japan_payout"></label>
+                          <label for="japan_unit" id="japan_unit_label"></label>
                         </div>
                         <div class="row-inner big-col">
-                           <div class="col-inner">
-                              JPY
-                              <input id="japan_payout" type="text" step="any" maxlength="10" value="1" class="medium_width_input" />
-                           </div>
-                           <div class="col-inner">x 1000</div>
+                           <div><input id="japan_unit" type="text" step="any" maxlength="10" value="1" class="medium_width_input" /> x 1000</div>
+                        </div>
+                     </div>
+
+                     <div class="row" id="japan_payout_row">
+                        <div class="col form_label">
+                          <label for="japan_payout" id="japan_payout_label"></label>
+                        </div>
+                        <div class="row-inner big-col">
+                           <span id="japan_payout">¥1000</span>
                         </div>
                      </div>
 

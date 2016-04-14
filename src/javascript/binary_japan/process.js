@@ -13,12 +13,15 @@ if (typeof is_japan === 'function') {
     var res = period.split('_');
     var date_expiry = res[1];
     var formName = sessionStorage.getItem('formname');
+    var units = Math.abs(parseInt($('#japan_unit').val(), 10)) || 1;
+    var amount = units*1000;
     var category = formName === 'higherlower' ? 'callput' : formName;
 
     PricingTable.sendRequest({
       symbol: symbol,
       date_expiry: date_expiry,
       contract_category: category,
+      amount: amount,
     });
   };
 

@@ -565,6 +565,12 @@ var TradingEvents = (function () {
             }));
         }
 
+        var $japanUnit = $('#japan_unit');
+        $japanUnit.keyup(function(e){
+            var value = Math.abs(parseInt(e.target.value, 10)) || 1;
+            $('#japan_payout').text('¥'+ parseInt(value)*1000);
+        });
+
         /*
          * attach datepicker and timepicker to end time durations
          * have to use jquery
