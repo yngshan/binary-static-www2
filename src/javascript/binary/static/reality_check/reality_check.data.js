@@ -40,6 +40,7 @@ var RealityCheckData = (function () {
     function clear() {
         LocalStore.remove('reality_check.ack');
         LocalStore.remove('reality_check.interval');
+        LocalStore.remove('reality_check.keep_open');
     }
 
     function resetInvalid() {
