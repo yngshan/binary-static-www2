@@ -76,6 +76,9 @@ var StartDates = (function(){
                             first = a.utc().unix();
                         }
                         content = document.createTextNode(a.format('HH:mm ddd'));
+                        if(option.value === Defaults.get('date_start')) {
+                            option.setAttribute('selected', 'selected');
+                        }
                         option.appendChild(content);
                         fragment.appendChild(option);
                     } 

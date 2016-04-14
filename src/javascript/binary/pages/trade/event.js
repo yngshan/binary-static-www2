@@ -147,6 +147,7 @@ var TradingEvents = (function () {
                         e.target.selectedIndex = 0;
                     }
                     var underlying = e.target.value;
+                    Defaults.remove('barrier', 'barrier_high', 'barrier_low');
                     Defaults.set('underlying', underlying);
                     TradingAnalysis.request();
 

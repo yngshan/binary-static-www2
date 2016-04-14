@@ -183,6 +183,9 @@ function displayPrediction() {
         if (Defaults.get('prediction')) {
             selectOption(Defaults.get('prediction'), document.getElementById('prediction'));
         }
+        else {
+            Defaults.set('prediction', document.getElementById('prediction').value);
+        }
     } else {
         predictionElement.hide();
         Defaults.remove('prediction');

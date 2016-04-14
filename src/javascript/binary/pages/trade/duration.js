@@ -219,8 +219,10 @@ var Durations = (function(){
 
     var durationPopulate = function() {
         var unit = document.getElementById('duration_units');
-        var unitValue = unit.options[unit.selectedIndex].getAttribute('data-minimum');
-        document.getElementById('duration_minimum').textContent = unitValue;
+        var unitMinValue = unit.options[unit.selectedIndex].getAttribute('data-minimum'),
+            unitValue = Defaults.get('duration_amount') || unitMinValue;
+        unit.value = Defaults.get('duration_units') || unit.value;
+        document.getElementById('duration_minimum').textContent = unitMinValue;
         if(selected_duration.amount && selected_duration.unit > unitValue){
             unitValue = selected_duration.amount;
         }
