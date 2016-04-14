@@ -6,20 +6,18 @@
       .sidebar
         %ul#sidebar-nav
           %li#sidebar-link-section-1.selected
-            %a{:href => "#what-are-volidx-markets"}= l('How to trade the volatility indices markets?')
+            %a{:href => "#what-are-volidx-markets"}= l('How to trade the Volatility Indices markets?')
           %li#sidebar-link-section-2
             %a{:href => "#volidx-indices"}= l('Continuous Indices')
           %li#sidebar-link-section-3
             %a{:href => "#volidx-quotidians"}= l('Daily Reset Indices')
-        .sidebar-button
-          %a.pjaxload{:href => url_for('trade.cgi?market=volidx')}= l('Place a volatility index trade')
     .grd-grid-9.grd-grid-mobile-12.grd-parent
       .section
         %a#what-are-volidx-markets
         .section-content
           #section-1
             .grd-grid-12
-              %h1= l('How to trade the volatility indices markets?')
+              %h1= l('How to trade the Volatility Indices markets?')
               %p= l('[_1] has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract:', stash->{website_name});
             .grd-grid-7.grd-grid-mobile-12
               %ul.checked
@@ -50,11 +48,11 @@
             .grd-grid-12
               %h1= l('Continuous Indices')
               %p
-                != l('[_1]\'s Continuous Indices are the [_2], [_3], [_4], and [_5]. These indices correspond to simulted markets with constant volatilities of 25%, 50%, 75% and 100%', stash->{website_name}, pjax_link_for(l('Volatility 25 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_25')), pjax_link_for(l('Volatility 50 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_50')), pjax_link_for(l('Volatility 75 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_75')), pjax_link_for(l('Volatility 100 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_100')))
+                != l('[_1]\'s Continuous Indices are the [_2], [_3], [_4], and [_5]. These indices correspond to simulated markets with constant volatilities of 25%, 50%, 75% and 100%.', stash->{website_name}, pjax_link_for(l('Volatility 25 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_25')), pjax_link_for(l('Volatility 50 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_50')), pjax_link_for(l('Volatility 75 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_75')), pjax_link_for(l('Volatility 100 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_100')))
             #volidx-indices-container
               .grd-grid-8.grd-grid-mobile-12
                 %p
-                  != l('The [_1] is twice as volatile as the [_2], and four times as volatile as the [_3].', pjax_link_for(l('Volatility 100 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_100')), pjax_link_for(l('Volatility 50 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_50')), pjax_link_for(l('Volatility 25 Index'), url_for('trade.cgi?market=volidx&form_name=risefall&underlying_symbol=R_25')))
+                  != l('The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index.')
               .grd-grid-4.grd-grid-mobile-12
                 %img.responsive{:src => url_for('images/pages/get-started/get-started-volidx-indices.svg')}
             .clearfix
