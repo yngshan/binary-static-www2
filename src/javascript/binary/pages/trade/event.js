@@ -30,8 +30,6 @@ var TradingEvents = (function () {
             sessionStorage.setItem('date_start', value);
         }
 
-        Durations.display();
-
         return make_price_request;
     };
 
@@ -72,7 +70,7 @@ var TradingEvents = (function () {
             return 0;
         }
         $('#duration_units').val(value);
-        
+
         sessionStorage.setItem('duration_units',value);
         Durations.select_unit(value);
         Durations.populate();
@@ -480,7 +478,7 @@ var TradingEvents = (function () {
                 submitForm(document.getElementById('websocket_form'));
             }));
         }
-        
+
         // For verifying there are 2 digits after decimal
         var isStandardFloat = (function(value){
             return (value % 1 !== 0 && ((+parseFloat(value)).toFixed(10)).replace(/^-?\d*\.?|0+$/g, '').length>2);

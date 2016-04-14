@@ -17,6 +17,7 @@ var Message = (function () {
                 processActiveSymbols(response);
             } else if (type === 'contracts_for') {
                 processContract(response);
+                window.contracts_for = response;
             } else if (type === 'payout_currencies') {
                 page.client.set_storage_value('currencies', response.payout_currencies);
                 displayCurrencies();
