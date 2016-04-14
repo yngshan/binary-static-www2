@@ -480,7 +480,7 @@ var TradingEvents = (function () {
                 submitForm(document.getElementById('websocket_form'));
             }));
         }
-        
+
         // For verifying there are 2 digits after decimal
         var isStandardFloat = (function(value){
             return (value % 1 !== 0 && ((+parseFloat(value)).toFixed(10)).replace(/^-?\d*\.?|0+$/g, '').length>2);

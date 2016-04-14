@@ -131,8 +131,12 @@ function BinarySocketClass() {
                         clearInterval(timeouts[response.echo_req.passthrough.req_number]);
                         delete timeouts[response.echo_req.passthrough.req_number];
                     }
-                    else if (passthrough.hasOwnProperty('dispatch_to') && passthrough.dispatch_to === 'ViewPopupWS') {
+                    else if (passthrough.hasOwnProperty('dispatch_to')) {
+                      if (passthrough.dispatch_to === 'ViewPopupWS') {
                         ViewPopupWS.dispatch(response);
+                      } else if (passthrough.dispatch_to === 'ViewChartWS') {
+                        Highchart.dispatch(response);
+                      }
                     }
                 }
                 var type = response.msg_type;
