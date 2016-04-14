@@ -235,7 +235,7 @@ var ViewPopupWS = (function() {
         }
 
         containerSetText('trade_details_contract_id'   , contract.contract_id);
-        containerSetText('trade_details_ref_id'        , contract.transaction_id);
+        containerSetText('trade_details_ref_id'        , contract.transaction_ids.buy + (contract.transaction_ids.sell ? ' - ' + contract.transaction_ids.sell : ''));
         containerSetText('trade_details_start_date'    , epochToDateTime(contract.date_start));
         containerSetText('trade_details_end_date'      , epochToDateTime(contract.date_expiry));
         containerSetText('trade_details_purchase_price', contract.currency + ' ' + parseFloat(contract.buy_price).toFixed(2));
@@ -343,8 +343,8 @@ var ViewPopupWS = (function() {
         $sections.find('#sell_details_table').append($(
             '<table>' +
                 '<tr><th colspan="2">' + text.localize('Contract Information') + '</th></tr>' +
-                    // normalRow('Contract ID',    '', 'trade_details_contract_id') +
-                    // normalRow('Reference ID',   '', 'trade_details_ref_id') +
+                    normalRow('Contract ID',    '', 'trade_details_contract_id') +
+                    normalRow('Reference ID',   '', 'trade_details_ref_id') +
                     normalRow('Start Time',     '', 'trade_details_start_date') +
                     normalRow('End Time',       '', 'trade_details_end_date') +
                     normalRow('Remaining Time', '', 'trade_details_live_remaining') +
