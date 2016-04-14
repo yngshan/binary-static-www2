@@ -30,8 +30,6 @@ var TradingEvents = (function () {
             sessionStorage.setItem('date_start', value);
         }
 
-        Durations.display();
-
         return make_price_request;
     };
 
