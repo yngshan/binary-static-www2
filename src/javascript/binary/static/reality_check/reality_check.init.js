@@ -23,7 +23,7 @@ var RealityCheck = (function () {
         var toWait = computeIntervalForNextPopup(loginTime, interval);
         
         window.setTimeout(function () {
-            RealityCheckData.resetCloseValue();
+            RealityCheckData.setOpenSummaryFlag();
             RealityCheckData.getSummaryAsync();
         }, toWait);
     }
@@ -77,6 +77,8 @@ var RealityCheck = (function () {
 
         if (RealityCheckData.getAck() !== '1') {
             RealityCheckUI.renderFrequencyPopUp();
+        } else if (RealityCheckData.getOpenSummaryFlag() === '1') {
+            RealityCheckData.getSummaryAsync();
         } else {
             startSummaryTimer();
         }

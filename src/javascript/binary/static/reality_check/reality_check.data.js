@@ -13,12 +13,16 @@ var RealityCheckData = (function () {
         return LocalStore.get('reality_check.ack');
     }
 
-    function resetCloseValue() {
-        LocalStore.set('reality_check.close', 0);
+    function setOpenSummaryFlag() {
+        LocalStore.set('reality_check.keep_open', 1);
+    }
+
+    function getOpenSummaryFlag() {
+        return LocalStore.get('reality_check.keep_open');
     }
 
     function triggerCloseEvent() {
-        LocalStore.set('reality_check.close', 1);
+        LocalStore.set('reality_check.keep_open', 0);
     }
     
     function updateAck() {
@@ -91,7 +95,8 @@ var RealityCheckData = (function () {
     return {
         getSummaryAsync: getSummaryAsync,
         getAck: getAck,
-        resetCloseValue: resetCloseValue,
+        setOpenSummaryFlag: setOpenSummaryFlag,
+        getOpenSummaryFlag: getOpenSummaryFlag,
         updateAck: updateAck,
         getInterval: getInterval,
         updateInterval: updateInterval,
