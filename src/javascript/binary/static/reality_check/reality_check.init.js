@@ -32,7 +32,7 @@ var RealityCheck = (function () {
         if (ev.key === 'reality_check.ack' && ev.newValue === '1') {
             RealityCheckUI.closePopUp();
             startSummaryTimer();
-        } else if (ev.key === 'reality_check.close' && ev.newValue === '1') {
+        } else if (ev.key === 'reality_check.keep_open' && ev.newValue === '0') {
             RealityCheckUI.closePopUp();
             startSummaryTimer();
         }
