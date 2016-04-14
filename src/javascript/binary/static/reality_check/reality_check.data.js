@@ -1,7 +1,7 @@
 var RealityCheckData = (function () {
     'use strict';
 
-    var defaultInterval = 60000;
+    var defaultInterval = 600000;
     var durationTemplateString = '[_1] days [_2] hours [_3] minutes';
     var tradingTimeTemplate = 'Your trading statistics since [_1].';
 
