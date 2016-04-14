@@ -68,10 +68,10 @@ var RealityCheckData = (function () {
             .replace('[_2]', durationH)
             .replace('[_3]', durationM);
 
-        var turnover = wsData.buy_amount + wsData.sell_amount;
-        var profitLoss = wsData.sell_amount - wsData.buy_amount;
+        var turnover = +(wsData.buy_amount) + (+(wsData.sell_amount));
+        var profitLoss = +(wsData.sell_amount) - (+(wsData.buy_amount));
 
-        var startTimeString = tradingTimeTemplate.replace('[_1]', startTime.format('YYYY-MM-DD HH:mm:ss')) + ' GMT';
+        var startTimeString = tradingTimeTemplate.replace('[_1]', startTime.format('YYYY-MM-DD HH:mm:ss') + ' GMT');
         return {
             startTimeString: startTimeString,
             loginTime: startTime.format('YYYY-MM-DD HH:mm:ss') + ' GMT',
@@ -79,12 +79,12 @@ var RealityCheckData = (function () {
             sessionDuration: durationString,
             loginId: wsData.loginid,
             currency: wsData.currency,
-            turnover: turnover,
-            profitLoss: profitLoss,
+            turnover: (+turnover).toFixed(2),
+            profitLoss: (+profitLoss).toFixed(2),
             contractsBought: wsData.buy_count,
             contractsSold: wsData.sell_count,
             openContracts: wsData.open_contract_count,
-            potentialProfit: wsData.potential_profit
+            potentialProfit: (+(wsData.potential_profit)).toFixed(2)
         };
     }
 
