@@ -408,7 +408,7 @@ Menu.prototype = {
         this.hide_main_menu();
 
         var active = this.active_menu_top();
-        var trading = $('#menu-top li:eq(3)');
+        var trading = $('#menu-top li:eq(4)');
         if(active) {
             active.addClass('active');
             if(trading.is(active)) {
