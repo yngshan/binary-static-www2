@@ -832,13 +832,13 @@ function updatePurchaseStatus(final_price, pnl, contract_status){
     $cost = $('#contract_purchase_cost');
     $profit = $('#contract_purchase_profit');
 
-    $payout.html(Content.localize().textBuyPrice + '<p>'+Math.abs(pnl)+'</p>');
-    $cost.html(Content.localize().textFinalPrice + '<p>'+final_price+'</p>');
+    $payout.html(Content.localize().textBuyPrice + '<p>'+addComma(Math.abs(pnl))+'</p>');
+    $cost.html(Content.localize().textFinalPrice + '<p>'+addComma(final_price)+'</p>');
     if(!final_price){
-        $profit.html(Content.localize().textLoss + '<p>'+pnl+'</p>');
+        $profit.html(Content.localize().textLoss + '<p>'+addComma(pnl)+'</p>');
     }
     else{
-        $profit.html(Content.localize().textProfit + '<p>'+(Math.round((final_price-pnl)*100)/100)+'</p>');
+        $profit.html(Content.localize().textProfit + '<p>'+addComma(Math.round((final_price-pnl)*100)/100)+'</p>');
     }
 }
 
@@ -889,6 +889,7 @@ function reloadPage(){
 }
 
 function addComma(num){
+    num = (num || 0) * 1;
     return num.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
