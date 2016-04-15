@@ -39,7 +39,14 @@ var RealityCheck = (function () {
     }
 
     function onContinueClick() {
-        var intervalMinute = $('#realityDuration').val();
+        var intervalMinute = +($('#realityDuration').val());
+
+        if (!(Math.floor(intervalMinute) == intervalMinute && $.isNumeric(intervalMinute))) {
+            var shouldBeInteger = text.localize('Interval should be integer.');
+            $('p.error-msg').text(shouldBeInteger);
+            $('p.error-msg').removeClass(hiddenClass);
+            return;
+        }
 
         if (intervalMinute < 10 || intervalMinute > 120) {
             var minimumValueMsg = Content.errorMessage('number_should_between', '10 to 120');

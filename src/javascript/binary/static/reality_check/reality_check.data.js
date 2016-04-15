@@ -41,6 +41,9 @@ var RealityCheckData = (function () {
         LocalStore.remove('reality_check.ack');
         LocalStore.remove('reality_check.interval');
         LocalStore.remove('reality_check.keep_open');
+        LocalStore.remove('reality_check.close');
+        LocalStore.remove('reality_check.svrtime');
+        LocalStore.remove('reality_check.basetime');
     }
 
     function resetInvalid() {
@@ -56,8 +59,8 @@ var RealityCheckData = (function () {
     }
 
     function summaryData(wsData) {
-        var startTime = moment(new Date(wsData.start_time * 1000));
-        var currentTime = moment();
+        var startTime = moment.utc(new Date(wsData.start_time * 1000));
+        var currentTime = moment.utc();
 
         var sessionDuration = moment.duration(currentTime.diff(startTime));
         var durationD = sessionDuration.get('days');
