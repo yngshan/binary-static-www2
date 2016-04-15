@@ -16,6 +16,8 @@ pjax_config_page('/get-started-jp', function() {
             if (updatedTab && updatedTab !== '') {
               if ($('#index').is(":visible")) $('#index').hide();
               $('.contents div[id=content-' + updatedTab.slice(1, updatedTab.length) + ']').show();
+              $('.contents div[id=content-' + updatedTab.slice(1, updatedTab.length) + '] div').show();
+              $('.sidebar-left ul li').removeClass('selected');
               $('.sidebar-left ul li.' + updatedTab.slice(1, updatedTab.length)).addClass('selected');
               $('.contents').show();
             }
