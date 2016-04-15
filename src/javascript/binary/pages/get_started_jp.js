@@ -12,18 +12,21 @@ pjax_config_page('/get-started-jp', function() {
           }
           function showSelectedTab() {
             var updatedTab = window.location.hash;
-            if ($('#index').is(":visible")) $('#index').hide();
             $('.contents div').hide();
-            $('.contents div[id=content-' + updatedTab.slice(1, updatedTab.length) + ']').show();
-            $('.sidebar-left ul li.' + updatedTab.slice(1, updatedTab.length)).addClass('selected');
-            $('.contents').show();
+            if (updatedTab && updatedTab !== '') {
+              if ($('#index').is(":visible")) $('#index').hide();
+              $('.contents div[id=content-' + updatedTab.slice(1, updatedTab.length) + ']').show();
+              $('.sidebar-left ul li.' + updatedTab.slice(1, updatedTab.length)).addClass('selected');
+              $('.contents').show();
+            }
+            else {
+              $('.contents').hide();
+              $('.sidebar-left ul li').removeClass('selected');
+              $('#index').show();
+            }
           }
           $(window).on('hashchange', function(){
             showSelectedTab();
-            if (window.location.hash === '') {
-              $('.contents').hide();
-              $('#index').show();
-            }
           });
           $('.sidebar-left ul li').click(function(e) {
             $('.sidebar-left ul li').removeClass('selected');
