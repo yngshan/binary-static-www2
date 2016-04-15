@@ -8,9 +8,11 @@ pjax_config_page('/get-started-jp', function() {
             showSelectedTab();
           }
           function showSelectedTab() {
+            var updatedTab = window.location.hash;
             if ($('#index').is(":visible")) $('#index').hide();
             $('.contents div').hide();
-            $('.contents div[id=content-' + window.location.hash.slice(1, window.location.hash.length) + ']').show();
+            $('.contents div[id=content-' + updatedTab.slice(1, updatedTab.length) + ']').show();
+            $('.sidebar-left ul li.' + updatedTab.slice(1, updatedTab.length)).addClass('selected');
             $('.contents').show();
           }
           $(window).on('hashchange', function(){
