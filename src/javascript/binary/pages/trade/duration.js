@@ -17,7 +17,6 @@ var Durations = (function(){
     var has_end_date = 0;
 
     var displayDurations = function() {
-
         var startType;
         if(Defaults.get('date_start') && StartDates.displayed() && moment(Defaults.get('date_start')*1000).isAfter(moment())) {
             startType = 'forward';
@@ -265,7 +264,13 @@ var Durations = (function(){
         var target = document.getElementById('expiry_type'),
             fragment = document.createDocumentFragment();
 
-        var current_selected = target.value || 'duration',
+        // in case of having endtime as expiry_type and change the form to contract types
+        // which only have duration and do not support endtime, it should change the Default value
+        // to get corrected based on contract situations
+        if($('#expiry_type').find('option[value=' + Defaults.get('expiry_type') + ']').length === 0 && target.value) {
+                Defaults.set('expiry_type', target.value);
+        }
+        var current_selected = Defaults.get('expiry_type') || target.value || 'duration',
             id = current_selected,
             hideId = (current_selected === 'duration') ? 'endtime' : 'duration';
 
@@ -347,7 +352,7 @@ var Durations = (function(){
             processPriceRequest();
         }
 
-        Defaults.set('end_date', end_date);
+        sessionStorage.setItem('end_date',end_date);
         Barriers.display();
     };
 

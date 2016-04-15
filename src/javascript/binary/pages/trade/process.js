@@ -145,7 +145,6 @@ function processContract(contracts) {
 }
 
 function processContractForm() {
-
     Contract.details(sessionStorage.getItem('formname'));
 
     StartDates.display();
@@ -155,9 +154,9 @@ function processContractForm() {
     displaySpreads();
 
     var r1;
-    if (StartDates.displayed() && Defaults.get('date_start')) {
+    if (StartDates.displayed() && Defaults.get('date_start') && Defaults.get('date_start') !== 'now') {
         r1 = TradingEvents.onStartDateChange(Defaults.get('date_start'));
-        if (!r1) Durations.display();
+        if (!r1 || Defaults.get('expiry_type') === 'endtime') Durations.display();
     } else {
         Durations.display();
     }

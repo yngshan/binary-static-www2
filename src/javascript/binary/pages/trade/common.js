@@ -868,9 +868,9 @@ function updateWarmChart(){
 }
 
 function reloadPage(){
-    Defaults.remove('market', 'formname', 'underlying',
-        'expiry_type', 'stop_loss', 'stop_type', 'stop_profit', 'amount_per_point', 'prediction',
-        'amount', 'amount_type', 'currency', 'duration_units', 'diration_value', 'date_start');
+    Defaults.remove('market', 'underlying', 'formname',
+        'date_start','expiry_type', 'expiry_date', 'expirt_time', 'duration_units', 'diration_value',
+        'amount', 'amount_type', 'currency', 'stop_loss', 'stop_type', 'stop_profit', 'amount_per_point', 'prediction');
     location.reload();
 }
 

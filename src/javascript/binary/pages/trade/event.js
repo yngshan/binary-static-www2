@@ -9,20 +9,18 @@
 var TradingEvents = (function () {
     'use strict';
 
-
     var onStartDateChange = function(value){
         if(!value || !$('#date_start').find('option[value='+value+']').length){
             return 0;
         }
         $('#date_start').val(value);
-        Defaults.set('date_start', value);
 
         var make_price_request = 1;
         if (value !== 'now' && $('expiry_type').val() === 'endtime') {
             make_price_request = -1;
             var end_time = moment(value*1000).utc().add(15,'minutes');
-            Durations.setTime(end_time.format("hh:mm"));
-            Durations.selectEndDate(end_time.format("YYYY-MM-DD"));
+            Durations.setTime(Defaults.get('expiry_time') || end_time.format("hh:mm"));
+            Durations.selectEndDate(Defaults.get('expiry_date') || end_time.format("YYYY-MM-DD"));
         }
 
         return make_price_request;
@@ -32,19 +30,16 @@ var TradingEvents = (function () {
         if(!value || !$('#expiry_type').find('option[value='+value+']').length){
             value = 'duration';
         }
-
         $('#expiry_type').val(value);
 
-        Defaults.set('expiry_type', value);
         var make_price_request = 0;
         if(value === 'endtime'){
             Durations.displayEndTime();
-            if(Defaults.get('end_date')){
-                Durations.selectEndDate(Defaults.get('end_date'));
+            if(sessionStorage.getItem('end_date') || Defaults.get('expiry_date')){
+                Durations.selectEndDate(sessionStorage.getItem('end_date') || Defaults.get('expiry_date'));
                 make_price_request = -1;
             }
-            Defaults.remove('duration_units');
-            Defaults.remove('duration_amount');
+            Defaults.remove('duration_units', 'duration_amount');
         }
         else{
             Durations.display();
@@ -56,8 +51,7 @@ var TradingEvents = (function () {
                 $('#duration_amount').val(duration_amount);
             }
             make_price_request = 1;
-            Defaults.remove('expiry_date');
-            Defaults.remove('expiry_time');
+            Defaults.remove('expiry_date', 'expiry_time', 'end_date');
         }
 
         return make_price_request;
@@ -67,9 +61,10 @@ var TradingEvents = (function () {
         if(!value || !$('#duration_units').find('option[value='+value+']').length){
             return 0;
         }
+
         $('#duration_units').val(value);
-        
         Defaults.set('duration_units', value);
+
         Durations.select_unit(value);
         Durations.populate();
 
@@ -201,6 +196,7 @@ var TradingEvents = (function () {
         var expiryTypeElement = document.getElementById('expiry_type');
         if (expiryTypeElement) {
             expiryTypeElement.addEventListener('change', function(e) {
+                Defaults.set('expiry_type', e.target.value);
                 onExpiryTypeChange(e.target.value);
                 processPriceRequest();
             });
@@ -263,6 +259,7 @@ var TradingEvents = (function () {
         var dateStartElement = StartDates.node();
         if (dateStartElement) {
             dateStartElement.addEventListener('change', function (e) {
+                Defaults.set('date_start', e.target.value);
                 var r = onStartDateChange(e.target.value);
                 if(r>=0){
                     processPriceRequest();
