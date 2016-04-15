@@ -30,6 +30,8 @@
       @media (max-width : $md){
         & > th:nth-child(4){ display : none !important; }
         & > td:nth-child(4){ display : none !important; }
+        & > th:nth-child(7){ display : table-cell !important; }
+        & > td:nth-child(7){ display : table-cell !important; }
         .flex-tr-child {
           font-size : 12px;
         }
@@ -37,11 +39,12 @@
     }
   }
   #profit-table{
-
     .flex-tr {     
       @media (max-width : $md){
         & > th:nth-child(3){ display : none !important; }
         & > td:nth-child(3){ display : none !important; }
+        & > th:nth-child(8){ display : table-cell !important; }
+        & > td:nth-child(8){ display : table-cell !important; }
         .flex-tr-child {
           font-size : 12px;
         }

@@ -64,6 +64,7 @@ var Content = (function () {
             textDescription: text.localize('Description'),
             textCreditDebit: text.localize('Credit/Debit'),
             textBalance: text.localize('Balance'),
+            textDetails: text.localize('Details'),
             textProfitTable: text.localize('Profit Table'),
             textPurchaseDate: text.localize('Purchase Date (GMT)'),
             textContract: text.localize('Contract'),
