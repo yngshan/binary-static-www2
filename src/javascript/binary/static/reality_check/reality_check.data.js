@@ -33,6 +33,15 @@ var RealityCheckData = (function () {
         return LocalStore.get('reality_check.interval');
     }
 
+    function getPreviousLoadLoginId() {
+        return LocalStore.get('reality_check.loginid');
+    }
+
+    function setPreviousLoadLoginId() {
+        var id = TUser.get().loginid;
+        LocalStore.set('reality_check.loginid', id);
+    }
+
     function updateInterval(ms) {
         LocalStore.set('reality_check.interval', ms);
     }
@@ -97,6 +106,8 @@ var RealityCheckData = (function () {
         getAck: getAck,
         setOpenSummaryFlag: setOpenSummaryFlag,
         getOpenSummaryFlag: getOpenSummaryFlag,
+        getPreviousLoadLoginId: getPreviousLoadLoginId,
+        setPreviousLoadLoginId: setPreviousLoadLoginId,
         updateAck: updateAck,
         getInterval: getInterval,
         updateInterval: updateInterval,

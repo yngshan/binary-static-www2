@@ -73,14 +73,20 @@ var RealityCheck = (function () {
 
     function init() {
         if (!page.client.require_reality_check()) {
+            RealityCheckData.setPreviousLoadLoginId();
             return;
         }
 
         var rcCookie = getCookieItem('reality_check');
         loginTime = rcCookie && rcCookie.split(',')[1] * 1000;
 
-        RealityCheckData.resetInvalid();
         window.addEventListener('storage', realityStorageEventHandler, false);
+
+        if (TUser.get().loginid !== RealityCheckData.getPreviousLoadLoginId()) {
+            RealityCheckData.clear();
+        }
+
+        RealityCheckData.resetInvalid();            // need to reset after clear
 
         if (RealityCheckData.getAck() !== '1') {
             RealityCheckUI.renderFrequencyPopUp();
@@ -89,6 +95,8 @@ var RealityCheck = (function () {
         } else {
             startSummaryTimer();
         }
+
+        RealityCheckData.setPreviousLoadLoginId();
     }
     
     return {
