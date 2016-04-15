@@ -833,7 +833,7 @@ function updatePurchaseStatus(final_price, pnl, contract_status){
     $profit = $('#contract_purchase_profit');
 
     $payout.html(Content.localize().textBuyPrice + '<p>'+addComma(Math.abs(pnl))+'</p>');
-    $cost.html(Content.localize().textFinalPrice + '<p>'+addComma(final_price*1)+'</p>');
+    $cost.html(Content.localize().textFinalPrice + '<p>'+addComma(final_price)+'</p>');
     if(!final_price){
         $profit.html(Content.localize().textLoss + '<p>'+addComma(pnl)+'</p>');
     }
@@ -889,6 +889,7 @@ function reloadPage(){
 }
 
 function addComma(num){
+    num = (num || 0) * 1;
     return num.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
