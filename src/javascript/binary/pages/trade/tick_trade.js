@@ -1,4 +1,4 @@
-var WSTickDisplay = Object.create(TickDisplay);
+var WSTickDisplay = Object.create(TickChart);
 WSTickDisplay.plot = function(plot_from, plot_to) {
     var $self = this;
     $self.contract_start_moment = moment($self.contract_start_ms).utc();
