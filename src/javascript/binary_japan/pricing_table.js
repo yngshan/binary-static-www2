@@ -204,26 +204,23 @@ var PricingTable = (function() {
     displayName: "PricingTable",
 
     render: function render() {
-      var rows = [
-        React.createElement(PricingTableHeader, { key: 0 })
-      ];
-
       var barriers = Object.keys(this.props.prices).sort(function(a, b) {
         return b - a;
       });
 
-      for (var i = 1; i <= barriers.length; i++) {
-        var barrier = barriers[i - 1];
-        rows.push(React.createElement(PricingTableRow, {
-          key: i,
+      var i = 1;
+      var rows = barriers.map(function(barrier) {
+        return React.createElement(PricingTableRow, {
+          key: i++,
           barrier: barrier,
           values: this.props.prices[barrier],
           prev_values: (this.props.prev_prices !== undefined ? this.props.prev_prices[barrier] : undefined),
           units: this.props.units,
           dateExpiry: this.props.dateExpiry,
           symbol: this.props.symbol,
-        }));
-      }
+        });
+      });
+      rows.unshift(React.createElement(PricingTableHeader, { key: 0 }));
 
       return React.createElement(
         "div", { "className": "pricing_table" },
@@ -279,7 +276,7 @@ var PricingTable = (function() {
   function handleResponse(res) {
     var echo_req = res.echo_req;
 
-    if(!document.getElementById('pricing_table')){
+    if (!document.getElementById('pricing_table')) {
       processForgetTables();
     } else if (state.category === echo_req.contract_category &&
       state.dateExpiry === echo_req.date_expiry &&

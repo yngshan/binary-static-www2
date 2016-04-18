@@ -18,8 +18,6 @@ BetAnalysis.Portfolio = (function() {
       $portfolio.detach();
       $container.append($portfolio);
     }
-
-    return;
   }
 
   function show() {
