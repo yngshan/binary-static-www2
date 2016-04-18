@@ -116,7 +116,7 @@ var ViewPopupWS = (function() {
             "contract_category"   : ((/asian/i).test(contract.shortcode) ? 'asian' : (/digit/i).test(contract.shortcode) ? 'digits' : 'callput'),
             "longcode"            : contract.longcode,
             "display_decimals"    : history.prices[0].split('.')[1].length || 2,
-            "display_symbol"      : contract.underlying,
+            "display_symbol"      : contract.display_name,
             "contract_start"      : contract.date_start,
             "show_contract_result": 0
         });

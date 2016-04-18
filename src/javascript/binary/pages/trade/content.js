@@ -128,6 +128,7 @@ var Content = (function() {
             textUnavailableReal: text.localize('Sorry, account opening is unavailable.'),
             textMessageMinRequired: text.localize('Minimum of [_1] characters required.'),
             textFeatureUnavailable: text.localize('Sorry, this feature is not available.'),
+<<<<<<< HEAD
             textMessagePasswordScore: text.localize('Password score is: [_1]. Passing score is: 20.'),
             textShouldNotLessThan: text.localize('Please enter a number greater or equal to [_1].'),
             textExercisePrice: text.localize('Exercise price'),
@@ -146,6 +147,11 @@ var Content = (function() {
             textBuyPriceUnit: text.localize('BUY price per unit'),
             textSellPriceUnit: text.localize('SELL price  per unit'),
             textUnits: text.localize('Units'),
+=======
+            textMessagePasswordScore: text.localize( 'Password score is: [_1]. Passing score is: 20.'),
+            textShouldNotLessThan: text.localize('Please enter a number greater or equal to [_1].'),
+            textNumberLimit: text.localize('Please enter a number between [_1].')       // [_1] should be a range
+>>>>>>> master
         };
 
         var starTime = document.getElementById('start_time_label');
@@ -345,6 +351,9 @@ var Content = (function() {
                 break;
             case 'number_not_less_than':
                 msg = localize.textShouldNotLessThan.replace('[_1]', param);
+                break;
+            case 'number_should_between':
+                msg = localize.textNumberLimit.replace('[_1]', param);
                 break;
             default:
                 break;
