@@ -77,7 +77,7 @@ function BinarySocketClass() {
                     else{
                         $('.price_container').hide();
                     }
-                }, 7*1000);
+                }, 60*1000);
             }
 
             binarySocket.send(JSON.stringify(data));
