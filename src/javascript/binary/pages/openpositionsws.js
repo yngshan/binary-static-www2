@@ -177,14 +177,14 @@ var PortfolioWS =  (function() {
         BinarySocket.init({
 
             onmessage: function(msg){
-
+                var response;
                 try {
                     response  = JSON.parse(msg.data);
                     if("object" !== typeof response || !("msg_type" in response)) {
                         throw new Error("Response from WS API is not well formatted.");
                     }
                 } catch(e) {
-                    throw new Error("Response from WS API is not well formatted.");
+                    throw new Error("Response from WS API is not well formatted."+ e);
                 }
 
                 var msg_type = response.msg_type;
