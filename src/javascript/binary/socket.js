@@ -77,7 +77,7 @@ function BinarySocketClass() {
                     else{
                         $('.price_container').hide();
                     }
-                }, 7*1000);
+                }, 60*1000);
             }
 
             binarySocket.send(JSON.stringify(data));
@@ -162,8 +162,9 @@ function BinarySocketClass() {
                     page.header.time_counter(response);
                     ViewPopupWS.dispatch(response);
                 } else if (type === 'logout') {
-                    page.header.do_logout(response);
                     localStorage.removeItem('jp_test_allowed');
+                    RealityCheckData.clear();
+                    page.header.do_logout(response);
                 } else if (type === 'landing_company_details') {
                     page.client.response_landing_company_details(response);
                     RealityCheck.init();
@@ -197,6 +198,8 @@ function BinarySocketClass() {
                       checkClientsCountry();
                     }
                   }
+                } else if (type === 'reality_check') {
+                    RealityCheck.realityCheckWSHandler(response);
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code) {

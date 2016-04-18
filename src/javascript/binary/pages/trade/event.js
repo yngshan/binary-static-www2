@@ -529,7 +529,8 @@ var TradingEvents = (function () {
         if(period){
             period.addEventListener('change', function (e) {
                 Periods.displayBarriers();
-                processPriceRequest();
+                processPricingTableRequest();
+                // processPriceRequest();
                 var japan_info = TradingAnalysis.japan_info();
                 if(japan_info && TradingAnalysis.getActiveTab() === 'tab_japan_info'){
                     japan_info.show();
@@ -561,6 +562,14 @@ var TradingEvents = (function () {
                 load_with_pjax(url);
             }));
         }
+
+        var $japanUnit = $('#japan_unit');
+        var japanState = PricingTable.getState();
+        $japanUnit.keyup(function(e){
+            var value = Math.abs(parseInt(e.target.value, 10)) || 1;
+            japanState.units = value;
+            $('#japan_payout').text('¥'+ parseInt(value)*1000);
+        });
 
         /*
          * attach datepicker and timepicker to end time durations

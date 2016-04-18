@@ -451,11 +451,6 @@ function getContractCategoryTree(elements){
         'spreads'
     ];
 
-    // Temp hack. Should be deleted after japan release
-    if (typeof is_japan === 'function') {
-        delete tree[2];
-    }
-
     if(elements){
         tree = tree.map(function(e){
             if(typeof e === 'object'){

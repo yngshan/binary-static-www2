@@ -1,9 +1,9 @@
-var Content = (function () {
+var Content = (function() {
     'use strict';
 
     var localize = {};
 
-    var populate = function () {
+    var populate = function() {
         localize = {
             textStartTime: text.localize('Start time'),
             textSpot: text.localize('Spot'),
@@ -37,7 +37,6 @@ var Content = (function () {
             textFormUpDown: text.localize('Up/Down'),
             textFormInOut: text.localize('In/Out'),
             textContractPeriod: text.localize('Contract period'),
-            textExercisePeriod: text.localize('Exercise price'),
             predictionLabel: text.localize('Last Digit Prediction'),
             textContractConfirmationPayout: text.localize('Potential Payout'),
             textContractConfirmationCost: text.localize('Total Cost'),
@@ -129,8 +128,25 @@ var Content = (function () {
             textUnavailableReal: text.localize('Sorry, account opening is unavailable.'),
             textMessageMinRequired: text.localize('Minimum of [_1] characters required.'),
             textFeatureUnavailable: text.localize('Sorry, this feature is not available.'),
+            textExercisePrice: text.localize('Exercise price'),
+            textPrices: text.localize('Prices'),
+            textLots: text.localize('Lots'),
+            textBuy: text.localize('Buy'),
+            textSell: text.localize('Sell'),
+            textCALLE: text.localize('{currency} {sum} payout if {symbol} is strictly higher or equal than Exercise price at close  on {close}.'),
+            textPUT: text.localize('{currency} {sum} payout if {symbol} is strictly lower than Exercise price at close on {close}.'),
+            textNOTOUCH: text.localize('{currency} {sum} payout if {symbol} does not touch Exercise price through close on {close}.'),
+            textONETOUCH: text.localize('{currency} {sum} payout if {symbol} touches Exercise price through close on {close}.'),
+            textEXPIRYRANGEE: text.localize('{currency} {sum} payout if {symbol} ends on or between low and high values of Exercise price at close on {close}.'),
+            textEXPIRYMISS: text.localize('{currency} {sum} payout if {symbol} ends otside low and high values of Exercise price at close on {close}.'),
+            textRANGE: text.localize('{currency} {sum} payout if {symbol} stays between low and high values of Exercise price through close on {close}.'),
+            textUPORDOWN: text.localize('{currency} {sum} payout if {symbol} goes ouside of low and high values of Exercise price through close on {close}.'),
+            textBuyPriceUnit: text.localize('BUY price per unit'),
+            textSellPriceUnit: text.localize('SELL price  per unit'),
+            textUnits: text.localize('Units'),
             textMessagePasswordScore: text.localize( 'Password score is: [_1]. Passing score is: 20.'),
-            textShouldNotLessThan: text.localize('Please enter a number greater or equal to [_1].')
+            textShouldNotLessThan: text.localize('Please enter a number greater or equal to [_1].'),
+            textNumberLimit: text.localize('Please enter a number between [_1].')       // [_1] should be a range
         };
 
         var starTime = document.getElementById('start_time_label');
@@ -181,13 +197,23 @@ var Content = (function () {
         }
 
         var predictionLabel = document.getElementById('prediction_label');
-        if(predictionLabel){
+        if (predictionLabel) {
             predictionLabel.textContent = localize.predictionLabel;
         }
 
         var payoutOption = document.getElementById('payout_option');
         if (payoutOption) {
             payoutOption.textContent = localize.textPayout;
+        }
+
+        var japanUnit = document.getElementById('japan_unit_label');
+        if (japanUnit) {
+            japanUnit.textContent = localize.textUnits;
+        }
+
+        var japanPayout = document.getElementById('japan_payout_label');
+        if (japanPayout) {
+            japanPayout.textContent = localize.textPayout;
         }
 
         var stakeOption = document.getElementById('stake_option');
@@ -252,7 +278,7 @@ var Content = (function () {
 
         var jpbarrier_label = document.getElementById('jbarrier_label');
         if (jpbarrier_label) {
-            jpbarrier_label.textContent = localize.textExercisePeriod;
+            jpbarrier_label.textContent = localize.textExercisePrice;
         }
 
         var jpbarrier_high_label = document.getElementById('jbarrier_high_label');
@@ -266,21 +292,21 @@ var Content = (function () {
         }
     };
 
-    var statementTranslation = function(){
+    var statementTranslation = function() {
         var titleElement = document.getElementById("statement-title").firstElementChild;
         titleElement.textContent = localize.textStatement;
     };
 
-    var profitTableTranslation = function(){
+    var profitTableTranslation = function() {
         var titleElement = document.getElementById("profit-table-title").firstElementChild;
         titleElement.textContent = localize.textProfitTable;
     };
 
-    var limitsTranslation = function(){
+    var limitsTranslation = function() {
         var titleElement = document.getElementById("limits-ws-container").firstElementChild;
         titleElement.textContent = localize.textLimits;
 
-        if(page.client.is_logged_in && !page.client.is_virtual()){
+        if (page.client.is_logged_in && !page.client.is_virtual()) {
             var loginId = page.client.loginid;
 
             var tradingLimits = document.getElementById("trading-limits");
@@ -291,35 +317,38 @@ var Content = (function () {
         }
     };
 
-    var errorMessage = function(messageType, param){
+    var errorMessage = function(messageType, param) {
         var msg = "",
             separator = ', ';
-        switch(messageType){
+        switch (messageType) {
             case 'req':
                 msg = localize.textMessageRequired;
                 break;
             case 'reg':
-                if(param)
+                if (param)
                     msg = localize.textMessageJustAllowed.replace('[_1]', param.join(separator));
                 break;
             case 'range':
-                if(param)
+                if (param)
                     msg = localize.textMessageCountLimit.replace('[_1]', param);
                 break;
             case 'valid':
-                if(param)
+                if (param)
                     msg = localize.textMessageValid.replace('[_1]', param);
                 break;
             case 'min':
-                if(param)
+                if (param)
                     msg = localize.textMessageMinRequired.replace('[_1]', param);
                 break;
             case 'pass':
-                if(param)
+                if (param)
                     msg = localize.textMessagePasswordScore.replace('[_1]', param);
                 break;
             case 'number_not_less_than':
                 msg = localize.textShouldNotLessThan.replace('[_1]', param);
+                break;
+            case 'number_should_between':
+                msg = localize.textNumberLimit.replace('[_1]', param);
                 break;
             default:
                 break;
@@ -328,7 +357,9 @@ var Content = (function () {
     };
 
     return {
-        localize: function () { return localize; },
+        localize: function() {
+            return localize;
+        },
         populate: populate,
         statementTranslation: statementTranslation,
         profitTableTranslation: profitTableTranslation,
@@ -337,3 +368,4 @@ var Content = (function () {
     };
 
 })();
+
