@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-15 22:10+0000\n"
-"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
+"PO-Revision-Date: 2016-04-18 07:24+0000\n"
+"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -544,11 +544,11 @@ msgstr "30日間の損失制限"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:200
 msgid "30-day turnover limit"
-msgstr "30日間ターンオーバー制限"
+msgstr "30日の取引数量限度額"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:65
 msgid "30-day turnover limit "
-msgstr "30日間ターンオーバー制限 "
+msgstr "30日の取引数量限度額 "
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/livechart_duration.html.tt:34
 msgid "3m"
@@ -623,7 +623,7 @@ msgstr "7日間の損失制限は、現在 <strong>%1 %2</strong>に設定され
 #. ($client->currency, $self_exclusion->max_7day_turnover)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:63
 msgid "7-Day turnover limit is currently set to <strong>%1 %2</strong>"
-msgstr "7日間のターンオーバー制限は、現在<strong>%1 %2</strong>に設定されています。"
+msgstr "7日の取引数量限度額は、現在<strong>%1 %2</strong>に設定されています。"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:174
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:55
@@ -633,7 +633,7 @@ msgstr "7日間の損失制限"
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:148
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:45
 msgid "7-day turnover limit"
-msgstr "7日間のターンオーバー制限"
+msgstr "7日の取引数量限度額"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "<< Back to Job Descriptions"
@@ -3408,12 +3408,12 @@ msgstr "損失限度額（1日）は、現在<strong>%1 %2</strong>に設定さ�
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:96
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:25
 msgid "Daily turnover limit"
-msgstr "１日の売買高制限"
+msgstr "1日の取引数量限度額"
 
 #. ($client->currency, $self_exclusion->max_turnover)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:53
 msgid "Daily turnover limit is currently set to <strong>%1 %2</strong>"
-msgstr "１日の売買高制限は、現在<strong>%1 %2</strong>に設定されています。"
+msgstr "1日の取引数量限度額は、現在<strong>%1 %2</strong>に設定されています。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/tac.html.tt:24
@@ -4346,7 +4346,7 @@ msgstr "卓越した組織力：細かな気配りと強い労働意欲"
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:308
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:104
 msgid "Exclude me from the website until"
-msgstr "サイトへのアクセスを右記日時まで希望しません。"
+msgstr "特定日まで利用禁止（日時単位）"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:377
 msgid "Exclude time cannot be for more than 5 years."
@@ -7241,37 +7241,37 @@ msgstr "最大："
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:15
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/betting_limits.html.tt:15
 msgid "Maximum account cash balance"
-msgstr "ご口座上限金額"
+msgstr "口座預託額の上限額"
 
 #. ($client->currency, $self_exclusion->max_balance)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:48
 msgid "Maximum account cash balance is currently set to <strong>%1 %2</strong>"
-msgstr "現在のご口座上限金額は、<strong>%1 %2</strong>です。"
+msgstr "現在の口座預託額の上限額は、<strong>%1 %2</strong>です。"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:221
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:69
 msgid "Maximum aggregate contract purchases over a 30-day period."
-msgstr "30日間最大契約購入数"
+msgstr "30日の最大取引数量 (半角)"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:169
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:49
 msgid "Maximum aggregate contract purchases over a 7-day period."
-msgstr "7日間の最大契約購入数"
+msgstr "7日間の最大取引数量 (半角)"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:117
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:29
 msgid "Maximum aggregate contract purchases per day."
-msgstr "一日あたりで購入可能なトレードの最高総額"
+msgstr "1日あたりの最大取引数量 (半角)"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:247
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:79
 msgid "Maximum aggregate loss over a 30-day period."
-msgstr "30日間最大損失"
+msgstr "30日間最大損失 (半角)"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:195
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:59
 msgid "Maximum aggregate loss over a 7-day period."
-msgstr "7日間の最大損失"
+msgstr "7日間の最大損失 (半角)"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:143
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:238
@@ -7294,7 +7294,7 @@ msgstr "１日あたりのトレード購入可能金額"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:85
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/betting_limits.html.tt:11
 msgid "Maximum number of open positions"
-msgstr "保有可能なオープンポジションの総数"
+msgstr "最大保有ポジション"
 
 #. ($self_exclusion->max_open_bets)
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:73
@@ -7874,7 +7874,7 @@ msgstr "ホワイトレーベルの公開後、そのホワイトレーベル経
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:91
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:19
 msgid "Once this limit is reached, you may no longer deposit."
-msgstr "上限額に達した際はご入金して頂くことが不可能になります。"
+msgstr "上限額に達した場合、入金して頂くことができません。(半角)"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/payment_agent.html.haml:1
 msgid "Once we receive your application, one of our affiliate managers will contact you to follow up with the next steps in the application process (this will include asking you to submit several documents)."
@@ -8573,7 +8573,7 @@ msgstr "半角で数値をご入力して下さい。"
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:329
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:108
 msgid "Please enter date in the format YYYY-MM-DD."
-msgstr "日付を年-月-年（YYYY-MM-DD）の順で半角で入力して下さい。"
+msgstr "ご希望の日付を選択して下さい。"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:998
 msgid "Please enter the Login ID to transfer funds."
@@ -9868,7 +9868,7 @@ msgstr "セッション期間として現在、<strong>%1分</strong>が指定�
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:275
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:94
 msgid "Session duration limit, in minutes"
-msgstr "最高サイト滞在時間（分単位でご登録して下さい。）"
+msgstr "取引継続時間の制限(分単位)"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check.html.haml:1
 msgid "Session duration:"
@@ -12362,7 +12362,10 @@ msgstr "セッション最後の%1でのトレードのお取り扱いを中止�
 #. (request.url_for("contact"))
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:4
 msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact <a href=\"%1\">customer support</a>."
-msgstr "金融マーケットでのお取引は、中毒的になる場合があります。下記のウェブサイトへの参加制限にご記入いただくか、サインのをしたレターまたはファックスでカスタマーサポートチームまで御送付ください。一度設定されますと、制限を厳しくする変更だけが可能になります。制限がなされて、制限の解除ができなくなり、変更ができなくなった自己制限日を除く7日後にお取引制限の解除または制限を緩くできます。制限の解除または緩和をご希望の場合は、<a href=\"%1\">カスタマーサポート</a>までご連絡ください。"
+msgstr ""
+"お客様の過度な取引を防止するため、お客様自身で下記の該当する取引上限設定を行えます。\n"
+"自動ログアウトと任意でログインしない以外の項目は1度設定されますと、次回からは設定した数値より低い数値以外は変更ができませんのでご注意下さい。制限の解除ま"
+"たは緩和をご希望の場合は、<a href=\"%1\">カスタマーサポート</a>までご連絡ください。"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:190
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
@@ -12795,7 +12798,7 @@ msgstr "取引履歴を表示"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:56
 msgid "View your trading and withdrawal limits."
-msgstr "お取引制限と出金制限を確認する"
+msgstr "取引制限と出金制限を確認する"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:64
 msgid "View your trading profit/loss."
@@ -13469,7 +13472,7 @@ msgstr "ご出金"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:241
 msgid "Withdrawal Limits"
-msgstr "ご出金限度額"
+msgstr "出金限度額"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/withdrawal_request.html.haml:1
 msgid "Withdrawal Verification"
@@ -13951,7 +13954,7 @@ msgstr "リスク開示通知と当社が提供する、または将来お客様
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:303
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:98
 msgid "You will be automatically logged out after such time."
-msgstr "設定時間を過ぎると自動的にログオフされます。"
+msgstr "設定時間を過ぎると自動的にログアウトします。（例）　10分の場合、10と記入して下さい。(半角)"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/main.html.tt:54
 msgid "You will be provided with all the tools, to turn your traffic into a lucrative revenue stream"
@@ -14752,7 +14755,7 @@ msgstr "ウェブサイト"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:945
 msgid "withdrawal limits"
-msgstr "ご出金限度額"
+msgstr "出金限度額"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:105
 msgid "year"
