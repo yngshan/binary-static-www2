@@ -37,7 +37,7 @@ var PricingTable = (function() {
     render: function render() {
       var price = parseInt(this.props.price);
       var inactive = this.props.is_active && price !== 1000 && price !== 0 ? '' : 'inactive';
-      var barrierArr = this.props.barrier ? this.props.barrier.split(/ \- / ).reverse() : [];
+      var barrierArr = this.props.barrier ? this.props.barrier.split(/ \- /).reverse() : [];
       var props = this.props;
 
       return React.createElement(
@@ -62,7 +62,7 @@ var PricingTable = (function() {
               onClick: function() {
                 buyContract({
                   price: price,
-                  amount: props.units,
+                  units: props.units,
                   contractType: props.contractType,
                   symbol: props.symbol,
                   dateExpiry: props.dateExpiry,
@@ -144,7 +144,7 @@ var PricingTable = (function() {
             dyn: dyn,
             barrier: barrier,
             contractType: type,
-            amount: this.props.units,
+            units: this.props.units,
             symbol: this.props.symbol,
             dateExpiry: this.props.dateExpiry,
           });
@@ -155,7 +155,7 @@ var PricingTable = (function() {
             dyn: dyn,
             barrier: barrier,
             contractType: type,
-            amount: this.props.units,
+            units: this.props.units,
             symbol: this.props.symbol,
             dateExpiry: this.props.dateExpiry,
           });
@@ -167,7 +167,7 @@ var PricingTable = (function() {
             dyn: dyn,
             barrier: barrier,
             contractType: type,
-            amount: this.props.units,
+            units: this.props.units,
             symbol: this.props.symbol,
             dateExpiry: this.props.dateExpiry,
           });
@@ -178,7 +178,7 @@ var PricingTable = (function() {
             dyn: dyn,
             barrier: barrier,
             contractType: type,
-            amount: this.props.units,
+            units: this.props.units,
             symbol: this.props.symbol,
             dateExpiry: this.props.dateExpiry,
           });
@@ -219,7 +219,7 @@ var PricingTable = (function() {
           barrier: barrier,
           values: this.props.prices[barrier],
           prev_values: (this.props.prev_prices !== undefined ? this.props.prev_prices[barrier] : undefined),
-          amount: this.props.units,
+          units: this.props.units,
           dateExpiry: this.props.dateExpiry,
           symbol: this.props.symbol,
         }));
@@ -255,9 +255,9 @@ var PricingTable = (function() {
   function buyContract(params) {
     var buyContractParams = {
       buy: 1,
-      price: params.price*1000,
+      price: params.price * params.units,
       parameters: {
-        amount: params.units*1000,
+        amount: params.units * 1000,
         basis: 'payout',
         contract_type: params.contractType,
         currency: 'JPY',
@@ -279,7 +279,9 @@ var PricingTable = (function() {
   function handleResponse(res) {
     var echo_req = res.echo_req;
 
-    if (state.category === echo_req.contract_category &&
+    if(!document.getElementById('pricing_table')){
+      processForgetTables();
+    } else if (state.category === echo_req.contract_category &&
       state.dateExpiry === echo_req.date_expiry &&
       state.symbol === echo_req.symbol) {
 
@@ -331,10 +333,10 @@ var PricingTable = (function() {
     }
   }
 
-  function processBuy(res){
+  function processBuy(res) {
     $('#trading_init_progress').hide();
 
-    if(res.error){
+    if (res.error) {
       alert(res.error.message);
     } else {
       var button = $('<div />', { contract_id: res.buy.contract_id }).get(0);
@@ -345,7 +347,9 @@ var PricingTable = (function() {
   return {
     sendRequest: sendRequest,
     handleResponse: handleResponse,
-    state: state,
+    getState: function() {
+      return state;
+    },
     processBuy: processBuy
   };
 })();

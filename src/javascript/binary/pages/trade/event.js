@@ -564,8 +564,10 @@ var TradingEvents = (function () {
         }
 
         var $japanUnit = $('#japan_unit');
+        var japanState = PricingTable.getState();
         $japanUnit.keyup(function(e){
             var value = Math.abs(parseInt(e.target.value, 10)) || 1;
+            japanState.units = value;
             $('#japan_payout').text('¥'+ parseInt(value)*1000);
         });
 

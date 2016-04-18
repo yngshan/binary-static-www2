@@ -24,7 +24,7 @@ var TradingAnalysis = (function() {
             '<div class="tab-menu">' +
               '<div class="tab-menu-wrap grd-container">' +
                 '<ul id="betsBottomPage" class="tm-ul">' +
-                  '<li id="tab_portfolio" class="tm-li first">' +
+                  '<li id="tab_portfolio" class="tm-li invisible first">' +
                     '<a href="#tab_portfolio" class="tm-a first">' + text.localize('Portfolio') + '</a>' +
                   '</li>' +
                   '<li id="tab_graph" class="tm-li first">' +
