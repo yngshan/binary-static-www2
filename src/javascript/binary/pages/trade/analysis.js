@@ -24,6 +24,9 @@ var TradingAnalysis = (function() {
             '<div class="tab-menu">' +
               '<div class="tab-menu-wrap grd-container">' +
                 '<ul id="betsBottomPage" class="tm-ul">' +
+                  '<li id="tab_portfolio" class="tm-li invisible first">' +
+                    '<a href="#tab_portfolio" class="tm-a first">' + text.localize('Portfolio') + '</a>' +
+                  '</li>' +
                   '<li id="tab_graph" class="tm-li first">' +
                     '<a href="#tab_graph" class="tm-a first">' + text.localize('Chart') + '</a>' +
                   '</li>' +
@@ -44,6 +47,7 @@ var TradingAnalysis = (function() {
             '</div>' +
             '<div class="tab-content grd-container">' +
               '<div class="tab-content-wrapper" id="bet_bottom_content">' +
+                '<div id="tab_portfolio-content" class="toggle-content invisible "></div>' +
                 '<div id="tab_graph-content" class="toggle-content invisible">' +
                   '<div id="trade_live_chart"></div>' +
                 '</div>' +
@@ -102,10 +106,14 @@ var TradingAnalysis = (function() {
         toggleActiveAnalysisTabs();
 
         tab_japan_info = new BetAnalysis.JapanInfo();
+        BetAnalysis.Portfolio.init();
 
-        if (currentTab === 'tab_japan_info') {
+        if(currentTab === 'tab_portfolio'){
+            BetAnalysis.Portfolio.show();
+        } else if (currentTab === 'tab_japan_info') {
             tab_japan_info.show();
         } else {
+            BetAnalysis.Portfolio.hide();
             tab_japan_info.hide();
             if (currentTab === 'tab_graph') {
                 if (document.getElementById('underlying')){
@@ -195,6 +203,9 @@ var TradingAnalysis = (function() {
         },
         japan_info: function() {
             return tab_japan_info;
+        },
+        tab_portfolio: function() {
+            return tab_portfolio;
         },
         getActiveTab: getActiveTab
     };

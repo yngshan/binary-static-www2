@@ -25,6 +25,9 @@ var Message = (function () {
             } else if (type === 'proposal') {
                 processProposal(response);
             } else if (type === 'buy') {
+                if(typeof is_japan === 'function'){
+                    PricingTable.processBuy(response);
+                }
                 Purchase.display(response);
             } else if (type === 'tick') {
                 processTick(response);
@@ -40,8 +43,18 @@ var Message = (function () {
                 StatementWS.statementHandler(response);
             } else if (type === 'profit_table'){
                 ProfitTableWS.profitTableHandler(response);
+            } else if (type === 'pricing_table'){
+                PricingTable.handleResponse(response);
             } else if (type === 'error') {
                 $(".error-msg").text(response.error.message);
+            } else if(type === 'balance'){
+                PortfolioWS.updateBalance(response);
+            } else if(type === 'portfolio'){
+                PortfolioWS.updatePortfolio(response);
+            } else if(type === 'proposal_open_contract'){
+                PortfolioWS.updateIndicative(response);
+            } else if(type === 'transaction'){
+                PortfolioWS.transactionResponseHandler(response);
             }
         } else {
 
