@@ -173,6 +173,12 @@ function processContractForm() {
     if (make_price_request >= 0) {
         processPriceRequest();
     }
+
+    if(Defaults.get('formname') === 'spreads') {
+        Defaults.remove('expiry_type', 'duration_amount', 'duration_units', 'expiry_date', 'expiry_time', 'amount', 'amount_type');
+    } else {
+        Defaults.remove('amount_per_point', 'stop_type', 'stop_loss', 'stop_profit');
+    }
 }
 
 function displayPrediction() {
@@ -222,7 +228,6 @@ function displaySpreads() {
             else Defaults.set('stop_loss', document.getElementById('stop_loss').value);
         if (Defaults.get('stop_profit')) document.getElementById('stop_profit').value = Defaults.get('stop_profit');
             else Defaults.set('stop_profit', document.getElementById('stop_profit').value);
-        Defaults.remove('expiry_type', 'duration_amount', 'duration_units', 'expiry_date', 'expiry_time');
     } else {
         amountPerPointLabel.hide();
         amountPerPoint.hide();
@@ -230,7 +235,6 @@ function displaySpreads() {
         expiryTypeRow.show();
         amountType.show();
         amount.show();
-        Defaults.remove('amount_per_point', 'stop_type', 'stop_loss', 'stop_profit');
     }
 }
 

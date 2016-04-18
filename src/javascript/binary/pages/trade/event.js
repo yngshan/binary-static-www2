@@ -22,7 +22,7 @@ var TradingEvents = (function () {
             Durations.setTime(Defaults.get('expiry_time') || end_time.format("hh:mm"));
             Durations.selectEndDate(Defaults.get('expiry_date') || end_time.format("YYYY-MM-DD"));
         }
-
+        Durations.display();
         return make_price_request;
     };
 
@@ -35,8 +35,8 @@ var TradingEvents = (function () {
         var make_price_request = 0;
         if(value === 'endtime'){
             Durations.displayEndTime();
-            if(sessionStorage.getItem('end_date') || Defaults.get('expiry_date')){
-                Durations.selectEndDate(sessionStorage.getItem('end_date') || Defaults.get('expiry_date'));
+            if(Defaults.get('expiry_date')){
+                Durations.selectEndDate(Defaults.get('expiry_date'));
                 make_price_request = -1;
             }
             Defaults.remove('duration_units', 'duration_amount');
@@ -208,6 +208,7 @@ var TradingEvents = (function () {
         var durationUnitElement = document.getElementById('duration_units');
         if (durationUnitElement) {
             durationUnitElement.addEventListener('change', function (e) {
+                Defaults.remove('barrier', 'barrier_high', 'barrier_low');
                 onDurationUnitChange(e.target.value);
                 processPriceRequest();
             });
@@ -427,7 +428,7 @@ var TradingEvents = (function () {
                 if (isStandardFloat(e.target.value)) {
                     e.target.value = parseFloat(e.target.value).toFixed(2);
                 }
-                Defaults.set('amount_per_point',e.target.value);
+                Defaults.set('amount_per_point', e.target.value);
                 processPriceRequest();
                 submitForm(document.getElementById('websocket_form'));
             }));
@@ -457,7 +458,7 @@ var TradingEvents = (function () {
                 if (isStandardFloat(e.target.value)) {
                     e.target.value = parseFloat(e.target.value).toFixed(2);
                 }
-                Defaults.set('stop_loss',e.target.value);
+                Defaults.set('stop_loss', e.target.value);
                 processPriceRequest();
                 submitForm(document.getElementById('websocket_form'));
             }));
@@ -472,7 +473,7 @@ var TradingEvents = (function () {
                 if (isStandardFloat(e.target.value)) {
                     e.target.value = parseFloat(e.target.value).toFixed(2);
                 }
-                Defaults.set('stop_profit',e.target.value);
+                Defaults.set('stop_profit', e.target.value);
                 processPriceRequest();
                 submitForm(document.getElementById('websocket_form'));
             }));

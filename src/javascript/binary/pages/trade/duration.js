@@ -18,7 +18,7 @@ var Durations = (function(){
 
     var displayDurations = function() {
         var startType;
-        if(Defaults.get('date_start') && StartDates.displayed() && moment(Defaults.get('date_start')*1000).isAfter(moment())) {
+        if(Defaults.get('date_start') !== 'now' && StartDates.displayed() && moment(Defaults.get('date_start')*1000).isAfter(moment())) {
             startType = 'forward';
         }
         else {
@@ -220,7 +220,9 @@ var Durations = (function(){
         var unit = document.getElementById('duration_units');
         var unitMinValue = unit.options[unit.selectedIndex].getAttribute('data-minimum'),
             unitValue = Defaults.get('duration_amount') || unitMinValue;
-        unit.value = Defaults.get('duration_units') || unit.value;
+        unit.value = Defaults.get('duration_units') &&
+            document.querySelectorAll('select[id="duration_units"] [value="' + Defaults.get('duration_units') + '"]').length ?
+                Defaults.get('duration_units') : unit.value;
         document.getElementById('duration_minimum').textContent = unitMinValue;
         if(selected_duration.amount && selected_duration.unit > unitValue){
             unitValue = selected_duration.amount;
@@ -352,7 +354,6 @@ var Durations = (function(){
             processPriceRequest();
         }
 
-        sessionStorage.setItem('end_date',end_date);
         Barriers.display();
     };
 
