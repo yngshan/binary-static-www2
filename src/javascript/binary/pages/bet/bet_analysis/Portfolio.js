@@ -1,11 +1,15 @@
 BetAnalysis.Portfolio = (function() {
 
+  var $portfolio;
+
   function init() {
     if (typeof is_japan === 'function') {
       var $container = $('#tab_portfolio-content');
-      var $portfolio = $('#portfolio');
+      $portfolio = $portfolio || $('#portfolio');
 
-      if ($portfolio && $('#portfolio').parent().get(0).id !== 'tab_portfolio-content') {
+      if ($portfolio &&
+        (!$('#portfolio').parent().length ||
+          $('#portfolio').parent().get(0).id !== 'tab_portfolio-content')) {
         $portfolio.detach();
         $container.append($portfolio);
       }
@@ -36,3 +40,4 @@ BetAnalysis.Portfolio = (function() {
     hide: hide,
   };
 })();
+
