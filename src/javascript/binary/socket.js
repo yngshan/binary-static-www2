@@ -136,8 +136,6 @@ function BinarySocketClass() {
                         ViewPopupWS.dispatch(response);
                       } else if (passthrough.dispatch_to === 'ViewChartWS') {
                         Highchart.dispatch(response);
-                      } else if (passthrough.dispatch_to === 'ViewTickChartWS') {
-                        TickChart.dispatch(response);
                       } else if (passthrough.dispatch_to === 'ViewTickDisplayWS') {
                         WSTickDisplay.dispatch(response);
                       }
