@@ -19,7 +19,7 @@ var ProfitTableUI = (function(){
 
         header[6] = header[6] + (TUser.get().currency ? " (" + TUser.get().currency + ")" : "");
 
-        var footer = [Content.localize().textTotalProfitLoss, "", "", "", "", "", ""];
+        var footer = [Content.localize().textTotalProfitLoss, "", "", "", "", "", "", ""];
 
         var data = [];
         var metadata = {
@@ -80,7 +80,7 @@ var ProfitTableUI = (function(){
 
         var plType = (pl >= 0) ? "profit" : "loss";
 
-        var data = [buyDate, ref, '', buyPrice, sellDate, sellPrice, pl];
+        var data = [buyDate, ref, '', buyPrice, sellDate, sellPrice, pl, ''];
         var $row = Table.createFlexTableRow(data, cols, "data");
 
         $row.children(".buy-date").addClass("pre");

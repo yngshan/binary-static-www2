@@ -54,7 +54,7 @@ var StatementUI = (function(){
 
         var creditDebitType = (parseFloat(amount) >= 0) ? "profit" : "loss";
 
-        var $statementRow = Table.createFlexTableRow([date, ref, action, '', amount, balance], columns, "data");
+        var $statementRow = Table.createFlexTableRow([date, ref, action, '', amount, balance, ''], columns, "data");
         $statementRow.children(".credit").addClass(creditDebitType);
         $statementRow.children(".date").addClass("pre");
         $statementRow.children(".desc").html(desc + "<br>");
