@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: I 18N\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-18 06:00+0000\n"
+"PO-Revision-Date: 2016-04-18 12:47+0000\n"
 "Last-Translator: Jutawan <bubbleblythe@gmail.com>\n"
 "Language-Team: Thai <https://hosted.weblate.org/projects/binary/static/th/>\n"
 "Language: th\n"
@@ -556,13 +556,13 @@ msgstr "3. เลือกวิธีการที่ต้องการใ
 msgid "30-50 million JPY"
 msgstr "30-50 ล้านเยน"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:226
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:228
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:75
 #, fuzzy
 msgid "30-day limit on losses"
 msgstr "วงเงินของส่วนขาดทุนใน 30 วัน"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:200
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:202
 #, fuzzy
 msgid "30-day turnover limit"
 msgstr "วงเงินซื้อขาย 30 วัน"
@@ -659,13 +659,13 @@ msgstr "วงเงิน 7 วัน ส่วนขาดทุนปัจ�
 msgid "7-Day turnover limit is currently set to <strong>%1 %2</strong>"
 msgstr "วงเงินซื้อขาย 7 วัน ปัจจุบัน คือ <strong>%1 %2</strong>"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:174
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:176
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:55
 #, fuzzy
 msgid "7-day limit on losses"
 msgstr "วงเงิน 7 วัน ส่วนขาดทุน"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:148
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:150
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:45
 #, fuzzy
 msgid "7-day turnover limit"
@@ -1291,6 +1291,10 @@ msgstr "API โทเค่น"
 msgid "API token for third party applications."
 msgstr "API โทเค่นสำหรับแอพพลิเคชันอื่น"
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:708
+msgid "AUTHORISED PAYMENT AGENT?"
+msgstr ""
+
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Ability to work in a multicultural and international environment"
 msgstr "สามารถทำงานในสภาพแวดล้อมที่มีความหลากหลายทางวัฒนธรรม เชื้อชาติ และภาษา ในระดับสากล"
@@ -1849,8 +1853,8 @@ msgstr "สินทรัพย์"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:154
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:130
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2752
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2801
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2645
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2694
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:81
@@ -2440,7 +2444,7 @@ msgid "Buy Price"
 msgstr "ราคาซื้อ"
 
 #. (to_monetary_number_format($stake_min, 1)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1633
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1614
 msgid "Buy price must be between %1 and %2."
 msgstr "ราคาซื้อต้องมีค่าระหว่าง %1 และ %2"
 
@@ -2840,6 +2844,23 @@ msgstr ""
 msgid "Collaborate with members of our IT Group to identify innovative ways to improve our website’s capability and performance"
 msgstr ""
 
+#. (2000)
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:673
+msgid "Comment must not exceed %1 characters. Please resubmit."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:617
+#, fuzzy
+#| msgid "Commission on deposits"
+msgid "Commission (%) you want to take on deposits"
+msgstr "คอมมิชชั่นเมื่อฝากเงิน"
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:634
+#, fuzzy
+#| msgid "Commission on withdrawals"
+msgid "Commission (%) you want to take on withdrawals"
+msgstr "คอมมิชชั่นเมื่อถอนเงิน"
+
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/commission_table.html.tt:5
 msgid "Commission Rates"
 msgstr "อัตราคอมมิชชั่น"
@@ -3051,7 +3072,7 @@ msgid "Contract barrier must be positive."
 msgstr "Barrier ของสัญญาต้องเป็นค่าบวก"
 
 #. ($end_of_bo->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2878
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2771
 msgid "Contract can not expire during the end-of-year holiday period. Select an expiry date after %1."
 msgstr "สัญญาไม่สามารถหมดอายุในช่วงวันหยุดปลายปี ระบุวันหมดอายุหลังจาก %1"
 
@@ -3068,7 +3089,7 @@ msgstr "ประเภทของสัญญา %1 ไม่ถูกต้�
 msgid "Contract expired"
 msgstr "สัญญาหมดอายุ"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2574
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2467
 msgid "Contract has already expired."
 msgstr "สัญญาหมดอายุลงแล้ว"
 
@@ -3076,21 +3097,16 @@ msgstr "สัญญาหมดอายุลงแล้ว"
 msgid "Contract is not started yet"
 msgstr "สัญญายังไม่เริ่ม"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1630
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1611
 msgid "Contract market price is too close to final payout."
 msgstr "ราคาตลาดของสัญญาใกล้เคียงกับการชำระเงินสุดท้าย"
 
 #. ($eod_blackout_expiry->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2616
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2509
 msgid "Contract may not expire within the last %1 of trading."
 msgstr "สัญญายังไม่หมดอายุภายใน %1 สุดท้ายของการซื้อขาย"
 
-#. ($minimum_hold->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2443
-msgid "Contract must be held for %1 before resale is offered."
-msgstr "สัญญาต้องถือสำหรับ %1 ก่อนการจำหน่ายอีกครั้ง"
-
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2586
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2479
 msgid "Contract must expire during trading hours."
 msgstr "สัญญาต้องหมดอายุระหว่างชั่วโมงการซื้อขาย"
 
@@ -3130,12 +3146,12 @@ msgid "Contracts may not expire on a weekend; therefore the expiry date of a con
 msgstr "สัญญาจะไม่หมดอายุในช่วงสุดสัปดาห์ ดังนั้นวันหมดอายุบนสัญญาต้องระบุไปที่วันจันทร์เมื่อวันหมดอายุสัญญาตกในวันเสาร์ หรือ วันอาทิตย์"
 
 #. ($underlying->translated_display_name()
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2649
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2542
 msgid "Contracts on %1 with duration more than 24 hours must expire at the end of a trading day."
 msgstr "สัญญา %1 ที่มีระยะเวลามากกว่า 24 ชั่วโมงจะต้องหมดอายุเมื่อสิ้นวัน สิ้นสุดเวลาซื้อขาย"
 
 #. ($underlying->translated_display_name()
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2603
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2496
 msgid "Contracts on %1 with durations under 24 hours must expire on the same trading day."
 msgstr "สัญญา %1 ที่มีระยะเวลาน้อยกว่า 24 ชั่วโมงจะต้องหมดอายุภายในวันที่ซื้อขาย"
 
@@ -3153,7 +3169,7 @@ msgstr "สัญญาถูกจำหน่าย"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/spreads.html.tt:9
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/staysinout.html.tt:10
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/touchnotouch.html.tt:11
-msgid "Contracts will be refunded at the purchase price if the following conditions occur: (1) no tick occurs within ​the ​5 minutes ​after​ the start time; (2) no tick occurs within ​the ​5 minutes ​before the end time; (3) there are less than 2 ticks between the start and end times, or (4) for contracts of tick duration, if the contract doesn't end within 5 minutes."
+msgid "Contracts will be refunded at the purchase price if the following conditions occur: (1) there are less than 2 ticks between the start and end times, or (2) for contracts of tick duration, if the contract doesn't end within 5 minutes."
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:10
@@ -3331,7 +3347,7 @@ msgstr "สปอตปัจจุบัน"
 msgid "Current Spot Time"
 msgstr "เวลาปัจจุบันของสปอต"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2390
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2306
 msgid "Current market price is 0."
 msgstr "ราคาตลาดปัจจุบันเป็น 0"
 
@@ -3373,7 +3389,7 @@ msgstr "รายวัน"
 msgid "Daily Report"
 msgstr "รายงานรายวัน"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:122
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:124
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:233
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:35
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:232
@@ -3385,7 +3401,7 @@ msgstr "วงเงินขาดทุนต่อวัน"
 msgid "Daily limit on losses is currently set to <strong>%1 %2</strong>"
 msgstr "วงเงินขาดทุนต่อวันปัจจุบัน คือ <strong>%1 %2</strong>"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:96
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:98
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:25
 msgid "Daily turnover limit"
 msgstr "วงเงินซื้อขายต่อวัน"
@@ -3990,7 +4006,7 @@ msgstr "บัญชีไม่เคลื่อนไหว และ บั�
 msgid "Dot Chart"
 msgstr "แผนภูมิจุด"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1425
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1418
 msgid "Due to regulatory requirements, you are required to authenticate your account in order to continue trading."
 msgstr "ตามข้อกำหนดทางกฎหมาย ท่านต้องยืนยันตัวตนกับบัญชีของท่านเพื่อการเทรดอย่างต่อเนื่อง"
 
@@ -4335,7 +4351,7 @@ msgstr "มีทักษะภาษาอังกฤษดีเยี่ย
 msgid "Exceptional organizational skills; detail orientation and a strong work ethic"
 msgstr "ทักษะการทำงานเป็นเยี่ยม สนใจในรายละเอียด และมีจริยธรรมสูง"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:308
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:310
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:104
 msgid "Exclude me from the website until"
 msgstr "พักฉันจากเว็บกระทั่ง"
@@ -4344,19 +4360,19 @@ msgstr "พักฉันจากเว็บกระทั่ง"
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "เวลาพักไม่เกิน 5 ปี"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:431
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:433
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:824
 msgid "Exclude time cannot be for more than five years."
 msgstr "เวลาพักไม่เกิน 5 ปี"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:376
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:426
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:428
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:819
 msgid "Exclude time cannot be less than 6 months."
 msgstr "เวลาพักไม่น้อยกว่า 6 เดือน"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:375
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:421
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:423
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:814
 msgid "Exclude time must be after today."
 msgstr "เวลาพักต้องเริ่มพรุ่งนี้"
@@ -4471,7 +4487,7 @@ msgstr "เวลาที่หมดอายุ"
 msgid "Expiry price"
 msgstr "ราคาที่หมดอายุ"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2458
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2351
 msgid "Expiry time cannot be in the past."
 msgstr "เวลาที่หมดอายุไม่สามารถเป็นเวลาในอดีต"
 
@@ -5555,7 +5571,7 @@ msgstr ""
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1515
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1508
 msgid "In order for you to place contracts, we need to know your Residence (Country). Please update your settings."
 msgstr ""
 
@@ -5626,6 +5642,10 @@ msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "In this newly created role, to be based on our offices in Cyberjaya, Malaysia, you will be responsible for:"
+msgstr ""
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:484
+msgid "In what country do you want to offer your service"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:192
@@ -5800,7 +5820,7 @@ msgstr "ความเสี่ยงของการซื้อขายท
 msgid "Interpretation"
 msgstr "การแปลความ"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2174
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2115
 msgid "Intraday contracts may not cross market open."
 msgstr "สัญญาระหว่างวันอาจจะไม่ทำกำไรขณะตลาดเปิด"
 
@@ -5880,18 +5900,21 @@ msgstr ""
 msgid "Invalid request"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2371
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2287
 msgid "Invalid stake"
 msgstr "วางเงินไม่ถูกต้อง"
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:577
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1471
 msgid "Invalid telephone number (too long)."
 msgstr "หมายเลขโทรศัพท์ไม่ถูกต้อง (ยาวเกินไป)"
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:570
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1466
 msgid "Invalid telephone number (too short)."
 msgstr "หมายเลขโทรศัพท์ไม่ถูกต้อง (สั้นเกินไป)"
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:582
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1476
 msgid "Invalid telephone number."
 msgstr "หมายเลขโทรศัพท์ไม่ถูกต้อง"
@@ -5934,31 +5957,31 @@ msgstr "เงินปันผลและการลงทุน"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:79
 msgid "Investor Compensation Scheme"
-msgstr ""
+msgstr "แผนผลประโยชน์ของนักลงทุน"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Involved in evaluation of regulatory compliance and risk management. Work with the Head of Departments to improve business processes."
-msgstr ""
+msgstr "เกี่ยวข้องในการประเมินการปฏิบัติตามกฎเกณฑ์และการบริหารความเสี่ยง ทำงานกับหัวหน้าแผนกเพื่อปรับปรุงกระบวนการทางธุรกิจ"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/contact.html.haml:1
 msgid "Ireland"
-msgstr ""
+msgstr "ประเทศไอร์แลนด์"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/beginners_faq.html.haml:1
 msgid "Is it possible to deposit the same funds through different payment methods?"
-msgstr ""
+msgstr "เป็นไปได้ไหมที่จะฝากเงินผ่านช่องทางรับชำระเงินที่ต่างกัน ?"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:45
 msgid "Is there a cost for joining?"
-msgstr ""
+msgstr "มีค่าใช้จ่ายไหมในการเข้าร่วม ?"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/contact.html.haml:1
 msgid "Isle of Man"
-msgstr ""
+msgstr "เกาะ Isle of Man"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:36
 msgid "It is important that you monitor all of your positions closely. It is your responsibility to monitor your positions and during the period that you have any open Contracts, you should always have the ability to access your Accounts."
-msgstr ""
+msgstr "มันเป็นสิ่งสำคัญที่ท่านพึงสังเกตการณ์อย่างใกล้ชิด มันเป็นความรับผิดชอบในการดูแลหน้าที่ในระหว่างการเปิดสัญญาใดๆ ท่านควรจะหมั่นตรวจสอบบัญชีของท่าน"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:5
 msgid "It is important that you read and understand the contents of these terms and conditions. By indicating your acceptance of these terms and conditions and continuing with your application to join our affiliate program, you are agreeing (subject to our approval of your application) to the terms and conditions below. If you do not agree with the terms and conditions (or are not authorised to do so) you should not continue with your application. You should be the owner of, or acting on behalf of the owner of the website, that is signing up for this affiliate program."
@@ -5966,334 +5989,335 @@ msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:25
 msgid "It is important that you refer your disputes to the appropriate ADR for the claims to be valid."
-msgstr ""
+msgstr "มันเป็นสิ่งสำคัญที่ท่านอ้างถึงข้อคัดค้าน หรือ ข้อโต้แย้งของท่านเพื่อ ADR ที่เหมาะสมในการอ้างถึงความถูกต้อง"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:98
 msgid "It is prohibited to sell, transfer and/or acquire accounts to/from other clients. Transfer of funds among other clients is also prohibited."
-msgstr ""
+msgstr "มันเป็นข้อห้ามในการขาย โอน และ/หรือ ได้มาของบัญชี ไปยัง/จาก ลูกค้าอื่นๆ การโอนเงินจากลูกค้าอื่นๆ ล้วนเป็นข้อห้ามเช่นกัน"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "It is sometimes possible to sell an option before the expiry of a trade, but only if a fair price can be determined. If this option is available, you will see a blue 'Sell' button next to your trade in the portfolio."
-msgstr ""
+msgstr "ในบางครั้งการจำหน่ายออปชั่นก่อนวันหมดอายุเมื่อมีราคาที่เหมาะสมเป็นสิ่งที่เกิดขึ้นได้ และหากมีออปชั่นในสถานะดังกล่าว ท่านจะเห็นปุ่ม \"ขาย\" สีน้ำเงิน อยู่ถัดไปจากรายการซื้อขายในพอร์ตโฟลิโอ"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:7
 msgid "It is the responsibility of each Client to read and understand this legal notice and the terms and conditions pursuant to which an acquisition of financial contracts via this site is governed."
-msgstr ""
+msgstr "มันเป็นความรับผิดชอบของลูกค้าแต่ละรายที่จะอ่านและทำความเข้าใจประกาศกฎเกณฑ์ต่างๆ ข้อตกลงและเงื่อนไข ตามการได้มาของสัญญาทางการเงินผ่านช่องทางนี้เพื่อเป็นหลักที่ถูกต้อง"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/conflicts_policy.html.tt:8
 msgid "It is understood that Binary Group companies, as trading counterparty, have an interest, relationship or arrangement that is material in relation to any trade effected on behalf of you and it is agreed that any company so interested shall be entitled to retain any benefit or profit received and shall not be liable to account therefore to you by reason only of such conflict."
-msgstr ""
+msgstr "เป็นที่ทราบดีว่า กลุ่มบริษัทในเครือ Binary ในฐานะของกิจการค้าผลิตภัณฑ์ทางการเงินการลงทุนที่มีความสนใจ ความสัมพันธ์ และการจัดการ เกี่ยวกับการค้าใดๆ ที่มีผลในนามของท่าน และเป็นที่เห็นพ้องว่า บริษัทใดที่มีความสนใจในสิทธิ์ที่จะได้รับประโยชน์ หรือ กำไรใดๆ จะไม่รับผิดชอบต่อบัญชีของท่านด้วยเหตุผลของความขัดแย้งที่อาจจะเกิดขึ้น"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/promocode.html.tt:46
 msgid "It will be released to your account upon approval."
-msgstr ""
+msgstr "บัญชีของท่านจะได้รับการปล่อยลอยตัวเมื่อมีการอนุมัติ"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:230
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/betting_limits.html.tt:7
 msgid "Item"
-msgstr ""
+msgstr "รายการ"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "It’s time to expand. We set up a programming center in Cyberjaya – the Silicon Valley of Kuala Lumpur – to maintain and improve BetOnMarkets.com."
-msgstr ""
+msgstr "ถึงเวลาที่จะขยายอาณาจักร พวกเราได้ตั้งศูนย์ของระบบที่ไซเบอร์จายา สถานที่หนึ่งประดุจซิลิคอนวัลเลย์ของกัวลาลัมเปอร์ เพื่อดูแลและปรับปรุง BetOnMarkets.com"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:619
 msgid "J. Welles Wilder has developed the Average Directional Index - ADX to define trend force, whether the trend will develop further or will gradually weaken. The indicator allows to analyse tendencies of the market and to make trading decisions in the market forex."
-msgstr ""
+msgstr "J. Welles Wilder พัฒนาดัชนี ADX (Average Directional Index) เพื่อนิยามแนวโน้ม เมื่อแนวโน้มเริ่มอ่อนแรงทีละน้อย ดัชนีจะใช้วิเคราะห์แนวโน้มของตลาดและเพื่อเสนอแนวทางการตัดสินใจในตลาดฟอเร็กซ์"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/contact.html.haml:1
 msgid "JAPAN ONLY CONTACT TEXT"
-msgstr ""
+msgstr "ข้อความติดต่อ ประเทศญี่ปุ่นเท่านั้น"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:80
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1178
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:301
 msgid "Jan"
-msgstr ""
+msgstr "ม.ค."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:92
 msgid "January"
-msgstr ""
+msgstr "มกราคม"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/contact.html.haml:1
 msgid "Japan"
-msgstr ""
+msgstr "ประเทศญี่ปุ่น"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/contract.html.tt:6
 msgid "Japan website Download Text for Pre-contract Document"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น ดาวน์โหลดข้อความเพื่อเป็นร่างเอกสารสัญญา"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/terms_and_conditions.html.tt:6
 msgid "Japan website Download Text for Terms and Conditions Document"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น ดาวน์โหลดข้อความสำหรับเอกสารข้อตกลงและเงื่อนไข"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/antisocial_forces.html.tt:6
+#, fuzzy
 msgid "Japan website Eliminating Antisocial Forces List item 1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Eliminating Antisocial Forces List item 1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/antisocial_forces.html.tt:10
 msgid "Japan website Eliminating Antisocial Forces List item 2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Eliminating Antisocial Forces List item 2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/antisocial_forces.html.tt:14
 msgid "Japan website Eliminating Antisocial Forces List item 3"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Eliminating Antisocial Forces List item 3"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/antisocial_forces.html.tt:18
 msgid "Japan website Eliminating Antisocial Forces List item 4"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Eliminating Antisocial Forces List item 4"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/antisocial_forces.html.tt:22
 msgid "Japan website Eliminating Antisocial Forces List item 5"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Eliminating Antisocial Forces List item 5"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:15
 msgid "Japan website Ethics Code Bold list item 1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Ethics Code Bold list item 1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:21
 msgid "Japan website Ethics Code Bold list item 2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Ethics Code Bold list item 2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:27
 msgid "Japan website Ethics Code Bold list item 3"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Ethics Code Bold list item 3"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:33
 msgid "Japan website Ethics Code Bold list item 4"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Ethics Code Bold list item 4"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:39
 msgid "Japan website Ethics Code Bold list item 5"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Ethics Code Bold list item 5"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:45
 msgid "Japan website Ethics Code Bold list item 6"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Ethics Code Bold list item 6"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:57
 msgid "Japan website Ethics Code Bold list item 7"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Ethics Code Bold list item 7"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:66
 msgid "Japan website Ethics Code Bold list item 8"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Ethics Code Bold list item 8"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:75
 msgid "Japan website Ethics Code Bold list item 9"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Ethics Code Bold list item 9"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:17
 msgid "Japan website Ethics Code Explanation of item 1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:23
 msgid "Japan website Ethics Code Explanation of item 2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:29
 msgid "Japan website Ethics Code Explanation of item 3"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 3"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:35
 msgid "Japan website Ethics Code Explanation of item 4"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 4"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:41
 msgid "Japan website Ethics Code Explanation of item 5"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 5"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:47
 msgid "Japan website Ethics Code Explanation of item 6.1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 6.1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:50
 msgid "Japan website Ethics Code Explanation of item 6.2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 6.2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:53
 msgid "Japan website Ethics Code Explanation of item 6.3"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 6.3"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:59
 msgid "Japan website Ethics Code Explanation of item 7.1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 7.1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:62
 msgid "Japan website Ethics Code Explanation of item 7.2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 7.2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:68
 msgid "Japan website Ethics Code Explanation of item 8.1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 8.1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:71
 msgid "Japan website Ethics Code Explanation of item 8.2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 8.2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:77
 msgid "Japan website Ethics Code Explanation of item 9.1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 9.1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:80
 msgid "Japan website Ethics Code Explanation of item 9.2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณของรายการที่ 9.2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:4
 msgid "Japan website Ethics Code Paragraph 1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณ ย่อหน้าที่ 1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:7
 msgid "Japan website Ethics Code Paragraph 2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณ ย่อหน้าที่ 2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/ethics_code.html.tt:10
 msgid "Japan website Ethics Code Paragraph 3"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น คำอธิบายจรรยาบรรณ ย่อหน้าที่ 3"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:6
 msgid "Japan website Exclusion of Liability List item 1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:10
 msgid "Japan website Exclusion of Liability List item 1.1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:46
 msgid "Japan website Exclusion of Liability List item 1.10"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.10"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:50
 msgid "Japan website Exclusion of Liability List item 1.11"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.11"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:54
 msgid "Japan website Exclusion of Liability List item 1.12"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.12"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:58
 msgid "Japan website Exclusion of Liability List item 1.13"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.13"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:14
 msgid "Japan website Exclusion of Liability List item 1.2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:18
 msgid "Japan website Exclusion of Liability List item 1.3"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.3"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:22
 msgid "Japan website Exclusion of Liability List item 1.4"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.4"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:26
 msgid "Japan website Exclusion of Liability List item 1.5"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.5"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:30
 msgid "Japan website Exclusion of Liability List item 1.6"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.6"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:34
 msgid "Japan website Exclusion of Liability List item 1.7"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.7"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:38
 msgid "Japan website Exclusion of Liability List item 1.8"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.8"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:42
 msgid "Japan website Exclusion of Liability List item 1.9"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 1.9"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:64
 msgid "Japan website Exclusion of Liability List item 2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:68
 msgid "Japan website Exclusion of Liability List item 2.1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 2.1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/liability_exclusion.html.tt:72
 msgid "Japan website Exclusion of Liability List item 2.2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Exclusion of Liability List item 2.2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/risk_warning.html.tt:6
 msgid "Japan website General Risk Warning List item 1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น รายการคำเตือนความเสี่ยงทั่วไปรายการที่ 1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/risk_warning.html.tt:10
 msgid "Japan website General Risk Warning List item 2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น รายการคำเตือนความเสี่ยงทั่วไปรายการที่ 2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/risk_warning.html.tt:14
 msgid "Japan website General Risk Warning List item 3"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น รายการคำเตือนความเสี่ยงทั่วไปรายการที่ 3"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/risk_warning.html.tt:18
 msgid "Japan website General Risk Warning List item 4"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น รายการคำเตือนความเสี่ยงทั่วไปรายการที่ 4"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/risk_warning.html.tt:22
 msgid "Japan website General Risk Warning Paragraph 1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น รายการคำเตือนความเสี่ยงทั่วไป ย่อหน้าที่ 1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/risk_warning.html.tt:25
 msgid "Japan website General Risk Warning Paragraph 2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น รายการคำเตือนความเสี่ยงทั่วไป ย่อหน้าที่ 2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/risk_warning.html.tt:28
 msgid "Japan website General Risk Warning Paragraph 3"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น รายการคำเตือนความเสี่ยงทั่วไป ย่อหน้าที่ 3"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:9
 msgid "Japan website Investment Solicitation Policy Bold list item 1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Bold list รายการที่ 1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:63
 msgid "Japan website Investment Solicitation Policy Bold list item 10"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Bold list รายการที่ 10"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:69
 msgid "Japan website Investment Solicitation Policy Bold list item 11"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Bold list รายการที่ 11"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:15
 msgid "Japan website Investment Solicitation Policy Bold list item 2"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Bold list รายการที่ 2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:21
 msgid "Japan website Investment Solicitation Policy Bold list item 3"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Bold list รายการที่ 3"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:27
 msgid "Japan website Investment Solicitation Policy Bold list item 4"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Bold list รายการที่ 4"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:33
 msgid "Japan website Investment Solicitation Policy Bold list item 5"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Bold list รายการที่ 5"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:39
 msgid "Japan website Investment Solicitation Policy Bold list item 6"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Bold list รายการที่ 6"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:45
 msgid "Japan website Investment Solicitation Policy Bold list item 7"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Bold list รายการที่ 7"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:51
 msgid "Japan website Investment Solicitation Policy Bold list item 8"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Bold list รายการที่ 8"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:57
 msgid "Japan website Investment Solicitation Policy Bold list item 9"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Bold list รายการที่ 9"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:11
 msgid "Japan website Investment Solicitation Policy Explanation of item 1"
-msgstr ""
+msgstr "เว็บไซต์ของญี่ปุ่น Investment Solicitation Policy Explanation of item 1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/solicitation.html.tt:65
 msgid "Japan website Investment Solicitation Policy Explanation of item 10"
@@ -7125,7 +7149,7 @@ msgid "Market exit price"
 msgstr ""
 
 #. ($safer_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2828
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2721
 msgid "Market holiday during the contract period. Select an expiry date after %1."
 msgstr ""
 
@@ -7178,7 +7202,7 @@ msgid "Max:"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:234
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:70
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:72
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:15
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/betting_limits.html.tt:15
 msgid "Maximum account cash balance"
@@ -7189,32 +7213,32 @@ msgstr ""
 msgid "Maximum account cash balance is currently set to <strong>%1 %2</strong>"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:221
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:223
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:69
 msgid "Maximum aggregate contract purchases over a 30-day period."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:169
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:171
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:49
 msgid "Maximum aggregate contract purchases over a 7-day period."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:117
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:119
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:29
 msgid "Maximum aggregate contract purchases per day."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:247
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:249
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:79
 msgid "Maximum aggregate loss over a 30-day period."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:195
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:197
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:59
 msgid "Maximum aggregate loss over a 7-day period."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:143
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:145
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:238
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:39
 msgid "Maximum aggregate loss per day."
@@ -7231,7 +7255,7 @@ msgid "Maximum daily turnover"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:232
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:252
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:254
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:85
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/betting_limits.html.tt:11
 msgid "Maximum number of open positions"
@@ -7315,23 +7339,8 @@ msgstr ""
 msgid "Miss"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/AmericanExpiry.pm:78
-msgid "Missing market data for contract duration"
-msgstr ""
-
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2134
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2188
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2712
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2605
 msgid "Missing market data for contract period."
-msgstr ""
-
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1311
-msgid "Missing market data for entry spot."
-msgstr ""
-
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2150
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2163
-msgid "Missing market data for exit spot."
 msgstr ""
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Pricing/Engine/Intraday/Forex.pm:252
@@ -7572,6 +7581,7 @@ msgid "Next Day"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:415
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:819
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:883
 msgid "No"
 msgstr ""
@@ -7735,7 +7745,7 @@ msgid "Number of ticks"
 msgstr ""
 
 #. ($min_tick, $max_tick)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2678
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2571
 msgid "Number of ticks must be between %1 and %2"
 msgstr ""
 
@@ -7808,7 +7818,7 @@ msgstr ""
 msgid "Once the white-label is live, you will earn standard affiliate commissions on clients trading via the white-label."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:91
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:93
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:19
 msgid "Once this limit is reached, you may no longer deposit."
 msgstr ""
@@ -8304,12 +8314,12 @@ msgstr ""
 msgid "Payout has moved in your favour from %1 to %2."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2346
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2262
 msgid "Payout may not have more than two decimal places."
 msgstr ""
 
 #. (to_monetary_number_format($payout_min, 1)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1642
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1623
 msgid "Payout must be between %1 and %2."
 msgstr ""
 
@@ -8466,30 +8476,38 @@ msgstr ""
 msgid "Please enter a valid amount."
 msgstr ""
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:467
+msgid "Please enter a valid name."
+msgstr ""
+
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:370
 msgid "Please enter an integer value"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:108
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:134
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:160
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:186
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:212
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:238
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:264
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:287
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:82
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:110
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:136
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:162
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:188
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:214
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:240
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:266
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:289
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:84
 msgid "Please enter an integer value."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:320
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:329
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:322
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:331
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:108
 msgid "Please enter date in the format YYYY-MM-DD."
 msgstr ""
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:634
 msgid "Please enter the Login ID to transfer funds."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:499
+msgid "Please enter the country where you want to offer your service"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1315
@@ -8500,6 +8518,7 @@ msgstr ""
 msgid "Please enter your current password."
 msgstr ""
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:539
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:964
 msgid "Please enter your email address."
 msgstr ""
@@ -8576,6 +8595,10 @@ msgstr ""
 msgid "Please provide complete details for account opening."
 msgstr ""
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:651
+msgid "Please provide some information about yourself and your proposed services"
+msgstr ""
+
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:29
 msgid "Please provide us with the following information, after retrieving the verification token from your email:"
 msgstr ""
@@ -8593,6 +8616,7 @@ msgid "Please remember at all times that trading binary options can be an exciti
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:321
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:811
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:135
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:875
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:596
@@ -8688,16 +8712,16 @@ msgstr ""
 msgid "Please submit the above information to <a href='mailto:affiliates@binary.com'>affiliates@binary.com</a>."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1526
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1519
 msgid "Please switch accounts to trade this contract."
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:672
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1534
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1527
 msgid "Please switch accounts to trade this market."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1552
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1545
 msgid "Please switch accounts to trade this underlying."
 msgstr ""
 
@@ -8813,8 +8837,7 @@ msgstr ""
 msgid "Prevailing market price cannot be determined at this time."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1322
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2902
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2795
 msgid "Prevailing market price cannot be determined."
 msgstr ""
 
@@ -9339,28 +9362,28 @@ msgstr ""
 msgid "Represents the maximum volume of contracts that you may purchase in any given trading day."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2877
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2770
 msgid "Resale of this contract is not offered due to end-of-year market holidays."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2827
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2720
 msgid "Resale of this contract is not offered due to market holiday during contract period."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2847
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2740
 msgid "Resale of this contract is not offered due to market holidays during contract period."
 msgstr ""
 
 #. ($shortest->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2748
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2641
 msgid "Resale of this contract is not offered with less than %1 remaining."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2290
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2686
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2743
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2799
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2999
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2206
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2579
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2636
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2692
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2892
 msgid "Resale of this contract is not offered."
 msgstr ""
 
@@ -9747,8 +9770,8 @@ msgid "September"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:372
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:294
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:409
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:296
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:411
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:802
 msgid "Session duration limit cannot be more than 6 weeks."
 msgstr ""
@@ -9758,7 +9781,7 @@ msgstr ""
 msgid "Session duration limit is currently set to <strong>%1 minutes.</strong>"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:275
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:277
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:94
 msgid "Session duration limit, in minutes"
 msgstr ""
@@ -9801,6 +9824,10 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:216
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1151
 msgid "Short"
+msgstr ""
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:505
+msgid "Short summary of your Payment Agent service"
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:54
@@ -9983,7 +10010,7 @@ msgstr ""
 msgid "Sorry, client balance will exceed limits with this payment."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1543
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1536
 msgid "Sorry, contracts on Random Indices are not available in your country of residence"
 msgstr ""
 
@@ -10063,7 +10090,7 @@ msgstr ""
 msgid "Sorry, this feature is not available."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1818
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1811
 msgid "Sorry, this page cannot be refreshed."
 msgstr ""
 
@@ -10094,6 +10121,7 @@ msgstr ""
 msgid "Sorry, you have entered an incorrect cashier password"
 msgstr ""
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:544
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:929
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:969
 msgid "Sorry, you have entered an incorrect email address."
@@ -10117,7 +10145,7 @@ msgstr ""
 #. ($limit_excludeuntil)
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1881
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Hooks.pm:173
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1601
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1594
 msgid "Sorry, you have excluded yourself from the website until %1."
 msgstr ""
 
@@ -10151,7 +10179,7 @@ msgstr ""
 msgid "Sorry, your account cash balance is too high (%1). Your maximum account balance is %2."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1574
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1567
 msgid "Sorry, your account is not authorised for any further contract purchases."
 msgstr ""
 
@@ -10224,17 +10252,17 @@ msgstr ""
 msgid "Start time %1 must be before end time %2"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2474
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2367
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:385
 msgid "Start time is in the past"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2466
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2359
 msgid "Start time is invalid."
 msgstr ""
 
 #. ($forward_starting_blackout->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2507
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2400
 msgid "Start time on forward-starting contracts must be more than %1 from now."
 msgstr ""
 
@@ -10441,6 +10469,7 @@ msgstr ""
 msgid "Subject to your complying with the Company's instructions, with regards to tracking Clients accessing %1 via the Links on your Site or by quoting your affiliate IDs during signup, the Company shall use all reasonable endeavours to ensure that whenever a Client links to %1 through these Links or affiliate IDs and they subsequently place a contract or otherwise transact with the Company, the relevant Client is identified as originating from you or your Site. However, the Company shall not be liable to you in any way if the Company is unable to identify a Client as originating from you or your Site."
 msgstr ""
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:739
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:706
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:40
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:84
@@ -10484,6 +10513,16 @@ msgstr ""
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Support country appropriate products and regional capability strategies by coordinating business development activities and generating partnership leads"
 msgstr ""
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:682
+msgid "Supported banks"
+msgstr ""
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:698
+#, fuzzy
+#| msgid "Date of birth is required."
+msgid "Supported banks list is invalid"
+msgstr "จำเป็นต้องระบุ วันเกิด"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Supporting the Group’s global recruiting and talent management needs"
@@ -11145,11 +11184,11 @@ msgid "The contract has expired"
 msgstr ""
 
 #. ($ny_1600->time_hhmm)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:3000
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2893
 msgid "The contract is not available after %1 GMT."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:505
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:472
 msgid "The contract must expire on a trading day."
 msgstr ""
 
@@ -11246,7 +11285,7 @@ msgstr ""
 msgid "The market exit price is the price in effect at the end of the contract period."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2480
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2373
 msgid "The market must be open at the start time."
 msgstr ""
 
@@ -11565,6 +11604,10 @@ msgstr "เอกสารฉบับนี้"
 msgid "This Payment Agent cashier section is locked."
 msgstr ""
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:606
+msgid "This URL is invalid."
+msgstr "URL นี้ไม่ถูกต้อง"
+
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:123
 msgid "This account is unavailable."
 msgstr "บัญชีนี้ไม่สามารถใช้งานได้"
@@ -11592,7 +11635,7 @@ msgstr ""
 msgid "This client cashier section is locked."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1323
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1316
 msgid "This contract cannot be properly validated at this time."
 msgstr ""
 
@@ -11608,7 +11651,7 @@ msgstr "สัญญานี้ได้ชัยชนะ"
 msgid "This contract has already expired."
 msgstr "สัญญานี้หมดอายุแล้ว"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1117
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1078
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:308
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:46
 msgid "This contract has been sold."
@@ -11618,16 +11661,16 @@ msgstr "สัญญานี้ถูกขาย"
 msgid "This contract has expired."
 msgstr "สัญญานี้หมดอายุ"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1130
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1096
 msgid "This contract is affected by corporate action."
 msgstr "สัญญานี้มีผลต่อการดำเนินงานขององค์กร"
 
 #. (to_monetary_number_format($custom_limit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1489
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1482
 msgid "This contract is limited to "
 msgstr "สัญญานี้ถูกจำกัดในการ "
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1487
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1480
 msgid "This contract is unavailable on this account."
 msgstr "สัญญานี้ไม่สามารถใช้งานได้กับบัญชีนี้"
 
@@ -11635,7 +11678,7 @@ msgstr "สัญญานี้ไม่สามารถใช้งานไ
 msgid "This contract lost"
 msgstr "สัญญานี้ขาดทุน"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2390
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2306
 msgid "This contract offers no return."
 msgstr "สัญญานี้ไม่มีผลกำไร"
 
@@ -11648,7 +11691,7 @@ msgid "This contract won"
 msgstr "สัญญานี้กำไร"
 
 #. ($currency,                to_monetary_number_format($contract->ask_price)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1457
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1450
 msgid "This contract's price is %1%2. Contracts purchased from %3 must have a purchase price above %1%4. Please accordingly increase the contract amount to meet this minimum stake."
 msgstr ""
 
@@ -11718,7 +11761,7 @@ msgstr ""
 msgid "This market closes early today at"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2480
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2373
 msgid "This market is presently closed."
 msgstr ""
 
@@ -11748,7 +11791,7 @@ msgstr ""
 msgid "This promotion is only available to new Clients. Existing or former Clients do not qualify. It is only available once to each Client."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2291
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2207
 msgid "This trade is not offered."
 msgstr ""
 
@@ -11880,11 +11923,11 @@ msgid "Token"
 msgstr ""
 
 #. ($safer_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2848
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2741
 msgid "Too many market holidays during the contract period. Select an expiry date after %1."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1374
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1367
 msgid "Too many recent attempts. Try again later."
 msgstr ""
 
@@ -12001,11 +12044,11 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:161
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:121
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2265
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2525
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2538
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2568
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2818
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2181
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2418
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2431
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2461
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2711
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:29
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/resources/market_timesws.html.tt:2
@@ -12037,28 +12080,28 @@ msgid "Trading is Suspended"
 msgstr ""
 
 #. ($blackout_time)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2498
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2391
 msgid "Trading is available after the first %1 of the session."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2677
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2570
 msgid "Trading is not offered for this duration"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2762
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2800
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2655
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2693
 msgid "Trading is not offered for this duration."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2220
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2283
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2136
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2199
 msgid "Trading is suspended at the moment."
 msgstr ""
 
 #. ($self->underlying->translated_display_name,                    Date::Utility->new($tentative->{blankout})
 #. ($self->underlying->translated_display_name,                        Date::Utility->new($tentative->{blankout})
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2552
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2631
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2445
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2524
 msgid "Trading is suspended for %1 from %2 to %3"
 msgstr ""
 
@@ -12074,32 +12117,32 @@ msgstr ""
 #. ($underlying->translated_display_name()
 #. ($translated_name)
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:358
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2227
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2235
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2263
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2143
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2151
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2179
 msgid "Trading on %1 is suspended at the moment."
 msgstr ""
 
 #. ($self->underlying->translated_display_name)
 #. ($self->underlying->translated_display_name()
 #. ($translated_name)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1409
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:166
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2245
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2254
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2910
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1377
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:157
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2161
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2170
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2803
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:212
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:253
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:461
 msgid "Trading on %1 is suspended due to missing market data."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2536
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2429
 msgid "Trading on this contract type is suspended for the last one hour of the session."
 msgstr ""
 
 #. ($localized_eod_blackout_start->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2523
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2416
 msgid "Trading suspended for the last %1 of the session."
 msgstr ""
 
@@ -12194,8 +12237,8 @@ msgstr "ลองเพิ่มตัวเลข"
 msgid "Try it now"
 msgstr "ลองเดี๋ยวนี้เลย"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2488
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2499
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2381
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2392
 msgid "Try out the Random Indices which are always open."
 msgstr "ทดลองดัชนีสุ่มซึ่งเปิดอยู่เสมอ"
 
@@ -12340,7 +12383,7 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:359
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:361
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:116
 msgid "Update Settings"
 msgstr ""
@@ -12459,7 +12502,7 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:3010
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2903
 msgid "View Asset Index"
 msgstr ""
 
@@ -12544,6 +12587,10 @@ msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/common_email.html.tt:724
 msgid "Visit our"
+msgstr ""
+
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:154
+msgid "Waiting for entry tick."
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:354
@@ -12637,8 +12684,8 @@ msgstr ""
 msgid "We could not authenticate your account online. Please proceed to the <a href=\"%1\">manual authentication section</a>. If you would like to register additional credit cards, please contact <a class=\"pjaxload\" href=\"%2\">customer support</a>."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1419
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1547
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1387
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1517
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Digitdiff.pm:44
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Digitmatch.pm:45
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/BarrierBuilder.pm:22
@@ -13237,6 +13284,7 @@ msgid "Year"
 msgstr "ปี"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:477
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:815
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:879
 msgid "Yes"
 msgstr "ใช่"
@@ -13652,7 +13700,7 @@ msgstr ""
 msgid "You should read these ST&Cs carefully as well as the Summary Order Execution Policy and Summary Conflicts Policy, the applicable Contract Details together with the Risk Disclosure Notice and any other documents that we have supplied or in the future do supply to you."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:303
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:305
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:98
 msgid "You will be automatically logged out after such time."
 msgstr ""
@@ -13887,6 +13935,12 @@ msgstr ""
 msgid "Your details have been updated."
 msgstr ""
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:523
+#, fuzzy
+#| msgid "Email address"
+msgid "Your email address"
+msgstr "อีเมล์"
+
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:204
 msgid "Your email address is unverified."
 msgstr ""
@@ -13919,6 +13973,10 @@ msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/payment_agent.html.haml:1
 msgid "Your name, email address and contact number"
+msgstr ""
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:448
+msgid "Your name/company"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1667
@@ -13969,6 +14027,12 @@ msgstr ""
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:9
 msgid "Your personal information is used primarily as a way of authenticating you as the proper owner of your account and as the person to whom withdrawal payments may be made, and to process trades. We collect personal data relating to you directly from you when you fill in the account opening form. In the event of any doubt as to the authenticity of your account details or of any withdrawal request, the company reserves the right to request further authentication information as may be deemed appropriate under the circumstances."
 msgstr ""
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:551
+#, fuzzy
+#| msgid "Invalid telephone number."
+msgid "Your phone number"
+msgstr "หมายเลขโทรศัพท์ไม่ถูกต้อง"
 
 #. (request()
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:214
@@ -14042,6 +14106,11 @@ msgstr "ลิงค์ของคุณหมดอายุ โปรดค�
 msgid "Your violation of any applicable law, rule or regulation;"
 msgstr ""
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:590
+#, fuzzy
+msgid "Your website URL"
+msgstr "ที่อยู่เว็บไซต์ของคุณ"
+
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/payment_agent.html.haml:1
 #, fuzzy
 msgid "Your website URL (if you have one)"
@@ -14114,7 +14183,7 @@ msgstr ""
 msgid "apostrophe"
 msgstr "เครื่องหมาย '"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2084
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2065
 msgid "barrier"
 msgstr ""
 
@@ -14128,7 +14197,7 @@ msgid "binary options, forex, forex trading, online trading, financial trading, 
 msgstr ""
 
 #. ($self->date_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:811
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:775
 msgid "close on %1"
 msgstr ""
 
@@ -14141,7 +14210,7 @@ msgstr "เครื่องหมายจุลภาค (,)"
 msgid "conflicts Policy"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:805
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:769
 msgid "contract start time"
 msgstr ""
 
@@ -14198,11 +14267,11 @@ msgstr ""
 msgid "f"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:816
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:780
 msgid "first tick"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2084
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2065
 msgid "high barrier"
 msgstr ""
 
@@ -14245,7 +14314,7 @@ msgstr ""
 msgid "loading..."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2084
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2065
 msgid "low barrier"
 msgstr ""
 
@@ -14272,7 +14341,7 @@ msgstr ""
 msgid "minimum is"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2081
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2062
 msgid "minus"
 msgstr ""
 
@@ -14329,7 +14398,7 @@ msgstr ""
 msgid "period"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2081
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2062
 msgid "plus"
 msgstr ""
 
@@ -17382,6 +17451,9 @@ msgstr ""
 msgid "%1 %2 payout if %3 goes outside %7 and %6 through %5 after %4."
 msgstr ""
 
+#~ msgid "Contract must be held for %1 before resale is offered."
+#~ msgstr "สัญญาต้องถือสำหรับ %1 ก่อนการจำหน่ายอีกครั้ง"
+
 #~ msgid "%1 %plural(%1,day,days) %2 %plural(%2,hour,hours) %3 %plural(%3,minute,minutes)"
 #~ msgstr "%1 %plural(%1,วัน,วัน) %2 %plural(%2,ชั่วโมง,ชั่วโมง) %3 %plural(%3,นาที,นาที)"
 
@@ -17402,13 +17474,6 @@ msgstr ""
 
 #~ msgid "Thank you. Your application has been submitted and will be examined by our team as soon as possible. You will receive a reply by email within 72 hours."
 #~ msgstr "ขอบคุณ การสมัตรของท่านได้ถูกส่งเรียบร้อยแล้วและเจ้าหน้าที่ของเราจะทำการตรวจสอบโดยทันที ท่านจะได้รับข้อความตอบผ่านทางอีเมล์ภายใน 72 ชั่วโมง"
-
-#~ msgid "This URL is invalid."
-#~ msgstr "URL นี้ไม่ถูกต้อง"
-
-#, fuzzy
-#~ msgid "Your website URL"
-#~ msgstr "ที่อยู่เว็บไซต์ของคุณ"
 
 #~ msgid "NZD/USD"
 #~ msgstr "NZD/USD"
