@@ -531,12 +531,12 @@ msgstr "3. Chọn cách thức bạn muốn giao dịch trên thị trường"
 msgid "30-50 million JPY"
 msgstr "30-50 million JPY"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:226
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:228
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:75
 msgid "30-day limit on losses"
 msgstr "Giới hạn 30 ngày thua lỗ"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:200
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:202
 msgid "30-day turnover limit"
 msgstr "Giới hạn doanh thu 30 ngày"
 
@@ -619,12 +619,12 @@ msgstr "Giới hạn thua lỗ 7 ngày đang được thiết lập tới
 msgid "7-Day turnover limit is currently set to <strong>%1 %2</strong>"
 msgstr "Giới hạn doanh thu 7 ngày hiện được thiết lập tới <strong>%1 %2</strong>"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:174
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:176
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:55
 msgid "7-day limit on losses"
 msgstr "Giới hạn 7 ngày thua lỗ"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:148
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:150
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:45
 msgid "7-day turnover limit"
 msgstr "Giới hạn doanh thu 7 ngày"
@@ -1271,6 +1271,10 @@ msgstr "Mã API Token"
 msgid "API token for third party applications."
 msgstr "Mã API cho ứng dụng của bên thứ ba."
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:708
+msgid "AUTHORISED PAYMENT AGENT?"
+msgstr ""
+
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Ability to work in a multicultural and international environment"
 msgstr "Khả năng làm việc trong một môi trường quốc tế đa văn hóa"
@@ -1837,8 +1841,8 @@ msgstr "Tài sản"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:154
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:130
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2752
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2801
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2645
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2694
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:81
@@ -2429,7 +2433,7 @@ msgid "Buy Price"
 msgstr "Giá mua"
 
 #. (to_monetary_number_format($stake_min, 1)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1633
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1614
 #, fuzzy
 #| msgid "Duration must be between %1 and %2."
 msgid "Buy price must be between %1 and %2."
@@ -2834,6 +2838,19 @@ msgstr "Kết thúc sớm (tại %1)"
 msgid "Collaborate with members of our IT Group to identify innovative ways to improve our website’s capability and performance"
 msgstr "Cộng tác với các thành viên của nhóm IT nhằm đưa ra những ý tưởng sáng tạo để cải thiện khả năng và hiệu suất của trang web của chúng tôi"
 
+#. (2000)
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:673
+msgid "Comment must not exceed %1 characters. Please resubmit."
+msgstr "Bình luận không được vượt quá %1 ký tự. Vui lòng gửi lại."
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:617
+msgid "Commission (%) you want to take on deposits"
+msgstr "Hoa hồng (%) mà bạn muốn gửi tiền"
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:634
+msgid "Commission (%) you want to take on withdrawals"
+msgstr "Hoa hồng (%) mà bạn muốn rút tiền"
+
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/commission_table.html.tt:5
 msgid "Commission Rates"
 msgstr "Tỉ lệ Hoa hồng"
@@ -3052,7 +3069,7 @@ msgid "Contract barrier must be positive."
 msgstr "Giới hạn hợp đồng phải là số dương."
 
 #. ($end_of_bo->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2878
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2771
 msgid "Contract can not expire during the end-of-year holiday period. Select an expiry date after %1."
 msgstr "Hợp đồng không hết hạn trong suốt kì nghỉ lễ cuối năm. Lựa chọn ngày hết hạn sau %1."
 
@@ -3070,7 +3087,7 @@ msgstr "Thời hạn hợp đồng"
 msgid "Contract expired"
 msgstr "Hợp đồng đã hết hạn"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2574
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2467
 msgid "Contract has already expired."
 msgstr "Hợp đồng đã hết hạn."
 
@@ -3079,21 +3096,16 @@ msgstr "Hợp đồng đã hết hạn."
 msgid "Contract is not started yet"
 msgstr "Hợp đồng đã bắt đầu"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1630
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1611
 msgid "Contract market price is too close to final payout."
 msgstr "Giá thị trường của hợp đồng quá thấp để có thể tất toán tiền thưởng."
 
 #. ($eod_blackout_expiry->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2616
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2509
 msgid "Contract may not expire within the last %1 of trading."
 msgstr "Hợp đồng không hết hạn trong %1 cuối cùng của giao dịch."
 
-#. ($minimum_hold->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2443
-msgid "Contract must be held for %1 before resale is offered."
-msgstr "Hợp đồng phải được giữ trong %1 trước khi mời bán lại."
-
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2586
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2479
 msgid "Contract must expire during trading hours."
 msgstr "Hợp đồng phải hết hạn trong suốt các giờ giao dịch."
 
@@ -3135,12 +3147,12 @@ msgid "Contracts may not expire on a weekend; therefore the expiry date of a con
 msgstr "Hợp đồng không hết hạn vào cuối tuần; vì vậy ngày hết hạn của hợp đồng có thể được đẩy sang ngày thứ Hai tiếp theo trong trường hợp ngày hết hạn hợp đồng rơi vào ngày thứ Bảy hoặc Chủ Nhật."
 
 #. ($underlying->translated_display_name()
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2649
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2542
 msgid "Contracts on %1 with duration more than 24 hours must expire at the end of a trading day."
 msgstr "Hợp đồng %1 có thời hạn hơn 24 giờ cần phải hết hạn vào cuối ngày giao dịch."
 
 #. ($underlying->translated_display_name()
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2603
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2496
 msgid "Contracts on %1 with durations under 24 hours must expire on the same trading day."
 msgstr "Hợp đồng %1 có thời hạn dưới 24 giờ cần phải hết hạn trong cùng ngày giao dịch."
 
@@ -3158,7 +3170,9 @@ msgstr "Hợp đồng đã được bán"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/spreads.html.tt:9
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/staysinout.html.tt:10
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/touchnotouch.html.tt:11
-msgid "Contracts will be refunded at the purchase price if the following conditions occur: (1) no tick occurs within ​the ​5 minutes ​after​ the start time; (2) no tick occurs within ​the ​5 minutes ​before the end time; (3) there are less than 2 ticks between the start and end times, or (4) for contracts of tick duration, if the contract doesn't end within 5 minutes."
+#, fuzzy
+#| msgid "Contracts will be refunded at the purchase price if the following conditions occur: (1) no tick occurs within ​the ​5 minutes ​after​ the start time; (2) no tick occurs within ​the ​5 minutes ​before the end time; (3) there are less than 2 ticks between the start and end times, or (4) for contracts of tick duration, if the contract doesn't end within 5 minutes."
+msgid "Contracts will be refunded at the purchase price if the following conditions occur: (1) there are less than 2 ticks between the start and end times, or (2) for contracts of tick duration, if the contract doesn't end within 5 minutes."
 msgstr "Hợp đồng sẽ được hoàn lại bằng giá mua trong những trường hợp sau: (1) không có biến động nào trong vòng 5 phút sau khi bắt đầu; (2) Không có biến động trước 5 phút trước khi kết thúc; (3) Có ít hơn 2 điểm từ lúc bắt đầu đến khi kết thúc, hoặc (4) đối với các hợp đồng có thời hạn, nếu hợp đồng không kết thúc trong vòng 5 phút."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:10
@@ -3334,7 +3348,7 @@ msgstr "Giá giao ngay hiện tại"
 msgid "Current Spot Time"
 msgstr "Thời điểm giao ngay thông dụng"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2390
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2306
 msgid "Current market price is 0."
 msgstr "Giá thị trường hiện tại là 0."
 
@@ -3376,7 +3390,7 @@ msgstr "Hàng ngày"
 msgid "Daily Report"
 msgstr "Báo cáo hàng ngày"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:122
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:124
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:233
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:35
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:232
@@ -3388,7 +3402,7 @@ msgstr "Giới hạn mức thua lỗ hàng ngày"
 msgid "Daily limit on losses is currently set to <strong>%1 %2</strong>"
 msgstr "Giới hạn mức thua lỗ hàng ngày được thiết lập tới <strong>%1 %2</strong>"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:96
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:98
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:25
 msgid "Daily turnover limit"
 msgstr "Giới hạn doanh thu hàng ngày"
@@ -3992,7 +4006,7 @@ msgstr "Tài khoản không hoạt động"
 msgid "Dot Chart"
 msgstr "Biểu đồ điểm"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1425
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1418
 msgid "Due to regulatory requirements, you are required to authenticate your account in order to continue trading."
 msgstr "Theo quy định, bạn được yêu cầu xác thực tài khoản của mình để tiếp tục giao dịch."
 
@@ -4340,7 +4354,7 @@ msgstr "Kỹ năng giao tiếp xuất sắc (cả viết và nói) bằng tiến
 msgid "Exceptional organizational skills; detail orientation and a strong work ethic"
 msgstr "Kỹ năng tổ chức tốt; định hướng chi tiết và tuân thủ nguyên tắc trong công việc"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:308
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:310
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:104
 msgid "Exclude me from the website until"
 msgstr "Loại trừ tôi khỏi trang web này cho đến khi"
@@ -4349,19 +4363,19 @@ msgstr "Loại trừ tôi khỏi trang web này cho đến khi"
 msgid "Exclude time cannot be for more than 5 years."
 msgstr "Thời gian loại trừ không thể nhiều hơn 5 năm."
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:431
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:433
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:824
 msgid "Exclude time cannot be for more than five years."
 msgstr "Thời gian loại trừ không thể nhiều hơn 5 năm."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:376
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:426
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:428
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:819
 msgid "Exclude time cannot be less than 6 months."
 msgstr "Thời gian loại trừ không thể ít hơn 6 tháng."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:375
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:421
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:423
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:814
 msgid "Exclude time must be after today."
 msgstr "Thời gian loại trừ cần phải sau ngày hôm nay."
@@ -4475,7 +4489,7 @@ msgstr "Thời gian hết hạn"
 msgid "Expiry price"
 msgstr "Giá hết hạn"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2458
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2351
 msgid "Expiry time cannot be in the past."
 msgstr "Thời gian hết hạn không thể ở quá khứ."
 
@@ -5580,7 +5594,7 @@ msgstr "Mang phong cách cổ điển của thung lũng Silicon, nhà doanh ngh
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar."
 msgstr "Trong thị trường ngoại tệ, nhà giao dịch có thể giao kết hợp đồng dựa trên sự thay đổi trong giá cả của một đồng tiền vì nó liên quan tới đồng khác. Ví dụ, nếu một nhà giao dịch lựa chọn Tăng trong cặp tiền tệ EUR/USD, họ đang dự đoán rằng giá trị của đồng Euro sẽ tăng tương quan với giá trị của đồng Đô la Mỹ."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1515
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1508
 msgid "In order for you to place contracts, we need to know your Residence (Country). Please update your settings."
 msgstr "Để bạn có thể đặt hợp đồng, chúng tôi cần biết Đất nước bạn đang cư trú. Vui lòng cập nhật dữ liệu thiết lập."
 
@@ -5652,6 +5666,10 @@ msgstr "Khác với việc BIEL đang chịu đựng khoản thua lỗ trong
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "In this newly created role, to be based on our offices in Cyberjaya, Malaysia, you will be responsible for:"
 msgstr "Trong vai trò hoàn toàn mới được thực hiện ở các văn phòng tại Cyberjaya, Malaysia, bạn sẽ có trách nhiệm:"
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:484
+msgid "In what country do you want to offer your service"
+msgstr "Bạn muốn chào bán dịch vụ của mình tại quốc gia nào"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:192
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:80
@@ -5826,7 +5844,7 @@ msgstr "Các rủi ro Giao dịch trên Internet"
 msgid "Interpretation"
 msgstr "Sự phiên dịch"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2174
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2115
 msgid "Intraday contracts may not cross market open."
 msgstr "Hợp đồng giao dịch trong ngày có thể không giao với giờ mở cửa thị trường."
 
@@ -5907,18 +5925,21 @@ msgstr "Nhập khoảng thời gian không hợp lệ! Vui lòng nhập kh
 msgid "Invalid request"
 msgstr "Yêu cầu không hợp lệ"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2371
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2287
 msgid "Invalid stake"
 msgstr "Số tiền đặt cọc không hợp lệ"
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:577
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1471
 msgid "Invalid telephone number (too long)."
 msgstr "Số điện thoại không hợp lệ (quá dài)."
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:570
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1466
 msgid "Invalid telephone number (too short)."
 msgstr "Số điện thoại không hợp lệ (quá ngắn)."
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:582
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1476
 msgid "Invalid telephone number."
 msgstr "Số điện thoại không hợp lệ."
@@ -7156,7 +7177,7 @@ msgid "Market exit price"
 msgstr "Giá rút khỏi thị trường"
 
 #. ($safer_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2828
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2721
 msgid "Market holiday during the contract period. Select an expiry date after %1."
 msgstr "Ngày nghỉ của thị trường trong suốt kì hợp đồng. Chọn ngày hết hạn sau %1."
 
@@ -7209,7 +7230,7 @@ msgid "Max:"
 msgstr "Tối đa:"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:234
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:70
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:72
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:15
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/betting_limits.html.tt:15
 msgid "Maximum account cash balance"
@@ -7220,32 +7241,32 @@ msgstr "Số dư tài khoản tiền mặt tối đa"
 msgid "Maximum account cash balance is currently set to <strong>%1 %2</strong>"
 msgstr "Số dư tài khoản tối đa hiện đang được thiết lập tới<strong>%1 %2</strong>"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:221
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:223
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:69
 msgid "Maximum aggregate contract purchases over a 30-day period."
 msgstr "Hợp đồng tối đa được mua với kì hạn 30 ngày."
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:169
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:171
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:49
 msgid "Maximum aggregate contract purchases over a 7-day period."
 msgstr "Hợp đồng tối đa được mua với kì 7 ngày."
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:117
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:119
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:29
 msgid "Maximum aggregate contract purchases per day."
 msgstr "Tập hợp các hợp đồng mua tối đa trên một ngày."
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:247
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:249
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:79
 msgid "Maximum aggregate loss over a 30-day period."
 msgstr "Thua lỗ tối đa với kì hạn 30 ngày."
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:195
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:197
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:59
 msgid "Maximum aggregate loss over a 7-day period."
 msgstr "Tập hợp thua lỗ tối đa trên một kì 7 ngày."
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:143
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:145
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:238
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:39
 msgid "Maximum aggregate loss per day."
@@ -7262,7 +7283,7 @@ msgid "Maximum daily turnover"
 msgstr "Thu nhập hàng ngày tối đa"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:232
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:252
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:254
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:85
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/betting_limits.html.tt:11
 msgid "Maximum number of open positions"
@@ -7346,24 +7367,9 @@ msgstr "Ít nhất 6 chữ thường và chữ hoa với những con số"
 msgid "Miss"
 msgstr "Cô"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/AmericanExpiry.pm:78
-msgid "Missing market data for contract duration"
-msgstr "Thiếu dữ liệu thị trường cho kì hạn hợp đồng"
-
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2134
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2188
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2712
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2605
 msgid "Missing market data for contract period."
 msgstr "Thiếu dữ liệu thị trường cho kì hạn hợp đồng."
-
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1311
-msgid "Missing market data for entry spot."
-msgstr "Thiếu dữ liệu thị trường cho giá giao ngay vào."
-
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2150
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2163
-msgid "Missing market data for exit spot."
-msgstr "Thiếu dữ liệu thị trường cho giá giao ngay ra."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Pricing/Engine/Intraday/Forex.pm:252
 msgid "Missing market data."
@@ -7605,6 +7611,7 @@ msgid "Next Day"
 msgstr "Ngày tiếp theo"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:415
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:819
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:883
 msgid "No"
 msgstr "Không"
@@ -7770,7 +7777,7 @@ msgid "Number of ticks"
 msgstr "Số điểm"
 
 #. ($min_tick, $max_tick)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2678
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2571
 msgid "Number of ticks must be between %1 and %2"
 msgstr "Số điểm cần phải ở giữa %1 và %2"
 
@@ -7843,7 +7850,7 @@ msgstr "Khi tiền thưởng đã được chuyển vào tài khoản của 
 msgid "Once the white-label is live, you will earn standard affiliate commissions on clients trading via the white-label."
 msgstr "Khi white-label được thực hiện, bạn sẽ kiếm được hoa hồng liên kết chuẩn trên giao dịch của khách hàng thông qua white-label."
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:91
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:93
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:19
 msgid "Once this limit is reached, you may no longer deposit."
 msgstr "Khi chạm phải giới hạn này, bạn sẽ không phải gửi tiền nữa."
@@ -8359,12 +8366,12 @@ msgstr "Tiền thưởng"
 msgid "Payout has moved in your favour from %1 to %2."
 msgstr "Tiền thưởng đã được chuyển vào tài khoản của bạn từ %1 tới %2."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2346
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2262
 msgid "Payout may not have more than two decimal places."
 msgstr "Tiền thưởng không thể có nhiều hơn hai chữ số thập phân."
 
 #. (to_monetary_number_format($payout_min, 1)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1642
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1623
 msgid "Payout must be between %1 and %2."
 msgstr "Tiền thưởng cần phải ở giữa %1 và %2."
 
@@ -8533,24 +8540,28 @@ msgstr "Vui lòng nhập thành phố hoặc thị trấn."
 msgid "Please enter a valid amount."
 msgstr "Vui lòng nhập số tiền hợp lệ."
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:467
+msgid "Please enter a valid name."
+msgstr "Vui lòng nhập tên hợp lệ."
+
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:370
 msgid "Please enter an integer value"
 msgstr "Vui lòng nhập giá trị số nguyên"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:108
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:134
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:160
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:186
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:212
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:238
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:264
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:287
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:82
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:110
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:136
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:162
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:188
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:214
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:240
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:266
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:289
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:84
 msgid "Please enter an integer value."
 msgstr "Vui lòng nhập giá trị số nguyên."
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:320
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:329
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:322
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:331
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:108
 msgid "Please enter date in the format YYYY-MM-DD."
 msgstr "Vui lòng nhập ngày với định dạng YYYY-MM-DD."
@@ -8558,6 +8569,10 @@ msgstr "Vui lòng nhập ngày với định dạng YYYY-MM-DD."
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:634
 msgid "Please enter the Login ID to transfer funds."
 msgstr "Vui lòng nhập Tên Đăng nhập để chuyển tiền."
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:499
+msgid "Please enter the country where you want to offer your service"
+msgstr "Vui lòng nhập quốc gia nơi bạn muốn cung cấp dịch vụ của bạn"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1315
 msgid "Please enter the first line of your home address."
@@ -8567,6 +8582,7 @@ msgstr "Vui lòng nhập vào dòng đầu tiên địa chỉ của nhà ba
 msgid "Please enter your current password."
 msgstr "Vui lòng nhập mật khẩu hiện tại của bạn."
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:539
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:964
 msgid "Please enter your email address."
 msgstr "Vui lòng nhập địa chỉ email của bạn."
@@ -8643,6 +8659,10 @@ msgstr "Vui lòng cung cấp ít nhất một thiết lập tự loại 
 msgid "Please provide complete details for account opening."
 msgstr "Vui lòng hoàn thành những thông tin chi tiết sau để mở tài khoản."
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:651
+msgid "Please provide some information about yourself and your proposed services"
+msgstr "Vui lòng cung cấp một số thông tin về bản thân bạn và các dịch vụ bạn muốn sử dụng"
+
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:29
 #, fuzzy
 #| msgid "Please provide us with the following information:"
@@ -8662,6 +8682,7 @@ msgid "Please remember at all times that trading binary options can be an exciti
 msgstr "Vui lòng nhớ rằng giao dịch hợp đồng quyền chọn nhị phân có thể là một hoạt động thú vị vào bất cứ lúc nào, nhưng chúng tôi có trách nhiệm nhắc bạn rủi ro mà bạn có thể gặp phải. Giao dịch quyền chọn có thể bị nghiện, như những hoạt động khác muốn cố gắng để đạt được tới giới hạn. Chúng tôi muốn bạn tự phân tích cẩn thận để kiểm tra xem liệu bạn có đang gặp rủi ro hay không. Để tránh nguy hại của việc gây nghiện này, quan trọng là bạn nên tuân theo một số nguyên tắc và hướng dẫn cơ bản."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:321
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:811
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:135
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:875
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:596
@@ -8757,16 +8778,16 @@ msgstr "Vui lòng nhập một tài khoản %1 hợp lệ."
 msgid "Please submit the above information to <a href='mailto:affiliates@binary.com'>affiliates@binary.com</a>."
 msgstr "Vui lòng gửi thông tin trên tới <a href='mailto:affiliates@binary.com'>affiliates@binary.com</a>."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1526
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1519
 msgid "Please switch accounts to trade this contract."
 msgstr "Vui lòng chuyển đổi tài khoản để giao dịch hợp đồng này."
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:672
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1534
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1527
 msgid "Please switch accounts to trade this market."
 msgstr "Vui lòng chuyển đổi tài khoản để giao dịch thị trường này."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1552
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1545
 msgid "Please switch accounts to trade this underlying."
 msgstr "Vui lòng chuyển đổi tài khoản để giao dịch với đơn vị cơ sở này."
 
@@ -8882,8 +8903,7 @@ msgstr "Thể hiện số tiền lãi tối đa trên hợp đồng nô�
 msgid "Prevailing market price cannot be determined at this time."
 msgstr "Giá thị trường hiện hành không thể được xác định tại thời điểm này."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1322
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2902
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2795
 msgid "Prevailing market price cannot be determined."
 msgstr "Giá thị trường hiện hành không thể xác định được."
 
@@ -9412,28 +9432,28 @@ msgstr "Hãy trình bày số hợp đồng xuất sắc tối đa có
 msgid "Represents the maximum volume of contracts that you may purchase in any given trading day."
 msgstr "Hiển thị số lượng hợp đồng tối đa bạn có thể mua trong ngày giao dịch."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2877
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2770
 msgid "Resale of this contract is not offered due to end-of-year market holidays."
 msgstr "Không hỗ trợ bán lại hợp đồng này do đang trong kì nghỉ lễ cuối năm."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2827
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2720
 msgid "Resale of this contract is not offered due to market holiday during contract period."
 msgstr "Không hỗ trợ bán lại hợp đồng này do nghỉ lễ trong suốt kì hạn hợp đồng."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2847
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2740
 msgid "Resale of this contract is not offered due to market holidays during contract period."
 msgstr "Việc bán lại hợp đồng này không được hỗ trợ do kì nghỉ trong suốt kì hạn hợp đồng."
 
 #. ($shortest->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2748
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2641
 msgid "Resale of this contract is not offered with less than %1 remaining."
 msgstr "Không hỗ trợ việc bán lại hợp đồng này với ít hơn %1 còn lại."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2290
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2686
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2743
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2799
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2999
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2206
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2579
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2636
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2692
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2892
 msgid "Resale of this contract is not offered."
 msgstr "Không hỗ trợ việc bán lại hợp đồng này."
 
@@ -9826,8 +9846,8 @@ msgid "September"
 msgstr "Tháng Chín"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:372
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:294
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:409
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:296
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:411
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:802
 msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "Giới hạn thời hạn phiên không thể nhiều hơn 6 tuần."
@@ -9837,7 +9857,7 @@ msgstr "Giới hạn thời hạn phiên không thể nhiều hơn 6 tuần
 msgid "Session duration limit is currently set to <strong>%1 minutes.</strong>"
 msgstr "Giới hạn thời gian phiên hiện tại được thiết lập tới<strong>%1 phút.</strong>"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:275
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:277
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:94
 msgid "Session duration limit, in minutes"
 msgstr "Giới hạn thời gian phiên, trong vài phút"
@@ -9883,6 +9903,10 @@ msgstr "Giá sắc bén"
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1151
 msgid "Short"
 msgstr "Ngắn"
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:505
+msgid "Short summary of your Payment Agent service"
+msgstr "Tóm tắt sơ lược về dịch vụ Đại lý Thanh toán của bạn"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:54
 msgid "Should a disruption occur in the data feeds which cannot be readily rectified by the Company, the Company reserves the right to refund the contract purchase."
@@ -10064,7 +10088,7 @@ msgstr "Xin lỗi, có lỗi xảy ra. Vui lòng liên hệ với bộ ph
 msgid "Sorry, client balance will exceed limits with this payment."
 msgstr "Rất tiếc, số dư của khách hàng vượt quá giới hạn của thanh toán này."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1543
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1536
 msgid "Sorry, contracts on Random Indices are not available in your country of residence"
 msgstr "Xin lỗi, Hợp đồng Chỉ số Ngẫu nhiên không có trong đất nước bạn cư trú"
 
@@ -10148,7 +10172,7 @@ msgstr "Rất tiếc, tính năng này chỉ khả dụng với tài khoản ti�
 msgid "Sorry, this feature is not available."
 msgstr "Xin lỗi, đặc tính này không có."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1818
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1811
 msgid "Sorry, this page cannot be refreshed."
 msgstr "Xin lỗi, trang này không thể làm tươi mới được."
 
@@ -10179,6 +10203,7 @@ msgstr "Xin lỗi, bạn đã có quá nhiều hoạt động chưa thàn
 msgid "Sorry, you have entered an incorrect cashier password"
 msgstr "Xin lỗi, bạn đã nhập sai mật khẩu thu ngân"
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:544
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:929
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:969
 msgid "Sorry, you have entered an incorrect email address."
@@ -10202,7 +10227,7 @@ msgstr "Xin lỗi, bạn đã vượt quá lượng chuyển tiền cho p
 #. ($limit_excludeuntil)
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1881
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Hooks.pm:173
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1601
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1594
 msgid "Sorry, you have excluded yourself from the website until %1."
 msgstr "Xin lỗi, bạn đã đã rút ra khỏi trang web cho tới %1."
 
@@ -10236,7 +10261,7 @@ msgstr "Xin lỗi, bạn đã có tài khoản tiền thực với chúng tôi. 
 msgid "Sorry, your account cash balance is too high (%1). Your maximum account balance is %2."
 msgstr "Xin lỗi, số dư tiền mặt trong tài khoản của bạn quá nhiều (%1). Số dư tài khoản tối đa của bạn là %2."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1574
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1567
 msgid "Sorry, your account is not authorised for any further contract purchases."
 msgstr "Xin lỗi, tài khoản của bạn không có quyền mua thêm hợp đồng."
 
@@ -10311,17 +10336,17 @@ msgstr "Thời gian bắt đầu"
 msgid "Start time %1 must be before end time %2"
 msgstr "Thời gian bắt đầu %1 phải trước thời gian kết thúc %2"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2474
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2367
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:385
 msgid "Start time is in the past"
 msgstr "Thời gian bắt đầu trong quá khứ"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2466
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2359
 msgid "Start time is invalid."
 msgstr "Thời gian bắt đầu không hợp lệ."
 
 #. ($forward_starting_blackout->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2507
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2400
 msgid "Start time on forward-starting contracts must be more than %1 from now."
 msgstr "Thời gian bắt đầu trên hợp đồng forward cần phải nhiều hơn %1 từ bây giờ."
 
@@ -10530,6 +10555,7 @@ msgstr "Với bất kì lời chỉ dẫn cụ thể nào của bạn cun
 msgid "Subject to your complying with the Company's instructions, with regards to tracking Clients accessing %1 via the Links on your Site or by quoting your affiliate IDs during signup, the Company shall use all reasonable endeavours to ensure that whenever a Client links to %1 through these Links or affiliate IDs and they subsequently place a contract or otherwise transact with the Company, the relevant Client is identified as originating from you or your Site. However, the Company shall not be liable to you in any way if the Company is unable to identify a Client as originating from you or your Site."
 msgstr "Bạn phải tuân thủ chỉ dẫn của Công ty, với việc theo dõi khách hàng truy cập %1 qua Đường dẫn trên trang web của bạn hoặc bằng cách trích dẫn ID liên kết của bạn khi đăng nhập, Công ty sẽ nỗ lực đảm bảo rằng bất cứ khi nào đường dẫn của Khách hàng tới %1 thông qua những đường dẫn này hoặc ID liên kết và họ đặt hợp đồng hoặc thực hiện giao dịch với CÔng ty, Công ty sẽ xác định Khách hàng liên quan xuất phát từ bạn hoặc trang web của bạn. Tuy nhiên, Công ty sẽ không chịu trách nhiệm với bạn nếu Công ty không thể xác nhận Khách hàng đó xuất phát từ bạn hay trang web của bạn."
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:739
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:706
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:40
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:84
@@ -10575,6 +10601,16 @@ msgstr "Các Điều khoản và Điều kiện Bổ sung cho Sản phẩ
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Support country appropriate products and regional capability strategies by coordinating business development activities and generating partnership leads"
 msgstr "Hỗ trợ những sản phẩm thích hợp và những chiến lược có khả năng theo vùng miền bằng cách phối hợp hoạt động phát triển kinh doanh và các mối quan hệ đối tác"
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:682
+#, fuzzy
+#| msgid "Supported banks list is invalid"
+msgid "Supported banks"
+msgstr "Danh sách ngân hàng hỗ trợ không hợp lệ"
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:698
+msgid "Supported banks list is invalid"
+msgstr "Danh sách ngân hàng hỗ trợ không hợp lệ"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Supporting the Group’s global recruiting and talent management needs"
@@ -11254,11 +11290,11 @@ msgid "The contract has expired"
 msgstr "Hợp đồng đã hết hạn"
 
 #. ($ny_1600->time_hhmm)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:3000
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2893
 msgid "The contract is not available after %1 GMT."
 msgstr "Hợp đồng không có sau %1 GMT."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:505
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:472
 msgid "The contract must expire on a trading day."
 msgstr "Hợp đồng phải hết hạn vào một ngày giao dịch."
 
@@ -11357,7 +11393,7 @@ msgstr "Thua lỗ USD 306 là phần chênh lệch giữa mức giá đi 
 msgid "The market exit price is the price in effect at the end of the contract period."
 msgstr "Giá thoát khỏi thị trường là giá có hiệu lực vào cuối thời gian hợp đồng."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2480
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2373
 msgid "The market must be open at the start time."
 msgstr "Thị trường phải được mở vào thời gian bắt đầu."
 
@@ -11686,6 +11722,10 @@ msgstr "Hồ sơ này"
 msgid "This Payment Agent cashier section is locked."
 msgstr "Khu vực thu ngân của Đại lý Thanh toán đã bị khóa."
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:606
+msgid "This URL is invalid."
+msgstr "URL này không hợp lệ."
+
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:123
 msgid "This account is unavailable."
 msgstr "Tài khoản này không khả dụng."
@@ -11713,7 +11753,7 @@ msgstr "Tiền thưởng này sẽ được xử lý và ghi có vào t
 msgid "This client cashier section is locked."
 msgstr "Khu vực thu tiền khác hàng bị khóa."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1323
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1316
 msgid "This contract cannot be properly validated at this time."
 msgstr "Hợp đồng này không thể được xác minh vào thời gian này."
 
@@ -11733,7 +11773,7 @@ msgstr "Hợp đồng này đã bị lỗ"
 msgid "This contract has already expired."
 msgstr "Hợp đồng này đã hết hạn."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1117
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1078
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:308
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:46
 msgid "This contract has been sold."
@@ -11743,16 +11783,16 @@ msgstr "Hợp đồng này đã được bán."
 msgid "This contract has expired."
 msgstr "Hợp đồng này đã hết hạn."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1130
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1096
 msgid "This contract is affected by corporate action."
 msgstr "Hợp đồng này bị ảnh hưởng bởi hoạt động của công ty."
 
 #. (to_monetary_number_format($custom_limit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1489
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1482
 msgid "This contract is limited to "
 msgstr "Hợp đồng này bị giới hạn tới "
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1487
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1480
 msgid "This contract is unavailable on this account."
 msgstr "Hợp đồng này không có  trong tài khoản này."
 
@@ -11760,7 +11800,7 @@ msgstr "Hợp đồng này không có  trong tài khoản này."
 msgid "This contract lost"
 msgstr "Hợp đồng này đã bị lỗ"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2390
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2306
 msgid "This contract offers no return."
 msgstr "Hợp đồng này chào bán không lợi nhuận."
 
@@ -11773,7 +11813,7 @@ msgid "This contract won"
 msgstr "Hợp đồng này đã thắng"
 
 #. ($currency,                to_monetary_number_format($contract->ask_price)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1457
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1450
 msgid "This contract's price is %1%2. Contracts purchased from %3 must have a purchase price above %1%4. Please accordingly increase the contract amount to meet this minimum stake."
 msgstr "Giá hợp đồng này là %1%2. Hợp đồng được mua từ %3 phải có giá mua trên %1%4. Vui lòng tăng giá trị hợp đồng để đạt mức tối thiểu."
 
@@ -11845,7 +11885,7 @@ msgstr "Đây là lý do tại sao chúng tôi đang tuyển dụng thêm nhữn
 msgid "This market closes early today at"
 msgstr "Thị trường này hôm nay đóng sớm vào lúc"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2480
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2373
 msgid "This market is presently closed."
 msgstr "Thị trường này hiện đang bị đóng."
 
@@ -11875,7 +11915,7 @@ msgstr "Lời mời này không thể được dùng để kết nối 
 msgid "This promotion is only available to new Clients. Existing or former Clients do not qualify. It is only available once to each Client."
 msgstr "Khuyến mãi này chỉ dành cho những khách hàng mới. Khách hàng hiện tại hoặc cũ không đủ điều kiện. Mỗi khách hàng chỉ có một lần."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2291
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2207
 msgid "This trade is not offered."
 msgstr "Giao dịch này không được chào."
 
@@ -12009,11 +12049,11 @@ msgid "Token"
 msgstr "Mã Token"
 
 #. ($safer_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2848
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2741
 msgid "Too many market holidays during the contract period. Select an expiry date after %1."
 msgstr "Có quá nhiều ngày nghỉ lễ trong suốt kì hợp đồng. Chọn một ngày hết hạn sau %1."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1374
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1367
 msgid "Too many recent attempts. Try again later."
 msgstr "Bạn đã cố gắng đăng nhập quá nhiều lần. Hãy thử lại sau."
 
@@ -12130,11 +12170,11 @@ msgstr "Quy tắc Giao dịch"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:161
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:121
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2265
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2525
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2538
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2568
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2818
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2181
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2418
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2431
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2461
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2711
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:29
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/resources/market_timesws.html.tt:2
@@ -12166,30 +12206,30 @@ msgid "Trading is Suspended"
 msgstr "Giao dịch bị Đình chỉ"
 
 #. ($blackout_time)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2498
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2391
 msgid "Trading is available after the first %1 of the session."
 msgstr "Giao dịch có sẵn sau %1 đầu tiên của phiên."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2677
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2570
 #, fuzzy
 #| msgid "Trading is not offered for this duration."
 msgid "Trading is not offered for this duration"
 msgstr "Giao dịch không được cung cấp trong thời gian này."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2762
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2800
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2655
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2693
 msgid "Trading is not offered for this duration."
 msgstr "Giao dịch không được cung cấp trong thời gian này."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2220
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2283
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2136
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2199
 msgid "Trading is suspended at the moment."
 msgstr "Giao dịch đang bị đình chỉ."
 
 #. ($self->underlying->translated_display_name,                    Date::Utility->new($tentative->{blankout})
 #. ($self->underlying->translated_display_name,                        Date::Utility->new($tentative->{blankout})
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2552
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2631
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2445
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2524
 #, fuzzy
 #| msgid "Trading is suspended at the moment."
 msgid "Trading is suspended for %1 from %2 to %3"
@@ -12207,32 +12247,32 @@ msgstr "Giao dịch trên %1 không được cung cấp cho loại hợp đô
 #. ($underlying->translated_display_name()
 #. ($translated_name)
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:358
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2227
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2235
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2263
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2143
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2151
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2179
 msgid "Trading on %1 is suspended at the moment."
 msgstr "Giao dịch trên %1 đang bị đình chỉ."
 
 #. ($self->underlying->translated_display_name)
 #. ($self->underlying->translated_display_name()
 #. ($translated_name)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1409
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:166
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2245
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2254
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2910
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1377
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:157
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2161
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2170
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2803
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:212
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:253
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:461
 msgid "Trading on %1 is suspended due to missing market data."
 msgstr "Giao dịch trên %1 đang bị đình chỉ do mất dữ liệu thị trường."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2536
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2429
 msgid "Trading on this contract type is suspended for the last one hour of the session."
 msgstr "Giao dịch trên loại hợp đồng này bị đình chỉ một tiếng cuối của phiên này."
 
 #. ($localized_eod_blackout_start->as_string)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2523
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2416
 msgid "Trading suspended for the last %1 of the session."
 msgstr "Giao dịch bị đình chỉ %1 cuối của phiên."
 
@@ -12329,8 +12369,8 @@ msgstr "Hãy thử nhập thêm số."
 msgid "Try it now"
 msgstr "Thử ngay bây giờ"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2488
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2499
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2381
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2392
 msgid "Try out the Random Indices which are always open."
 msgstr "Hãy thử Chỉ số ngẫu nhiên (luôn mở)."
 
@@ -12477,7 +12517,7 @@ msgstr "Sự kiện sắp diễn ra"
 msgid "Update"
 msgstr "Cập nhật"
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:359
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:361
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:116
 msgid "Update Settings"
 msgstr "Cập nhật Tiết lập"
@@ -12608,7 +12648,7 @@ msgstr "Phiên bản 39. Chỉnh sửa lần cuối ngày 2015-12-04."
 msgid "View"
 msgstr "Xem"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:3010
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2903
 msgid "View Asset Index"
 msgstr "Xem Chỉ số Tài sản"
 
@@ -12696,6 +12736,10 @@ msgstr "Tài khoản Ảo"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/common_email.html.tt:724
 msgid "Visit our"
 msgstr "Thăm của chúng tôi"
+
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:154
+msgid "Waiting for entry tick."
+msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:354
 msgid "Walkthrough Guide"
@@ -12789,8 +12833,8 @@ msgstr "Chúng tôi được yêu cầu sử dụng một số nhân tố
 msgid "We could not authenticate your account online. Please proceed to the <a href=\"%1\">manual authentication section</a>. If you would like to register additional credit cards, please contact <a class=\"pjaxload\" href=\"%2\">customer support</a>."
 msgstr "Chúng tôi không thể xác minh tài khoản của bạn trực tuyến. Xin vui lòng xử lý<a href=\"%1\">ở khu vực xác nhận bằng tay</a>. Nếu bạn muốn đăng kí thêm thẻ tín dụng, xin vui lòng liên hệ với <a class=\"pjaxload\" href=\"%2\">đội ngũ hỗ trợ khách hàng</a>."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1419
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1547
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1387
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1517
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Digitdiff.pm:44
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Digitmatch.pm:45
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/BarrierBuilder.pm:22
@@ -13399,6 +13443,7 @@ msgid "Year"
 msgstr "Năm"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:477
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:815
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:879
 msgid "Yes"
 msgstr "Có"
@@ -13834,7 +13879,7 @@ msgstr "Chú ý rằng trách nhiệm cung cấp cho bạn thực hiện
 msgid "You should read these ST&Cs carefully as well as the Summary Order Execution Policy and Summary Conflicts Policy, the applicable Contract Details together with the Risk Disclosure Notice and any other documents that we have supplied or in the future do supply to you."
 msgstr "Bạn nên đọc cẩn thận những ST&C này, với Bản tóm tắt Chính Sách thực hiện Lệnh, Bản tóm tắt Chính sách Xung đột, Chi tiết Hợp đồng được áp dụng cùng với Thông báo Tiết lộ Rủi ro và những tài liệu khác mà chúng tôi đã cung cấp hoặc tương lai sẽ cung cấp cho bạn."
 
-#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:303
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:305
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:98
 msgid "You will be automatically logged out after such time."
 msgstr "Bạn sẽ bị tự động đăng thoát sau khoảng thời gian này."
@@ -14077,6 +14122,10 @@ msgstr "Chi tiết của bạn"
 msgid "Your details have been updated."
 msgstr "Thông tin chi tiết của bạn đã được cập nhật."
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:523
+msgid "Your email address"
+msgstr "Địa chỉ email của bạn"
+
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:204
 msgid "Your email address is unverified."
 msgstr "Địa chỉ email của bạn chưa được xác minh."
@@ -14110,6 +14159,10 @@ msgstr "Tiền của bạn luôn an toàn với %1. Lúc này, nó đươ�
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/payment_agent.html.haml:1
 msgid "Your name, email address and contact number"
 msgstr "Tên, địa chỉ email và số điện thoại liên lạc của bạn"
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:448
+msgid "Your name/company"
+msgstr "Tên/công ty của bạn"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1667
 msgid "Your new account balance is %s %s"
@@ -14161,6 +14214,10 @@ msgstr "Mật khẩu của bạn không nên có hơn 25 kí tự."
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:9
 msgid "Your personal information is used primarily as a way of authenticating you as the proper owner of your account and as the person to whom withdrawal payments may be made, and to process trades. We collect personal data relating to you directly from you when you fill in the account opening form. In the event of any doubt as to the authenticity of your account details or of any withdrawal request, the company reserves the right to request further authentication information as may be deemed appropriate under the circumstances."
 msgstr "Thông tin cá nhân của bạn được sử dụng chủ yếu để chứng thực bạn là chủ sở hữu tài khoản của mình và là người có thể rút tiền và thực hiện giao dịch. Chúng tôi thu thập dữ liệu cá nhân trực tiếp từ bạn khi bạn điền vào mẫu mở tài khoản. Trong trường hợp có sự nghi ngờ về tính xác thực của thông tin tài khoản hoặc bất kỳ yêu cầu rút tiền, công ty có quyền yêu cầu xác thực thông tin thêm để thích hợp trong mọi hoàn cảnh."
+
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:551
+msgid "Your phone number"
+msgstr "Số điện thoại của bạn"
 
 #. (request()
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:214
@@ -14239,6 +14296,10 @@ msgstr "Đường dẫn xác nhận của bạn đã hết hạn. Vui lò
 msgid "Your violation of any applicable law, rule or regulation;"
 msgstr "Sự vi phạm của bạn đối với bất kỳ luật lệ, quy tắc hay quy định;"
 
+#: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:590
+msgid "Your website URL"
+msgstr "URL trang web của bạn"
+
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/payment_agent.html.haml:1
 msgid "Your website URL (if you have one)"
 msgstr "URL trang web của bạn (nếu bạn có)"
@@ -14308,7 +14369,7 @@ msgstr "bất kỳ hạn chế nào cho khách hàng của mình từ việc mu
 msgid "apostrophe"
 msgstr "dấu móc lửng (')"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2084
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2065
 msgid "barrier"
 msgstr "rào cản"
 
@@ -14322,7 +14383,7 @@ msgid "binary options, forex, forex trading, online trading, financial trading, 
 msgstr "tùy chọn nhị phân, ngoại hối, giao dịch ngoại hối, giao dịch trực tuyến, giao dịch tài chính, giao dịch nhị phân, giao dịch chỉ số, chỉ số giao dịch, giao dịch ngoại hối, giao dịch hàng hóa, chiến lược tùy chọn nhị phân, môi giới nhị phân, đặt cược nhị phân, sàn giao dịch quyền chọn nhị phân, chiến lược nhị phân, tài chính, chứng khoán , đầu tư, kinh doanh"
 
 #. ($self->date_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:811
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:775
 msgid "close on %1"
 msgstr "đóng trên %1"
 
@@ -14334,7 +14395,7 @@ msgstr "dấu phẩy"
 msgid "conflicts Policy"
 msgstr "Xung đột Chính sách"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:805
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:769
 msgid "contract start time"
 msgstr "thời gian bắt đàu hợp đồng"
 
@@ -14387,11 +14448,11 @@ msgstr "giải thích"
 msgid "f"
 msgstr "f"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:816
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:780
 msgid "first tick"
 msgstr "giây đầu tiên"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2084
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2065
 msgid "high barrier"
 msgstr "rào cản cao"
 
@@ -14434,7 +14495,7 @@ msgstr "các ký tự"
 msgid "loading..."
 msgstr "đang tải..."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2084
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2065
 msgid "low barrier"
 msgstr "rào cản thấp"
 
@@ -14463,7 +14524,7 @@ msgstr "khoảng thời gian có sẵn tối thiểu"
 msgid "minimum is"
 msgstr "tối thiểu là"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2081
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2062
 msgid "minus"
 msgstr "trừ"
 
@@ -14520,7 +14581,7 @@ msgstr "mật khẩu"
 msgid "period"
 msgstr "giai đoạn"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2081
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2062
 msgid "plus"
 msgstr "cộng"
 
@@ -17628,6 +17689,18 @@ msgstr "%1 %2 lãi nếu %3 đi ra ngoài %7 tới %6 qua %5."
 msgid "%1 %2 payout if %3 goes outside %7 and %6 through %5 after %4."
 msgstr "%1 %2 tiền lãi nếu %3 đi ra ngoài %7 và %6 qua %5 sau %4."
 
+#~ msgid "Contract must be held for %1 before resale is offered."
+#~ msgstr "Hợp đồng phải được giữ trong %1 trước khi mời bán lại."
+
+#~ msgid "Missing market data for contract duration"
+#~ msgstr "Thiếu dữ liệu thị trường cho kì hạn hợp đồng"
+
+#~ msgid "Missing market data for entry spot."
+#~ msgstr "Thiếu dữ liệu thị trường cho giá giao ngay vào."
+
+#~ msgid "Missing market data for exit spot."
+#~ msgstr "Thiếu dữ liệu thị trường cho giá giao ngay ra."
+
 #~ msgid "%1 %plural(%1,day,days) %2 %plural(%2,hour,hours) %3 %plural(%3,minute,minutes)"
 #~ msgstr "%1 %plural(%1,ngày,nhiều ngày) %2 %plural(%2,giờ,nhiều giờ) %3 %plural(%3,phút,nhiều phút)"
 
@@ -17639,15 +17712,6 @@ msgstr "%1 %2 tiền lãi nếu %3 đi ra ngoài %7 và %6 qua %5 sau %4."
 
 #~ msgid "Bank/Credit Union/Building Society/Credit/Debit Card statement or passbook (within last 3 months)."
 #~ msgstr "Bảng sao kê của Ngân hàng/Hiệp hội tín dụng/Tổ chức tài chính cho vay có thế chấp bằng bất động sản/Thẻ tín dụng/Thẻ ghi nợ hoặc hộ chiếu (trong vòng 3 tháng gần nhất)."
-
-#~ msgid "Comment must not exceed %1 characters. Please resubmit."
-#~ msgstr "Bình luận không được vượt quá %1 ký tự. Vui lòng gửi lại."
-
-#~ msgid "Commission (%) you want to take on deposits"
-#~ msgstr "Hoa hồng (%) mà bạn muốn gửi tiền"
-
-#~ msgid "Commission (%) you want to take on withdrawals"
-#~ msgstr "Hoa hồng (%) mà bạn muốn rút tiền"
 
 #~ msgid "Current signed Passport"
 #~ msgstr "Hộ chiếu hiện đang sử dụng"
@@ -17669,9 +17733,6 @@ msgstr "%1 %2 tiền lãi nếu %3 đi ra ngoài %7 và %6 qua %5 sau %4."
 #~ msgid "Home"
 #~ msgstr "Trang chủ"
 
-#~ msgid "In what country do you want to offer your service"
-#~ msgstr "Bạn muốn chào bán dịch vụ của mình tại quốc gia nào"
-
 #~ msgid "Invalid payout currency."
 #~ msgstr "Tiền thanh toán không hợp lệ."
 
@@ -17680,12 +17741,6 @@ msgstr "%1 %2 tiền lãi nếu %3 đi ra ngoài %7 và %6 qua %5 sau %4."
 
 #~ msgid "Payment Agents are not available for your account."
 #~ msgstr "Đại lý Thanh toán không có trong tài khoản của bạn."
-
-#~ msgid "Please enter a valid name."
-#~ msgstr "Vui lòng nhập tên hợp lệ."
-
-#~ msgid "Please enter the country where you want to offer your service"
-#~ msgstr "Vui lòng nhập quốc gia nơi bạn muốn cung cấp dịch vụ của bạn"
 
 #~ msgid "Please note that mobile telephone bills are not acceptable as evidence of address"
 #~ msgstr "Vui lòng chú ý rằng hóa đơn thanh toán điện thoại di động không được chấp nhận là bằng chứng của địa chỉ"
@@ -17696,23 +17751,14 @@ msgstr "%1 %2 tiền lãi nếu %3 đi ra ngoài %7 và %6 qua %5 sau %4."
 #~ msgid "Please post the documents to:"
 #~ msgstr "Vui lòng gửi hồ sơ tới:"
 
-#~ msgid "Please provide some information about yourself and your proposed services"
-#~ msgstr "Vui lòng cung cấp một số thông tin về bản thân bạn và các dịch vụ bạn muốn sử dụng"
-
 #~ msgid "Proof of address"
 #~ msgstr "Bằng chứng của địa chỉ"
 
 #~ msgid "Provide us with the following documentation:"
 #~ msgstr "Cung cấp cho chúng tôi những hồ sơ sau:"
 
-#~ msgid "Short summary of your Payment Agent service"
-#~ msgstr "Tóm tắt sơ lược về dịch vụ Đại lý Thanh toán của bạn"
-
 #~ msgid "Supported banks (this field visible from office only) **"
 #~ msgstr "Ngân hàng hỗ trợ (Ô này chỉ được thấy từ văn phòng)**"
-
-#~ msgid "Supported banks list is invalid"
-#~ msgstr "Danh sách ngân hàng hỗ trợ không hợp lệ"
 
 #~ msgid "Thank You !"
 #~ msgstr "Cám ơn!"
@@ -17723,29 +17769,14 @@ msgstr "%1 %2 tiền lãi nếu %3 đi ra ngoài %7 và %6 qua %5 sau %4."
 #~ msgid "Thank you. Your application has been submitted and will be examined by our team as soon as possible. You will receive a reply by email within 72 hours."
 #~ msgstr "Cám ơn. Đơn của bạn đã được gửi và sẽ được nhóm của chúng tôi xác minh sớm nhất có thể. Bạn sẽ nhận được phản hồi bằng email trong vòng 72 giờ."
 
-#~ msgid "This URL is invalid."
-#~ msgstr "URL này không hợp lệ."
-
 #~ msgid "Utility bill (within last 3 months)"
 #~ msgstr "Hóa đơn thanh toán các phí sinh hoạt (trong vòng 3 tháng gần đây)"
 
 #~ msgid "Verification of identity"
 #~ msgstr "Xác thực nhận dạng"
 
-#~ msgid "Your email address"
-#~ msgstr "Địa chỉ email của bạn"
-
 #~ msgid "Your form has been submitted."
 #~ msgstr "Đơn của bạn đã được gửi đi."
-
-#~ msgid "Your name/company"
-#~ msgstr "Tên/công ty của bạn"
-
-#~ msgid "Your phone number"
-#~ msgstr "Số điện thoại của bạn"
-
-#~ msgid "Your website URL"
-#~ msgstr "URL trang web của bạn"
 
 #~ msgid "or"
 #~ msgstr "hoặc"
