@@ -109,7 +109,7 @@ var ViewPopupWS = (function() {
             'tick_popup'
         );
 
-        TickDisplay.initialize({
+        WSTickDisplay.initialize({
             "symbol"              : contract.underlying,
             "number_of_ticks"     : contract.tick_count,
             "previous_tick_epoch" : history.times[0],
@@ -120,6 +120,7 @@ var ViewPopupWS = (function() {
             "contract_start"      : contract.date_start,
             "show_contract_result": 0
         });
+        WSTickDisplay.spots_list = {};
 
         tickUpdate();
     };
@@ -127,6 +128,12 @@ var ViewPopupWS = (function() {
     var tickUpdate = function() {
         if(contract.is_expired) {
             showWinLossStatus((contract.sell_price || contract.bid_price) > 0);
+            WSTickDisplay.updateChart('', contract);
+            window.updateChart = 'true';
+        }
+        if (!window.updateChart || window.updateChart === 'false') {
+            WSTickDisplay.updateChart('', contract);
+            window.updateChart = 'true';
         }
     };
 
