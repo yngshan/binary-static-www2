@@ -209,15 +209,16 @@ var PricingTable = (function() {
       });
 
       var i = 1;
+      var props = this.props;
       var rows = barriers.map(function(barrier) {
         return React.createElement(PricingTableRow, {
           key: i++,
           barrier: barrier,
-          values: this.props.prices[barrier],
-          prev_values: (this.props.prev_prices !== undefined ? this.props.prev_prices[barrier] : undefined),
-          units: this.props.units,
-          dateExpiry: this.props.dateExpiry,
-          symbol: this.props.symbol,
+          values: props.prices[barrier],
+          prev_values: (props.prev_prices !== undefined ? props.prev_prices[barrier] : undefined),
+          units: props.units,
+          dateExpiry: props.dateExpiry,
+          symbol: props.symbol,
         });
       });
       rows.unshift(React.createElement(PricingTableHeader, { key: 0 }));
