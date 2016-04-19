@@ -376,7 +376,9 @@ URL.prototype = {
             var params = this.params();
             var param = params.length;
             while(param--) {
-                this._param_hash[params[param][0]] = params[param][1];
+                if(params[param][0]) {
+                    this._param_hash[params[param][0]] = params[param][1];
+                }
             }
         }
         return this._param_hash;
@@ -408,7 +410,7 @@ Menu.prototype = {
         this.hide_main_menu();
 
         var active = this.active_menu_top();
-        var trading = $('#menu-top li:eq(3)');
+        var trading = $('#menu-top li:eq(4)');
         if(active) {
             active.addClass('active');
             if(trading.is(active)) {
