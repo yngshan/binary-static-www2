@@ -26,9 +26,6 @@ WSTickDisplay.dispatch = function(data) {
   }
 
   if (!chart || !isVisible(chart) || !data || (!data.tick && !data.history)) {
-      if (window.responseID) {
-        BinarySocket.send({'forget':window.responseID});
-      }
       return;
   }
 
