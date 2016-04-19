@@ -65,7 +65,7 @@ var ViewPopupWS = (function() {
         // ----- Tick -----
         if(contract.hasOwnProperty('tick_count')) {
             contractType = 'tick';
-            getTickHistory(contract.underlying, contract.date_start - 60, contract.date_start - 1, 1);
+            tickShowContract();
         }
         // ----- Spread -----
         else if(contract.shortcode.toUpperCase().indexOf('SPREAD') === 0) {
@@ -112,10 +112,8 @@ var ViewPopupWS = (function() {
         WSTickDisplay.initialize({
             "symbol"              : contract.underlying,
             "number_of_ticks"     : contract.tick_count,
-            "previous_tick_epoch" : history.times[0],
             "contract_category"   : ((/asian/i).test(contract.shortcode) ? 'asian' : (/digit/i).test(contract.shortcode) ? 'digits' : 'callput'),
             "longcode"            : contract.longcode,
-            "display_decimals"    : history.prices[0].split('.')[1].length || 2,
             "display_symbol"      : contract.display_name,
             "contract_start"      : contract.date_start,
             "show_contract_result": 0
@@ -573,10 +571,6 @@ var ViewPopupWS = (function() {
         }
 
         switch(contractType) {
-            case 'tick':
-                history = response.history;
-                tickShowContract();
-                break;
             case 'spread':
                 history = response.history;
                 spreadShowContract();
