@@ -128,8 +128,6 @@ var ViewPopupWS = (function() {
     var tickUpdate = function() {
         if(contract.is_expired) {
             showWinLossStatus((contract.sell_price || contract.bid_price) > 0);
-            WSTickDisplay.updateChart('', contract);
-            window.updateChart = 'true';
         }
         if (!window.updateChart || window.updateChart === 'false') {
             WSTickDisplay.updateChart('', contract);
