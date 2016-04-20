@@ -1,4 +1,4 @@
-if (isJapan()) {
+if (isJapanTrading()) {
 
   var processForgetTables = function() {
     BinarySocket.send({

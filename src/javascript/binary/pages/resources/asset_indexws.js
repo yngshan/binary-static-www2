@@ -32,7 +32,7 @@ var AssetIndexWS = (function() {
         var $args = {
             active_symbols: "brief"
         };
-        if (isJapan()) {
+        if (isJapanTrading()) {
             $args['landing_company'] = "japan";
         }
 

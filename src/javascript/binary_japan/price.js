@@ -1,4 +1,4 @@
-if(isJapan()){
+if(isJapanTrading()){
 	var Price = Object.create(Price);
 	Object.defineProperties(Price,{
 		proposal:{

@@ -1,4 +1,4 @@
-if (isJapan()) {
+if (isJapanTrading()) {
     var Contract = (function() {
         'use strict';
 

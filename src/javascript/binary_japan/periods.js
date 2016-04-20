@@ -1,4 +1,4 @@
-if(isJapan()){
+if(isJapanTrading()){
 	var Periods = (function(){
 		var barrier = 0,
 			barrier2 = 0,
