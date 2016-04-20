@@ -189,11 +189,12 @@ var Price = (function() {
             purchase.hide();
             comment.hide();
             amount_wrapper.hide();
-            if (details['details']) {
-                details['details'] = details['details'].replace(/[\d\,]+\.\d\d/, function(x) {
+            if (details['error']['details']) {
+                var extraInfo = details['error']['details'];
+                extraInfo = extraInfo.replace(/[\d\,]+\.\d\d/, function(x) {
                     return '<b>' + x + '</b>';
                 });
-                description.innerHTML = '<div>' + details['details'] + '</div>';
+                description.innerHTML = '<div>' + extraInfo + '</div>';
             } else {
                 description.innerHTML = "";
             }
