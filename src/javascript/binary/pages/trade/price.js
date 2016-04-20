@@ -188,19 +188,28 @@ var Price = (function() {
         if (details['error']) {
             purchase.hide();
             comment.hide();
-            amount_wrapper.hide();
             if (details['error']['details']) {
                 var extraInfo = details['error']['details'];
-                extraInfo = extraInfo.replace(/[\d\,]+\.\d\d/, function(x) {
+                if (is_spread) {
+                    amount.textContent = extraInfo['display_value'];
+                } else {
+                    amount.textContent = currency.value + ' ' + extraInfo['display_value'];
+                }
+
+                extraInfo['longcode'] = extraInfo['longcode'].replace(/[\d\,]+\.\d\d/, function(x) {
                     return '<b>' + x + '</b>';
                 });
-                description.innerHTML = '<div>' + extraInfo + '</div>';
+
+                description.innerHTML = '<div>' + extraInfo['longcode'] + '</div>';
+                price_wrapper.classList.remove('small');
             } else {
                 description.innerHTML = "";
+                amount_wrapper.hide();
+                price_wrapper.classList.add('small');
             }
-            price_wrapper.classList.add('small');
+
             error.show();
-            error.textContent = details['error'].message;
+            error.textContent = details['error']['message'];
         } else {
             if (proposal && proposal['display_value']) {
                 if (is_spread) {
