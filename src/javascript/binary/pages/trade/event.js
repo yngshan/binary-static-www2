@@ -154,6 +154,7 @@ var TradingEvents = (function () {
                     processForgetTicks();
                     // get ticks for current underlying
                     Tick.request(underlying);
+                    displayTooltip('', underlying);
                 }
             });
             underlyingElement.addEventListener('mousedown', function(e) {
