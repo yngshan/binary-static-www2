@@ -601,17 +601,6 @@ pjax_config_page('/open-source-projects', function() {
     };
 });
 
-pjax_config_page('/white-labels', function() {
-    return {
-        onLoad: function() {
-            sidebar_scroll($('.white-labels'));
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        }
-    };
-});
-
 pjax_config_page('/payment-agent', function() {
     return {
         onLoad: function() {
