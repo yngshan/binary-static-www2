@@ -136,6 +136,8 @@ function BinarySocketClass() {
                         ViewPopupWS.dispatch(response);
                       } else if (passthrough.dispatch_to === 'ViewChartWS') {
                         Highchart.dispatch(response);
+                      } else if (passthrough.dispatch_to === 'ViewTickDisplayWS') {
+                        WSTickDisplay.dispatch(response);
                       }
                     }
                 }
@@ -209,9 +211,9 @@ function BinarySocketClass() {
                             .on('click', '#ratelimit-refresh-link', function () {
                                 window.location.reload();
                             });
-                      } else if (response.error.code === 'InvalidToken' && 
-                          type !== 'reset_password' && 
-                          type !== 'new_account_virtual' && 
+                      } else if (response.error.code === 'InvalidToken' &&
+                          type !== 'reset_password' &&
+                          type !== 'new_account_virtual' &&
                           type !== 'paymentagent_withdraw') {
                         BinarySocket.send({'logout': '1'});
                       }
