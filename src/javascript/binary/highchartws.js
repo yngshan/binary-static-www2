@@ -374,7 +374,7 @@ var Highchart = (function() {
             end_contract(contract);
           }
       } else if (type === 'ticks_history' && error) {
-          show_error();
+          show_error('', error.message);
       }
     }
   };
@@ -385,11 +385,13 @@ var Highchart = (function() {
       request_data(contract);
   }
 
-  function show_error(type) {
+  function show_error(type, message) {
+    var el = document.getElementById('analysis_live_chart');
+    if(!el) return;
     if (type === 'missing') {
-      document.getElementById('analysis_live_chart').innerHTML = '<p class="error-msg">' + text.localize('ticks history returned an empty array') + '</p>';
+      el.innerHTML = '<p class="error-msg">' + text.localize('ticks history returned an empty array') + '</p>';
     } else {
-      document.getElementById('analysis_live_chart').innerHTML = '<p class="error-msg">' + error.message + '</p>';
+      el.innerHTML = '<p class="error-msg">' + message + '</p>';
     }
   }
 
