@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-20 07:41+0000\n"
-"Last-Translator: Sittie Hadjirah Sevilla <sittiebaser@gmail.com>\n"
+"PO-Revision-Date: 2016-04-20 10:30+0000\n"
+"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -1407,7 +1407,7 @@ msgstr "住所"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:361
 msgid "Adjust trade parameters"
-msgstr "取引パラメーターを調整する"
+msgstr "取引期間を選択して頂き購入希望ロット数を入力して下さい。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:36
 msgid "Adjusted Barrier"
@@ -10315,7 +10315,7 @@ msgstr "レンジ内に留まる/レンジ外となる"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:356
 msgid "Step"
-msgstr "間隔"
+msgstr "ステップ"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
 msgid "Step 1: Define your position"
@@ -14744,7 +14744,7 @@ msgstr "店頭通貨バイナリーオプション取引については、顧客
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:107
 msgid "{JAPAN ONLY}Activate your account by confirming your authorisation code which we will post to your registered address."
-msgstr ""
+msgstr "口座開設完了後にお客様へ簡易書留郵便で認証コードを郵送いたします。当社から送信したメールに認証コードを記載の上返信してください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:436
 msgid "{JAPAN ONLY}Although customers and brokers will set limits on customers trading losses, even if those losses are exceeded, it is the customer's responsibility to close the position and so mandatory loss-cuts will not be executed by the broker company."
@@ -14816,11 +14816,11 @@ msgstr "ダウンロード"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:101
 msgid "{JAPAN ONLY}Email us copies of your Identification Documents and My Number card."
-msgstr ""
+msgstr "本人確認書類および個人番号「マイナンバー」書類を当社から送信したメールに添付して返信してください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:95
 msgid "{JAPAN ONLY}Enter your personal information, and acknowledge our terms and conditions."
-msgstr ""
+msgstr "お客様の基本情報を記入して頂き交付書面等に同意後、口座開設ボタンをクリックしてください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:460
 #, fuzzy
@@ -14900,10 +14900,9 @@ msgstr "口座開設について"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:122
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:61
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:9
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 1: Structure"
 msgid "{JAPAN ONLY}Identification Documents"
-msgstr "｛日本限定｝第一章：構成"
+msgstr "本人確認書類およびマイナンバー「個人番号」について"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:455
 msgid "{JAPAN ONLY}If an option buyer wishes to exercise the option rights, the seller may still reject the deal."
@@ -15081,14 +15080,18 @@ msgstr "オプション取引にはヨ－ロピアンタイプとアメリカン
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:112
 msgid "{JAPAN ONLY}Our Customer Support staff will contact you at each stage to guide you through the process. Please also download our full guide to opening an account:"
 msgstr ""
+"口座開設の手続きを進める上で、ご不明な点等がありましたら、当社カスタマーサポートへご連絡ください。また、下記ダンロードボタンをクリックして頂き口座開設の手"
+"順を参照することができます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:92
 msgid "{JAPAN ONLY}Our Real Money Account opening procedure has 4 steps:"
-msgstr ""
+msgstr "リアル口座開設完了までの４ステップ:"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:103
 msgid "{JAPAN ONLY}Please click <a class=\"pjaxload\" href=\"#identification-documents\">here</a> for further information."
 msgstr ""
+"本人確認および個人番号「マイナンバー」書類に関する詳細につきましては<a class=\"pjaxload\" href"
+"=\"#identification-documents\">こちらを</a> クリックしてください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:506
 msgid "{JAPAN ONLY}Please complete the following questions."
@@ -15202,7 +15205,7 @@ msgstr "｛日本限定｝知識確認テストを受ける"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:98
 msgid "{JAPAN ONLY}Take our Knowledge Test to confirm your understanding of options."
-msgstr "オプションへの理解をチェックする、知識確認テストを受けてください。"
+msgstr "バイナリーオプションへの理解をチェックするため知識確認テストを受けてください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:500
 msgid "{JAPAN ONLY}The Black-Scholes model is widely used to calculate theoretical option prices."
@@ -15341,6 +15344,9 @@ msgstr "プットオプションの買いでは、権利行使価格に原資産
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:89
 msgid "{JAPAN ONLY}You can apply to open an account online. Simply click <a class=\"pjaxload\" href=\"%1\">here</a> to begin the process by opening a demo account.  Once you are familiar with our site and comfortable in your knowledge of binary options we invite you to upgrade to a Real Money Account."
 msgstr ""
+"口座開設の流れについてご案内致します。まず、<a class=\"pjaxload\" href=\"%1\"> こちらを</a>クリックしてデモ口座を開"
+"設して頂く必要があります。デモ口座では、取引ツールの操作性及びバイナリーオプション取引への理解を高める上では非常にお役に立ちます。実際の取引への準備ができ"
+"ましたらリアル口座開設の手続きをしてください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "‘Best Customer Communication Firm’ award by Investors Chronicle"
