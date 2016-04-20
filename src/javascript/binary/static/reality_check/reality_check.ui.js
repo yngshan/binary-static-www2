@@ -48,9 +48,9 @@ var RealityCheckUI = (function () {
 
     function updateSummary(summary) {
         $('#start-time').text(summary.startTimeString);
-        $('#login-time').append(summary.loginTime);
-        $('#current-time').append(summary.currentTime);
-        $('#session-duration').append(summary.sessionDuration);
+        $('#login-time').text(summary.loginTime);
+        $('#current-time').text(summary.currentTime);
+        $('#session-duration').text(summary.sessionDuration);
         
         $('#login-id').text(summary.loginId);
         $('#currency').text(summary.currency);
