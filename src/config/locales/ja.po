@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-19 23:59+0000\n"
-"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
+"PO-Revision-Date: 2016-04-20 03:09+0000\n"
+"Last-Translator: Mark Tanser <mark@regentmarkets.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -3099,7 +3099,7 @@ msgstr "当社は当社サイトに報告された、トレードの取引対象
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/staysinout.html.tt:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/touchnotouch.html.tt:2
 msgid "Contract period"
-msgstr "トレード期間"
+msgstr "取引期間"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:60
 msgid "Contract started"
@@ -5625,7 +5625,7 @@ msgstr "サービス提供を計画している国名"
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:93
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 msgid "In/Out"
-msgstr "レンジ内/レンジ外"
+msgstr "レンジ"
 
 #. (url_for("trade.cgi?market=random&form_name=endsinout")
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -11252,7 +11252,7 @@ msgstr "本取引に関し、特に次に掲げる事項について、十分な
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "The duration is the length of a purchased trade (see 'contract period')."
-msgstr "購入したトレードの取引期間のことです（「トレード期間」の項目を参照して下さい）。"
+msgstr "購入したトレードの取引期間のことです（「取引期間」の項目を参照して下さい）。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 msgid "The easiest way to get started in the financial markets"
@@ -17253,7 +17253,7 @@ msgstr "終了時の市場価格の下一桁を予測"
 
 #: Translation for contract category "endsinout"
 msgid "Ends In/Out"
-msgstr "レンジ内/レンジ外で終了"
+msgstr "END-IN/END-OUT"
 
 #: Explanation for contract category Ends In/Out
 msgid "Predict the ending market level relative to 2 chosen barriers."
@@ -17261,7 +17261,7 @@ msgstr "トレード終了時の市場価格を上下に設定したバリア値
 
 #: Translation for contract category "staysinout"
 msgid "Stays In/Goes Out"
-msgstr "レンジ内/レンジ外に留まる"
+msgstr "STAY-IN/BREAK-OUT"
 
 #: Explanation for contract category Stays In/Goes Out
 msgid "Predict whether or not the market will touch either of 2 chosen levels before expiration."
@@ -17303,7 +17303,7 @@ msgstr "%3の最後の値が%plural(%5,%d tick,%d ticks)の平均よりも正確
 
 #: Translation for contract type "CALL"
 msgid "higher"
-msgstr "ラダー高"
+msgstr "HIGH"
 
 #. %1 - Payout Currency (example USD)
 #. %2 - Payout value (example 100)
@@ -17534,7 +17534,7 @@ msgstr "%3が%4後の%5までに%6にタッチした場合、%1 %2のペイア�
 
 #: Translation for contract type "PUT"
 msgid "lower"
-msgstr "Lower"
+msgstr "LOW"
 
 #. %1 - Payout Currency (example USD)
 #. %2 - Payout value (example 100)
@@ -17571,7 +17571,7 @@ msgstr "%3が%plural(%5,%d tick,%d ticks)後に%6よりも正確に低い場合�
 
 #: Translation for contract type "RANGE"
 msgid "stays between"
-msgstr "レンジ内に留まる"
+msgstr "STAY-IN"
 
 #. %1 - Payout Currency (example USD)
 #. %2 - Payout value (example 100)
@@ -17649,7 +17649,7 @@ msgstr "各ポイント%3の %1%2のペイアウトはエントリーレベル�
 
 #: Translation for contract type "UPORDOWN"
 msgid "goes outside"
-msgstr "レンジ外へ出る"
+msgstr "BREAK-OUT"
 
 #. %1 - Payout Currency (example USD)
 #. %2 - Payout value (example 100)
