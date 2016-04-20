@@ -1,4 +1,4 @@
-if (typeof is_japan === 'function') {
+if (isJapan()) {
     var Contract = (function() {
         'use strict';
 

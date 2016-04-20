@@ -78,7 +78,7 @@ var Symbols = (function () {
         var $args = {
             active_symbols: "brief"
         };
-        if (typeof is_japan === 'function') {
+        if (isJapan()) {
             $args['landing_company'] = "japan";
         }
         BinarySocket.send($args);

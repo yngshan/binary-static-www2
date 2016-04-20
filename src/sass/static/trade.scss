@@ -499,9 +499,22 @@
   .radio_label {
     margin: 0 10px;
   }
+  #contract_description1
+  #contract_description2
+  #pricing_table_container
+  #open_positions_container{
+    display: none;
+  }
+}
+
+#open_positions_container {
+  display: none;
 }
 
 #trading_socket_container.japan{
+  #guideBtn {
+    display: none;
+  }
   #japan_unit {
     width: 50px;
   }
@@ -830,6 +843,10 @@
   input {
     margin: 0 10px;
   }
+}
+
+#tab_portfolio-content .portfolio-header-margin{
+  display: none;
 }
 
 
