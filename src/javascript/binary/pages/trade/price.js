@@ -185,21 +185,6 @@ var Price = (function() {
             }
         }
 
-        if (proposal && proposal['display_value']) {
-            if (is_spread) {
-                amount.textContent = proposal['display_value'];
-            } else {
-                amount.textContent = currency.value + ' ' + proposal['display_value'];
-            }
-        }
-
-        if (proposal && proposal['longcode']) {
-            proposal['longcode'] = proposal['longcode'].replace(/[\d\,]+\.\d\d/, function(x) {
-                return '<b>' + x + '</b>';
-            });
-            description.innerHTML = '<div>' + proposal['longcode'] + '</div>';
-        }
-
         if (details['error']) {
             purchase.hide();
             comment.hide();
@@ -216,6 +201,21 @@ var Price = (function() {
             error.show();
             error.textContent = details['error'].message;
         } else {
+            if (proposal && proposal['display_value']) {
+                if (is_spread) {
+                    amount.textContent = proposal['display_value'];
+                } else {
+                    amount.textContent = currency.value + ' ' + proposal['display_value'];
+                }
+            }
+
+            if (proposal && proposal['longcode']) {
+                proposal['longcode'] = proposal['longcode'].replace(/[\d\,]+\.\d\d/, function(x) {
+                    return '<b>' + x + '</b>';
+                });
+                description.innerHTML = '<div>' + proposal['longcode'] + '</div>';
+            }
+
             purchase.show();
             comment.show();
             amount_wrapper.show();
