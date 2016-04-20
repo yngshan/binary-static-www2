@@ -109,17 +109,6 @@ var ViewPopupWS = (function() {
             'tick_popup'
         );
 
-        WSTickDisplay.initialize({
-            "symbol"              : contract.underlying,
-            "number_of_ticks"     : contract.tick_count,
-            "contract_category"   : ((/asian/i).test(contract.shortcode) ? 'asian' : (/digit/i).test(contract.shortcode) ? 'digits' : 'callput'),
-            "longcode"            : contract.longcode,
-            "display_symbol"      : contract.display_name,
-            "contract_start"      : contract.date_start,
-            "show_contract_result": 0
-        });
-        WSTickDisplay.spots_list = {};
-
         tickUpdate();
     };
 
