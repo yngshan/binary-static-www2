@@ -177,6 +177,7 @@ var TradingEvents = (function () {
         var durationAmountElement = document.getElementById('duration_amount'),
             inputEventTriggered = false;          // For triggering one of the two events.
         if (durationAmountElement) {
+            durationAmountElement.addEventListener('keypress', onlyNumericOnKeypress);
             // jquery needed for datepicker
             $('#duration_amount').on('input', debounce(function (e) {
                 triggerOnDurationChange(e);
