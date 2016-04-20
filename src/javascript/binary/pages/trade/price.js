@@ -141,7 +141,7 @@ var Price = (function() {
             type = typeDisplayIdMapping[id];
         }
 
-        var is_spread = false; 
+        var is_spread = false;
         if (params.contract_type && (params.contract_type === 'SPREADU' || params.contract_type === 'SPREADD')) {
             is_spread = true;
         }
@@ -204,7 +204,14 @@ var Price = (function() {
             purchase.hide();
             comment.hide();
             amount_wrapper.hide();
-            description.innerHTML = "";
+            if (details['details']) {
+                details['details'] = details['details'].replace(/[\d\,]+\.\d\d/, function(x) {
+                    return '<b>' + x + '</b>';
+                });
+                description.innerHTML = '<div>' + details['details'] + '</div>';
+            } else {
+                description.innerHTML = "";
+            }
             price_wrapper.classList.add('small');
             error.show();
             error.textContent = details['error'].message;
