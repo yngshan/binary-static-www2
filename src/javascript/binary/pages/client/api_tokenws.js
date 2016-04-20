@@ -180,7 +180,7 @@ var APITokenWS = (function() {
         // Token Name
         if(!isRequiredError(nameID) && !isCountError(nameID, 2, 32)){
             if(!(/^\w+$/).test(newName)) {
-                showError(nameID, Content.errorMessage('reg', [letters, numbers, space, '-']));
+                showError(nameID, Content.errorMessage('reg', [letters, numbers, '_']));
             }
         }
 
