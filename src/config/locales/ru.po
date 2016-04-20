@@ -7,14 +7,16 @@ msgstr ""
 "Project-Id-Version: BOM\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-18 13:44+0000\n"
+"PO-Revision-Date: 2016-04-20 09:48+0000\n"
 "Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/binary/static/ru/>\n"
+"Language-Team: Russian "
+"<https://hosted.weblate.org/projects/binary/static/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.6-dev\n"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:47
@@ -1239,7 +1241,7 @@ msgstr "Токен API для независимых приложений."
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:708
 msgid "AUTHORISED PAYMENT AGENT?"
-msgstr ""
+msgstr "ВЫ – АВТОРИЗОВАННЫЙ ПЛАТЁЖНЫЙ АГЕНТ?"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Ability to work in a multicultural and international environment"
@@ -3097,10 +3099,13 @@ msgstr "Проданные контракты"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/spreads.html.tt:9
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/staysinout.html.tt:10
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/touchnotouch.html.tt:11
-#, fuzzy
 #| msgid "Contracts will be refunded at the purchase price if the following conditions occur: (1) no tick occurs within ​the ​5 minutes ​after​ the start time; (2) no tick occurs within ​the ​5 minutes ​before the end time; (3) there are less than 2 ticks between the start and end times, or (4) for contracts of tick duration, if the contract doesn't end within 5 minutes."
 msgid "Contracts will be refunded at the purchase price if the following conditions occur: (1) there are less than 2 ticks between the start and end times, or (2) for contracts of tick duration, if the contract doesn't end within 5 minutes."
-msgstr "Цена покупки контракта будет возмещена трейдеру в случае возникновения следующих условий: (1) в течение 5 минут после начала действия контракта цена актива не продвинулась ни на один тик; (2) цена актива не продвинулась ни на один тик в течение последних 5 минут до окончания действия контракта; (3) между временем начала и окончания действия контракта отмечено менее 2 тиков; (4) для контрактов, длительность которых измеряется тиками – если контракт не заканчивается в течение 5 минут."
+msgstr ""
+"Цена покупки контракта будет возмещена трейдеру в случае возникновения "
+"следующих условий: (1) разница между временем начала и окончания контракта "
+"составляет менее двух тиков; (2) для контрактов, длительность которых "
+"измеряется тиками – если контракт не заканчивается в течение 5 минут."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:10
 msgid "Contracts will not usually be offered at odds under 0.05-to-1 (i.e. payouts of under USD/GBP/EUR/AUD 1.05 for each USD/GBP/EUR/AUD 1 staked)."
@@ -3255,10 +3260,9 @@ msgid "Currency"
 msgstr "Валюта"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:603
-#, fuzzy
 #| msgid "Currency"
 msgid "Current"
-msgstr "Валюта"
+msgstr "Текущие"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:610
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:31
@@ -8037,10 +8041,9 @@ msgid "Over two billion dollars in trades to date."
 msgstr "Контракты на более, чем два миллиарда долларов, на сегодняшний день."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:226
-#, fuzzy
 #| msgid "Gender"
 msgid "Over/Under"
-msgstr "Gender"
+msgstr "Над/Под"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:427
 msgid "Overlay"
@@ -9528,9 +9531,8 @@ msgid "Scope and Intent"
 msgstr "Предмет и намерения"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:392
-#, fuzzy
 msgid "Score"
-msgstr "Score"
+msgstr "Счёт"
 
 #. (broker_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:26
@@ -10441,10 +10443,9 @@ msgid "Support country appropriate products and regional capability strategies b
 msgstr "Поддержание продуктов, ориентированных на региональные рынки, а также региональных стратегий путём координации развития бизнеса и предложения партнёрских инициатив"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:682
-#, fuzzy
 #| msgid "Supported banks list is invalid"
 msgid "Supported banks"
-msgstr "Список поддерживаемых банков недействителен"
+msgstr "Поддерживаемые банки"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:698
 msgid "Supported banks list is invalid"
@@ -12520,10 +12521,9 @@ msgid "Visit our"
 msgstr "Посетите"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:154
-#, fuzzy
 #| msgid "Awaiting market ticks...."
 msgid "Waiting for entry tick."
-msgstr "В ожидании рыночных тиков..."
+msgstr "В ожидании входного тика..."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:354
 msgid "Walkthrough Guide"
@@ -14186,7 +14186,7 @@ msgstr "объяснение"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:264
 msgid "f"
-msgstr ""
+msgstr "f"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:780
 msgid "first tick"
@@ -14240,10 +14240,9 @@ msgid "low barrier"
 msgstr "нижний барьер"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:263
-#, fuzzy
 #| msgid "1m"
 msgid "m"
-msgstr "1м"
+msgstr "m"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:695
 msgid "maximum is"
@@ -14466,6 +14465,9 @@ msgstr "{JAPAN ONLY}A Currency Option confers the right to sell one currency in 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:423
 msgid "{JAPAN ONLY}A binary call option buyer will benefit from a correct prediction that the asset price will decline to below the strike price by the judgment time."
 msgstr ""
+"{JAPAN ONLY}A binary call option buyer will benefit from a correct "
+"prediction that the asset price will decline to below the strike price by "
+"the judgment time."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:426
 msgid "{JAPAN ONLY}A binary call options buyer will benefit from a correct prediction that the asset price will rise above the strike price by the judgment time."
@@ -14777,10 +14779,9 @@ msgid "{JAPAN ONLY}Knowledge Test Result"
 msgstr "{JAPAN ONLY}Knowledge Test Result"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:169
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 4: Risk"
 msgid "{JAPAN ONLY}Option Pricing"
-msgstr "{JAPAN ONLY}Section 4: Risk"
+msgstr "{JAPAN ONLY}Option Pricing"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:498
 msgid "{JAPAN ONLY}Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. Apart from the fixed exercise price, all other elements are changing constantly, so an understanding of the relationships between each element and changes in the options price is necessary for the management of options trading risk."
