@@ -129,6 +129,7 @@ var Highchart = (function() {
         };
       }
 
+      if(!el) return;
       var chart = new Highcharts.Chart(chartOptions);
       initialized = true;
 
@@ -193,6 +194,7 @@ var Highchart = (function() {
 
   // use this instead of BinarySocket.send to avoid overriding the on-message function of trading page
   var socketSend = function(req) {
+      if(!req) return;
       if(!req.hasOwnProperty('passthrough')) {
           req.passthrough = {};
       }
@@ -284,6 +286,7 @@ var Highchart = (function() {
             // only initialize chart if it hasn't already been initialized
             if (!window.chart && !initialized) {
               window.chart = init_chart(options);
+              if(!window.chart) return;
 
               if (purchase_time !== start_time) draw_line_x(purchase_time, 'Purchase Time', '', '', '#7cb5ec');
 
@@ -566,6 +569,7 @@ var Highchart = (function() {
   }
 
   function draw_line_x(valueTime, labelName, textLeft, dash, color) {
+    if(!window.chart) return;
     var req = {
       value : valueTime*1000
     };
