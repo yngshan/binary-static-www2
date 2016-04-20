@@ -305,7 +305,7 @@ var PricingTable = (function() {
             var longCode = {
               mask: mask,
               values: {
-                currency: 'JPY',
+                currency: '¥',
                 sum: 1000,
                 symbol: state.symbol,
                 close: close,
