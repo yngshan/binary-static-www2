@@ -49,5 +49,6 @@ var Defaults = (function(){
         get   : getDefault,
         set   : setDefault,
         remove: removeDefault,
+        clear : function(){params = {};}
     };
 })();
