@@ -765,7 +765,7 @@ function displayTooltip(market, symbol){
     var tip = document.getElementById('symbol_tip'),
         guide = document.getElementById('guideBtn'),
         app = document.getElementById('androidApp');
-    if (market.match(/^random/)){
+    if (market.match(/^random/) || symbol.match(/^R/)){
         tip.show();
         tip.setAttribute('target','/get-started/random-markets');
         app.show();
@@ -773,16 +773,16 @@ function displayTooltip(market, symbol){
       app.hide();
       tip.hide();
     }
-    if (market.match(/^random_index/)){
+    if (market.match(/^random_index/) || symbol.match(/^R_/)){
         tip.setAttribute('target','/get-started/random-markets#random-indices');
     }
-    if (market.match(/^random_daily/)){
+    if (market.match(/^random_daily/) || symbol.match(/^RDB/) || symbol.match(/^RDMO/) || symbol.match(/^RDS/)){
         tip.setAttribute('target','/get-started/random-markets#random-quotidians');
     }
-    if (market.match(/^random_nightly/)){
+    if (market.match(/^random_nightly/) || symbol.match(/^RDMA/) || symbol.match(/^RDY/) || symbol.match(/^RDV/)){
         tip.setAttribute('target','/get-started/random-markets#random-nocturnes');
     }
-    if (market.match(/^smart_fx/)){
+    if (market.match(/^smart_fx/) || symbol.match(/^WLD/)){
         tip.show();
         tip.setAttribute('target','/smart-indices#world-fx-indices');
     }
