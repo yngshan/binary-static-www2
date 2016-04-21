@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Chinese (China) (Binary)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-21 08:31+0000\n"
+"PO-Revision-Date: 2016-04-21 08:41+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (China) "
 "<https://hosted.weblate.org/projects/binary/static/zh_CN/>\n"
@@ -11468,10 +11468,9 @@ msgid "There was a problem accessing the server."
 msgstr "服务器访问发生问题。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:236
-#, fuzzy
 #| msgid "There was a problem with your email address"
 msgid "There was a problem validating your address."
-msgstr "您的电子邮件地址有问题"
+msgstr "您的地址验证出了问题。"
 
 #. ($r->url_for('contact')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:275
@@ -11479,10 +11478,9 @@ msgid "There was a problem validating your address. Please fix the indicated fie
 msgstr "在验证地址时发现问题。请修改提示字段。如需帮助，请联系我们的 <a href=\"%1\">客服人员</a>。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:628
-#, fuzzy
 #| msgid "There was an error."
 msgid "There was an error"
-msgstr "出错了。"
+msgstr "出现错误"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/exception.html.haml:1
 msgid "There was an error and we were unable to process your request."
@@ -11501,16 +11499,14 @@ msgid "There was some invalid character in an input field."
 msgstr "某字段的输入字符无效。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:248
-#, fuzzy
 #| msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is EUR %1 (or %2 in other currency)."
 msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2 (or equivalent in other currency)."
-msgstr "因此您当前的即时最高取款额（要求您的账户具有充足的资金）为 EUR %1（或者其他货币为 %2）。"
+msgstr "因此您当前的即时最高取款额（要求您的账户有充足资金）为%1 %2（或其他等值货币）。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:247
-#, fuzzy
 #| msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is EUR"
 msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2."
-msgstr "因此，您当前可即时提取的最大金额为（前提是您的帐户有足够资金）欧元"
+msgstr "因此，您当前可即时提取的最大金额（要求您的帐户有足够资金）为 %1 %2。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:88
 msgid "These ST&Cs are to be governed by and construed in accordance with Maltese law and the parties hereto agree to submit to the non exclusive jurisdiction of the Maltese courts."
@@ -11632,16 +11628,14 @@ msgid "This contract cannot be properly validated at this time."
 msgstr "目前该交易无法正确验证。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:626
-#, fuzzy
 #| msgid "This contract has expired."
 msgid "This contract has LOST"
-msgstr "此合约已到期。"
+msgstr "此合约输了"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:625
-#, fuzzy
 #| msgid "This contract lost"
 msgid "This contract has WON"
-msgstr "此合约亏损"
+msgstr "此合约赢了"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/AmericanExpiry.pm:19
 msgid "This contract has already expired."
