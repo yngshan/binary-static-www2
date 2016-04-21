@@ -417,7 +417,7 @@ function compareMarkets(a, b) {
         'indices': 1,
         'stocks': 2,
         'commodities': 3,
-        'random': 4
+        'volidx': 4
     };
 
     if (sortedMarkets[a.toLowerCase()] < sortedMarkets[b.toLowerCase()]) {
@@ -640,7 +640,7 @@ function getDefaultMarket() {
 function getMarketsOrder(market) {
     var order = {
         'forex': 1,
-        'random': 2,
+        'volidx': 2,
         'indices': 3,
         'stocks': 4,
         'commodities': 5
@@ -740,7 +740,7 @@ function marketOrder(market){
         commodities: 12,
         metals: 13,
         energy: 14,
-        random: 15,
+        volidx: 15,
         random_index: 16,
         random_daily: 17,
         random_nightly: 18
@@ -765,22 +765,20 @@ function displayTooltip(market, symbol){
     var tip = document.getElementById('symbol_tip'),
         guide = document.getElementById('guideBtn'),
         app = document.getElementById('androidApp');
-    if (market.match(/^random/) || symbol.match(/^R/)){
+    if (market.match(/^volidx/) || symbol.match(/^R/) || market.match(/^random_index/) || market.match(/^random_daily/)){
         tip.show();
-        tip.setAttribute('target','/get-started/random-markets');
+        tip.setAttribute('target','/get-started/volidx-markets');
         app.show();
     } else {
       app.hide();
       tip.hide();
     }
+
     if (market.match(/^random_index/) || symbol.match(/^R_/)){
-        tip.setAttribute('target','/get-started/random-markets#random-indices');
+        tip.setAttribute('target','/get-started/volidx-markets#volidx-indices');
     }
     if (market.match(/^random_daily/) || symbol.match(/^RDB/) || symbol.match(/^RDMO/) || symbol.match(/^RDS/)){
-        tip.setAttribute('target','/get-started/random-markets#random-quotidians');
-    }
-    if (market.match(/^random_nightly/) || symbol.match(/^RDMA/) || symbol.match(/^RDY/) || symbol.match(/^RDV/)){
-        tip.setAttribute('target','/get-started/random-markets#random-nocturnes');
+        tip.setAttribute('target','/get-started/volidx-markets#volidx-quotidians');
     }
     if (market.match(/^smart_fx/) || symbol.match(/^WLD/)){
         tip.show();
@@ -930,4 +928,8 @@ function setUnderlyingTime() {
 
 function chartFrameSource(underlying, highchart_time){
   document.getElementById('chart_frame').src = 'https://webtrader.binary.com?affiliates=true&instrument=' + underlying + '&timePeriod=' + highchart_time.value + '&gtm=true';
+}
+
+function isJapanTrading(){
+    return $('#trading_socket_container.japan').length;
 }

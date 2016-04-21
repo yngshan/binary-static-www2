@@ -677,7 +677,8 @@ Header.prototype = {
         that.client_time_at_response = moment().valueOf();
         that.server_time_at_response = ((start_timestamp * 1000) + (that.client_time_at_response - pass));
         var update_time = function() {
-            clock.html(moment(that.server_time_at_response + moment().valueOf() - that.client_time_at_response).utc().format("YYYY-MM-DD HH:mm") + " GMT");
+            window.time = moment(that.server_time_at_response + moment().valueOf() - that.client_time_at_response).utc();
+            clock.html(window.time.format("YYYY-MM-DD HH:mm") + " GMT");
         };
         update_time();
 
@@ -690,7 +691,6 @@ Header.prototype = {
             BinarySocket.send({"logout": "1"});
         });
     },
-
     validate_cookies: function(){
         if (getCookieItem('login') && getCookieItem('loginid_list')){
             var accIds = $.cookie("loginid_list").split("+");
