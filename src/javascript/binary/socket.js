@@ -162,7 +162,6 @@ function BinarySocketClass() {
                     ViewBalanceUI.updateBalances(response);
                 } else if (type === 'time') {
                     page.header.time_counter(response);
-                    ViewPopupWS.dispatch(response);
                 } else if (type === 'logout') {
                     localStorage.removeItem('jp_test_allowed');
                     RealityCheckData.clear();
