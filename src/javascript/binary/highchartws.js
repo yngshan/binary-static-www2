@@ -309,7 +309,6 @@ var Highchart = (function() {
                   // it's used to ensure barrier and ticks are always in scope
                   window.ymin = contract.barrier*1;
                   window.ymax = contract.barrier*1;
-                  window.barrier = contract.barrier;
               } else if (contract.high_barrier && contract.low_barrier) {
                   window.chart.addPlotLineY({id: 'high_barrier', value: contract.high_barrier*1, label: 'High Barrier (' + contract.high_barrier + ')'});
                   window.chart.addPlotLineY({id: 'low_barrier', value: contract.low_barrier*1, label: 'Low Barrier (' + contract.low_barrier + ')'});
@@ -323,14 +322,14 @@ var Highchart = (function() {
           } else if (response.tick || response.ohlc) {
             if (response.tick) {
               options.tick = response.tick;
-              // if chart is streaming without reaching entry_tick_time, update barrier value
-              if (!is_sold && !is_expired && !window.entry_time) update_barrier(options);
-
               // if entry_tick_time is not available and we failed to calculate it earlier
               // the first tick received will be taken as entry tick
               if (response.tick.epoch > start_time && !window.entry_time) {
                   window.entry_time = response.tick.epoch;
               }
+
+              // if chart is streaming without reaching entry_tick_time, update barrier value
+              if (!is_sold && !is_expired && !entry_tick_time && (!window.barrierFixed || window.barrierFixed === '')) update_barrier(options);
 
               // with every updated tick that comes in, update scale of y-axis
               find_min_max(response.tick.quote);
@@ -382,7 +381,7 @@ var Highchart = (function() {
   function show_chart(contract, update) {
       window.contract = contract;
       if (!update) initialized = false;
-      request_data(contract);
+      request_data(window.contract);
   }
 
   function show_error(type, message) {
@@ -406,6 +405,7 @@ var Highchart = (function() {
     window.request = '';
     window.delayed = '';
     window.is_sold = '';
+    window.barrierFixed = '';
   }
 
   function request_data(contract) {
@@ -433,7 +433,7 @@ var Highchart = (function() {
       request.style = 'candles';
     }
 
-    if(!contract.is_expired && !contract.sell_spot_time) {
+    if(!contract.is_expired && !contract.sell_spot_time && window.time < end_time) {
         request.subscribe = 1;
     }
 
@@ -453,14 +453,49 @@ var Highchart = (function() {
     }
   }
 
-  function update_barrier(options, fix) {
-    if (window.chart && contract.barrier && window.barrier && window.chart.series[0].yAxis.plotLinesAndBands[0].options.value !== options.tick.quote*1) {
-        window.chart.yAxis[0].removePlotLine('barrier');
-        window.chart.addPlotLineY({id: 'barrier', value: options.tick.quote*1, label: 'Barrier (' + options.tick.quote + ')'});
-        window.ymin = options.tick.quote*1;
-        window.ymax = options.tick.quote*1;
-        window.barrier = options.tick.quote*1;
+  function update_barrier(options) {
+    if (window.chart && window.entry_time && window.contract.longcode) {
+      var countPlus = (window.contract.longcode.match(/plus/g) || []).length;
+      var countMinus = (window.contract.longcode.match(/minus/g) || []).length;
+      var string = window.contract.longcode;
+      var firstValue, secondValue;
+      if (countPlus === 2) {
+        firstValue = parseFloat(string.substring(string.indexOf("plus") + 5).slice(0,5));
+        secondValue = parseFloat(string.substring(string.lastIndexOf("plus") + 5).slice(0,5));
+      } else if (countMinus === 2) {
+        firstValue = parseFloat(string.substring(string.indexOf("minus") + 6).slice(0,5));
+        secondValue = parseFloat(string.substring(string.lastIndexOf("minus") + 6).slice(0,5));
+      } else if (countPlus === 1 && countMinus === 1) {
+        firstValue = parseFloat(string.substring(string.indexOf("plus") + 5).slice(0,5));
+        secondValue = parseFloat(string.substring(string.indexOf("minus") + 6).slice(0,5));
+      } else if (countPlus === 1) {
+        firstValue = parseFloat(string.substring(string.indexOf("plus") + 5).slice(0,5));
+        secondValue = firstValue;
+      } else if (countMinus === 1) {
+        firstValue = parseFloat(string.substring(string.indexOf("minus") + 6).slice(0,5));
+        secondValue = firstValue;
+      }
+      if (firstValue && secondValue) {
+        var array = [firstValue, secondValue];
+        array = array.sort;
+        if (window.contract.barrier) {
+          window.chart.yAxis[0].removePlotLine('barrier');
+          window.chart.addPlotLineY({id: 'barrier', value: array[1], label: 'Barrier (' + array[1] + ')'});
+          window.ymin = array[1];
+          window.ymax = array[1];
+          window.barrierFixed = 'true';
+        } else if (window.contract.low_barrier && window.contract.high_barrier) {
+          window.chart.yAxis[0].removePlotLine('low_barrier');
+          window.chart.yAxis[0].removePlotLine('high_barrier');
+          window.chart.addPlotLineY({id: 'high_barrier', value: array[2], label: 'High Barrier (' + array[2] + ')'});
+          window.chart.addPlotLineY({id: 'low_barrier', value: array[1], label: 'Low Barrier (' + array[1] + ')'});
+          window.ymin = array[1];
+          window.ymax = array[2];
+          window.barrierFixed = 'true';
+        }
+      }
     }
+    return;
   }
 
   function find_min_max(currentLow, currentHigh) {
