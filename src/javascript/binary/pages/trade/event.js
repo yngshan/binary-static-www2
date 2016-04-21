@@ -540,7 +540,7 @@ var TradingEvents = (function () {
             });
         }
 
-        if(typeof is_japan === 'function'){
+        if(isJapanTrading()){
             var amount_type = document.getElementById('amount_type');
             var options = amount_type.getElementsByTagName('option');
             for(var d=0; d<options.length; d++){

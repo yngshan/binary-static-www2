@@ -17,6 +17,12 @@ var PricingTable = (function() {
         longCode = longCode.replace('{' + key + '}', values[key]);
       });
 
+      longCode = longCode.replace(/\[_1\]/, values.currency)
+        .replace(/\[_2\]/, values.sum)
+        .replace(/\[_3\]/, values.symbol)
+        .replace(/\[_4\]/, values.close);
+
+
       return React.createElement(
         'div', { className: 'contract_description' },
         React.createElement(
@@ -299,7 +305,7 @@ var PricingTable = (function() {
             var longCode = {
               mask: mask,
               values: {
-                currency: 'JPY',
+                currency: '¥',
                 sum: 1000,
                 symbol: state.symbol,
                 close: close,

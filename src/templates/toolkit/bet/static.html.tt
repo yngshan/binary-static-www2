@@ -1,7 +1,3 @@
-[% IF is_japan %]
-<script>function is_japan(){}</script>
-[% END %]
-
 <div id="trading_socket_container" class="tab-menu-wrap [% IF is_japan %]japan[% END %]">
    <p id="markets_closed_msg" class="notice-msg center hidden">[% l('All markets are closed now. Please try again later.') %]</p>
    <div id="loading_container" class="overlay_container">
@@ -141,7 +137,7 @@
                           <label for="japan_unit" id="japan_unit_label"></label>
                         </div>
                         <div class="row-inner big-col">
-                           <div><input id="japan_unit" type="text" step="any" maxlength="10" value="1" class="medium_width_input" /> x 1000</div>
+                           <div><input id="japan_unit" type="text" step="any" maxlength="10" value="1" class="medium_width_input" /> x ¥1000</div>
                         </div>
                      </div>
 
@@ -183,14 +179,12 @@
                      </div>
                   </form>
                </div>
-               [% IF is_japan %]
                <div id="contract_description1"></div>
                <div id="contract_description2"></div>
                <div id="pricing_table_container" class="row">
                   <div id="pricing_table"></div>
                </div>
-               [% INCLUDE account/openpositionsws.html.tt %]
-               [% END %]
+               <div id="open_positions_container">[% INCLUDE account/openpositionsws.html.tt %]</div>
             </div>
          </div>
       </div>
