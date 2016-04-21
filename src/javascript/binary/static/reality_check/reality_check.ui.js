@@ -53,7 +53,7 @@ var RealityCheckUI = (function () {
         $('#session-duration').text(summary.sessionDuration);
         
         $('#login-id').text(summary.loginId);
-        $('#currency').text(summary.currency);
+        $('#rc_currency').text(summary.currency);
         $('#turnover').text(summary.turnover);
         $('#profitloss').text(summary.profitLoss);
         $('#bought').text(summary.contractsBought);
