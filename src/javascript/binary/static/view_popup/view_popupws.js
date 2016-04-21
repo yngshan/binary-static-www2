@@ -243,7 +243,7 @@ var ViewPopupWS = (function() {
     };
 
     var normalUpdate = function() {
-        normalUpdateTimers(contract.current_spot_time, moment().valueOf());
+        normalUpdateTimers();
         var finalPrice = contract.sell_price || contract.bid_price,
             is_started = !contract.is_forward_starting || contract.current_spot_time > contract.date_start,
             user_sold  = contract.sell_spot_time && contract.sell_spot_time < contract.date_expiry,
@@ -289,12 +289,10 @@ var ViewPopupWS = (function() {
         contract.validation_error = '';
     };
 
-    var normalUpdateTimers = function(serverTime, clientTime) {
-        window.client_time_at_response = moment().valueOf();
-        window.server_time_at_response = serverTime * 1000 + (window.client_time_at_response - clientTime);
+    var normalUpdateTimers = function() {
         var update_time = function() {
-            var now = Math.floor((window.server_time_at_response + moment().valueOf() - window.client_time_at_response) / 1000);
-            containerSetText('trade_details_live_date' , epochToDateTime(Math.max(now, contract.current_spot_time || 0)));
+            var now = Math.max(Math.ceil((window.time || 0) / 1000), contract.current_spot_time || 0);
+            containerSetText('trade_details_live_date' , epochToDateTime(now));
 
             var is_started = !contract.is_forward_starting || contract.current_spot_time > contract.date_start,
                 is_ended   = contract.is_expired || contract.is_sold;
@@ -630,9 +628,6 @@ var ViewPopupWS = (function() {
                 default:
                     break;
             }
-        }
-        else if(contractType === 'normal' && response.msg_type === 'time' && !isNaN(response.echo_req.passthrough.client_time) && !response.error) {
-            normalUpdateTimers(response.time, response.echo_req.passthrough.client_time);
         }
     };
 
