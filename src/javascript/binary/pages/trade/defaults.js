@@ -11,10 +11,11 @@
 var Defaults = (function(){
     'use strict';
 
+    var params = {};
     var getDefault = function(key) {
-        var pValue = page.url.param(key),
+        var pValue = params[key] || page.url.param(key),
             sValue = sessionStorage.getItem(key);
-        if(pValue && !sValue) {
+        if(pValue && (!sValue || pValue != sValue)) {
             sessionStorage.setItem(key, pValue);
         }
         if(!pValue && sValue) {
@@ -26,15 +27,17 @@ var Defaults = (function(){
     var setDefault = function(key, value) {
         if(key) {
             value = value || '';
-            sessionStorage.setItem(key, value);
-            var params = page.url.params_hash();
-            params[key] = value;
-            window.history.replaceState(null, null, window.location.pathname + '?' + page.url.params_hash_to_string(params));
+            if(Object.keys(params).length === 0) params = page.url.params_hash();
+            if(params[key] != value) {
+                sessionStorage.setItem(key, value);
+                params[key] = value;
+                window.history.replaceState(null, null, window.location.pathname + '?' + page.url.params_hash_to_string(params));
+            }
         }
     };
 
     var removeDefault = function() {
-        var params = page.url.params_hash();
+        if(Object.keys(params).length === 0) params = page.url.params_hash();
         for (var i = 0; i < arguments.length; i++) {
             sessionStorage.removeItem(arguments[i]);
             delete(params[arguments[i]]);
@@ -46,5 +49,6 @@ var Defaults = (function(){
         get   : getDefault,
         set   : setDefault,
         remove: removeDefault,
+        clear : function(){params = {};}
     };
 })();
