@@ -18,7 +18,7 @@ pjax_config_page("cashier/authenticatews", function(){
       }
       var message = document.getElementById('authentication-message');
       if (page.client.is_virtual()) {
-        show_error(text.localize('Sorry, this feature is not available.'));
+        show_error(text.localize('This feature is not relevant to virtual-money accounts.'));
         return;
       } else {
         BinarySocket.init({
