@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-21 10:50+0000\n"
-"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-04-21 23:59+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -131,10 +131,9 @@ msgstr "当社では、皆様に簡単かつ効果的なトレードの機会を
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "%1 has created random indices that you can trade 24/7. You can trade randoms on all types of contract:"
 msgid "%1 has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract:"
-msgstr "当社は平日24時間お取引ができるランダムインデックスを作成しました。全タイプの契約でランダム取引が可能です。"
+msgstr "当社では平日24時間お取引いただけるボラティリティインデックスを作成しました。全タイプのトレードでお取引が可能です。"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -281,10 +280,11 @@ msgstr "当社はそれぞれの地域のお客様に現地決済処理サービ
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "%1's Random Indices are the %2, %3, %4, and %5. These indices correspond to volatilities of 25%, 50%, 75% and 100%"
 msgid "%1's Continuous Indices are the Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 25%, 50%, 75% and 100%."
-msgstr "％1のランダムインデックスは％2、％3、％4、％5です。これらのインデックスは、25％、50％、75％、100％のボラリティに対応します。"
+msgstr ""
+"当社の連続インデックスには、ボラティリティ25指数、ボラティリティ75指数、ボラティリティ100指数があります。これらのインデックスは25%、50%、75"
+"%、100%の一定のボラティリティがシミュレートされた市場に対応しています。"
 
 #. (stash->{website_name}, pjax_link_for(l('Random 25 Index')
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -1048,17 +1048,15 @@ msgstr "<strong>荒れ相場の時</strong>：「タッチ」、「レンジ外�
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
-#, fuzzy
 #| msgid "<strong>Random Indices</strong> - trade %1's proprietary random indices."
 msgid "<strong>Volatility Indices</strong> - trade %1's proprietary volatility indices."
-msgstr "<strong>ランダムインデックス</strong> - 日本国内には提供しておりません。"
+msgstr "<strong>ボラティリティインデックス</strong> - 日本国内には提供しておりません。"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
-#, fuzzy
 #| msgid "<strong>Random indices</strong> - trade %1's own random indices, 24/7."
 msgid "<strong>Volatility indices</strong> - trade %1's own volatility indices, 24/7."
-msgstr "<strong>ランダムインデックス</strong> -日本国内には提供しておりません。"
+msgstr "<strong>ボラティリティインデックス</strong> -日本国内には提供しておりません。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/logintrouble.html.tt:62
 msgid "<ul><li> Go to the <strong>More actions</strong> menu and select <strong>Settings</strong>. </li><li> Under <strong>Advanced Settings</strong>, click on the <strong>View advanced settings</strong> button. </li><li> Under the <strong>Cookies</strong> section, select the \"<strong>Don't block cookies</strong>\" option. </li><li> Click anywhere outside the menu to save and close. </li></ul>"
@@ -2411,7 +2409,7 @@ msgstr "ビル（マンション）名、号室"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Bull Market and Bear Market Indices start at 10:00 GMT and 00:00 GMT each day, replicating a bullish and bearish market respectively."
-msgstr ""
+msgstr "ブル/ベア市場インデックスは毎日10:00 GMTから00:00 GMT まで。それぞれ強気/弱気市場を再現しています。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "Business Development"
@@ -3029,10 +3027,9 @@ msgid "Continue Trading"
 msgstr "取引の継続"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "Synthetic Indices"
 msgid "Continuous Indices"
-msgstr "Synthetic Indices"
+msgstr "連続インデックス"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:208
 msgid "Contract"
@@ -3375,14 +3372,13 @@ msgid "Daily Report"
 msgstr "デイリーレポート"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "Daily Prices"
 msgid "Daily Reset Indices"
-msgstr "日毎価格データ"
+msgstr "デイリーリセットインデックス"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility."
-msgstr ""
+msgstr "デイリーリセットインデックスは一定のボラティリティで強気と弱気の傾向にある市場を再現しています。"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:124
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:233
@@ -3914,10 +3910,9 @@ msgid "Discover our Smart Markets."
 msgstr "当社のスマートマーケットを知ろう"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
-#, fuzzy
 #| msgid "Discover our Smart Markets."
 msgid "Discover our Volatility Indices."
-msgstr "当社のスマートマーケットを知ろう"
+msgstr "当社のボラティリティインデックスを知ろう"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/main.html.tt:23
 msgid "Discovering an easy, low-risk, flexible and, award-winning platform?"
@@ -4027,7 +4022,7 @@ msgstr "当社の申請プロセスにおいて、お客様の身元や、投資
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:119
 msgid "During the term of this Agreement, you grant us a royalty-free, non-exclusive, worldwide, irrevocable right, under all of your intellectual property rights, to:"
-msgstr ""
+msgstr "本契約期間中に、あなたの全知的財産権に基いて、ロイヤリティフリー・非独占・世界規模・取消不可であるこの権利を当社に譲渡されることになります。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:129
 msgid "During the term of this Agreement, you may be entrusted with confidential information relating to the business, operations, or underlying technology of the Company and/or the Company's affiliate program. You agree to avoid disclosure or unauthorised use of the confidential information to third persons or outside parties unless you have the Company's prior written consent and that you will use the Confidential Information only for purposes necessary to further the purposes of this Agreement. Your obligations with regards to confidential information shall survive the termination of this Agreement."
@@ -5193,10 +5188,9 @@ msgstr "スプレッド取引方法"
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/get_started/nav.html.haml:1
-#, fuzzy
 #| msgid "How to trade the random markets?"
 msgid "How to trade the Volatility Indices markets?"
-msgstr "ランダムマーケットの取引方法"
+msgstr "ボラティリティインデックスマーケットの取引方法"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "How to trade the random markets?"
@@ -5666,10 +5660,9 @@ msgid "In/Out (<a href=\"%1\">ends between/outside</a> and <a href=\"%2\">stays 
 msgstr "イン/アウト (<a href=\"%1\">範囲内/外で終了</a> または <a href=\"%2\">範囲内に留まるか範囲外へ出る</a>)"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "In/Out (<a href=\"%1\">ends between/outside</a> and <a href=\"%2\">stays between/goes outside</a>)"
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr "イン/アウト (<a href=\"%1\">範囲内/外で終了</a> または <a href=\"%2\">範囲内に留まるか範囲外へ出る</a>)"
+msgstr "イン/アウト (範囲内/外で終了または 範囲内に留まるか範囲外へ出る)"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
@@ -8594,10 +8587,13 @@ msgstr "当社サイトは、お客様のご口座へのIPアドレスのアク�
 
 #. (broker_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:37
-#, fuzzy
 #| msgid "Please note that weekend quotes are ignored for the purpose of contract settlement. During weekends, the forex markets may occasionally generate prices, however these prices are often artificial (traders sometimes take advantage of the illiquidity of the markets during weekends to push up or down prices). To avoid settling prices based on such artificial prices, it is %1's policy not to count weekend prices towards contract settlement values (except for the random indices, which are open during weekends)."
 msgid "Please note that weekend quotes are ignored for the purpose of contract settlement. During weekends, the forex markets may occasionally generate prices, however these prices are often artificial (traders sometimes take advantage of the illiquidity of the markets during weekends to push up or down prices). To avoid settling prices based on such artificial prices, it is %1's policy not to count weekend prices towards contract settlement values (except for the volatility indices, which are open during weekends)."
-msgstr "トレードを確定する目的で週末の価格が適用されないことをご理解下さい。週末にも外国為替市場にて価格変動が発生する場合がありますが、このような価格は恣意的に発生させられたものである（週末の市場硬直性から利益を得ようとするトレーダーが存在します。）ことが殆どですので、このような恣意的な価格に基づく価格設定を避けるために週末も開場しているランダム指数を除き、%1では週末の価格をトレードの確定要素として採用することはありません。日本国内では週末にお取引はできません"
+msgstr ""
+"トレードを確定する目的で週末の価格が適用されないことをご理解下さい。週末にも外国為替市場にて価格変動が発生する場合がありますが、このような価格は恣意的に発"
+"生させられたものである（週末の市場硬直性から利益を得ようとするトレーダーが存在します。）ことが殆どですので、このような恣意的な価格に基づく価格設定を避ける"
+"ために週末も開場しているボラティリティ指数を除き、%1では週末の価格をトレードの確定要素として採用することはありません。日本国内では週末にお取引はできませ"
+"ん"
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:12
@@ -10021,10 +10017,9 @@ msgid "Sorry, client balance will exceed limits with this payment."
 msgstr "申し訳ございません。この出金は口座残高の制限を超えております。"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1536
-#, fuzzy
 #| msgid "Sorry, contracts on Random Indices are not available in your country of residence"
 msgid "Sorry, contracts on Volatility Indices are not available in your country of residence"
-msgstr "申し訳ございませんが、お客様の居住地域にてランダムインデックスの取引はできません。"
+msgstr "申し訳ございませんが、お客様の居住地域ではボラティリティインデックスの取引はできません。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:480
 msgid "Sorry, it is not allowed."
@@ -10641,7 +10636,7 @@ msgstr "期間と終了"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:224
 msgid "Terminate this Agreement by giving a minimum of seven days written notice to you."
-msgstr ""
+msgstr "本契約終了の際は、遅くとも7日前に事前に通知させていただきます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:223
 msgid "Terminate your use of the Binary.com API; or"
@@ -10884,6 +10879,8 @@ msgstr "当社は%1がサービスの中断やエラーが全く起こらない�
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:149
 msgid "The Company may change, suspend, terminate or discontinue any aspect of the Binary.com API, including the availability of any services, information features or functions accessible by means of the Binary.com API, on no less than seven days advance notice to you."
 msgstr ""
+"当社においてBinary.com APIを用いてサービス、情報機能、アクセス機能の可用性を含むBinary.com "
+"APIの機能の変更、停止、終了をする場合があります。その場合、遅くとも7日前に事前に通知させていただきます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:163
 msgid "The Company may from time to time inform you about changes on the website, new services and promotions. If you, however, wish to opt out of such a service and do not wish to receive any direct marketing data you can either unsubscribe to the service or email our customer support team. If you decide to opt in again into receiving promotional material, you can also do so by contacting us."
@@ -10908,6 +10905,9 @@ msgstr "当社には場合に応じて、独自の判断で適切にな執行が
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:171
 msgid "The Company provides the Binary.com API on an \"as is\" and \"as available\" basis with no warranties, either express or implied, of any kind. To the fullest extent permissible under applicable law, the Company disclaim any and all warranties and representations, including, without limitation, any implied warranties of merchantability, fitness for a particular purpose, title, accuracy of data, and non-infringement."
 msgstr ""
+"当社は原則としてい「現状のまま (as is)」、「提供されているまま (as available)」でBinary.con APIを提供し、あらゆる明示"
+"的・黙示的保証をすることはありません。法律によって許される最大の限度で、当社は特定の目的、権原、データの正確性、非侵害のために商品性、適合性の黙示的保証を"
+"含む一切の保証または表明を放棄します。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:27
 msgid "The Company reserves the right in its sole discretion to refuse and/or cancel services, charge deposit and/or withdrawal fees to anyone for any reasons including, but not limited to:"
@@ -11039,10 +11039,9 @@ msgid "The USD Index is a weighted Index, measuring the US Dollar’s value agai
 msgstr "USDインデックスとは、5グローバル通貨(EUR, GBP, JPY, CAD, AUD)のバスケットに対するアメリカドルの価値を計る各荷重20％の荷重インデックスです。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "The %1 is twice as volatile as the %2, and four times as volatile as the %3."
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index."
-msgstr "%1は%2の2倍の、%3の4倍の揮発性があります。"
+msgstr "ボラティリティ100指数は、ボラティリティ50指数の2倍、ボラティリティ25指数の４倍の揮発性があります。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to acquire knowledge of compliance matters in a multitude of international jurisdictions"
@@ -11533,6 +11532,8 @@ msgstr "価格を決定された後に取引対象の市場が著しく変動し
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:157
 msgid "The use of the Binary.com API is at your own risk, and you assume full responsibility and risk of loss it may suffer as a result of using, or accessing the Binary.com API. Except to the extent that liability under any applicable law or regulation cannot be excluded:"
 msgstr ""
+"Binary.com APIの使用はご自身の責任の上行うようにしてください。Binary.com "
+"APIの使用またはアクセスの結果生じた損害への全責任及び全リスクを負っていただきます。適用される法律、規制に基づく責任の範囲は除外することはできません。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:192
 msgid "The use, operation or combination of the Binary.com API with non-Binary.com API(s), data, equipment or documentation if liability would have been avoided but for such use, operation, or combination; or"
@@ -11879,10 +11880,9 @@ msgid "This market is presently closed."
 msgstr "この市場は現在閉場しております。"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:486
-#, fuzzy
 #| msgid "This market is presently closed. Try out the Random Indices which are always open."
 msgid "This market is presently closed. Try out the Volatility Indices which are always open."
-msgstr "この市場は現在閉鎖されています。いつでもお取引いただけるランダムインデックスをお試しください。"
+msgstr "この市場は現在閉鎖されています。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/market_warning.html.tt:8
 msgid "This market opens late today at"
@@ -12021,6 +12021,8 @@ msgstr "ご口座アップグレードのお手続きを進めて頂くには、
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:61
 msgid "To improve the user experience of your Application, where appropriate you may cache the Content for up to 24 hours from a request for that Content through the Binary.com API before being deleted. This limited permission to cache is for performance reasons only."
 msgstr ""
+"あなたのアプリケーションのユーザーエクスペリエンス改善のために、削除前にBinary.com "
+"APIを通してコンテンツへのリクエストから24時間までにコンテンツをキャッシュすることができます。キャッシュへの制限許可は実行上の理由に限ります。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:482
 msgid "To open a trading account, our customers must confirm they fully understand the mechanisms and risks of transactions. Please acknowledge your understanding and agreement to each of the following statements, by placing a check mark in the boxes alongside."
@@ -12335,10 +12337,9 @@ msgid "Try it now"
 msgstr "今すぐ試す"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2362
-#, fuzzy
 #| msgid "Try out the Random Indices which are always open."
 msgid "Try out the Volatility Indices which are always open."
-msgstr "いつでもお取引いただけるランダムインデックスをお試しください。"
+msgstr "いつでもお取引いただけるボラティリティインデックスをお試しください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:122
 msgid "Tu"
@@ -12533,7 +12534,7 @@ msgstr "デモ口座で当社プラットフォームでのトレードを練習
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:122
 msgid "Use, perform, and display your Application and its content for purposes of marketing, demonstrating, and making your Application available to our clients; and    "
-msgstr ""
+msgstr "マーケティング、実証、当顧客にアプリケーションを利用させることを目的としたコンテンツとアプリケーションの使用、実行、表示    "
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/partners.html.haml:1
 msgid "User Testing"
@@ -12690,18 +12691,17 @@ msgstr "当社xxxを訪れる"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Volatility Index Markets"
-msgstr ""
+msgstr "ボラティリティインデックス市場"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:414
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
-#, fuzzy
 #| msgid "Smart Indices"
 msgid "Volatility Indices"
-msgstr "Smart Indices"
+msgstr "ボラティリティ指数"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Volatility Indices are further categorized into two types:"
-msgstr ""
+msgstr "ボラティリティインデックスは更に２種類に分類されます。："
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:151
 msgid "Waiting for entry tick."
@@ -12891,6 +12891,8 @@ msgstr "当社ではお客様の個人情報と資産情報のお取り扱いに
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:88
 msgid "We reserve the right to modify, supplement, or replace these Terms at any time. Any material changes will be notified to you. Your continued registration with the Binary.com API and your continued use of the Binary.com API will constitute binding acceptance of such changes."
 msgstr ""
+"当社はこれら規約をいつでも変更、補完、置き換える権利を留保します。重大な変更は通知されます。Binary.com "
+"APIへのご登録または使用の継続は、変更への同意とみなされます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "We segregate and hold client funds in secure AAA-rated banks."
@@ -13442,6 +13444,8 @@ msgstr "Binary.com APIの使用とアクセスを介したお取引または通�
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:201
 msgid "You acknowledge that, in the course of dealing under these Terms, you may obtain confidential information relating to the Company and its parent, subsidiaries, affiliates or other third party. Such confidential information shall belong solely to the Company."
 msgstr ""
+"これら条件下の対処過程において、当社及び親会社、子会社、関連会社、その他サードパーティに関する機密情報を得ることができ、このような機密情報は当社のみに帰属"
+"するものということを了承します。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:18
 msgid "You agree that by developing on the Binary.com API, you are entering into a legally binding agreement with the Company."
@@ -14675,50 +14679,43 @@ msgid "you have sufficient experience and knowledge in matters of financial trad
 msgstr "当社サービスを通じて金融トレードを購入するメリットとリスクを評価でき、かつ当社サイトに掲載されている情報に依存せずに金融トレードを行ったことのあるような金融トレードにおける十分な経験と知識があります。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:518
-#, fuzzy
 #| msgid "%1 %2 payout if %3 does not touch %6 through %5."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 does not touch Exercise price through close on %4."
-msgstr "%3が%5まで%6にタッチしなかった場合、%1%2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%4までに権利行使価格に達しなかった場合、%1%2のペイアウトをお受け取りいただけます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:520
-#, fuzzy
 #| msgid "%1 %2 payout if %3 ends on or between %7 to %6 at %5 after %4."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 ends on or between low and high values of Exercise price at close on %4."
-msgstr "%3が%4後の%5の時点で%7と%6のちょうどかまたはその範囲内で終了した場合に、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%4までに権利行使価格の値で終了または上限バリアと下限バリアの範囲内で終了した場合、%1 %2のペイアウトをお受け取りいただけます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:521
 msgid "{JAPAN ONLY}%1 %2 payout if %3 ends otside low and high values of Exercise price at close on %4."
-msgstr ""
+msgstr "%3が%4の時点で権利行使価格値の上限バリアと下限バリア外で終了した場合、%1 %2のペイアウトをお受け取りいただけます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:523
-#, fuzzy
 #| msgid "%1 %2 payout if %3 goes outside %7 and %6 through %5 after %4."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 goes ouside of low and high values of Exercise price through close on %4."
-msgstr "%3が%4後の%5までに%7と%6のレンジ外にある場合、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%4までに権利行使価格の値の上限バリアと下限バリアの範囲外にでた場合、%1 %2のペイアウトをお受け取りいただけます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:516
-#, fuzzy
 #| msgid "%1 %2 payout if %3 is strictly higher than %6 at %5 after %4."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 is strictly higher or equal than Exercise price at close  on %4."
-msgstr "%3が%4後の%5の時点で%6より正確に高い場合に%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%4の時点で権利行使価格以上であった場合、%1 %2のペイアウトをお受け取りいただけます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:517
-#, fuzzy
 #| msgid "%1 %2 payout if %3 is strictly lower than %6 at %5."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 is strictly lower than Exercise price at close on %4."
-msgstr "%3が%5の時点で正確に%6よりも低い場合、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%4の時点で権利行使価格未満であった場合、%1 %2のペイアウトをお受け取りいただけます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:522
-#, fuzzy
 #| msgid "%1 %2 payout if %3 stays between %7 and %6 through %5 after %4."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 stays between low and high values of Exercise price through close on %4."
-msgstr "%3が%4後の%5まで常に正確に%7と%6の範囲内に留まった場合、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%4まで常に上限バリアと下限バリアの範囲内に留まった場合、%1 %2のペイアウトをお受け取りいただけます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:519
-#, fuzzy
 #| msgid "%1 %2 payout if %3 touches %6 through %5 after %4."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 touches Exercise price through close on %4."
-msgstr "%3が%4後の%5までに%6にタッチした場合、%1 %2のペイアウトをお受け取りいただけます。"
+msgstr "%3が%4までに権利行使価格に達した場合、%1 %2のペイアウトをお受け取りいただけます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:413
 msgid "{JAPAN ONLY}A  Net Settlement type of option is one where the underlying asset does not include yen, but the option fee and settlement are paid in yen; it therefore requires some definition of how the settlement amounts will be calculated and converted to yen."
@@ -14819,10 +14816,9 @@ msgid "{JAPAN ONLY}As the time to the exercise point shortens, the time-value of
 msgstr "時間的価値は、オプションの権利行使期限までの時間が短くなるほど減少する。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:524
-#, fuzzy
 #| msgid "{JAPAN ONLY}How to Open an Account"
 msgid "{JAPAN ONLY}BUY price per unit"
-msgstr "口座開設について"
+msgstr "単位ごとの価格を購入"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:470
 #, fuzzy
@@ -14932,7 +14928,7 @@ msgstr "コールオプション、プットオプション共に、原資産の
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:127
 msgid "{JAPAN ONLY}For full details of the documents we can accept please download the following guide:"
-msgstr ""
+msgstr "書類の詳細に関しては次のガイドをダウンロードしてご確認いただけます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:504
 msgid "{JAPAN ONLY}Historical volatility is a prediction of the future rate of change in the underlying asset."
@@ -15060,6 +15056,7 @@ msgstr "一般的には、バイナリーオプションの価格は、ペイア
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:139
 msgid "{JAPAN ONLY}In order to open a trading account for you we will need to test your knowledge of options to ensure you have the necessary understanding of the products and risks of binary option trading."
 msgstr ""
+"取引口座の開設には、バイナリーオプション取引の商品またはリスクへの知識を明確にするため、オプションの知識確認テストを受けていただく必要がございます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:147
 msgid "{JAPAN ONLY}Introduction to Binary Options"
@@ -15115,10 +15112,9 @@ msgid "{JAPAN ONLY}Options Basic Knowledge"
 msgstr "知識確認テスト"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:157
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 4: Risk"
 msgid "{JAPAN ONLY}Options Basics"
-msgstr "｛日本限定｝第四章：リスク"
+msgstr "オプションの基本"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:464
 msgid "{JAPAN ONLY}Options are said to be leveraged products because in the case of large moves in the underlying asset price, the values of the options can increase by large amounts compared to the price paid for the option."
@@ -15157,19 +15153,20 @@ msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:183
 msgid "{JAPAN ONLY}Please download our Full Trading Guide which describes in detail how to use our trading screens and other features of our website:"
-msgstr ""
+msgstr "取引画面のご利用方法または当サイトで提供している機能の詳細をご覧いただける完全取引ガイドをダウンロードしてご利用ください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:142
 msgid "{JAPAN ONLY}Please download our Options Basic Knowledge guides which cover all the essential concepts, terminalogy and required information:"
-msgstr ""
+msgstr "基本知識や必要な情報が詰まったオプション基本知識ガイドをダウンロードしてご利用ください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:207
 msgid "{JAPAN ONLY}Please download our Pre-Contract Documents which you must confirm you have read, understood and agree with, when upgrading to a real money account."
 msgstr ""
+"リアルマネー口座へのアップグレードされる場合、契約締結前書類をダウンロードして、ご一読いただき、ご理解、同意いただいけることを確認してください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:195
 msgid "{JAPAN ONLY}Please download our Summary of Specifications which lists all the details of our trade types, rules and conditions for trading etc."
-msgstr ""
+msgstr "当社の取引タイプ、ルール、条件の全詳細が記載されている仕様概要をダウンロードしてください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:205
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:21
@@ -15191,23 +15188,21 @@ msgstr "店頭バイナリーオプション取引の場合、金融商品取引
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:152
 msgid "{JAPAN ONLY}Purchase, Settlement & Resale"
-msgstr ""
+msgstr "購入・決済・転売"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:478
 msgid "{JAPAN ONLY}Regarding to the OTC price of financial instruments, in case that financial instruments business operator suggests both of  bid and ask price (or trading price and cancellation price), generally there is a difference of them. This option will be wider as the expiration approaches."
 msgstr "次の文章のうち、金融商品の店頭取引の価格について、金融商品取引業者が買値と売値（又は買戻取価格、解約価格）の２つの価格をお客様に提示する場合、一般的には２つの価格には差（スプレッド）がある。このスプレッドはオプションの期限が近付くと広がる傾向がある。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:174
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 4: Risk"
 msgid "{JAPAN ONLY}Regulation & Tax"
-msgstr "｛日本限定｝第四章：リスク"
+msgstr "規制と税"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:525
-#, fuzzy
 #| msgid "{JAPAN ONLY}How to Open an Account"
 msgid "{JAPAN ONLY}SELL price  per unit"
-msgstr "口座開設について"
+msgstr "単位ごとの価格を売却"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:405
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:24
@@ -15252,10 +15247,9 @@ msgstr "｛日本限定｝残念ながら、合格点に達しませんでした
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:18
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:193
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:50
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 4: Risk"
 msgid "{JAPAN ONLY}Summary of Specifications"
-msgstr "｛日本限定｝第四章：リスク"
+msgstr "仕様概要"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:402
 msgid "{JAPAN ONLY}Take knowledge test"
@@ -15359,10 +15353,9 @@ msgid "{JAPAN ONLY}To compensate for any rise in the price of an underlying asse
 msgstr "将来取得する予定の原資産の値上がりを補うため、原資産のコールオプションを取得した。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:164
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 2: Method"
 msgid "{JAPAN ONLY}Trading & Hedging"
-msgstr "｛日本限定｝第二章：メソッド"
+msgstr "取引とヘッジ"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:15
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:181
@@ -15371,10 +15364,9 @@ msgid "{JAPAN ONLY}Trading Guide"
 msgstr "トレードガイド"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:526
-#, fuzzy
 #| msgid "{JAPAN ONLY}Download"
 msgid "{JAPAN ONLY}Units"
-msgstr "ダウンロード"
+msgstr "単位"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:459
 msgid "{JAPAN ONLY}Unless special arrangements are made, cooling-off will not be available after OTC binary options trading contract has been made."
@@ -15393,6 +15385,8 @@ msgstr "ペイアウトは固定されているので、バイナリーオプシ
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:124
 msgid "{JAPAN ONLY}We are required to request copies of your My Number Card as well as proof of registered address. Your details will be kept secure and only used for the specific purposes of verifying your credentials, as required by law."
 msgstr ""
+"当社では登録された住所の証明はもちろん、マイナンバーカードのコピーのご提出も皆様へお願いすることになっています。\n"
+"法律の定めるところにより、詳細は安全に保持され、資格情報確認の特定の目的のためだけに使用させていただきます。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:435
 #, fuzzy
