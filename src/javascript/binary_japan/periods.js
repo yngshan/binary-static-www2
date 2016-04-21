@@ -1,4 +1,4 @@
-if(typeof is_japan === 'function'){
+if(isJapanTrading()){
 	var Periods = (function(){
 		var barrier = 0,
 			barrier2 = 0,
