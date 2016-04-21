@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-21 08:58+0000\n"
-"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/binary/static/ja/>\n"
+"PO-Revision-Date: 2016-04-21 10:50+0000\n"
+"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
+"Language-Team: Japanese "
+"<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14731,7 +14732,7 @@ msgstr "バイナリーオプションは、権利行使期日の原資産価格
 #, fuzzy
 #| msgid "{JAPAN ONLY}Implied volatility is a prediction of the future rate of change in the underlying asset."
 msgid "{JAPAN ONLY}A Covered option position is where you hold an offsetting position in the underlying asset."
-msgstr "インプライドボラティリティとは、原資産に対する将来の変動率を予測したボラティリティのことである。"
+msgstr "カバ－ド・オプションとはオプションの売りポジションをカバ－するような原資産を保有し、オプションを売ることである。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:417
 msgid "{JAPAN ONLY}A Currency Binary Option is one where there is a target for a particular currency pair, so a strike price for the exchange rate is agreed, and a payout will be due if the judgment price meets the conditions of being over or under the target strike price, depending on the option type, by the exercise time."
@@ -14743,7 +14744,7 @@ msgstr "通貨オプションとは、通貨を原資産とし、一方の通貨
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:431
 msgid "{JAPAN ONLY}A binary call option buyer will benefit from a correct prediction that the asset price will decline to below the strike price by the judgment time."
-msgstr ""
+msgstr "判定時刻に、原資産価格が権利行使価格よりも下落していると予測し、バイナリーコールオプションを購入した。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:434
 msgid "{JAPAN ONLY}A binary call options buyer will benefit from a correct prediction that the asset price will rise above the strike price by the judgment time."
@@ -14763,15 +14764,15 @@ msgstr "アウトオブザマネーのバイナリーオプションは、ペイ
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:432
 msgid "{JAPAN ONLY}A binary put option buyer will benefit from a correct prediction that the asset price will decline to below the strike price by the judgment time."
-msgstr ""
+msgstr "判定時刻に、原資産価格が権利行使価格よりも下落していると予測し、バイナリープットオプションを購入した。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:433
 msgid "{JAPAN ONLY}A binary put options buyer will benefit from a correct prediction that the asset price will rise above the strike price by the judgment time."
-msgstr ""
+msgstr "判定時刻に、原資産価格が権利行使価格よりも上昇していると予測し、バイナリープットオプションを購入した。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:441
 msgid "{JAPAN ONLY}A bought or sold binary option may be closed-out before exercise time by selling or buying-back the option, or alternatively by cancelling."
-msgstr "買付したバイナリーオプションは、反対売買（又は解約）により、判定時刻より前に決済することができる。"
+msgstr "購入したバイナリーオプションは、反対売買（又は解約）により、判定時刻より前に決済することができる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:509
 msgid "{JAPAN ONLY}A modified version of the Black-Scholes model is widely used to calculate the theoretical prices of binary options."
@@ -14788,10 +14789,14 @@ msgstr "口座開設完了後にお客様へ簡易書留郵便で認証コード
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:444
 msgid "{JAPAN ONLY}Although customers and brokers will set limits on customers trading losses, even if those losses are exceeded, it is the customer's responsibility to close the position and so mandatory loss-cuts will not be executed by the broker company."
 msgstr ""
+"各業者は顧客との取引に限度額を定めているが、顧客の一定期間の取引額や損失額、顧客が保有する建玉が基準を超えた場合であっても、顧客との取引を中断あるいは中止"
+"することはない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:410
 msgid "{JAPAN ONLY}An option holder must buy ( or sell ) the underlying asset at a predetermined price within a specified period ( or at a specific time )."
-msgstr "オプションとは、一定の期間内（又は特定の期日）に、あらかじめ定めた価格によって原資産を買い取る（又は売り渡す）ことができる権利をいい、オプションの所有者は、一定の期間内（又は特定の期日）には、あらかじめ定めた価格によって原資産を必ず＜u>買い取らなければ（又は売り渡さなければ）ならない＜/u>。"
+msgstr ""
+"オプションとは、一定の期間内（又は特定の期日）に、あらかじめ定めた価格によって原資産を買い取る（又は売り渡す）ことができる権利をいい、オプションの所有者は"
+"、一定の期間内（又は特定の期日）には、あらかじめ定めた価格によって原資産を必ず買い取らなければ（又は売り渡さなければ）ならない。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:490
 msgid "{JAPAN ONLY}An option price is the sum of the intrinsic-value and the time-value."
@@ -14867,10 +14872,9 @@ msgid "{JAPAN ONLY}Enter your personal information, and acknowledge our terms an
 msgstr "お客様の基本情報を記入して頂き交付書面等に同意後、口座開設ボタンをクリックしてください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:468
-#, fuzzy
 #| msgid "{JAPAN ONLY}If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller."
 msgid "{JAPAN ONLY}Even if the option is exercise or not exercised, the original option premium remains with the option seller."
-msgstr "オプションの買い手は、権利行使をしなかった場合には、オプションの売り手にオプション料を支払わない。"
+msgstr "権利行使期限が到来し、権利行使が行われないオプションは消滅するが、売り手が受け取ったオプション料はそのまま売り手のものとなる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:472
 #, fuzzy
@@ -14974,7 +14978,7 @@ msgstr "権利行使価格、権利行使期間が同一のヨーロピアンタ
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:473
 msgid "{JAPAN ONLY}If the probablility of a payout is 50% then when the potential payout is less than 100% of the price paid for the option, the expected return on the investment will be less than 100%."
-msgstr ""
+msgstr "ペイアウトを受け取る確率が50％、投資額に対するペイアウトの倍率が2倍を下回る場合の期待収益率は1倍を下回り、予測回収額は投資額を下回る。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:491
 msgid "{JAPAN ONLY}If the underlying asset price is 100 yen, the exercise price is 80 yen, and the call option price is 45 yen, then it can be said that the option's intrinsic-value is 20 yen, and its time-value is 25 yen."
@@ -14983,10 +14987,14 @@ msgstr "原資産価格100円、権利行使価格80円、オプション価格4
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:429
 msgid "{JAPAN ONLY}If you believe the underlying asset price will be only moderately volatile, you could still benefit by buying both a call and put option with exercise prices that are above and below the exercise price."
 msgstr ""
+"原資産価格の騰落幅が小さいと予測し、上昇、下落、いずれの方向に動いても利益を得るため、原資産価格より権利行使価格が高いコールオプションと原資産価格より権利"
+"行使価が低いプットオプションの２つのオプションを合わせて付与した。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:428
 msgid "{JAPAN ONLY}If you believe the underlying asset price will move by a large amount in either direction, you can benefit by buying both a call and a put option, with the exercise prices set above and below the current underlying price."
 msgstr ""
+"原資産価格が大きく騰落することを予測し、上昇、下落、いずれの方向に動いても利益を得るため、原資産価格より権利行使価格が高いコールオプションと原資産価格より"
+"権利行使価格が低いプットオプションの２つのオプションを合わせて取得した。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:422
 msgid "{JAPAN ONLY}If you buy a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
@@ -15019,6 +15027,7 @@ msgstr "インプライドボラティリティとは、原資産に対する将
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:440
 msgid "{JAPAN ONLY}In Japan there are defined trading periods for binary options must be 2 hours or longer, and all trades must be conducted at the start of each trading period."
 msgstr ""
+"バイナリーオプションの取引期間（満期）は2時間以上であり、全ての取引は取引期間の開始時点で成立し、成立したポジションは、判定によってのみ決済となる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:454
 #, fuzzy
@@ -15065,10 +15074,16 @@ msgstr "投資者に不利な方向に動いた場合には、バイナリーオ
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:438
 msgid "{JAPAN ONLY}It is possible to use two binary options to make a profit if the asset price settles inbetween the two strikes. It is also possible to buy a single range option that will achieve the same result."
 msgstr ""
+"２つのオプションを用い、権利行使価格の高いバイナリープットオプションと権利行使価格の低いバイナリーコールオプションを取得すれば、判定レートが２つのオプショ"
+"ンの権利行使価格の間となった場合に収益が得られ、判定レートが所定の価格帯の中であった場合にペイアウトとなるレンジバイナリーオプションに似た投資を行うことが"
+"できる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:439
 msgid "{JAPAN ONLY}It is possible to use two binary options to make a profit if the asset price settles outside the two strikes. It is also possible to buy a single range option that will achieve the same result."
 msgstr ""
+"２つのオプションを用い、権利行使価格の高いバイナリーコールオプションと権利行使価格の低いバイナリープットオプションを取得すれば、判定レートが２つのオプショ"
+"ンの権利行使価格で作られた価格帯の外となった場合に収益が得られ、判定レートが所定の価格帯の外であった場合にペイアウトとなるレンジバイナリーオプションに似た"
+"投資を行うことができる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:404
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:2
@@ -15108,6 +15123,8 @@ msgstr "｛日本限定｝第四章：リスク"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:464
 msgid "{JAPAN ONLY}Options are said to be leveraged products because in the case of large moves in the underlying asset price, the values of the options can increase by large amounts compared to the price paid for the option."
 msgstr ""
+"オプションのレバレッジ効果により、買い手はオプション料に比べ数倍の利益が得られる可能性があるが損失はオプション料に限られ、逆に売り手は利益がオプション料に"
+"限られるが損失はオプション料の数倍となる可能性がある。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:445
 #, fuzzy
@@ -15225,6 +15242,8 @@ msgstr "｛日本限定｝第5章：算出"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:443
 msgid "{JAPAN ONLY}Short positions in FX Binary Options must be covered by initial margin and any further losses must be covered by further margin deposits."
 msgstr ""
+"通貨関連バイナリーオプションのショートポジションは、あらかじめ必要証拠金を業者に預託して取引を行い、取引成立後に証拠金が不足した場合には追加証拠金を業者に"
+"預託する必要がある。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:511
 msgid "{JAPAN ONLY}Sorry, you have failed the test, please try again after 24 hours."
@@ -15258,13 +15277,14 @@ msgstr "権利行使価格とは、権利行使により原資産を購入また
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:452
 msgid "{JAPAN ONLY}The Exit Price is the price that is observed at the judgment time, and is used to determine whether a payout should be made."
-msgstr ""
+msgstr "判定レートとは、権利行使時点の原資産価格であり、権利行使価格と比較し、ペイアウトの有無を判断するための価格をいう。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:465
-#, fuzzy
 #| msgid "{JAPAN ONLY}If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller."
 msgid "{JAPAN ONLY}The buyer of a vanilla option can choose whether to exercise the option or not. His loss is limited to the price paid for the option, whereas his potential profit is unlimited."
-msgstr "オプションの買い手は、権利行使をしなかった場合には、オプションの売り手にオプション料を支払わない。"
+msgstr ""
+"プレーンオプションの買い手は、自分に不利なときには権利放棄するので、買い手の最大損失額はオプション料、利益額は原資産価格と権利行使価格の差からオプション料"
+"を引いた額となり、原資産価格が無限大ならば、利益も無限大となる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:455
 #, fuzzy
@@ -15280,7 +15300,7 @@ msgstr "バイナリーオプションの買い手の最大損失額はオプシ
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:475
 msgid "{JAPAN ONLY}The particular details of binary options are all the same, no matter which broking company you trade with."
-msgstr ""
+msgstr "店頭バイナリーオプションの金融商品としての内容は、取扱金融商品取引業者が異なっても同じである。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:453
 #, fuzzy
@@ -15303,6 +15323,8 @@ msgstr "オプションの価格は、原資産の価格、原資産の価格変
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:466
 msgid "{JAPAN ONLY}The seller of a vanilla option can not choose whether to exercise the option or not. His profit is limited to the price received for the option, whereas his potential loss is unlimited and could be substantial."
 msgstr ""
+"プレーンオプションの売り手は、利益額はオプション料に限定される一方、原資産価格と権利行使価格の差が損失となるので、原資産価格が無限大とすれば、その損失額も"
+"無限大となる。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:462
 msgid "{JAPAN ONLY}The seller of an option should receive the option premium from the buyer, even if the buyer waives the right to exercise the option."
