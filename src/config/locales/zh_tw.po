@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Taiwan) (Binary)\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-21 08:32+0000\n"
+"PO-Revision-Date: 2016-04-21 08:41+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) "
 "<https://hosted.weblate.org/projects/binary/static/zh_TW/>\n"
@@ -11262,9 +11262,8 @@ msgstr "已達權杖 (%1) 最大限數。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:922
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:57
-#, fuzzy
 msgid "The name is taken."
-msgstr "此名字已被註冊。"
+msgstr "此名字已被使用。"
 
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Plack.pm:273
 msgid "The page has timed out. This may be due to a slow Internet connection, or to excess load on our servers.  Please try again in a few moments."
@@ -11277,10 +11276,9 @@ msgstr "您的帳戶%1密碼已更改。此要求源自IP地址%2。如您並沒
 
 #. ($email)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:513
-#, fuzzy
 #| msgid "The password for your account %1 has been changed. This request originated from IP address %2. If this request was not performed by you, please immediately contact Customer Support."
 msgid "The password for your account %1 has been reset. If this request was not performed by you, please immediately contact Customer Support."
-msgstr "您的帳戶%1密碼已更改。此要求源自IP地址%2。如您並沒執行此項要求，請立刻聯繫客戶支援人員。"
+msgstr "您的帳戶%1密碼已重設。如您並沒執行此項要求，請立刻聯繫客服部。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "The patent means Regent Markets is the recognised pioneer of binary betting. The patent helps protect our innovations."
@@ -11354,7 +11352,6 @@ msgid "The stop-loss and stop-profit are guaranteed. The loss and profit are lim
 msgstr "我們提供止損和止盈的保證。虧損和盈利分別受止損和止盈所限制。  當退出價位接觸止損或止盈任何一項時，合約將在該止損或止盈價位平倉。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Offerings.pm:37
-#, fuzzy
 msgid "The symbol is invalid."
 msgstr "此符號無效。"
 
@@ -11372,7 +11369,6 @@ msgid "The time is now %1 %2 and the market opening times (for the %3) are:"
 msgstr "現在時間是 %1 %2，（ %3的）開市時間為："
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:62
-#, fuzzy
 msgid "The token is invalid."
 msgstr "權杖無效。"
 
@@ -11440,10 +11436,9 @@ msgid "There was a problem accessing the server."
 msgstr "伺服器存取出了問題。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:236
-#, fuzzy
 #| msgid "There was a problem accessing the server."
 msgid "There was a problem validating your address."
-msgstr "伺服器存取出了問題。"
+msgstr "您的地址驗證出了問題。"
 
 #. ($r->url_for('contact')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:275
@@ -11451,10 +11446,9 @@ msgid "There was a problem validating your address. Please fix the indicated fie
 msgstr "在驗證您地址的時候出現問題。請修改指示欄位。如需幫助，請聯繫我們的<a href=\"%1\">客戶支援人員</a>。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:628
-#, fuzzy
 #| msgid "There was an error processing the request."
 msgid "There was an error"
-msgstr "處理要求時出錯。"
+msgstr "出現錯誤"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/exception.html.haml:1
 msgid "There was an error and we were unable to process your request."
@@ -11473,16 +11467,14 @@ msgid "There was some invalid character in an input field."
 msgstr "某字欄的輸入字元無效。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:248
-#, fuzzy
 #| msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is EUR %1 (or %2 in other currency)."
 msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2 (or equivalent in other currency)."
-msgstr "因此您目前的即時最高取款額（要求您的帳戶具有充足的資金）為EUR %1（或者其他貨幣為%2)。"
+msgstr "因此您目前的即時最高取款額（要求您的帳戶有充足資金）為 %1 %2（或其他等值貨幣)。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:247
-#, fuzzy
 #| msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is EUR"
 msgid "Therefore your current immediate maximum withdrawal (subject to your account having sufficient funds) is %1 %2."
-msgstr "因此您目前的即時最高取款額（要求您的帳戶具有充足的資金）為EUR"
+msgstr "因此您目前的即時最高取款額（要求您的帳戶有充足資金）為%1 %2。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:88
 msgid "These ST&Cs are to be governed by and construed in accordance with Maltese law and the parties hereto agree to submit to the non exclusive jurisdiction of the Maltese courts."
@@ -11565,16 +11557,14 @@ msgid "This Document"
 msgstr "本文件"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:736
-#, fuzzy
 msgid "This Payment Agent cashier section is locked."
-msgstr "此支付代理的收銀台部份已鎖定。"
+msgstr "此付款代理的收銀台已鎖定。"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:606
 msgid "This URL is invalid."
 msgstr "此 URL 無效。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:123
-#, fuzzy
 msgid "This account is unavailable."
 msgstr "此帳戶不可使用。"
 
@@ -11606,16 +11596,14 @@ msgid "This contract cannot be properly validated at this time."
 msgstr "目前該交易無法正確驗證。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:626
-#, fuzzy
 #| msgid "This contract has expired."
 msgid "This contract has LOST"
-msgstr "此合約已到期。"
+msgstr "此合約輸了"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:625
-#, fuzzy
 #| msgid "This contract lost"
 msgid "This contract has WON"
-msgstr "此合約虧損"
+msgstr "此合約贏了"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/AmericanExpiry.pm:19
 msgid "This contract has already expired."
