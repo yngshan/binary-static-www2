@@ -188,8 +188,8 @@ var Price = (function() {
         if (details['error']) {
             purchase.hide();
             comment.hide();
-            if (details['error']['details']) {
-                var extraInfo = details['error']['details'];
+            var extraInfo = details['error']['details'];
+            if (extraInfo && extraInfo['display_value']) {
                 if (is_spread) {
                     amount.textContent = extraInfo['display_value'];
                 } else {
