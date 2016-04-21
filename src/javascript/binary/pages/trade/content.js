@@ -65,7 +65,7 @@ var Content = (function() {
             textBalance: text.localize('Balance'),
             textDetails: text.localize('Details'),
             textProfitTable: text.localize('Profit Table'),
-            textPurchaseDate: text.localize('Purchase Date (GMT)'),
+            textPurchaseDate: text.localize('Date (GMT)'),
             textContract: text.localize('Contract'),
             textPurchasePrice: text.localize('Purchase Price'),
             textSaleDate: text.localize('Sale Date'),
@@ -369,4 +369,3 @@ var Content = (function() {
     };
 
 })();
-
