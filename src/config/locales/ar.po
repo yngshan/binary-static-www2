@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Arabic (Binary)\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-21 12:03+0000\n"
-"Last-Translator: Sittie Hadjirah Sevilla <sittiebaser@gmail.com>\n"
+"PO-Revision-Date: 2016-04-22 07:53+0000\n"
+"Last-Translator: Rudy Karam <rudykaram6@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/binary/static/ar/>"
 "\n"
 "Language: ar\n"
@@ -128,10 +128,11 @@ msgstr "تعطى %1 الجميع وسيلة سهلة ومثيرة للمشارك
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "%1 has created random indices that you can trade 24/7. You can trade randoms on all types of contract:"
 msgid "%1 has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract:"
-msgstr "أنشأت %1 مؤشرات عشوائية تمكنك من التداول 24 ساعة فى اليوم وطوال أيام الأسبوع. يمكنك أن تتداول المؤشرات العشوائية على كل أنواع العقود:"
+msgstr ""
+"أنشأت %1 مؤشرات تمكنك من التداول 24 ساعة فى اليوم وطوال أيام الأسبوع. يمكنك "
+"أن تتداول المؤشرات على كل أنواع العقود:"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -276,10 +277,12 @@ msgstr "%1 ترغب بتشكيل فريق مع وكلاء الدفع المحت�
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "%1's Random Indices are the %2, %3, %4, and %5. These indices correspond to volatilities of 25%, 50%, 75% and 100%"
 msgid "%1's Continuous Indices are the Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 25%, 50%, 75% and 100%."
-msgstr "المؤشرات العشوائية الخاصة بـ %1 هى %2، %3، %4 و%5. هذه المؤشرات تعادل تقلبات الأسواق بنسبة 25%، 50%، 75% و100%"
+msgstr ""
+"مؤشرات المستمرة في % 1 هي مؤشر 25 تقلب وتقلب 50 مؤشر، تقلبات مؤشر 75 وتقلبات "
+"مؤشر 100. وتناظر هذه المؤشرات الأسواق محاكاة مع التقلبات المستمرة من 25%، "
+"50%، 75% و 100%."
 
 #. (stash->{website_name}, pjax_link_for(l('Random 25 Index')
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -725,7 +728,10 @@ msgstr ""
 #, fuzzy
 #| msgid "Dear Valued Customer, <p style=\"margin-top:1em;line-height:200%;\">It appears that you have tried to register an email address that is already included in our system. If it was not you, simply ignore this email, or contact our customer support if you have any concerns.</p>"
 msgid "<p>Dear Valued Customer,</p><p>It appears that you have tried to register an email address that is already included in our system. If it was not you, simply ignore this email, or contact our customer support if you have any concerns.</p>"
-msgstr "عزيزي \"العميل المحترم\"، <p style=\"margin-top:1em;line-height:200%;\"> يبدو أنك قد حاولت تسجيل عنوان بريد إلكتروني قد تم تضمينه مسبقاً في نظامنا. إذا لم يكن لك، ببساطة تجاهل هذا البريد الإلكتروني، أو اتصل بدعم العملاء إذا كان لديك أي استفسارات.</p>"
+msgstr ""
+"<p>عزيزي العميل المحترم،</p> <p>يبدو أنك قد حاولت تسجيل عنوان البريد "
+"إلكتروني التي تم تضمينها مسبقاً في نظامنا. إذا لم يكن لك، ببساطة تجاهل هذا "
+"البريد الإلكتروني، أو اتصل بدعم العملاء إذا كان لديك أي شواغل.</p>"
 
 #. ($r->url_for('/cashier/forward')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:284
@@ -772,7 +778,7 @@ msgstr "<span>كل الأسواق:</span> العملات، المؤشرات، ا
 #, fuzzy
 #| msgid "<span>All payouts:</span> from $1 to $100,000."
 msgid "<span>All payouts:</span> from $1 to $50,000."
-msgstr "<span>كل العوائد:</span> من دولار واحد لمائة ألف دولار."
+msgstr "<span>جميع دفعات:</span> من 1 دولار إلى 000 50 دولار."
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
@@ -803,7 +809,7 @@ msgstr "<strong>كل الأسواق</strong> - العملات، مؤشرات ا�
 #, fuzzy
 #| msgid "<strong>All payouts</strong> - from $1 to $100,000."
 msgid "<strong>All payouts</strong> - from $1 to $50,000."
-msgstr "<strong>جميع العوائد</strong> - من دولار لمائة ألف دولار."
+msgstr "<strong>جميع دفعات</strong>-من 1 دولار إلى 000 50 دولار."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:430
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/register/risk_disclaimer_message.html.tt:2
@@ -997,10 +1003,11 @@ msgid "<strong>Touch/No Touch</strong> - where you can profit from the market to
 msgstr "<strong>وصل /لم يصل</strong> -حيث يمكنك أن تربح من وصول السوق أو عدم وصوله لسعر مستهدف."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
-#, fuzzy
 #| msgid "<strong>Trade to your budget</strong> - dip a toe in the water with $2 or go all out for $100,000."
 msgid "<strong>Trade to your budget</strong> - dip a toe in the water with $2 or go all out for $50,000."
-msgstr "<strong>تداول حسب ميزانيتك</strong> - جرب التداول بـ 2$ أو تداول بكل ثقلك بمائة ألف دولار."
+msgstr ""
+"<strong>تداول حسب ميزانيتك</strong> - جرب التداول بـ 2$ أو تداول بكل ثقلك بـ "
+"50000 دولار.."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 msgid "<strong>Trade to your strategy</strong> - set your trades on ‘gut feel’, or use technical or fundamental analysis."
@@ -1284,10 +1291,9 @@ msgid "About Us and our Regulator"
 msgstr "معلومات عنا وعن الهيئة المنظمة لنا"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:16
-#, fuzzy
 #| msgid "About Us and our Regulator"
 msgid "About Us and these Terms"
-msgstr "معلومات عنا وعن الهيئة المنظمة لنا"
+msgstr "معلومات عنا وهذه الشروط"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:440
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/register/risk_disclaimer_message.html.tt:11
@@ -1471,7 +1477,7 @@ msgstr "برنامج الإنتساب"
 #, fuzzy
 #| msgid "Agreement for documents"
 msgid "Agreement Restrictions"
-msgstr "اتفاق عن مستندات"
+msgstr "قيود الاتفاق"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:406
 msgid "Agreement for documents"
@@ -1512,10 +1518,13 @@ msgid "Allow Clients to use e-wallets, which are not available directly on %1"
 msgstr "السماح للعملاء باستخدام المحافظ الإلكترونية، غير المتاحة مباشرة على %1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:19
-#, fuzzy
 #| msgid "Alternatively, clients who are registered with both Binary (IOM) Ltd and Binary (Europe) Ltd, instead of submitting their dispute to IBAS, they can make use of the European Commission’s Online Dispute Resolution (ODR) platform available here."
 msgid "Alternatively, clients who are registered with both Binary (IOM) Ltd and Binary (Europe) Ltd, instead of submitting their dispute to IBAS, they can make use of the European Commission’s Online Dispute Resolution (ODR) platform available <a href='http://ec.europa.eu/odr' target='_blank'>here</a>."
-msgstr "بدلا من ذلك، العملاء الذين تسجلوا مع كل من ثنائي ( IOM) المحدودة و ثنائي (أوروبا ) المحدودة ، بدلا من تقديم نزاعهما إلى IBAS ، فيمكنهم الاستفادة من تسوية المنازعات عبر الإنترنت التابع للمفوضية الأوروبية ( ODR ) المنصة المتاحة هنا ."
+msgstr ""
+"بدلا من ذلك، العملاء الذين تسجلوا مع كل من ثنائي ( IOM) المحدودة و ثنائي ("
+"أوروبا ) المحدودة ، بدلا من تقديم نزاعهما إلى IBAS ، فيمكنهم الاستفادة من "
+"تسوية المنازعات عبر الإنترنت التابع للمفوضية الأوروبية ( ODR ) المنصة "
+"المتاحة هنا .<a href='http://ec.europa.eu/odr' target='_blank'> هنا</a>."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:142
 msgid "Although the Company has and retains all rights to refuse or to close a Client’s account, the Company does warrant that all contractual obligations already made, shall be honoured."
@@ -1687,7 +1696,7 @@ msgstr "أي شخص يمكنه زيادة حركة المرور إلى موقع 
 #, fuzzy
 #| msgid "Application Name"
 msgid "Applications"
-msgstr "اسم التطبيق"
+msgstr "تطبيقات"
 
 #. (website, apply_payment_agent_url)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_list.html.tt:29
@@ -2237,7 +2246,7 @@ msgstr "مشاريع Binary.com مفتوحة المصدر"
 #, fuzzy
 #| msgid "Binary.com academy"
 msgid "Binary.com Property"
-msgstr "أكاديمية Binary.com"
+msgstr "خاصية Binary.com"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 msgid "Binary.com academy"
@@ -2440,7 +2449,7 @@ msgstr "بحلول اليوم الـ 15 من كل شهر، ستتسلم العم
 #, fuzzy
 #| msgid "Contest<br>Performance"
 msgid "Caching Content for Performance"
-msgstr "مسابقة<br>الأداء"
+msgstr "محتوى التخزين المؤقت للأداء"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:48
 msgid "Can I become an affiliate even if I don't have a website?"
@@ -2638,10 +2647,9 @@ msgid "Choose a password"
 msgstr "اختر كلمة مرور"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
-#, fuzzy
 #| msgid "Choose a payout from $1 to $100,000."
 msgid "Choose a payout from $1 to $50,000."
-msgstr "إختر مردودات من 1$ إلى 100,000$."
+msgstr "إختر مردودات من 1$ إلى 000 50 دولار."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
 msgid "Choose a trade type"
@@ -2931,7 +2939,7 @@ msgstr "إدارة الكوارث والتخطيط للإصلاح والتنفي
 #, fuzzy
 #| msgid "Client's Liability"
 msgid "Confidentiality"
-msgstr "مسؤولية العميل"
+msgstr "السرية"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:551
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:25
@@ -2946,7 +2954,7 @@ msgstr "تأكيد"
 #, fuzzy
 #| msgid "New Password"
 msgid "Confirm New Password"
-msgstr "كلمة المرور الجديدة"
+msgstr "تأكيد كلمة المرور الجديدة"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1043
 msgid "Confirm Your Email"
@@ -3008,7 +3016,7 @@ msgstr "مواصلة التداول"
 #, fuzzy
 #| msgid "Synthetic Indices"
 msgid "Continuous Indices"
-msgstr "مؤشرات Synthetic"
+msgstr "مؤشرات مستمرة"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:208
 msgid "Contract"
@@ -3035,7 +3043,7 @@ msgstr "انتهاء العقد"
 #, fuzzy
 #| msgid "Contract"
 msgid "Contract ID"
-msgstr "عقد"
+msgstr "معرف العقد"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:619
 msgid "Contract Information"
@@ -3050,10 +3058,9 @@ msgid "Contract Risks"
 msgstr "مخاطر العقد"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:621
-#, fuzzy
 #| msgid "Contracts sold"
 msgid "Contract Sold"
-msgstr "تم بيع العقود"
+msgstr "بيع العقد"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Strike.pm:133
 msgid "Contract barrier must be positive."
@@ -3065,10 +3072,9 @@ msgstr "لا يمكن بيع هذا العقد فى الوقت الراهن."
 
 #. ($args->{contract_category})
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Japan/Contract.pm:42
-#, fuzzy
 #| msgid "Contract period"
 msgid "Contract category %1 invalid"
-msgstr "فترة العقد"
+msgstr "فئة عقد ٪ 1 غير صالح"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:65
 msgid "Contract expired"
@@ -3148,10 +3154,12 @@ msgstr "تم بيع العقود"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/spreads.html.tt:9
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/staysinout.html.tt:10
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/touchnotouch.html.tt:11
-#, fuzzy
 #| msgid "Contracts will be refunded at the purchase price if the following conditions occur: (1) no tick occurs within ​the ​5 minutes ​after​ the start time; (2) no tick occurs within ​the ​5 minutes ​before the end time; (3) there are less than 2 ticks between the start and end times, or (4) for contracts of tick duration, if the contract doesn't end within 5 minutes."
 msgid "Contracts will be refunded at the purchase price if the following conditions occur: (1) there are less than 2 ticks between the start and end times, or (2) for contracts of tick duration, if the contract doesn't end within 5 minutes."
-msgstr "وسوف يتم رد عقود على سعر الشراء في حالة حدوث الشروط التالية : ( 1 ) لم يحدث حركة خلال 5 دقائق بعد وقت البدء . ( 2 ) لم يحدث حركة خلال 5 دقائق قبل نهاية الوقت . ( 3 ) هناك أقل من 2 حركة بين بداية و نهاية مرات ، أو ( 4 ) للحصول على عقود لمدة الحركة ، إذا لا ينتهي العقد في غضون 5 دقائق ."
+msgstr ""
+"العقود سوف يكون ردها بسعر الشراء عند حدوث الشروط التالية: (1) هناك أقل من "
+"حركتين بين أوقات البدء والنهاية، أو (2) إذا كان العقد لا ينتهي في غضون 5 "
+"دقائق."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:10
 msgid "Contracts will not usually be offered at odds under 0.05-to-1 (i.e. payouts of under USD/GBP/EUR/AUD 1.05 for each USD/GBP/EUR/AUD 1 staked)."
@@ -3179,10 +3187,9 @@ msgid "Contribute your ideas, energy and creativity to further the company’s d
 msgstr "ساهم بالأفكار والطاقة والإبداع وابذل مزيد من الجهود للعلامة التجارية الحيوية للشركة"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:128
-#, fuzzy
 #| msgid "A Web Application using the Binary.com API"
 msgid "Contributions to the Binary.com API"
-msgstr "تطبيق ويب باستخدام Binary.com API"
+msgstr "المساهمات ل Binary.com API"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/partners.html.haml:1
 msgid "Contributors"
@@ -3358,10 +3365,9 @@ msgid "Daily Report"
 msgstr "التقرير اليومي"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "Daily Prices"
 msgid "Daily Reset Indices"
-msgstr "الأسعار اليومية"
+msgstr "إعادة تعيين المؤشرات اليومية"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility."
@@ -3416,10 +3422,9 @@ msgstr "التاريخ والوقت"
 
 #. ($args->{date_expiry})
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Japan/Contract.pm:36
-#, fuzzy
 #| msgid "Style %1 invalid"
 msgid "Date expiry %1 invalid"
-msgstr "نمط %1 غير صالح"
+msgstr "تاريخ انتهاء الصلاحية % 1 غير صالح"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:715
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reset_passwordws.html.haml:1
@@ -3441,13 +3446,13 @@ msgstr "تاريخ الميلاد"
 #, fuzzy
 #| msgid "Your date of birth is invalid."
 msgid "Date of birth is invalid"
-msgstr "تاريخ ميلادك غير صحيح."
+msgstr "تاريخ الميلاد غير صحيح"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:481
 #, fuzzy
 #| msgid "Your date of birth is invalid."
 msgid "Date of birth is required."
-msgstr "تاريخ ميلادك غير صحيح."
+msgstr "مطلوب تاريخ الميلاد."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:53
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:494
@@ -3703,7 +3708,7 @@ msgstr "حدد موقعك"
 #, fuzzy
 #| msgid "Define your position"
 msgid "Definitions"
-msgstr "حدد موقعك"
+msgstr "تعريفات"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:350
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:518
@@ -3887,10 +3892,9 @@ msgid "Disclaimer"
 msgstr "تنصل من مسئولية"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:167
-#, fuzzy
 #| msgid "Disclaimer"
 msgid "Disclaimers"
-msgstr "تنصل من مسئولية"
+msgstr "تنصل من المسؤولية"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/conflicts_policy.html.tt:20
 msgid "Disclosure: general"
@@ -3901,10 +3905,9 @@ msgid "Discover our Smart Markets."
 msgstr "اكتشف أسواقنا الذكية."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
-#, fuzzy
 #| msgid "Discover our Smart Markets."
 msgid "Discover our Volatility Indices."
-msgstr "اكتشف أسواقنا الذكية."
+msgstr "اكتشاف مؤشرات التذبذب لدينا ."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/main.html.tt:23
 msgid "Discovering an easy, low-risk, flexible and, award-winning platform?"
@@ -4109,10 +4112,9 @@ msgid "Education"
 msgstr "تعلم"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:240
-#, fuzzy
 #| msgid "Termination"
 msgid "Effect of Termination"
-msgstr "فسخ العقد"
+msgstr "تأثير الإنهاء"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Effective English language skills, with attention to detail regarding punctuation, spelling, grammar, and syntax"
@@ -4475,7 +4477,7 @@ msgstr "سعر الانقضاء"
 #, fuzzy
 #| msgid "Expiry time cannot be in the past."
 msgid "Expiry time cannot be equal to start time."
-msgstr "وقت النهاية لا يمكن أن يكون في الماضي."
+msgstr "لا يمكن أن يكون وقت انتهاء الصلاحية مساوياً لوقت البدء."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2289
 msgid "Expiry time cannot be in the past."
@@ -4620,7 +4622,7 @@ msgstr "المالية"
 #, fuzzy
 #| msgid "Virtual Account Opening"
 msgid "Financial Account Opening"
-msgstr "فتح حساب افتراضي"
+msgstr "فتح الحساب المالي"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:650
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:523
@@ -4645,7 +4647,7 @@ msgstr "الأمان المالي"
 #, fuzzy
 #| msgid "Financial Asset"
 msgid "Financial asset"
-msgstr "Financial Asset"
+msgstr "الأصول المالية"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 msgid "Financial rewards"
@@ -4799,7 +4801,7 @@ msgstr "هل نسيت معرف تسجيل الدخول / كلمة المرور؟
 #, fuzzy
 #| msgid "Do you offer virtual-money accounts?"
 msgid "Format: yyyy-mm-dd (not required for virtual-money accounts)"
-msgstr "هل تقدموا حسابات أموال افتراضية؟"
+msgstr "تنسيق: yyyy-mm-dd (غير مطلوب لحسابات الأموال الافتراضية)"
 
 #. ($underlying->market->translated_display_name)
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/ContractForm.pm:641
@@ -4913,7 +4915,7 @@ msgstr "عام"
 #, fuzzy
 #| msgid "General Risks"
 msgid "General Provisions"
-msgstr "المخاطر العامة"
+msgstr "أحكام عامة"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:443
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal_jp/risk_warning.html.tt:2
@@ -4983,7 +4985,7 @@ msgstr "أعطني مزيداً من المال!"
 #, fuzzy
 #| msgid "Customer Service Representatives"
 msgid "Global Customer Service Representatives"
-msgstr "ممثلي خدمة العملاء"
+msgstr "ممثلي خدمة العملاء العالمية"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
@@ -5102,10 +5104,9 @@ msgid "High barrier is out of acceptable range. Please adjust the high barrier."
 msgstr "الحاجز العلوي لا يقع ضمن النطاق المقبول. يرجى ضبط الحاجز العلوي."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:17
-#, fuzzy
 #| msgid "Barrier must be at least "
 msgid "High barrier must be higher than low barrier."
-msgstr "الجدار يجب أن يكون عددا صحيحاً."
+msgstr "يجب أن يكون الحاجز المرتفع أعلى من الحاجز المنخفض"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:155
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/barrier.html.tt:15
@@ -5196,10 +5197,9 @@ msgstr "كيف تتداول السبريد؟"
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/get_started/nav.html.haml:1
-#, fuzzy
 #| msgid "How to trade the random markets?"
 msgid "How to trade the Volatility Indices markets?"
-msgstr "كيف يمكن التداول فى الأسواق العشوائية (الراندوم)؟"
+msgstr "كيف يمكن التداول في الأسواق المتقلبة ؟"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "How to trade the random markets?"
@@ -5241,10 +5241,9 @@ msgid "I forgot my password, what should I do?"
 msgstr "نسيت كلمة مروري، ماذا أفعل؟"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reset_passwordws.html.haml:1
-#, fuzzy
 #| msgid "Open Real Money Account"
 msgid "I have Real Money Account"
-msgstr "إفتح حساب أموال حقيقية"
+msgstr "لدي حساب المال الحقيقي"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:415
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:176
@@ -5549,7 +5548,7 @@ msgstr "حسّن مهاراتك في التداول مع مواردنا التع
 #, fuzzy
 #| msgid "price improvement"
 msgid "Improvements"
-msgstr "تحسن السعر"
+msgstr "تحسينات"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "In April, <a target=\"_blank\" href=\"http://www.betonmarkets.com\">Betonmarkets.com</a> (formerly known as <a target=\"_blank\" href=\"http://www.xodds.com\">Xodds.com</a>) goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting."
@@ -5672,7 +5671,7 @@ msgstr "داخل/خارج  (<\"a href=\"%1>الانتهاء بين/الانته�
 #, fuzzy
 #| msgid "In/Out (<a href=\"%1\">ends between/outside</a> and <a href=\"%2\">stays between/goes outside</a>)"
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr "داخل/خارج  (<\"a href=\"%1>الانتهاء بين/الانتهاء خارج</a> و<\"a href=\"%2>البقاء بين/الخروج عن</a>)"
+msgstr "داخل/خارج (ينتهي بين/خارج، ويبقى بين/يذهب خارج)"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
@@ -5693,7 +5692,7 @@ msgstr "البريد الإلكتروني أو كلمة المرور غير صح
 #, fuzzy
 #| msgid "Indicator"
 msgid "Indemnification"
-msgstr "مؤشر"
+msgstr "التعويض"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:104
 msgid "Indemnity and Liability"
@@ -5801,7 +5800,7 @@ msgstr "أدوات مالية"
 #, fuzzy
 #| msgid "Insufficient data to draw chart."
 msgid "Insufficient balance"
-msgstr "بيانات غير كافية لرسم الرسم البيانى."
+msgstr "رصيد غير كاف"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/payment_agent.html.haml:1
@@ -5897,7 +5896,7 @@ msgstr "طلب الشموع غير صالح"
 #, fuzzy
 #| msgid "Invalid date"
 msgid "Invalid date of birth."
-msgstr "تاريخ غير صالح"
+msgstr "تاريخ الميلاد غير صحيح."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:146
 msgid "Invalid email address"
@@ -6825,7 +6824,7 @@ msgstr "الامتثال القانوني والتنظيمي"
 #, fuzzy
 #| msgid "Compliance"
 msgid "Legal Compliance"
-msgstr "الامتثال"
+msgstr "الامتثال القانوني"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:691
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:732
@@ -6896,7 +6895,7 @@ msgstr "حد"
 #, fuzzy
 #| msgid "Exclusion of Liability"
 msgid "Limitations on Liability"
-msgstr "Exclusion of Liability"
+msgstr "القيود المفروضة على المسؤولية"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:21
 msgid "Limited License Grant"
@@ -7545,7 +7544,7 @@ msgstr "حالة الشبكة"
 #, fuzzy
 #| msgid "Never Used"
 msgid "Never"
-msgstr "لم تستخدم من قبل"
+msgstr "ابدأ"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:349
 msgid "Never Used"
@@ -7698,7 +7697,7 @@ msgstr "عدم نشر أي مواد اعلانية دون موافقة الشر�
 #, fuzzy
 #| msgid "Note:"
 msgid "Note"
-msgstr "ملحوظة:"
+msgstr "ملاحظة"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:31
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
@@ -7845,7 +7844,9 @@ msgstr "عندما تضغط على زر \"التسليم\" ستسحب الأمو
 #, fuzzy
 #| msgid "Once you click the 'Submit' button, the funds will be withdrawn from your account and transferred to your Client's %1 account."
 msgid "Once you click the 'Submit' button, the funds will be withdrawn from your account and transferred to your Client's account."
-msgstr "عندما تضغط على زر \"التسليم\" ستسحب الأموال من حسابك وسيتم نقلها لحساب %1 الخاص بعميلك."
+msgstr ""
+"بمجرد النقر فوق الزر 'إرسال'، سوف تسحب من الحساب الخاص بك الأموال وتحويلها "
+"إلى حساب العميل الخاص بك."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "One simple platform"
@@ -7976,7 +7977,7 @@ msgstr "آخر"
 #, fuzzy
 #| msgid "The Company's Obligations"
 msgid "Other Obligations"
-msgstr "التزامات الشركة"
+msgstr "الالتزامات الأخرى"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:67
 msgid "Other best execution factors such as speed of execution, likelihood of execution and settlement, size, nature or any other considerations relevant to the execution of a particular order may also be applied by us in order to obtain the best possible results for you."
@@ -8084,7 +8085,7 @@ msgstr "يمكن تصفية موقعنا باستخدام عدد من أنظمة
 #, fuzzy
 #| msgid "%1 does not charge any transfer fees."
 msgid "Our site does not charge any transfer fees."
-msgstr "لا تتقاضى %1 أى رسوم تحويل."
+msgstr "موقعنا لا تفرض أي رسوم نقل."
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:452
 msgid "Output validation failed: "
@@ -8220,7 +8221,7 @@ msgstr "إعادة تعيين كلمة المرور"
 #, fuzzy
 #| msgid "Password is not strong enough."
 msgid "Password does not match."
-msgstr "كلمة السر ليست قوية بما يكفي."
+msgstr "لا تطابق كلمة المرور."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:308
 msgid "Password is moderate"
@@ -8265,10 +8266,9 @@ msgid "Password should be at least six characters, including lower and uppercase
 msgstr "يجب أن تكون كلمة المرور ستة أحرف على الأقل، بما في ذلك احرف دنيا وكبرة مع الأرقام."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:305
-#, fuzzy
 #| msgid "Password should have letters and numbers."
 msgid "Password should have lower and uppercase letters with numbers."
-msgstr "يجب أن تحتوي كلمة السر على الأحرف والأرقام."
+msgstr "يجب أن يكون لكلمة المرور أحرف تحتية واحرف علية مع أرقام."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:136
@@ -8383,7 +8383,7 @@ msgstr "وحدات برل (Perl)"
 #, fuzzy
 #| msgid "Permission denied."
 msgid "Permission denied, requiring %1"
-msgstr "تم رفض الإذن."
+msgstr "إذن مرفوض، التي تحتاج إلى % 1"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:68
 msgid "Permission denied."
@@ -8393,7 +8393,7 @@ msgstr "تم رفض الإذن."
 #, fuzzy
 #| msgid "Permission denied."
 msgid "Permissions"
-msgstr "تم رفض الإذن."
+msgstr "أذونات"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:442
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:3
@@ -8437,14 +8437,15 @@ msgstr "يرجى الموافقة على إخلاء المسؤولية عن ال
 #, fuzzy
 #| msgid "Please check your email for the next step."
 msgid "Please check your email for the value of this token"
-msgstr "يرجى التحقق من بريدك الالكتروني للخطوة التالية."
+msgstr "الرجاء التحقق من البريد الإلكتروني الخاص بك لقيمة الرمز المميز هذا"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:708
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reset_passwordws.html.haml:1
-#, fuzzy
 #| msgid "Please check your email for the next step."
 msgid "Please check your email to retrieve the token needed to reset your password."
-msgstr "يرجى التحقق من بريدك الالكتروني للخطوة التالية."
+msgstr ""
+"الرجاء التحقق من البريد الإلكتروني الخاص بك لاسترداد الرمز المميزالمطلوب إلى "
+"إعادة تعيين كلمة المرور الخاصة بك."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/doughflow_currency_choice.html.tt:3
 msgid "Please choose which currency you would like to transact in."
@@ -8470,7 +8471,7 @@ msgstr "يرجى الاتصال بنا وإخبارنا بكل ما يخطر ب�
 #, fuzzy
 #| msgid "Please enter a town or city."
 msgid "Please deposit before transfer to client."
-msgstr "رجاء أدخل اسم بلدة أو مدينة."
+msgstr "الرجاء إيداع قبل نقلها إلى العميل."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:136
 msgid "Please enter a date that is at least 6 months from now."
@@ -8480,7 +8481,7 @@ msgstr "رجاء إدخال تاريخ بعد الآن بستة أشهر على 
 #, fuzzy
 #| msgid "Please enter a number between 0 and %1."
 msgid "Please enter a number between %1."
-msgstr "يرجى إدخال رقم بين 0 و %1."
+msgstr "الرجاء إدخال رقم بين % 1."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:371
 msgid "Please enter a number between 0 and %1"
@@ -8495,7 +8496,7 @@ msgstr "يرجى إدخال رقم بين 0 و %1."
 #, fuzzy
 #| msgid "Please enter a number greater than 0"
 msgid "Please enter a number greater or equal to %1."
-msgstr "يرجى إدخال رقم أكبر من 0"
+msgstr "الرجاء إدخال رقم أكبر أو يساوي % 1."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_frequencyws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_summaryws.html.haml:1
@@ -8508,7 +8509,7 @@ msgstr "يرجى إدخال رقم أكبر من 0"
 #, fuzzy
 #| msgid "Please enter a valid name."
 msgid "Please enter a number."
-msgstr "رجاء إدخال اسم صالح."
+msgstr "الرجاء إدخال رقم."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:980
 msgid "Please enter a password."
