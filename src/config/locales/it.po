@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Italian (Binary)\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-21 16:27+0000\n"
-"Last-Translator: Annalisa <ligiu@me.com>\n"
+"PO-Revision-Date: 2016-04-22 07:49+0000\n"
+"Last-Translator: Sittie Hadjirah Sevilla <sittiebaser@gmail.com>\n"
 "Language-Team: Italian "
 "<https://hosted.weblate.org/projects/binary/static/it/>\n"
 "Language: it\n"
@@ -126,10 +126,11 @@ msgstr "%1 offre a tutti un metodo semplice ed emozionante per partecipare nei m
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "%1 has created random indices that you can trade 24/7. You can trade randoms on all types of contract:"
 msgid "%1 has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract:"
-msgstr "%1 ha creato degli indici random che puoi negoziare 24/7 su tutte le tipologie di contratto:"
+msgstr ""
+"%1 ha creato degli Indici di volatilità che puoi negoziare 24/7. Puoi "
+"negoziarli su tutte le tipologie di contratto:"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -274,10 +275,12 @@ msgstr "%1 vorrebbe unirsi ai potenziali agenti di pagamento sparsi in tutto il 
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "%1's Random Indices are the %2, %3, %4, and %5. These indices correspond to volatilities of 25%, 50%, 75% and 100%"
 msgid "%1's Continuous Indices are the Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 25%, 50%, 75% and 100%."
-msgstr "Gli indici Random di %1 sono il %2, %3, %4 e %5. Questi indici corrispondono ad una volatilità del 25%, 50%, 75% e 100%"
+msgstr ""
+"Gli indici Continuous di %1 sono l'Indice di Volatility 25, Volatility 50, "
+"Volatility 75 e Volatility 100. Questi indici corrispondono a mercati "
+"simulati con una volatilità costante del 25%, 50%, 75% e 100%."
 
 #. (stash->{website_name}, pjax_link_for(l('Random 25 Index')
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -675,10 +678,13 @@ msgstr "<p style=\"line-height:200%;color:#333333;font-size:15px;\">Gentile Clie
 
 #. ($params->{code})
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:148
-#, fuzzy
 #| msgid "<p style=\"line-height:200%;color:#333333;font-size:15px;\">Dear Valued Customer,</p><p>Please help us to verify your identity by entering the following verification token into the payment agent withdrawal form:<p><span style=\"background: #f2f2f2; padding: 10px;\">%1</span></p></p>"
 msgid "<p style=\"line-height:200%;color:#333333;font-size:15px;\">Dear Valued Customer,</p><p>Please help us to verify your identity by entering the following verification token into the payment withdrawal form:<p><span style=\"background: #f2f2f2; padding: 10px;\">%1</span></p></p>"
-msgstr "<p style=\"line-height:200%;color:#333333;font-size:15px;\">Gentile Cliente,</p><p>aiutaci a verificare la tua identità inserendo il seguente token di verifica nel modulo per il prelievo dell'agente di pagamento:<p><span style=\"background: #f2f2f2; padding: 10px;\">%1</span></p></p>"
+msgstr ""
+"<p style=\"line-height:200%;color:#333333;font-size:15px;\">Gentile "
+"Cliente,</p><p>aiutaci a verificare la tua identità inserendo il seguente "
+"token di verifica nel modulo per il prelievo delpagamento:<p><span style=\""
+"background: #f2f2f2; padding: 10px;\">%1</span></p></p>"
 
 #. (purpose, code)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/send_verificationws.html.tt:1
@@ -1027,17 +1033,19 @@ msgstr "<strong>Mercati volatili</strong> - scegli trade One touch, Goes Outside
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
-#, fuzzy
 #| msgid "<strong>Random Indices</strong> - trade %1's proprietary random indices."
 msgid "<strong>Volatility Indices</strong> - trade %1's proprietary volatility indices."
-msgstr "<strong>Indici Random</strong> - negozia con gli indici random di proprietà di %1."
+msgstr ""
+"<strong>Indici di volatilità</strong> - negozia con gli indici di volatilità "
+"di proprietà di %1."
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
-#, fuzzy
 #| msgid "<strong>Random indices</strong> - trade %1's own random indices, 24/7."
 msgid "<strong>Volatility indices</strong> - trade %1's own volatility indices, 24/7."
-msgstr "<strong>Indici Random</strong> - negozia con gli indici random di %1, 24/7."
+msgstr ""
+"<strong>Indici di volatilità</strong> - negozia con gli indici di volatilità "
+"di %1, 24/7."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/logintrouble.html.tt:62
 msgid "<ul><li> Go to the <strong>More actions</strong> menu and select <strong>Settings</strong>. </li><li> Under <strong>Advanced Settings</strong>, click on the <strong>View advanced settings</strong> button. </li><li> Under the <strong>Cookies</strong> section, select the \"<strong>Don't block cookies</strong>\" option. </li><li> Click anywhere outside the menu to save and close. </li></ul>"
@@ -3011,10 +3019,9 @@ msgid "Continue Trading"
 msgstr "Continua il trading"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "Synthetic Indices"
 msgid "Continuous Indices"
-msgstr "Indici Sintetici"
+msgstr "Indici continui"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:208
 msgid "Contract"
@@ -3360,10 +3367,9 @@ msgid "Daily Report"
 msgstr "Resoconto giornaliero"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "Daily Prices"
 msgid "Daily Reset Indices"
-msgstr "Prezzi giornalieri"
+msgstr "Indici di Reset giornalieri"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility."
@@ -3897,10 +3903,9 @@ msgid "Discover our Smart Markets."
 msgstr "Scopri i nostri Mercati Smart."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
-#, fuzzy
 #| msgid "Discover our Smart Markets."
 msgid "Discover our Volatility Indices."
-msgstr "Scopri i nostri Mercati Smart."
+msgstr "Scopri i nostri Indici di volatilità."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/main.html.tt:23
 msgid "Discovering an easy, low-risk, flexible and, award-winning platform?"
@@ -4499,10 +4504,9 @@ msgid "Expiry price"
 msgstr "Prezzo di scadenza"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2280
-#, fuzzy
 #| msgid "Expiry time cannot be in the past."
 msgid "Expiry time cannot be equal to start time."
-msgstr "L'orario di scadenza non può essere impostato nel passato."
+msgstr "L'orario di scadenza non può essere uguale a quello d'inizio."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2289
 msgid "Expiry time cannot be in the past."
@@ -5227,10 +5231,9 @@ msgstr "Come si negozia sugli spread?"
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/get_started/nav.html.haml:1
-#, fuzzy
 #| msgid "How to trade the random markets?"
 msgid "How to trade the Volatility Indices markets?"
-msgstr "Come si negozia nei mercati random?"
+msgstr "Come si negozia nei mercati con Indici di volatilità?"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "How to trade the random markets?"
@@ -5366,10 +5369,18 @@ msgstr ""
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:20
 msgid "If you are developing on our API on behalf of a company or other entity, you represent and warrant that you have full legal authority to register an Application on behalf of that entity and bind it to these Terms. If you are not authorized, you may not accept these Terms or register an Application for someone else."
 msgstr ""
+"Se ti stai sviluppando sulla nostra API nell'interesse di una società o "
+"altra organizzazione, rappresenti e garantisci di avere la piena autorità di "
+"registrare un'Applicazione per conto di tale organizzazione e di vincolarti "
+"ai presenti Termini. Se non sei autorizzato, puoi non accettare i presenti "
+"Termini o registrare un'Applicazione per qualcun'altro."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:255
 msgid "If you are entering into this Agreement on behalf of your employer or other entity, you represent and warrant that you have full legal authority to bind your employer or such entity to this Agreement."
 msgstr ""
+"Se stai stipulando il presente Accordo per conto di un tuo dipendente o "
+"altra organizzazione, rappresenti e garantisci di avere la piena autorità di "
+"vincolare il tuo dipendente o tale organizzazione al presente Accordo."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/logintrouble.html.tt:5
 msgid "If you are experiencing difficulties logging into your account, please verify that cookies are enabled in your browser. This website uses cookies to store your login ID and password (in encrypted format) on your PC during your login session."
@@ -5638,11 +5649,23 @@ msgstr "Per procedere, verifica il tuo indirizzo email."
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "In order to support its continued growth, %1 is seeking to recruit and place a qualified Compliance Executive. In this newly created role, to be based in Malta, the incumbent will report to our Head of Regulatory and Legal Compliance"
 msgstr ""
+"Per poter supportare la sua crescita continua, %1 sta cercando di reclutare "
+"e posizionare un Executive qualitficato per la Compliance. In questo nuovo "
+"ruolo, con sede a Malta, l'incaricato riferirà con il nostro Capo della "
+"Compliance regolamentare e legale"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "In order to support its continued growth, the Human Resources Group at %1 is seeking to place a highly competent administrator in a senior recruitment role. Please note that this is not a position suitable for an HR generalist, but should be of keen interest to a high level administrator with extensive experience in the global recruitment of managers and single technical contributors. A background in financial services and experience in the recruitment of senior professionals in IT and Quantitative Analytics would be ideal."
 msgstr ""
+"Per poter supportare la sua crescita continua, il Gruppo delle Risorse umane "
+"di %1 sta cercando di posizionare un amministratore altamente competente in "
+"un ruolo di reclutamento senior. Si prega di notare che questa non è una "
+"posizione adatta a un HR generico, ma dovrebbe essere rivolto a un "
+"amministratore di alto livello con un'ampia esperienza nel reclutamento "
+"globale di manager e singoli collaboratori tecnici. Sarebbe preferibile "
+"avere una formazione nei servizi finanziari e un'esperienza nel reclutamento "
+"di professionisti senior in IT e Analisi quantitativa."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:24
 msgid "In providing these services, we are bound by the Act, any applicable regulations, bye-laws, licence conditions, guidelines, exchange requirements and other provisions or market practices (the \"Rules\"). In the event of conflict between these ST&Cs and the Rules, the latter should prevail."
@@ -5683,6 +5706,10 @@ msgstr "Durante la fornitura dei servizi condurremo, se possibile, un test di ad
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:101
 msgid "In the event of any conflict between the content in this document and the above documents, this document controls your use of the Binary.com API. If you disagree with any of the provisions in these Terms, do not access or use the Binary.com API."
 msgstr ""
+"In caso di un qualsiasi conflitto tra il contenuto del presente documento e "
+"i documenti di cui sopra, il presente documento regola il tuo uso dell'API "
+"di Binary.com. Se non accetti una qualsiasi disposizione dei presenti "
+"Termini, non potrai accedere o utilizzare l'API di Binary.com."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:40
 msgid "In the unlikely event of BIEL suffering an investment default and not being able to meet its obligations, BIEL is a member of the Malta Investor Compensation Scheme which covers the first €20,000 of any claim. Whether you are able to claim depends on the type of business and your personal circumstances."
@@ -5691,6 +5718,8 @@ msgstr "Nel caso improbabile in cui BIEL subisca un default negli investimenti e
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "In this newly created role, to be based on our offices in Cyberjaya, Malaysia, you will be responsible for:"
 msgstr ""
+"In questo nuovo ruolo, con sede presso i nostri uffici a Cyberjaya, Malesia, "
+"sarai responsabile per:"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:484
 msgid "In what country do you want to offer your service"
@@ -5892,15 +5921,15 @@ msgstr "URI non valido per appstore."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:46
 msgid "Invalid URI for github."
-msgstr ""
+msgstr "URI non valido per github."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:52
 msgid "Invalid URI for googleplay."
-msgstr ""
+msgstr "URI non valido per googleplay."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:43
 msgid "Invalid URI for homepage."
-msgstr ""
+msgstr "URI non valido per l'homepage."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:689
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:695
@@ -5975,7 +6004,7 @@ msgstr "Nome del luogo di lavoro non valido. Utilizzare solo caratteri (A-Z,a-z,
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Investigate and reproduce client-reported issues"
-msgstr ""
+msgstr "Indagare e riprodurre i problemi riportati dai clienti"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:74
 msgid "Investing or trading in Contracts exposes you to the performance of the underlying or reference instrument or asset to which the Binary Contract refers including foreign exchange, indices, stocks and commodities each of which have their own features and risks."
@@ -6012,6 +6041,9 @@ msgstr "Sistema di indennizzo degli investitori"
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Involved in evaluation of regulatory compliance and risk management. Work with the Head of Departments to improve business processes."
 msgstr ""
+"Coinvolto nella valutazione della conformità regolamentare e nella gestione "
+"del rischio. Lavorare con il Capo dei dipartimenti per migliorare le "
+"procedure commerciali."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/contact.html.haml:1
 msgid "Ireland"
@@ -6742,28 +6774,37 @@ msgstr "Cordiali saluti,"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:219
 msgid "Kindly send us your documents for verification."
-msgstr ""
+msgstr "Inviaci gentilmente i tuoi documenti per la verifica."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge and experience in the financial services industry"
-msgstr ""
+msgstr "Conoscenza ed esperienza nel settore dei servizi finanziari"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge of hardware and software firewalls, intrusion detection methods, security systems and DDoS protection"
 msgstr ""
+"Conoscenza dei firewall hardware e software, metodi di rilevamento delle "
+"intrusioni, sistemi di sicurezza e protezione DDoS"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge of probability theory, numerical methods, Monte-Carlo simulation, statistical modeling, and time series analysis would be a plus"
 msgstr ""
+"Gradita conoscenza della teoria delle probabilità, metodi numerici, "
+"simulazione Monte-Carlo, modelli statistici e analisi delle serie temporali"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge of probability theory, stochastic calculus, numerical methods, Monte-Carlo simulation, differential equations, econometrics, and statistical modeling"
 msgstr ""
+"Conoscenza della teoria delle probabilità, calcolo stocastico, metodi "
+"numerici, simulazione Monte-Carlo, equazioni differenziali, econometria e "
+"modelli statistici"
 
 #. ($next_dt->date . ' ' . $next_dt->time)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:151
 msgid "Knowledge test is unavailable now, you may take the test on %1"
 msgstr ""
+"Il test di conoscenza al momento non è disponibile, puoi effettuare il test "
+"il %1"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:73
 msgid "LOG OUT"
@@ -6899,7 +6940,7 @@ msgstr "Responsabilità"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Liaise with banks and payment providers"
-msgstr ""
+msgstr "Collaborare con banche e con società di gestione dei pagamenti"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:85
 msgid "Licence to use Marks"
@@ -6911,7 +6952,7 @@ msgstr "Autorizzato e regolamentato a Malta, nel Regno Unito, nell'Isola di Man 
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Life-long career interest in the Accounting field"
-msgstr ""
+msgstr "Interesse nella carriera a lungo termine nel campo della Contabilità"
 
 #. (pjax_link_for(l('Random Nocturnes')
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -6929,7 +6970,7 @@ msgstr "Limitazioni di responsabilità"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:21
 msgid "Limited License Grant"
-msgstr ""
+msgstr "Concessione di licenza limitata"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:54
 msgid "Limits"
@@ -6953,7 +6994,7 @@ msgstr "Grafico a dispersione"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:123
 msgid "Link to and direct our clients to your Application."
-msgstr ""
+msgstr "Collaborare e indirizzare i nostri clienti verso la tua Applicazione."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:32
 msgid "Links"
@@ -8614,10 +8655,17 @@ msgstr "Si prega di notare che il nostro sito internet genera dei file di log ch
 
 #. (broker_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:37
-#, fuzzy
 #| msgid "Please note that weekend quotes are ignored for the purpose of contract settlement. During weekends, the forex markets may occasionally generate prices, however these prices are often artificial (traders sometimes take advantage of the illiquidity of the markets during weekends to push up or down prices). To avoid settling prices based on such artificial prices, it is %1's policy not to count weekend prices towards contract settlement values (except for the random indices, which are open during weekends)."
 msgid "Please note that weekend quotes are ignored for the purpose of contract settlement. During weekends, the forex markets may occasionally generate prices, however these prices are often artificial (traders sometimes take advantage of the illiquidity of the markets during weekends to push up or down prices). To avoid settling prices based on such artificial prices, it is %1's policy not to count weekend prices towards contract settlement values (except for the volatility indices, which are open during weekends)."
-msgstr "Si prega di notare che le quotazioni dei weekend vengono ignorate ai fini della liquidazione dei contratti. Durante i weekend i mercati Forex possono occasionalmente generare prezzi, i quali sono spesso falsati (i trader a volte sfruttano l'illiquidità dei mercati durante i weekend per spingere i prezzi verso l'alto o verso il basso). Per evitare tali prezzi falsati, la policy di %1 è quella di non considerare i prezzi dei weekend sui valori di liquidazione dei contratti (ad eccezione degli indici Random che sono aperti durante i weekend)."
+msgstr ""
+"Si prega di notare che le quotazioni dei weekend vengono ignorate ai fini "
+"della liquidazione dei contratti. Durante i weekend i mercati Forex possono "
+"occasionalmente generare prezzi, i quali sono spesso falsati (i trader a "
+"volte sfruttano l'illiquidità dei mercati durante i weekend per spingere i "
+"prezzi verso l'alto o verso il basso). Per evitare tali prezzi falsati, la "
+"policy di %1 è quella di non considerare i prezzi dei weekend sui valori di "
+"liquidazione dei contratti (ad eccezione degli indici di volatilità che sono "
+"aperti durante i weekend)."
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:12
@@ -10042,10 +10090,11 @@ msgid "Sorry, client balance will exceed limits with this payment."
 msgstr ""
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1536
-#, fuzzy
 #| msgid "Sorry, contracts on Random Indices are not available in your country of residence"
 msgid "Sorry, contracts on Volatility Indices are not available in your country of residence"
-msgstr "Siamo spiacenti, i contratti su Indici Random non sono disponibili nel tuo paese di residenza"
+msgstr ""
+"Siamo spiacenti, i contratti su Indici di volatilità non sono disponibili "
+"nel tuo paese di residenza"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:480
 msgid "Sorry, it is not allowed."
@@ -10292,10 +10341,9 @@ msgid "Start time %1 must be before end time %2"
 msgstr "L'orario di inizio %1 deve essere antecedente all'orario di fine %2"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2303
-#, fuzzy
 #| msgid "Start time is in the past"
 msgid "Start time is in the future."
-msgstr "L'orario di inizio è già passato"
+msgstr "L'orario di inizio è nel futuro."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2298
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:385
@@ -10303,10 +10351,11 @@ msgid "Start time is in the past"
 msgstr "L'orario di inizio è già passato"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2311
-#, fuzzy
 #| msgid "Start time on forward-starting contracts must be more than %1 from now."
 msgid "Start time on forward-starting contracts must be more than 5 minutes from now."
-msgstr "L'orario di inizio dei contratti con partenza posticipata deve essere a più di %1 a partire da adesso."
+msgstr ""
+"L'orario di inizio dei contratti con partenza posticipata deve essere a più "
+"di 5 minuti a partire da adesso."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1392
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:90
@@ -10710,10 +10759,9 @@ msgid "Terms and conditions"
 msgstr "Terms and conditions"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:78
-#, fuzzy
 #| msgid "Terms and Conditions Approval"
 msgid "Terms and conditions approval is required."
-msgstr "Approvazione dei termini e delle condizioni"
+msgstr "È richiesta l'approvazione dei termini e delle condizioni."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:682
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:674
@@ -10946,6 +10994,10 @@ msgstr "La società è autorizzata a esercitare qualsiasi suo diritto o soddisfa
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:160
 msgid "The Company shall have no liability arising from orders, investment decisions or purchases of third party goods or services (including financial instruments and currency) based on information published on or furnished through the Binary.com API;"
 msgstr ""
+"La Società non avrà alcuna responsabilità derivante dagli ordini, decisioni "
+"di investimento o acquisti di beni o servizi di terze parti (inclusi "
+"strumenti finanziari e valute) sulla base delle informazioni pubblicate o "
+"fornite tramite l'API di Binary.com;"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:107
 msgid "The Company shall not be liable to you in contract, or otherwise (including liability for negligence) for loss whether direct or indirect of  business, revenue or profits, anticipated savings or wasted expenditure, corruption or destruction of data or for any indirect or consequential loss whatever."
@@ -10985,6 +11037,10 @@ msgstr "Gli obblighi della Società"
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The Country Manager will have overall operational responsibility for directing the growth and ongoing development of the local market. He or she will actively support the goal of increasing %1’s market presence and investigating business development opportunities."
 msgstr ""
+"Il Manager del paese avrà la completa responsabilità operativa per "
+"indirizzare la crescita e lo sviluppo del mercato locale. Supporterà "
+"attivamente l'obiettivo di incremento della presenza sul mercato di %1 e "
+"indagherà sulle opportunità di sviluppo commerciale."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "The Cyberview Lodge Resort in Cyberjaya"
@@ -11055,18 +11111,21 @@ msgid "The USD Index is a weighted Index, measuring the US Dollar’s value agai
 msgstr "L'Indice USD è un indice ponderato che misura il valore del Dollaro americano rispetto a un paniere di 5 valute globali (EUR, GBP, JPY, CAD e AUD), ognuna ponderata del 20%."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "The %1 is twice as volatile as the %2, and four times as volatile as the %3."
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index."
-msgstr "%1 è due volte più volatile del %2 e quattro volte in più del %3."
+msgstr ""
+"L'indice Volatility 100 è due volte più volatile dell'indice Volatility 50 e "
+"quattro volte in più del Volatility 25."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to acquire knowledge of compliance matters in a multitude of international jurisdictions"
 msgstr ""
+"La capacità di acquisire la conoscenza delle questioni connesse alla "
+"conformità in una varietà di giurisdizioni internazionali"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to communicate effectively in English (both oral and written)"
-msgstr ""
+msgstr "La capacità di comunicare efficacemente in inglese (orale e scritto)"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to communicate fluently in English (both oral and written)"
@@ -11075,6 +11134,8 @@ msgstr "La capacità di comunicare in modo fluente in inglese (scritto e orale)"
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to multi-task, balance deadlines, and reliably deliver high-quality content"
 msgstr ""
+"La capacità di contenuti multi-task, scadenze equilibrate e contenuti "
+"affidabili di alta qualità"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to speak and write in multiple languages"
@@ -11095,6 +11156,8 @@ msgstr "La capacità di lavorare in un ambiente Linux/Unix"
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to write high-quality, self-documenting code, using test-driven development techniques"
 msgstr ""
+"La capcità di scrivere codici di alta qualità e auto documentati, "
+"utilizzando tecniche di sviluppo di test guidati"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:10
 msgid "The above personal data that we collect will be held by us and processed for any purpose as may be allowed by law or required by any law. We may also transfer such personal data to any company within the Binary Group of companies, any of our business associates or payment providers, whether in or outside of the EEA including in countries which might not offer an equivalent level of protection of personal data."
@@ -11467,14 +11530,26 @@ msgstr "Il mercato sottostante si è mosso troppo dalla quotazione del contratto
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:157
 msgid "The use of the Binary.com API is at your own risk, and you assume full responsibility and risk of loss it may suffer as a result of using, or accessing the Binary.com API. Except to the extent that liability under any applicable law or regulation cannot be excluded:"
 msgstr ""
+"L'uso dell'API di Binary.com è a tuo rischio e ti assumi l'intera "
+"responsabilità ed eventuale rischio di perdita quale risultato dell'uso, o "
+"accesso all'API di Binary.com. Salvo nella misura in cui non si possa "
+"escludere alcuna legge o regolamento applicabile:"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:192
 msgid "The use, operation or combination of the Binary.com API with non-Binary.com API(s), data, equipment or documentation if liability would have been avoided but for such use, operation, or combination; or"
 msgstr ""
+"L'uso, il funzionamento o la combinazione dell'API di Binary.com con le API "
+"non di Binary.com, dati, attrezzature o documenti se la responsabilità "
+"potrebbe essere evitata ma per tale uso, funzionamento o combinazione; o"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like – high volatility, low volatility, bullish and bearish trends."
 msgstr ""
+"Gli indici di volatilità simulano varie situazioni dei mercati reali e "
+"forniscono una piattaforma ideale per abituarsi al trading e testare le "
+"strategie in varie condizioni di mercato. Questi indici dipendono dalla "
+"volatilità e dalle tendenza e aiutano gli utenti a provare scenari come: "
+"alta volatilità, bassa volatilità, trend in rialzo e in ribasso."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/tour.html.haml:1
 msgid "Then, make your trade"
@@ -11516,10 +11591,10 @@ msgid "There was a problem accessing the server."
 msgstr "Si è verificato un problema d'accesso al server."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:236
-#, fuzzy
 #| msgid "There was a problem accessing the server."
 msgid "There was a problem validating your address."
-msgstr "Si è verificato un problema d'accesso al server."
+msgstr ""
+"Si è verificato un problema nella procedura di convalida del tuo indirizzo."
 
 #. ($r->url_for('contact')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:275
@@ -11613,6 +11688,9 @@ msgstr "Il presente Accordo contiene l'intero accordo tra le parti in merito all
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:42
 msgid "This Agreement governs your use of our API unless you have executed another agreement with the Company that expressly governs your use of our API."
 msgstr ""
+"Il presente Accordo gestisce l'uso della nostra APi a meno che tu non abbia "
+"stipulato un altro accordo con la Società che gestisce espressamente l'uso "
+"della nostra API."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:115
 msgid "This Agreement may be terminated forthwith by either party on written notice to the other party if the other party is in material breach of the terms of the Agreement and, in the event of a breach capable of being remedied, fails to remedy the breach within 15 days of receipt of notice in writing of such breach."
@@ -11629,6 +11707,9 @@ msgstr "Il presente Accordo entrerà in vigore dalla data in cui la Società ti 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:216
 msgid "This Agreement shall commence on the date you first accept this Agreement, and shall continue unless and until terminated in accordance with the Term and Termination conditions set forth in this Agreement."
 msgstr ""
+"Il presente Accordo entrerà in vigore a partire dalla data di accettazione "
+"dello stesso e continuerà a meno che e fino a quando non venga risolto "
+"secondo le condizioni di Durata e Risoluzione stabilite nel presente Accordo."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:8
 msgid "This Document"
@@ -11739,10 +11820,9 @@ msgid "This document (the \"Agreement\") sets out the terms and conditions betwe
 msgstr "Il presente documento (l'\"Accordo\") stabilisce i termini e le condizioni tra \"la Società\", ossia Binary Services Ltd, e te (la persona che ha richiesto questo programma, \"tu\" o \"tuo\"), in relazione alla tua richiesta per la disposizione di un account di affiliazione (e partecipazione al programma di affiliazione se la tua richiesta è considerata idonea) per promuovere il sito internet %1"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:392
-#, fuzzy
 #| msgid "This function is not relevant to Virtual money accounts"
 msgid "This feature is not relevant to virtual-money accounts."
-msgstr "Questa funzione non è riferita agli account virtuali"
+msgstr "Questa funzione non è riferita agli account con denaro virtuale."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:253
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/lost_passwordws.html.haml:1
@@ -11754,10 +11834,10 @@ msgid "This function is not relevant to Virtual money accounts"
 msgstr "Questa funzione non è riferita agli account virtuali"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:53
-#, fuzzy
 #| msgid "This is a virtual-money account. Please switch to real-money account and deposit funds."
 msgid "This is a virtual-money account. Please switch to a real-money account to deposit funds."
-msgstr "Questo è un account virtuale. Passa all'account reale e deposita fondi."
+msgstr ""
+"Questo è un account virtuale. Passa all'account reale per depositare fondi."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:106
 msgid "This is a virtual-money account. Please switch to real-money account and deposit funds."
@@ -11812,10 +11892,11 @@ msgid "This market is presently closed."
 msgstr "Questo mercato è attualmente chiuso."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:486
-#, fuzzy
 #| msgid "This market is presently closed. Try out the Random Indices which are always open."
 msgid "This market is presently closed. Try out the Volatility Indices which are always open."
-msgstr "Questo mercato è attualmente chiuso. Prova con gli Indici Random che sono sempre aperti."
+msgstr ""
+"Questo mercato è attualmente chiuso. Prova con gli Indici di volatilità che "
+"sono sempre aperti."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/market_warning.html.tt:8
 msgid "This market opens late today at"
@@ -11941,6 +12022,10 @@ msgstr "Per convalidare completamente il tuo account, invia un'email con le copi
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:61
 msgid "To improve the user experience of your Application, where appropriate you may cache the Content for up to 24 hours from a request for that Content through the Binary.com API before being deleted. This limited permission to cache is for performance reasons only."
 msgstr ""
+"Per migliorare l'esperienza dell'utente con la tua Applicazione, se "
+"necessario, potrai celare il Contenuto fino a 24 ore dalla richiesta di tale "
+"Contenuto attraverso l'API di Binary.com prima che venga eliminato. Questa "
+"autorizzazione limitata è solo ai fini delle performance."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:482
 msgid "To open a trading account, our customers must confirm they fully understand the mechanisms and risks of transactions. Please acknowledge your understanding and agreement to each of the following statements, by placing a check mark in the boxes alongside."
@@ -12129,10 +12214,9 @@ msgid "Trading is suspended at the moment."
 msgstr "Al momento il trading è sospeso."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2631
-#, fuzzy
 #| msgid "Trading on %1 is suspended due to missing market data."
 msgid "Trading is suspended due to missing market data."
-msgstr "Il trading su %1 è sospeso a causa di dati di mercato mancanti."
+msgstr "Il trading è sospeso a causa di dati di mercato mancanti."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:452
 msgid "Trading manual"
@@ -12253,10 +12337,9 @@ msgid "Try it now"
 msgstr "Provalo adesso"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2362
-#, fuzzy
 #| msgid "Try out the Random Indices which are always open."
 msgid "Try out the Volatility Indices which are always open."
-msgstr "Prova gli Indici Random che sono sempre aperti."
+msgstr "Prova gli Indici di volatilità che sono sempre aperti."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:122
 msgid "Tu"
@@ -12433,6 +12516,16 @@ msgstr "Passa a un account reale"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:242
 msgid "Upon the expiration or termination of this Agreement, for whatever reason, all rights and license granted to you in this Agreement, including use of the Binary.com API, shall immediately terminate. You agree to promptly cease all further use of the Binary.com API. Termination of this Agreement shall not act as a waiver of any breach of this Agreement and shall not act as a release of your liability for breach of its obligation under this Agreement. The Company shall not be liable to you for damages of any kind solely as a result of terminating this Agreement in accordance with its terms."
 msgstr ""
+"Alla scadenza o alla risoluzione del presente Accordo, per qualsiasi motivo, "
+"tutti i diritti e licenza a te concessi con il presente Accordo, incluso "
+"l'uso dell'API di Binary.com, verranno risolti immediatamente. Accetti di "
+"annullare prontamente qualsiasi uso ulteriore dell'API di Binary.com. La "
+"risoluzione del presente Accordo non agisce quale rinuncia di qualsiasi "
+"violazione del presente Accordo e non agirà quale responsabilità per la "
+"violazione dei suoi obblighi secondo il presente Accordo. La Società non "
+"sarà ritenuta responsabile nei tuoi confronti per i danni di qualsiasi tipo "
+"quale risultato della risoluzione del presente Accordo secondo i suoi "
+"termini."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:163
 msgid "Upper Band = Average + 0.5 * Std Deviation"
@@ -12514,10 +12607,9 @@ msgid "Verify your email address - %1"
 msgstr "Verifica il tuo indirizzo email - %1"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:158
-#, fuzzy
 #| msgid "Verify your withdrawal request - %1"
 msgid "Verify your withdraw request."
-msgstr "Verifica la tua richiesta di prelievo - %1"
+msgstr "Verifica la tua richiesta di prelievo."
 
 #. ($c->stash('website_name')
 #. ($params->{website_name})
@@ -12622,18 +12714,17 @@ msgstr "Visita il nostro"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Volatility Index Markets"
-msgstr ""
+msgstr "Mercati degli indici di volatilità"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:414
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
-#, fuzzy
 #| msgid "Smart Indices"
 msgid "Volatility Indices"
-msgstr "Indici Smart"
+msgstr "Indici di volatilità"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Volatility Indices are further categorized into two types:"
-msgstr ""
+msgstr "Gli indici di volatilità sono inoltre categorizzati in due tipologie:"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:151
 msgid "Waiting for entry tick."
@@ -13900,10 +13991,11 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "Il tuo account è stato completamente convalidato e sono stati rimossi i tuoi limiti di prelievo."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:387
-#, fuzzy
 #| msgid "Your account is fully authenticated. You can view your <a class=\"pjaxload\" href=\"%1\">trading limits here</a>."
 msgid "Your account is fully authenticated. You can view your %1trading limits here"
-msgstr "Il tuo account è stato pienamente convalidato. Puoi vedere i tuoi <a class=\"pjaxload\" href=\"%1\">limiti di trading qui</a>."
+msgstr ""
+"Il tuo account è stato pienamente convalidato. Puoi vedere i tuoi limiti di "
+"trading di %1 qui"
 
 #. (request.url_for("/cashier/limitsws"))
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/authenticate.html.tt:5
@@ -14187,10 +14279,9 @@ msgid "Your use of the Binary.com API will not confer to you any title, ownershi
 msgstr "L'utilizzo dell'API di Binary.com non ti conferirà alcun titolo, interessenza partecipativa o diritti di proprietà intellettuale che altrimenti appartengono alla Società. La nostra piattaforma di trading è protetta da brevetto e il nostro sito internet, incluso il suo contenuto, è protetto dalle leggi sul copyright e rimarrà di nostra esclusiva proprietà, a seconda del caso."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:153
-#, fuzzy
 #| msgid "Your token has expired."
 msgid "Your verification link has expired."
-msgstr "Il tuo token è scaduto."
+msgstr "Il tuo link di verifica è scaduto."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:160
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:339
