@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-22 10:52+0000\n"
-"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
+"PO-Revision-Date: 2016-04-22 21:33+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -354,7 +354,7 @@ msgstr "%ctx(If you look in the sky)You will see %plural(%1,one star, %d stars).
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:163
 msgid "%ctx(minimum duration, for example minimum 15 seconds)min"
-msgstr "%ctx(最短期間, 例： 最小 15 秒）分"
+msgstr "%ctx(最短期間, 例： 最短 15 秒）分"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:257
 msgid "%ctx(the return of investment of a contract)Return"
@@ -382,7 +382,7 @@ msgstr "(北京/CST -8時間)"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "(One) Touch trades"
-msgstr "タッチ・トレード"
+msgstr "Touchトレード"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:407
 msgid "(delayed)"
@@ -921,7 +921,7 @@ msgstr "<strong>長期パートナーシップ:</strong> 当社とのパート�
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 msgid "<strong>Low minimum stakes</strong> - start trading with as little as $5."
-msgstr "<strong>最小取引額</strong>：1,000円からお取引を開始することが可能です"
+msgstr "<strong>最低取引金額</strong>：1,000円からお取引を開始することが可能です"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 msgid "<strong>No surprises</strong> - no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden fees or commissions."
@@ -2860,7 +2860,7 @@ msgstr "報酬還元率"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/available_payment_agents_list.html.tt:16
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_listws.html.tt:34
 msgid "Commission on deposits"
-msgstr "ご入金手数料"
+msgstr "入金手数料"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/available_payment_agents_list.html.tt:20
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_listws.html.tt:38
@@ -3736,7 +3736,7 @@ msgstr "入金"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:541
 msgid "Deposit %1 %2 virtual money into your account %3"
-msgstr "%1 %2のバーチャルマネーをアカウント%3へご入金する"
+msgstr "%1 %2のバーチャルマネーをアカウント%3へ入金する"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/promocode.html.tt:3
 msgid "Deposit Bonus"
@@ -3781,11 +3781,11 @@ msgstr "ご入金: %1営業日"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:429
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:450
 msgid "Deposit: Instant"
-msgstr "ご入金：即刻"
+msgstr "ご入金：即時"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/beginners_faq.html.haml:1
 msgid "Depositing and withdrawing funds"
-msgstr "ご入金・ご出金について"
+msgstr "ご入金/ご出金について"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "Derivative"
@@ -4397,10 +4397,9 @@ msgid "Exit Spot"
 msgstr "終値"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:640
-#, fuzzy
 #| msgid "Exit Spot"
 msgid "Exit Spot Time"
-msgstr "終値"
+msgstr "終了レート時間"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/endsinout.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/higherlower.html.tt:1
@@ -5855,7 +5854,7 @@ msgstr "無効な値です。最大はXXXです。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:337
 msgid "Invalid amount, minimum is"
-msgstr "無効な値です。最小はXXXです。"
+msgstr "無効な値です。最小"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1032
 msgid "Invalid amount. Minimum transfer amount is 0.10, and up to 2 decimal places."
@@ -7308,7 +7307,7 @@ msgstr "最低ー最高　ご出金額"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:77
 msgid "Min:"
-msgstr "最小："
+msgstr "Min:"
 
 #. ($min_amount, $max_amount)
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:571
@@ -8799,11 +8798,11 @@ msgstr "パスワードは20文字未満の半角英数字で+を含めずにご
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:182
 msgid "Potential Payout"
-msgstr "期待払い戻し金額"
+msgstr "ペイアウト"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:184
 msgid "Potential Profit"
-msgstr "利益の期待値"
+msgstr "期待利益"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_summaryws.html.haml:1
 msgid "Potential profit"
@@ -12011,7 +12010,7 @@ msgstr "接続回数が多すぎます。後ほどお試しください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:183
 msgid "Total Cost"
-msgstr "合計金額"
+msgstr "合計投資額"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/commission_table.html.tt:4
 msgid "Total Net Revenue Per Month"
@@ -14166,7 +14165,7 @@ msgstr "%1からのお取引統計情報"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:175
 msgid "Your transaction reference is"
-msgstr "決済参照番号はxxxです。"
+msgstr "トレード参照番号："
 
 #. ($tradeRef)
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:649
@@ -14430,7 +14429,7 @@ msgstr "最小値"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/duration.html.tt:28
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/duration.html.tt:31
 msgid "minimum available duration"
-msgstr "最小取引期間"
+msgstr "最短取引期間"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:597
 msgid "minimum is"
@@ -17161,40 +17160,34 @@ msgid "XPT/GBP"
 msgstr "XPT/GBP"
 
 #: Underlying Symbol R_50
-#, fuzzy
 #| msgid "Volatility Indices"
 msgid "Volatility 50 Index"
-msgstr "ボラティリティ指数"
+msgstr "ボラティリティ50指数"
 
 #: Underlying Symbol RDBULL
-#, fuzzy
 #| msgid "Wall Street Index"
 msgid "Bull Market Index"
-msgstr "ウォールストリート インデックス"
+msgstr "ブルマーケットインデックス"
 
 #: Underlying Symbol R_100
-#, fuzzy
 #| msgid "Volatility Indices"
 msgid "Volatility 100 Index"
-msgstr "ボラティリティ指数"
+msgstr "ボラティリティ100指数"
 
 #: Underlying Symbol R_75
-#, fuzzy
 #| msgid "Volatility Indices"
 msgid "Volatility 75 Index"
-msgstr "ボラティリティ指数"
+msgstr "ボラティリティ75指数"
 
 #: Underlying Symbol RDBEAR
-#, fuzzy
 #| msgid "Belgian Smart Index"
 msgid "Bear Market Index"
-msgstr "ベルギー スマートインデックス"
+msgstr "ベアマーケットインデックス"
 
 #: Underlying Symbol R_25
-#, fuzzy
 #| msgid "Volatility Indices"
 msgid "Volatility 25 Index"
-msgstr "ボラティリティ指数"
+msgstr "ボラティリティ25指数"
 
 #: Translation for market name
 msgid "Synthetic"
@@ -17221,10 +17214,9 @@ msgid "Forex (or foreign exchange) represents the ratio between the values of tw
 msgstr "外国為替とは２種類の通貨における値段の割合を示します。"
 
 #: Explanation for market Volatility Indices
-#, fuzzy
 #| msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like – high volatility, low volatility, bullish and bearish trends."
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions."
-msgstr "ボラリティ指数は、様々なリアル市場の状況をシミュレートし、取引や戦略に慣れるための理想的なプラットフォームです。これらインデックスはボラティリティとドリフトに依存しており、高ボラティリティ、低ボラティリティ、強気傾向、弱気傾向などのシナリオを試すのに役立ちます。"
+msgstr "ボラリティ指数は、様々なリアル市場の状況をシミュレートし、取引や戦略に慣れるための理想的なプラットフォームです。"
 
 #: Explanation for market Indices
 msgid "Indices represent the weighted value of a basket of companies, typically traded on the same exchange."
@@ -17315,10 +17307,11 @@ msgid "Represent a single day of trading with different market factors. They are
 msgstr "異なる市場での要素と共に一日のトレードを示します。１日１回、00:00GMTに価格がリセットされます。"
 
 #: Explanation for market Continuous Indices
-#, fuzzy
 #| msgid "Associated with a number that represents the relative volatility of the market. For example, the Random 100 Index is twice as volatile as the Random 50 Index."
 msgid "Associated with a number that represents the relative volatility of the market. For example, the Volatility 100 Index is twice as volatile as the Volatility 50 Index."
-msgstr "市場での変動を再現できるような乱数に関連があります。例えば、ランダムインデックス100では、ランダムインデックス50の２倍のボラティリティが採用されています。"
+msgstr ""
+"市場での変動を再現できるような乱数に関連があります。例えば、ボラティリティインデックス100では、ボラティリティインデックス50の２倍のボラティリティが採"
+"用されています。"
 
 #: Translation for sub market name
 msgid "Metals"
@@ -17350,7 +17343,7 @@ msgstr "トレード終了時の市場価格を設定したバリア値にて予
 
 #: Explanation for contract category Digits
 msgid "Predict the last digit of the market price at expiration."
-msgstr "終了時の市場価格の下一桁を予測"
+msgstr "満期時の市場価格下一桁を予測。"
 
 #: Translation for contract category "endsinout"
 msgid "Ends In/Out"
