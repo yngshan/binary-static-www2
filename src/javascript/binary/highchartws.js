@@ -383,7 +383,6 @@ var Highchart = (function() {
           // force to redraw:
           window.chart.isDirty = true;
           window.chart.redraw();
-          console.log('exit time' + window.exit_time);
         }
         end_contract(contract);
       }
