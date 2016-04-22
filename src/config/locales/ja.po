@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-22 07:35+0000\n"
-"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
+"PO-Revision-Date: 2016-04-22 08:37+0000\n"
+"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
 "Language-Team: Japanese "
 "<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
@@ -1424,7 +1424,7 @@ msgstr "オーバーレイを加える"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:136
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:78
 msgid "Address"
-msgstr "住所"
+msgstr "現住所"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:361
 msgid "Adjust trade parameters"
@@ -1490,7 +1490,7 @@ msgstr "制限契約"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:406
 msgid "Agreement for documents"
-msgstr "交付書面等のご確認"
+msgstr "交付書面等の確認"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/ContractForm.pm:856
 msgid "All"
@@ -2977,7 +2977,7 @@ msgstr "メールアドレスをご確認ください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:479
 msgid "Confirmation and understandings"
-msgstr "確認と理解"
+msgstr "確認事項"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/conflicts_policy.html.tt:2
 msgid "Conflicts Policy"
@@ -3820,7 +3820,7 @@ msgstr "取引内容"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:8
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:11
 msgid "Details"
-msgstr "詳細"
+msgstr "お客様基本情報"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:570
 msgid "Detrended Price Osc"
@@ -5123,11 +5123,11 @@ msgstr "High/Low"
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Higher/Lower"
-msgstr "ラダー高/ラダー低"
+msgstr "HIGH/LOW"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "Higher/Lower trades"
-msgstr "ラダー高/ラダー低・トレード"
+msgstr "HIGH/LOW・トレード"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:602
 msgid "Highlights the relationship between volume and price changes and is particularly useful for assessing the strength of a trend."
@@ -5406,7 +5406,9 @@ msgstr "「レンジ外」を選択された場合、<strong>トレード終了�
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/higherlower.html.tt:2
 msgid "If you select \"Higher\", you win the payout if the <strong>exit spot</strong> is strictly higher than the <strong>barrier</strong>."
-msgstr "「ラダー高」を選択された場合、<strong>終値</strong>が<strong>バリア価格</strong>より正確に高くなるとペイアウトを獲得いただけます。"
+msgstr ""
+"「HIGH」を選択された場合、<strong>終値</strong>が<strong>バリア価格</strong>より正確に高くなるとペイアウトを獲得いた"
+"だけます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/winning/higherlower.html.tt:5
 msgid "If you select \"Lower\", you win the payout if the <strong>exit spot</strong> is strictly lower than the <strong>barrier</strong>."
@@ -9098,7 +9100,7 @@ msgstr "このトレード購入により１日あたりのトレード購入可
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:367
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:324
 msgid "Purpose of trading"
-msgstr "取引の目的"
+msgstr "投資の目的"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/responsible_trading.html.haml:1
 msgid "Put a limit on your winnings. Once you have reached it put some aside and trade with the rest of the money."
@@ -9484,7 +9486,9 @@ msgstr "シンプルな <a href='%1' class='pjaxload'>アップ/ダウン</a> �
 #. (url_for('trading?market=forex&formname=higherlower')
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "Returns above 1000% on <a href='%1' class='pjaxload'>higher/lower</a> and <a href='%2' class='pjaxload'>touch/no-touch</a> trades."
-msgstr "<a href='%1' class='pjaxload'>ラダー高/ラダー低</a>、<a href='%2' class='pjaxload'>タッチ/ノータッチ</a>オプションで多様な収益機会があります"
+msgstr ""
+"<a href='%1' class='pjaxload'>HIGH/LOW</a>、<a href='%2' "
+"class='pjaxload'>TOUCH/NO-TOUCH</a>オプションで多様な収益機会があります"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Review suspicious account transactions"
@@ -12154,7 +12158,7 @@ msgstr "トレード"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:245
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:243
 msgid "Trading Experience"
-msgstr "取引経験"
+msgstr "投資経験"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:240
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:56
