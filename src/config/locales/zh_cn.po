@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Chinese (China) (Binary)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-21 08:41+0000\n"
+"PO-Revision-Date: 2016-04-22 06:40+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
-"Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary/static/zh_CN/>\n"
+"Language-Team: Chinese (China) "
+"<https://hosted.weblate.org/projects/binary/static/zh_CN/>\n"
 "Language: zh_cn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -127,10 +128,9 @@ msgstr "%1让每个人都能轻松、愉快地参与金融市场。您可交易�
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "%1 has created random indices that you can trade 24/7. You can trade randoms on all types of contract:"
 msgid "%1 has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract:"
-msgstr "%1 已经创建可让您全天候交易的随机指数。您可通过所有合约类型交易随机指数："
+msgstr "%1 已经创建可让您全天候交易的波动率指数。您可通过所有合约类型交易此类指数："
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -275,10 +275,11 @@ msgstr "%1 希望与世界各地的潜在支付代理合作，以便我们可为
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "%1's Random Indices are the %2, %3, %4, and %5. These indices correspond to volatilities of 25%, 50%, 75% and 100%"
 msgid "%1's Continuous Indices are the Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 25%, 50%, 75% and 100%."
-msgstr "%1 的随机指数包括 %2、%3、%4 和 %5，分别对应25%、50%、75% 和 100% 的波动率"
+msgstr ""
+"%1 的连续指数包括波动率25指数、波动率50指数、波动率75指数及波动率100指数。这些指数跟具25%、50%、75% 和100% "
+"持续波动率的模拟市场对应。"
 
 #. (stash->{website_name}, pjax_link_for(l('Random 25 Index')
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -1026,17 +1027,15 @@ msgstr "<strong>震荡的市场</strong> - 可选择一触即付交易或收于�
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
-#, fuzzy
 #| msgid "<strong>Random Indices</strong> - trade %1's proprietary random indices."
 msgid "<strong>Volatility Indices</strong> - trade %1's proprietary volatility indices."
-msgstr "<strong>随机指数</strong> -交易%1内部编制的随机指数。"
+msgstr "<strong>波动率指数</strong> -交易%1内部编制的波动率指数。"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
-#, fuzzy
 #| msgid "<strong>Random indices</strong> - trade %1's own random indices, 24/7."
 msgid "<strong>Volatility indices</strong> - trade %1's own volatility indices, 24/7."
-msgstr "<strong>随机指数</strong> - 全天候交易 %1 内部编制的随机指数。"
+msgstr "<strong>波动率指数</strong> - 全天候交易 %1 内部编制的波动率指数。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/logintrouble.html.tt:62
 msgid "<ul><li> Go to the <strong>More actions</strong> menu and select <strong>Settings</strong>. </li><li> Under <strong>Advanced Settings</strong>, click on the <strong>View advanced settings</strong> button. </li><li> Under the <strong>Cookies</strong> section, select the \"<strong>Don't block cookies</strong>\" option. </li><li> Click anywhere outside the menu to save and close. </li></ul>"
@@ -2371,7 +2370,7 @@ msgstr "楼号"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Bull Market and Bear Market Indices start at 10:00 GMT and 00:00 GMT each day, replicating a bullish and bearish market respectively."
-msgstr ""
+msgstr "每天，牛市和熊市指数于格林尼治时间 10:00 时和 00:00 时开始，分别复制看涨和看跌市场。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "Business Development"
@@ -2985,10 +2984,9 @@ msgid "Continue Trading"
 msgstr "继续交易"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "Synthetic Indices"
 msgid "Continuous Indices"
-msgstr "综合指数"
+msgstr "连续指数"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:208
 msgid "Contract"
@@ -3328,14 +3326,13 @@ msgid "Daily Report"
 msgstr "每日报告"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "Daily Prices"
 msgid "Daily Reset Indices"
-msgstr "每日价格"
+msgstr "每日重置指数"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility."
-msgstr ""
+msgstr "每日重置指数以持续波动率复制市场的看涨和看跌趋势。"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:124
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:233
@@ -3859,10 +3856,9 @@ msgid "Discover our Smart Markets."
 msgstr "探索我们的智能市场。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
-#, fuzzy
 #| msgid "Discover our Smart Markets."
 msgid "Discover our Volatility Indices."
-msgstr "探索我们的智能市场。"
+msgstr "探索我们的波动率指数。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/main.html.tt:23
 msgid "Discovering an easy, low-risk, flexible and, award-winning platform?"
@@ -5138,10 +5134,9 @@ msgstr "点差交易如何操作?"
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/get_started/nav.html.haml:1
-#, fuzzy
 #| msgid "How to trade the random markets?"
 msgid "How to trade the Volatility Indices markets?"
-msgstr "如何在随机市场上交易？"
+msgstr "如何在波动率指数市场上交易？"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 msgid "How to trade the random markets?"
@@ -5607,10 +5602,9 @@ msgid "In/Out (<a href=\"%1\">ends between/outside</a> and <a href=\"%2\">stays 
 msgstr "“范围之内/之外”期权(<a href=\"%1\">收盘位于范围之内/之外</a> 且<a href=\"%2\">保持在范围之内/超出范围之外</a>)"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "In/Out (<a href=\"%1\">ends between/outside</a> and <a href=\"%2\">stays between/goes outside</a>)"
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr "“范围之内/之外”期权(<a href=\"%1\">收盘位于范围之内/之外</a> 且<a href=\"%2\">保持在范围之内/超出范围之外</a>)"
+msgstr "“范围之内/之外”期权(收盘位于范围之内/之外且保持在范围之内/超出范围之外)"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
@@ -8515,10 +8509,11 @@ msgstr "请注意，本网站会生成记录您账户登录IP地址的日志文�
 
 #. (broker_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:37
-#, fuzzy
 #| msgid "Please note that weekend quotes are ignored for the purpose of contract settlement. During weekends, the forex markets may occasionally generate prices, however these prices are often artificial (traders sometimes take advantage of the illiquidity of the markets during weekends to push up or down prices). To avoid settling prices based on such artificial prices, it is %1's policy not to count weekend prices towards contract settlement values (except for the random indices, which are open during weekends)."
 msgid "Please note that weekend quotes are ignored for the purpose of contract settlement. During weekends, the forex markets may occasionally generate prices, however these prices are often artificial (traders sometimes take advantage of the illiquidity of the markets during weekends to push up or down prices). To avoid settling prices based on such artificial prices, it is %1's policy not to count weekend prices towards contract settlement values (except for the volatility indices, which are open during weekends)."
-msgstr "请注意，为进行合约结算，周末报价将忽略不计。周末，外汇交易市场也许会偶尔产生价格，但这些价格只是人为的（交易商有时会利用周末市场缺乏流动性而抬高或压低价格）。为了避免结算受人为价格影响，%1的策略是在合约结算时不计算周末报价（随机指数除外，因为这些指数周末也开放）。"
+msgstr ""
+"请注意，为进行合约结算，周末报价将忽略不计。周末，外汇交易市场也许会偶尔产生价格，但这些价格只是人为的（交易商有时会利用周末市场缺乏流动性而抬高或压低价格"
+"）。为了避免结算受人为价格影响，%1的策略是在合约结算时不计算周末报价（波动率指数除外，因为这些指数周末也开放）。"
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:12
@@ -9940,10 +9935,9 @@ msgid "Sorry, client balance will exceed limits with this payment."
 msgstr "对不起，客户余额不足。"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1536
-#, fuzzy
 #| msgid "Sorry, contracts on Random Indices are not available in your country of residence"
 msgid "Sorry, contracts on Volatility Indices are not available in your country of residence"
-msgstr "对不起，您所在的国家无法使用随机指数合同"
+msgstr "对不起，您所在的国家无法使用波动率指数合同"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:480
 msgid "Sorry, it is not allowed."
@@ -10949,10 +10943,9 @@ msgid "The USD Index is a weighted Index, measuring the US Dollar’s value agai
 msgstr "美元指数是加权指数，衡量美元相对于5种全球货币（欧元、英镑、日元、加元、澳元）的价值，每种货币的权重均为20%。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "The %1 is twice as volatile as the %2, and four times as volatile as the %3."
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index."
-msgstr "%1 的波幅是 %2 的两倍，是 %3 的四倍。"
+msgstr "波动率100指数的波幅是波动率50指数的两倍，是波动率25指数的四倍。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to acquire knowledge of compliance matters in a multitude of international jurisdictions"
@@ -11369,6 +11362,8 @@ msgstr "如原本可以避免承担责任，但因为将Binary.com API与非Bina
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like – high volatility, low volatility, bullish and bearish trends."
 msgstr ""
+"波动率指数模拟各种真实的市场情况，并根据不同的市场情况提供理想的平台交易实践和测试策略。这些指数取决于波动率和漂移率，并帮助用户尝试各种场景，如高波动率、"
+"低波动率、看涨和看跌趋势。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/tour.html.haml:1
 msgid "Then, make your trade"
@@ -11622,10 +11617,11 @@ msgid "This contract's price is %1%2. Contracts purchased from %3 must have a pu
 msgstr "此合同价格为%1%2。向%3购入之合同购入价必须高于%1%4。请相应增加合同金额以达到此最低交易金额。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:5
-#, fuzzy
 #| msgid "This document (the \"Agreement\") sets out the terms and conditions between \"the Company\" which is Binary Services Ltd, and you (the person who applied for this program; \"you\" or \"your\"), in relation to your application to setup an affiliate account (and membership of the affiliate program if your application is deemed successful) to promote the website %1"
 msgid "This document (the \"Agreement\") sets out the terms and conditions (\"Terms\") between \"the Company\" which is Binary Services Ltd (\"we,\" \"us,\" and \"our\"), and you (the person who registered for the Binary.com Application Program Interface (\"API\"); \"you\", or \"your\")."
-msgstr "本文件（“协议”）规定了“公司”（即 Binary Services Ltd.）与“您”（本项目申请人；“您”或“您的”）之间关于您申请设立联盟会员账户（申请成功后还包括联盟项目的会员资格）以推广网站 %1 的条款和条件"
+msgstr ""
+"本文件（“协议”）规定了“公司”即 Binary Services Ltd.(“我们”或“我们的“）与“您”（Binary.com 应用程序接口 (\""
+"API\")注册者）；“您”或“您的”）之间的条款和条件（”条款“）。"
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:10
@@ -11633,10 +11629,9 @@ msgid "This document (the \"Agreement\") sets out the terms and conditions betwe
 msgstr "本文件（“协议”）规定了“公司”（即 Binary Services Ltd.）与“您”（本项目申请人；“您”或“您的”）之间关于您申请设立联盟会员账户（申请成功后还包括联盟项目的会员资格）以推广网站 %1 的条款和条件"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:392
-#, fuzzy
 #| msgid "This function is not relevant to Virtual money accounts"
 msgid "This feature is not relevant to virtual-money accounts."
-msgstr "此功能不适用虚拟资金账户"
+msgstr "此功能不适用于虚拟资金账户。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:253
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/lost_passwordws.html.haml:1
@@ -11648,7 +11643,6 @@ msgid "This function is not relevant to Virtual money accounts"
 msgstr "此功能不适用虚拟资金账户"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:53
-#, fuzzy
 #| msgid "This is a virtual-money account. Please switch to real-money account and deposit funds."
 msgid "This is a virtual-money account. Please switch to a real-money account to deposit funds."
 msgstr "这是虚拟账户。请转换到真实资金账户并存入资金。"
@@ -11706,10 +11700,9 @@ msgid "This market is presently closed."
 msgstr "此市场目前已收市。"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:486
-#, fuzzy
 #| msgid "This market is presently closed. Try out the Random Indices which are always open."
 msgid "This market is presently closed. Try out the Volatility Indices which are always open."
-msgstr "此市场已关闭。您可以试试一直开放的随机指数。"
+msgstr "此市场已关闭。您可以试试一直开放的波动率指数。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/market_warning.html.tt:8
 msgid "This market opens late today at"
@@ -12023,10 +12016,9 @@ msgid "Trading is suspended at the moment."
 msgstr "当前交易暂停。"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2631
-#, fuzzy
 #| msgid "Trading on %1 is suspended due to missing market data."
 msgid "Trading is suspended due to missing market data."
-msgstr "由于市场数据丢失，%1 交易暂停。"
+msgstr "由于市场数据丢失，交易暂停。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:452
 msgid "Trading manual"
@@ -12147,10 +12139,9 @@ msgid "Try it now"
 msgstr "立即体验"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2362
-#, fuzzy
 #| msgid "Try out the Random Indices which are always open."
 msgid "Try out the Volatility Indices which are always open."
-msgstr "试试一直开放的随机指数。"
+msgstr "试试一直开放的波动率指数。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:122
 msgid "Tu"
@@ -12326,10 +12317,9 @@ msgid "Upper Band = Average + 0.5 * Std Deviation"
 msgstr "上轨线 = 平均线 + 0.5 * 标准差"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:72
-#, fuzzy
 #| msgid "Trading Limits"
 msgid "Usage Limit"
-msgstr "交易限制"
+msgstr "使用限制"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Use appropriate terminology, taking into account the style and nuance of the original text"
@@ -12374,22 +12364,19 @@ msgstr "验证成功"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:711
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reset_passwordws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:35
-#, fuzzy
 #| msgid "Verification of identity"
 msgid "Verification Token"
-msgstr "身份验证"
+msgstr "验证令牌"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:719
-#, fuzzy
 #| msgid "Verification of identity"
 msgid "Verification code format incorrect."
-msgstr "身份验证"
+msgstr "验证码格式不正确。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:14
-#, fuzzy
 #| msgid "Verification of identity"
 msgid "Verification token"
-msgstr "身份验证"
+msgstr "验证令牌"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:195
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:46
@@ -12406,10 +12393,9 @@ msgid "Verify your email address - %1"
 msgstr "验证您的电子邮件地址 - %1"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:158
-#, fuzzy
 #| msgid "Verify your withdrawal request - %1"
 msgid "Verify your withdraw request."
-msgstr "验证您的提款请求 - %1"
+msgstr "验证您的提款请求。"
 
 #. ($c->stash('website_name')
 #. ($params->{website_name})
@@ -12514,24 +12500,22 @@ msgstr "访问我们的"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Volatility Index Markets"
-msgstr ""
+msgstr "波动率指数市场"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:414
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
-#, fuzzy
 #| msgid "Smart Indices"
 msgid "Volatility Indices"
-msgstr "智能指数"
+msgstr "波动率指数"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Volatility Indices are further categorized into two types:"
-msgstr ""
+msgstr "波动率指数进一步分为两种类型："
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:151
-#, fuzzy
 #| msgid "Awaiting market ticks...."
 msgid "Waiting for entry tick."
-msgstr "正在等待市场跳动点..."
+msgstr "正在等待进场跳动点。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:354
 msgid "Walkthrough Guide"
@@ -12552,10 +12536,9 @@ msgid "Warranties"
 msgstr "保证条款"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:169
-#, fuzzy
 #| msgid "Disclaimer"
 msgid "Warranty Disclaimer"
-msgstr "免责声明"
+msgstr "担保免责声明"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/common_email.html.tt:700
 msgid "Watch,earn and learn for FREE! Binary.com teams up with professional traders on a monthly basis to show you how to identify trading opportunities using various trading techniques and strategies."
@@ -13095,10 +13078,11 @@ msgstr "通过 %1，您可以交易："
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/binary_options_basics.html.haml:1
-#, fuzzy
 #| msgid "With %1 you’re in control of how much you can win. You specify a fixed payout amount at the outset, and your stake – what you pay – is then calculated. Binary.com offers payouts from $1 to $100,000."
 msgid "With %1 you’re in control of how much you can win. You specify a fixed payout amount at the outset, and your stake – what you pay – is then calculated. Binary.com offers payouts from $1 to $50,000."
-msgstr "通过 %1 您可设定您可赢取的金额。您可在开始交易时设定固定的赔付额，然后即可计算出您的投注额，即您要支付的成本。Binary.com 所提供的赔付额范围从 $1 至 $100,000 。"
+msgstr ""
+"通过 %1 您可设定您可赢取的金额。您可在开始交易时设定固定的赔付额，然后即可计算出您的投注额，即您要支付的成本。Binary.com "
+"所提供的赔付额范围从 $1 至 $50,000 。"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
@@ -13242,10 +13226,12 @@ msgid "You May Store Tokens"
 msgstr "你可以存储令牌"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:178
-#, fuzzy
 #| msgid "There are risks associated with utilizing an Internet-based deal execution trading system, including but not limited to the failure of hardware, software and Internet connection. Since %1 does not control signal power, its reception or routing via Internet, configuration of your equipment or reliability of its connection, we cannot be responsible for communication failures, distortions or delays when trading via the Internet."
 msgid "You acknowledge and agree that you are solely and exclusively responsible for the control, operation and security of transactions and communications made through its access to or use of the Binary.com API. You acknowledge that there are risks associated with utilizing an internet-based deal execution trading system including, but not limited to, the failure of hardware, software, and internet connections. You acknowledge that the Company does not control signal power, its reception or routing via the internet, configuration of your equipment or reliability of its connection, and the Company shall not be responsible for any communication failures, disruptions, errors, distortions or delays you may experience when trading via the internet using the Binary.com API."
-msgstr "在通过基于因特网的交易系统执行交易时会存在诸多风险，包括但不仅限于硬件、软件故障和因特网连接故障。由于 %1 并不控制信号功率、经由因特网的信号接收或路由以及您设备的配置或连接的可靠性，所以当您通过因特网进行交易时我们并不会对通信故障、失真或延迟等问题负责。"
+msgstr ""
+"您承认和同意由您完全负责访问和使用Binary.com API时对交易和通信的控制、操作和安全保障事宜。您承认在通过基于网络的交易系统执行交易时会存在诸多"
+"风险，包括但不仅限于硬件、软件故障和网络连接故障。您承认公司并不控制信号功率、经由网络的信号接收或路由以及您设备的配置或连接的可靠性，"
+"所以当您通过网络使用Binary.com API进行交易时公司并不会对任何可能发生的通信故障、干扰、失误、失真或延迟等问题负责。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:201
 msgid "You acknowledge that, in the course of dealing under these Terms, you may obtain confidential information relating to the Company and its parent, subsidiaries, affiliates or other third party. Such confidential information shall belong solely to the Company."
@@ -13312,10 +13298,9 @@ msgid "You are currently logged in to your virtual money account (%2)."
 msgstr "您已登录您的虚拟资金账户(%2)。"
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:106
-#, fuzzy
 #| msgid "You are either already subscribed or you have reached the limit for proposal subscription."
 msgid "You are either already subscribed or you have reached the limit for pricing table subscription."
-msgstr "您要不已经订阅，要不已达所提议订阅的上限。"
+msgstr "您要不已经订阅，要不已达订阅价表的上限。"
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:86
 msgid "You are either already subscribed or you have reached the limit for proposal subscription."
@@ -13361,10 +13346,9 @@ msgid "You can <a class=\"pjaxload\" href=\"%1\">open an account</a>, deposit fu
 msgstr "仅需数分钟，您就可以 <a class=\"pjaxload\" href=\"%1\">完成开户</a>、入金并开始交易。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/how_to_trade_binaries.html.haml:1
-#, fuzzy
 #| msgid "You can choose payouts from $1 to $100,000. This wide payout range is ideal for both small and large traders."
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders."
-msgstr "您可在$1 至 $100,000之间选择赔付额。赔付额选择范围很广，适合各类交易者。"
+msgstr "您可在$1 至 $50,000之间选择赔付额。赔付额选择范围很广，适合各类交易者。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "You can close your trade before expiry to lock in profits."
@@ -13423,22 +13407,19 @@ msgid "You have already claimed a bonus in the past."
 msgstr "您此前已领取奖金。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:245
-#, fuzzy
 #| msgid "You have already withdrawn the equivalent of"
 msgid "You have already withdrawn %1 %2."
-msgstr "您已提取相当于"
+msgstr "您已提取%1 %2。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:250
-#, fuzzy
 #| msgid "You have already withdrawn the equivalent of EUR %1 in aggregate over the last %2 days."
 msgid "You have already withdrawn the equivalent of %1 %2 in aggregate over the last %3 days."
-msgstr "过去 %2 天里您已累计提取 EUR %1的等值。"
+msgstr "过去 %3 天里您已累计提取 %1 %2 的等值。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:246
-#, fuzzy
 #| msgid "You have already withdrawn the equivalent of"
 msgid "You have already withdrawn the equivalent of %1 %2."
-msgstr "您已提取相当于"
+msgstr "您已提取 %1 %2 的等值。"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:129
 msgid "You have bought contracts with a combined purchase price of five times the bonus amount."
@@ -13472,10 +13453,9 @@ msgid "You have exceeded your daily limit on losses of %1%2."
 msgstr "您已超出%1%2的每日损失限额。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:700
-#, fuzzy
 #| msgid "You haven't purchased any contracts."
 msgid "You have not granted access to any apps."
-msgstr "您没有购入任何交易。"
+msgstr "您没有访问任何应用程序的权限。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/bonus_reject.html.tt:10
 msgid "You have not yet reached the turnover required to be credited with the bonus."
@@ -13511,10 +13491,9 @@ msgid "You have sold the following contract:"
 msgstr "您已经卖出以下合约："
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:641
-#, fuzzy
 #| msgid "You have sold the following contract:"
 msgid "You have sold this contract at %1 %2"
-msgstr "您已经卖出以下合约："
+msgstr "您已经以 %1 %2 卖出此合约"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:134
 msgid "You irrevocably, non-exclusively license to the Company rights to use your Contributions; and"
@@ -13623,10 +13602,10 @@ msgid "You shall be expected to act with good faith and integrity in your relati
 msgstr "您应与下线保持诚信、正直的关系，不得进行高压销售策略或虚假承诺"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:186
-#, fuzzy
 #| msgid "You shall indemnify on demand and hold the Company harmless from and against any and all losses, demands, claims, damages, costs, expenses (including, but not limited to, consequential losses and loss of profit, reasonable legal costs and expenses and VAT thereon if applicable) and liabilities suffered or incurred, directly or indirectly, by the Company in consequence of any breach by you of clause 3.3 or 3.4."
 msgid "You shall be solely responsible for, and shall indemnify and hold the Company free and harmless from, any and all third party claims, damages or lawsuits (including, but not limited to, consequential losses and loss of profit, the Company’s reasonable legal costs and expenses if applicable):"
-msgstr "如果由于您违反第3.3条或第3.4条，导致公司直接或间接遭受或产生任何损失、要求、索赔、损害赔偿、费用、开支（包括但不限于间接损失和利润损失、合理的法律费用和开支及其增值税（如适用））和法律责任，则您应当对公司进行赔偿（如应要求），并使其免害。"
+msgstr ""
+"您须全权负责，并须对公司提供保障与保证公司免于任何和所有第三方索赔、损害赔偿或诉讼 （包括但不限于间接损失和利润损失、公司合理的法律费用和开支，如适用）："
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:148
 msgid "You shall discontinue your use of all prior versions of the Binary.com API in favour of the revised Binary.com API. While it is the Company’s intention that the revised Binary.com API shall be backward compatible with the immediately prior version of the Binary.com API, the Company does not guarantee or warrant that this shall be so, and the Company shall have no liability whatsoever to you for any failure of the revised Binary.com API to be backward compatible with any prior version of the Binary.com API."
@@ -13705,10 +13684,9 @@ msgid "Your %1 accounts are unavailable. For any questions please contact %2."
 msgstr "您的%1账户不可用。如有任何问题，请联系%2。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:249
-#, fuzzy
 #| msgid "Your %1 day withdrawal limit is currently EUR %2. (or equivalent in other currency)."
 msgid "Your %1 day withdrawal limit is currently %2 %3 (or equivalent in other currency)."
-msgstr "您的 %1 天取款限额目前为EUR %2（或其他货币的等值）。"
+msgstr "您的 %1 天取款限额目前为 %2 %3 （或其他货币的等值）。"
 
 #. ($currency_label, $min_deposit)
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:128
@@ -13734,10 +13712,9 @@ msgid "Your Login ID should not contain spaces."
 msgstr "您的登录 ID 不应包含空格。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:116
-#, fuzzy
 #| msgid "Your country"
 msgid "Your Property"
-msgstr "您的国家"
+msgstr "您的财产"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:794
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:805
@@ -13780,10 +13757,9 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "您的账户已经得到完全验证，且您的取款限额已经取消。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:387
-#, fuzzy
 #| msgid "Your account is fully authenticated. You can view your <a class=\"pjaxload\" href=\"%1\">trading limits here</a>."
 msgid "Your account is fully authenticated. You can view your %1trading limits here"
-msgstr "您的账户已经得到完全验证，且您可在此查看您的<a class=\"pjaxload\" href=\"%1\">交易限额</a>。"
+msgstr "您的账户已经通过验证。您可在此查看您的 %1 交易限额"
 
 #. (request.url_for("/cashier/limitsws"))
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/authenticate.html.tt:5
@@ -13981,10 +13957,9 @@ msgid "Your password has been changed."
 msgstr "您的密码已更改。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:508
-#, fuzzy
 #| msgid "Your password has been changed."
 msgid "Your password has been reset."
-msgstr "您的密码已更改。"
+msgstr "您的密码已重设。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:718
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/reset_password.html.tt:23
@@ -14033,10 +14008,9 @@ msgid "Your settings have been updated successfully."
 msgstr "您的设置已成功更新。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:145
-#, fuzzy
 #| msgid "Your documents are expired"
 msgid "Your token has expired."
-msgstr "您的文件已经过期"
+msgstr "您的令牌已经过期。"
 
 #. ($c->stash('request')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:240
@@ -14044,16 +14018,14 @@ msgid "Your token has expired. If you require further assistance, please contact
 msgstr "您的令牌已过期。如果需要帮助，请联系 <a href=\"%1\"><strong>客户支持</strong></a>。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:300
-#, fuzzy
 #| msgid "Your token has been invalidated. Please click <a class=\"pjaxload\" href=\"%1\">here</a> to restart the verification process."
 msgid "Your token has expired. Please click <a class=\"pjaxload\" href=\"%1\">here</a> to restart the verification process."
-msgstr "您的令牌已失效。请点击<a class=\"pjaxload\" href=\"%1\">此处</a>重启验证程序。"
+msgstr "您的令牌已过期。请点击<a class=\"pjaxload\" href=\"%1\">此处</a>重启验证程序。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:577
-#, fuzzy
 #| msgid "Your trading statistics "
 msgid "Your trading statistics since %1."
-msgstr "您的交易统计 "
+msgstr "您自 %1 至今的交易统计。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:175
 msgid "Your transaction reference is"
@@ -14075,10 +14047,9 @@ msgid "Your use of the Binary.com API will not confer to you any title, ownershi
 msgstr "您使用Binary.com API不会赋予您任何职务、所有者权益或应属于本公司的知识产权权利。我们的交易平台和网站，包括其内容都受到专利保护，也受版权法保护，并属于我们的专属财产。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:153
-#, fuzzy
 #| msgid "Your documents are expired"
 msgid "Your verification link has expired."
-msgstr "您的文件已经过期"
+msgstr "您的验证链接已经过期。"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:160
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:339
@@ -14099,16 +14070,14 @@ msgid "Your website URL (if you have one)"
 msgstr "您的网站 URL（如有）"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:244
-#, fuzzy
 #| msgid "Your withdrawal limit is EUR %1 (or equivalent in other currency)."
 msgid "Your withdrawal limit is %1 %2 (or equivalent in other currency)."
-msgstr "您的取款限额为 EUR %1 (或其他货币的等值 ）。"
+msgstr "您的取款限额为 %1 %2 (或其他货币的等值 ）。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:243
-#, fuzzy
 #| msgid "Your withdrawal limit is EUR"
 msgid "Your withdrawal limit is %1 %2."
-msgstr "您的取款限额是EUR"
+msgstr "您的取款限额是 %1 %2。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 msgid "You’ll be surprised by the returns you can make."
@@ -14240,7 +14209,6 @@ msgid "explanation"
 msgstr "说明"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:264
-#, fuzzy
 msgid "f"
 msgstr "f"
 
@@ -14296,10 +14264,9 @@ msgid "low barrier"
 msgstr "低障碍"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:263
-#, fuzzy
 #| msgid "1m"
 msgid "m"
-msgstr "1个月"
+msgstr "月"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:695
 msgid "maximum is"
@@ -14460,10 +14427,9 @@ msgid "use the Binary.com API for any purpose that violates any law or regulatio
 msgstr "使用Binary.com API的目的违反了任何法律或法规、任何个人权利，包括但不限于知识产权、隐私权或人格权，或以任何方式违反这些条款或隐私政策。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:296
-#, fuzzy
 #| msgid "Verification of identity"
 msgid "verification token"
-msgstr "身份验证"
+msgstr "验证令牌"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:13
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:16
@@ -14503,50 +14469,58 @@ msgid "you have sufficient experience and knowledge in matters of financial trad
 msgstr "您拥有足够的金融交易经验和知识，能够评估经由本网站购买金融合约的收益与风险，并且不依赖于本网站中包含的任何信息作出购买决定。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:518
-#, fuzzy
 #| msgid "%1 %2 payout if %3 does not touch %6 through %5."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 does not touch Exercise price through close on %4."
-msgstr "如果%3一直到%5时未触及%6，将获得%1%2的赔付额。"
+msgstr ""
+"{JAPAN ONLY}%1 %2 payout if %3 does not touch Exercise price through close "
+"on %4."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:520
-#, fuzzy
 #| msgid "%1 %2 payout if %3 ends strictly between %7 to %6 at %5 after %4."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 ends on or between low and high values of Exercise price at close on %4."
-msgstr "如果%3在%4之后的%5时收盘严格处于%7至%6之间，将获得%1%2的赔付额。"
+msgstr ""
+"{JAPAN ONLY}%1 %2 payout if %3 ends on or between low and high values of "
+"Exercise price at close on %4."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:521
 msgid "{JAPAN ONLY}%1 %2 payout if %3 ends otside low and high values of Exercise price at close on %4."
 msgstr ""
+"{JAPAN ONLY}%1 %2 payout if %3 ends otside low and high values of Exercise "
+"price at close on %4."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:523
-#, fuzzy
 #| msgid "%1 %2 payout if %3 goes outside %7 and %6 through %5 after %4."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 goes ouside of low and high values of Exercise price through close on %4."
-msgstr "如果%3在%4过后一直到%5时处于%7与%6之外，将获得%1%2的赔付额。"
+msgstr ""
+"{JAPAN ONLY}%1 %2 payout if %3 goes ouside of low and high values of "
+"Exercise price through close on %4."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:516
-#, fuzzy
 #| msgid "%1 %2 payout if %3 is strictly higher than %6 at %5 after %4."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 is strictly higher or equal than Exercise price at close  on %4."
-msgstr "如果%3在%4之后%5严格高于%6，将获得%1%2的赔付额。"
+msgstr ""
+"{JAPAN ONLY}%1 %2 payout if %3 is strictly higher or equal than Exercise "
+"price at close  on %4."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:517
-#, fuzzy
 #| msgid "%1 %2 payout if %3 is strictly lower than %6 at %5."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 is strictly lower than Exercise price at close on %4."
-msgstr "如果%3在%5严格低于%6，将获得%1%2的赔付额。"
+msgstr ""
+"{JAPAN ONLY}%1 %2 payout if %3 is strictly lower than Exercise price at "
+"close on %4."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:522
-#, fuzzy
 #| msgid "%1 %2 payout if %3 stays between %7 and %6 through %5 after %4."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 stays between low and high values of Exercise price through close on %4."
-msgstr "如果%3在%4过后到%5时一直在%7与%6之间，将获得%1%2的赔付额。"
+msgstr ""
+"{JAPAN ONLY}%1 %2 payout if %3 stays between low and high values of Exercise "
+"price through close on %4."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:519
-#, fuzzy
 #| msgid "%1 %2 payout if %3 touches %6 through %5 after %4."
 msgid "{JAPAN ONLY}%1 %2 payout if %3 touches Exercise price through close on %4."
-msgstr "如果%3在%4过后一直到%5时触及%6，将获得%1%2的赔付额。"
+msgstr ""
+"{JAPAN ONLY}%1 %2 payout if %3 touches Exercise price through close on %4."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:413
 msgid "{JAPAN ONLY}A  Net Settlement type of option is one where the underlying asset does not include yen, but the option fee and settlement are paid in yen; it therefore requires some definition of how the settlement amounts will be calculated and converted to yen."
@@ -14557,10 +14531,11 @@ msgid "{JAPAN ONLY}A Binary Option contains the right for the buyer to receive a
 msgstr "{JAPAN ONLY}A Binary Option contains the right for the buyer to receive a certain fixed amount if the market price reaches the exercise price by the exercise time, but it does not contain any rights to sell or buy the underlying asset."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:430
-#, fuzzy
 #| msgid "Each binary option is a prediction on the future movement of an underlying market."
 msgid "{JAPAN ONLY}A Covered option position is where you hold an offsetting position in the underlying asset."
-msgstr "{JAPAN ONLY}Implied volatility is a prediction of the future rate of change in the underlying asset."
+msgstr ""
+"{JAPAN ONLY}A Covered option position is where you hold an offsetting "
+"position in the underlying asset."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:417
 msgid "{JAPAN ONLY}A Currency Binary Option is one where there is a target for a particular currency pair, so a strike price for the exchange rate is agreed, and a payout will be due if the judgment price meets the conditions of being over or under the target strike price, depending on the option type, by the exercise time."
@@ -14571,14 +14546,18 @@ msgid "{JAPAN ONLY}A Currency Option confers the right to sell one currency in e
 msgstr "{JAPAN ONLY}A Currency Option confers the right to sell one currency in exchange for another currency as the underlying asset. For example, the right to sell Yen and buy Dollars is known as a Yen Put / Dollar Call Option, or just Yen Put for short; and the opposite right to buy Yen and sell Dollar is called a Yen Call / Dollar Put Option, or just Yen Call for short."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:431
-#, fuzzy
 msgid "{JAPAN ONLY}A binary call option buyer will benefit from a correct prediction that the asset price will decline to below the strike price by the judgment time."
-msgstr "{JAPAN ONLY}A binary call option buyer will benefit from a correct prediction that the asset price will decline to below the strike price by the judgment time."
+msgstr ""
+"{JAPAN ONLY}A binary call option buyer will benefit from a correct "
+"prediction that the asset price will decline to below the strike price by "
+"the judgment time."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:434
-#, fuzzy
 msgid "{JAPAN ONLY}A binary call options buyer will benefit from a correct prediction that the asset price will rise above the strike price by the judgment time."
-msgstr "{JAPAN ONLY}A binary call options buyer will benefit from a correct prediction that the asset price will rise above the strike price by the judgment time."
+msgstr ""
+"{JAPAN ONLY}A binary call options buyer will benefit from a correct "
+"prediction that the asset price will rise above the strike price by the "
+"judgment time."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:494
 msgid "{JAPAN ONLY}A binary option price cannot exceed the payout amount."
@@ -14645,28 +14624,31 @@ msgid "{JAPAN ONLY}As the time to the exercise point shortens, the time-value of
 msgstr "{JAPAN ONLY}As the time to the exercise point shortens, the time-value of a plain vanilla option decreases."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:524
-#, fuzzy
 #| msgid "How to open an account"
 msgid "{JAPAN ONLY}BUY price per unit"
-msgstr "如何开立账户"
+msgstr "{JAPAN ONLY}BUY price per unit"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:470
-#, fuzzy
 #| msgid "{JAPAN ONLY}Based on the probability of profit is obtained by the exercise, it can not be said that cheaper options is advantageous unconditionally."
 msgid "{JAPAN ONLY}Because option prices are determined by the probability of being exercised, it cannot be said that cheaper options have any natural advantage over expensive options."
-msgstr "{JAPAN ONLY}Based on the probability of profit is obtained by the exercise, it can not be said that cheaper options is advantageous unconditionally."
+msgstr ""
+"{JAPAN ONLY}Because option prices are determined by the probability of being "
+"exercised, it cannot be said that cheaper options have any natural advantage "
+"over expensive options."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:471
-#, fuzzy
 #| msgid "{JAPAN ONLY}Binary options is lower risks and higher returns than plan options because loss of sellers is limited at binary options."
 msgid "{JAPAN ONLY}Binary options have lower risk than vanilla options for option sellers, because with binary options the maximum loss is fixed."
-msgstr "{JAPAN ONLY}Binary options is lower risks and higher returns than plan options because loss of sellers is limited at binary options."
+msgstr ""
+"{JAPAN ONLY}Binary options have lower risk than vanilla options for option "
+"sellers, because with binary options the maximum loss is fixed."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:510
-#, fuzzy
 #| msgid "A member of our Customer Support Team will contact you shortly."
 msgid "{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support will contact you shortly."
-msgstr "{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support will contact you shortly."
+msgstr ""
+"{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support "
+"will contact you shortly."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:512
 msgid "{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until %1.\\nLast test taken at %2."
@@ -14677,20 +14659,20 @@ msgid "{JAPAN ONLY}Dear customer, you've already completed the knowledge test, p
 msgstr "{JAPAN ONLY}Dear customer, you've already completed the knowledge test, please proceed to next step."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:505
-#, fuzzy
 #| msgid "Each binary option is a prediction on the future movement of an underlying market."
 msgid "{JAPAN ONLY}Delta refers to  a percentage change of the option price with respect to the change in the underlying asset price."
-msgstr "{JAPAN ONLY}Delta refers to  a percentage change of the option price with respect to the change in the underlying asset price."
+msgstr ""
+"{JAPAN ONLY}Delta refers to  a percentage change of the option price with "
+"respect to the change in the underlying asset price."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:116
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:131
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:187
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:199
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:211
-#, fuzzy
 #| msgid "{JAPAN ONLY}Knowledge Test"
 msgid "{JAPAN ONLY}Download"
-msgstr "{JAPAN ONLY}Knowledge Test"
+msgstr "{JAPAN ONLY}Download"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:101
 msgid "{JAPAN ONLY}Email us copies of your Identification Documents and My Number card."
@@ -14701,16 +14683,19 @@ msgid "{JAPAN ONLY}Enter your personal information, and acknowledge our terms an
 msgstr "{JAPAN ONLY}Enter your personal information, and acknowledge our terms and conditions."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:468
-#, fuzzy
 #| msgid "{JAPAN ONLY}If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller."
 msgid "{JAPAN ONLY}Even if the option is exercise or not exercised, the original option premium remains with the option seller."
-msgstr "{JAPAN ONLY}If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller."
+msgstr ""
+"{JAPAN ONLY}Even if the option is exercise or not exercised, the original "
+"option premium remains with the option seller."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:472
-#, fuzzy
 #| msgid "{JAPAN ONLY}Although binary option loss is limited, based on the assets of the investors, so as not to become excessive speculative trading, it is necessary to bear in mind the moderation in transactions."
 msgid "{JAPAN ONLY}Even though losses in binary options are limited, it is still necessary to take care not to engage in excessive speculative trading and to moderate your transactions volume."
-msgstr "{JAPAN ONLY}Although binary option loss is limited, based on the assets of the investors, so as not to become excessive speculative trading, it is necessary to bear in mind the moderation in transactions."
+msgstr ""
+"{JAPAN ONLY}Even though losses in binary options are limited, it is still "
+"necessary to take care not to engage in excessive speculative trading and to "
+"moderate your transactions volume."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:446
 msgid "{JAPAN ONLY}For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an in-the-money option."
@@ -14765,26 +14750,25 @@ msgid "{JAPAN ONLY}For full details of the documents we can accept please downlo
 msgstr "{JAPAN ONLY}For full details of the documents we can accept please download the following guide:"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:504
-#, fuzzy
 #| msgid "Each binary option is a prediction on the future movement of an underlying market."
 msgid "{JAPAN ONLY}Historical volatility is a prediction of the future rate of change in the underlying asset."
-msgstr "{JAPAN ONLY}Historical volatility is a prediction of the future rate of change in the underlying asset."
+msgstr ""
+"{JAPAN ONLY}Historical volatility is a prediction of the future rate of "
+"change in the underlying asset."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:34
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:6
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:87
-#, fuzzy
 #| msgid "How to open an account"
 msgid "{JAPAN ONLY}How to Open an Account"
-msgstr "如何开立账户"
+msgstr "{JAPAN ONLY}How to Open an Account"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:122
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:61
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:9
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 1: Structure"
 msgid "{JAPAN ONLY}Identification Documents"
-msgstr "{JAPAN ONLY}Section 1: Structure"
+msgstr "{JAPAN ONLY}Identification Documents"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:463
 msgid "{JAPAN ONLY}If an option buyer wishes to exercise the option rights, the seller may still reject the deal."
@@ -14803,10 +14787,12 @@ msgid "{JAPAN ONLY}If the buyer of an option waives his right to exercise, a tra
 msgstr "{JAPAN ONLY}If the buyer of an option waives his right to exercise, a transaction in the underlying asset will not be dealt between the seller and the buyer."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:467
-#, fuzzy
 #| msgid "{JAPAN ONLY}Exercise deadline is coming, but the option to exercise is not carried out and disappear, option premium the seller received will be as it is that of the seller."
 msgid "{JAPAN ONLY}If the exercise period passes without the option being exercised by the buyer, the option premium received by the seller will be the profit made on the trade."
-msgstr "{JAPAN ONLY}Exercise deadline is coming, but the option to exercise is not carried out and disappear, option premium the seller received will be as it is that of the seller."
+msgstr ""
+"{JAPAN ONLY}If the exercise period passes without the option being exercised "
+"by the buyer, the option premium received by the seller will be the profit "
+"made on the trade."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:482
 msgid "{JAPAN ONLY}If the exercise prices and exercise times are the same for an American style and European style option, then the American style option will have a higher price."
@@ -14853,20 +14839,26 @@ msgid "{JAPAN ONLY}If you sell a currency binary put option at a price of 500 ye
 msgstr "{JAPAN ONLY}If you sell a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:503
-#, fuzzy
 #| msgid "Each binary option is a prediction on the future movement of an underlying market."
 msgid "{JAPAN ONLY}Implied volatility is a prediction of the future rate of change in the underlying asset."
-msgstr "{JAPAN ONLY}Implied volatility is a prediction of the future rate of change in the underlying asset."
+msgstr ""
+"{JAPAN ONLY}Implied volatility is a prediction of the future rate of change "
+"in the underlying asset."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:440
 msgid "{JAPAN ONLY}In Japan there are defined trading periods for binary options must be 2 hours or longer, and all trades must be conducted at the start of each trading period."
 msgstr "{JAPAN ONLY}In Japan there are defined trading periods for binary options must be 2 hours or longer, and all trades must be conducted at the start of each trading period."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:454
-#, fuzzy
 #| msgid "{JAPAN ONLY}In the OTC currency binary options trading, if the exchange rate during the trading period move to one direction more than expected, that there is no exercise price which can continue appropriate trading around at-the-money, there is possible to add the exercise price on the way. However, even if the exercise price has been added, do the exercise price will continue trading using up to it, also the transaction price will not be affected by the additional impact of the exercise price."
 msgid "{JAPAN ONLY}In OTC currency binary options trading, if the exchange rate during the trading period moves by more than expected in one direction, and there are no longer any exercise prices which can continue to trade, it is possible under certain conditions to add further exercise prices. However, even when further exercise price have been added, the prices of the original options will not be affected."
-msgstr "{JAPAN ONLY}In the OTC currency binary options trading, if the exchange rate during the trading period move to one direction more than expected, that there is no exercise price which can continue appropriate trading around at-the-money, there is possible to add the exercise price on the way. However, even if the exercise price has been added, do the exercise price will continue trading using up to it, also the transaction price will not be affected by the additional impact of the exercise price."
+msgstr ""
+"{JAPAN ONLY}In OTC currency binary options trading, if the exchange rate "
+"during the trading period moves by more than expected in one direction, and "
+"there are no longer any exercise prices which can continue to trade, it is "
+"possible under certain conditions to add further exercise prices. However, "
+"even when further exercise price have been added, the prices of the original "
+"options will not be affected."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:483
 msgid "{JAPAN ONLY}In case of the right to buy the underlying asset (call option), when the underlying asset price falls, the option price will increase."
@@ -14877,10 +14869,12 @@ msgid "{JAPAN ONLY}In case of the right to sell the underlying asset (put option
 msgstr "{JAPAN ONLY}In case of the right to sell the underlying asset (put option), when the underlying asset price rises, the option price will increase."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:442
-#, fuzzy
 #| msgid "{JAPAN ONLY}Short positions of currency-related binary options, unlike the short positions of the other currency-related option, will not be loss cut because it is not a financial instruments subjected to loss cut regulation."
 msgid "{JAPAN ONLY}In contrast to other types of FX options, short positions in FX Binary Options cannot be closed-out as they are not subject to loss-cut regulations."
-msgstr "{JAPAN ONLY}Short positions of currency-related binary options, unlike the short positions of the other currency-related option, will not be loss cut because it is not a financial instruments subjected to loss cut regulation."
+msgstr ""
+"{JAPAN ONLY}In contrast to other types of FX options, short positions in FX "
+"Binary Options cannot be closed-out as they are not subject to loss-cut "
+"regulations."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:495
 msgid "{JAPAN ONLY}In general a binary option price will not exceed the payout amount."
@@ -14895,16 +14889,18 @@ msgid "{JAPAN ONLY}In order to open a trading account for you we will need to te
 msgstr "{JAPAN ONLY}In order to open a trading account for you we will need to test your knowledge of options to ensure you have the necessary understanding of the products and risks of binary option trading."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:147
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 3: Outline"
 msgid "{JAPAN ONLY}Introduction to Binary Options"
-msgstr "{JAPAN ONLY}Section 3: Outline"
+msgstr "{JAPAN ONLY}Introduction to Binary Options"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:474
-#, fuzzy
 #| msgid "{JAPAN ONLY}It can not be said that binary option is unconditionally advantageous because the reason why investors will lose the full amount of investment at binary option, on the other hand part of investment will remain at FX."
 msgid "{JAPAN ONLY}It cannot be said that binary options trading is unconditionally advanteous over regular spot fx trading, because investors may lose all of their investment whereas in spot fx trading there will still be some value in the trading position."
-msgstr "{JAPAN ONLY}It can not be said that binary option is unconditionally advantageous because the reason why investors will lose the full amount of investment at binary option, on the other hand part of investment will remain at FX."
+msgstr ""
+"{JAPAN ONLY}It cannot be said that binary options trading is unconditionally "
+"advanteous over regular spot fx trading, because investors may lose all of "
+"their investment whereas in spot fx trading there will still be some value "
+"in the trading position."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:438
 msgid "{JAPAN ONLY}It is possible to use two binary options to make a profit if the asset price settles inbetween the two strikes. It is also possible to buy a single range option that will achieve the same result."
@@ -14924,10 +14920,9 @@ msgid "{JAPAN ONLY}Knowledge Test Result"
 msgstr "{JAPAN ONLY}Knowledge Test Result"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:169
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 4: Risk"
 msgid "{JAPAN ONLY}Option Pricing"
-msgstr "{JAPAN ONLY}Section 4: Risk"
+msgstr "{JAPAN ONLY}Option Pricing"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:506
 msgid "{JAPAN ONLY}Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. Apart from the fixed exercise price, all other elements are changing constantly, so an understanding of the relationships between each element and changes in the options price is necessary for the management of options trading risk."
@@ -14940,26 +14935,26 @@ msgstr "{JAPAN ONLY}Option prices are normally dependant on elements such as the
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:12
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:137
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:42
-#, fuzzy
 #| msgid "{JAPAN ONLY}Knowledge Test"
 msgid "{JAPAN ONLY}Options Basic Knowledge"
-msgstr "{JAPAN ONLY}Knowledge Test"
+msgstr "{JAPAN ONLY}Options Basic Knowledge"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:157
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 4: Risk"
 msgid "{JAPAN ONLY}Options Basics"
-msgstr "{JAPAN ONLY}Section 4: Risk"
+msgstr "{JAPAN ONLY}Options Basics"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:464
 msgid "{JAPAN ONLY}Options are said to be leveraged products because in the case of large moves in the underlying asset price, the values of the options can increase by large amounts compared to the price paid for the option."
 msgstr "{JAPAN ONLY}Options are said to be leveraged products because in the case of large moves in the underlying asset price, the values of the options can increase by large amounts compared to the price paid for the option."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:445
-#, fuzzy
 #| msgid "{JAPAN ONLY}Options may be either European or American style of exercise, and the one which can be exercised at only one expiry time is the European style option."
 msgid "{JAPAN ONLY}Options may be European or American style of exercise, and those which can be exercised at only one expiry time are the European style options."
-msgstr "{JAPAN ONLY}Options may be either European or American style of exercise, and the one which can be exercised at only one expiry time is the European style option."
+msgstr ""
+"{JAPAN ONLY}Options may be European or American style of exercise, and those "
+"which can be exercised at only one expiry time are the European style "
+"options."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:112
 msgid "{JAPAN ONLY}Our Customer Support staff will contact you at each stage to guide you through the process. Please also download our full guide to opening an account:"
@@ -14996,10 +14991,9 @@ msgstr "{JAPAN ONLY}Please download our Summary of Specifications which lists al
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:205
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:21
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:77
-#, fuzzy
 #| msgid "Pre-contract Document"
 msgid "{JAPAN ONLY}Pre-Contract Documents"
-msgstr "Pre-contract Document"
+msgstr "{JAPAN ONLY}Pre-Contract Documents"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:477
 msgid "{JAPAN ONLY}Price of OTC currency option is the calculated value based on multiple elements and is determined by relative trading basically."
@@ -15022,16 +15016,14 @@ msgid "{JAPAN ONLY}Regarding to the OTC price of financial instruments, in case 
 msgstr "{JAPAN ONLY}Regarding to the OTC price of financial instruments, in case that financial instruments business operator suggests both of  bid and ask price (or trading price and cancellation price), generally there is a difference of them. This option will be wider as the expiration approaches."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:174
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 4: Risk"
 msgid "{JAPAN ONLY}Regulation & Tax"
-msgstr "{JAPAN ONLY}Section 4: Risk"
+msgstr "{JAPAN ONLY}Regulation & Tax"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:525
-#, fuzzy
 #| msgid "How to open an account"
 msgid "{JAPAN ONLY}SELL price  per unit"
-msgstr "如何开立账户"
+msgstr "{JAPAN ONLY}SELL price  per unit"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:405
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:24
@@ -15060,7 +15052,6 @@ msgstr "{JAPAN ONLY}Section 4: Risk"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:409
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:19
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:36
-#, fuzzy
 #| msgid "Session duration:"
 msgid "{JAPAN ONLY}Section 5: Calculation"
 msgstr "{JAPAN ONLY}Section 5: Calculation"
@@ -15070,18 +15061,17 @@ msgid "{JAPAN ONLY}Short positions in FX Binary Options must be covered by initi
 msgstr "{JAPAN ONLY}Short positions in FX Binary Options must be covered by initial margin and any further losses must be covered by further margin deposits."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:511
-#, fuzzy
 #| msgid "Sorry, you have already had too many unsuccessful attempts. Please try again in 5 minutes."
 msgid "{JAPAN ONLY}Sorry, you have failed the test, please try again after 24 hours."
-msgstr "{JAPAN ONLY}Sorry, you have failed the test, please try again after 24 hours."
+msgstr ""
+"{JAPAN ONLY}Sorry, you have failed the test, please try again after 24 hours."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:18
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:193
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:50
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 4: Risk"
 msgid "{JAPAN ONLY}Summary of Specifications"
-msgstr "{JAPAN ONLY}Section 4: Risk"
+msgstr "{JAPAN ONLY}Summary of Specifications"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:402
 msgid "{JAPAN ONLY}Take knowledge test"
@@ -15096,42 +15086,55 @@ msgid "{JAPAN ONLY}The Black-Scholes model is widely used to calculate theoretic
 msgstr "{JAPAN ONLY}The Black-Scholes model is widely used to calculate theoretical option prices."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:451
-#, fuzzy
 #| msgid "{JAPAN ONLY}Exercise price is the price which buy and sell underlying asset by exercise the right and in case of binary option, it is basic price to judge the presence (exist) of payout."
 msgid "{JAPAN ONLY}The Exercise Price is the level at which the option buyer has the right to trade the underlying, and is also used for binary options to determine whether the buyer should receive a payout."
-msgstr "{JAPAN ONLY}Exercise price is the price which buy and sell underlying asset by exercise the right and in case of binary option, it is basic price to judge the presence (exist) of payout."
+msgstr ""
+"{JAPAN ONLY}The Exercise Price is the level at which the option buyer has "
+"the right to trade the underlying, and is also used for binary options to "
+"determine whether the buyer should receive a payout."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:452
 msgid "{JAPAN ONLY}The Exit Price is the price that is observed at the judgment time, and is used to determine whether a payout should be made."
 msgstr "{JAPAN ONLY}The Exit Price is the price that is observed at the judgment time, and is used to determine whether a payout should be made."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:465
-#, fuzzy
 #| msgid "{JAPAN ONLY}If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller."
 msgid "{JAPAN ONLY}The buyer of a vanilla option can choose whether to exercise the option or not. His loss is limited to the price paid for the option, whereas his potential profit is unlimited."
-msgstr "{JAPAN ONLY}If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller."
+msgstr ""
+"{JAPAN ONLY}The buyer of a vanilla option can choose whether to exercise the "
+"option or not. His loss is limited to the price paid for the option, whereas "
+"his potential profit is unlimited."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:455
-#, fuzzy
 #| msgid "{JAPAN ONLY}The exit price is important in binary options. In case of handling the OTC currency-related binary options trading for personal, company inspects if mistakes and intentional operation has not been performed inspection for exit price the company determined and also checking whether there is an error in the data in case that the company use the rate data provided by third company."
 msgid "{JAPAN ONLY}The exit price is important in binary options. In case of handling the OTC currency-related binary options trading for private individuals, the broker company must perform inspections of the exit prices which have been used for determining option payout, and must check whether there is an error in the data in cases where that the company has used rated data provided by third company."
-msgstr "{JAPAN ONLY}The exit price is important in binary options. In case of handling the OTC currency-related binary options trading for personal, company inspects if mistakes and intentional operation has not been performed inspection for exit price the company determined and also checking whether there is an error in the data in case that the company use the rate data provided by third company."
+msgstr ""
+"{JAPAN ONLY}The exit price is important in binary options. In case of "
+"handling the OTC currency-related binary options trading for private "
+"individuals, the broker company must perform inspections of the exit prices "
+"which have been used for determining option payout, and must check whether "
+"there is an error in the data in cases where that the company has used rated "
+"data provided by third company."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:469
-#, fuzzy
 #| msgid "{JAPAN ONLY}Maximum loss of buyer at binary options is an optional fee, maximum loss of the seller will be the amount subtracted the option fee from the payout amount."
 msgid "{JAPAN ONLY}The maximum loss for the buyer of an option is the price paid, and the maximium loss for the option seller will be the payout amount minus the opion price he received."
-msgstr "{JAPAN ONLY}Maximum loss of buyer at binary options is an optional fee, maximum loss of the seller will be the amount subtracted the option fee from the payout amount."
+msgstr ""
+"{JAPAN ONLY}The maximum loss for the buyer of an option is the price paid, "
+"and the maximium loss for the option seller will be the payout amount minus "
+"the opion price he received."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:475
 msgid "{JAPAN ONLY}The particular details of binary options are all the same, no matter which broking company you trade with."
 msgstr "{JAPAN ONLY}The particular details of binary options are all the same, no matter which broking company you trade with."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:453
-#, fuzzy
 #| msgid "{JAPAN ONLY}The payout is the amount that seller of the option paid to the buyer as a result of exercising the right, when the predetermined exercise conditions meet and the amount paid like that called payout amount."
 msgid "{JAPAN ONLY}The payout is the amount that the option seller must pay to the buyer if the buyer exercises his right when the conditions for a payout have been satisfied."
-msgstr "{JAPAN ONLY}The payout is the amount that seller of the option paid to the buyer as a result of exercising the right, when the predetermined exercise conditions meet and the amount paid like that called payout amount."
+msgstr ""
+"{JAPAN ONLY}The payout is the amount that the option seller must pay to the "
+"buyer if the buyer exercises his right when the conditions for a payout have "
+"been satisfied."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:476
 msgid "{JAPAN ONLY}The price of OTC binary options of the same conditions, (sometimes) the price varies depending on transactions dealers handling financial instruments business."
@@ -15182,24 +15185,21 @@ msgid "{JAPAN ONLY}To compensate for any rise in the price of an underlying asse
 msgstr "{JAPAN ONLY}To compensate for any rise in the price of an underlying asset that you intend to buy in future, you should buy a call option."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:164
-#, fuzzy
 #| msgid "{JAPAN ONLY}Section 2: Method"
 msgid "{JAPAN ONLY}Trading & Hedging"
-msgstr "{JAPAN ONLY}Section 2: Method"
+msgstr "{JAPAN ONLY}Trading & Hedging"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:15
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:181
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:69
-#, fuzzy
 #| msgid "Trading Guide"
 msgid "{JAPAN ONLY}Trading Guide"
-msgstr "交易指南"
+msgstr "{JAPAN ONLY}Trading Guide"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:526
-#, fuzzy
 #| msgid "{JAPAN ONLY}Knowledge Test"
 msgid "{JAPAN ONLY}Units"
-msgstr "{JAPAN ONLY}Knowledge Test"
+msgstr "{JAPAN ONLY}Units"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:459
 msgid "{JAPAN ONLY}Unless special arrangements are made, cooling-off will not be available after OTC binary options trading contract has been made."
@@ -15210,26 +15210,32 @@ msgid "{JAPAN ONLY}Unlike a plain vanilla option, an in-the-money binary option 
 msgstr "{JAPAN ONLY}Unlike a plain vanilla option, an in-the-money binary option will have a lower price, the further away it is from the exercise point."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:437
-#, fuzzy
 #| msgid "{JAPAN ONLY}Hedge you used for binary option is needed to be conducted as compensation part of loss of  the hedged asset because payout is fixed."
 msgid "{JAPAN ONLY}Using binary options for hedging a position in the underlying asset means that only part of the loss or gain can be hedged, because the payout amount is fixed."
-msgstr "{JAPAN ONLY}Hedge you used for binary option is needed to be conducted as compensation part of loss of  the hedged asset because payout is fixed."
+msgstr ""
+"{JAPAN ONLY}Using binary options for hedging a position in the underlying "
+"asset means that only part of the loss or gain can be hedged, because the "
+"payout amount is fixed."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:124
 msgid "{JAPAN ONLY}We are required to request copies of your My Number Card as well as proof of registered address. Your details will be kept secure and only used for the specific purposes of verifying your credentials, as required by law."
 msgstr "{JAPAN ONLY}We are required to request copies of your My Number Card as well as proof of registered address. Your details will be kept secure and only used for the specific purposes of verifying your credentials, as required by law."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:435
-#, fuzzy
 #| msgid "{JAPAN ONLY}At buying call option, break-even point is the price added option fee of a unit of the underlying asset to exercise price."
 msgid "{JAPAN ONLY}When buying a vanilla call option, the break-even price at the exercise point is the strike price plus the option price paid in units of the underlying."
-msgstr "{JAPAN ONLY}At buying call option, break-even point is the price added option fee of a unit of the underlying asset to exercise price."
+msgstr ""
+"{JAPAN ONLY}When buying a vanilla call option, the break-even price at the "
+"exercise point is the strike price plus the option price paid in units of "
+"the underlying."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:436
-#, fuzzy
 #| msgid "{JAPAN ONLY}At buying put option, break-even point is the price minuses option fee of a unit of the underlying asset to exercise price."
 msgid "{JAPAN ONLY}When buying a vanilla put option, the break-even price at the exercise point is the strike price minus the option price paid in units of the underlying."
-msgstr "{JAPAN ONLY}At buying put option, break-even point is the price minuses option fee of a unit of the underlying asset to exercise price."
+msgstr ""
+"{JAPAN ONLY}When buying a vanilla put option, the break-even price at the "
+"exercise point is the strike price minus the option price paid in units of "
+"the underlying."
 
 #. (request.url_for("/", { 'l' => 'JA'  }))
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:89
@@ -15873,7 +15879,6 @@ msgid "International Consolidated Airlines Group SA"
 msgstr "国际航空集团"
 
 #: Underlying Symbol DEDUE
-#, fuzzy
 #| msgid "Drr AG"
 msgid "Duerr AG"
 msgstr "杜尔集团"
