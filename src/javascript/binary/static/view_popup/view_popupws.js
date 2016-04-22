@@ -284,12 +284,17 @@ var ViewPopupWS = (function() {
             if (TradePage.is_trading_page() && !tickForgotten) {
               socketSend({"forget_all":"ticks"});
               tickForgotten = true;
-            }
-            else {
+            } else if (!TradePage.is_trading_page()) {
                 Highchart.show_chart(contract);
                 if (contract.entry_tick_time) {
                   chartStarted = true;
                 }
+                tickForgotten = true;
+            } else if (tickForgotten) {
+              Highchart.show_chart(contract, 'update');
+              if (contract.entry_tick_time) {
+                chartStarted = true;
+              }
             }
         }
 
