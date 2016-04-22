@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: BOM\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-22 10:17+0000\n"
-"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
+"PO-Revision-Date: 2016-04-22 13:38+0000\n"
+"Last-Translator: Sittie Hadjirah Sevilla <sittiebaser@gmail.com>\n"
 "Language-Team: Russian "
 "<https://hosted.weblate.org/projects/binary/static/ru/>\n"
 "Language: ru\n"
@@ -132,10 +132,11 @@ msgstr "%1 предлагает Вам простой и увлекательн�
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "%1 has created random indices that you can trade 24/7. You can trade randoms on all types of contract:"
 msgid "%1 has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract:"
-msgstr "%1 создал собственные индексы Random на основе случайных чисел, которые доступны 24/7. Вы можете работать на рынках Random со всеми типами контрактов:"
+msgstr ""
+"%1 создал собственные индексы Волатильности, которые доступны 24/7. Вы "
+"можете работать на данных индексах со всеми типами контрактов:"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
@@ -2377,6 +2378,9 @@ msgstr "Браузер"
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Bull Market and Bear Market Indices start at 10:00 GMT and 00:00 GMT each day, replicating a bullish and bearish market respectively."
 msgstr ""
+"Индексы восходящего и нисходящего рынка начинают работу ежедневно, в 10:00 "
+"GMT и 00:00 GMT, отражая динамику восходящего и нисходящего рынка, "
+"соответственно."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "Business Development"
@@ -2704,11 +2708,11 @@ msgstr "Классификация клиентов"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:148
 msgid "Client email not set."
-msgstr ""
+msgstr "Не указан электронный адрес Клиента."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:87
 msgid "Client is not fully authenticated."
-msgstr ""
+msgstr "Личность Клиента установлена не полностью."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:59
 msgid "Client's Liability"
@@ -3338,6 +3342,8 @@ msgstr "Дневные цены"
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility."
 msgstr ""
+"Ежедневные индексы Reset отражают рынки с восходящим и нисходящим трендом, а "
+"также постоянной волатильностью."
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:124
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:233
@@ -3380,7 +3386,7 @@ msgstr "Дата"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:207
 msgid "Date (GMT)"
-msgstr ""
+msgstr "Дата (GMT)"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:570
 msgid "Date and Time"
@@ -8336,7 +8342,7 @@ msgstr "О платформе"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:94
 msgid "Please accept Funds Protection."
-msgstr ""
+msgstr "Пожалуйста, установите защиту средств."
 
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:221
 msgid "Please agree to the risk disclaimer before proceeding."
@@ -10054,6 +10060,9 @@ msgstr "Извините, Вы не можете вывести средства
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:959
 msgid "Sorry, you cannot withdraw. Your withdrawal amount %1 exceeds withdrawal limit%2. Please contact <a href=\"%3\">customer support</a> to authenticate your account."
 msgstr ""
+"Извините, но Вы не можете вывести средства со счёта. Сумма вывода %1 "
+"превышает лимит на вывод %2. Пожалуйста, свяжитесь с <a href=\"%3\">отделом "
+"поддержки клиентов,</a> чтобы пройти авторизацию Вашего счёта."
 
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/User.pm:69
 msgid "Sorry, you have already had too many unsuccessful attempts. Please try again in 5 minutes."
@@ -11378,6 +11387,12 @@ msgstr "использование, работа или сочетание API B
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like – high volatility, low volatility, bullish and bearish trends."
 msgstr ""
+"Индексы волатильности моделируют различные ситуации на рынке и предоставляют "
+"идеальную платформу, на которой можно научиться торговать и протестировать "
+"свои стратегии в самых разных рыночных условиях. Данные индексы зависят от "
+"уровня волатильности и движения рынка, помогая пользователям опробовать "
+"такие сценарии, как высокая или низкая волатильность, восходящие или "
+"нисходящие тренды."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/tour.html.haml:1
 msgid "Then, make your trade"
@@ -12513,7 +12528,7 @@ msgstr "Посетите"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Volatility Index Markets"
-msgstr ""
+msgstr "Рынки Индекса волатильности"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:414
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
@@ -12524,7 +12539,7 @@ msgstr "Smart-индексы"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Volatility Indices are further categorized into two types:"
-msgstr ""
+msgstr "Индексы Волатильности подразделяются на два вида:"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:151
 msgid "Waiting for entry tick."
@@ -14903,10 +14918,12 @@ msgid "{JAPAN ONLY}Price of the option, the price of the underlying asset, price
 msgstr "{JAPAN ONLY}Price of the option, the price of the underlying asset, price fluctuation rate of the underlying assets, the time until the exercise date, subject to any of the impact of interest rates."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:528
-#, fuzzy
 #| msgid "{JAPAN ONLY}Price of OTC currency option is the calculated value based on multiple elements and is determined by relative trading basically."
 msgid "{JAPAN ONLY}Prices for currency options are calculated relative the value of theunderlying spot price, and are dependant on multiple factors which may vary."
-msgstr "{JAPAN ONLY}Price of OTC currency option is the calculated value based on multiple elements and is determined by relative trading basically."
+msgstr ""
+"{JAPAN ONLY}Prices for currency options are calculated relative the value of "
+"theunderlying spot price, and are dependant on multiple factors which may "
+"vary."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:152
 msgid "{JAPAN ONLY}Purchase, Settlement & Resale"
@@ -15017,10 +15034,12 @@ msgid "{JAPAN ONLY}The price of a binary option is affected by not only the chan
 msgstr "{JAPAN ONLY}The price of a binary option is affected by not only the change in the underlying asset price, but also the change in remaining time to the exercise point."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:531
-#, fuzzy
 #| msgid "{JAPAN ONLY}Price of call option will be lower interest rates of the underlying assets is low, but the price of the put option, go up when the interest rates of the underlying assets is low."
 msgid "{JAPAN ONLY}The price of a vanilla call option will be lower when price of the underlying asset is low, but the price of the put option will be higher when the price of the underlying asset is low."
-msgstr "{JAPAN ONLY}Price of call option will be lower interest rates of the underlying assets is low, but the price of the put option, go up when the interest rates of the underlying assets is low."
+msgstr ""
+"{JAPAN ONLY}The price of a vanilla call option will be lower when price of "
+"the underlying asset is low, but the price of the put option will be higher "
+"when the price of the underlying asset is low."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:480
 msgid "{JAPAN ONLY}The price of an option can be affected by the underlying asset price, by the volatility rate of the underlying asset, or by the time remaining to the exercise time."
