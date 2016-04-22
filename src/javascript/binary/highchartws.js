@@ -359,7 +359,7 @@ var Highchart = (function() {
       }
       if (!contract.entry_tick_time && contract.date_start && parseInt((window.time._i/1000)) >= parseInt(contract.date_start)) {
         show_error('', text.localize('Waiting for entry tick.'));
-      } else if (!window.chart) {
+      } else if (!window.chart && (!window.chart_subscribed || window.chart_subscribed === '')) {
         request_data(window.contract);
       } else if (contract.entry_tick_time && window.chart) {
         select_entry_tick(contract.entry_tick_time);
@@ -412,6 +412,7 @@ var Highchart = (function() {
     window.request = '';
     window.delayed = '';
     window.is_sold = '';
+    window.chart_subscribed = '';
   }
 
   function request_data(contract) {
@@ -439,8 +440,9 @@ var Highchart = (function() {
       request.style = 'candles';
     }
 
-    if(!contract.is_expired && !contract.sell_spot_time && parseInt((window.time._i/1000)) < end_time) {
+    if(!contract.is_expired && !contract.sell_spot_time && parseInt((window.time._i/1000)) < end_time && (!window.chart_subscribed || window.chart_subscribed === '')) {
         request.subscribe = 1;
+        window.chart_subscribed = true;
     }
 
     window.request = request;
