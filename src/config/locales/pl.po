@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-22 23:33+0000\n"
-"Last-Translator: Anna Płochocka <plochocka.anna@gmail.com>\n"
+"PO-Revision-Date: 2016-04-22 23:47+0000\n"
+"Last-Translator: Ewelina Bruździak <e.bruzdziak@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/binary/static/pl/>"
 "\n"
 "Language: pl\n"
@@ -8506,10 +8506,16 @@ msgstr "Uwaga: nasz portal generuje pliki dziennika rejestrujące adresy IP, za 
 
 #. (broker_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:37
-#, fuzzy
 #| msgid "Please note that weekend quotes are ignored for the purpose of contract settlement. During weekends, the forex markets may occasionally generate prices, however these prices are often artificial (traders sometimes take advantage of the illiquidity of the markets during weekends to push up or down prices). To avoid settling prices based on such artificial prices, it is %1's policy not to count weekend prices towards contract settlement values (except for the random indices, which are open during weekends)."
 msgid "Please note that weekend quotes are ignored for the purpose of contract settlement. During weekends, the forex markets may occasionally generate prices, however these prices are often artificial (traders sometimes take advantage of the illiquidity of the markets during weekends to push up or down prices). To avoid settling prices based on such artificial prices, it is %1's policy not to count weekend prices towards contract settlement values (except for the volatility indices, which are open during weekends)."
-msgstr "Uwaga: zakłady zawierane w weekendy nie będą brane pod uwagę przy rozliczaniu kontraktów. W weekendy rynki walutowe czasami generują ceny, jednak często są to ceny sztuczne (gracze czasami wykorzystują płynność rynków w weekendy, aby podnieść lub obniżyć ceny). Aby uniknąć ustalania cen na podstawie sztucznych cen, zgodnie z polityką %1 ceny weekendowe nie są wliczane do wartości rozliczeń kontaktów (z wyjątkiem losowych wskaźników, które są otwarte w weekendy)."
+msgstr ""
+"Uwaga: zakłady zawierane w weekendy nie będą brane pod uwagę przy "
+"rozliczaniu kontraktów. W weekendy rynki walutowe czasami generują ceny, "
+"jednak często są to ceny sztuczne (gracze czasami wykorzystują płynność "
+"rynków w weekendy, aby podnieść lub obniżyć ceny). Aby uniknąć ustalania cen "
+"na podstawie sztucznych cen, zgodnie z polityką %1 ceny weekendowe nie są "
+"wliczane do wartości rozliczeń kontaktów (z wyjątkiem wskaźników zmienności, "
+"które są otwarte w weekendy)."
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:12
@@ -9882,10 +9888,11 @@ msgid "Sorry, account opening is unavailable."
 msgstr "Przepraszamy, otwarcie konta jest niemożliwe."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:241
-#, fuzzy
 #| msgid "<p>Sorry, an error has occurred. Please <a href=\"%1\">try accessing our Cashier</a> again.</p>"
 msgid "Sorry, an error has occurred, Please try accessing our Cashier again."
-msgstr "<p>Przepraszamy, wystąpił błąd. Prosimy <a href=\"%1\">spróbować uzyskać dostęp do Kasjera</a> później.</p>"
+msgstr ""
+"Przepraszamy, wystąpił błąd. Prosimy spróbować uzyskać dostęp do sekcji "
+"Kasjer później."
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:525
 msgid "Sorry, an error occured with this trade.  Please try again in a few minutes.  If the problem persists, please contact customer support."
@@ -9933,10 +9940,11 @@ msgid "Sorry, client balance will exceed limits with this payment."
 msgstr "Przepraszamy, ale ta płatność spowoduje przekroczenie limitów ustawionych dla salda klienta."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1536
-#, fuzzy
 #| msgid "Sorry, contracts on Random Indices are not available in your country of residence"
 msgid "Sorry, contracts on Volatility Indices are not available in your country of residence"
-msgstr "Przepraszamy, ale kontrakty oparte na losowych wskaźnikach nie są dostępne w Twoim kraju zamieszkania"
+msgstr ""
+"Przepraszamy, ale kontrakty oparte na wskaźnikach zmienności nie są dostępne "
+"w Twoim kraju zamieszkania"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:480
 msgid "Sorry, it is not allowed."
@@ -10179,10 +10187,9 @@ msgid "Start time %1 must be before end time %2"
 msgstr "Czas rozpoczęcia %1 musi przypadać przed godziną zakończenia %2"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2303
-#, fuzzy
 #| msgid "Start time is in the past"
 msgid "Start time is in the future."
-msgstr "Czas rozpoczęcia w przeszłości"
+msgstr "Czas rozpoczęcia w przyszłości."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2298
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:385
@@ -10190,10 +10197,11 @@ msgid "Start time is in the past"
 msgstr "Czas rozpoczęcia w przeszłości"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2311
-#, fuzzy
 #| msgid "Start time on forward-starting contracts must be more than %1 from now."
 msgid "Start time on forward-starting contracts must be more than 5 minutes from now."
-msgstr "Czas rozpoczęcia kontraktów rozpoczynających się przyszłości musi przypadać na datę późniejszą niż %1 od teraz."
+msgstr ""
+"Czas rozpoczęcia kontraktów rozpoczynających się przyszłości musi przypadać "
+"na datę późniejszą niż 5 minut od teraz."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1300
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:90
@@ -10597,10 +10605,9 @@ msgid "Terms and conditions"
 msgstr "Terms and conditions"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:78
-#, fuzzy
 #| msgid "Terms and Conditions Approval"
 msgid "Terms and conditions approval is required."
-msgstr "Akceptacja regulaminu"
+msgstr "Konieczna jest akceptacja regulaminu."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:689
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:674
@@ -10938,10 +10945,11 @@ msgid "The USD Index is a weighted Index, measuring the US Dollar’s value agai
 msgstr "Indeks USD to indeks ważony mierzący wartość dolara amerykańskiego w stosunku do koszyka 5 światowych walut (EUR, GBP, JPY, CAD, AUD), z których każda ma wagę 20%."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
-#, fuzzy
 #| msgid "The %1 is twice as volatile as the %2, and four times as volatile as the %3."
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index."
-msgstr "%1 jest dwa razy bardziej zmienny niż %2 i cztery razy bardziej zmienny niż %3."
+msgstr ""
+"Indeks zmienności 100 jest dwa razy bardziej zmienny niż Indeks zmienności "
+"50 i cztery razy bardziej zmienny niż Indeks zmienności 25."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to acquire knowledge of compliance matters in a multitude of international jurisdictions"
@@ -11404,10 +11412,9 @@ msgid "There was a problem accessing the server."
 msgstr "Wystąpił błąd podczas uzyskiwania dostępu do serwera."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:236
-#, fuzzy
 #| msgid "There was a problem accessing the server."
 msgid "There was a problem validating your address."
-msgstr "Wystąpił błąd podczas uzyskiwania dostępu do serwera."
+msgstr "Nie udało nam się zweryfikować Twojego adresu."
 
 #. ($r->url_for('contact')
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:275
@@ -11627,10 +11634,9 @@ msgid "This document (the \"Agreement\") sets out the terms and conditions betwe
 msgstr "Niniejszy dokument („Umowa”) określa warunki współpracy pomiędzy „Firmą”, czyli Binary Services Ltd a użytkownikiem (osobą, która zgłosiła się do tego programu; „użytkownik”, „Ty”), w związku ze zgłoszeniem użytkownika o utworzenie konta partnerskiego (i członkostwa w programie partnerskim, jeśli zgłoszenie zostanie przyjęte) w celu promowania portalu %1"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:392
-#, fuzzy
 #| msgid "This function is not relevant to Virtual money accounts"
 msgid "This feature is not relevant to virtual-money accounts."
-msgstr "Ta funkcja nie jest dostępna dla kont z wirtualnymi pieniędzmi"
+msgstr "Ta funkcja nie jest dostępna dla kont z wirtualnymi pieniędzmi."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:253
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/lost_passwordws.html.haml:1
@@ -11638,10 +11644,11 @@ msgid "This field is required."
 msgstr "To pole jest wymagane."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:53
-#, fuzzy
 #| msgid "This is a virtual-money account. Please switch to real-money account and deposit funds."
 msgid "This is a virtual-money account. Please switch to a real-money account to deposit funds."
-msgstr "To jest konto z wirtualnymi pieniędzmi. Proszę przejść do konta z prawdziwymi pieniędzmi i wpłacić środki."
+msgstr ""
+"To jest konto z wirtualnymi pieniędzmi. Proszę przejść do konta z "
+"prawdziwymi pieniędzmi, aby wpłacić środki."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:106
 msgid "This is a virtual-money account. Please switch to real-money account and deposit funds."
@@ -11696,10 +11703,11 @@ msgid "This market is presently closed."
 msgstr "Rynek jest obecnie zamknięty."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:486
-#, fuzzy
 #| msgid "This market is presently closed. Try out the Random Indices which are always open."
 msgid "This market is presently closed. Try out the Volatility Indices which are always open."
-msgstr "Ten rynek jest obecnie zamknięty. Wypróbuj Losowe wskaźniki, które są zawsze dostępne."
+msgstr ""
+"Ten rynek jest obecnie zamknięty. Wypróbuj wskaźniki zmienności, które są "
+"zawsze dostępne."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/market_warning.html.tt:8
 msgid "This market opens late today at"
@@ -12013,10 +12021,9 @@ msgid "Trading is suspended at the moment."
 msgstr "Handel jest w tej chwili wstrzymany."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2631
-#, fuzzy
 #| msgid "Trading on %1 is suspended due to missing market data."
 msgid "Trading is suspended due to missing market data."
-msgstr "Handel na %1 jest obecnie wstrzymany z powodu brakujących danych rynkowych."
+msgstr "Handel jest obecnie wstrzymany z powodu brakujących danych rynkowych."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:452
 msgid "Trading manual"
@@ -12137,10 +12144,9 @@ msgid "Try it now"
 msgstr "Wypróbuj teraz"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2362
-#, fuzzy
 #| msgid "Try out the Random Indices which are always open."
 msgid "Try out the Volatility Indices which are always open."
-msgstr "Wypróbuj Losowe wskaźniki, które są zawsze dostępne."
+msgstr "Wypróbuj wskaźniki zmienności, które są zawsze dostępne."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:122
 msgid "Tu"
@@ -12396,10 +12402,9 @@ msgid "Verify your email address - %1"
 msgstr "Zweryfikuj swój adres e-mail - %1"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:158
-#, fuzzy
 #| msgid "Verify your withdrawal request - %1"
 msgid "Verify your withdraw request."
-msgstr "Zweryfikuj swój wniosek o wypłatę - %1"
+msgstr "Zweryfikuj swój wniosek o wypłatę."
 
 #. ($c->stash('website_name')
 #. ($params->{website_name})
@@ -13737,10 +13742,11 @@ msgid "Your account is fully authenticated and your withdrawal limits have been 
 msgstr "Twoje konto jest w pełni zweryfikowane, a Twój limit wypłat został zwiększony."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:387
-#, fuzzy
 #| msgid "Your account is fully authenticated. You can view your <a class=\"pjaxload\" href=\"%1\">trading limits here</a>."
 msgid "Your account is fully authenticated. You can view your %1trading limits here"
-msgstr "Twoje konto jest w pełni zweryfikowane. Możesz sprawdzić swoje <a class=\"pjaxload\" href=\"%1\">limity handlowe tutaj</a>."
+msgstr ""
+"Twoje konto jest w pełni zweryfikowane. Możesz sprawdzić swoje %1limity "
+"handlowe tutaj"
 
 #. (request.url_for("/cashier/limitsws"))
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/authenticate.html.tt:5
@@ -14024,10 +14030,9 @@ msgid "Your use of the Binary.com API will not confer to you any title, ownershi
 msgstr "Korzystanie z API Binary.com nie wiąże się z nadaniem jakiegokolwiek tytułu własności, udziału w własności, czy prawa własności intelektualnej, które należy wyłącznie do Firmy. Nasza platforma handlowa jest objęta ochroną patentową, a nasza strona internetowa i wszystkie jej treści są chronione przez prawa autorskie i pozostają naszą wyłączną własnością."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:153
-#, fuzzy
 #| msgid "Your token has expired."
 msgid "Your verification link has expired."
-msgstr "Twój token wygasł."
+msgstr "Twój link weryfikacyjny wygasł."
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:160
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:339
@@ -16949,40 +16954,34 @@ msgid "XPT/GBP"
 msgstr "XPT/GBP"
 
 #: Underlying Symbol R_50
-#, fuzzy
 #| msgid "Volatility Indices"
 msgid "Volatility 50 Index"
-msgstr "Zmienne wskaźniki"
+msgstr "Wskaźnik zmienności 50"
 
 #: Underlying Symbol RDBULL
-#, fuzzy
 #| msgid "Wall Street Index"
 msgid "Bull Market Index"
-msgstr "Indeks Wall Street"
+msgstr "Indeks hossy"
 
 #: Underlying Symbol R_100
-#, fuzzy
 #| msgid "Volatility Indices"
 msgid "Volatility 100 Index"
-msgstr "Zmienne wskaźniki"
+msgstr "Indeks zmienności 100"
 
 #: Underlying Symbol R_75
-#, fuzzy
 #| msgid "Volatility Indices"
 msgid "Volatility 75 Index"
-msgstr "Zmienne wskaźniki"
+msgstr "Indeks zmienności 75"
 
 #: Underlying Symbol RDBEAR
-#, fuzzy
 #| msgid "Belgian Smart Index"
 msgid "Bear Market Index"
-msgstr "Inteligentny indeks belgijski"
+msgstr "Indeks bessy"
 
 #: Underlying Symbol R_25
-#, fuzzy
 #| msgid "Volatility Indices"
 msgid "Volatility 25 Index"
-msgstr "Zmienne wskaźniki"
+msgstr "Indeks zmienności 25"
 
 #: Translation for market name
 msgid "Synthetic"
@@ -17009,10 +17008,11 @@ msgid "Forex (or foreign exchange) represents the ratio between the values of tw
 msgstr "Forex (lub wymiana walut) oznacza stosunek wartości dwóch walut."
 
 #: Explanation for market Volatility Indices
-#, fuzzy
 #| msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like – high volatility, low volatility, bullish and bearish trends."
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions."
-msgstr "Wskaźniki zmienności symulują różne sytuacje rynkowe i zapewniają doskonałe warunki do przećwiczenia strategii handlowych w różnych warunkach rynkowych. Indeksy są zależne od zmienności rynki i pomagają użytkownikom wypróbowanie różnych scenariuszy – wysokiej i niskiej zmienności, trendów wzrostowych i spadkowych."
+msgstr ""
+"Wskaźniki zmienności symulują różne sytuacje rynkowe i zapewniają doskonałe "
+"warunki do przećwiczenia strategii handlowych w różnych warunkach rynkowych."
 
 #: Explanation for market Indices
 msgid "Indices represent the weighted value of a basket of companies, typically traded on the same exchange."
@@ -17103,10 +17103,11 @@ msgid "Represent a single day of trading with different market factors. They are
 msgstr "Przedstawia pojedynczą sesję giełdową z różnymi czynnikami rynkowymi. Są one resetowane w momencie rozpoczęciu każdej sesji giełdowej (godz. 00.00 GMT)."
 
 #: Explanation for market Continuous Indices
-#, fuzzy
 #| msgid "Associated with a number that represents the relative volatility of the market. For example, the Random 100 Index is twice as volatile as the Random 50 Index."
 msgid "Associated with a number that represents the relative volatility of the market. For example, the Volatility 100 Index is twice as volatile as the Volatility 50 Index."
-msgstr "Kojarzony z liczbą przedstawiającą względną zmienność rynku. Np. losowy indeks 100 jest dwukrotnie bardziej zmienny niż losowy indeks 50."
+msgstr ""
+"Kojarzony z liczbą przedstawiającą względną zmienność rynku. Np. indeks "
+"zmienności 100 jest dwukrotnie bardziej zmienny niż indeks zmienności 50."
 
 #: Translation for sub market name
 msgid "Metals"
