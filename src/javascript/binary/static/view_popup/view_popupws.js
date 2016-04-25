@@ -8,7 +8,8 @@ var ViewPopupWS = (function() {
         proposal,
         isSold,
         isSellClicked,
-        chartStarted;
+        chartStarted,
+        tickForgotten;
     var $Container,
         $loading,
         btnView,
@@ -27,6 +28,7 @@ var ViewPopupWS = (function() {
         isSold        = false;
         isSellClicked = false;
         chartStarted  = false;
+        tickForgotten = false;
         $Container    = '';
         popupboxID    = 'inpage_popup_content_box';
         wrapperID     = 'sell_content_wrapper';
@@ -58,6 +60,7 @@ var ViewPopupWS = (function() {
         $.extend(contract, response.proposal_open_contract);
 
         if(contract && contractType) {
+            if (!document.getElementById(wrapperID)) return;
             ViewPopupWS[contractType + 'Update']();
             return;
         }
@@ -65,7 +68,7 @@ var ViewPopupWS = (function() {
         // ----- Tick -----
         if(contract.hasOwnProperty('tick_count')) {
             contractType = 'tick';
-            tickShowContract();
+            getTickHistory(contract.underlying, contract.date_start - 60, contract.date_start - 1, 1);
         }
         // ----- Spread -----
         else if(contract.shortcode.toUpperCase().indexOf('SPREAD') === 0) {
@@ -109,16 +112,24 @@ var ViewPopupWS = (function() {
             'tick_popup'
         );
 
+        TickDisplay.initialize({
+             "symbol"              : contract.underlying,
+             "number_of_ticks"     : contract.tick_count,
+             "previous_tick_epoch" : history.times[0],
+             "contract_category"   : ((/asian/i).test(contract.shortcode) ? 'asian' : (/digit/i).test(contract.shortcode) ? 'digits' : 'callput'),
+             "longcode"            : contract.longcode,
+             "display_decimals"    : history.prices[0].split('.')[1].length || 2,
+             "display_symbol"      : contract.display_name,
+             "contract_start"      : contract.date_start,
+             "show_contract_result": 0
+         });
+
         tickUpdate();
     };
 
     var tickUpdate = function() {
         if(contract.is_expired) {
             showWinLossStatus((contract.sell_price || contract.bid_price) > 0);
-        }
-        if (!window.updateChart || window.updateChart === 'false') {
-            WSTickDisplay.updateChart('', contract);
-            window.updateChart = 'true';
         }
     };
 
@@ -231,14 +242,6 @@ var ViewPopupWS = (function() {
         containerSetText('trade_details_end_date'      , epochToDateTime(contract.date_expiry));
         containerSetText('trade_details_purchase_price', contract.currency + ' ' + parseFloat(contract.buy_price).toFixed(2));
 
-        if(!chartStarted) {
-            if (TradePage.is_trading_page()) socketSend({"forget_all":"ticks"});
-            else {
-                Highchart.show_chart(contract);
-                chartStarted = true;
-            }
-        }
-
         normalUpdateTimers();
         normalUpdate();
     };
@@ -278,6 +281,24 @@ var ViewPopupWS = (function() {
             containerSetText('trade_details_message', contract.validation_error || '&nbsp;');
         }
 
+        if(!chartStarted) {
+            if (TradePage.is_trading_page() && !tickForgotten) {
+              socketSend({"forget_all":"ticks"});
+              tickForgotten = true;
+            } else if (!TradePage.is_trading_page()) {
+                Highchart.show_chart(contract);
+                if (contract.entry_tick_time) {
+                  chartStarted = true;
+                }
+                tickForgotten = true;
+            } else if (tickForgotten) {
+              Highchart.show_chart(contract, 'update');
+              if (contract.entry_tick_time) {
+                chartStarted = true;
+              }
+            }
+        }
+
         if(!isSold && user_sold) {
             isSold = true;
             Highchart.show_chart(contract, 'update');
@@ -292,6 +313,7 @@ var ViewPopupWS = (function() {
         }
 
         sellSetVisibility(!isSellClicked && !isSold && !is_ended && +contract.is_valid_to_sell === 1);
+        contract.chart_validation_error = contract.validation_error;
         contract.validation_error = '';
     };
 
@@ -575,6 +597,10 @@ var ViewPopupWS = (function() {
         }
 
         switch(contractType) {
+            case 'tick':
+                 history = response.history;
+                 tickShowContract();
+                 break;
             case 'spread':
                 history = response.history;
                 spreadShowContract();
@@ -640,7 +666,9 @@ var ViewPopupWS = (function() {
                     break;
                 case 'forget_all':
                     Highchart.show_chart(contract);
-                    chartStarted = true;
+                    if (contract.entry_tick_time) {
+                      chartStarted = true;
+                    }
                     break;
                 default:
                     break;
