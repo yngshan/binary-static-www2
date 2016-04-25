@@ -219,7 +219,7 @@ var Highchart = (function() {
             window.delayed = false;
           }
           if (!contract.entry_tick_time && window.delayed === false && contract.date_start && parseInt((window.time._i/1000)) >= parseInt(contract.date_start)) {
-            show_error('', text.localize('Waiting for entry tick.'));
+            show_error('', contract.chart_validation_error || text.localize('Waiting for entry tick.'));
           } else {
             if (request.subscribe === 1) window.chart_subscribed = true;
             socketSend(window.request);
@@ -250,7 +250,7 @@ var Highchart = (function() {
                       }
                   }
                   if (!window.min || window.min === '') {
-                    window.min = parseInt(contract.start_time) - 3;
+                    window.min = response.history.times[0];
                   }
                 }
                 get_max_history(contract, response);
@@ -274,8 +274,6 @@ var Highchart = (function() {
                 }
                 get_max_candle(contract, response);
             }
-            // set the entry_time
-            // if proposal_open_contract hasn't sent the entry_tick_time, use the calculated entry_tick_time
             window.entry_time = entry_tick_time;
             // start_time and exit_time are used in displaying the color zones
             window.start_time = start_time;
@@ -464,7 +462,7 @@ var Highchart = (function() {
         window.delayed = false;
       }
       if (!contract.entry_tick_time && window.delayed === false && contract.date_start && parseInt((window.time._i/1000)) >= parseInt(contract.date_start)) {
-        show_error('', text.localize('Waiting for entry tick.'));
+        show_error('', contract.chart_validation_error || text.localize('Waiting for entry tick.'));
       } else {
         if (request.subscribe === 1) window.chart_subscribed = true;
         socketSend(window.request);
