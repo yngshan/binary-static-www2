@@ -313,6 +313,7 @@ var ViewPopupWS = (function() {
         }
 
         sellSetVisibility(!isSellClicked && !isSold && !is_ended && +contract.is_valid_to_sell === 1);
+        contract.chart_validation_error = contract.validation_error;
         contract.validation_error = '';
     };
 
@@ -596,7 +597,7 @@ var ViewPopupWS = (function() {
         }
 
         switch(contractType) {
-            case 'tick':		
+            case 'tick':
                  history = response.history;
                  tickShowContract();
                  break;
