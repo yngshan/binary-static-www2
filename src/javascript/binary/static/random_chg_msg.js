@@ -3,8 +3,16 @@
 pjax_config_page('trading', function(){
     return {
         onLoad: function() {
+            var hasRandom = false;
+            Object.keys(Symbols.markets())
+                .forEach(function(s) {
+                    if (s === 'random') {
+                        hasRandom = true;
+                    }
+                });
+
             var tempMsgKey = 'hide_temp_msg';
-            if (SessionStore.get(tempMsgKey)) {
+            if (SessionStore.get(tempMsgKey) || !hasRandom) {
                 $('#temp_notice_msg').addClass('invisible');
             }
 
