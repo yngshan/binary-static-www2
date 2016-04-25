@@ -209,8 +209,8 @@ var Highchart = (function() {
           error = response.error;
       var contract = window.contract;
       initialize_values(contract);
-      if (type === 'contracts_for' && !error) {
-          if (response.contracts_for.feed_license === 'delayed') {
+      if (type === 'contracts_for' && (!error || (error && error.code && error.code === 'InvalidSymbol'))) {
+          if (response.contracts_for && response.contracts_for.feed_license && response.contracts_for.feed_license === 'delayed') {
             window.request.end = 'latest';
             delete window.request.start;
             delete window.request.subscribe;
