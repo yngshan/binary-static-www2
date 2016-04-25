@@ -8,7 +8,8 @@ var ViewPopupWS = (function() {
         proposal,
         isSold,
         isSellClicked,
-        chartStarted;
+        chartStarted,
+        tickForgotten;
     var $Container,
         $loading,
         btnView,
@@ -27,6 +28,7 @@ var ViewPopupWS = (function() {
         isSold        = false;
         isSellClicked = false;
         chartStarted  = false;
+        tickForgotten = false;
         $Container    = '';
         popupboxID    = 'inpage_popup_content_box';
         wrapperID     = 'sell_content_wrapper';
@@ -58,6 +60,7 @@ var ViewPopupWS = (function() {
         $.extend(contract, response.proposal_open_contract);
 
         if(contract && contractType) {
+            if (!document.getElementById(wrapperID)) return;
             ViewPopupWS[contractType + 'Update']();
             return;
         }
@@ -239,14 +242,6 @@ var ViewPopupWS = (function() {
         containerSetText('trade_details_end_date'      , epochToDateTime(contract.date_expiry));
         containerSetText('trade_details_purchase_price', contract.currency + ' ' + parseFloat(contract.buy_price).toFixed(2));
 
-        if(!chartStarted) {
-            if (TradePage.is_trading_page()) socketSend({"forget_all":"ticks"});
-            else {
-                Highchart.show_chart(contract);
-                chartStarted = true;
-            }
-        }
-
         normalUpdateTimers();
         normalUpdate();
     };
@@ -284,6 +279,24 @@ var ViewPopupWS = (function() {
                 containerSetText('trade_details_entry_spot', contract.entry_spot);
             }
             containerSetText('trade_details_message', contract.validation_error || '&nbsp;');
+        }
+
+        if(!chartStarted) {
+            if (TradePage.is_trading_page() && !tickForgotten) {
+              socketSend({"forget_all":"ticks"});
+              tickForgotten = true;
+            } else if (!TradePage.is_trading_page()) {
+                Highchart.show_chart(contract);
+                if (contract.entry_tick_time) {
+                  chartStarted = true;
+                }
+                tickForgotten = true;
+            } else if (tickForgotten) {
+              Highchart.show_chart(contract, 'update');
+              if (contract.entry_tick_time) {
+                chartStarted = true;
+              }
+            }
         }
 
         if(!isSold && user_sold) {
@@ -652,7 +665,9 @@ var ViewPopupWS = (function() {
                     break;
                 case 'forget_all':
                     Highchart.show_chart(contract);
-                    chartStarted = true;
+                    if (contract.entry_tick_time) {
+                      chartStarted = true;
+                    }
                     break;
                 default:
                     break;
