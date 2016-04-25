@@ -249,6 +249,9 @@ var Highchart = (function() {
                           break;
                       }
                   }
+                  if (!window.min || window.min === '') {
+                    window.min = parseInt(contract.start_time) - 3;
+                  }
                 }
                 get_max_history(contract, response);
             } else if (response.candles) {
