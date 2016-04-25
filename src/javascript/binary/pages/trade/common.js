@@ -883,8 +883,8 @@ function showHighchart(){
   div.className = 'grd-grid-12 chart_div';
   if (window.chartAllowed) {
     div.innerHTML = '<table width="600px" align="center"><tr id="highchart_duration"><td width="25%">' +
-                    Content.localize().textDuration + ':</td><td width="25%"><select id="time_period"><option value="1t">1 ' +
-                    Content.localize().textTickResultLabel.toLowerCase() + '</option><option value="1m" selected="selected">1 ' + text.localize("minute").toLowerCase() +
+                    Content.localize().textDuration + ':</td><td width="25%"><select id="time_period"><option value="1t" selected="selected">1 ' +
+                    Content.localize().textTickResultLabel.toLowerCase() + '</option><option value="1m">1 ' + text.localize("minute").toLowerCase() +
                     '</option><option value="2m">2 ' + Content.localize().textDurationMinutes.toLowerCase() + '</option><option value="3m">3 ' +
                     Content.localize().textDurationMinutes.toLowerCase() +'</option><option value="5m">5 ' + Content.localize().textDurationMinutes.toLowerCase() +
                     '</option><option value="10m">10 ' + Content.localize().textDurationMinutes.toLowerCase() + '</option><option value="15m">15 ' +
