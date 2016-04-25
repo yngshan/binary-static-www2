@@ -102,6 +102,7 @@ var StartDates = (function(){
         if(hasNow){
             var element = getElement();
             element.value = 'now';
+            $('#date_start').removeClass('light-yellow-background');
             Defaults.set('date_start', 'now');
         }
     } ;
