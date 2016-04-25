@@ -44,6 +44,7 @@ var StartDates = (function(){
                 var option = document.createElement('option');
                 var content = document.createTextNode(Content.localize().textNow);
                 option.setAttribute('value', 'now');
+                $('#date_start').removeClass('light-yellow-background');
                 option.appendChild(content);
                 fragment.appendChild(option);
                 hasNow = 1;
