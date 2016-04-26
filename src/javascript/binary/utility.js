@@ -431,3 +431,24 @@ function attach_tabs(element) {
     });
     return targets;
 }
+
+/**
+ * convert all dates into local time, should work for string, date, and moment object
+ * @param date      {String|Date|Moment}
+ * @param mode      {'full'|'date'|'time'}
+ */
+function toLocaleDateTime(date, mode) {
+    var format = '';
+    switch (mode) {
+        case 'full': format = 'YYYY-MM-DD HH:mm:ss z';
+            break;
+        case 'date': format = 'YYYY-MM-DD z';
+            break;
+        case 'time': format = 'HH:mm:ss z';
+            break;
+        default: format = 'YYYY-MM-DD HH:mm:ss z';
+    }
+    var momentObj = moment(date);
+    momentObj.local();
+    return momentObj.format(format);
+}
