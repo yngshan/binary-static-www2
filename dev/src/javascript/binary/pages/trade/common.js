@@ -775,7 +775,7 @@ function displayTooltip(market, symbol){
     }
     if (market.match(/^otc_index/) || symbol.match(/^OTC_/)){
         tip.show();
-        tip.setAttribute('target','/get-started/otc_indices');
+        tip.setAttribute('target','/get-started/otc-indices');
     }
     if (market.match(/^random_index/) || symbol.match(/^R_/)){
         tip.setAttribute('target','/get-started/volidx-markets#volidx-indices');

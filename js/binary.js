@@ -82579,7 +82579,7 @@ function displayTooltip(market, symbol){
     }
     if (market.match(/^otc_index/) || symbol.match(/^OTC_/)){
         tip.show();
-        tip.setAttribute('target','/get-started/otc_indices');
+        tip.setAttribute('target','/get-started/otc-indices');
     }
     if (market.match(/^random_index/) || symbol.match(/^R_/)){
         tip.setAttribute('target','/get-started/volidx-markets#volidx-indices');
@@ -92479,7 +92479,7 @@ function attach_tabs(element) {
                 id: 9
             },
             {
-                question: "{JAPAN ONLY}For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option",
+                question: "{JAPAN ONLY}For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option.",
                 answer: true,
                 id: 10
             },
