@@ -1,0 +1,54 @@
+<div class='grd-grid-12 grd-row-padding'>
+  <h1 id="deposit-withdraw-heading"></h1>
+  <div>
+    <p id="deposit-withdraw-message"></p>
+  </div>
+  <div id="currency-form" style="display:none">
+    <div class="rbox-wrap">
+      <fieldset>
+        <div class="grd-row-padding row clear">
+          <div class="grd-grid-4 form_label">
+            <label for="currency">[% l("Transact in") %]</label>
+          </div>
+          <div class="grd-grid-8">
+            <select id="select-currency">
+              <option value="USD" selected="selected">[% l("USD") %]</option>
+              <option value="EUR">[% l("EUR") %]</option>
+              <option value="GBP">[% l("GBP") %]</option>
+              <option value="AUD">[% l("AUD") %]</option>
+            </select>
+          </div>
+        </div>
+        <div class="grd-row-padding row clear form_button">
+          <div class="grd-grid-8">
+            <span class="button">
+              <button class="button" id="submit-currency" type="submit" value="Continue">[% l("Continue") %]</button>
+            </span>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <div id="withdraw-form" style="display:none">
+    <fieldset>
+      <div class="grd-grid-12 grd-parent grd-row-padding">
+        <div class="form_label grd-grid-4">
+          <label for="verification-token">[% l("Verification token") %]</label>
+        </div>
+        <div class="grd-grid-8">
+          <input id="verification-token" type="text" maxlength="48" autocomplete="off" />
+          <div class="hint">[% l("Please check your email for the value of this token") %]</div>
+          <p class="errorfield" id="verification-error" style="display:none"></p>
+        </div>
+      </div>
+      <div class="grd-grid-12 grd-parent">
+        <div class="grd-grid-4"></div>
+        <div class="grd-grid-8">
+            <span class="button">
+              <button class="button" id="submit-verification" type="button">[% l("Submit") %]</button>
+            </span>
+          </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
