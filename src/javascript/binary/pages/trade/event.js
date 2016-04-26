@@ -94,6 +94,7 @@ var TradingEvents = (function () {
             // it will default to proper one
             Defaults.remove('formname');
             Defaults.remove('underlying');
+            resetPriceMovement(); // should reset coloring for new market
             processMarket(1);
         };
 
@@ -151,6 +152,7 @@ var TradingEvents = (function () {
                     var underlying = e.target.value;
                     Defaults.remove('barrier', 'barrier_high', 'barrier_low');
                     Defaults.set('underlying', underlying);
+                    resetPriceMovement(); // should reset coloring for new underlying
                     TradingAnalysis.request();
 
                     Tick.clean();
