@@ -12,6 +12,10 @@ function showRandomRenamedMsg(msg) {
             }
         });
 
+    if(page.language().toLowerCase() === 'id') {
+        $('#temp_notice_msg a').attr('href', 'https://blog.binary.com/indeks-random-berganti-nama-menjadi-indeks-volatilitas/');
+    }
+
     var tempMsgKey = 'hide_temp_msg';
     if (SessionStore.get(tempMsgKey) || !hasRandom) {
         $('#temp_notice_msg').addClass('invisible');
