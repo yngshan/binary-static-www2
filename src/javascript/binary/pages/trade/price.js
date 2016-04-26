@@ -128,6 +128,8 @@ var Price = (function() {
             form_id: form_id
         };
 
+        resetPriceMovement();
+
         return proposal;
     };
 
