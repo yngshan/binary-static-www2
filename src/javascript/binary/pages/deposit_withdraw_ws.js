@@ -49,6 +49,7 @@ var ForwardWS = (function() {
     init: init,
     getCashierType: getCashierType,
     getCashierURL: getCashierURL,
+    hideAll: hideAll,
     showError: showError
   };
 })();
