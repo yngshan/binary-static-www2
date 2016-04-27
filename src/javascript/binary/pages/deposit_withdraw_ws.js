@@ -13,6 +13,10 @@ var ForwardWS = (function() {
         getCashierURL(verification_token);
       }
     });
+    $('#submit-ukgc-funds-protection').click(function() {
+      $('#submit-ukgc-funds-protection').attr('disabled', 'disabled');
+      BinarySocket.send({"tnc_approval": 1, "ukgc_funds_protection": 1});
+    });
   }
   function getCashierType() {
     var cashier_type;
@@ -33,6 +37,7 @@ var ForwardWS = (function() {
   function showError(error) {
     $('#withdraw-form').hide();
     $('#currency-form').hide();
+    $('#ukgc-funds-protection').hide();
     document.getElementById('deposit-withdraw-message').innerHTML = error.message || text.localize('Sorry, an error occurred while processing your request.');
   }
   return {
@@ -84,19 +89,24 @@ pjax_config_page("cashier/forwardws", function() {
                 } else if (type === 'cashier' && !error) {
                   $('#currency-form').hide();
                   $('#withdraw-form').hide();
+                  $('#ukgc-funds-protection').hide();
                   document.getElementById('deposit-withdraw-message').innerHTML = '';
                   $('#deposit-withdraw-iframe-container iframe').attr('src', response.cashier);
                   $('#deposit-withdraw-iframe-container').show();
                 } else if (type === 'cashier' && error) {
                   $('#withdraw-form').hide();
                   $('#currency-form').hide();
-                  if (error.code && (error.code === 'ASK_TNC_APPROVAL' || error.code === 'ASK_UK_FUNDS_PROTECTION')) {
+                  $('#ukgc-funds-protection').hide();
+                  document.getElementById('deposit-withdraw-message').innerHTML = '';
+                  if (error.code && error.code === 'ASK_TNC_APPROVAL') {
                     window.location.href = page.url.url_for('user/tnc_approvalws');
                   } else if (error.code && error.code === 'ASK_FIX_ADDRESS') {
                     document.getElementById('deposit-withdraw-message').innerHTML = text.localize('There was a problem validating your personal details. Please fix the fields [_1]here')
                                                                                         .replace('[_1]', '<a href="' + page.url.url_for('user/settings/detailsws') + '">') + '.</a> ' +
                                                                                         text.localize('If you need assistance feel free to contact our [_1]Customer Support')
                                                                                         .replace('[_1]', '<a href="' + page.url.url_for('contact') + '">') + '.</a>';
+                  } else if (error.code && error.code === 'ASK_UK_FUNDS_PROTECTION') {
+                    $('#ukgc-funds-protection').show();
                   } else if (error.code && error.code === 'ASK_AUTHENTICATE') {
                     document.getElementById('deposit-withdraw-message').innerHTML = text.localize('Your account is not fully authenticated. Please visit the <a href="[_1]">authentication</a> page for more information.')
                                                                                         .replace('[_1]', page.url.url_for('cashier/authenticatews'));
@@ -106,6 +116,10 @@ pjax_config_page("cashier/forwardws", function() {
                 } else if (type === 'set_account_currency' && !error) {
                   ForwardWS.getCashierURL();
                 } else if (type === 'set_account_currency' && error) {
+                  ForwardWS.showError(error);
+                } else if (type === 'tnc_approval' && !error) {
+                  ForwardWS.getCashierURL();
+                } else if (type === 'tnc_approval' && error) {
                   ForwardWS.showError(error);
                 }
               }
