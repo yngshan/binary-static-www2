@@ -75,10 +75,14 @@ pjax_config_page("cashier/forwardws", function() {
                 } else if (type === 'cashier_password' && error) {
                   ForwardWS.showError(error);
                 } else if (type === 'cashier' && !error) {
-                  $('#deposit-withdraw-message').innerHTML = '';
+                  $('#currency-form').hide();
+                  $('#withdraw-form').hide();
+                  document.getElementById('deposit-withdraw-message').innerHTML = '';
                   $('#deposit-withdraw-iframe-container iframe').attr('src', response.cashier);
                   $('#deposit-withdraw-iframe-container').show();
                 } else if (type === 'cashier' && error) {
+                  $('#withdraw-form').hide();
+                  $('#currency-form').hide();
                   if (error.code && (error.code === 'ASK_TNC_APPROVAL' || error.code === 'ASK_UK_FUNDS_PROTECTION')) {
                     window.location.href = page.url.url_for('user/tnc_approvalws');
                   } else if (error.code && error.code === 'ASK_FIX_ADDRESS') {
