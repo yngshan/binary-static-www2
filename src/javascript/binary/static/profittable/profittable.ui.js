@@ -44,7 +44,7 @@ var ProfitTableUI = (function(){
 
     function updateFooter(transactions){
         var accTotal = document.querySelector("#pl-day-total > .pl").textContent;
-        accTotal = parseFloat(accTotal);
+        accTotal = parseFloat(accTotal.replace(/,/g, ''));
         if (isNaN(accTotal)) {
             accTotal = 0;
         }
