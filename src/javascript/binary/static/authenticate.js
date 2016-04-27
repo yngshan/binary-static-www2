@@ -1,10 +1,7 @@
-pjax_config_page("cashier/authenticatews", function(){
+pjax_config_page_require_auth("cashier/authenticatews", function(){
   return {
     onLoad: function() {
       Content.populate();
-      if (page.client.redirect_if_logout()) {
-          return;
-      }
       function show_error(error) {
         message.innerHTML = '<div class="errorbox rbox" id="client_message" style="display:block">' +
                               '<div class="rbox-wrap">' +

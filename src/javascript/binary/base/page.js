@@ -196,13 +196,7 @@ Client.prototype = {
                 $('#content > .grd-container').addClass('center').empty()
                     .append($('<p/>', {class: 'notice-msg', html: text.localize('Please [_1] to view this page')
                         .replace('[_1]', '<a class="login_link" href="javascript:;">' + text.localize('login') + '</a>')}));
-                $('.login_link').click(function(){Login.show_login_popup();});
-            }
-            // do not open login popup automatically after user clicked logout button
-            if(!sessionStorage.getItem('logoutClicked')) {
-                Login.show_login_popup();
-            } else {
-                sessionStorage.removeItem('logoutClicked');
+                $('.login_link').click(function(){Login.redirect_to_login();});
             }
         }
         return !this.is_logged_in;
@@ -328,9 +322,9 @@ Client.prototype = {
         this.clear_storage_values();
         this.check_storage_values();
     },
-    send_logout_request: function(showLoginPopup) {
-        if(showLoginPopup) {
-            sessionStorage.setItem('showLoginPopup', 1);
+    send_logout_request: function(showLoginPage) {
+        if(showLoginPage) {
+            sessionStorage.setItem('showLoginPage', 1);
         }
         BinarySocket.send({'logout': '1'});
     },
@@ -812,7 +806,6 @@ Header.prototype = {
     },
     logout_handler : function(){
         $('a.logout').unbind('click').click(function(){
-            sessionStorage.setItem('logoutClicked', 1);
             page.client.send_logout_request();
         });
     },
@@ -1017,7 +1010,7 @@ Contents.prototype = {
                 $('#account-transfer-section').hide();
             }
         } else {
-            $('#btn_login').unbind('click').click(function(){Login.show_login_popup();});
+            $('#btn_login').unbind('click').click(function(){Login.redirect_to_login();});
 
             $('.by_client_type.client_logged_out').removeClass('invisible');
             $('.by_client_type.client_logged_out').show();
@@ -1148,9 +1141,9 @@ Page.prototype = {
             LocalStore.set('reality_check.ack', 0);
         }
         $('#current_width').val(get_container_width());//This should probably not be here.
-        if(sessionStorage.getItem('showLoginPopup')) {
-            sessionStorage.removeItem('showLoginPopup');
-            Login.show_login_popup();
+        if(sessionStorage.getItem('showLoginPage')) {
+            sessionStorage.removeItem('showLoginPage');
+            Login.redirect_to_login();
         }
     },
     on_unload: function() {

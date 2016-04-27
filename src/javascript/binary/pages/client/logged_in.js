@@ -2,17 +2,17 @@ var LoggedInHandler = (function() {
     "use strict";
 
     var init = function() {
-        parent.window['is_logging_in'] = 1; // this flag is used in base.js to prevent auto-reloading the parent window by itself
-        var $popup = window.parent.$('.login_popup');
-        $popup.find('.close').hide();
-        $popup.find('iframe').css({'background': ''});
-        $popup.find('a#popup_lost_password').remove();
-        //page.client.check_storage_values();
+        parent.window['is_logging_in'] = 1; // this flag is used in base.js to prevent auto-reloading this page
         storeTokens();
         page.client.set_cookie('login', page.client.get_token(page.client.loginid));
         sessionStorage.setItem('check_tnc', '1');
         GTM.set_login_flag();
-        parent.window.location.reload();
+
+        // redirect back
+        var redirect_url = sessionStorage.getItem('redirect_url') || page.url.url_for('trading');
+        sessionStorage.removeItem('redirect_url');
+        document.getElementById('loading_link').setAttribute('href', redirect_url);
+        window.location.href = redirect_url;
     };
 
     var storeTokens = function() {

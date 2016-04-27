@@ -212,7 +212,7 @@ if (!/backoffice/.test(document.URL)) { // exclude BO
                 page.reload();
             } else {
                 // loginid switch
-                if(!window['is_logging_in']) { // to prevent reloading the page when popup is logging and give it time to do its job
+                if(!window['is_logging_in']) {
                     page.reload();
                 }
             }

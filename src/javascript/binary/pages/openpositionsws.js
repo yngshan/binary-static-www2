@@ -172,9 +172,6 @@ var PortfolioWS =  (function() {
     };
 
     var onLoad = function() {
-        if (page.client.redirect_if_logout()) {
-            return;
-        }
         BinarySocket.init({
             onmessage: function(msg){
                 var response;

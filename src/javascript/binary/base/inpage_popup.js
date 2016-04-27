@@ -13,16 +13,12 @@ var InPagePopup = function(conf) {
     }
     this.element = null;
     this._container = null;
-    this.container_class = conf.container_class || '';
     this.width = conf.width || null;
     this.close_on_escape = typeof conf.close_on_escape == 'undefined' ? true : conf.close_on_escape;
     this.draggable = typeof conf.draggable == 'undefined' ? true : conf.draggable;
     this.drag_handle = conf.drag_handle || '.drag-handle';
     this.ajax_conf = conf.ajax_conf || null;
     this._content = conf.content || '';
-    this._page_overlay = conf.page_overlay || false;
-    this._modal = conf.modal || false;
-    this._scroll = conf.scroll || false;
 };
 
 /**
@@ -126,7 +122,7 @@ InPagePopup.prototype.fetch_remote_content = function(show, before_show, after_s
 InPagePopup.prototype._init_container = function() {
     this.close();
     var me = this;
-    var container = $('<div class="inpage_popup_container ' + this.container_class + '"><a class="close">x</a></div>');
+    var container = $('<div class="inpage_popup_container"><a class="close">x</a></div>');
     var content = this.element ? this.find_element_popup_content(this.element) : null;
     var jq_content = content ? content.clone() : null;
     if (!jq_content) jq_content = $('<div class="inpage_popup_content">' + this._content + '</div>');
@@ -148,7 +144,6 @@ InPagePopup.prototype._init_container = function() {
         if ( $(handle, container).length ) {
             drag_opts['handle'] = handle;
         }
-        drag_opts['scroll'] = this._scroll;
         container.draggable(drag_opts);
     }
     this.reposition();
@@ -159,9 +154,6 @@ InPagePopup.prototype._init_container = function() {
  * Reposition the popup on the screen. by default uses the center of the screen.
  */
 InPagePopup.prototype.reposition = function(x, y) {
-    if(!this._container) {
-        this._container = $('.inpage_popup_container');
-    }
     if (this._container) {
         var win_ = $(window);
         var container = this._container;
@@ -186,20 +178,12 @@ InPagePopup.prototype.container = function() {
 
 InPagePopup.prototype.show = function() {
     this.container().show();
-    var me = this;
-    if(this._page_overlay) {
-        $(document.body).append($('<div/>', {class: 'popup_page_overlay'}));
-        if(!this._modal) {
-            $('.popup_page_overlay').click(function(){me.close();});
-        }
-    }
     return this;
 };
 
 InPagePopup.prototype.close = function() {
     if (this._container) {
         this._container.hide().remove();
-        $('.popup_page_overlay').hide().remove();
     }
     this._container = null;
     return this;
