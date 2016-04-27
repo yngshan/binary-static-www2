@@ -42,9 +42,9 @@ var StatementUI = (function(){
         }
         action = StringUtil.toTitleCase(action);
 
-        var momentObj = moment(dateObj);
+        var momentObj = moment.utc(dateObj);
         var dateStr = momentObj.format("YYYY-MM-DD");
-        var timeStr = momentObj.format("HH:mm:ss ZZ");
+        var timeStr = momentObj.format("HH:mm:ss") + ' GMT';
 
         var date = dateStr + "\n" + timeStr;
         var ref = transaction["transaction_id"];

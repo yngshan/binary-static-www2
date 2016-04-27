@@ -68,8 +68,8 @@ var RealityCheckData = (function () {
     }
 
     function summaryData(wsData) {
-        var startTime = moment(new Date(wsData.start_time * 1000));
-        var currentTime = moment();
+        var startTime = moment.utc(new Date(wsData.start_time * 1000));
+        var currentTime = moment.utc();
 
         var sessionDuration = moment.duration(currentTime.diff(startTime));
         var durationD = sessionDuration.get('days');
@@ -84,7 +84,7 @@ var RealityCheckData = (function () {
         var turnover = +(wsData.buy_amount) + (+(wsData.sell_amount));
         var profitLoss = +(wsData.sell_amount) - (+(wsData.buy_amount));
 
-        var startTimeString = tradingTimeTemplate.replace('[_1]', startTime.format('YYYY-MM-DD HH:mm:ss ZZ'));
+        var startTimeString = tradingTimeTemplate.replace('[_1]', startTime.format('YYYY-MM-DD HH:mm:ss') + ' GMT');
         return {
             startTimeString: startTimeString,
             loginTime: startTime.format('YYYY-MM-DD HH:mm:ss ZZ'),

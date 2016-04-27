@@ -678,8 +678,8 @@ Header.prototype = {
         that.server_time_at_response = ((start_timestamp * 1000) + (that.client_time_at_response - pass));
         var update_time = function() {
             window.time = moment(that.server_time_at_response + moment().valueOf() - that.client_time_at_response).utc();
-            clock.html(window.time.local().format("YYYY-MM-DD HH:mm ZZ"));
-            showGMTOnHover('#gmt-clock');
+            clock.html(window.time.format("YYYY-MM-DD HH:mm") + ' GMT');
+            showLocalOnHover('#gmt-clock');
             window.HeaderTimeUpdateTimeOutRef = setTimeout(update_time, 1000);
         };
         update_time();

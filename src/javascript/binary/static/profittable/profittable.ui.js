@@ -66,11 +66,11 @@ var ProfitTableUI = (function(){
     }
 
     function createProfitTableRow(transaction){
-        var buyMoment = moment(transaction["purchase_time"] * 1000);
-        var sellMoment = moment(transaction["sell_time"] * 1000);
+        var buyMoment = moment.utc(transaction["purchase_time"] * 1000);
+        var sellMoment = moment.utc(transaction["sell_time"] * 1000);
 
-        var buyDate = buyMoment.format("YYYY-MM-DD") + "\n" + buyMoment.format("HH:mm:ss ZZ");
-        var sellDate = sellMoment.format("YYYY-MM-DD") + "\n" + sellMoment.format("HH:mm:ss ZZ");
+        var buyDate = buyMoment.format("YYYY-MM-DD") + "\n" + buyMoment.format("HH:mm:ss") + ' GMT';
+        var sellDate = sellMoment.format("YYYY-MM-DD") + "\n" + sellMoment.format("HH:mm:ss") + ' GMT';
 
         var ref = transaction["transaction_id"];
         var buyPrice = Number(parseFloat(transaction["buy_price"])).toFixed(2);

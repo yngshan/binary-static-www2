@@ -432,11 +432,11 @@ function attach_tabs(element) {
     return targets;
 }
 
-function showGMTOnHover(s) {
+function showLocalOnHover(s) {
     var selector = s || '.date';
 
     $(selector).each(function(idx, ele) {
-        var gmtTime = moment(ele.innerHTML.replace('\n', ' ')).utc().format('YYYY-MM-DD HH:mm:ss') + ' GMT';
+        var gmtTime = moment.utc(ele.innerHTML.replace('\n', ' ')).local().format('YYYY-MM-DD HH:mm:ss');
         var timeToShow = gmtTime.replace(' ', '\n');
         var tooltip = $('<span></span>', { class: 'tooltip-content', text: timeToShow });
         $(ele).append(tooltip);
