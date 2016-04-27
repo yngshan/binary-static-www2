@@ -79250,16 +79250,22 @@ pjax_config_page("tnc_approvalws", function() {
     if (verification_token) req.verification_code = verification_token;
     BinarySocket.send(req);
   }
-  function showError(error) {
+  function hideAll() {
     $('#withdraw-form').hide();
     $('#currency-form').hide();
     $('#ukgc-funds-protection').hide();
-    document.getElementById('deposit-withdraw-message').innerHTML = error.message || text.localize('Sorry, an error occurred while processing your request.');
+    $('#deposit-withdraw-error').hide();
+  }
+  function showError(error) {
+    hideAll();
+    document.getElementById('deposit-withdraw-error').innerHTML = error.message || text.localize('Sorry, an error occurred while processing your request.');
+    $('#deposit-withdraw-error').show();
   }
   return {
     init: init,
     getCashierType: getCashierType,
     getCashierURL: getCashierURL,
+    hideAll: hideAll,
     showError: showError
   };
 })();
@@ -79303,16 +79309,12 @@ pjax_config_page("cashier/forwardws", function() {
                 } else if (type === 'cashier_password' && error) {
                   ForwardWS.showError(error);
                 } else if (type === 'cashier' && !error) {
-                  $('#currency-form').hide();
-                  $('#withdraw-form').hide();
-                  $('#ukgc-funds-protection').hide();
+                  ForwardWS.hideAll();
                   document.getElementById('deposit-withdraw-message').innerHTML = '';
                   $('#deposit-withdraw-iframe-container iframe').attr('src', response.cashier);
                   $('#deposit-withdraw-iframe-container').show();
                 } else if (type === 'cashier' && error) {
-                  $('#withdraw-form').hide();
-                  $('#currency-form').hide();
-                  $('#ukgc-funds-protection').hide();
+                  ForwardWS.hideAll();
                   document.getElementById('deposit-withdraw-message').innerHTML = '';
                   if (error.code && error.code === 'ASK_TNC_APPROVAL') {
                     window.location.href = page.url.url_for('user/tnc_approvalws');
@@ -86208,7 +86210,8 @@ function BinarySocketClass() {
                       } else if (response.error.code === 'InvalidToken' &&
                           type !== 'reset_password' &&
                           type !== 'new_account_virtual' &&
-                          type !== 'paymentagent_withdraw') {
+                          type !== 'paymentagent_withdraw' &&
+                          type !== 'cashier') {
                         BinarySocket.send({'logout': '1'});
                       }
                     }
