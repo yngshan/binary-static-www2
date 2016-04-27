@@ -46,6 +46,13 @@ var ForwardWS = (function() {
 pjax_config_page("cashier/forwardws", function() {
     return {
         onLoad: function() {
+          if (page.client.redirect_if_logout()) {
+              return;
+          }
+          if (page.client.is_virtual()) {
+            document.getElementById('deposit-withdraw-message').innerHTML = text.localize('This feature is not relevant to virtual-money accounts.');
+            return;
+          }
           ForwardWS.init();
           BinarySocket.init({
             onmessage: function(msg){
