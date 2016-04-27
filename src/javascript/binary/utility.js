@@ -433,22 +433,30 @@ function attach_tabs(element) {
 }
 
 /**
- * convert all dates into local time, should work for string, date, and moment object
- * @param date      {String|Date|Moment}
+ * convert all dates into local time
+ * @param date      {String} only work on string
  * @param mode      {'full'|'date'|'time'}
  */
 function toLocaleDateTime(date, mode) {
     var format = '';
+    var dateString = date.replace('\n', ' ');
     switch (mode) {
-        case 'full': format = 'YYYY-MM-DD HH:mm:ss z';
+        case 'full': format = 'YYYY-MM-DD HH:mm:ss';
             break;
-        case 'date': format = 'YYYY-MM-DD z';
+        case 'date': format = 'YYYY-MM-DD';
             break;
-        case 'time': format = 'HH:mm:ss z';
+        case 'time': format = 'HH:mm:ss';
             break;
-        default: format = 'YYYY-MM-DD HH:mm:ss z';
+        default: format = 'YYYY-MM-DD HH:mm:ss';
     }
-    var momentObj = moment(date);
+    var momentObj = moment(dateString);
     momentObj.local();
     return momentObj.format(format);
+}
+
+function showGMTOnHover() {
+    $('.date').mouseover(function(e) {
+        var gmtTime = moment(e.target.innerHTML.replace('\n', ' ')).utc().format('YYYY-MM-DD HH:mm:ss') + ' GMT';
+        $(e.target).attr('tooltip', gmtTime);
+    });
 }
