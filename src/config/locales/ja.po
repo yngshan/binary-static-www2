@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-27 09:48+0000\n"
-"Last-Translator: Fumio Miyama <miyama@regentmarkets.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/binary/static/ja/>\n"
+"PO-Revision-Date: 2016-04-28 00:38+0000\n"
+"Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
+"Language-Team: Japanese "
+"<https://hosted.weblate.org/projects/binary/static/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -86,10 +87,9 @@ msgid "%1 New Password Request"
 msgstr "新認証コード発行　- %1"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:724
-#, fuzzy
 #| msgid "Your token has expired. If you require further assistance, please contact our <a href=\"%1\"><strong>Customer Support</strong></a>."
 msgid "%1 Please click the link below to restart the password recovery process. If you require further assistance, please contact our Customer Support."
-msgstr "このURLは、すでに有効期限が切れています。お手数ですが再度、最新のリンクを取得してください。サポートが必要な場合は、 <a href=\"%1\"><strong>カスタマーサポート</strong></a>までご連絡ください。"
+msgstr "%1下記リンクをクリックしてパスワードの再設定を再度お試しください。サポートが必要な場合は、 カスタマーサポートまでご連絡ください。"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/payment_agent.html.haml:1
@@ -1274,10 +1274,9 @@ msgid "API token for third party applications."
 msgstr "第三者開発アプリケーションのAPIトークン"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/deposit_withdraw_ws.html.tt:57
-#, fuzzy
 #| msgid "AUDZAR"
 msgid "AUD"
-msgstr "AUDZAR"
+msgstr "AUD"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:708
 msgid "AUTHORISED PAYMENT AGENT?"
@@ -1285,7 +1284,7 @@ msgstr "認可された決済サービスエージェントですか？"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Ability to communicate fluently in the English language, in both oral and written forms"
-msgstr "英語の口語及びライティングでの流暢なコミュニケーション能力"
+msgstr "口語及びライティングでの流暢な英語コミュニケーション能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Ability to speak multiple languages"
@@ -3687,7 +3686,6 @@ msgstr ""
 
 #. (token, link)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/lost_password.html.tt:1
-#, fuzzy
 #| msgid ""
 #| "Dear Valued Customer,\n"
 #| "\n"
@@ -3705,9 +3703,12 @@ msgid ""
 msgstr ""
 "お客様へ\n"
 "\n"
-"パスワードをご変更される前に、下記リンクをクリックしご本人様確認を完了して下さいますよう、ご協力のほど宜しくお願いいたします。：\n"
+"パスワードをご変更される前に、下記認証コードをパスワードリセット申請書にご入力いただき、ご本人様確認を完了していただきますようご協力のほど宜しくお願いいた"
+"します。\n"
 "\n"
-"%1"
+"認証コード：%1\n"
+"\n"
+"パスワードリセット申請書：%2"
 
 #. (link)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/verify_cashier.html.tt:1
@@ -4123,10 +4124,9 @@ msgid "EGR Operator Award "
 msgstr "EGRオペレーター賞 "
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/deposit_withdraw_ws.html.tt:55
-#, fuzzy
 #| msgid "EUR/TRY"
 msgid "EUR"
-msgstr "EUR/TRY"
+msgstr "EUR"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/binary_options_basics.html.haml:1
@@ -4146,10 +4146,11 @@ msgid "Each option transaction has a specified expiry time and date, known as th
 msgstr "本取引が期日のある取引であること。（契約締結前交付書面「店頭バイナリーオプション取引のリスク等重要事項について」-2参照）"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:87
-#, fuzzy
 #| msgid "Each party to this Agreement represents and warrants to the other that it has, and will retain throughout the Term all right, title and authority to enter into this Agreement, to grant to the other party the rights and licences granted in this Agreement and to perform all of its obligations under this Agreement."
 msgid "Each party to this Agreement represents and warrants to the other that it has, and will retain throughout the term of this Agreement all right, title, and authority to enter into this Agreement, to grant to the other party the rights and licences granted in this Agreement, and to perform all of its obligations under this Agreement."
-msgstr "本契約に関わる全ての関係者は、この契約で他の関係者は、この契約で認められた権利とライセンスを得るためにこの契約に加わる資格と許可がこの契約下では常に保持、維持するものであること、そしてこの契約下での全ての義務を遂行することを代表し保証します。"
+msgstr ""
+"本契約に関わる全ての関係者は、この契約で他の関係者は、この契約で認められた権利とライセンスを得るためにこの契約に加わる資格と許可がこの契約下では常に保持、"
+"維持するものであること、そしてこの契約下での全ての義務を遂行することを代表し保証します。"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/partners.html.haml:1
@@ -4215,10 +4216,13 @@ msgid "Effectively monitor daily client activity"
 msgstr "効率的に日々のクライアントアクティビティを監視"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:110
-#, fuzzy
 #| msgid "Either party may terminate this Agreement forthwith on written notice if a receiver, examiner or administrator is appointed of the whole or any part of the other party's assets or the other party is struck off the Register of Companies in the jurisdiction where it was incorporated or an order is made or a resolution passed for winding up of the other party (unless such order or resolution is part of a voluntary scheme for the reconstruction or amalgamation of that party as a solvent corporation and the resulting corporation, if a different legal person, undertakes to be bound by this Agreement)."
 msgid "Either party may terminate this Agreement forthwith on written notice if a receiver, examiner, or administrator is appointed of the whole or any part of the other party's assets or the other party is struck off the Register of Companies in the jurisdiction where it was incorporated or an order is made or a resolution passed for winding up of the other party (unless such order or resolution is part of a voluntary scheme for the reconstruction or amalgamation of that party as a solvent corporation and the resulting corporation, if a different legal person, undertakes to be bound by this Agreement)."
-msgstr "その他当事者の資産の全体または一部に受信機、検査者、管理者が当てられていたり、またはその他当事者が組み込まれ、注文がなされた管轄で企業登録を削除されたり、または他の当事者に巻き込まれて起こった結果であった場合（そのような注文または結果は、支払い能力のある法人、結果的に得た法人として当該当事者の再構成または合併のための自主的なスキームの一部である場合を除き、別の法人である場合に本契約書により拘束されることを約束をする）、いずれの当事者も書面による通知で速やかに本契約を終了する事ができます。"
+msgstr ""
+"その他当事者の資産の全体または一部に受信機、検査者、管理者が当てられていたり、またはその他当事者が組み込まれ、注文がなされた管轄で企業登録を削除されたり、"
+"または他の当事者に巻き込まれて起こった結果であった場合（そのような注文または結果は、支払い能力のある法人、結果的に得た法人として当該当事者の再構成または合"
+"併のための自主的なスキームの一部である場合を除き、別の法人である場合に本契約書により拘束されることを約束をする）、いずれの当事者も書面による通知で速やかに"
+"本契約を終了する事ができます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:111
 msgid "Either party may terminate this Agreement on delivery of one weeks' prior written notice to the other party."
@@ -4383,7 +4387,7 @@ msgstr "優れた英語能力（口頭及び書面）"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Excellent English language skills, both oral and written"
-msgstr "優れた英語能力（口頭及び書面）"
+msgstr "口語及びライティングの優れた英語能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Excellent IT/office skills"
@@ -4391,7 +4395,7 @@ msgstr "優れたIT/officeスキル"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Excellent oral and written communication skills"
-msgstr "口頭及び書面での優れたコミュニケーションスキル"
+msgstr "口語及びライティングでの優れたコミュニケーションスキル"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Excellent written and verbal communication skills in both English and Bahasa Malaysia"
@@ -4407,13 +4411,12 @@ msgstr "アプリケーションがBinary.com APIを含む場合を除き、当�
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Exceptional communication skills in English, in both oral and written form"
-msgstr "英語での口語及びライティングの優れたコミュニケーションスキル"
+msgstr "口語及びライティングの優れた英語コミュニケーションスキル"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Exceptional organizational skills; detail orientation and a strong work ethic"
 msgid "Exceptional organizational skills; detail orientation; strong work ethic; and efficient multi-tasking capabilities"
-msgstr "卓越した組織力：細かな気配りと強い労働意欲"
+msgstr "卓越した組織力：細かな気配り、強い労働意欲、効率的なマルチタスク能力"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:310
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:104
@@ -4810,10 +4813,9 @@ msgid "For added security protection against unauthorised withdrawals, an email 
 msgstr "セキュリティ保護の為、ご出金ページリンクをお客様のメールアドレス%1に送信させていただきました。メールをご確認頂き、お手続きをお願い致します。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:743
-#, fuzzy
 #| msgid "Thank you for signing up! Please check your email to retrieve the verification token."
 msgid "For added security, please check your email to retrieve the verification token."
-msgstr "ご登録頂きありがとうございます！　ご登録頂いたメールアドレスに認証コードを送信致しました。"
+msgstr "セキュリティチェックのため、メールご確認いただき認証コードを取得してください。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:44
 msgid "For contracts which expire at market close, we will use the official closing value of the market to settle your contract and update your results at settlement time."
@@ -4963,10 +4965,9 @@ msgid "Futures"
 msgstr "Futures"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/deposit_withdraw_ws.html.tt:56
-#, fuzzy
 #| msgid "GBPZAR"
 msgid "GBP"
-msgstr "GBPZAR"
+msgstr "GBP"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "GMT"
@@ -5370,10 +5371,12 @@ msgid "If all that sounds a bit daunting, you’re right. But it’s how we make
 msgstr "当社の要求水準に厳しい印象を持たれるかもしれませんが、人財を厳選するためにこれらのステップを採用しております。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:78
-#, fuzzy
 #| msgid "If an error is made in the calculation of your share of the revenue share, the Company reserves the right to correct such calculation at any time and to reclaim from you any overpayment made by the Company to you (including, without limitation, by way of reducing future payments earned, revenue to cover any processed chargebacks) before you can start earning revenue again. In special cases, the Company reserves the right to exclude revenue sharing  on promotional funds deposited into the client's account by the Company."
 msgid "If an error is made in the calculation of your share of the revenue share, the Company reserves the right to correct such calculation at any time, and to reclaim from you any overpayment made by the Company to you (including, without limitation, by way of reducing future payments earned, revenue to cover any processed chargebacks) before you can start earning revenue again. In special cases, the Company reserves the right to exclude revenue sharing  on promotional funds deposited into the client's account by the Company."
-msgstr "アフィリエイト報酬算出の際にエラーが発生した場合は、当社は常にそのような誤った計算値を修正する権利を有し、過払いとなった金額を回収する権利を当社は有し、回収し終わるまでアフィリエイト報酬から引き落とし続けます。尚、場合によっては当社がアフィリエイト会員の口座に当社が提供したプロモーション資金の利益共有を停止する権利も当社は有します。"
+msgstr ""
+"アフィリエイト報酬算出の際にエラーが発生した場合は、当社は常にそのような誤った計算値を修正する権利を有し、過払いとなった金額を回収する権利を当社は有し、回"
+"収し終わるまでアフィリエイト報酬から引き落とし続けます。尚、場合によっては当社がアフィリエイト会員の口座に当社が提供したプロモーション資金の利益共有を停止"
+"する権利も当社は有します。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:252
 msgid "If any provision of these Terms is found to be illegal, void, or unenforceable, the unenforceable provision will be modified so as to render it enforceable to the maximum extent possible in order to effect the intention of the provision; if a term cannot be so modified, it will be severed and the remaining provisions of these Terms will not be affected in any way."
@@ -5443,10 +5446,9 @@ msgid "If you meet our basic requirements, we’ll send you a talent test."
 msgstr "当社の基本的な要求基準に見合う場合は、テストのご連絡をいたします。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:746
-#, fuzzy
 #| msgid "If you need help, please contact our customer support team at"
 msgid "If you need assistance feel free to contact our %1Customer Support"
-msgstr "ご不明な点がございましたら、当社カスタマーサポートチームまでお問い合わせ下さい。"
+msgstr "ご不明な点がございましたら、%1当社カスタマーサポートチームまでお気軽にお問い合わせ下さい。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/lost_password.html.tt:9
 msgid "If you need help, please contact our customer support team at"
@@ -6795,16 +6797,14 @@ msgid "Knowledge and experience in the financial services industry"
 msgstr "金融サービス業界における知識と経験"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Knowledge and experience in the financial services industry"
 msgid "Knowledge and experience with the financial services industry"
-msgstr "金融サービス業界における知識と経験"
+msgstr "金融サービス業界の知識と経験"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Knowledge and experience in the financial services industry"
 msgid "Knowledge and experience with the financial services industry and / or binary options trading"
-msgstr "金融サービス業界における知識と経験"
+msgstr "金融サービス業界または/及びバイナリーオプション取引の知識と経験"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge of hardware and software firewalls, intrusion detection methods, security systems and DDoS protection"
@@ -6954,10 +6954,9 @@ msgid "Level of Education"
 msgstr "能力レベル"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Identify, engage, and convert potential customers and business partners"
 msgid "Leverage social-media tools and channels to identify, engage, and convert potential new customers and partners"
-msgstr "潜在顧客およびビジネスパートナーの情報確認、関係強化、会員への推進"
+msgstr "新規顧客およびパートナーへの情報確認、関係強化、会員への推進のため、ソーシャルメディアツールとチャンネルの活用"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:157
 msgid "Liability"
@@ -7261,10 +7260,9 @@ msgid "Marketing Executives"
 msgstr "マーケティング担当役員"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Marketing Project Manager"
 msgid "Marketing Project Coordinator"
-msgstr "マーケティングプロジェクトマネージャー"
+msgstr "マーケティングプロジェクトコーディネーター"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:610
 msgid "Marketing Project Manager"
@@ -8220,7 +8218,6 @@ msgstr "所有権"
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:61
-#, fuzzy
 #| msgid "Ownership and content of %1's sites remain our respective properties and shall not be deemed to have been transferred to you through any act or omission in respect of the affiliation agreement."
 msgid "Ownership and content of the %1 website remains our respective properties and shall not be deemed to have been transferred to you through any act or omission in respect of this Agreement."
 msgstr "%1サイトの所有権とコンテンツは当社に属し、規約を承諾している間はどのような手段であれアフィリエイト会員に譲与されることはありません。"
@@ -8374,10 +8371,9 @@ msgid "Payment methods"
 msgstr "決済方法"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:77
-#, fuzzy
 #| msgid "Payment will be made monthly, on or around the 15th day of each month, and credited to your specified %1 account."
 msgid "Payment of commission earned for the previous calendar month will be made monthly, on or around the 15th day of each month, and may be credited to any payment method as agreed between the Company and the Affiliate."
-msgstr "アフィリエイト報酬は毎月１５日頃に、ご指定頂いた%1のご口座へ振り込まれます。"
+msgstr "前月のアフィリエイト報酬は翌月１５日頃に、当社とアフィリエイト会員間で合意されているお支払い方法で振り込まれます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:34
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:73
@@ -8933,26 +8929,23 @@ msgid "Previous Day"
 msgstr "前日"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Related experience in the financial services industry"
 msgid "Previous experience in the financial services industry"
-msgstr "金融サービス業界に関連した経験"
+msgstr "金融サービス業界での経験"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Previous experience with financial/binary options website services"
 msgid "Previous experience with financial / binary options website services"
-msgstr "金融およびバイナリーオプションウェブサイトのサービスに関する経験"
+msgstr "金融およびバイナリーオプションのウェブサイトサービスに関する経験"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Previous experience with financial and/or binary options trading websites"
 msgstr "金融およびバイナリーオプション取引ウェブサイトの使用経験"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Substantial experience in a senior marketing or advertising role"
 msgid "Previous knowledge and experience in Marketing or Advertising"
-msgstr "マーケティングと広告の任務に関するシニアレベルの豊富な経験"
+msgstr "マーケティングと広告に関する知識と経験"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Previous work experience in a client service and/or marketing role"
@@ -8997,22 +8990,19 @@ msgid "Print chart"
 msgstr "チャートを印刷"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Prior experience in the financial services industry is preferred, as is an interest in Information Technology and/or Software Development"
 msgid "Prior knowledge and experience in Information Technology and/or Software Development"
-msgstr "情報技術および/またはソフトウェア開発に関心があり、金融サービス業界での経験があると好ましい"
+msgstr "情報技術および/またはソフトウェア開発の知識と経験"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Knowledge and experience in the financial services industry"
 msgid "Prior knowledge and experience with IT development"
-msgstr "金融サービス業界における知識と経験"
+msgstr "IT開発の知識と経験"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Knowledge and experience in the financial services industry"
 msgid "Prior knowledge and experience with the financial industry"
-msgstr "金融サービス業界における知識と経験"
+msgstr "金融業界の知識と経験"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/tac.html.tt:25
@@ -9034,10 +9024,9 @@ msgid "Proceed"
 msgstr "続行"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Process website content translations regularly and efficiently"
 msgid "Process website content translations regularly and efficiently, delivering high-quality work on a dependable basis"
-msgstr "定期的かつ効率的にウェブサイトコンテンツを翻訳"
+msgstr "定期的かつ効率的であり、信頼性に基いた質の高いウェブサイトコンテンツの翻訳"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Process website content translations when a full time translator is unavailable"
@@ -9048,10 +9037,9 @@ msgid "Processing Time"
 msgstr "決済所要時間"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Proofread existing content used on the company’s blogs and social media outlets"
 msgid "Produce content for the company’s website, blog, social media outlets, and marketing materials"
-msgstr "ブログやソーシャルメディアに既に使用しているコンテンツの校正"
+msgstr "当社のブログ、ソーシャルメディア、マーケティング資料のコンテンツ作成"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:35
 msgid "Professional Clients"
@@ -9063,7 +9051,7 @@ msgstr "スクリプト言語に堪能である - Perlが好ましい"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Proficiency in a second language (oral and written) is preferred"
-msgstr "第二言語（口頭および書面）が堪能であると好ましい"
+msgstr "第二言語（口語およびライティング）が堪能であると好ましい"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:130
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
@@ -9093,10 +9081,9 @@ msgid "Profit/Loss (points)"
 msgstr "損益（ポイント）"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Proofread and correct the content appearing on the company’s website, blogs and social media outlets, from English to the regional language and vice versa"
 msgid "Proofread and correct the content appearing on the company’s website, blog, social media outlets, and marketing materials, from English to the regional language and vice versa"
-msgstr "ウェブサイト・ブログ・その他ソーシャルメディアに表示するコンテンツの英語から対象言語（またはその逆）の翻訳の校正と修正"
+msgstr "ウェブサイト、ブログ、ソーシャルメディア、マーケティング資料に使用するコンテンツの英語から地方言語（またはその逆）の校正と修正"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:617
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
@@ -9529,10 +9516,9 @@ msgid "Responsible for the risk management and derivatives pricing of the compan
 msgstr "実装とメンテナンスを含む当社のリスク管理とデリバティブ価格うぃ担当していただきます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:30
-#, fuzzy
 #| msgid "Registration"
 msgid "Restrictions"
-msgstr "ご登録"
+msgstr "制限"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:32
 msgid "Retail Clients"
@@ -9872,10 +9858,9 @@ msgid "Set client deposit and loss limits"
 msgstr "入金と損失の制限設定"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Manage social-media advertising campaigns targeting potential clients and business partners"
 msgid "Set up and manage social-media advertising campaigns, effectively micro-targeting potential clients and partners"
-msgstr "潜在顧客やビジネスパートナーをターゲットとするソーシャルメディア広告キャンペーンの管理"
+msgstr "潜在顧客やパートナーをマイクロターゲティングとするソーシャルメディア広告キャンペーンの構成と管理"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:102
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:371
@@ -9946,10 +9931,9 @@ msgid "Sign me up"
 msgstr "登録する"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Significant experience in, Social Media, Marketing, and/or advertising"
 msgid "Significant experience in Social Media, Marketing, and / or Advertising"
-msgstr "ソーシャルメディア・マーケティングと/または広告の豊富な経験"
+msgstr "ソーシャルメディア、マーケティングと/または広告に関する豊富な経験"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:410
 msgid "Simple Moving Average"
@@ -10519,32 +10503,28 @@ msgid "Strong attention to detail"
 msgstr "細部への強い関心"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Excellent English language skills, both oral and written"
 msgid "Strong command of the English language, in both oral and written form"
-msgstr "優れた英語能力（口頭及び書面）"
+msgstr "口語とライティング双方における優れた英語能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Strong knowledge of developing cross-platform/browser-compatible applications for web and mobile"
 msgstr "ウェブとモバイル用のクロスプラットフォーム/ブラウザ対応のアプリケーション開発の豊富な知識"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Managerial, analytical, organizational, financial, and verbal/written communication skills in both the regional language and English"
 msgid "Strong oral and written communication skills in both the regional language and English"
-msgstr "英語と各地域の対象言語の両言語を用いた経営・分析・組織・財務および口頭/文書によるコミュニケーションスキル"
+msgstr "地方言語と英語双方の口語とライティングでの高いコミュニケーション能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "A strong and passionate interest in social media, marketing, and advertising"
 msgid "Strong, passionate interest in Graphic Design, Marketing, and Advertising"
-msgstr "ソーシャルメディア、マーケティング、広告に強い関心と情熱がある"
+msgstr "グラフィックデザイン、マーケティング、広告に強い関心がある"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "A strong and passionate interest in marketing and advertising"
 msgid "Strong, passionate interest in Marketing and Advertising"
-msgstr "マーケティングと広告に強い関心と情熱がある"
+msgstr "マーケティングと広告に強い情熱がある"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:272
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:65
@@ -10870,10 +10850,9 @@ msgid "The Affiliate Program has been delivering payments on time and, every tim
 msgstr "アフィリエイトプログラムは２００４年３月にサービスを提供して以来、常に期日通りにアフィリエイト報酬をお支払いしております。アフィリエイト報酬は、月末日から１５日以内にBinary Ltd.からお客様のアフィリエイト口座に振り込まれます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:21
-#, fuzzy
 #| msgid "The Company's Obligations"
 msgid "The Affiliate’s Obligations"
-msgstr "当社の義務"
+msgstr "アフィリエイト会員の義務"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:96
 msgid "The Agent will send you the withdrawal amount (minus the commission) via your preferred payment method."
@@ -10943,10 +10922,11 @@ msgstr "当社はコントリビューションにおいて守秘義務を負い
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:95
-#, fuzzy
 #| msgid "The Company makes no claims that %1 will be uninterrupted or provide an error free service and will not be liable for the consequences of any such errors or interruptions."
 msgid "The Company makes no claims that the %1 website will be uninterrupted or provide an error free service, and will not be liable for the consequences of any such errors or interruptions."
-msgstr "当社は%1がサービスの中断やエラーが全く起こらないサービスを提供するという保証することはありません。また、そのようなサービスのエラーや中断による結果に対する責任を負いません。"
+msgstr ""
+"当社のウェブサイトにおいてサービスの中断やエラーが全く起こらないサービスを提供するを保証しているわけではありません。また、そのようなサービスのエラーや中断"
+"によって生じた事象に対する責任を負いません。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:55
 msgid "The Company may change the commission structure at any time at its sole and absolute discretion. We will endeavour to ensure affiliates are notified when changes have been made to the commission structure."
@@ -11022,10 +11002,11 @@ msgid "The Company shall have no liability arising from orders, investment decis
 msgstr "Binary.com APIで公開または設置された情報に基づいたサードパーティまたはサービス（金融商品および通貨を含む）の注文、投資判断、購入から生じた問題について当社は一切の責任を負いません。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:103
-#, fuzzy
 #| msgid "The Company shall not be liable to you in contract, or otherwise (including liability for negligence) for loss whether direct or indirect of  business, revenue or profits, anticipated savings or wasted expenditure, corruption or destruction of data or for any indirect or consequential loss whatever."
 msgid "The Company shall not be liable to you in contract, or otherwise (including liability for negligence) for any loss, whether direct or indirect, of the Affiliate's business, revenue or profits, anticipated savings, or wasted expenditure, corruption, or destruction of data or for any indirect or consequential loss whatsoever."
-msgstr "当社はアフィリエイト会員のトレード、間接的でも直接的であろうともビジネス上の損失（不注意による損失も含む）、収入や利益、予想される預貯金、または浪費された経費、データの破壊、及び他のいかなる間接的または損失の結果に対して責任を負うことはありません。"
+msgstr ""
+"当社はアフィリエイト会員のトレード、間接的でも直接的であろうともアフィリエイトビジネス上の損失（不注意による損失も含む）、収入や利益、予想される預貯金、ま"
+"たは浪費された経費、データの破壊、及び他のいかなる間接的または損失の結果に対して責任を負うことはありません。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:75
 #, fuzzy
@@ -11044,10 +11025,9 @@ msgid "The Company will not be liable in any way to any persons in the event of 
 msgstr "当社は、不可抗力的な事象、政府や規制機関による行動、コンピュータシステム、データ、記録などへの損害や破壊、及び通信、コンピュータ設備またはソフトウェアに対する不備に起因するような遅延、損害、エラーや遺漏というような事象に対する責任は一切負うことはありません。当社は当社サイトやコンテンツから引き起こされたと推測、及び主張されるような損害に対して責任を負うことはありません。この取り決めにはお客様の誤ったコンテンツのご利用方法、当社サイトへの接続の失敗、操作や送受信の遅延、通信の失敗、及びコンテンツへのあらゆるエラーや遺漏といった事象も含まれます。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:17
-#, fuzzy
 #| msgid "The Company will notify you by email if your application has been successful with instructions on how to begin promoting %1"
 msgid "The Company will notify you by email if your application has been successful."
-msgstr "当社は当プログラムへの参加可否、及び%1のプロモーション方法をメールにてお知らせ致します。"
+msgstr "申請が完了しましたらメールにてお客様にお知らせいたします。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:51
 #, fuzzy
@@ -11140,16 +11120,14 @@ msgid "The ability to acquire knowledge of compliance matters in a multitude of 
 msgstr "国際司法権における多数のコンプライアンス事項の知識獲得能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "The ability to communicate effectively in English (both oral and written)"
 msgid "The ability to communicate effectively in English, in both oral and written form"
-msgstr "英語での効率的なコミュニケーション能力（口頭および書面）"
+msgstr "口語とライティングにおける効率的な英語コミュニケーション能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "The ability to communicate fluently in English (both oral and written)"
 msgid "The ability to communicate fluently in English, in both oral and written form"
-msgstr "英語での流暢なコミュニケーション能力（口頭および書面）"
+msgstr "口語とライティングでの流暢な英語コミュニケーション能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to multi-task, balance deadlines, and reliably deliver high-quality content"
@@ -11160,10 +11138,9 @@ msgid "The ability to speak and write in multiple languages"
 msgstr "多言語での会話とライティング能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "The ability to speak and write in multiple languages"
 msgid "The ability to speak multiple languages"
-msgstr "多言語での会話とライティング能力"
+msgstr "多言語での会話能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to translate information into clear, concise, and engaging content"
@@ -11687,10 +11664,9 @@ msgid "There was a problem validating your address. Please fix the indicated fie
 msgstr "お客様のご住所の認証プロセスにて問題が発生しました。該当事項の訂正をお願いします。ご不明な点がございましたら<a href=\"%1\">カスタマーサポート</a>までお知らせ下さい。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:745
-#, fuzzy
 #| msgid "There was a problem validating your address."
 msgid "There was a problem validating your personal details. Please fix the fields %1here"
-msgstr "お客様のメールアドレスの確認に問題が発生しました。"
+msgstr "個人情報の確認において問題が発生しました。%1こちらから項目を修正してください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:654
 msgid "There was an error"
@@ -12456,16 +12432,14 @@ msgid "US Stocks"
 msgstr "アメリカ株式"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/deposit_withdraw_ws.html.tt:54
-#, fuzzy
 #| msgid "USDZAR"
 msgid "USD"
-msgstr "USDZAR"
+msgstr "USD"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "No experience"
 msgid "UX / UI experience"
-msgstr "ご経験がない"
+msgstr "UX / UI の経験"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:522
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:617
@@ -12519,10 +12493,9 @@ msgid "United Kingdom"
 msgstr "イギリス"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "A university degree in Marketing, Journalism, Communications or other business related discipline"
 msgid "University degree in Marketing, Communications, Journalism, or related discipline"
-msgstr "マーケティング、ジャーナリズム、通信またはその他ビジネス関連分野の大学学位"
+msgstr "マーケティング、通信、ジャーナリズムまたは関連分野の大学学位"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 #, fuzzy
@@ -13617,10 +13590,10 @@ msgid "You are not a Payment Agent"
 msgstr "お客様は決済サービスのエージェントではありません。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:81
-#, fuzzy
 #| msgid "You are not allowed to rebate any part commission payment onto your referrals and should the company realise you are engaged in such actions, your affiliate account shall be revoked immediately."
 msgid "You are not allowed to rebate any part commission payment onto your referrals and should the company realise you are engaged in such actions; your affiliate account shall be revoked immediately."
-msgstr "アフィリエイト会員は獲得会員にアフィリエイト報酬を還元することはできません。そのような行為を行った場合は即座にアフィリエイト口座を停止いたします。"
+msgstr ""
+"アフィリエイト会員は獲得会員にアフィリエイト報酬を還元することはできません。そのような行為を行った場合は即座にアフィリエイト口座を停止いたします。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:335
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:697
@@ -13866,10 +13839,11 @@ msgid "You represent, warrant, and undertake that you have obtained and shall ma
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:89
-#, fuzzy
 #| msgid "You represent, warrant and undertake that your Site or promotion shall contain no material which is defamatory, pornographic, unlawful, harmful, threatening, obscene, harassing, or racially, ethnically, or otherwise objectionable or discriminatory, violent, politically sensitive or otherwise controversial or in breach of any third party rights and shall not link to any such material."
 msgid "You represent, warrant, and undertake that your website or promotion shall contain no material which is defamatory, pornographic, unlawful, harmful, threatening, obscene, harassing, or racially, ethnically, or otherwise objectionable or discriminatory, violent, politically sensitive, or otherwise controversial or in breach of any third party rights and shall not link to any such material."
-msgstr "アフィリエイト会員は、プロモーションサイト、及びプロモーション手法において、中傷的、猥褻、非合法、破壊的、脅迫的、卑猥、嫌がらせ、人種的、民族的、差別的、暴力的、政治的な話題を含むような内容を含めないこと、及び全ての第三者の権利を侵害しないことを保証し、そのような内容を含むようなコンテンツにリンクしないことも保証します。"
+msgstr ""
+"アフィリエイト会員は、プロモーションサイト、及びプロモーション手法において、中傷的、猥褻、非合法、破壊的、脅迫的、卑猥、嫌がらせ、人種的、民族的、差別的、"
+"暴力的、政治的な話題を含めないこと、及び全ての第三者の権利を侵害しないことを保証し、そのような内容を含むコンテンツにリンクしないことも保証します。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "You risk only your initial stake, and your stake never increases, even in gapping markets."
@@ -14138,10 +14112,9 @@ msgid "Your cashier is locked as per your request - to unlock it, please <a href
 msgstr "お客様の入出金はリクエストによりロックしました。 - 解除するには<a href=\"%1\">こちらをクリック</a>してください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:742
-#, fuzzy
 #| msgid "Your cashier is locked as per your request - to unlock it, please <a href=\"%1\">click here</a>."
 msgid "Your cashier is locked as per your request - to unlock it, please click %1here"
-msgstr "お客様の入出金はリクエストによりロックしました。 - 解除するには<a href=\"%1\">こちらをクリック</a>してください。"
+msgstr "お客様の入出金はリクエストによりロックされました。 - 解除するには%1こちらをクリックしてください。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:594
 msgid "Your cashier is locked as per your request - to unlock it, please enter the password."
@@ -14929,10 +14902,9 @@ msgid "{JAPAN ONLY}Delta refers to  a percentage change of the option price with
 msgstr "デルタとは、原資産価格の変化に対するオプション価値の変動割合をいう。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:5
-#, fuzzy
 #| msgid "{JAPAN ONLY}Take knowledge test"
 msgid "{JAPAN ONLY}Disclaimer for knowledge test"
-msgstr "知識確認テストを受ける"
+msgstr "知識確認テスト免責事項"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:116
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:131
