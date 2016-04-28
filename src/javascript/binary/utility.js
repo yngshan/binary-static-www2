@@ -436,11 +436,17 @@ function showLocalTimeOnHover(s) {
     var selector = s || '.date';
 
     $(selector).each(function(idx, ele) {
-        var gmtTime = moment.utc(ele.innerHTML.replace('\n', ' ')).local().format('YYYY-MM-DD HH:mm:ss ZZ');
-        var timeToShow = gmtTime.replace(' ', '\n');
+        var gmtTime = moment.utc(ele.innerHTML.replace('\n', ' ')).local();
+        if (!gmtTime.isValid()) {
+            return;
+        }
+
+        var gmtTimeStr = gmtTime.format('YYYY-MM-DD HH:mm:ss ZZ');
+        var timeToShow = gmtTimeStr.replace(' ', '\n');
         var tooltip = $('<span></span>', { class: 'tooltip-content', text: timeToShow });
         $(ele)
-            .remove('.tooltip-content')
-            .append(tooltip);
+            .children('.tooltip-content')
+            .remove();
+        $(ele).append(tooltip);
     });
 }
