@@ -432,7 +432,7 @@ function attach_tabs(element) {
     return targets;
 }
 
-function showLocalOnHover(s) {
+function showLocalTimeOnHover(s) {
     var selector = s || '.date';
 
     $(selector).each(function(idx, ele) {

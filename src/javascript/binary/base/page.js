@@ -679,7 +679,7 @@ Header.prototype = {
         var update_time = function() {
             window.time = moment(that.server_time_at_response + moment().valueOf() - that.client_time_at_response).utc();
             clock.html(window.time.format("YYYY-MM-DD HH:mm") + ' GMT');
-            showLocalOnHover('#gmt-clock');
+            showLocalTimeOnHover('#gmt-clock');
             window.HeaderTimeUpdateTimeOutRef = setTimeout(update_time, 1000);
         };
         update_time();
