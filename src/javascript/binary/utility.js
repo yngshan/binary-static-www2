@@ -436,7 +436,7 @@ function showLocalOnHover(s) {
     var selector = s || '.date';
 
     $(selector).each(function(idx, ele) {
-        var gmtTime = moment.utc(ele.innerHTML.replace('\n', ' ')).local().format('YYYY-MM-DD HH:mm:ss');
+        var gmtTime = moment.utc(ele.innerHTML.replace('\n', ' ')).local().format('YYYY-MM-DD HH:mm:ss ZZ');
         var timeToShow = gmtTime.replace(' ', '\n');
         var tooltip = $('<span></span>', { class: 'tooltip-content', text: timeToShow });
         $(ele).append(tooltip);
