@@ -29,7 +29,7 @@ var IPHistoryUI = (function(){
     function createRow(data){
         var userAgent = data['environment'];
         var history = userAgent.split(' ');
-        var timestamp = moment.unix(data.time).format('YYYY-MM-DD HH:mm:ss').replace(' ', '\n') + ' GMT';
+        var timestamp = moment.unix(data.time).utc().format('YYYY-MM-DD HH:mm:ss').replace(' ', '\n') + ' GMT';
         var ip = history[2].split('=')[1];
         var browser = "Unknown",
             ver = "Unknown",
