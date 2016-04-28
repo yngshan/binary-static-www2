@@ -82618,11 +82618,13 @@ function displayIndicativeBarrier() {
         }
 
         if (indicativeHighBarrierTooltip && isVisible(indicativeHighBarrierTooltip)) {
-            indicativeHighBarrierTooltip.textContent = (parseFloat(currentTick) + parseFloat(highBarrierElement.value)).toFixed(decimalPlaces);
+            var highBarrierValue = isNaN(parseFloat(highBarrierElement.value))?0:parseFloat(highBarrierElement.value);
+            indicativeHighBarrierTooltip.textContent = (parseFloat(currentTick) + highBarrierValue).toFixed(decimalPlaces);
         }
 
         if (indicativeLowBarrierTooltip && isVisible(indicativeLowBarrierTooltip)) {
-            indicativeLowBarrierTooltip.textContent = (parseFloat(currentTick) + parseFloat(lowBarrierElement.value)).toFixed(decimalPlaces);
+            var lowBarrierValue = isNaN(parseFloat(lowBarrierElement.value))?0:parseFloat(lowBarrierElement.value);
+            indicativeLowBarrierTooltip.textContent = (parseFloat(currentTick) + lowBarrierValue).toFixed(decimalPlaces);
         }
     } else {
         indicativeBarrierTooltip.textContent = '';
@@ -93164,7 +93166,7 @@ function attach_tabs(element) {
         var lastTestDate = new Date(lastTestEpoch * 1000);
 
         var msgTemplate =
-            '{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until [_1].\nLast test taken at [_2].';
+            '{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until [_1]. Last test taken at [_2].';
 
         var msg = text.localize(msgTemplate)
             .replace('[_1]', nextTestDate.toUTCString())
