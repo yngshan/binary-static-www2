@@ -3,14 +3,29 @@ var LoggedInHandler = (function() {
 
     var init = function() {
         parent.window['is_logging_in'] = 1; // this flag is used in base.js to prevent auto-reloading this page
-        storeTokens();
-        page.client.set_cookie('login', page.client.get_token(page.client.loginid));
-        sessionStorage.setItem('check_tnc', '1');
-        GTM.set_login_flag();
+        var redirect_url;
+        try {
+            storeTokens();
+            page.client.set_cookie('login', page.client.get_token(page.client.loginid));
+            sessionStorage.setItem('check_tnc', '1');
+            GTM.set_login_flag();
+            // redirect url
+            redirect_url = sessionStorage.getItem('redirect_url');
+            sessionStorage.removeItem('redirect_url');
+        } catch(e) {console.log('storage is not supported');}
 
         // redirect back
-        var redirect_url = sessionStorage.getItem('redirect_url') || page.url.url_for('trading');
-        sessionStorage.removeItem('redirect_url');
+        var set_default = true;
+        if(redirect_url) {
+            var do_not_redirect = ['reset_passwordws', 'lost_passwordws', 'home', page.url.url_for('').replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&")];
+            var reg = new RegExp(do_not_redirect.join('|'), 'i');
+            if(!reg.test(redirect_url)) {
+                set_default = false;
+            }
+        }
+        if(set_default) {
+            redirect_url = page.url.default_redirect_url();
+        }
         document.getElementById('loading_link').setAttribute('href', redirect_url);
         window.location.href = redirect_url;
     };

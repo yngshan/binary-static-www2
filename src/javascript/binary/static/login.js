@@ -3,7 +3,11 @@ var Login = (function() {
 
     var redirect_to_login = function() {
         if (!page.client.is_logged_in && !is_login_pages()) {
-            sessionStorage.setItem('redirect_url', window.location.href);
+            try {
+                sessionStorage.setItem('redirect_url', window.location.href);
+            } catch(e) {
+                alert('The website needs features which are not enabled on private mode browsing. Please use normal mode.');
+            }
             window.location.href = page.url.url_for('oauth2/authorize', 'app_id=id-NMEEIoF2heJ8f87rHpRwYw14Mqxzk'); // should be changed to binarycom
         }
     };

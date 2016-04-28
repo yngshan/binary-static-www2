@@ -208,6 +208,12 @@ Client.prototype = {
         }
         return is_virtual;
     },
+    redirect_if_login: function() {
+        if(page.client.is_logged_in) {
+            window.location.href = page.url.default_redirect_url();
+        }
+        return page.client.is_logged_in;
+    },
     is_virtual: function() {
         return this.get_storage_value('is_virtual') === '1';
     },
@@ -512,6 +518,9 @@ URL.prototype = {
             params.push(param);
         }
         return params;
+    },
+    default_redirect_url: function() {
+        return this.url_for('trading');
     },
 };
 
@@ -1182,6 +1191,7 @@ Page.prototype = {
         // set local storage
         GTM.set_login_flag();
         localStorage.setItem('active_loginid', loginid);
+        $('#client_loginid').removeAttr('disabled');
         page.reload();
     },
     on_click_acc_transfer: function() {
