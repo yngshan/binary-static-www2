@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: Chinese (China) (Binary)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-28 09:12+0000\n"
+"PO-Revision-Date: 2016-04-29 10:30+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
-"Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary/static/zh_CN/>\n"
+"Language-Team: Chinese (China) "
+"<https://hosted.weblate.org/projects/binary/static/zh_CN/>\n"
 "Language: zh_cn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.6-dev\n"
+"X-Generator: Weblate 2.6\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:47
@@ -3275,10 +3276,10 @@ msgid "Create content to support our international marketing campaigns in a vari
 msgstr "以各种不同格式和语言创建支持我们国际市场营销活动的内容"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "%1 is looking to recruit several talented designers who are passionate about what they do best. As our design team is responsible for creating the graphics required to support our global marketing and advertising campaigns, the team's creative efforts span a number of channels, including online marketing, affiliate networks, print advertising, trade shows, special events, and promotional projects in a number of languages."
 msgid "Create the graphics required to support our global marketing and advertising campaigns. The team's creative efforts span a number of channels, including online marketing, affiliate networks, print advertising, tradeshows, special events, and promotional projects."
-msgstr "%1诚招多名充满热忱的设计专业人才。我们的设计团队负责为全球市场营销和广告活动进行平面设计。此团队的设计工作范围牵涉及多个部门，包括网络营销、联盟网络、印刷广告、商展会、特别活动和以多种语言推出的促销项目。"
+msgstr ""
+"支持我们的设计团队为全球市场营销和广告活动创建平面设计。此团队的设计工作范围牵涉及多个部门，包括网络营销、联盟网络、印刷广告、商展会、特别活动和促销项目。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Creating interfaces and tools to access market information, real-time and historical analysis of trading strategies"
@@ -3612,7 +3613,6 @@ msgstr ""
 
 #. (token, link)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/lost_password.html.tt:1
-#, fuzzy
 #| msgid ""
 #| "Dear Valued Customer,\n"
 #| "\n"
@@ -3628,11 +3628,13 @@ msgid ""
 "\n"
 "Password reset form: %2"
 msgstr ""
-"尊敬的客户：\n"
+"尊敬的客户，\n"
 "\n"
-"在我们协助您修改密码之前，请点击下方的链接，以便我们对您的身份进行验证：\n"
+"在我们替您修改密码之前，请把以下验证令牌输入到密码重置表格内，以便我们对您的身份进行验证：\n"
 "\n"
-"%1"
+"令牌： %1\n"
+"\n"
+"密码重置表格： %2"
 
 #. (link)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/verify_cashier.html.tt:1
@@ -3841,23 +3843,20 @@ msgid "DevOps Manager / Team Lead"
 msgstr "DevOps 经理 / 团队领导"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Develop and maintain a consistent and engaging brand voice throughout assigned social-media channels"
 msgid "Develop and maintain a consistent, engaging brand voice throughout all social-media channels"
 msgstr "通过社交媒体建立并保持连续、有吸引力的品牌声音"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Develop content that promotes the company through social media outlets"
 msgid "Develop content as necessary to promote the company through social media"
-msgstr "通过社交媒体发布公司促销内容"
+msgstr "通过社交媒体按需开发公司促销内容"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Develop derivatives pricing, risk management models and algorithms using C/C++, R, MATLAB, Perl, Python and Java"
 msgstr "使用C/C++, R, MATLAB, Perl, Python 和 Java 开发衍生产品的定价、风险管理模型和算法"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Develop text that promotes the company’s product offerings in a variety formats"
 msgid "Develop text that promotes the company’s product offerings in a variety of formats"
 msgstr "为本公司的产品创作各类促销文本"
@@ -4053,10 +4052,9 @@ msgid "EGR Operator Award "
 msgstr "EGR操作员奖 "
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/deposit_withdraw_ws.html.tt:55
-#, fuzzy
 #| msgid "EURZAR"
 msgid "EUR"
-msgstr "EURZAR"
+msgstr "欧元"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/binary_options_basics.html.haml:1
@@ -4076,10 +4074,11 @@ msgid "Each option transaction has a specified expiry time and date, known as th
 msgstr "Each option transaction has a specified expiry time and date, known as the judgment time."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:87
-#, fuzzy
 #| msgid "Each party to this Agreement represents and warrants to the other that it has, and will retain throughout the Term all right, title and authority to enter into this Agreement, to grant to the other party the rights and licences granted in this Agreement and to perform all of its obligations under this Agreement."
 msgid "Each party to this Agreement represents and warrants to the other that it has, and will retain throughout the term of this Agreement all right, title, and authority to enter into this Agreement, to grant to the other party the rights and licences granted in this Agreement, and to perform all of its obligations under this Agreement."
-msgstr "协议各方向另一方陈述并保证，已经并将在协议期间继续保留所有签订本协议、向另一方授予本协议下所授予的权利和许可以及履行本协议下所有相应义务的权利和权限。"
+msgstr ""
+"协议各方向另一方陈述并保证，已经拥有并将在协议期间继续保留所有签订本协议、并向另一方授予本协议所授予的权利、所有权和许可以及履行本协议下所有相应义务的权利"
+"和权限。"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/partners.html.haml:1
@@ -4125,10 +4124,9 @@ msgid "Effect of Termination"
 msgstr "终止效果"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Effective English language skills, with attention to detail regarding punctuation, spelling, grammar, and syntax"
 msgid "Effective English language skills, with precise attention to detail regarding punctuation, spelling, grammar, and syntax"
-msgstr "有效的英语语言技能，注重关于标点、拼写、语法和句法方面的细节"
+msgstr "有效的英语语言技能，特别注重关于标点、拼写、语法和句法方面的细节"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Effective PC skills with extensive experience in MS Office applications"
@@ -4147,10 +4145,11 @@ msgid "Effectively monitor daily client activity"
 msgstr "有效地监测客户的日常活动"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:110
-#, fuzzy
 #| msgid "Either party may terminate this Agreement forthwith on written notice if a receiver, examiner or administrator is appointed of the whole or any part of the other party's assets or the other party is struck off the Register of Companies in the jurisdiction where it was incorporated or an order is made or a resolution passed for winding up of the other party (unless such order or resolution is part of a voluntary scheme for the reconstruction or amalgamation of that party as a solvent corporation and the resulting corporation, if a different legal person, undertakes to be bound by this Agreement)."
 msgid "Either party may terminate this Agreement forthwith on written notice if a receiver, examiner, or administrator is appointed of the whole or any part of the other party's assets or the other party is struck off the Register of Companies in the jurisdiction where it was incorporated or an order is made or a resolution passed for winding up of the other party (unless such order or resolution is part of a voluntary scheme for the reconstruction or amalgamation of that party as a solvent corporation and the resulting corporation, if a different legal person, undertakes to be bound by this Agreement)."
-msgstr "当以下情况发生时，一方可以通过书面通知的形式终止协议：一方的全部或部分资产被指定了接收人、监督人或管理人；该方在司法管辖区之公司登记册上被注销；关于该方清盘事宜的指令或决议被通过（除非该指令或决议是该方作为具有偿债能力公司的重组、合并自愿方案的一部分，且如果存续公司是另一个法人，也同样承诺遵守本协议）。"
+msgstr ""
+"当以下情况发生时，一方可以通过书面通知的形式终止协议：一方的全部或部分资产被指定了接收人、监督人或管理人；该方在司法管辖区之公司登记册上被注销；关于该方清"
+"盘事宜的指令或决议被通过（除非该指令或决议是该方作为具有偿债能力公司的重组、合并自愿方案的一部分，且如果存续公司是另一个法人，也同样承诺遵守本协议）。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:111
 msgid "Either party may terminate this Agreement on delivery of one weeks' prior written notice to the other party."
@@ -4338,16 +4337,14 @@ msgid "Except to the extent your Application contains the Binary.com API, the Co
 msgstr "公司对您的应用程序的所有或控制权仅限于该应用程序所包含的Binary.com API。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Exceptional communication skills (both oral and written) in English"
 msgid "Exceptional communication skills in English, in both oral and written form"
 msgstr "优秀的英语口头和书面沟通能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Exceptional organizational skills; detail orientation and a strong work ethic"
 msgid "Exceptional organizational skills; detail orientation; strong work ethic; and efficient multi-tasking capabilities"
-msgstr "出色的组织能力，注重细节并具有良好的职业道德"
+msgstr "出色的组织能力、注重细节、具有良好的职业道德和高效率多任务处理能力"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:310
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:104
@@ -4744,10 +4741,9 @@ msgid "For added security protection against unauthorised withdrawals, an email 
 msgstr "为加强安全保护, 防止非法提款, 内附提款页面安全链接的电子邮件已发送到您的邮箱%1。请查看您的邮件以访问此链接。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:743
-#, fuzzy
 #| msgid "Thank you for signing up! Please check your email to retrieve the verification token."
 msgid "For added security, please check your email to retrieve the verification token."
-msgstr "谢谢您的注册！请查看邮件并提取验证令牌。"
+msgstr "为提高安全保障，请查看邮件并提取验证令牌。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:44
 msgid "For contracts which expire at market close, we will use the official closing value of the market to settle your contract and update your results at settlement time."
@@ -4897,10 +4893,9 @@ msgid "Futures"
 msgstr "期货"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/deposit_withdraw_ws.html.tt:56
-#, fuzzy
 #| msgid "BP"
 msgid "GBP"
-msgstr "BP公司"
+msgstr "英镑"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "GMT"
@@ -5302,10 +5297,11 @@ msgid "If all that sounds a bit daunting, you’re right. But it’s how we make
 msgstr "没错，这些要求的确比较高。但这是我们确保团队能够招募最优秀人才的方式。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:78
-#, fuzzy
 #| msgid "If an error is made in the calculation of your share of the revenue share, the Company reserves the right to correct such calculation at any time and to reclaim from you any overpayment made by the Company to you (including, without limitation, by way of reducing future payments earned, revenue to cover any processed chargebacks) before you can start earning revenue again. In special cases, the Company reserves the right to exclude revenue sharing  on promotional funds deposited into the client's account by the Company."
 msgid "If an error is made in the calculation of your share of the revenue share, the Company reserves the right to correct such calculation at any time, and to reclaim from you any overpayment made by the Company to you (including, without limitation, by way of reducing future payments earned, revenue to cover any processed chargebacks) before you can start earning revenue again. In special cases, the Company reserves the right to exclude revenue sharing  on promotional funds deposited into the client's account by the Company."
-msgstr "如果您的收入分成计算有误，公司保留随时修正错误并追回超额支付的权利（包括但不限于：在您再次开始赚取收入之前，减少未来的收入以补偿超额支付）。在特殊情况下，公司有权拒绝向客户账户支付促销收入分成。"
+msgstr ""
+"如果您的收入分成计算有误，公司保留随时修正错误并追回超额支付的权利（包括但不限于：在您再次开始赚取收入之前，减少未来的收入以补偿超额支付）。在特殊情况下，"
+"公司有权拒绝向客户账户支付促销收入分成。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:252
 msgid "If any provision of these Terms is found to be illegal, void, or unenforceable, the unenforceable provision will be modified so as to render it enforceable to the maximum extent possible in order to effect the intention of the provision; if a term cannot be so modified, it will be severed and the remaining provisions of these Terms will not be affected in any way."
@@ -5375,10 +5371,9 @@ msgid "If you meet our basic requirements, we’ll send you a talent test."
 msgstr "如果您符合我们的基本要求，我们会向您发送一份人才测试。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:746
-#, fuzzy
 #| msgid "If you need help, please contact our customer support team at"
 msgid "If you need assistance feel free to contact our %1Customer Support"
-msgstr "如果您需要帮助，请在此联系我们的客户支持团队"
+msgstr "如果您需要帮助，请联系我们的 %1客服部"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/lost_password.html.tt:9
 msgid "If you need help, please contact our customer support team at"
@@ -6713,16 +6708,14 @@ msgid "Knowledge and experience in the financial services industry"
 msgstr "金融服务业知识和经验"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Knowledge and experience in the financial services industry"
 msgid "Knowledge and experience with the financial services industry"
 msgstr "金融服务业知识和经验"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Knowledge and experience in the financial services industry"
 msgid "Knowledge and experience with the financial services industry and / or binary options trading"
-msgstr "金融服务业知识和经验"
+msgstr "金融服务业和/或二元期权交易知识和经验"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge of hardware and software firewalls, intrusion detection methods, security systems and DDoS protection"
@@ -6870,10 +6863,9 @@ msgid "Level of Education"
 msgstr "教育水平"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Identify, engage, and convert potential customers and business partners"
 msgid "Leverage social-media tools and channels to identify, engage, and convert potential new customers and partners"
-msgstr "发现、到达并发展潜在客户和业务合作伙伴"
+msgstr "通过杠杆社交媒体工具标识、引入并转换潜在新客户和业务合作伙伴"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:157
 msgid "Liability"
@@ -7177,10 +7169,9 @@ msgid "Marketing Executives"
 msgstr "市场执行"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Marketing Project Manager"
 msgid "Marketing Project Coordinator"
-msgstr "营销项目经理"
+msgstr "营销项目协调员"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:610
 msgid "Marketing Project Manager"
@@ -7504,10 +7495,9 @@ msgid "Need to Monitor Positions"
 msgstr "必须监控头寸"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:39
-#, fuzzy
 #| msgid "Neither you nor your direct relatives are eligible to become Clients and you shall not be entitled to any share of net revenue or any other remuneration from the Company in relation to such relatives or friends. Direct relatives in this context shall include your spouse, partner, parent, child or sibling."
 msgid "Neither you, your direct relatives, or any persons you control are eligible to become clients, and you shall not be entitled to any share of net revenue or any other remuneration from the Company in relation to such relatives, friends, or controlled persons."
-msgstr "您和您的直系亲属都不得成为客户，您也无权享有任何与亲友相关的净收入或公司其他酬金的份额。此处的直系亲属包括您的配偶、伴侣、父母、子女和兄弟姐妹。"
+msgstr "您和您的直系亲属或您管辖下的任何人都不得成为客户，您也无权享有任何与亲友或管辖下人员相关的净收入或公司其他酬金的份额。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:681
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:470
@@ -8130,16 +8120,16 @@ msgstr "所有权"
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:61
-#, fuzzy
 #| msgid "Ownership and content of %1's sites remain our respective properties and shall not be deemed to have been transferred to you through any act or omission in respect of the affiliation agreement."
 msgid "Ownership and content of the %1 website remains our respective properties and shall not be deemed to have been transferred to you through any act or omission in respect of this Agreement."
-msgstr "%1 网站的所有权和内容均为归我们，不得视为通过联盟协议相关的任何作为或不作为转移给您。"
+msgstr "%1 网站的所有权和内容均为归我们，不得视为通过此协议相关的任何作为或不作为转移给您。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:62
-#, fuzzy
 #| msgid "Ownership, content and liability for affiliate sites are the sole responsibility of the affiliate. You will be solely responsible for the development, operation, and maintenance of your site and for all materials that appear on your site. You will indemnify and hold us harmless from all claims, damages, and expenses (including, without limitation to, attorneys' fees) relating to the development, operation, maintenance, and contents of your site."
 msgid "Ownership, content, and liability of the Affiliate's websites are the sole responsibility of the Affiliate. You will be solely responsible for the development, operation, and maintenance of your website and for all materials that appear on your website. You will indemnify and hold us harmless from all claims, damages, and expenses (including, without limitation to, attorneys' fees) relating to the development, operation, maintenance, and contents of your website."
-msgstr "联盟网站的所有权、内容和法律责任均由联盟会员全权负责。您仅全权负责您的网站及其显示的全部材料的开发、运营和维护。对于与您网站开发、运营、维护和内容相关的一切索赔、损害赔偿和开支（包括但不限于律师费），您有责任进行赔偿，并使公司免受侵害。"
+msgstr ""
+"联盟网站的所有权、内容和法律责任均由联盟会员全权负责。您仅全权负责您的网站及其显示的全部材料的开发、运营和维护。对于与您网站开发、运营、维护和内容相关的一"
+"切索赔、损害赔偿和开支（包括但不限于律师费），您有责任进行赔偿，并使公司免受侵害。"
 
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:210
 msgid "P.O. Box is not accepted in address."
@@ -8284,10 +8274,9 @@ msgid "Payment methods"
 msgstr "支付方式"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:77
-#, fuzzy
 #| msgid "Payment will be made monthly, on or around the 15th day of each month, and credited to your specified %1 account."
 msgid "Payment of commission earned for the previous calendar month will be made monthly, on or around the 15th day of each month, and may be credited to any payment method as agreed between the Company and the Affiliate."
-msgstr "款项在每月15 号或该日前后汇入您指定的 %1 账户。"
+msgstr "上一月赚得的佣金在每月15 号或该日前后以公司和联盟成员双方预先同意的付款方式支付。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:34
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:73
@@ -8843,26 +8832,23 @@ msgid "Previous Day"
 msgstr "前一天"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Related experience in the financial services industry"
 msgid "Previous experience in the financial services industry"
-msgstr "金融服务业相关工作经验"
+msgstr "金融服务业工作经验"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Previous experience with financial/binary options website services"
 msgid "Previous experience with financial / binary options website services"
-msgstr "金融公司或二元期权网站服务经验"
+msgstr "金融公司/二元期权网站服务经验"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Previous experience with financial and/or binary options trading websites"
 msgstr "金融公司或二元期权交易网站工作经验"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Substantial experience in a senior marketing or advertising role"
 msgid "Previous knowledge and experience in Marketing or Advertising"
-msgstr "丰富的高级营销或广告经验"
+msgstr "营销或广告知识与经验"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Previous work experience in a client service and/or marketing role"
@@ -8907,22 +8893,19 @@ msgid "Print chart"
 msgstr "打印图表"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Prior experience in the financial services industry is preferred, as is an interest in Information Technology and/or Software Development"
 msgid "Prior knowledge and experience in Information Technology and/or Software Development"
-msgstr "有金融服务行业经验、对信息技术和/或软件开发工作感兴趣者优先考虑"
+msgstr "信息技术和/或软件开发知识和经验"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Knowledge and experience in the financial services industry"
 msgid "Prior knowledge and experience with IT development"
-msgstr "金融服务业知识和经验"
+msgstr "信息技术开发知识和经验"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Knowledge and experience in the financial services industry"
 msgid "Prior knowledge and experience with the financial industry"
-msgstr "金融服务业知识和经验"
+msgstr "金融业知识和经验"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/tac.html.tt:25
@@ -8944,10 +8927,9 @@ msgid "Proceed"
 msgstr "执行"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Process website content translations regularly and efficiently"
 msgid "Process website content translations regularly and efficiently, delivering high-quality work on a dependable basis"
-msgstr "定期、及时翻译网站内容"
+msgstr "定期、及时翻译网站内容，可靠提供高质量工作"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Process website content translations when a full time translator is unavailable"
@@ -8958,10 +8940,9 @@ msgid "Processing Time"
 msgstr "处理时间"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Proofread existing content used on the company’s blogs and social media outlets"
 msgid "Produce content for the company’s website, blog, social media outlets, and marketing materials"
-msgstr "公司博客和社交媒体网站当前内容的校对工作"
+msgstr "为公司网站、博客、社交媒体渠道和营销材料创建内容"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:35
 msgid "Professional Clients"
@@ -9003,10 +8984,9 @@ msgid "Profit/Loss (points)"
 msgstr "利润/亏损（点）"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Proofread and correct the content appearing on the company’s website, blogs and social media outlets, from English to the regional language and vice versa"
 msgid "Proofread and correct the content appearing on the company’s website, blog, social media outlets, and marketing materials, from English to the regional language and vice versa"
-msgstr "公司网站、博客和社交媒体网站内容翻译的校对和更正（从英语翻译成区域语言，或反向）"
+msgstr "公司网站、博客、社交媒体网站和营销材料内容翻译的校对和更正（从英语翻译成区域语言，或反向）"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:617
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
@@ -9434,10 +9414,9 @@ msgid "Responsible for the risk management and derivatives pricing of the compan
 msgstr "负责公司的风险管理和衍生产品定价，包括实施和维护工作。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:30
-#, fuzzy
 #| msgid "Registration"
 msgid "Restrictions"
-msgstr "注册"
+msgstr "限制"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:32
 msgid "Retail Clients"
@@ -9777,10 +9756,9 @@ msgid "Set client deposit and loss limits"
 msgstr "设置客户存款和亏损限额"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Manage social-media advertising campaigns targeting potential clients and business partners"
 msgid "Set up and manage social-media advertising campaigns, effectively micro-targeting potential clients and partners"
-msgstr "管理针对潜在客户和业务合作伙伴的社交媒体广告活动"
+msgstr "设置并管理有效集中针对潜在客户和合作伙伴的社交媒体广告活动"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:102
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:371
@@ -9851,7 +9829,6 @@ msgid "Sign me up"
 msgstr "我要注册"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Significant experience in, Social Media, Marketing, and/or advertising"
 msgid "Significant experience in Social Media, Marketing, and / or Advertising"
 msgstr "丰富的社交媒体、市场营销和/或广告经验"
@@ -10424,7 +10401,6 @@ msgid "Strong attention to detail"
 msgstr "非常注重细节"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Excellent English language skills, both oral and written"
 msgid "Strong command of the English language, in both oral and written form"
 msgstr "优秀的英语口语和书写技能"
@@ -10434,19 +10410,16 @@ msgid "Strong knowledge of developing cross-platform/browser-compatible applicat
 msgstr "对网络和手机的跨平台/浏览器兼容应用程序的编程非常熟悉"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Managerial, analytical, organizational, financial, and verbal/written communication skills in both the regional language and English"
 msgid "Strong oral and written communication skills in both the regional language and English"
-msgstr "区域语言和英语的管理、分析、组织、财务和口头/书面沟通技巧"
+msgstr "流利区域语言和英语口头/书面沟通技巧"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "A strong and passionate interest in social media, marketing, and advertising"
 msgid "Strong, passionate interest in Graphic Design, Marketing, and Advertising"
-msgstr "对社交媒体、市场营销和广告充满热忱，非常感兴趣"
+msgstr "对平面设计、市场营销和广告充满热忱，非常感兴趣"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "A strong and passionate interest in marketing and advertising"
 msgid "Strong, passionate interest in Marketing and Advertising"
 msgstr "对市场营销和广告充满热忱，非常感兴趣"
@@ -10768,10 +10741,9 @@ msgid "The Affiliate Program has been delivering payments on time and, every tim
 msgstr "自2004年3月正式启动以来，联盟项目一直及时足额支付款项。佣金将在日历月结束后十五天内汇入您的联盟会员账户。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:21
-#, fuzzy
 #| msgid "The Company's Obligations"
 msgid "The Affiliate’s Obligations"
-msgstr "公司的义务"
+msgstr "联盟的义务"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:96
 msgid "The Agent will send you the withdrawal amount (minus the commission) via your preferred payment method."
@@ -10836,10 +10808,9 @@ msgstr "公司对贡献者没有任何保密义务;"
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:95
-#, fuzzy
 #| msgid "The Company makes no claims that %1 will be uninterrupted or provide an error free service and will not be liable for the consequences of any such errors or interruptions."
 msgid "The Company makes no claims that the %1 website will be uninterrupted or provide an error free service, and will not be liable for the consequences of any such errors or interruptions."
-msgstr "公司并未宣称%1 不会中断服务或提供无差错服务，也不承担任何因此类中断或错误导致的后果。"
+msgstr "公司并未宣称%1 网站不会中断服务或提供无差错服务，也不承担任何因此类中断或错误导致的后果。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:55
 msgid "The Company may change the commission structure at any time at its sole and absolute discretion. We will endeavour to ensure affiliates are notified when changes have been made to the commission structure."
@@ -10879,20 +10850,20 @@ msgid "The Company provides the Binary.com API on an \"as is\" and \"as availabl
 msgstr "公司根据\"原样\"和\"可用\"方式提供Binary.com API，且不承担任何类型的明示或默认保证。公司根据适用法律所允许的最大范围，不承担任何及所有保证和声明，包括但不限于任何适销性、某一特定用途适合性、标题、数据准确性和非侵权的默认保证。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:116
-#, fuzzy
 #| msgid "Should the Company receive a complaint which could have involved the Alternate Dispute Resolution entity, or the Company believes that you, the affiliate is in breach of any relevant advertising code of practice, then the Company has the right to terminate this Agreement."
 msgid "The Company receives a complaint which could have involved the Alternate Dispute Resolution entity, or the Company believes that you, the Affiliate, is in breach of any laws, rules, and regulations that may be relevant or applicable to the jurisdiction(s) in which you operate or target your business;"
-msgstr "如果本公司收到可能涉及替代性纠纷调解机构的申诉，或本公司认为您作为联盟会员已违反了与广告有关的法律，则本公司有权终止本协议。"
+msgstr "如果公司收到可能涉及替代性纠纷调解机构的申诉，或公司认为您作为联盟会员已违反任何与适用司法管辖权下您的业务运营相关的法律、规则和条例;"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:27
 msgid "The Company reserves the right in its sole discretion to refuse and/or cancel services, charge deposit and/or withdrawal fees to anyone for any reasons including, but not limited to:"
 msgstr "公司有权自行拒绝和/或取消服务、收取存款和/或取款费用，理由包括但不限于："
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:9
-#, fuzzy
 #| msgid "The Company reserves the right to change any part of this Agreement at any time. Notice of any changes will be sent to your email address 7 days in advance of any such changes, but it is ultimately your responsibility to check these terms and conditions regularly. Your continued participation in our affiliate program after we have posted the changes will constitute binding acceptance of such changes."
 msgid "The Company reserves the right to change any part of this Agreement at any time. We will endeavour to ensure affiliates are notified when changes have been made to this Agreement, but it is ultimately your responsibility to check these terms and conditions regularly. Your continued participation in our affiliate program after we have posted the changes will constitute binding acceptance of such changes."
-msgstr "公司有权在任何时间修改本协议的任何内容。修改会提前七天以邮件形式通知您，您有责任定期检查相应条款和条件。在修改正式公布后，您继续参加联盟计划的行为表示您接收该修改内容的约束。"
+msgstr ""
+"公司有权随时修改本协议的任何内容。我们会尽量把协议修改详情通知联盟成员，但您有责任定期检查相应条款和条件。在修改正式公布后，您继续参加联盟计划的行为表示您"
+"接收该修改内容的约束。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:116
 msgid "The Company reserves the right to suspend the operation of this site or sections thereof:"
@@ -10903,48 +10874,48 @@ msgid "The Company reserves the right to void, delay, or withhold payment of com
 msgstr "公司有权在包括涉嫌违法或违反本协议条款和条件的情况下撤消、延缓或中止支付佣金。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:53
-#, fuzzy
 #| msgid "The Company shall be entitled to exercise any of its rights or fulfill any of its obligations hereunder (including without limitation to its payment obligations pursuant to clause 6) through any company within the Company (as defined below)."
 msgid "The Company shall be entitled to exercise any of its rights or fulfill any of its obligations hereunder (including, but not limited to, its payment obligations) through any member of the Binary group of companies."
-msgstr "公司有权通过其下属公司（如下所述）行使权利或履行义务（包括但不限于第6条下的支付义务）。"
+msgstr "公司有权通过Binary集团各成员公司行使以下任何权利或履行义务（包括但不限于支付义务）。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:160
 msgid "The Company shall have no liability arising from orders, investment decisions or purchases of third party goods or services (including financial instruments and currency) based on information published on or furnished through the Binary.com API;"
 msgstr "公司对所有通过Binary.com API发布或提供信息导致的第三方商品或服务（包括金融工具和货币）的交易、投资决定或购买不承担任何责任；"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:103
-#, fuzzy
 #| msgid "The Company shall not be liable to you in contract, or otherwise (including liability for negligence) for loss whether direct or indirect of  business, revenue or profits, anticipated savings or wasted expenditure, corruption or destruction of data or for any indirect or consequential loss whatever."
 msgid "The Company shall not be liable to you in contract, or otherwise (including liability for negligence) for any loss, whether direct or indirect, of the Affiliate's business, revenue or profits, anticipated savings, or wasted expenditure, corruption, or destruction of data or for any indirect or consequential loss whatsoever."
-msgstr "由业务、收入、利润、预期结余、开支浪费、数据破坏或损害造成的直接、间接损失或者其他衍生损失，公司不对您承担合同或其他（包括疏忽责任）责任。"
+msgstr ""
+"由联盟成员的业务、收入、利润、预期结余、开支浪费、数据破坏或损害造成的任何直接、间接损失或者其他衍生损失，公司不对您承担合同或其他（包括疏忽责任）责任。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:75
-#, fuzzy
 #| msgid "The Company shall pay you (in accordance with the provisions of clause 5.3) the currently published percentage of net revenues (as detailed on the commission page of your Affiliate account) received during the term of the Agreement. The affiliate payments due shall only be for bona-fide client referrals and the Company reserves the right to disregard duplicate accounts or nominee accounts that the Company sees as non bona-fide clients, at its sole discretion."
 msgid "The Company shall pay you the currently published percentage of net revenues (as detailed on the commission page of your affiliate account) received during the term of the Agreement. The affiliate commission payments due shall only be for bona fide client referrals and the Company reserves the right to disregard duplicate accounts or nominee accounts that the Company sees as non-bona fide clients, at its sole discretion."
-msgstr "公司将（根据5.3条规定）按当前公布的协议期间净收入比例（详见您的联盟账户佣金页）向您支付佣金。应付联盟款项只会支付给诚信的推荐人，如果公司认为某些重复账户和代理人账户属于非诚信账户，公司保留拒绝向这类账户付款的权利。"
+msgstr ""
+"公司将按当前公布的协议期间净收入比例（详见您的联盟账户佣金页）向您支付佣金。应付联盟佣金款项只会支付给诚信的推荐人，如果公司认为某些重复账户和代理人账户属"
+"于非诚信账户，公司保留拒绝向这类账户付款的权利。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:76
-#, fuzzy
 #| msgid "The Company shall provide you with statements accessible through the website %1 detailing the revenues generated by Clients you have introduced, if any, which have accrued to you over the course of the calendar month. Such statements shall be updated daily. At the end of a calendar month, the Company shall record your total share of Net Revenues, if any, during the previous calendar month. In the event that a revenue share in any calendar month is a negative amount, the Company shall be entitled but not obliged to carry forward and set off such negative amount against future revenue shares which would otherwise be payable to you. However the Company shall also be entitled but not obliged to zero the negative balance that would otherwise be carried forward."
 msgid "The Company shall provide you with statements accessible through an electronic system detailing the revenues generated by clients you have referred, if any, which have accrued to you over the course of the calendar month. Such statements shall be updated daily. At the end of a calendar month, the Company shall record your total share of Net Revenues, if any, during the previous calendar month. In the event that a revenue share in any calendar month is a negative amount, the Company shall be entitled but not obliged to carry forward and set off such negative amount against future revenue shares which would otherwise be payable to you. However, the Company shall also be entitled but not obliged to zerorise the negative balance that would otherwise be carried forward."
-msgstr "公司通过 %1 网站提供各种报表，详细说明由您介绍的客户所创造的收入。这些收入会以日历月为单位累积给您。报表每天都会更新。日历月末，公司将记录您在上一个日历月的净收入分成。若某日历月的收入分成为负值，公司有权但无义务将该负值结转，用来抵消未来应该支付给您的收入分成。此外，公司有权但无义务将这一可结转的负余额归零。"
+msgstr ""
+"公司通过电子系统提供各种报表，详细说明由您介绍的客户所创造的收入。这些收入会以日历月为单位累积给您。报表每天都会更新。日历月末，公司将记录您在上一个日历月"
+"的净收入分成。若某日历月的收入分成为负值，公司有权但无义务将该负值结转，用来抵消未来应该支付给您的收入分成。此外，公司有权但无义务将这一可结转的负余额归零"
+"。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:159
 msgid "The Company will not be liable in any way to any persons in the event of force majeure, or for the act of any Government or legal authority or for the failure of or damage or destruction to, its computer systems, data or records or any part thereof, or for delays, losses, errors or omissions resulting from the failure or mismanagement of any telecommunications or computer equipment or software. The Company shall not be responsible for any damages or losses deemed or alleged to have resulted from or been caused by this site or its content. This includes any client's use or misuse of its content, the inability of any client to connect with or use the site, delay in operations or transmission, failure of communication lines, or any errors or omissions in content."
 msgstr "出现下列情况时，公司不对任何人承担任何责任：不可抗因素；政府或司法机关行为；全部或部分电脑系统数据和记录出现故障、损坏或毁坏；由通信系统、电脑设备及软件的故障或管理不善造成的延迟、损失和错漏。因本网站及其内容产生或导致的任何损坏以及其他损失，本公司概不负责。这包括用户对内容的使用或滥用、无法连接或使用网站、操作或传输的延迟、通信线路的故障或内容的错漏。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:17
-#, fuzzy
 #| msgid "The Company will notify you by email if your application has been successful with instructions on how to begin promoting %1"
 msgid "The Company will notify you by email if your application has been successful."
-msgstr "如果您申请成功，公司将会通过电子邮件方式向您说明如何开始推广 %1"
+msgstr "如果您申请成功，公司将以电子邮件方式通知您。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:51
-#, fuzzy
 #| msgid "The Company will provide you with the advertising collateral with Links containing affiliate IDs and which may be modified by us from time to time."
 msgid "The Company will provide advertising collaterals with links containing affiliate IDs which may be modified by us from time to time."
-msgstr "公司将为您提供广告材料（我们可能会不定时修改），包括含联盟会员账号的链接。"
+msgstr "公司将提供广告材料（我们可能会不定时修改），包括含联盟会员账号的链接。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:16
 msgid "The Company will, at its sole discretion, determine whether or not your application has been successful. The Company's decision is final and is not open to appeal."
@@ -11031,13 +11002,11 @@ msgid "The ability to acquire knowledge of compliance matters in a multitude of 
 msgstr "在各个国际司法管辖区范围内获取法规遵循事项的相关知识"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "The ability to communicate effectively in English (both oral and written)"
 msgid "The ability to communicate effectively in English, in both oral and written form"
 msgstr "能够有效地进行英语口语和书面沟通"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "The ability to communicate fluently in English (both oral and written)"
 msgid "The ability to communicate fluently in English, in both oral and written form"
 msgstr "能够流利地进行英语口语和书面沟通"
@@ -11051,10 +11020,9 @@ msgid "The ability to speak and write in multiple languages"
 msgstr "多种语言的口语和书写能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "The ability to speak and write in multiple languages"
 msgid "The ability to speak multiple languages"
-msgstr "多种语言的口语和书写能力"
+msgstr "多种语言的口语能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to translate information into clear, concise, and engaging content"
@@ -11494,10 +11462,9 @@ msgid "There was a problem validating your address. Please fix the indicated fie
 msgstr "在验证地址时发现问题。请修改提示字段。如需帮助，请联系我们的 <a href=\"%1\">客服人员</a>。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:745
-#, fuzzy
 #| msgid "There was a problem validating your address."
 msgid "There was a problem validating your personal details. Please fix the fields %1here"
-msgstr "您的地址验证出了问题。"
+msgstr "您的个人资料验证出了问题。请在此更正 %1 字段"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:654
 msgid "There was an error"
@@ -11695,10 +11662,12 @@ msgid "This document (the \"Agreement\") sets out the terms and conditions (\"Te
 msgstr "本文件（“协议”）规定了“公司”即 Binary Services Ltd.(“我们”或“我们的“）与“您”（Binary.com 应用程序接口 (\"API\")注册者）；“您”或“您的”）之间的条款和条件（”条款“）。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:8
-#, fuzzy
 #| msgid "This document (the \"Agreement\") sets out the terms and conditions between \"the Company\" which is Binary Services Ltd, and you (the person who applied for this program; \"you\" or \"your\"), in relation to your application to setup an affiliate account (and membership of the affiliate program if your application is deemed successful) to promote the website %1"
 msgid "This document (the \"Agreement\") sets out the terms and conditions between \"the Company\" which is Binary Services Ltd, and you (the person who applied for this program; \"you\", \"your\", or \"Affiliate\"), in relation to your application to setup an affiliate account (and membership of the affiliate program if your application is deemed successful)"
-msgstr "本文件（“协议”）规定了“公司”（即 Binary Services Ltd.）与“您”（本项目申请人；“您”或“您的”）之间关于您申请设立联盟会员账户（申请成功后还包括联盟项目的会员资格）以推广网站 %1 的条款和条件"
+msgstr ""
+"本文件（“协议”）规定了“公司”（即 Binary Services "
+"Ltd.）与“您”（本项目申请人；“您”、“您的”或“联盟成员”）之间关于您申请设立联盟会员账户（申请成功后还包括联盟项目的会员资格）以推广网站 %1 "
+"的条款和条件"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:393
 msgid "This feature is not relevant to virtual-money accounts."
@@ -12241,16 +12210,14 @@ msgid "US Stocks"
 msgstr "美国股票"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/deposit_withdraw_ws.html.tt:54
-#, fuzzy
 #| msgid "USA"
 msgid "USD"
-msgstr "USA"
+msgstr "美元"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "No experience"
 msgid "UX / UI experience"
-msgstr "No experience"
+msgstr "UX / UI 经验"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:522
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:617
@@ -12306,16 +12273,14 @@ msgid "United Kingdom"
 msgstr "英国"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "A university degree in Marketing, Journalism, Communications or other business related discipline"
 msgid "University degree in Marketing, Communications, Journalism, or related discipline"
-msgstr "市场营销、 新闻、 通信或其他商业相关专业学位"
+msgstr "市场营销、 通信、新闻或其他相关专业学位"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "A Bachelor’s degree in business or related discipline"
 msgid "University degree, preferably in Graphic Design or a related discipline"
-msgstr "商科或相关学科学士学位"
+msgstr "学士学位，平面设计或相关学科优先考虑"
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Transaction.pm:23
 msgid "Unknown contract proposal"
@@ -13161,10 +13126,12 @@ msgid "With %1, your money is secure."
 msgstr "通过 %1 交易，您的资金绝对安全。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:52
-#, fuzzy
 #| msgid "Subject to your complying with the Company's instructions, with regards to tracking Clients accessing %1 via the Links on your Site or by quoting your affiliate IDs during signup, the Company shall use all reasonable endeavours to ensure that whenever a Client links to %1 through these Links or affiliate IDs and they subsequently place a contract or otherwise transact with the Company, the relevant Client is identified as originating from you or your Site. However, the Company shall not be liable to you in any way if the Company is unable to identify a Client as originating from you or your Site."
 msgid "With regards to tracking your referrals accessing Binary.com via the links on your website or by quoting your affiliate IDs during the sign-up process, the Company shall use all reasonable endeavours to ensure that whenever a client is referred to Binary.com through these links or affiliate IDs, and they subsequently place a contract or otherwise transact with the Company, the relevant client is identified as originating from your referral. However, the Company shall not be liable to you in any way if the Company is unable to identify a client as originating from your referral. Only properly tagged clients can be assigned to you. It is your responsibility to ensure that all links are properly tagged."
-msgstr "在您遵守公司要求的前提下，对于通过您的网站或联盟会员ID 访问%1的客户，公司将采用所有合理的方式进行跟踪，确保访问%1并执行后续合约交易及其他交易的客户来自您或您的网站。但是，如果公司无法确定该客户来自您或您的网站，公司将不对您承担任何责任。"
+msgstr ""
+"对于通过您的网站链接或在注册过程中引用您的联盟会员ID 访问 Binary.com 的您所推荐客户，公司将采用所有合理的方式进行跟踪，确保任何通过这些链接"
+"或联盟会员ID推荐到Binary.com并执行后续合约交易或公司其他交易的客户源自您的推荐。但是，如果公司无法确定该客户源自您的推荐，公司将不对您承担任何"
+"责任。只有带适当标记的客户才可以指派给您。确保所有链接含正确标记是您的责任。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:15
@@ -13228,10 +13195,9 @@ msgid "Work to expand our international client base by applying creative marketi
 msgstr "通过应用创意营销和客户支持策略，努力扩大我们的国际客户群"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-#, fuzzy
 #| msgid "Work with colleagues in IT, Customer Support and Marketing to provide localized text on our global website, blogs, and social media outlets."
 msgid "Work with colleagues in IT, Customer Support, and Marketing to provide localised text for our global website, blog, social media outlets, and promotional materials."
-msgstr "与信息技术、客服和市场营销部的同事紧密合作，向我们的全球网站、博客和社交媒体提供本土化文本。"
+msgstr "与信息技术、客服和市场营销部的同事紧密合作，向我们的全球网站、博客、社交媒体网站和促销材料提供本土化文本。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Work with members of the QA team to ensure the integrity of releases"
@@ -13242,10 +13208,9 @@ msgid "Work with senior staff to coordinate project delivery; develop and update
 msgstr "与高级工作人员合作协调项目交付、制定和更新计划、文档过程和推动完成项目。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "Coordinate project delivery; develop and update schedules, maintain task lists, and hold team members accountable for assigned deliverables"
 msgid "Work with senior staff to coordinate project delivery; develop and update schedules; maintain task lists; and hold team members accountable for assigned deliverables"
-msgstr "进行项目协调，制定和更新日程安排、维护任务列表，让团队成员分别负责安排好的工作"
+msgstr "与资深职员合作进行项目协调，制定和更新日程安排、维护任务列表，让团队成员分别负责安排好的工作"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Working closely with the Head of Compliance to implement Know your Client (KYC), Anti-Money Laundering (AML), and data protection regulations"
@@ -13320,10 +13285,11 @@ msgid "You also have the right to request from us to inform you about the person
 msgstr "您还有权要求知晓我们如何处理您的个人信息，如有需要，您可以要求我们对其进行修正。该要求必须以书面形式提出，并以当事人身份签名。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:49
-#, fuzzy
 #| msgid "You and we are independent contractors, and nothing in this Agreement will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between us. You will have no authority to make or accept any offers or representations on our behalf. You will not make any statement, whether on your site or otherwise, that reasonably would contradict anything in this paragraph."
 msgid "You and the Company are independent contractors, and nothing in this Agreement will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between us. You will have no authority to make or accept any offers or representations on our behalf. You will not make any statement, whether on your website or otherwise, that reasonably would contradict anything in this paragraph."
-msgstr "您与我们都为独立合同方，本协议的任何规定均不表示我们之间建立起任何合作、合资、代理、特许经营、销售代表或雇佣关系。您无权代表我方做出或接受任何要约或陈述。您不得作出与本内容不一致的声明（无论是否在您的网站上）。"
+msgstr ""
+"您与公司都为独立合同方，本协议的任何规定均不表示我们之间建立起任何合作、合资、代理、特许经营、销售代表或雇佣关系。您无权代表我方做出或接受任何要约或陈述。"
+"您不得作出与本段任何内容不一致的声明（无论是否在您的网站上）。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:93
 msgid "You and your Application must also comply with the following, which are hereby incorporated by reference:"
@@ -13378,7 +13344,6 @@ msgid "You are not a Payment Agent"
 msgstr "您不是支付代理"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:81
-#, fuzzy
 #| msgid "You are not allowed to rebate any part commission payment onto your referrals and should the company realise you are engaged in such actions, your affiliate account shall be revoked immediately."
 msgid "You are not allowed to rebate any part commission payment onto your referrals and should the company realise you are engaged in such actions; your affiliate account shall be revoked immediately."
 msgstr "您不能使用佣金作为给推荐人的回扣，一旦被公司发现，您的账户将立即被撤销。"
@@ -13627,10 +13592,11 @@ msgid "You represent, warrant, and undertake that you have obtained and shall ma
 msgstr "您声明、保证、并承诺取得，并须保持所有依据任何适用法律、规则和规章针对您的业务运作范围内任何监管机构管辖权管辖下您的业务运作所必要的许可和同意书。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:89
-#, fuzzy
 #| msgid "You represent, warrant and undertake that your Site or promotion shall contain no material which is defamatory, pornographic, unlawful, harmful, threatening, obscene, harassing, or racially, ethnically, or otherwise objectionable or discriminatory, violent, politically sensitive or otherwise controversial or in breach of any third party rights and shall not link to any such material."
 msgid "You represent, warrant, and undertake that your website or promotion shall contain no material which is defamatory, pornographic, unlawful, harmful, threatening, obscene, harassing, or racially, ethnically, or otherwise objectionable or discriminatory, violent, politically sensitive, or otherwise controversial or in breach of any third party rights and shall not link to any such material."
-msgstr "您声明、保证并承诺，您的网站或推广不得包含诽谤、色情、违法、伤害、威胁、低俗、骚扰、种族民族歧视及其他歧视、暴力、政治敏感、其他带有争议或违反第三方权利的材料，也不得链接至此类内容。"
+msgstr ""
+"您声明、保证并承诺，您的网站或推广不得包含诽谤、色情、违法、伤害、威胁、低俗、骚扰、种族民族歧视及其他歧视、暴力、政治敏感、其他带有争议或违反第三方权利的"
+"材料，也不得链接至此类内容。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "You risk only your initial stake, and your stake never increases, even in gapping markets."
@@ -13653,20 +13619,20 @@ msgid "You shall discontinue your use of all prior versions of the Binary.com AP
 msgstr "您须停止使用所有先前版本的Binary.com API 并使用修訂後的Binary.com API版本。雖然公司的意圖是，修訂後的Binary.com API版本应与之前版本相容，公司並不擔保或保證一定会如此，且公司一概不承擔任何因修訂後的Binary.com API版本与之前版本不相容对您所引起的責任。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:102
-#, fuzzy
 #| msgid "You shall indemnify on demand and hold the Company harmless from and against any and all losses, demands, claims, damages, costs, expenses (including, but not limited to, consequential losses and loss of profit, reasonable legal costs and expenses and VAT thereon if applicable) and liabilities suffered or incurred, directly or indirectly, by the Company in consequence of any breach, non-performance or non-observance by you of any of your obligations or warranties under this Agreement."
 msgid "You shall indemnify on demand and hold the Company harmless from, and against any and all losses, demands, claims, damages, costs, expenses (including, but not limited to, consequential losses, loss of profit, and reasonable legal costs, if applicable), and liabilities suffered or incurred, directly, or indirectly, by the Company in consequence of any breach, non-performance, or non-observance by you of any of your obligations or warranties under this Agreement."
-msgstr "如果由于您违反、不履行或不遵守您在本协议项下的任何义务或保证，导致公司直接或间接遭受或产生任何损失、要求、索赔、损害赔偿、费用、开支（包括但不限于间接损失和利润损失、合理的法律费用和开支及其增值税（如适用））和法律责任，则您应当对公司进行赔偿（如应要求），并使其免害。"
+msgstr ""
+"如果由于您违反、不履行或不遵守您在本协议项下的任何义务或保证，导致公司直接或间接遭受或产生任何损失、要求、索赔、损害赔偿、费用、开支（包括但不限于间接损失"
+"和利润损失、合理的法律费用（如适用））和法律责任，则您应当对公司进行赔偿（如应要求），并使其免害。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:40
 msgid "You shall not develop and implement marketing, advertising, and promotional activities which infringe any applicable laws, rules, regulations, or codes of practice relating to marketing, advertising, and promotional activities applicable under the authority of any regulatory body of the jurisdiction(s) in which you operate or target your business."
 msgstr "您不可制定和执行任何违反适用法律、规则、条例或工作守则与市场营销、广告和促销活动有关在任何监管机构的适用管辖权范围内针对您运作或您的业务有关的任何市场营销、广告和促销活动。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:36
-#, fuzzy
 #| msgid "You have a duty to act in the client's best interests and you shall not encourage clients to make deposits or place any trades where the purpose of that action is (whether in whole or part) to increase affiliate commissions rather than to benefit the client's trading performance and profitability."
 msgid "You shall not encourage your referrals to make deposits or place any trades where the purpose of that action is (whether in whole or in part) to increase affiliate commissions rather than to benefit your referrals’ trading performance and profitability."
-msgstr "您有义务按照客户最大利益行事；在行为（部分或全部）目的旨在提高联盟佣金收入而不是有益于客户交易业绩及盈利性时，不得鼓励客户存款或进行任何交易。"
+msgstr "您在行为（部分或全部）目的旨在提高联盟佣金收入而不是有益于推荐人交易业绩及盈利性时，不得鼓励推荐人存款或进行任何交易。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:32
 msgid "You shall not encourage your referrals to take out any form of loans to be able to make deposits and/or place trades."
@@ -13674,10 +13640,9 @@ msgstr "您不可鼓励您的推介人以任何形式提出能够存款和/或�
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:34
-#, fuzzy
 #| msgid "You shall not hold or pool client funds or third party funds into your own account held with %1."
 msgid "You shall not hold or pool your referrals’ funds or third party funds into your own account held with %1."
-msgstr "您不得将客户资金或第三方资金截留或汇集至您在 %1 的账户。"
+msgstr "您不得将推荐人资金或第三方资金截留或汇集至您在 %1 的账户。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:37
 msgid "You shall not place trades on your referrals’ behalf."
@@ -13685,10 +13650,11 @@ msgstr "您不可代表推介人进行交易。"
 
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:38
-#, fuzzy
 #| msgid "You may not purchase or register keywords, search terms or other identifiers for use in any search engine, portal, sponsored advertising service or other search or referral service which are identical or similar to any of the Company's trademarks or trade names that include the word \"%1\" or any variation thereof. However, this does not extend to the use of Meta tag keywords on your site which are identical or similar to any of the Company's trademarks or trade names including the term %1."
 msgid "You shall not purchase or register keywords, search terms or other identifiers for use in any search engine, portal, sponsored advertising service or other search or referral service which are identical or similar to any of the Company's trademarks or trade names that include the word \"%1\" or any variation thereof."
-msgstr "您不得购买或注册关键词、搜索字词，或任何与公司商标及名称相同或类似的、包含 “%1” 字样及相似的搜索引擎、门户网站、赞助广告服务、搜索或推荐服务的识别符。但是，这并不限制您在网站上使用与公司商标或名称（包括 %1 字样）相同或类似的 Meta 标签关键词。"
+msgstr ""
+"您不得购买或注册关键词、搜索字词，或任何与公司商标及名称相同或类似的、包含 “%1” "
+"字样及相似的搜索引擎、门户网站、赞助广告服务、搜索或推荐服务的识别符。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:35
 msgid "You shall not resort to high-pressure sales tactics or false promises."
@@ -13893,10 +13859,9 @@ msgid "Your cashier is locked as per your request - to unlock it, please <a href
 msgstr "根据您的请求，您的收银台已被锁定 - 如需解除锁定，请<a href=\"%1\">点击此处</a>。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:742
-#, fuzzy
 #| msgid "Your cashier is locked as per your request - to unlock it, please <a href=\"%1\">click here</a>."
 msgid "Your cashier is locked as per your request - to unlock it, please click %1here"
-msgstr "根据您的请求，您的收银台已被锁定 - 如需解除锁定，请<a href=\"%1\">点击此处</a>。"
+msgstr "根据您的请求，您的收银台已被锁定 - 如需解除锁定，请点击此处"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:594
 msgid "Your cashier is locked as per your request - to unlock it, please enter the password."
@@ -14654,10 +14619,11 @@ msgid "{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support
 msgstr "{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support will contact you shortly."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:513
-#, fuzzy
 #| msgid "{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until %1.\\nLast test taken at %2."
 msgid "{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until %1. Last test taken at %2."
-msgstr "{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until %1.\\nLast test taken at %2."
+msgstr ""
+"{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until %"
+"1. Last test taken at %2."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:514
 msgid "{JAPAN ONLY}Dear customer, you've already completed the knowledge test, please proceed to next step."
@@ -14668,10 +14634,9 @@ msgid "{JAPAN ONLY}Delta refers to  a percentage change of the option price with
 msgstr "{JAPAN ONLY}Delta refers to  a percentage change of the option price with respect to the change in the underlying asset price."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:5
-#, fuzzy
 #| msgid "{JAPAN ONLY}Take knowledge test"
 msgid "{JAPAN ONLY}Disclaimer for knowledge test"
-msgstr "{JAPAN ONLY}Take knowledge test"
+msgstr "{JAPAN ONLY}Disclaimer for knowledge test"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:116
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:131
