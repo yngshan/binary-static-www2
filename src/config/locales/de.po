@@ -281,7 +281,7 @@ msgstr ""
 #. ($currency)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:116
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:109
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1037
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1036
 msgid "%1 transactions may not be performed with this account."
 msgstr "Mit diesem Konto können keine %1 Transaktionen vorgenommen werden."
 
@@ -642,12 +642,12 @@ msgid "6h"
 msgstr "6 Std"
 
 #. ($client->currency, $self_exclusion->max_7day_losses)
-#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:68
+#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:66
 msgid "7-Day limit on losses is currently set to <strong>%1 %2</strong>"
 msgstr "Das 7-Tage Limit für Verluste ist derzeit auf <strong>%2 %1</strong> festgelegt"
 
 #. ($client->currency, $self_exclusion->max_7day_turnover)
-#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:63
+#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:61
 msgid "7-Day turnover limit is currently set to <strong>%1 %2</strong>"
 msgstr "Das 7-Tage Umsatzlimit ist derzeit auf <strong>%2 %1</strong> festgelegt"
 
@@ -1155,8 +1155,8 @@ msgstr "Detailgenauigkeit mit der Fähigkeit, Muster zu erkennen"
 msgid "A full understanding of, and a keen interest in, corporate legal compliance"
 msgstr "Ein vollständiges Verständnis und großes Interesse an Corporate Legal Compliance"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:540
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:664
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:539
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:663
 msgid "A general error has occurred."
 msgstr "Es ist ein allgemeiner Fehler aufgetreten."
 
@@ -2543,12 +2543,12 @@ msgstr "Abbrechen"
 msgid "Candlestick Chart"
 msgstr "Candlestick Diagramm"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:124
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:130
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Transaction.pm:41
 msgid "Cannot create contract"
 msgstr "Kann den Kontrakt nicht erstellen"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:97
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:103
 msgid "Cannot validate contract"
 msgstr "Vertrag kann nicht bestätigt werden"
 
@@ -3115,11 +3115,6 @@ msgstr "Kontraktschwelle muss positiv sein."
 msgid "Contract cannot be sold at this time."
 msgstr "Der Kontrakt kann nicht zu diesem Zeitpunkt verkauft werden."
 
-#. ($args->{contract_category})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Japan/Contract.pm:42
-msgid "Contract category %1 invalid"
-msgstr "Kontraktkategorie %1 ungültig"
-
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:65
 msgid "Contract expired"
 msgstr "Kontrakt abgelaufen"
@@ -3434,7 +3429,7 @@ msgid "Daily limit on losses"
 msgstr "Tageslimit für Verluste"
 
 #. ($client->currency, $self_exclusion->max_losses)
-#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:58
+#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:56
 msgid "Daily limit on losses is currently set to <strong>%1 %2</strong>"
 msgstr "Das tägliche Verustlimit ist derzeit auf <strong>%2 %1</strong> festgelegt"
 
@@ -3444,7 +3439,7 @@ msgid "Daily turnover limit"
 msgstr "Tägliches Umsatzlimit"
 
 #. ($client->currency, $self_exclusion->max_turnover)
-#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:53
+#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:51
 msgid "Daily turnover limit is currently set to <strong>%1 %2</strong>"
 msgstr "Das tägliche Umsatzlimit ist derzeit auf <strong>%2 %1</strong> festgelegt"
 
@@ -3472,11 +3467,6 @@ msgstr "Datum (GMT)"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:578
 msgid "Date and Time"
 msgstr "Datum und Zeit"
-
-#. ($args->{date_expiry})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Japan/Contract.pm:36
-msgid "Date expiry %1 invalid"
-msgstr "Datumsablauf %1 ungültig"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:731
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reset_passwordws.html.haml:1
@@ -4054,7 +4044,7 @@ msgstr ""
 msgid "Drive rapid growth from key areas of the world, applying a variety of online and offline marketing abilities to expand the company's active affiliate network."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1418
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1417
 msgid "Due to regulatory requirements, you are required to authenticate your account in order to continue trading."
 msgstr "Aufgrund behördlicher Anordnungen sind Sie verpflichtet, Ihr Konto zu bestätigen, um weiterhin handeln zu können."
 
@@ -4246,7 +4236,7 @@ msgstr "E-Mail Prüfung"
 msgid "Email address"
 msgstr "E-Mail Adresse"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:153
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:162
 msgid "Email address is incorrect."
 msgstr "Ihre E-Mail Adresse ist falsch."
 
@@ -5081,7 +5071,7 @@ msgstr "Geltendes Recht und Gerichtsbarkeit"
 msgid "Governing law and jurisdiction"
 msgstr "Geltendes Recht und Gerichtsbarkeit"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:50
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:49
 msgid "Granularity is not valid"
 msgstr "Granularität ist nicht gültig"
 
@@ -5551,7 +5541,7 @@ msgstr "Wenn Sie eine bestimmte <strong>Endzeit</strong> auswählen, ist die aus
 msgid "If you want to profit from this high demand product then your best option is to partner with the market leader. %1 has been in the business for over 15 years, and has been successful ever since."
 msgstr "Wenn Sie mit diesem stark nachgefragten Produkt Gewinn machen möchten, schließen Sie sich am besten mit dem Markführer zusammen. %1 ist seit mehr als 15 Jahren von Anfang an in diesem Geschäft erfolgreich tätig."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:745
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:744
 msgid "If you wish to raise these limits, please authenticate your account."
 msgstr "Wenn Sie diese Limits erhöhen möchten, authentifizieren Sie bitte Ihr Konto."
 
@@ -5645,7 +5635,7 @@ msgstr "Der in Hongkong ansässige Hedgefond Manager und Unternehmer, Jean-Yves 
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar."
 msgstr "Die Händler können auf ausländischen Devisenmärkten Kontrakte auf der Grundlage der Änderung des Wechselkurses einer Währung in eine andere abschließen. Wenn beispielsweise ein Händler den Anstieg des EUR/USD Wechselkurses auswählt, sagt er voraus, dass der Wert des Euro im Verhältnis zum Wert des US-Dollar steigen wird."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1508
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1507
 msgid "In order for you to place contracts, we need to know your Residence (Country). Please update your settings."
 msgstr "Damit Sie Kontrakte platzieren können, müssen wir Ihren Wohnsitz (Land) kennen. Bitte aktualisieren Sie Ihre Einstellungen."
 
@@ -5840,7 +5830,7 @@ msgstr "Informationen zu den Daten-Feeds, die von unserem Unternehmen verwendet 
 msgid "Information of the previous performance of any underlying instrument or asset does not guarantee its current and/or future performance. Past performance is not a reliable indicator of future results."
 msgstr "Die Informationen über die frühere Performance eines zugrundeliegenden Instruments oder einer Anlage garantiert nicht ihre aktuelle und/oder zukünftige Performance. Die Performance aus der Vergangenheit ist kein zuverlässiger Indikator für zukünftige Ergebnisse."
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:427
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:422
 msgid "Input validation failed: "
 msgstr "Eingabewertprüfung fehlgeschlagen: "
 
@@ -5942,7 +5932,7 @@ msgstr "Falscher Betrag. Der Mindesttransferbetrag ist 0,10 und bis zu 2 Dezimal
 msgid "Invalid amount. minimum is 10, maximum is 2000."
 msgstr "Ungültiger Betrag. Minimum ist 10, Maximum ist 2000."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/TickStreamer.pm:67
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/TickStreamer.pm:71
 msgid "Invalid candles request"
 msgstr "Ungültige Candles Anforderung"
 
@@ -7273,7 +7263,7 @@ msgid "Maximum account cash balance"
 msgstr "Maximales Kontoguthaben"
 
 #. ($client->currency, $self_exclusion->max_balance)
-#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:48
+#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:46
 msgid "Maximum account cash balance is currently set to <strong>%1 %2</strong>"
 msgstr "Das maximale Kontoguthaben liegt aktuell bei <strong>%2 %1</strong>"
 
@@ -7326,7 +7316,7 @@ msgid "Maximum number of open positions"
 msgstr "Maximale Anzahl offener Positionen"
 
 #. ($self_exclusion->max_open_bets)
-#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:73
+#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:71
 msgid "Maximum number of open positions is currently set to <strong>%1</strong>"
 msgstr "Die maximale Anzahl offener Positionen liegt aktuell bei <strong>%1</strong>"
 
@@ -7613,7 +7603,7 @@ msgstr "Neue Anmeldeaktivität festgestellt"
 msgid "New password"
 msgstr "Neues Passwort"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:174
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:183
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:39
 msgid "New password is same as old password."
 msgstr "Das neue Passwort ist das gleiche wie das alte Passwort."
@@ -7838,7 +7828,7 @@ msgid "Ok"
 msgstr "Ok"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:382
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:170
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:179
 msgid "Old password is wrong."
 msgstr "Altes Passwort ist falsch."
 
@@ -8106,7 +8096,7 @@ msgstr "Unsere Site kann mithilfe einer Anzahl von auf dem Markt erhältichen Fi
 msgid "Our site does not charge any transfer fees."
 msgstr "Unsere Site berechnet keine Überweisungsgebühren."
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:457
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:452
 msgid "Output validation failed: "
 msgstr "Ausgabewertüberprüfung fehlgeschlagen: "
 
@@ -8209,7 +8199,7 @@ msgstr "Seite nicht gefunden"
 msgid "Parabolic SAR"
 msgstr "Parabolischer SAR"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:635
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:629
 msgid "Parameters sanity check failed."
 msgstr "Parameter Plausibilitätsprüfung fehlgeschlagen."
 
@@ -8248,7 +8238,7 @@ msgid "Password is moderate"
 msgstr "Passwort ist moderat"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:307
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:178
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:187
 msgid "Password is not strong enough."
 msgstr "Passwort ist nicht stark genug."
 
@@ -8281,7 +8271,7 @@ msgstr "Passwort zurücksetzen"
 msgid "Password score is: %1. Passing score is: 20."
 msgstr "Passwort Punktzahl ist: %1. Mindestpunktzahl ist: 20."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:182
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:191
 msgid "Password should be at least six characters, including lower and uppercase letters with numbers."
 msgstr "Das Passwort muss mindestens aus sechs Zeichen, einschließlich Klein- und Großbuchstaben, sowie Zahlen bestehen."
 
@@ -8394,7 +8384,7 @@ msgid "Perl modules"
 msgstr "Perl Module"
 
 #. ($descriptor->{require_scope})
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:441
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:436
 msgid "Permission denied, requiring %1"
 msgstr "Berechtigung abgelehnt, 1% erforderlich"
 
@@ -8605,8 +8595,8 @@ msgid "Please input a valid date."
 msgstr "Bitte geben Sie ein gültiges Datum ein."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Transaction.pm:29
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:119
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:436
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:128
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:431
 msgid "Please log in."
 msgstr "Melden Sie sich bitte an."
 
@@ -8632,7 +8622,7 @@ msgstr "Bitte beachten Sie, dass Sie Ihre persönlichen Daten jederzeit aktualis
 msgid "Please note that your settings have been updated as follows:"
 msgstr "Bitte beachten Sie, dass Ihre Einstellungen wie folgt aktualisiert wurden:"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/TickStreamer.pm:173
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/TickStreamer.pm:177
 msgid "Please provide an underlying symbol."
 msgstr "Bitte geben Sie ein Aktiensymbol ein."
 
@@ -8761,16 +8751,16 @@ msgstr "Bitte übermitteln Sie eine gültige %1."
 msgid "Please submit the above information to <a href='mailto:affiliates@binary.com'>affiliates@binary.com</a>."
 msgstr "Bitte senden Sie die oben genannte Information an <a href='mailto:affiliates@binary.com'>affiliates@binary.com</a>."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1519
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1518
 msgid "Please switch accounts to trade this contract."
 msgstr "Bitte wechseln Sie das Konto, um diesen Kontrakt handeln zu können."
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:672
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1527
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1526
 msgid "Please switch accounts to trade this market."
 msgstr "Bitte wechseln Sie das Konto, um in diesem Markt handeln zu können."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1545
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1544
 msgid "Please switch accounts to trade this underlying."
 msgstr "Bitte wechseln Sie das Konto, um diese Anlage handeln zu können."
 
@@ -9120,22 +9110,22 @@ msgstr "Kassakauf"
 msgid "Purchase Time"
 msgstr "Kaufuhrzeit"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:837
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:836
 msgid "Purchase of this contract would cause you to exceed our payout limit for open contracts of this type. To continue please consider to sell a few contracts at the market or trade in different contract types."
 msgstr "Der Erwerb dieses Kontrakts würde verursachen, dass Sie unser Auszahlungslimit für offene Kontrakte dieser Art überschreiten. Damit Sie fortfahren können, sollten Sie einige der Kontrakte am Markt verkaufen oder andere Kontraktarten handeln."
 
 #. ($currency, $limit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:973
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:972
 msgid "Purchase of this contract would cause you to exceed your 30-day turnover limit of %1%2."
 msgstr "Der Kauf dieses Kontrakts wird zur Überschreitung Ihres täglichen 30-Tage Umsatzlimits von %2 %1 führen."
 
 #. ($currency, $limit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:932
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:931
 msgid "Purchase of this contract would cause you to exceed your 7-day turnover limit of %1%2."
 msgstr "Der Kauf dieses Kontrakts würde zur Überschreitung Ihres täglichen 7-Tage Umsatzlimits von %2 %1 führen."
 
 #. ($currency, $limit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:743
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:742
 msgid "Purchase of this contract would cause you to exceed your daily turnover limit of %1%2."
 msgstr "Der Kauf dieses Kontrakts würde zur Überschreitung Ihres täglichen Tagesumsatzlimits von %2 %1 führen."
 
@@ -9297,11 +9287,6 @@ msgstr "Realitätscheck Intervall:"
 msgid "Realtime data is not available for this underlying"
 msgstr "Für diesen Basiskurs sind keine Echtzeitdaten vorhanden"
 
-#. ($symbol)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:35
-msgid "Realtime quotes not available for %1"
-msgstr "Für %1 sind keine Echtzeit-Notierungen vorhanden"
-
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 msgid "Reap the rewards of trading binaries, knowing your funds are always safe."
 msgstr "Ernten Sie in dem Wissen, dass Ihr Geld immer sicher ist, die Belohnungen des Handels mit Binären Optionen."
@@ -9459,8 +9444,8 @@ msgstr "Quellen"
 msgid "Respond to client queries using our state of the art telephone, electronic mail and on-line chat systems"
 msgstr "Beantwortung von Kundenanfragen mit unseren modernsten Telefon-, E-Mail- und online Chatsystemen"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:127
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:582
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:122
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:576
 msgid "Response too large."
 msgstr "Antwort zu umfangreich."
 
@@ -9738,7 +9723,7 @@ msgstr "Selbstausschluss"
 msgid "Self-Employed"
 msgstr "Selbstständig"
 
-#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:23
+#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:22
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/self_exclusionws.html.tt:2
 msgid "Self-Exclusion Facilities"
 msgstr "Selbstausschluss Hilfen"
@@ -9820,7 +9805,7 @@ msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "Die Sitzungsdauer kann nicht mehr als 6 Wochen betragen."
 
 #. ($self_exclusion->session_duration_limit)
-#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:77
+#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:75
 msgid "Session duration limit is currently set to <strong>%1 minutes.</strong>"
 msgstr "Das Limit für die Sitzungslaufzeit liegt derzeit bei <strong>%1 Minute(n).</strong>"
 
@@ -10042,13 +10027,13 @@ msgstr "Es tut uns leid, bei der Bearbeitung Ihres Kontos ist ein Fehler aufgetr
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:1094
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:966
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:979
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:217
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:270
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:223
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:276
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/MarketDiscovery.pm:49
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/MarketDiscovery.pm:79
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:181
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:547
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:566
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:541
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:560
 msgid "Sorry, an error occurred while processing your request."
 msgstr "Es tut uns leid, bei der Bearbeitung Ihrer Anfrage ist ein Fehler aufgetreten."
 
@@ -10064,7 +10049,7 @@ msgstr "Es tut uns leid, es ist ein Fehler aufgetreten. Sollte das Problem weite
 msgid "Sorry, client balance will exceed limits with this payment."
 msgstr "Leider werden mit dieser Zahlung die Limits des Kundenguthabens überschritten."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1536
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1535
 msgid "Sorry, contracts on Volatility Indices are not available in your country of residence"
 msgstr "Es tut uns leid, aber Kontrakte auf Volatilität Indizes stehen für Ihr Wohnsitzland nicht zur Verfügung"
 
@@ -10107,7 +10092,7 @@ msgid "Sorry, the Payment Agent's currency %1 is unavailable for Payment Agent W
 msgstr "Leider ist die Währung %1 des Zahlungsagenten für die Abhebung des Zahlungsagenten nicht vorhanden"
 
 #. ($currency, $limit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:885
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:884
 msgid "Sorry, the aggregate payouts of contracts on your account cannot exceed %1%2."
 msgstr "Es tut uns leid, die Gesamtauszahlung für Kontrakte darf bei Ihrem Konto nicht höher als %2%1 sein."
 
@@ -10141,7 +10126,7 @@ msgstr "Leider steht diese Funktion nur für virtuelle Konten zur Verfügung."
 msgid "Sorry, this feature is not available."
 msgstr "Leider ist diese Funktion nicht vorhanden."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1811
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1810
 msgid "Sorry, this page cannot be refreshed."
 msgstr "Es tut uns leid, aber diese Seite kann nicht erneut geladen werden."
 
@@ -10150,7 +10135,7 @@ msgid "Sorry, you are too young to open an account."
 msgstr "Es tut uns leid, Sie sind zu jung, um ein Konto zu eröffnen."
 
 #. ($limit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:774
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:773
 msgid "Sorry, you cannot hold more than %1 contracts at a given time. Please visit the statement page to automatically sell your expired contracts."
 msgstr "Es tut uns leid, aber Sie können nicht gleichzeitig mehr als %1 Kontrakte besitzen. Bitte rufen Sie die Mitteilungsseite auf, um Ihre abgelaufenen Kontrakte automatisch zu verkaufen."
 
@@ -10196,7 +10181,7 @@ msgstr "Es tut uns leid, aber Sie haben für heute das erlaubte Maximum des Tran
 #. ($limit_excludeuntil)
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1881
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Hooks.pm:170
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1594
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1593
 msgid "Sorry, you have excluded yourself from the website until %1."
 msgstr "Es tut uns leid, aber Sie haben sich selbst bis zum %1 von der Website ausgeschlossen."
 
@@ -10206,7 +10191,7 @@ msgstr "Es tut uns leid, aber Sie haben sich selbst bis zum %1 von der Website a
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Client.pm:844
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/User.pm:100
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Authorize.pm:37
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:133
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:142
 msgid "Sorry, you have excluded yourself until %1."
 msgstr "Es tut uns leid, aber Sie haben sich selbst bis zum %1 ausgeschlossen."
 
@@ -10226,11 +10211,11 @@ msgid "Sorry, you seem to already have a real money account with us. Perhaps you
 msgstr "Es tut uns leid, Sie scheinen schon ein Echtgeldkonto bei uns zu haben. Vielleicht haben Sie eine andere E-Mail Adresse bei dessen Eröffnung angegeben. Aus rechtlichen Gründen können wir nicht erlauben, dass für eine Person mehrere Konten eröffnet werden.  <a href=\"%1\">Setzen Sie sich mit uns in Verbindung</a>, wenn Sie Ihre Kontoangaben bei uns vergessen haben."
 
 #. ("$currency$balance",                "$currency$limit")
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:860
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:859
 msgid "Sorry, your account cash balance is too high (%1). Your maximum account balance is %2."
 msgstr "Es tut uns leid, aber Ihr Kontostand ist zu hoch (%1). Ihr höchstmöglicher Kontostand ist %2."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1567
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1566
 msgid "Sorry, your account is not authorised for any further contract purchases."
 msgstr "Es tut uns leid, aber Ihr Konto ist für den Erwerb weiterer Kontrakte nicht berechtigt."
 
@@ -10295,7 +10280,7 @@ msgid "Start time"
 msgstr "Startzeit"
 
 #. ($start, $end)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/TickStreamer.pm:246
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/TickStreamer.pm:250
 msgid "Start time %1 must be before end time %2"
 msgstr "Die Startzeit %1 muss vor der Ablaufzeit %2 liegen"
 
@@ -10304,7 +10289,7 @@ msgid "Start time is in the future."
 msgstr "Die Startzeit liegt in der Zukunft."
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2300
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:385
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:384
 msgid "Start time is in the past"
 msgstr "Die Startzeit liegt in der Vergangenheit"
 
@@ -10462,7 +10447,7 @@ msgstr "Stopp-Art"
 msgid "Storage of Content"
 msgstr "Speicherung von Inhalten"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/TickStreamer.pm:178
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/TickStreamer.pm:182
 msgid "Streaming for this symbol is not available due to license restrictions."
 msgstr "Wegen Lizenzeinschränkungen ist ein Streaming für dieses Symbol nicht möglich."
 
@@ -10516,7 +10501,7 @@ msgid "Student"
 msgstr "Student"
 
 #. ($style)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/TickStreamer.pm:72
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/TickStreamer.pm:76
 msgid "Style %1 invalid"
 msgstr "Stil %1 ungültig"
 
@@ -10585,13 +10570,6 @@ msgstr "Wechsel in den Vollbildmodus"
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:514
 msgid "Switch to normal mode"
 msgstr "Wechsel in den Normalmodus"
-
-#. ($symbol)
-#. ($args->{symbol})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:23
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Japan/Contract.pm:30
-msgid "Symbol %1 invalid"
-msgstr "Symbol %1 ungültig"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/legacy_chart_table.html.tt:7
 msgid "System Time"
@@ -11171,7 +11149,7 @@ msgstr "Der Betrag von Profit/Verlust je Punkt von Steigen/Fallen wird mit dem B
 msgid "The anti-money laundering processes have the following effects on Clients:"
 msgstr "Die Verfahren gegen Geldwäsche haben folgende Auswirkungen auf Kunden:"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:121
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:116
 msgid "The application sent an invalid request."
 msgstr "Die Anwendung hat eine falsche Anforderung gesendet."
 
@@ -11252,13 +11230,13 @@ msgid "The content on this website is subject to change at any time without noti
 msgstr "Der Inhalt dieser Website unterliegt Änderungen, die jederzeit und ohne vorige Mitteilung vorgenommen werden und einzig und allein dazu dienen, Tradern beim Treffen unabhängiger Investmententscheidungen zu helfen. %1 hat ausreichende Maßnahmen getroffen, um die Genauigkeit der Information auf der Website sicherzustellen. Allerdings können wir ihre Genauigkeit nicht garantieren und werden für Verluste oder Schäden nicht haftbar, die sich direkt oder indirekt aus dem Inhalt ergeben oder aus Ihrer Unfähigkeit, die Seite abrufen zu können, für Verzögerungen oder Fehler bei der Übermittlung von Anweisungen oder Benachrichtigungen, die über diese Website übertragen werden."
 
 #. ($currency,                to_monetary_number_format($amount)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1166
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1236
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1165
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1235
 msgid "The contract %4 has changed from %1%2 to %1%3."
 msgstr "Der Kontrakt %4 hat sich von %2 %1 auf %3 %1 verändert."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1157
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1226
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1156
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1225
 msgid "The contract has expired"
 msgstr "Der Kontrakt ist abgelaufen"
 
@@ -11420,7 +11398,7 @@ msgid "The profit of USD 294 is the difference between the exit and entry level 
 msgstr "Der Gewinn von 294 USD ist die Differenz zwischen der Ausstiegs- und Einstiegshöhe, multipliziert mit dem Betrag je Punkt."
 
 #. ($currency)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1029
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1028
 msgid "The provided currency %1 is invalid."
 msgstr "Die angegebene Währung %1 ist ungültig."
 
@@ -11430,7 +11408,7 @@ msgid "The provided currency %1 is not applicable for this account."
 msgstr "Die angegebene Währung %1 steht für dieses Konto nicht zur Verfügung."
 
 #. ($currency)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1021
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1020
 msgid "The provided currency %1 is not the default currency"
 msgstr "Die angegebene Währung %1 ist nicht die voreingestellte Währung"
 
@@ -11494,8 +11472,8 @@ msgstr "Die auf dieser Site ausgeführten Transaktionen und die Beziehung zwisch
 msgid "The two passwords that you entered do not match."
 msgstr "Die beiden Passwörter, die Sie eingegeben haben, stimmen nicht überein."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1162
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1232
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1161
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1231
 msgid "The underlying market has moved too much since you priced the contract. "
 msgstr "Seit dem Sie den Kontrakt preislich bestimmt haben, hat sich der Basiskurs zu sehr bewegt. "
 
@@ -11537,7 +11515,7 @@ msgstr "Mit der Nutzung von Handelssystemen über das Internet sind Risiken verb
 msgid "There is no intraday data for %1 on %2."
 msgstr "Es gibt am %2 keine Intraday-Daten für %1."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:168
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:174
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:40
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "Während der Kontraktlaufzeit ist eine Datenunterbrechung für die Kurse aufgetreten. Im Fall von Echtgeldkonten werden wir versuchen, das Problem zu beheben und den Vertrag ordnungsgemäß abzurechnen. Ansonsten wird der Vertrag storniert und erstattet. Verträge mit virtuellem Geld werden storniert und erstattet."
@@ -11669,7 +11647,7 @@ msgstr "Dieser Zahlungsagent Kassenabschnitt ist gesperrt."
 msgid "This URL is invalid."
 msgstr "Diese URL ist ungültig."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:123
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:132
 msgid "This account is unavailable."
 msgstr "Dieses Konto ist nicht vorhanden."
 
@@ -11696,7 +11674,7 @@ msgstr "Dieser Bonus wird bearbeitet und dem Kundenkonto gutgeschrieben, wenn:"
 msgid "This client cashier section is locked."
 msgstr "Dieser Kassenabschnitt des Kunden ist gesperrt."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1316
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1315
 msgid "This contract cannot be properly validated at this time."
 msgstr "Zu diesem Zeitpunkt kann dieser Vertrag nicht entsprechend bestätigt werden."
 
@@ -11727,11 +11705,11 @@ msgid "This contract is affected by corporate action."
 msgstr "Dieser Kontrakt ist von Unternehmenshandlungen betroffen."
 
 #. (to_monetary_number_format($custom_limit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1482
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1481
 msgid "This contract is limited to "
 msgstr "Dieser Kontrakt ist begrenzt auf "
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1480
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1479
 msgid "This contract is unavailable on this account."
 msgstr "Dieser Vertrag ist in diesem Konto nicht vorhanden."
 
@@ -11743,7 +11721,7 @@ msgstr "Dieser Kontrakt verlor"
 msgid "This contract offers no return."
 msgstr "Dieser Kontrakt bietet keine Rendite."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:672
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:671
 msgid "This contract was not found among your open positions."
 msgstr "Dieser Kontrakt wurde unter Ihren offenen Positionen nicht gefunden."
 
@@ -11752,7 +11730,7 @@ msgid "This contract won"
 msgstr "Dieser Vertrag gewann"
 
 #. ($currency,                to_monetary_number_format($contract->ask_price)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1450
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1449
 msgid "This contract's price is %1%2. Contracts purchased from %3 must have a purchase price above %1%4. Please accordingly increase the contract amount to meet this minimum stake."
 msgstr "Der Preis für diesen Kontrakt berägt %2 %1. Von %3 gekaufte Kontrakte müssen einen Kaufpreis von über %4 %1 haben. Erhöhen Sie bitte den Kontraktbetrag entsprechend, um den Mindestbetrag zu erreichen."
 
@@ -11981,7 +11959,7 @@ msgstr "Token"
 msgid "Too many market holidays during the contract period. Select an expiry date after %1."
 msgstr "Zu viele Börsenfeiertage während des Vertragszeitraums. Wählen Sie ein Ablaufdatum nach dem %1."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1367
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1366
 msgid "Too many recent attempts. Try again later."
 msgstr "Zu viele neue Versuche. Bitte versuchen Sie es später erneut."
 
@@ -12406,11 +12384,11 @@ msgstr "Sofern nicht in anderer Form angewiesen, müssen wir Sie als Einzelhande
 msgid "Unlock Cashier"
 msgstr "Kasse entsperren"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:465
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:460
 msgid "Unrecognised request."
 msgstr "Unbekannte Anfrage."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:439
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:438
 msgid "Unsupported bet class $bet_params->{bet_class}"
 msgstr "Nicht unterstützte Wettklasse $bet_params->{bet_class}"
 
@@ -12870,7 +12848,7 @@ msgstr "Wir teilen Ihnen mit, dass Ihr(e) %1 bearbeitet wurde(n)."
 msgid "We'll then send you an e-mail asking you to verify your identity."
 msgstr "Wir werden Ihnen dann eine E-Mail senden und Sie bitten, Ihre Identität zu bestätigen."
 
-#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:24
+#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:23
 msgid "We're sorry but the Self Exclusion facility is not available for Virtual Accounts."
 msgstr "Es tut uns leid, aber die Selbstausschluss-Funktion steht für virtuelle Konten nicht zur Verfügung."
 
@@ -12893,7 +12871,7 @@ msgid "Website"
 msgstr "Website"
 
 #. ($self_exclusion->exclude_until)
-#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:81
+#: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:79
 msgid "Website exclusion is currently set to <strong>%1.</strong>"
 msgstr "Der Websiteausschluss momentan auf <strong>%1</strong> eingestellt."
 
@@ -13334,10 +13312,6 @@ msgstr "Welt Indizes"
 msgid "Written limits and self-exclusion"
 msgstr "Vereinbarte Limits und Selbstausschluss"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Japan/Contract.pm:18
-msgid "Wrong pricing table arguments"
-msgstr "Falsche Kurstabellen Argumente"
-
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:55
 msgid "Year"
 msgstr "Jahr"
@@ -13408,12 +13382,12 @@ msgstr "Sie wurden darüber in Kenntnis gesetzt, dass die von %1 angebotenen Bin
 
 #. ($symbol)
 #. ($args->{ticks_history})
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:40
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:66
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:39
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:65
 msgid "You are already subscribed to %1"
 msgstr "Sie haben sich schon bei %1 angemeldet"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Accounts.pm:330
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Accounts.pm:325
 msgid "You are already subscribed to balance updates."
 msgstr "Sie haben sich schon für Guthabenaktualisierungen angemeldet."
 
@@ -13437,7 +13411,7 @@ msgstr "Sie sind derzeit in Ihr virtuelles Geld Konto (2%) eingeloggt."
 msgid "You are either already subscribed or you have reached the limit for pricing table subscription."
 msgstr "Entweder haben Sie sich schon eingetragen oder Sie haben das Limit für den Kurstabellenbezug erreicht."
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:90
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:89
 msgid "You are either already subscribed or you have reached the limit for proposal subscription."
 msgstr "Sie haben sich schon eingetragen oder Sie haben das Limit für die Vorschlagseintragung erreicht."
 
@@ -13545,26 +13519,26 @@ msgstr "Sie haben bereits den Gegenwert von %1 %2 abgehoben."
 msgid "You have entered an invalid login ID"
 msgstr "Sie haben eine ungültige Login ID eingegeben"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:808
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:813
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:818
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:905
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:961
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:807
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:812
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:817
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:904
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:960
 msgid "You have exceeded the daily limit for contracts of this type."
 msgstr "Sie haben das Tageslimit für diese Kontraktart überschritten."
 
 #. ($currency, $limit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:988
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:987
 msgid "You have exceeded your 30-day limit on losses of %1%2."
 msgstr "Sie haben das 30-Tage Limit für Verluste von %2 %1 überschritten."
 
 #. ($currency, $limit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:947
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:946
 msgid "You have exceeded your 7-day limit on losses of %1%2."
 msgstr "Sie haben das 7-Tage Limit für Verluste von %2 %1 überschritten."
 
 #. ($currency, $limit)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:915
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:914
 msgid "You have exceeded your daily limit on losses of %1%2."
 msgstr "Sie haben das Tageslimit für Verluste in Höhe von %2 %1 überschritten."
 
@@ -13589,7 +13563,7 @@ msgid "You have purchased the following contract:"
 msgstr "Sie haben den folgenden Kontrakt erworben:"
 
 #. ($descriptor->{category})
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:414
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:409
 msgid "You have reached the rate limit for %1."
 msgstr "Sie haben das Kurslimit für %1 erreicht."
 
@@ -13857,7 +13831,7 @@ msgid "Your Property"
 msgstr "Ihr Eigentum"
 
 #. ($currency,                to_monetary_number_format($balance)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:803
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:802
 msgid "Your account balance (%1%2) is insufficient to buy this contract (%1%3)."
 msgstr "Ihr Kontostand (%2%1) reicht nicht aus, um diesen Kontrakt zu kaufen (%3%1)."
 
@@ -13866,7 +13840,7 @@ msgstr "Ihr Kontostand (%2%1) reicht nicht aus, um diesen Kontrakt zu kaufen (%3
 msgid "Your account balance is %1 %2. Maximum withdrawal by all other means is %1 %3."
 msgstr "Ihr Kontoguthaben beträgt %2 %1. Die maximale Abhebung mit allen anderen Mitteln beträgt %3 %1."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:892
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:891
 msgid "Your account has exceeded the trading limit with free promo code, please deposit if you wish to continue trading."
 msgstr "Ihr Konto hat das Abschlusslimit unter Verwendung von kostenlosen Werbecodes überschritten. Bitte machen Sie eine Einzahlung, wenn Sie weiter handeln möchten."
 
@@ -14140,7 +14114,7 @@ msgstr "Ihre Antwort auf die Geheimfrage ist zu kurz.  Bitte geben Sie mindesten
 msgid "Your settings have been updated successfully."
 msgstr "Ihre Einstellungen wurden erfolgreich aktualisiert."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:145
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:154
 msgid "Your token has expired."
 msgstr "Ihr Token ist abgelaufen."
 
@@ -14725,7 +14699,9 @@ msgid "{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support
 msgstr "{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support will contact you shortly."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:513
-msgid "{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until %1.\\nLast test taken at %2."
+#, fuzzy
+#| msgid "{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until %1.\\nLast test taken at %2."
+msgid "{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until %1. Last test taken at %2."
 msgstr "{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until %1.\\nLast test taken at %2."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:514
@@ -17717,6 +17693,21 @@ msgstr "%1 %2 Auszahlung, wenn sich %3 zum %5 außerhalb von %7 bis %6 bewegt ha
 #: Translation for contract type description (UPORDOWN - intraday)
 msgid "%1 %2 payout if %3 goes outside %7 and %6 through %5 after %4."
 msgstr "%1 %2 Auszahlung, wenn sich %3 nach dem %4 bis zum %5 außerhalb von %7 und %6 bewegt hat."
+
+#~ msgid "Contract category %1 invalid"
+#~ msgstr "Kontraktkategorie %1 ungültig"
+
+#~ msgid "Date expiry %1 invalid"
+#~ msgstr "Datumsablauf %1 ungültig"
+
+#~ msgid "Realtime quotes not available for %1"
+#~ msgstr "Für %1 sind keine Echtzeit-Notierungen vorhanden"
+
+#~ msgid "Symbol %1 invalid"
+#~ msgstr "Symbol %1 ungültig"
+
+#~ msgid "Wrong pricing table arguments"
+#~ msgstr "Falsche Kurstabellen Argumente"
 
 #~ msgid "%1 assumes ownership of the customer at point of first contact with the visitor. You, as an affiliate, act as a referring agent for %1. We reserve the right to refuse clients (or to close their accounts) if necessary to comply with any requirements we may periodically establish."
 #~ msgstr "Zum Zeitpunkt des ersten Kontakts mit dem Besucher übernimmt %1 die Zuständigkeit für den Kunden. Sie, als Partner, treten als Empfehlungsgeber für %1 auf. Wir behalten uns das Recht vor, Kunden zurückzuweisen (oder ihre Konten zu kündigen), wenn dies erforderlich ist, um Regeln einzuhalten, die wir zu gegebener Zeit aufstellen."
