@@ -668,8 +668,8 @@ Header.prototype = {
             page.header.start_clock_ws();
             return;
         }
+        clearTimeout(window.HeaderTimeUpdateTimeOutRef);
         var that = this;
-        var clock_handle;
         var clock = $('#gmt-clock');
         var start_timestamp = response.time;
         var pass = response.echo_req.passthrough.client_time;
@@ -678,13 +678,11 @@ Header.prototype = {
         that.server_time_at_response = ((start_timestamp * 1000) + (that.client_time_at_response - pass));
         var update_time = function() {
             window.time = moment(that.server_time_at_response + moment().valueOf() - that.client_time_at_response).utc();
-            clock.html(window.time.format("YYYY-MM-DD HH:mm") + " GMT");
+            clock.html(window.time.format("YYYY-MM-DD HH:mm") + ' GMT');
+            showLocalTimeOnHover('#gmt-clock');
+            window.HeaderTimeUpdateTimeOutRef = setTimeout(update_time, 1000);
         };
         update_time();
-
-        clearInterval(clock_handle);
-
-        clock_handle = setInterval(update_time, 1000);
     },
     logout_handler : function(){
         $('a.logout').unbind('click').click(function(){
