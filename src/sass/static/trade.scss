@@ -512,6 +512,21 @@
 }
 
 #trading_socket_container.japan{
+  min-width: 960px;
+  .big-col {
+    flex: 3;
+  }
+  #market_menu {
+    background: #FFF;
+    margin-left: 20px;
+    input {
+      margin-right: 5px;
+    }
+  }
+  #contract_markets_container,
+  #contract_market_form_container {
+    display: none;
+  }
   #guideBtn {
     display: none;
   }
@@ -539,7 +554,7 @@
     width: 301px;
     border: 1px solid $COLOR_GRAY;
     display: none;
-    height: 100px;
+    height: 120px;
     padding: 10px;
     margin-left: 2px;
   }
@@ -665,7 +680,7 @@
   }
 
   #period {
-    width: 155px;
+    width: 200px;
   }
 
   #payout_row{
