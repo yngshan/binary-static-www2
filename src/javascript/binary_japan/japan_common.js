@@ -1,6 +1,8 @@
 function displayContractForms(id, elements, selected) {
   var $menu = $('#market_menu');
 
+  $menu.empty();
+
   var markets = Object.keys(elements).filter(function(el) {
     return marketsOrder(el);
   }).sort(function(a, b) {
