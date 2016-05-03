@@ -298,9 +298,9 @@ function generateBirthDate(country){
     //years
     dropDownNumbers(year, startYear, endYear);
     if (country && country === 'jp') {
-      days.options[0].innerHTML = 'day';
-      months.options[0].innerHTML = 'month';
-      year.options[0].innerHTML = 'year';
+      days.options[0].innerHTML = text.localize('Day');
+      months.options[0].innerHTML = text.localize('Month');
+      year.options[0].innerHTML = text.localize('Year');
     }
     return;
 }
