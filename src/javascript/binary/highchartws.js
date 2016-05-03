@@ -307,11 +307,6 @@ var Highchart = (function() {
           if (entry_tick_time){
             select_entry_tick_barrier();
           }
-          if (is_sold || is_expired) {
-            reset_max();
-            reselect_exit_time();
-            end_contract();
-          }
           forget_streams();
       } else if (type === 'ticks_history' && error) {
           show_error('', error.message);
@@ -546,19 +541,19 @@ var Highchart = (function() {
   // function to draw the last line needed and forget the streams
   // also sets the exit tick
   function end_contract() {
-    if (!contract_ended) {
-      if (chart) {
-        if (sell_time && sell_time < end_time) {
-          draw_line_x(sell_time, '', 'textLeft', 'Dash');
-        } else if (sell_time && sell_time >= end_time) {
-          draw_line_x(end_time, '', 'textLeft', 'Dash');
-        }
-        if (sell_spot_time && sell_spot_time < end_time && sell_spot_time >= start_time) {
-          select_exit_tick(sell_spot_time);
-        } else if (exit_tick_time) {
-          select_exit_tick(exit_tick_time);
-        }
+    if (chart) {
+      if (sell_time && sell_time < end_time) {
+        draw_line_x(sell_time, '', 'textLeft', 'Dash');
+      } else if (sell_time && sell_time >= end_time) {
+        draw_line_x(end_time, '', 'textLeft', 'Dash');
       }
+      if (sell_spot_time && sell_spot_time < end_time && sell_spot_time >= start_time) {
+        select_exit_tick(sell_spot_time);
+      } else if (exit_tick_time) {
+        select_exit_tick(exit_tick_time);
+      }
+    }
+    if (!contract_ended) {
       forget_streams();
       contract_ended = true;
     }
