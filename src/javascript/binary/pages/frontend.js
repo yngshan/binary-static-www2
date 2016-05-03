@@ -284,7 +284,7 @@ function dropDownMonths(select, startNum, endNum) {
     return;
 }
 
-function generateBirthDate(){
+function generateBirthDate(country){
     var days    = document.getElementById('dobdd'),
         months  = document.getElementById('dobmm'),
         year    = document.getElementById('dobyy');
@@ -297,6 +297,11 @@ function generateBirthDate(){
     var endYear = currentYear - 17;
     //years
     dropDownNumbers(year, startYear, endYear);
+    if (country && country === 'jp') {
+      days.options[0].innerHTML = 'day';
+      months.options[0].innerHTML = 'month';
+      year.options[0].innerHTML = 'year';
+    }
     return;
 }
 
@@ -324,7 +329,7 @@ function handle_residence_state_ws(){
           var country = response.get_settings.country_code;
           if (country && country !== null) {
             page.client.residence = country;
-            generateBirthDate();
+            generateBirthDate(country);
             generateState();
             if (/maltainvestws/.test(window.location.pathname)) {
               var settings = response.get_settings;
@@ -403,7 +408,7 @@ function handle_residence_state_ws(){
             $('#error-residence').insertAfter('#residence-disabled');
             residenceDisabled.attr('disabled', 'disabled');
             $('#real-form').show();
-            generateBirthDate();
+            generateBirthDate(country);
             generateState();
             return;
           }
