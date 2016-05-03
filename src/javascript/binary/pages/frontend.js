@@ -288,6 +288,9 @@ function generateBirthDate(country){
     var days    = document.getElementById('dobdd'),
         months  = document.getElementById('dobmm'),
         year    = document.getElementById('dobyy');
+
+    if (document.getElementById('dobdd').length > 1) return;
+    
     //days
     dropDownNumbers(days, 1, 31);
     //months
