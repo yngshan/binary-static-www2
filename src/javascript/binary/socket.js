@@ -146,8 +146,13 @@ function BinarySocketClass() {
                 var type = response.msg_type;
                 if (type === 'authorize') {
                     if(response.hasOwnProperty('error')) {
+                        var isActiveTab = sessionStorage.getItem('active_tab') === '1';
+                        if(response.error.code === 'SelfExclusion' && isActiveTab) {
+                            sessionStorage.removeItem('active_tab');
+                            alert(response.error.message);
+                        }
                         LocalStore.set('reality_check.ack', 0);
-                        page.client.send_logout_request(true);
+                        page.client.send_logout_request(isActiveTab);
                     }
                     else {
                         authorized = true;

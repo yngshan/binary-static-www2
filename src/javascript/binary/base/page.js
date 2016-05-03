@@ -356,7 +356,7 @@ Client.prototype = {
     },
     set_cookie: function(cookieName, Value) {
         var cookie_expire = new Date();
-        cookie_expire.setDate(cookie_expire.getDate() + 2);
+        cookie_expire.setDate(cookie_expire.getDate() + 60);
         var cookie = new CookieStorage(cookieName);
         cookie.write(Value, cookie_expire, true);
     },
@@ -1185,6 +1185,7 @@ Page.prototype = {
 
         // cleaning the previous values
         page.client.clear_storage_values();
+        sessionStorage.setItem('active_tab', '1');
         // set cookies: loginid, login
         page.client.set_cookie('loginid', loginid);
         page.client.set_cookie('login'  , token);

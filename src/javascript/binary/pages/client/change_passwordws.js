@@ -96,6 +96,7 @@ var PasswordWS = (function(){
     **/
     $form.addClass("hidden");
     $result.removeClass("hidden");
+    setTimeout(function(){page.client.send_logout_request(true);}, 5000);
     return true;
 
   };
