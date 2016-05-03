@@ -324,9 +324,10 @@ function handle_residence_state_ws(){
       var response = JSON.parse(msg.data);
       if (response) {
         var type = response.msg_type;
+        var country;
         var residenceDisabled = $('#residence-disabled');
         if (type === 'get_settings') {
-          var country = response.get_settings.country_code;
+          country = response.get_settings.country_code;
           if (country && country !== null) {
             page.client.residence = country;
             generateBirthDate(country);
