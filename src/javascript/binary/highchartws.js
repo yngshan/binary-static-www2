@@ -294,6 +294,11 @@ var Highchart = (function() {
                 draw_line_x(end_time, '', 'textLeft', 'Dash');
               }
             }
+            if (is_sold || is_expired) {
+              reset_max();
+              reselect_exit_time();
+              end_contract();
+            }
           } else if ((response.tick || response.ohlc) && !chart_forget) {
             if (response.tick) {
               options.tick = response.tick;
