@@ -82,7 +82,7 @@ msgid "%1 Affiliate Program Terms and Conditions"
 msgstr ""
 
 #. ($params->{website_name})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:92
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:89
 msgid "%1 New Password Request"
 msgstr ""
 
@@ -103,11 +103,6 @@ msgstr ""
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/copyright.html.tt:18
 msgid "%1 and the bull/bear logo are registered trademarks."
-msgstr ""
-
-#. (pjax_link_for(l('Random Quotidians')
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "%1 are markets that reset back to a price of 1000 at the start of each trading day (00:00:00 GMT), and all trades settle before the end of the trading day (23:59:59 GMT)."
 msgstr ""
 
 #. ($client->loginid)
@@ -131,11 +126,6 @@ msgstr ""
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "%1 has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract:"
-msgstr ""
-
-#. (stash->{website_name})
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "%1 has created random indices that you can trade 24/7. You can trade randoms on all types of contract:"
 msgstr ""
 
 #. (stash->{website_name})
@@ -294,9 +284,14 @@ msgstr ""
 msgid "%1's Continuous Indices are the Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 25%, 50%, 75% and 100%."
 msgstr ""
 
-#. (stash->{website_name}, pjax_link_for(l('Random 25 Index')
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "%1's Random Indices are the %2, %3, %4, and %5. These indices correspond to volatilities of 25%, 50%, 75% and 100%"
+#. (stash->{website_name})
+#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/otc_indices_stocks.html.haml:1
+msgid "%1's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges."
+msgstr ""
+
+#. (stash->{website_name})
+#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/otc_indices_stocks.html.haml:1
+msgid "%1's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering."
 msgstr ""
 
 #. (stash->{website_name})
@@ -679,22 +674,22 @@ msgid "<option value=\"\"></option><option value=\"01\">Jan</option><option valu
 msgstr ""
 
 #. ($params->{code})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:109
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:106
 msgid "<p style=\"font-weight: bold;\">Thanks for signing up for a virtual account!</p><p>Enter the following verification token into the form to create an account: <p><span style=\"background: #f2f2f2; padding: 10px;\">%1</span></p></p><p>Enjoy trading with us on Binary.com.</p>"
 msgstr ""
 
 #. ($params->{code})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:96
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:93
 msgid "<p style=\"line-height:200%;color:#333333;font-size:15px;\">Dear Valued Customer,</p><p>Before we can help you change your password, please help us to verify your identity by entering the following verification token into the password reset form:<p><span style=\"background: #f2f2f2; padding: 10px;\">%1</span></p></p>"
 msgstr ""
 
 #. ($params->{code})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:136
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:133
 msgid "<p style=\"line-height:200%;color:#333333;font-size:15px;\">Dear Valued Customer,</p><p>Please help us to verify your identity by entering the following verification token into the payment agent withdrawal form:<p><span style=\"background: #f2f2f2; padding: 10px;\">%1</span></p></p>"
 msgstr ""
 
 #. ($params->{code})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:148
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:145
 msgid "<p style=\"line-height:200%;color:#333333;font-size:15px;\">Dear Valued Customer,</p><p>Please help us to verify your identity by entering the following verification token into the payment withdrawal form:<p><span style=\"background: #f2f2f2; padding: 10px;\">%1</span></p></p>"
 msgstr ""
 
@@ -729,7 +724,7 @@ msgid ""
 "    </ul>"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:121
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:118
 msgid "<p>Dear Valued Customer,</p><p>It appears that you have tried to register an email address that is already included in our system. If it was not you, simply ignore this email, or contact our customer support if you have any concerns.</p>"
 msgstr ""
 
@@ -1063,7 +1058,7 @@ msgid "A Bachelor’s degree in Marketing, Business Administration, or related d
 msgstr ""
 
 #. ($params->{website_name})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:117
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:114
 msgid "A Duplicate Email Address Has Been Submitted - %1"
 msgstr ""
 
@@ -1366,7 +1361,6 @@ msgid "Acquisition of financial contracts through this site must be effected in 
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:199
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:10
 msgid "Action"
 msgstr ""
 
@@ -1402,18 +1396,6 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:362
 msgid "Adjust trade parameters"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:36
-msgid "Adjusted Barrier"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:32
-msgid "Adjusted Barrier 1"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:33
-msgid "Adjusted Barrier 2"
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:36
@@ -1648,7 +1630,7 @@ msgstr ""
 msgid "Any changes in our privacy policy or security statement will be posted onto this website. In the event of material changes that directly affect the economic use of your personal information, we will request your prior authorisation in writing before effecting such change on your account."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:133
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:134
 msgid "Any disputes, controversy, or claims that arise out of or relating to this Agreement against the Company will be referred to and finally determined by an arbitration firm selected by the Company. The language to be used in the arbitral proceedings will be English. Judgement upon the award rendered by the arbitrator(s) may be entered in any court having jurisdiction thereof. You are also responsible for any and all costs related to such arbitration."
 msgstr ""
 
@@ -1657,7 +1639,7 @@ msgid "Any failure on your part to maintain the security of any security devices
 msgstr ""
 
 #. (website)
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:68
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:69
 msgid "Any form of Spam will result in your account being placed under review and all funds due being withheld pending an investigation into your account. You need to be aware that %1 is liable to incur expenses in dealing with Spam generated mail and these same expenses will be deducted from your account. In this instance the amount determined will be fair and deemed final and acceptable based on good faith and such amount will be collectable by law and deemed to have been accepted by yourself as fair and reasonable and as agreed to by registration as an affiliate of %1."
 msgstr ""
 
@@ -1666,7 +1648,7 @@ msgid "Any information given on these pages and/or emails or newsletters sent by
 msgstr ""
 
 #. (affiliate_email)
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:132
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:133
 msgid "Any notice given or made under this Agreement to the Company shall be by email to %1. The Company shall send you any notices given or made under this Agreement to the email address supplied on your application form or such other email address as notified by you to the Company."
 msgstr ""
 
@@ -1819,7 +1801,6 @@ msgstr ""
 msgid "Asian options settle by comparing the <strong>last tick</strong> with the average spot over the period."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Asians"
@@ -1835,7 +1816,7 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:154
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:26
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2610
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2652
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:81
@@ -2019,19 +2000,10 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:152
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/barrier.html.tt:18
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:35
 msgid "Barrier"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:30
-msgid "Barrier 1"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:31
-msgid "Barrier 2"
-msgstr ""
-
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/SingleBarrier.pm:58
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/SingleBarrier.pm:59
 msgid "Barrier is out of acceptable range."
 msgstr ""
 
@@ -2041,8 +2013,8 @@ msgstr ""
 
 #. ($min_allowed . ' pips away from the spot.')
 #. ($self->minimum_allowable_move . ' pips away from the spot.')
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:123
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/SingleBarrier.pm:68
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:124
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/SingleBarrier.pm:69
 msgid "Barrier must be at least "
 msgstr ""
 
@@ -2059,7 +2031,7 @@ msgstr ""
 msgid "Barrier(s)"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:112
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:113
 msgid "Barriers must be on either side of the spot."
 msgstr ""
 
@@ -2412,7 +2384,7 @@ msgid "Buy Price"
 msgstr ""
 
 #. (to_monetary_number_format($stake_min, 1)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1606
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1653
 msgid "Buy price must be between %1 and %2."
 msgstr ""
 
@@ -2501,7 +2473,6 @@ msgstr ""
 msgid "Cascade"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-app/trade_corporate_actions.cgi:16
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/MarketDiscovery.pm:22
 msgid "Cash Dividend"
 msgstr ""
@@ -2845,7 +2816,7 @@ msgstr ""
 msgid "Commission on withdrawals"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:80
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:81
 msgid "Commissions will be earned throughout the life of the client, on all transactions the client undertakes at the merchant, for as long as you, the Affiliate, remain a member of this affiliate program. The company reserves the right to cancel the commissions that are not reclaimed after 2 years."
 msgstr ""
 
@@ -2911,7 +2882,7 @@ msgid "Compliance with and Amendments to These Terms"
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:23
-msgid "Comply with the applicable laws, rules, and regulations (including, but not limited to, advertising laws, rules, and regulations) of the jurisdiction(s) in which you operate or target your business."
+msgid "Comply with the applicable laws, rules, and regulations (including, but not limited to, advertising, data protection and privacy laws, rules, and regulations) of the jurisdiction(s) in which you operate or target your business."
 msgstr ""
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:132
@@ -3056,7 +3027,7 @@ msgstr ""
 msgid "Contract expired"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2319
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2366
 msgid "Contract has already expired."
 msgstr ""
 
@@ -3064,11 +3035,11 @@ msgstr ""
 msgid "Contract is not started yet"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1603
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1650
 msgid "Contract market price is too close to final payout."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2381
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2423
 msgid "Contract must expire during trading hours."
 msgstr ""
 
@@ -3107,12 +3078,12 @@ msgid "Contracts may not expire on a weekend; therefore the expiry date of a con
 msgstr ""
 
 #. ($self->underlying->translated_display_name)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2339
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2381
 msgid "Contracts on %1 with duration more than 24 hours must expire at the end of a trading day."
 msgstr ""
 
 #. ($underlying->translated_display_name()
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2390
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2432
 msgid "Contracts on %1 with durations under 24 hours must expire on the same trading day."
 msgstr ""
 
@@ -3296,7 +3267,7 @@ msgstr ""
 msgid "Current Spot Time"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2258
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2305
 msgid "Current market price is 0."
 msgstr ""
 
@@ -3380,7 +3351,6 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:197
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:402
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/legacy_chart_table.html.tt:10
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:5
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/resources/market_timesws.html.tt:4
 msgid "Date"
 msgstr ""
@@ -3407,7 +3377,7 @@ msgstr ""
 msgid "Date of birth"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:356
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:353
 msgid "Date of birth is invalid"
 msgstr ""
 
@@ -3752,7 +3722,6 @@ msgstr ""
 msgid "Digit must be in the range of %1 to %2."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Digits"
@@ -3763,7 +3732,7 @@ msgstr ""
 msgid "Director"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:93
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:94
 msgid "Disclaimer"
 msgstr ""
 
@@ -3855,10 +3824,6 @@ msgstr ""
 msgid "Donchian Channels plot the highest high and lowest low over the last period time intervals."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Don’t be put off by the name. Quotidian just means something that happens everyday."
-msgstr ""
-
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:153
 msgid "Dormant and Inactive Accounts"
 msgstr ""
@@ -3877,10 +3842,6 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1417
 msgid "Due to regulatory requirements, you are required to authenticate your account in order to continue trading."
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:26
-msgid "Due to the corporate action, the contract's barrier had been adjusted as follow:"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:161
@@ -3950,7 +3911,7 @@ msgstr ""
 msgid "Each option transaction has a specified expiry time and date, known as the judgment time."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:87
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:88
 msgid "Each party to this Agreement represents and warrants to the other that it has, and will retain throughout the term of this Agreement all right, title, and authority to enter into this Agreement, to grant to the other party the rights and licences granted in this Agreement, and to perform all of its obligations under this Agreement."
 msgstr ""
 
@@ -4017,11 +3978,11 @@ msgstr ""
 msgid "Effectively monitor daily client activity"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:110
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:111
 msgid "Either party may terminate this Agreement forthwith on written notice if a receiver, examiner, or administrator is appointed of the whole or any part of the other party's assets or the other party is struck off the Register of Companies in the jurisdiction where it was incorporated or an order is made or a resolution passed for winding up of the other party (unless such order or resolution is part of a voluntary scheme for the reconstruction or amalgamation of that party as a solvent corporation and the resulting corporation, if a different legal person, undertakes to be bound by this Agreement)."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:111
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:112
 msgid "Either party may terminate this Agreement on delivery of one weeks' prior written notice to the other party."
 msgstr ""
 
@@ -4358,11 +4319,11 @@ msgstr ""
 msgid "Expiry price"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2282
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2329
 msgid "Expiry time cannot be equal to start time."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2291
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2338
 msgid "Expiry time cannot be in the past."
 msgstr ""
 
@@ -4785,7 +4746,7 @@ msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/conflicts_policy.html.tt:6
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/order_execution.html.tt:12
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:127
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:128
 msgid "General"
 msgstr ""
 
@@ -4951,7 +4912,6 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:452
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/legacy_chart_table.html.tt:13
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/ticker_data_table.html.tt:7
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:7
 msgid "High"
 msgstr ""
 
@@ -4968,7 +4928,7 @@ msgstr ""
 msgid "High barrier"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:143
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:144
 msgid "High barrier is out of acceptable range. Please adjust the high barrier."
 msgstr ""
 
@@ -4994,7 +4954,6 @@ msgid "High/Low"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:178
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Higher/Lower"
 msgstr ""
@@ -5064,10 +5023,6 @@ msgstr ""
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/get_started/nav.html.haml:1
 msgid "How to trade the Volatility Indices markets?"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "How to trade the random markets?"
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_list.html.tt:2
@@ -5159,7 +5114,7 @@ msgstr ""
 msgid "If all that sounds a bit daunting, you’re right. But it’s how we make sure we get the best people for our team."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:78
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:79
 msgid "If an error is made in the calculation of your share of the revenue share, the Company reserves the right to correct such calculation at any time, and to reclaim from you any overpayment made by the Company to you (including, without limitation, by way of reducing future payments earned, revenue to cover any processed chargebacks) before you can start earning revenue again. In special cases, the Company reserves the right to exclude revenue sharing  on promotional funds deposited into the client's account by the Company."
 msgstr ""
 
@@ -5167,7 +5122,7 @@ msgstr ""
 msgid "If any provision of these Terms is found to be illegal, void, or unenforceable, the unenforceable provision will be modified so as to render it enforceable to the maximum extent possible in order to effect the intention of the provision; if a term cannot be so modified, it will be severed and the remaining provisions of these Terms will not be affected in any way."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:131
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:132
 msgid "If any provision of this Agreement is held to be void or unenforceable in whole or part, the impugned provision (or part thereof) shall be deemed to be deleted from this Agreement and the remaining provisions (including the remainder of the affected provision) shall continue to be valid and applicable."
 msgstr ""
 
@@ -5366,11 +5321,6 @@ msgstr ""
 msgid "If you're a broker we'd like to work with you. You will be introducing your clients to a unique and innovative product - the %1 trading platform."
 msgstr ""
 
-#. (pjax_link_for(l("Random Nocturnes")
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "If you're in Asia, you may find %1 more attractive because they reset around the time Asian markets close."
-msgstr ""
-
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:7
 msgid "If your complaint relates to an outcome of a trade or a transaction and remains unresolved, it will turn into a dispute. Should you be unsatisfied with our response, you can choose to escalate your complaint to the regulator or to an alternative dispute resolution entity."
 msgstr ""
@@ -5384,7 +5334,7 @@ msgstr ""
 msgid "If you’re looking to build a career, and not a resume, talk to us, Binary.com. We’re one of the IT world’s most vibrant and progressive workplaces."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:114
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:115
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:232
 msgid "If:"
 msgstr ""
@@ -5527,11 +5477,6 @@ msgstr ""
 msgid "In/Out"
 msgstr ""
 
-#. (url_for("trading?market=random&formname=endsinout")
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "In/Out (<a href=\"%1\">ends between/outside</a> and <a href=\"%2\">stays between/goes outside</a>)"
-msgstr ""
-
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "In/Out (ends between/outside and stays between/goes outside)"
 msgstr ""
@@ -5555,7 +5500,7 @@ msgstr ""
 msgid "Indemnification"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:100
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:101
 msgid "Indemnity and Liability"
 msgstr ""
 
@@ -5688,7 +5633,7 @@ msgstr ""
 msgid "Interpretation"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2106
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2153
 msgid "Intraday contracts may not cross market open."
 msgstr ""
 
@@ -5764,7 +5709,7 @@ msgstr ""
 msgid "Invalid request"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2240
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2287
 msgid "Invalid stake"
 msgstr ""
 
@@ -6601,7 +6546,6 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:460
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/ticker_data_table.html.tt:4
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:9
 msgid "Last"
 msgstr ""
 
@@ -6737,11 +6681,6 @@ msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Life-long career interest in the Accounting field"
-msgstr ""
-
-#. (pjax_link_for(l('Random Nocturnes')
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Like %2, %1 reset back to a price of 1000 each day. The difference is that %1 reset at 12:00:00 GMT, (%2 reset at 00:00:00 GMT)."
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:232
@@ -6893,7 +6832,6 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:502
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/legacy_chart_table.html.tt:14
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/ticker_data_table.html.tt:8
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:8
 msgid "Low"
 msgstr ""
 
@@ -6906,7 +6844,7 @@ msgstr ""
 msgid "Low barrier"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:142
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:143
 msgid "Low barrier is out of acceptable range. Please adjust the low barrier."
 msgstr ""
 
@@ -7456,7 +7394,7 @@ msgstr ""
 msgid "No data available to draw the requested chart. Please try our daily chart for this instrument."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:130
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:131
 msgid "No delay, neglect, or forbearance on the part of either party in enforcing against the other party any term or condition of this Agreement shall either be or be deemed to be a waiver or in any way prejudice any right of that party under this Agreement."
 msgstr ""
 
@@ -7577,7 +7515,7 @@ msgid "Number of ticks"
 msgstr ""
 
 #. ($min_duration, $max_duration)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2597
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2639
 msgid "Number of ticks must be between %1 and %2"
 msgstr ""
 
@@ -7596,6 +7534,11 @@ msgstr ""
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:350
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:313
 msgid "OTC Derivative (Option) Trading"
+msgstr ""
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/otc_indices_stocks.html.haml:1
+#: /home/git/translations/binary-static-www2/src/templates/haml/layouts/get_started/nav.html.haml:1
+msgid "OTC Indices and Stocks"
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:54
@@ -7700,7 +7643,6 @@ msgstr ""
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:510
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/ticker_data_table.html.tt:6
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:12
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:6
 msgid "Open"
 msgstr ""
 
@@ -8113,12 +8055,12 @@ msgstr ""
 msgid "Payment methods"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:77
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:78
 msgid "Payment of commission earned for the previous calendar month will be made monthly, on or around the 15th day of each month, and may be credited to any payment method as agreed between the Company and the Affiliate."
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:34
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:73
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:74
 msgid "Payments"
 msgstr ""
 
@@ -8133,12 +8075,12 @@ msgstr ""
 msgid "Payout has moved in your favour from %1 to %2."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2218
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2265
 msgid "Payout may not have more than two decimal places."
 msgstr ""
 
 #. (to_monetary_number_format($payout_min, 1)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1615
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1662
 msgid "Payout must be between %1 and %2."
 msgstr ""
 
@@ -8194,10 +8136,6 @@ msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "Pip stands for ‘percentage in point’ which is generally the fourth decimal place (i.e. 0.0001)."
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Place a random trade"
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
@@ -8277,9 +8215,9 @@ msgstr ""
 msgid "Please enter a number greater than 0"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:75
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:87
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:99
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:100
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:76
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/static.html.tt:88
 msgid "Please enter a number."
 msgstr ""
 
@@ -8386,6 +8324,10 @@ msgstr ""
 msgid "Please make sure that you first agree with the Agent on the terms of payment before submitting your request."
 msgstr ""
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/otc_indices_stocks.html.haml:1
+msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges."
+msgstr ""
+
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:11
 msgid "Please note that our website generates log files that record the IP addresses of accesses to your account. This information is gathered with the sole purpose of assisting in the unlikely event of a need to investigate accesses to your account by unauthorised users. Additionally we may verify certain of the information you supply in the account opening form, or otherwise, with third-party information providers."
 msgstr ""
@@ -8412,7 +8354,7 @@ msgstr ""
 msgid "Please provide at least one self-exclusion setting."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:375
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:372
 msgid "Please provide complete details for account opening."
 msgstr ""
 
@@ -8658,10 +8600,6 @@ msgstr ""
 msgid "Prevailing market price cannot be determined at this time."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2324
-msgid "Prevailing market price cannot be determined."
-msgstr ""
-
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:119
 msgid "Previous"
 msgstr ""
@@ -8823,7 +8761,7 @@ msgstr ""
 msgid "Proofreader"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:96
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:97
 msgid "Proper barriers could not be determined."
 msgstr ""
 
@@ -8945,54 +8883,6 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:191
 msgid "Random"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random 100 Index"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random 25 Index"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random 50 Index"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random 75 Index"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random Bear"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random Indices"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random Markets"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random Moon"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random Nocturnes"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random Quotidians"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random Venus"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "Random Yang"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:480
@@ -9172,12 +9062,12 @@ msgstr ""
 msgid "Represents the maximum volume of contracts that you may purchase in any given trading day."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2410
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2452
 msgid "Resale of this contract is not offered due to market holidays during contract period."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2571
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2580
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2613
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2622
 msgid "Resale of this contract is not offered."
 msgstr ""
 
@@ -9304,7 +9194,6 @@ msgid "Right to Terminate"
 msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:177
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Rise/Fall"
 msgstr ""
@@ -9628,11 +9517,11 @@ msgstr ""
 msgid "Should a disruption occur in the data feeds which cannot be readily rectified by the Company, the Company reserves the right to refund the contract purchase."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:79
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:80
 msgid "Should any client for whom you are receiving commissions process a chargeback, the Company reserves the right to deduct the commission portion of the chargeback from the total balance due to you for the current month. Should this deduction of the accumulated revenue exceed your current amount due, your balance will then revert to a negative balance, and you will have to earn revenue to cover the chargeback before you can start earning revenue again. The Company reserves the right, in special cases, to exclude revenue sharing  on promotional funds deposited into the client's account by the Company."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:69
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:70
 msgid "Should these expenses not be covered by funds in your account we reserve the right to investigate other alternative means for obtaining payment, for example: should your account have generated purchasing accounts, we will hold payment of commission for these accounts until such a time as the account for damages has been cleared."
 msgstr ""
 
@@ -9982,7 +9871,7 @@ msgstr ""
 msgid "Sorry, your currency of %1 is unavailable for Payment Agent Withdrawal"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:66
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:67
 msgid "Spam - We do not condone Spam"
 msgstr ""
 
@@ -10042,16 +9931,16 @@ msgstr ""
 msgid "Start time %1 must be before end time %2"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2305
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2352
 msgid "Start time is in the future."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2300
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2347
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:384
 msgid "Start time is in the past"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2313
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2360
 msgid "Start time on forward-starting contracts must be more than 5 minutes from now."
 msgstr ""
 
@@ -10139,12 +10028,10 @@ msgstr ""
 msgid "Stochastic Slow %K"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-app/trade_corporate_actions.cgi:17
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/MarketDiscovery.pm:23
 msgid "Stock Dividend"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-app/trade_corporate_actions.cgi:18
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/MarketDiscovery.pm:24
 msgid "Stock Split"
 msgstr ""
@@ -10406,16 +10293,16 @@ msgstr ""
 msgid "Terminate your use of the Binary.com API; or"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:107
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:108
 msgid "Termination"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:112
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:113
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:230
 msgid "Termination for Causes"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:123
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:124
 msgid "Termination of this Agreement shall not prejudice any rights of any party which may have arisen on or before the date of termination."
 msgstr ""
 
@@ -10478,31 +10365,6 @@ msgstr ""
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The %1 Quantitative Analytics group is responsible for the pricing of binary options offered on our website, as well as the risk management and profitability of its options book. Processing over a million transactions each day, the company manages a book of exotic options which arguably exceeds in complexity that of the typical derivatives desk."
-msgstr ""
-
-#. (pjax_link_for(l('Random 100 Index')
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "The %1 is twice as volatile as the %2, and four times as volatile as the %3."
-msgstr ""
-
-#. (pjax_link_for(l('Random Yin')
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "The %1 simulates a bearish market. The %2 simulates a bullish market."
-msgstr ""
-
-#. (pjax_link_for(l('Random Bull')
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "The %1 simulates a bullish market (it tends to move up). The %2 simulates a bearish market (it tends to move down)."
-msgstr ""
-
-#. (pjax_link_for(l('Random Sun')
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "The %1 simulates a market that gets more volatile as the day progresses (and then more quiet at night). The %2 simulates a market that is quiet during the day (but becomes more volatile at night)."
-msgstr ""
-
-#. (pjax_link_for(l('Random Mars')
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
-msgid "The %1 simulates a market that is active during the day (but becomes less volatile at night). The %2 simulates a market that is quiet during the day (but becomes more volatile at night)."
 msgstr ""
 
 #. ($website_name)
@@ -10627,7 +10489,7 @@ msgid "The Company is not under any obligation of confidentiality with respect t
 msgstr ""
 
 #. (website)
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:95
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:96
 msgid "The Company makes no claims that the %1 website will be uninterrupted or provide an error free service, and will not be liable for the consequences of any such errors or interruptions."
 msgstr ""
 
@@ -10660,7 +10522,7 @@ msgid "The Company may, from time to time, at its sole discretion, or as require
 msgstr ""
 
 #. (website)
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:96
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:97
 msgid "The Company provides the %1 website on an “as is” and “as available” basis, and gives no warranty that the %1 website will be free of errors, or that errors will be corrected, or that our website is free of any third party interferences such as hackers or any other harmful components that arise outside of the Company’s control."
 msgstr ""
 
@@ -10668,7 +10530,7 @@ msgstr ""
 msgid "The Company provides the Binary.com API on an \"as is\" and \"as available\" basis with no warranties, either express or implied, of any kind. To the fullest extent permissible under applicable law, the Company disclaim any and all warranties and representations, including, without limitation, any implied warranties of merchantability, fitness for a particular purpose, title, accuracy of data, and non-infringement."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:116
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:117
 msgid "The Company receives a complaint which could have involved the Alternate Dispute Resolution entity, or the Company believes that you, the Affiliate, is in breach of any laws, rules, and regulations that may be relevant or applicable to the jurisdiction(s) in which you operate or target your business;"
 msgstr ""
 
@@ -10696,15 +10558,15 @@ msgstr ""
 msgid "The Company shall have no liability arising from orders, investment decisions or purchases of third party goods or services (including financial instruments and currency) based on information published on or furnished through the Binary.com API;"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:103
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:104
 msgid "The Company shall not be liable to you in contract, or otherwise (including liability for negligence) for any loss, whether direct or indirect, of the Affiliate's business, revenue or profits, anticipated savings, or wasted expenditure, corruption, or destruction of data or for any indirect or consequential loss whatsoever."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:75
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:76
 msgid "The Company shall pay you the currently published percentage of net revenues (as detailed on the commission page of your affiliate account) received during the term of the Agreement. The affiliate commission payments due shall only be for bona fide client referrals and the Company reserves the right to disregard duplicate accounts or nominee accounts that the Company sees as non-bona fide clients, at its sole discretion."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:76
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:77
 msgid "The Company shall provide you with statements accessible through an electronic system detailing the revenues generated by clients you have referred, if any, which have accrued to you over the course of the calendar month. Such statements shall be updated daily. At the end of a calendar month, the Company shall record your total share of Net Revenues, if any, during the previous calendar month. In the event that a revenue share in any calendar month is a negative amount, the Company shall be entitled but not obliged to carry forward and set off such negative amount against future revenue shares which would otherwise be payable to you. However, the Company shall also be entitled but not obliged to zerorise the negative balance that would otherwise be carried forward."
 msgstr ""
 
@@ -10889,7 +10751,7 @@ msgstr ""
 msgid "The barrier(s) you choose defines your position and triggers your payout."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:89
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Role/DoubleBarrier.pm:90
 msgid "The barriers are improperly entered for this contract."
 msgstr ""
 
@@ -10964,7 +10826,7 @@ msgstr ""
 msgid "The contract has expired"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2368
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2410
 msgid "The contract must expire on a trading day."
 msgstr ""
 
@@ -11041,11 +10903,7 @@ msgstr ""
 msgid "The first tick is the first tick after the contract is processed by our servers."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:1
-msgid "The following table reflects the corporate actions that happened during the contract period."
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:117
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:118
 msgid "The information provided during the sign-up process warranted by yourself to be true and correct is determined by the Company to be false or incorrect during the term of this Agreement;"
 msgstr ""
 
@@ -11061,7 +10919,7 @@ msgstr ""
 msgid "The market exit price is the price in effect at the end of the contract period."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2357
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2399
 msgid "The market must be open at the start time."
 msgstr ""
 
@@ -11341,7 +11199,7 @@ msgstr ""
 msgid "These materials may not be copied or redistributed for commercial purposes or for compensation of any kind without prior written permission from a Binary Group company. If you have questions about these terms or would like information about licensing materials from Binary Ltd., please contact us."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:129
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:130
 msgid "This Agreement contains the entire agreement between the parties with respect to its subject matter and supersedes all previous agreements and understandings between the parties with respect to its subject matter."
 msgstr ""
 
@@ -11349,7 +11207,7 @@ msgstr ""
 msgid "This Agreement governs your use of our API unless you have executed another agreement with the Company that expressly governs your use of our API."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:109
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:110
 msgid "This Agreement may be terminated forthwith by either party on written notice to the other party if the other party is in material breach of the terms of the Agreement and, in the event of a breach capable of being remedied, fails to remedy the breach within 15 days of receipt of notice in writing of such breach."
 msgstr ""
 
@@ -11412,7 +11270,7 @@ msgstr ""
 msgid "This contract has already expired."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1070
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1108
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:308
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:46
 msgid "This contract has been sold."
@@ -11422,7 +11280,7 @@ msgstr ""
 msgid "This contract has expired."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1088
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1126
 msgid "This contract is affected by corporate action."
 msgstr ""
 
@@ -11439,7 +11297,7 @@ msgstr ""
 msgid "This contract lost"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2258
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2305
 msgid "This contract offers no return."
 msgstr ""
 
@@ -11525,7 +11383,7 @@ msgstr ""
 msgid "This market closes early today at"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2357
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2399
 msgid "This market is presently closed."
 msgstr ""
 
@@ -11675,7 +11533,7 @@ msgid "Token"
 msgstr ""
 
 #. ($safer_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2411
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2453
 msgid "Too many market holidays during the contract period. Select an expiry date after %1."
 msgstr ""
 
@@ -11695,7 +11553,6 @@ msgstr ""
 msgid "Total Profit/Loss"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Touch/No Touch"
@@ -11795,8 +11652,8 @@ msgstr ""
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:161
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:17
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2383
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2396
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2425
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2438
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:29
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/resources/market_timesws.html.tt:2
@@ -11827,18 +11684,18 @@ msgstr ""
 msgid "Trading is Suspended"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2581
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2623
 msgid "Trading is not offered for this duration."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2123
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2133
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2143
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2150
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2170
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2180
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2190
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2197
 msgid "Trading is suspended at the moment."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2633
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2675
 msgid "Trading is suspended due to missing market data."
 msgstr ""
 
@@ -11859,10 +11716,10 @@ msgstr ""
 #. ($self->underlying->translated_display_name)
 #. ($self->underlying->translated_display_name()
 #. ($translated_name)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1369
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1412
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:154
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2168
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2176
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2215
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2223
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:212
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:253
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:461
@@ -11961,7 +11818,7 @@ msgstr ""
 msgid "Try it now"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2364
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2406
 msgid "Try out the Volatility Indices which are always open."
 msgstr ""
 
@@ -12216,7 +12073,7 @@ msgstr ""
 #. (request()
 #. ($params->{website_name})
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Account/Virtual.pm:101
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:105
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:102
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:195
 msgid "Verify your email address - %1"
 msgstr ""
@@ -12227,8 +12084,8 @@ msgstr ""
 
 #. ($c->stash('website_name')
 #. ($params->{website_name})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:132
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:144
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:129
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:141
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:175
 msgid "Verify your withdrawal request - %1"
 msgstr ""
@@ -12354,7 +12211,7 @@ msgstr ""
 msgid "Want to telecommute? "
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:85
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:86
 msgid "Warranties"
 msgstr ""
 
@@ -12431,8 +12288,8 @@ msgstr ""
 msgid "We are required to take a number of factors into account when considering how to give you best execution. We have rated price as the most important followed by: (a) costs; (b) size, (c) liquidity of the underlying market, (d) speed and (e) likelihood of execution and settlement. The main way in which we will ensure that you obtain best execution is by ensuring that in our calculation of our bid/offer prices, we pay due consideration to the market price for the underlying reference product to which your Contract relates. We have access to a number of different data sources in order to ascertain the market price, which is our objective view of the bids and offers available to arms' length traders."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1379
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1509
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1422
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1556
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Digitdiff.pm:44
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Digitmatch.pm:45
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/BarrierBuilder.pm:22
@@ -12640,8 +12497,16 @@ msgstr ""
 msgid "We’re really proud of this award. We’re strongly committed to offering an ethical and customer-focused trading experience, and the award shows that BetOnMarkets is a trusted brand that listens and caters to customers, whether they are experienced traders or novices. We offer customer services in English, Indonesian, Russian, Chinese and Spanish."
 msgstr ""
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/otc_indices_stocks.html.haml:1
+msgid "What are OTC indices and stocks?"
+msgstr ""
+
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/smart_indices.html.haml:1
 msgid "What are Smart Markets?"
+msgstr ""
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/get_started/otc_indices_stocks.html.haml:1
+msgid "What are the OTC Indices and Stocks?"
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/smart_indices.html.haml:1
@@ -12680,6 +12545,10 @@ msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "When it’s time to kick back, you’ll find beautiful beaches, islands and mountains to explore, just a short flight away. From Malta, you’ll have Europe, the Mediterranean and North Africa on your doorstep. And from Malaysia, you’ll be within easy reach of some of Asia’s most spectacular scenery."
+msgstr ""
+
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:63
+msgid "When the Affiliate’s referred clients open an account with any member of the Binary group, we assume ownership of the database of names and contact information and any other data of the Affiliates’ referred clients."
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:122
@@ -13115,7 +12984,7 @@ msgstr ""
 msgid "You are not a Payment Agent"
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:81
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:82
 msgid "You are not allowed to rebate any part commission payment onto your referrals and should the company realise you are engaged in such actions; your affiliate account shall be revoked immediately."
 msgstr ""
 
@@ -13236,7 +13105,7 @@ msgstr ""
 msgid "You have not granted access to any apps."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:118
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:119
 msgid "You have not obtained and have not maintained all necessary licences and consents to operate within any laws, rules, and regulations applicable under the authority of any regulatory body of the jurisdiction(s) in which you operate or target your business;"
 msgstr ""
 
@@ -13358,11 +13227,11 @@ msgstr ""
 msgid "You represent and warrant to the Company that, excluding the Content, you have the right to use, reproduce, transmit, copy, publicly display, publicly perform, and distribute your Application, and that use or promotion of your Application will not violate the rights of any third party (e.g., copyright, patent, trademark, privacy, publicity or other proprietary right of any person or entity), or any applicable regulation or law, and the laws of any country in which your Application is made available."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:88
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:89
 msgid "You represent, warrant, and undertake that you have obtained and shall maintain all necessary licences and consents to operate within any laws, rules, and regulations applicable under the authority of any regulatory body of the jurisdiction(s) in which you operate or target your business."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:89
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:90
 msgid "You represent, warrant, and undertake that your website or promotion shall contain no material which is defamatory, pornographic, unlawful, harmful, threatening, obscene, harassing, or racially, ethnically, or otherwise objectionable or discriminatory, violent, politically sensitive, or otherwise controversial or in breach of any third party rights and shall not link to any such material."
 msgstr ""
 
@@ -13375,7 +13244,7 @@ msgid "You set the barrier(s) to define your position."
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:26
-msgid "You shall avoid disclosure or unauthorized use of any confidential information that may come to your knowledge or possession to third persons or external parties unless you have our prior written consent and that you will use such confidential information only for purposes necessary to further the purposes of this Agreement."
+msgid "You shall avoid disclosure or unauthorized use of any confidential information that may come to your knowledge or possession to third persons or external parties."
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:186
@@ -13386,7 +13255,7 @@ msgstr ""
 msgid "You shall discontinue your use of all prior versions of the Binary.com API in favour of the revised Binary.com API. While it is the Company’s intention that the revised Binary.com API shall be backward compatible with the immediately prior version of the Binary.com API, the Company does not guarantee or warrant that this shall be so, and the Company shall have no liability whatsoever to you for any failure of the revised Binary.com API to be backward compatible with any prior version of the Binary.com API."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:102
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:103
 msgid "You shall indemnify on demand and hold the Company harmless from, and against any and all losses, demands, claims, damages, costs, expenses (including, but not limited to, consequential losses, loss of profit, and reasonable legal costs, if applicable), and liabilities suffered or incurred, directly, or indirectly, by the Company in consequence of any breach, non-performance, or non-observance by you of any of your obligations or warranties under this Agreement."
 msgstr ""
 
@@ -13908,7 +13777,7 @@ msgstr ""
 msgid "apostrophe"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2056
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2103
 msgid "barrier"
 msgstr ""
 
@@ -13922,7 +13791,7 @@ msgid "binary options, forex, forex trading, online trading, financial trading, 
 msgstr ""
 
 #. ($self->date_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:767
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:805
 msgid "close on %1"
 msgstr ""
 
@@ -13934,7 +13803,7 @@ msgstr ""
 msgid "conflicts Policy"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:761
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:799
 msgid "contract start time"
 msgstr ""
 
@@ -13987,11 +13856,11 @@ msgstr ""
 msgid "f"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:772
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:810
 msgid "first tick"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2056
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2103
 msgid "high barrier"
 msgstr ""
 
@@ -14034,7 +13903,7 @@ msgstr ""
 msgid "loading..."
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2056
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2103
 msgid "low barrier"
 msgstr ""
 
@@ -14061,7 +13930,7 @@ msgstr ""
 msgid "minimum is"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2053
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2100
 msgid "minus"
 msgstr ""
 
@@ -14118,7 +13987,7 @@ msgstr ""
 msgid "period"
 msgstr ""
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2053
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2100
 msgid "plus"
 msgstr ""
 
@@ -14970,29 +14839,8 @@ msgstr ""
 msgid "“Matches” – You win when the last digit of the last tick matches your prediction."
 msgstr ""
 
-# Start of extra_translations
-#: Underlying Symbol frxAUDJPY
-msgid "AUD/JPY"
-msgstr ""
-
-#: Underlying Symbol frxGBPZAR
-msgid "GBP/ZAR"
-msgstr ""
-
 #: Underlying Symbol frxUSDZAR
 msgid "USDZAR"
-msgstr ""
-
-#: Underlying Symbol frxEURTRY
-msgid "EUR/TRY"
-msgstr ""
-
-#: Underlying Symbol frxAUDPLN
-msgid "AUD/PLN"
-msgstr ""
-
-#: Underlying Symbol frxUSDKRW
-msgid "USD/KRW"
 msgstr ""
 
 #: Underlying Symbol frxGBPSGD
@@ -15011,10 +14859,6 @@ msgstr ""
 msgid "BTC/EUR"
 msgstr ""
 
-#: Underlying Symbol frxEURNOK
-msgid "EUR/NOK"
-msgstr ""
-
 #: Underlying Symbol frxGBPAED
 msgid "GBP/AED"
 msgstr ""
@@ -15027,36 +14871,16 @@ msgstr ""
 msgid "EUR/JPY"
 msgstr ""
 
-#: Underlying Symbol frxGBPINR
-msgid "GBP/INR"
-msgstr ""
-
 #: Underlying Symbol frxCADJPY
 msgid "CAD/JPY"
-msgstr ""
-
-#: Underlying Symbol frxAUDCZK
-msgid "AUD/CZK"
 msgstr ""
 
 #: Underlying Symbol frxEURRUB
 msgid "EUR/RUB"
 msgstr ""
 
-#: Underlying Symbol frxEURPLN
-msgid "EUR/PLN"
-msgstr ""
-
-#: Underlying Symbol frxAUDDKK
-msgid "AUD/DKK"
-msgstr ""
-
 #: Underlying Symbol frxGBPUSD
 msgid "GBP/USD"
-msgstr ""
-
-#: Underlying Symbol frxNZDCHF
-msgid "NZDCHF"
 msgstr ""
 
 #: Underlying Symbol frxBTCUSD
@@ -15071,24 +14895,8 @@ msgstr ""
 msgid "AUD/AED"
 msgstr ""
 
-#: Underlying Symbol frxEURSGD
-msgid "EUR/SGD"
-msgstr ""
-
-#: Underlying Symbol frxEURUSD
-msgid "EUR/USD"
-msgstr ""
-
-#: Underlying Symbol frxAUDSGD
-msgid "AUD/SGD"
-msgstr ""
-
 #: Underlying Symbol frxEURINR
 msgid "EUR/INR"
-msgstr ""
-
-#: Underlying Symbol frxGBPTRY
-msgid "GBP/TRY"
 msgstr ""
 
 #: Underlying Symbol frxGBPCNY
@@ -15107,14 +14915,6 @@ msgstr ""
 msgid "GBP/BRL"
 msgstr ""
 
-#: Underlying Symbol frxAUDNOK
-msgid "AUD/NOK"
-msgstr ""
-
-#: Underlying Symbol frxEURKRW
-msgid "EUR/KRW"
-msgstr ""
-
 #: Underlying Symbol frxEURAUD
 msgid "EUR/AUD"
 msgstr ""
@@ -15131,10 +14931,6 @@ msgstr ""
 msgid "EUR/ILS"
 msgstr ""
 
-#: Underlying Symbol frxCADCHF
-msgid "CAD/CHF"
-msgstr ""
-
 #: Underlying Symbol frxAUDSAR
 msgid "AUD/SAR"
 msgstr ""
@@ -15147,22 +14943,6 @@ msgstr ""
 msgid "USD/CZK"
 msgstr ""
 
-#: Underlying Symbol frxEURZAR
-msgid "EUR/ZAR"
-msgstr ""
-
-#: Underlying Symbol frxAUDCNY
-msgid "AUD/CNY"
-msgstr ""
-
-#: Underlying Symbol frxGBPSAR
-msgid "GBP/SAR"
-msgstr ""
-
-#: Underlying Symbol frxUSDINR
-msgid "USD/INR"
-msgstr ""
-
 #: Underlying Symbol frxUSDAED
 msgid "USD/AED"
 msgstr ""
@@ -15171,36 +14951,16 @@ msgstr ""
 msgid "EUR/SAR"
 msgstr ""
 
-#: Underlying Symbol WLDEUR
-msgid "EUR Index"
-msgstr ""
-
-#: Underlying Symbol frxUSDRUB
-msgid "USD/RUB"
-msgstr ""
-
 #: Underlying Symbol frxUSDNOK
 msgid "USD/NOK"
 msgstr ""
 
-#: Underlying Symbol frxEURCNY
-msgid "EUR/CNY"
+#: Underlying Symbol frxAUDTRY
+msgid "AUD/TRY"
 msgstr ""
 
 #: Underlying Symbol frxEURBRL
 msgid "EUR/BRL"
-msgstr ""
-
-#: Underlying Symbol frxUSDDKK
-msgid "USD/DKK"
-msgstr ""
-
-#: Underlying Symbol frxNZDUSD
-msgid "NZD/USD"
-msgstr ""
-
-#: Underlying Symbol WLDUSD
-msgid "USD Index"
 msgstr ""
 
 #: Underlying Symbol frxAUDNZD
@@ -15223,22 +14983,6 @@ msgstr ""
 msgid "AUD/IDR"
 msgstr ""
 
-#: Underlying Symbol frxAUDCHF
-msgid "AUD/CHF"
-msgstr ""
-
-#: Underlying Symbol frxUSDCHF
-msgid "USD/CHF"
-msgstr ""
-
-#: Underlying Symbol frxGBPCAD
-msgid "GBP/CAD"
-msgstr ""
-
-#: Underlying Symbol frxAUDILS
-msgid "AUD/ILS"
-msgstr ""
-
 #: Underlying Symbol frxEURIDR
 msgid "EUR/IDR"
 msgstr ""
@@ -15251,16 +14995,197 @@ msgstr ""
 msgid "GBP/CZK"
 msgstr ""
 
+#: Underlying Symbol frxUSDILS
+msgid "USD/ILS"
+msgstr ""
+
+#: Underlying Symbol WLDAUD
+msgid "AUD Index"
+msgstr ""
+
+#: Underlying Symbol frxGBPILS
+msgid "GBP/ILS"
+msgstr ""
+
+#: Underlying Symbol frxUSDCAD
+msgid "USD/CAD"
+msgstr ""
+
+#: Underlying Symbol frxGBPJPY
+msgid "GBP/JPY"
+msgstr ""
+
+#: Underlying Symbol WLDGBP
+msgid "GBP Index"
+msgstr ""
+
+#: Underlying Symbol frxGBPNZD
+msgid "GBP/NZD"
+msgstr ""
+
+#: Underlying Symbol frxNZDJPY
+msgid "NZD/JPY"
+msgstr ""
+
+#: Underlying Symbol frxAUDSEK
+msgid "AUD/SEK"
+msgstr ""
+
+#: Underlying Symbol frxGBPAUD
+msgid "GBP/AUD"
+msgstr ""
+
+#: Underlying Symbol frxGBPIDR
+msgid "GBP/IDR"
+msgstr ""
+
+#: Underlying Symbol frxUSDSEK
+msgid "USD/SEK"
+msgstr ""
+
+#: Underlying Symbol frxUSDIDR
+msgid "USD/IDR"
+msgstr ""
+
+#: Underlying Symbol frxAUDINR
+msgid "AUD/INR"
+msgstr ""
+
+# Start of extra_translations
+#: Underlying Symbol frxAUDJPY
+msgid "AUD/JPY"
+msgstr ""
+
+#: Underlying Symbol frxGBPZAR
+msgid "GBP/ZAR"
+msgstr ""
+
+#: Underlying Symbol frxEURTRY
+msgid "EUR/TRY"
+msgstr ""
+
+#: Underlying Symbol frxAUDPLN
+msgid "AUD/PLN"
+msgstr ""
+
+#: Underlying Symbol frxUSDKRW
+msgid "USD/KRW"
+msgstr ""
+
+#: Underlying Symbol frxEURNOK
+msgid "EUR/NOK"
+msgstr ""
+
+#: Underlying Symbol frxGBPINR
+msgid "GBP/INR"
+msgstr ""
+
+#: Underlying Symbol frxAUDCZK
+msgid "AUD/CZK"
+msgstr ""
+
+#: Underlying Symbol frxEURPLN
+msgid "EUR/PLN"
+msgstr ""
+
+#: Underlying Symbol frxAUDDKK
+msgid "AUD/DKK"
+msgstr ""
+
+#: Underlying Symbol frxNZDCHF
+msgid "NZDCHF"
+msgstr ""
+
+#: Underlying Symbol frxEURSGD
+msgid "EUR/SGD"
+msgstr ""
+
+#: Underlying Symbol frxEURUSD
+msgid "EUR/USD"
+msgstr ""
+
+#: Underlying Symbol frxAUDSGD
+msgid "AUD/SGD"
+msgstr ""
+
+#: Underlying Symbol frxGBPTRY
+msgid "GBP/TRY"
+msgstr ""
+
+#: Underlying Symbol frxAUDNOK
+msgid "AUD/NOK"
+msgstr ""
+
+#: Underlying Symbol frxEURKRW
+msgid "EUR/KRW"
+msgstr ""
+
+#: Underlying Symbol frxCADCHF
+msgid "CAD/CHF"
+msgstr ""
+
+#: Underlying Symbol frxEURZAR
+msgid "EUR/ZAR"
+msgstr ""
+
+#: Underlying Symbol frxAUDCNY
+msgid "AUD/CNY"
+msgstr ""
+
+#: Underlying Symbol frxGBPSAR
+msgid "GBP/SAR"
+msgstr ""
+
+#: Underlying Symbol frxUSDINR
+msgid "USD/INR"
+msgstr ""
+
+#: Underlying Symbol WLDEUR
+msgid "EUR Index"
+msgstr ""
+
+#: Underlying Symbol frxUSDRUB
+msgid "USD/RUB"
+msgstr ""
+
+#: Underlying Symbol frxEURCNY
+msgid "EUR/CNY"
+msgstr ""
+
+#: Underlying Symbol frxNZDUSD
+msgid "NZD/USD"
+msgstr ""
+
+#: Underlying Symbol frxUSDDKK
+msgid "USD/DKK"
+msgstr ""
+
+#: Underlying Symbol WLDUSD
+msgid "USD Index"
+msgstr ""
+
+#: Underlying Symbol frxAUDCHF
+msgid "AUD/CHF"
+msgstr ""
+
+#: Underlying Symbol frxGBPCAD
+msgid "GBP/CAD"
+msgstr ""
+
+#: Underlying Symbol frxUSDCHF
+msgid "USD/CHF"
+msgstr ""
+
+#: Underlying Symbol frxAUDILS
+msgid "AUD/ILS"
+msgstr ""
+
 #: Underlying Symbol frxAUDUSD
 msgid "AUD/USD"
 msgstr ""
 
 #: Underlying Symbol frxGBPCHF
 msgid "GBP/CHF"
-msgstr ""
-
-#: Underlying Symbol frxUSDILS
-msgid "USD/ILS"
 msgstr ""
 
 #: Underlying Symbol frxEURGBP
@@ -15271,20 +15196,12 @@ msgstr ""
 msgid "USD/BRL"
 msgstr ""
 
-#: Underlying Symbol WLDAUD
-msgid "AUD Index"
-msgstr ""
-
 #: Underlying Symbol frxEURCZK
 msgid "EUR/CZK"
 msgstr ""
 
 #: Underlying Symbol frxAUDCAD
 msgid "AUD/CAD"
-msgstr ""
-
-#: Underlying Symbol frxGBPILS
-msgid "GBP/ILS"
 msgstr ""
 
 #: Underlying Symbol frxUSDHKD
@@ -15295,16 +15212,8 @@ msgstr ""
 msgid "EUR/MXN"
 msgstr ""
 
-#: Underlying Symbol frxUSDCAD
-msgid "USD/CAD"
-msgstr ""
-
 #: Underlying Symbol frxGBPKRW
 msgid "GBP/KRW"
-msgstr ""
-
-#: Underlying Symbol frxGBPJPY
-msgid "GBP/JPY"
 msgstr ""
 
 #: Underlying Symbol frxGBPHKD
@@ -15319,24 +15228,8 @@ msgstr ""
 msgid "USD/TRY"
 msgstr ""
 
-#: Underlying Symbol WLDGBP
-msgid "GBP Index"
-msgstr ""
-
-#: Underlying Symbol frxGBPNZD
-msgid "GBP/NZD"
-msgstr ""
-
 #: Underlying Symbol frxUSDPLN
 msgid "USD/PLN"
-msgstr ""
-
-#: Underlying Symbol frxNZDJPY
-msgid "NZD/JPY"
-msgstr ""
-
-#: Underlying Symbol frxAUDSEK
-msgid "AUD/SEK"
 msgstr ""
 
 #: Underlying Symbol frxEURCAD
@@ -15355,24 +15248,8 @@ msgstr ""
 msgid "GBP/PLN"
 msgstr ""
 
-#: Underlying Symbol frxGBPAUD
-msgid "GBP/AUD"
-msgstr ""
-
-#: Underlying Symbol frxGBPIDR
-msgid "GBP/IDR"
-msgstr ""
-
-#: Underlying Symbol frxUSDSEK
-msgid "USD/SEK"
-msgstr ""
-
 #: Underlying Symbol frxUSDMXN
 msgid "USD/MXN"
-msgstr ""
-
-#: Underlying Symbol frxUSDIDR
-msgid "USD/IDR"
 msgstr ""
 
 #: Underlying Symbol frxAUDKRW
@@ -15383,8 +15260,188 @@ msgstr ""
 msgid "CHF/JPY"
 msgstr ""
 
-#: Underlying Symbol frxAUDINR
-msgid "AUD/INR"
+#: Underlying Symbol OTC_SSECOMP
+msgid "Shanghai OTC Index"
+msgstr ""
+
+#: Underlying Symbol SYNFCHI
+msgid "French Smart Index"
+msgstr ""
+
+#: Underlying Symbol OTC_DJI
+msgid "Wall Street OTC Index"
+msgstr ""
+
+#: Underlying Symbol SYNN225
+msgid "Japanese Smart Index"
+msgstr ""
+
+#: Underlying Symbol IXIC
+msgid "US Tech Composite Index"
+msgstr ""
+
+#: Underlying Symbol OTC_RTSI
+msgid "Russian Regular OTC Index"
+msgstr ""
+
+#: Underlying Symbol OTC_AEX
+msgid "Dutch OTC Index"
+msgstr ""
+
+#: Underlying Symbol FTSE
+msgid "UK Index"
+msgstr ""
+
+#: Underlying Symbol DFMGI
+msgid "Dubai Index"
+msgstr ""
+
+#: Underlying Symbol N150
+msgid "Euro 150 Index"
+msgstr ""
+
+#: Underlying Symbol OTC_FTSEMIB
+msgid "Italian OTC Index"
+msgstr ""
+
+#: Underlying Symbol SSECOMP
+msgid "Shanghai Index"
+msgstr ""
+
+#: Underlying Symbol OTC_BIST100
+msgid "Istanbul OTC Index"
+msgstr ""
+
+#: Underlying Symbol FCHI
+msgid "French Index"
+msgstr ""
+
+#: Underlying Symbol EGX30
+msgid "Egypt Index"
+msgstr ""
+
+#: Underlying Symbol PSI20
+msgid "Portuguese Index"
+msgstr ""
+
+#: Underlying Symbol OTC_IBOV
+msgid "Brazilian OTC Index"
+msgstr ""
+
+#: Underlying Symbol DJI
+msgid "Wall Street Index"
+msgstr ""
+
+#: Underlying Symbol SASEIDX
+msgid "Saudi Arabia Index"
+msgstr ""
+
+#: Underlying Symbol OTC_PSI20
+msgid "Portuguese OTC Index"
+msgstr ""
+
+#: Underlying Symbol OTC_IBEX35
+msgid "Spanish OTC Index"
+msgstr ""
+
+#: Underlying Symbol SX5E
+msgid "Euro 50 Index"
+msgstr ""
+
+#: Underlying Symbol OTC_N225
+msgid "Japanese OTC Index"
+msgstr ""
+
+#: Underlying Symbol SYNSX5E
+msgid "Euro 50 Smart Index"
+msgstr ""
+
+#: Underlying Symbol OTC_SZSECOMP
+msgid "Shenzhen OTC Index"
+msgstr ""
+
+#: Underlying Symbol OBX
+msgid "Norwegian Index"
+msgstr ""
+
+#: Underlying Symbol OTC_BFX
+msgid "Belgian OTC Index"
+msgstr ""
+
+#: Underlying Symbol OTC_AS51
+msgid "Australian OTC Index"
+msgstr ""
+
+#: Underlying Symbol N225
+msgid "Japanese Index"
+msgstr ""
+
+#: Underlying Symbol OTC_MICEX
+msgid "Russian 10 OTC Index"
+msgstr ""
+
+#: Underlying Symbol OTC_SHSZ300
+msgid "Shenzhen 300 OTC Index"
+msgstr ""
+
+#: Underlying Symbol IBEX35
+msgid "Spanish Index"
+msgstr ""
+
+#: Underlying Symbol OTC_DFMGI
+msgid "Dubai OTC Index"
+msgstr ""
+
+#: Underlying Symbol SPTSX60
+msgid "Canadian Index"
+msgstr ""
+
+#: Underlying Symbol AEX
+msgid "Dutch Index"
+msgstr ""
+
+#: Underlying Symbol MIB30
+msgid "Italian 30 Index"
+msgstr ""
+
+#: Underlying Symbol RTSI
+msgid "Russian Regular Index"
+msgstr ""
+
+#: Underlying Symbol SZSECOMP
+msgid "Shenzhen Index"
+msgstr ""
+
+#: Underlying Symbol OTC_NIFTY
+msgid "Indian 50 OTC Index"
+msgstr ""
+
+#: Underlying Symbol ADSMI
+msgid "Abu Dhabi Index"
+msgstr ""
+
+#: Underlying Symbol BIST100
+msgid "Istanbul Index"
+msgstr ""
+
+#: Underlying Symbol OTC_ISEQ
+msgid "Irish OTC Index"
+msgstr ""
+
+#: Underlying Symbol BFX
+msgid "Belgian Index"
+msgstr ""
+
+#: Underlying Symbol OTC_OMXS30
+msgid "Swedish OTC Index"
+msgstr ""
+
+#: Underlying Symbol ISEQ
+msgid "Irish Index"
+msgstr ""
+
+#: Underlying Symbol IBOV
+msgid "Brazilian Index"
 msgstr ""
 
 #: Underlying Symbol HSCEI
@@ -15403,76 +15460,32 @@ msgstr ""
 msgid "AP Ordinary"
 msgstr ""
 
-#: Underlying Symbol SYNFCHI
-msgid "French Smart Index"
-msgstr ""
-
 #: Underlying Symbol JCI
 msgid "Jakarta Index"
 msgstr ""
 
-#: Underlying Symbol SYNN225
-msgid "Japanese Smart Index"
+#: Underlying Symbol OTC_GDAXI
+msgid "German OTC Index"
 msgstr ""
 
-#: Underlying Symbol IXIC
-msgid "US Tech Composite Index"
+#: Underlying Symbol OTC_KOSPI2
+msgid "Korean OTC Index"
 msgstr ""
 
-#: Underlying Symbol OEX
-msgid "US S&P 100"
+#: Underlying Symbol OTC_KWSEIDX
+msgid "Kuwait OTC Index"
 msgstr ""
 
-#: Underlying Symbol FTSE
-msgid "UK Index"
-msgstr ""
-
-#: Underlying Symbol DFMGI
-msgid "Dubai Index"
-msgstr ""
-
-#: Underlying Symbol N150
-msgid "Euro 150 Index"
-msgstr ""
-
-#: Underlying Symbol NZ50
-msgid "New Zealand Index"
-msgstr ""
-
-#: Underlying Symbol SSECOMP
-msgid "Shanghai Index"
-msgstr ""
-
-#: Underlying Symbol FCHI
-msgid "French Index"
+#: Underlying Symbol OTC_FCHI
+msgid "French OTC Index"
 msgstr ""
 
 #: Underlying Symbol SYNFTSE
 msgid "UK Smart Index"
 msgstr ""
 
-#: Underlying Symbol EGX30
-msgid "Egypt Index"
-msgstr ""
-
-#: Underlying Symbol PSI20
-msgid "Portuguese Index"
-msgstr ""
-
-#: Underlying Symbol DJI
-msgid "Wall Street Index"
-msgstr ""
-
-#: Underlying Symbol SASEIDX
-msgid "Saudi Arabia Index"
-msgstr ""
-
 #: Underlying Symbol SPC
 msgid "US Index"
-msgstr ""
-
-#: Underlying Symbol SX5E
-msgid "Euro 50 Index"
 msgstr ""
 
 #: Underlying Symbol NDX
@@ -15483,92 +15496,72 @@ msgstr ""
 msgid "Australian Index"
 msgstr ""
 
+#: Underlying Symbol OTC_JCI
+msgid "Jakarta OTC Index"
+msgstr ""
+
 #: Underlying Symbol OMXS30
 msgid "Swedish Index"
 msgstr ""
 
-#: Underlying Symbol SYNSX5E
-msgid "Euro 50 Smart Index"
-msgstr ""
-
-#: Underlying Symbol STI
-msgid "Singapore Index"
+#: Underlying Symbol OTC_N100
+msgid "Euro 100 OTC Index"
 msgstr ""
 
 #: Underlying Symbol SYNDJI
 msgid "Wall Street Smart Index"
 msgstr ""
 
-#: Underlying Symbol SYNPSI20
-msgid "Portuguese Smart Index"
+#: Underlying Symbol STI
+msgid "Singapore Index"
 msgstr ""
 
-#: Underlying Symbol OBX
-msgid "Norwegian Index"
+#: Underlying Symbol SYNPSI20
+msgid "Portuguese Smart Index"
 msgstr ""
 
 #: Underlying Symbol KOSPI2
 msgid "Korean Index"
 msgstr ""
 
-#: Underlying Symbol KWSEIDX
-msgid "Kuwait Index"
+#: Underlying Symbol OTC_HSI
+msgid "Hong Kong OTC Index"
 msgstr ""
 
-#: Underlying Symbol NIFTY
-msgid "Indian 50 Index"
-msgstr ""
-
-#: Underlying Symbol N225
-msgid "Japanese Index"
+#: Underlying Symbol OTC_IXIC
+msgid "US Tech OTC Index"
 msgstr ""
 
 #: Underlying Symbol SYNAEX
 msgid "Dutch Smart Index"
 msgstr ""
 
+#: Underlying Symbol OTC_OBX
+msgid "Norwegian OTC Index"
+msgstr ""
+
+#: Underlying Symbol OTC_SASEIDX
+msgid "Saudi Arabia OTC Index"
+msgstr ""
+
 #: Underlying Symbol SSMI
 msgid "Swiss Index"
 msgstr ""
 
-#: Underlying Symbol SHSZ300
-msgid "Shenzhen 300 Index"
+#: Underlying Symbol OTC_FTSE
+msgid "UK OTC Index"
 msgstr ""
 
 #: Underlying Symbol HSI
 msgid "Hong Kong Index"
 msgstr ""
 
-#: Underlying Symbol IBEX35
-msgid "Spanish Index"
-msgstr ""
-
-#: Underlying Symbol SPTSX60
-msgid "Canadian Index"
-msgstr ""
-
-#: Underlying Symbol AEX
-msgid "Dutch Index"
-msgstr ""
-
 #: Underlying Symbol SYNGDAXI
 msgid "German Smart Index"
 msgstr ""
 
-#: Underlying Symbol MIB30
-msgid "Italian 30 Index"
-msgstr ""
-
 #: Underlying Symbol SYNSSMI
 msgid "Swiss Smart Index"
-msgstr ""
-
-#: Underlying Symbol RTSI
-msgid "Russian Regular Index"
-msgstr ""
-
-#: Underlying Symbol SZSECOMP
-msgid "Shenzhen Index"
 msgstr ""
 
 #: Underlying Symbol FTSEMIB
@@ -15579,32 +15572,24 @@ msgstr ""
 msgid "Euro 100 Index"
 msgstr ""
 
-#: Underlying Symbol ADSMI
-msgid "Abu Dhabi Index"
+#: Underlying Symbol OTC_BSESENSEX30
+msgid "Bombay OTC Index"
 msgstr ""
 
-#: Underlying Symbol BIST100
-msgid "Istanbul Index"
+#: Underlying Symbol OTC_N150
+msgid "Euro 150 OTC Index"
+msgstr ""
+
+#: Underlying Symbol OTC_SPC
+msgid "US OTC Index"
+msgstr ""
+
+#: Underlying Symbol OTC_SPTSX60
+msgid "Canadian OTC Index"
 msgstr ""
 
 #: Underlying Symbol SYNSPC
 msgid "US Smart Index"
-msgstr ""
-
-#: Underlying Symbol BFX
-msgid "Belgian Index"
-msgstr ""
-
-#: Underlying Symbol ISEQ
-msgid "Irish Index"
-msgstr ""
-
-#: Underlying Symbol IBOV
-msgid "Brazilian Index"
-msgstr ""
-
-#: Underlying Symbol MICEX
-msgid "Russian 10 Index"
 msgstr ""
 
 #: Underlying Symbol BSESENSEX30
@@ -15615,44 +15600,12 @@ msgstr ""
 msgid "Tesla Motors Inc."
 msgstr ""
 
-#: Underlying Symbol USCT
-msgid "Citigroup Inc."
-msgstr ""
-
 #: Underlying Symbol USBDU
 msgid "Baidu Inc."
 msgstr ""
 
-#: Underlying Symbol FPMIC
-msgid "Michelin"
-msgstr ""
-
-#: Underlying Symbol USVISA
-msgid "VISA Inc."
-msgstr ""
-
-#: Underlying Symbol DECOMMBK
-msgid "Commerzbank"
-msgstr ""
-
-#: Underlying Symbol USVIPSHP
-msgid "Vipshop Holdings Limited"
-msgstr ""
-
 #: Underlying Symbol FPTECHNIP
 msgid "Technip oil equipment and services"
-msgstr ""
-
-#: Underlying Symbol DETKAG
-msgid "Thyssenkrupp SS"
-msgstr ""
-
-#: Underlying Symbol USCTRP
-msgid "Ctrip.com International Ltd."
-msgstr ""
-
-#: Underlying Symbol UKULVR
-msgid "Unilever plc"
 msgstr ""
 
 #: Underlying Symbol USLVS
@@ -15687,52 +15640,16 @@ msgstr ""
 msgid "The Goldman Sachs Group Inc."
 msgstr ""
 
-#: Underlying Symbol USBNG
-msgid "The Boeing Company"
-msgstr ""
-
 #: Underlying Symbol USLNKD
 msgid "LinkedIn Corporation"
-msgstr ""
-
-#: Underlying Symbol AUSUN
-msgid "SUNCORP GROUP LIMITED"
-msgstr ""
-
-#: Underlying Symbol INRIL
-msgid "Reliance Industries Ltd"
 msgstr ""
 
 #: Underlying Symbol USSBUX
 msgid "Starbucks Corporation"
 msgstr ""
 
-#: Underlying Symbol AUBHP
-msgid "BHP Billiton Ltd"
-msgstr ""
-
 #: Underlying Symbol AUORG
 msgid "ORIGIN ENERGY LIMITED"
-msgstr ""
-
-#: Underlying Symbol USAMAT
-msgid "Applied Materials Inc."
-msgstr ""
-
-#: Underlying Symbol INTATAMOTORS
-msgid "Tata Motors"
-msgstr ""
-
-#: Underlying Symbol USUKU
-msgid "Youku Tudou Inc."
-msgstr ""
-
-#: Underlying Symbol NAHEIA
-msgid "Heineken"
-msgstr ""
-
-#: Underlying Symbol UKANH
-msgid "Al Noor Hospitals Group plc"
 msgstr ""
 
 #: Underlying Symbol USDD
@@ -15751,14 +15668,6 @@ msgstr ""
 msgid "Centrica plc"
 msgstr ""
 
-#: Underlying Symbol FPAI
-msgid "Air Liquide"
-msgstr ""
-
-#: Underlying Symbol AUMGR
-msgid "Mirvac Group Stapled"
-msgstr ""
-
 #: Underlying Symbol AULLC
 msgid "Lend Lease Group Stapled"
 msgstr ""
@@ -15769,10 +15678,6 @@ msgstr ""
 
 #: Underlying Symbol USWLGRN
 msgid "Walgreens Boots Alliance Inc."
-msgstr ""
-
-#: Underlying Symbol USSFUN
-msgid "SouFun Holdings Limited"
 msgstr ""
 
 #: Underlying Symbol USAIG
@@ -15791,32 +15696,12 @@ msgstr ""
 msgid "Berkshire Hathaway Inc."
 msgstr ""
 
-#: Underlying Symbol USVRTX
-msgid "Vertex Pharmaceuticals Incorporated"
-msgstr ""
-
-#: Underlying Symbol USQHO
-msgid "Qihoo 360 Technology Company Limited"
-msgstr ""
-
-#: Underlying Symbol DEALV
-msgid "Allianz SE"
-msgstr ""
-
 #: Underlying Symbol AUCBA
 msgid "Commbank (Australia)"
 msgstr ""
 
-#: Underlying Symbol USJNJ
-msgid "Johnson & Johnson"
-msgstr ""
-
 #: Underlying Symbol UKAAL
 msgid "Anglo American plc"
-msgstr ""
-
-#: Underlying Symbol AUGPT
-msgid "GPT Group Stapled"
 msgstr ""
 
 #: Underlying Symbol UKCMPS
@@ -15827,28 +15712,8 @@ msgstr ""
 msgid "New Oriental Edu & Tech Group Inc."
 msgstr ""
 
-#: Underlying Symbol USAMX
-msgid "American Express Company"
-msgstr ""
-
-#: Underlying Symbol UKVIV
-msgid "Aviva plc"
-msgstr ""
-
-#: Underlying Symbol USGMO
-msgid "Keurig Green Mountain Inc."
-msgstr ""
-
 #: Underlying Symbol AUCCL
 msgid "Coca-cola Amatil Limited"
-msgstr ""
-
-#: Underlying Symbol AUAGL
-msgid "AGL Energy Limited"
-msgstr ""
-
-#: Underlying Symbol USYNDX
-msgid "Yandex N.V."
 msgstr ""
 
 #: Underlying Symbol NAINGA
@@ -15859,36 +15724,12 @@ msgstr ""
 msgid "Hewlett-Packard Company"
 msgstr ""
 
-#: Underlying Symbol FPAIR
-msgid "Airbus Group"
-msgstr ""
-
 #: Underlying Symbol FPBNP
 msgid "BNP Paribas"
 msgstr ""
 
 #: Underlying Symbol USUAL
 msgid "United Continental Holdings Inc."
-msgstr ""
-
-#: Underlying Symbol FPSAN
-msgid "SANOFI"
-msgstr ""
-
-#: Underlying Symbol DESAP
-msgid "SAP SE"
-msgstr ""
-
-#: Underlying Symbol USATHM
-msgid "Autohome Inc."
-msgstr ""
-
-#: Underlying Symbol FPSGO
-msgid "Cie de Saint-Gobain"
-msgstr ""
-
-#: Underlying Symbol DEBKP
-msgid "Piraeus Bank SA"
 msgstr ""
 
 #: Underlying Symbol DEAIR
@@ -15899,20 +15740,8 @@ msgstr ""
 msgid "Procter & Gamble Co."
 msgstr ""
 
-#: Underlying Symbol USFB
-msgid "Facebook Inc."
-msgstr ""
-
-#: Underlying Symbol FPDG
-msgid "Vinci"
-msgstr ""
-
 #: Underlying Symbol FPEDF
 msgid "Electricite de France"
-msgstr ""
-
-#: Underlying Symbol USVGUS
-msgid "Virgin America Inc."
 msgstr ""
 
 #: Underlying Symbol USKING
@@ -15923,20 +15752,8 @@ msgstr ""
 msgid "Accor S.A."
 msgstr ""
 
-#: Underlying Symbol UKIMT
-msgid "Imperial Tobacco Group plc"
-msgstr ""
-
-#: Underlying Symbol FPARC
-msgid "ArcelorMittal steel"
-msgstr ""
-
 #: Underlying Symbol FPUNI
 msgid "Unibail-Rodamco SE"
-msgstr ""
-
-#: Underlying Symbol USQCOM
-msgid "QUALCOMM"
 msgstr ""
 
 #: Underlying Symbol FPBN
@@ -15959,20 +15776,8 @@ msgstr ""
 msgid "Infosys Ltd"
 msgstr ""
 
-#: Underlying Symbol USSRVNW
-msgid "ServiceNow Inc."
-msgstr ""
-
 #: Underlying Symbol NARDSA
 msgid "Royal Dutch Shell"
-msgstr ""
-
-#: Underlying Symbol AUTPM
-msgid "TPG Telecom Limited"
-msgstr ""
-
-#: Underlying Symbol UKNTG
-msgid "National Grid plc"
 msgstr ""
 
 #: Underlying Symbol AUWPL
@@ -15987,10 +15792,6 @@ msgstr ""
 msgid "Daimler AG"
 msgstr ""
 
-#: Underlying Symbol UKLLOY
-msgid "Lloyds Banking Group plc"
-msgstr ""
-
 #: Underlying Symbol USATNT
 msgid "AT&T"
 msgstr ""
@@ -15999,36 +15800,8 @@ msgstr ""
 msgid "Metro AG"
 msgstr ""
 
-#: Underlying Symbol AUCWN
-msgid "Crown Resorts Limited"
-msgstr ""
-
-#: Underlying Symbol USJPM
-msgid "JP Morgan Chase & Co."
-msgstr ""
-
-#: Underlying Symbol USGPR
-msgid "GoPro Inc."
-msgstr ""
-
-#: Underlying Symbol USJMEI
-msgid "Jumei International Holding Limited"
-msgstr ""
-
-#: Underlying Symbol USPBYI
-msgid "Puma Biotechnology Inc."
-msgstr ""
-
-#: Underlying Symbol AUSTO
-msgid "Santos LimitedStar Stock"
-msgstr ""
-
 #: Underlying Symbol DEDBK
 msgid "Deutsche Bank AG"
-msgstr ""
-
-#: Underlying Symbol USILLM
-msgid "Illumina Inc."
 msgstr ""
 
 #: Underlying Symbol FPEI
@@ -16043,18 +15816,6 @@ msgstr ""
 msgid "Credit Agricole"
 msgstr ""
 
-#: Underlying Symbol USEBY
-msgid "eBay Inc."
-msgstr ""
-
-#: Underlying Symbol USEA
-msgid "Electronic Arts Inc."
-msgstr ""
-
-#: Underlying Symbol AUNAB
-msgid "National Australia Bank Ltd"
-msgstr ""
-
 #: Underlying Symbol UKPRDN
 msgid "Prudential plc"
 msgstr ""
@@ -16067,14 +15828,6 @@ msgstr ""
 msgid "Vallourec SA"
 msgstr ""
 
-#: Underlying Symbol UKAZN
-msgid "AstraZeneca plc"
-msgstr ""
-
-#: Underlying Symbol FPLEG
-msgid "Legrand electrical components & equipm"
-msgstr ""
-
 #: Underlying Symbol USGRPN
 msgid "Groupon Inc."
 msgstr ""
@@ -16083,24 +15836,12 @@ msgstr ""
 msgid "Publicis media agencies"
 msgstr ""
 
-#: Underlying Symbol UKSAB
-msgid "SABMiller plc"
-msgstr ""
-
 #: Underlying Symbol USTRPADV
 msgid "TripAdvisor Inc."
 msgstr ""
 
-#: Underlying Symbol USPM
-msgid "Philip Morris International"
-msgstr ""
-
 #: Underlying Symbol USCBS
 msgid "CBS Corporation"
-msgstr ""
-
-#: Underlying Symbol INTATASTEEL
-msgid "Tata Steels"
 msgstr ""
 
 #: Underlying Symbol USHD
@@ -16119,16 +15860,8 @@ msgstr ""
 msgid "ITC Ltd"
 msgstr ""
 
-#: Underlying Symbol UKHSBA
-msgid "HSBC Holdings plc"
-msgstr ""
-
 #: Underlying Symbol USAAIR
 msgid "American Airlines Group Inc."
-msgstr ""
-
-#: Underlying Symbol DEEOAN
-msgid "E.ON SE"
 msgstr ""
 
 #: Underlying Symbol DERHO
@@ -16155,20 +15888,8 @@ msgstr ""
 msgid "Potash Corp of Saskatchewan Inc."
 msgstr ""
 
-#: Underlying Symbol FPSOLV
-msgid "Solvay chemicals"
-msgstr ""
-
 #: Underlying Symbol AUWBC
 msgid "Westpac Banking Co."
-msgstr ""
-
-#: Underlying Symbol USIBM
-msgid "IBM"
-msgstr ""
-
-#: Underlying Symbol USPFE
-msgid "Pfizer Inc."
 msgstr ""
 
 #: Underlying Symbol USSINA
@@ -16191,10 +15912,6 @@ msgstr ""
 msgid "PepsiCo Inc."
 msgstr ""
 
-#: Underlying Symbol AUANZ
-msgid "ANZ Banking Group Ltd"
-msgstr ""
-
 #: Underlying Symbol AUORI
 msgid "Orica Limited"
 msgstr ""
@@ -16203,36 +15920,16 @@ msgstr ""
 msgid "GOOGLE INC. A DL"
 msgstr ""
 
-#: Underlying Symbol UKBATS
-msgid "British American Tobacco"
-msgstr ""
-
 #: Underlying Symbol NAASML
 msgid "ASML Holding"
-msgstr ""
-
-#: Underlying Symbol DELHA
-msgid "Deutsche Lufthansa"
 msgstr ""
 
 #: Underlying Symbol AUAZJ
 msgid "Aurizon Holdings Limited"
 msgstr ""
 
-#: Underlying Symbol USORCL
-msgid "Oracle"
-msgstr ""
-
 #: Underlying Symbol USGLD
 msgid "Gilead Sciensec Inc."
-msgstr ""
-
-#: Underlying Symbol FPKER
-msgid "Kering"
-msgstr ""
-
-#: Underlying Symbol USDLT
-msgid "Delta Air Lines Inc."
 msgstr ""
 
 #: Underlying Symbol DEVOWGEN
@@ -16243,28 +15940,12 @@ msgstr ""
 msgid "Barclays plc"
 msgstr ""
 
-#: Underlying Symbol USVFC
-msgid "VF Corporation"
-msgstr ""
-
-#: Underlying Symbol BBGBLB
-msgid "Groupe Bruxelles Lambert"
-msgstr ""
-
-#: Underlying Symbol USMS
-msgid "Morgan Stanley"
-msgstr ""
-
 #: Underlying Symbol AUMQG
 msgid "MACQUARIE GROUP LIMITED"
 msgstr ""
 
 #: Underlying Symbol AUTLS
 msgid "TELSTRA CORPORATION LIMITED"
-msgstr ""
-
-#: Underlying Symbol NAUNA
-msgid "Unilever"
 msgstr ""
 
 #: Underlying Symbol USWFC
@@ -16279,14 +15960,6 @@ msgstr ""
 msgid "Twitter Inc."
 msgstr ""
 
-#: Underlying Symbol AUQBE
-msgid "QBE INSURANCE GROUP LIMITED"
-msgstr ""
-
-#: Underlying Symbol FPVIV
-msgid "Vivendi"
-msgstr ""
-
 #: Underlying Symbol USMA
 msgid "MasterCard Inc."
 msgstr ""
@@ -16295,80 +15968,28 @@ msgstr ""
 msgid "Sonic Healthcare Limited"
 msgstr ""
 
-#: Underlying Symbol FPSU
-msgid "Schneider Electric"
-msgstr ""
-
 #: Underlying Symbol USINCT
 msgid "Incyte Corpoartion"
-msgstr ""
-
-#: Underlying Symbol UKVOD
-msgid "Vodafone"
 msgstr ""
 
 #: Underlying Symbol UKSPX
 msgid "Spirax-Sarco Engineering plc"
 msgstr ""
 
-#: Underlying Symbol INSUNPHARMA
-msgid "Sun Pharma"
-msgstr ""
-
-#: Underlying Symbol USMMM
-msgid "3M Company"
-msgstr ""
-
-#: Underlying Symbol UKPSN
-msgid "Pearson plc"
-msgstr ""
-
-#: Underlying Symbol USGM
-msgid "General Motors Company"
-msgstr ""
-
 #: Underlying Symbol USNTES
 msgid "NetEase Inc."
-msgstr ""
-
-#: Underlying Symbol USXOM
-msgid "ExxonMobil"
-msgstr ""
-
-#: Underlying Symbol DEDLG
-msgid "Dialog Semiconductor plc"
 msgstr ""
 
 #: Underlying Symbol BBBELG
 msgid "Belgacom"
 msgstr ""
 
-#: Underlying Symbol USNTFLX
-msgid "Netflix Inc."
-msgstr ""
-
-#: Underlying Symbol FPGSZ
-msgid "GDF Suez"
-msgstr ""
-
 #: Underlying Symbol USQQQQ
 msgid "PowerShares QQQ"
 msgstr ""
 
-#: Underlying Symbol USFTBT
-msgid "Fitbit Inc."
-msgstr ""
-
-#: Underlying Symbol UKSTAN
-msgid "Standard Chartered plc"
-msgstr ""
-
 #: Underlying Symbol UKMNS
 msgid "Marks & Spencer Group plc"
-msgstr ""
-
-#: Underlying Symbol USMANU
-msgid "Manchester United plc"
 msgstr ""
 
 #: Underlying Symbol USCISCO
@@ -16381,14 +16002,6 @@ msgstr ""
 
 #: Underlying Symbol FPRNO
 msgid "Renault"
-msgstr ""
-
-#: Underlying Symbol USCYN
-msgid "Cynapsus Therapeutics"
-msgstr ""
-
-#: Underlying Symbol DERHOFIVE
-msgid "Roche Holding Ag-Genusschein"
 msgstr ""
 
 #: Underlying Symbol USDANG
@@ -16407,84 +16020,16 @@ msgstr ""
 msgid "Capgemini computer services"
 msgstr ""
 
-#: Underlying Symbol USFRRRI
-msgid "FERRARI N V COM"
-msgstr ""
-
-#: Underlying Symbol DEDTELE
-msgid "Deutsche Telekom AG"
-msgstr ""
-
-#: Underlying Symbol USBOA
-msgid "Bank of America Corporation"
-msgstr ""
-
-#: Underlying Symbol UKRLSRYC
-msgid "Rolls-Royce Holdings plc"
-msgstr ""
-
-#: Underlying Symbol USPETRO
-msgid "PetroChina Limited"
-msgstr ""
-
-#: Underlying Symbol USMRK
-msgid "Merck & Co. Inc."
-msgstr ""
-
 #: Underlying Symbol USMCT
 msgid "Micron Technology Inc."
-msgstr ""
-
-#: Underlying Symbol USARMR
-msgid "Under Armour Inc."
-msgstr ""
-
-#: Underlying Symbol FPBO
-msgid "Bouygues heavy construction"
-msgstr ""
-
-#: Underlying Symbol AUASX
-msgid "ASX Limited"
-msgstr ""
-
-#: Underlying Symbol USTYTA
-msgid "Toyota Motor Corporation"
-msgstr ""
-
-#: Underlying Symbol USALIBA
-msgid "Alibaba Group Holding Limited"
 msgstr ""
 
 #: Underlying Symbol AUCSL
 msgid "CSL Ltd"
 msgstr ""
 
-#: Underlying Symbol FPCA
-msgid "Carrefour"
-msgstr ""
-
-#: Underlying Symbol AURIO
-msgid "RIO TINTO LIMITED"
-msgstr ""
-
-#: Underlying Symbol FPFP
-msgid "TOTAL"
-msgstr ""
-
-#: Underlying Symbol FPVEO
-msgid "Veolia Environnement water"
-msgstr ""
-
-#: Underlying Symbol FPCS
-msgid "AXA"
-msgstr ""
-
 #: Underlying Symbol DEBEIERSDORF
 msgid "Beiersdorf AG O.N"
-msgstr ""
-
-#: Underlying Symbol USKO
-msgid "The Coca-Cola Company"
 msgstr ""
 
 #: Underlying Symbol DEBAYER
@@ -16493,18 +16038,6 @@ msgstr ""
 
 #: Underlying Symbol DEACB
 msgid "Alpha Bank S.A."
-msgstr ""
-
-#: Underlying Symbol BBUCB
-msgid "UCB"
-msgstr ""
-
-#: Underlying Symbol UKBP
-msgid "BP plc"
-msgstr ""
-
-#: Underlying Symbol USNVAR
-msgid "Univar Inc."
 msgstr ""
 
 #: Underlying Symbol AUWOW
@@ -16527,36 +16060,12 @@ msgstr ""
 msgid "Amcor Ltd"
 msgstr ""
 
-#: Underlying Symbol UKGLEN
-msgid "Glencore Xstrat"
-msgstr ""
-
-#: Underlying Symbol FPST
-msgid "STMicroelectronics semiconductors"
-msgstr ""
-
-#: Underlying Symbol USSLRCT
-msgid "SolarCity Corporation"
-msgstr ""
-
 #: Underlying Symbol USCHMO
 msgid "China Mobile Limited"
 msgstr ""
 
 #: Underlying Symbol USSONY
 msgid "Sony Corporation"
-msgstr ""
-
-#: Underlying Symbol USYHOO
-msgid "Yahoo! Inc."
-msgstr ""
-
-#: Underlying Symbol USSHU
-msgid "Sohu.com Inc."
-msgstr ""
-
-#: Underlying Symbol UKDGE
-msgid "Diageo plc"
 msgstr ""
 
 #: Underlying Symbol INMARUTI
@@ -16579,10 +16088,6 @@ msgstr ""
 msgid "L'Oreal"
 msgstr ""
 
-#: Underlying Symbol AUFMG
-msgid "Fortescue Metals Group"
-msgstr ""
-
 #: Underlying Symbol UKTSCO
 msgid "Tesco plc"
 msgstr ""
@@ -16599,64 +16104,20 @@ msgstr ""
 msgid "Caterpillar Inc."
 msgstr ""
 
-#: Underlying Symbol USPANW
-msgid "Palo Alto Networks Inc."
-msgstr ""
-
-#: Underlying Symbol FPGLE
-msgid "Societe Generale"
-msgstr ""
-
 #: Underlying Symbol UKABF
 msgid "Associated British foods plc"
-msgstr ""
-
-#: Underlying Symbol USMSFT
-msgid "Microsoft"
 msgstr ""
 
 #: Underlying Symbol USMOMO
 msgid "MOMO Inc."
 msgstr ""
 
-#: Underlying Symbol USGE
-msgid "General Electric Company"
-msgstr ""
-
-#: Underlying Symbol AUQAN
-msgid "Qantas Airways Limited"
-msgstr ""
-
-#: Underlying Symbol USJD
-msgid "JD.com Inc."
-msgstr ""
-
-#: Underlying Symbol UKRIO
-msgid "Rio Tinto plc"
-msgstr ""
-
 #: Underlying Symbol USINTC
 msgid "Intel"
 msgstr ""
 
-#: Underlying Symbol FPALST
-msgid "Alstom industrial machinery"
-msgstr ""
-
-#: Underlying Symbol USGOOG
-msgid "Google Inc."
-msgstr ""
-
 #: Underlying Symbol DEBMW
 msgid "BMW"
-msgstr ""
-
-#: Underlying Symbol USWMT
-msgid "Wal-Mart Stores Inc."
-msgstr ""
-
-#: Underlying Symbol USNDSK
-msgid "Sandisk Corporation"
 msgstr ""
 
 #: Underlying Symbol USAAPL
@@ -16667,16 +16128,564 @@ msgstr ""
 msgid "Bharti Airtel"
 msgstr ""
 
-#: Underlying Symbol FPPE
-msgid "Peugeot S.A."
-msgstr ""
-
 #: Underlying Symbol UKBT
 msgid "Bt Group plc"
 msgstr ""
 
 #: Underlying Symbol USUBS
 msgid "UBS AG"
+msgstr ""
+
+#: Underlying Symbol USCT
+msgid "Citigroup Inc."
+msgstr ""
+
+#: Underlying Symbol FPMIC
+msgid "Michelin"
+msgstr ""
+
+#: Underlying Symbol DECOMMBK
+msgid "Commerzbank"
+msgstr ""
+
+#: Underlying Symbol USVISA
+msgid "VISA Inc."
+msgstr ""
+
+#: Underlying Symbol USVIPSHP
+msgid "Vipshop Holdings Limited"
+msgstr ""
+
+#: Underlying Symbol DETKAG
+msgid "Thyssenkrupp SS"
+msgstr ""
+
+#: Underlying Symbol USCTRP
+msgid "Ctrip.com International Ltd."
+msgstr ""
+
+#: Underlying Symbol UKULVR
+msgid "Unilever plc"
+msgstr ""
+
+#: Underlying Symbol USBNG
+msgid "The Boeing Company"
+msgstr ""
+
+#: Underlying Symbol AUSUN
+msgid "SUNCORP GROUP LIMITED"
+msgstr ""
+
+#: Underlying Symbol INRIL
+msgid "Reliance Industries Ltd"
+msgstr ""
+
+#: Underlying Symbol AUBHP
+msgid "BHP Billiton Ltd"
+msgstr ""
+
+#: Underlying Symbol USAMAT
+msgid "Applied Materials Inc."
+msgstr ""
+
+#: Underlying Symbol INTATAMOTORS
+msgid "Tata Motors"
+msgstr ""
+
+#: Underlying Symbol USUKU
+msgid "Youku Tudou Inc."
+msgstr ""
+
+#: Underlying Symbol NAHEIA
+msgid "Heineken"
+msgstr ""
+
+#: Underlying Symbol UKANH
+msgid "Al Noor Hospitals Group plc"
+msgstr ""
+
+#: Underlying Symbol FPAI
+msgid "Air Liquide"
+msgstr ""
+
+#: Underlying Symbol AUMGR
+msgid "Mirvac Group Stapled"
+msgstr ""
+
+#: Underlying Symbol USSFUN
+msgid "SouFun Holdings Limited"
+msgstr ""
+
+#: Underlying Symbol USVRTX
+msgid "Vertex Pharmaceuticals Incorporated"
+msgstr ""
+
+#: Underlying Symbol DEALV
+msgid "Allianz SE"
+msgstr ""
+
+#: Underlying Symbol USQHO
+msgid "Qihoo 360 Technology Company Limited"
+msgstr ""
+
+#: Underlying Symbol USJNJ
+msgid "Johnson & Johnson"
+msgstr ""
+
+#: Underlying Symbol AUGPT
+msgid "GPT Group Stapled"
+msgstr ""
+
+#: Underlying Symbol UKVIV
+msgid "Aviva plc"
+msgstr ""
+
+#: Underlying Symbol USAMX
+msgid "American Express Company"
+msgstr ""
+
+#: Underlying Symbol AUAGL
+msgid "AGL Energy Limited"
+msgstr ""
+
+#: Underlying Symbol USGMO
+msgid "Keurig Green Mountain Inc."
+msgstr ""
+
+#: Underlying Symbol USYNDX
+msgid "Yandex N.V."
+msgstr ""
+
+#: Underlying Symbol FPAIR
+msgid "Airbus Group"
+msgstr ""
+
+#: Underlying Symbol FPSAN
+msgid "SANOFI"
+msgstr ""
+
+#: Underlying Symbol DESAP
+msgid "SAP SE"
+msgstr ""
+
+#: Underlying Symbol USATHM
+msgid "Autohome Inc."
+msgstr ""
+
+#: Underlying Symbol FPSGO
+msgid "Cie de Saint-Gobain"
+msgstr ""
+
+#: Underlying Symbol DEBKP
+msgid "Piraeus Bank SA"
+msgstr ""
+
+#: Underlying Symbol USFB
+msgid "Facebook Inc."
+msgstr ""
+
+#: Underlying Symbol FPDG
+msgid "Vinci"
+msgstr ""
+
+#: Underlying Symbol USVGUS
+msgid "Virgin America Inc."
+msgstr ""
+
+#: Underlying Symbol FPARC
+msgid "ArcelorMittal steel"
+msgstr ""
+
+#: Underlying Symbol UKIMT
+msgid "Imperial Tobacco Group plc"
+msgstr ""
+
+#: Underlying Symbol USQCOM
+msgid "QUALCOMM"
+msgstr ""
+
+#: Underlying Symbol USSRVNW
+msgid "ServiceNow Inc."
+msgstr ""
+
+#: Underlying Symbol AUTPM
+msgid "TPG Telecom Limited"
+msgstr ""
+
+#: Underlying Symbol UKNTG
+msgid "National Grid plc"
+msgstr ""
+
+#: Underlying Symbol UKLLOY
+msgid "Lloyds Banking Group plc"
+msgstr ""
+
+#: Underlying Symbol AUCWN
+msgid "Crown Resorts Limited"
+msgstr ""
+
+#: Underlying Symbol USJPM
+msgid "JP Morgan Chase & Co."
+msgstr ""
+
+#: Underlying Symbol USGPR
+msgid "GoPro Inc."
+msgstr ""
+
+#: Underlying Symbol USJMEI
+msgid "Jumei International Holding Limited"
+msgstr ""
+
+#: Underlying Symbol AUSTO
+msgid "Santos LimitedStar Stock"
+msgstr ""
+
+#: Underlying Symbol USPBYI
+msgid "Puma Biotechnology Inc."
+msgstr ""
+
+#: Underlying Symbol USILLM
+msgid "Illumina Inc."
+msgstr ""
+
+#: Underlying Symbol USEA
+msgid "Electronic Arts Inc."
+msgstr ""
+
+#: Underlying Symbol USEBY
+msgid "eBay Inc."
+msgstr ""
+
+#: Underlying Symbol AUNAB
+msgid "National Australia Bank Ltd"
+msgstr ""
+
+#: Underlying Symbol UKAZN
+msgid "AstraZeneca plc"
+msgstr ""
+
+#: Underlying Symbol FPLEG
+msgid "Legrand electrical components & equipm"
+msgstr ""
+
+#: Underlying Symbol UKSAB
+msgid "SABMiller plc"
+msgstr ""
+
+#: Underlying Symbol INTATASTEEL
+msgid "Tata Steels"
+msgstr ""
+
+#: Underlying Symbol USPM
+msgid "Philip Morris International"
+msgstr ""
+
+#: Underlying Symbol UKHSBA
+msgid "HSBC Holdings plc"
+msgstr ""
+
+#: Underlying Symbol DEEOAN
+msgid "E.ON SE"
+msgstr ""
+
+#: Underlying Symbol FPSOLV
+msgid "Solvay chemicals"
+msgstr ""
+
+#: Underlying Symbol USIBM
+msgid "IBM"
+msgstr ""
+
+#: Underlying Symbol USPFE
+msgid "Pfizer Inc."
+msgstr ""
+
+#: Underlying Symbol AUANZ
+msgid "ANZ Banking Group Ltd"
+msgstr ""
+
+#: Underlying Symbol UKBATS
+msgid "British American Tobacco"
+msgstr ""
+
+#: Underlying Symbol DELHA
+msgid "Deutsche Lufthansa"
+msgstr ""
+
+#: Underlying Symbol USORCL
+msgid "Oracle"
+msgstr ""
+
+#: Underlying Symbol FPKER
+msgid "Kering"
+msgstr ""
+
+#: Underlying Symbol USDLT
+msgid "Delta Air Lines Inc."
+msgstr ""
+
+#: Underlying Symbol BBGBLB
+msgid "Groupe Bruxelles Lambert"
+msgstr ""
+
+#: Underlying Symbol USVFC
+msgid "VF Corporation"
+msgstr ""
+
+#: Underlying Symbol USMS
+msgid "Morgan Stanley"
+msgstr ""
+
+#: Underlying Symbol NAUNA
+msgid "Unilever"
+msgstr ""
+
+#: Underlying Symbol AUQBE
+msgid "QBE INSURANCE GROUP LIMITED"
+msgstr ""
+
+#: Underlying Symbol FPVIV
+msgid "Vivendi"
+msgstr ""
+
+#: Underlying Symbol FPSU
+msgid "Schneider Electric"
+msgstr ""
+
+#: Underlying Symbol UKVOD
+msgid "Vodafone"
+msgstr ""
+
+#: Underlying Symbol INSUNPHARMA
+msgid "Sun Pharma"
+msgstr ""
+
+#: Underlying Symbol UKPSN
+msgid "Pearson plc"
+msgstr ""
+
+#: Underlying Symbol USMMM
+msgid "3M Company"
+msgstr ""
+
+#: Underlying Symbol USGM
+msgid "General Motors Company"
+msgstr ""
+
+#: Underlying Symbol DEDLG
+msgid "Dialog Semiconductor plc"
+msgstr ""
+
+#: Underlying Symbol USXOM
+msgid "ExxonMobil"
+msgstr ""
+
+#: Underlying Symbol USNTFLX
+msgid "Netflix Inc."
+msgstr ""
+
+#: Underlying Symbol FPGSZ
+msgid "GDF Suez"
+msgstr ""
+
+#: Underlying Symbol UKSTAN
+msgid "Standard Chartered plc"
+msgstr ""
+
+#: Underlying Symbol USFTBT
+msgid "Fitbit Inc."
+msgstr ""
+
+#: Underlying Symbol USMANU
+msgid "Manchester United plc"
+msgstr ""
+
+#: Underlying Symbol DERHOFIVE
+msgid "Roche Holding Ag-Genusschein"
+msgstr ""
+
+#: Underlying Symbol USCYN
+msgid "Cynapsus Therapeutics"
+msgstr ""
+
+#: Underlying Symbol USFRRRI
+msgid "FERRARI N V COM"
+msgstr ""
+
+#: Underlying Symbol DEDTELE
+msgid "Deutsche Telekom AG"
+msgstr ""
+
+#: Underlying Symbol USBOA
+msgid "Bank of America Corporation"
+msgstr ""
+
+#: Underlying Symbol UKRLSRYC
+msgid "Rolls-Royce Holdings plc"
+msgstr ""
+
+#: Underlying Symbol USMRK
+msgid "Merck & Co. Inc."
+msgstr ""
+
+#: Underlying Symbol USPETRO
+msgid "PetroChina Limited"
+msgstr ""
+
+#: Underlying Symbol USARMR
+msgid "Under Armour Inc."
+msgstr ""
+
+#: Underlying Symbol FPBO
+msgid "Bouygues heavy construction"
+msgstr ""
+
+#: Underlying Symbol AUASX
+msgid "ASX Limited"
+msgstr ""
+
+#: Underlying Symbol USALIBA
+msgid "Alibaba Group Holding Limited"
+msgstr ""
+
+#: Underlying Symbol USTYTA
+msgid "Toyota Motor Corporation"
+msgstr ""
+
+#: Underlying Symbol FPCA
+msgid "Carrefour"
+msgstr ""
+
+#: Underlying Symbol AURIO
+msgid "RIO TINTO LIMITED"
+msgstr ""
+
+#: Underlying Symbol FPFP
+msgid "TOTAL"
+msgstr ""
+
+#: Underlying Symbol FPCS
+msgid "AXA"
+msgstr ""
+
+#: Underlying Symbol FPVEO
+msgid "Veolia Environnement water"
+msgstr ""
+
+#: Underlying Symbol USKO
+msgid "The Coca-Cola Company"
+msgstr ""
+
+#: Underlying Symbol BBUCB
+msgid "UCB"
+msgstr ""
+
+#: Underlying Symbol UKBP
+msgid "BP plc"
+msgstr ""
+
+#: Underlying Symbol USNVAR
+msgid "Univar Inc."
+msgstr ""
+
+#: Underlying Symbol UKGLEN
+msgid "Glencore Xstrat"
+msgstr ""
+
+#: Underlying Symbol FPST
+msgid "STMicroelectronics semiconductors"
+msgstr ""
+
+#: Underlying Symbol USSLRCT
+msgid "SolarCity Corporation"
+msgstr ""
+
+#: Underlying Symbol USSHU
+msgid "Sohu.com Inc."
+msgstr ""
+
+#: Underlying Symbol USYHOO
+msgid "Yahoo! Inc."
+msgstr ""
+
+#: Underlying Symbol UKDGE
+msgid "Diageo plc"
+msgstr ""
+
+#: Underlying Symbol AUFMG
+msgid "Fortescue Metals Group"
+msgstr ""
+
+#: Underlying Symbol USPANW
+msgid "Palo Alto Networks Inc."
+msgstr ""
+
+#: Underlying Symbol FPGLE
+msgid "Societe Generale"
+msgstr ""
+
+#: Underlying Symbol AUQAN
+msgid "Qantas Airways Limited"
+msgstr ""
+
+#: Underlying Symbol USGE
+msgid "General Electric Company"
+msgstr ""
+
+#: Underlying Symbol USMSFT
+msgid "Microsoft"
+msgstr ""
+
+#: Underlying Symbol USJD
+msgid "JD.com Inc."
+msgstr ""
+
+#: Underlying Symbol UKRIO
+msgid "Rio Tinto plc"
+msgstr ""
+
+#: Underlying Symbol FPALST
+msgid "Alstom industrial machinery"
+msgstr ""
+
+#: Underlying Symbol USGOOG
+msgid "Google Inc."
+msgstr ""
+
+#: Underlying Symbol USWMT
+msgid "Wal-Mart Stores Inc."
+msgstr ""
+
+#: Underlying Symbol USNDSK
+msgid "Sandisk Corporation"
+msgstr ""
+
+#: Underlying Symbol FPPE
+msgid "Peugeot S.A."
+msgstr ""
+
+#: Underlying Symbol frxXPDGBP
+msgid "XPD/GBP"
+msgstr ""
+
+#: Underlying Symbol frxXAGAUD
+msgid "XAG/AUD"
+msgstr ""
+
+#: Underlying Symbol frxBROUSD
+msgid "Oil/USD"
+msgstr ""
+
+#: Underlying Symbol frxXPTUSD
+msgid "Platinum/USD"
+msgstr ""
+
+#: Underlying Symbol frxXAUAUD
+msgid "Gold/AUD"
+msgstr ""
+
+#: Underlying Symbol frxXAUEUR
+msgid "Gold/EUR"
 msgstr ""
 
 #: Underlying Symbol frxXPTAUD
@@ -16691,10 +16700,6 @@ msgstr ""
 msgid "Oil/GBP"
 msgstr ""
 
-#: Underlying Symbol frxXPDGBP
-msgid "XPD/GBP"
-msgstr ""
-
 #: Underlying Symbol frxXAUUSD
 msgid "Gold/USD"
 msgstr ""
@@ -16703,20 +16708,8 @@ msgstr ""
 msgid "XAG/GBP"
 msgstr ""
 
-#: Underlying Symbol frxXAGAUD
-msgid "XAG/AUD"
-msgstr ""
-
 #: Underlying Symbol frxXPDEUR
 msgid "XPD/EUR"
-msgstr ""
-
-#: Underlying Symbol frxBROUSD
-msgid "Oil/USD"
-msgstr ""
-
-#: Underlying Symbol frxXPTUSD
-msgid "Platinum/USD"
 msgstr ""
 
 #: Underlying Symbol frxXPDUSD
@@ -16731,20 +16724,12 @@ msgstr ""
 msgid "XPD/AUD"
 msgstr ""
 
-#: Underlying Symbol frxXAUAUD
-msgid "Gold/AUD"
-msgstr ""
-
 #: Underlying Symbol frxBROEUR
 msgid "Oil/EUR"
 msgstr ""
 
 #: Underlying Symbol frxBROAUD
 msgid "Oil/AUD"
-msgstr ""
-
-#: Underlying Symbol frxXAUEUR
-msgid "Gold/EUR"
 msgstr ""
 
 #: Underlying Symbol frxXAUGBP
@@ -16763,10 +16748,6 @@ msgstr ""
 msgid "Volatility 50 Index"
 msgstr ""
 
-#: Underlying Symbol RDBULL
-msgid "Bull Market Index"
-msgstr ""
-
 #: Underlying Symbol R_100
 msgid "Volatility 100 Index"
 msgstr ""
@@ -16781,6 +16762,10 @@ msgstr ""
 
 #: Underlying Symbol R_25
 msgid "Volatility 25 Index"
+msgstr ""
+
+#: Underlying Symbol RDBULL
+msgid "Bull Market Index"
 msgstr ""
 
 #: Translation for market name
@@ -16881,6 +16866,10 @@ msgstr ""
 
 #: Explanation for market Nocturnes
 msgid "Represent a single day of trading with different market factors. They are reset at the start of each trading day (12:00GMT)."
+msgstr ""
+
+#: Translation for sub market name
+msgid "OTC Indices"
 msgstr ""
 
 #: Translation for sub market name
