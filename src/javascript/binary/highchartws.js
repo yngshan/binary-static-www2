@@ -326,7 +326,7 @@ var Highchart = (function() {
         init_once();
       }
       if (!chart && !chart_subscribed) {
-        request_data();
+        request_data(update || '');
       } else if (entry_tick_time && chart) {
         select_entry_tick_barrier();
       }
@@ -349,7 +349,7 @@ var Highchart = (function() {
     }
   }
 
-  function request_data() {
+  function request_data(update) {
     var calculateGranularity = calculate_granularity(exit_time, now_time, purchase_time, start_time);
     var granularity = calculateGranularity[0],
         duration    = calculateGranularity[1],
@@ -385,7 +385,7 @@ var Highchart = (function() {
         handle_delay();
       }
       show_entry_error();
-    } else if(!contracts_for_send) {
+    } else if(!contracts_for_send && update === '') {
       socketSend({'contracts_for': underlying});
       contracts_for_send = true;
     }
