@@ -1,16 +1,11 @@
 var RealityCheck = (function () {
     'use strict';
     var hiddenClass = 'invisible';
-    var loginTime;
+    var loginTime;      // milliseconds
 
     function realityCheckWSHandler(response) {
         if ($.isEmptyObject(response.reality_check)) {
             // not required for reality check
-            return;
-        }
-
-        // do not react when there's passthrough
-        if (response.passthrough) {
             return;
         }
 
@@ -83,7 +78,7 @@ var RealityCheck = (function () {
             return;
         }
 
-        loginTime = TUser.get().logintime;
+        loginTime = TUser.get().logintime * 1000;
 
         window.addEventListener('storage', realityStorageEventHandler, false);
 
