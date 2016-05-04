@@ -8,7 +8,7 @@ var Login = (function() {
             } catch(e) {
                 alert('The website needs features which are not enabled on private mode browsing. Please use normal mode.');
             }
-            window.location.href = page.url.url_for('oauth2/authorize', 'app_id=id-NMEEIoF2heJ8f87rHpRwYw14Mqxzk'); // should be changed to binarycom
+            window.location.href = page.url.url_for('oauth2/authorize', 'app_id=binarycom');
         }
     };
 

@@ -17,7 +17,7 @@ var LoggedInHandler = (function() {
         // redirect back
         var set_default = true;
         if(redirect_url) {
-            var do_not_redirect = ['reset_passwordws', 'lost_passwordws', 'home', page.url.url_for('').replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&")];
+            var do_not_redirect = ['reset_passwordws', 'lost_passwordws', 'change_passwordws', 'home', page.url.url_for('').replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&")];
             var reg = new RegExp(do_not_redirect.join('|'), 'i');
             if(!reg.test(redirect_url)) {
                 set_default = false;

@@ -3,6 +3,7 @@ var PasswordWS = (function(){
   var $form, $result;
 
   var init = function() {
+    $('#change-password').removeClass('invisible');
     $form   = $("#change-password > form");
     $result = $("#change-password > div[data-id='success-result']");
     $form.find("button").on("click", function(e){
