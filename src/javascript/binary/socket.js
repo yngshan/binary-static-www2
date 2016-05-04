@@ -177,7 +177,7 @@ function BinarySocketClass() {
                     page.header.do_logout(response);
                 } else if (type === 'landing_company_details') {
                     page.client.response_landing_company_details(response);
-                    RealityCheck.init();
+                    BinarySocket.send({reality_check: 1, passthrough: {}});
                 } else if (type === 'payout_currencies' && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.handler === 'page.client') {
                     page.client.response_payout_currencies(response);
                 } else if (type === 'get_settings') {
@@ -215,7 +215,14 @@ function BinarySocketClass() {
                     }
                   }
                 } else if (type === 'reality_check') {
-                    RealityCheck.realityCheckWSHandler(response);
+                    if (response.passthrough) {
+                        var currentData = TUser.get();
+                        var addedLoginTime = Object.assign({logintime: response.reality_check.start_time}, currentData);
+                        TUser.set(addedLoginTime);
+                        RealityCheck.init();
+                    } else {
+                        RealityCheck.realityCheckWSHandler(response);
+                    }
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code) {

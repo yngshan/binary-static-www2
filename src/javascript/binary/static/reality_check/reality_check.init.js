@@ -8,6 +8,12 @@ var RealityCheck = (function () {
             // not required for reality check
             return;
         }
+
+        // do not react when there's passthrough
+        if (response.passthrough) {
+            return;
+        }
+
         var summary = RealityCheckData.summaryData(response.reality_check);
         RealityCheckUI.renderSummaryPopUp(summary);
     }
@@ -77,8 +83,7 @@ var RealityCheck = (function () {
             return;
         }
 
-        var rcCookie = getCookieItem('reality_check');
-        loginTime = rcCookie && rcCookie.split(',')[1] * 1000;
+        loginTime = TUser.get().logintime;
 
         window.addEventListener('storage', realityStorageEventHandler, false);
 
