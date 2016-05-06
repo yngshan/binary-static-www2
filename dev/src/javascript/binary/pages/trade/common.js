@@ -705,13 +705,11 @@ function displayIndicativeBarrier() {
         }
 
         if (indicativeHighBarrierTooltip && isVisible(indicativeHighBarrierTooltip)) {
-            var highBarrierValue = isNaN(parseFloat(highBarrierElement.value))?0:parseFloat(highBarrierElement.value);
-            indicativeHighBarrierTooltip.textContent = (parseFloat(currentTick) + highBarrierValue).toFixed(decimalPlaces);
+            indicativeHighBarrierTooltip.textContent = (parseFloat(currentTick) + parseFloat(highBarrierElement.value)).toFixed(decimalPlaces);
         }
 
         if (indicativeLowBarrierTooltip && isVisible(indicativeLowBarrierTooltip)) {
-            var lowBarrierValue = isNaN(parseFloat(lowBarrierElement.value))?0:parseFloat(lowBarrierElement.value);
-            indicativeLowBarrierTooltip.textContent = (parseFloat(currentTick) + lowBarrierValue).toFixed(decimalPlaces);
+            indicativeLowBarrierTooltip.textContent = (parseFloat(currentTick) + parseFloat(lowBarrierElement.value)).toFixed(decimalPlaces);
         }
     } else {
         indicativeBarrierTooltip.textContent = '';
@@ -786,10 +784,7 @@ function displayTooltip(market, symbol){
       app.hide();
       tip.hide();
     }
-    if (market.match(/^otc_index/) || symbol.match(/^OTC_/)){
-        tip.show();
-        tip.setAttribute('target','/get-started/otc-indices-stocks');
-    }
+
     if (market.match(/^random_index/) || symbol.match(/^R_/)){
         tip.setAttribute('target','/get-started/volidx-markets#volidx-indices');
     }

@@ -65,7 +65,6 @@ var APITokenWS = (function() {
 
         if(rebuildTable) {
             populateTokensList(api_token, newToken);
-            showLocalTimeOnHover('td.last-used');
         }
 
         // Hide form if tokens count reached the maximum limit
@@ -120,7 +119,7 @@ var APITokenWS = (function() {
     };
 
     var createTableRow = function(token) {
-        var lastUsed = (token.last_used ? token.last_used + ' GMT': text.localize('Never Used'));
+        var lastUsed = token.last_used ? token.last_used : text.localize('Never Used');
         var scopes = token.scopes.map(function (v) {
             return v.capitalizeFirstLetter();
         });

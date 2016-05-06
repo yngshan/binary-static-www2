@@ -23,13 +23,12 @@ var IPHistoryUI = (function(){
 
     function updateTable(history){
         Table.appendTableBody(tableID, history, createRow);
-        showLocalTimeOnHover('td.timestamp');
     }
 
     function createRow(data){
         var userAgent = data['environment'];
         var history = userAgent.split(' ');
-        var timestamp = moment.unix(data.time).utc().format('YYYY-MM-DD HH:mm:ss').replace(' ', '\n') + ' GMT';
+        var timestamp = history[0];
         var ip = history[2].split('=')[1];
         var browser = "Unknown",
             ver = "Unknown",
@@ -58,7 +57,7 @@ var IPHistoryUI = (function(){
         var status = data['status'] === 1 ? text.localize('Successful') : text.localize('Failed');
         var browserString = browser + " v" + ver;
         var $row = Table.createFlexTableRow([timestamp, data['action'], browserString, ip, status], columns, "data");
-        $row.children(".timestamp").addClass('pre');
+        $row.children(".timestamp").first().append('<br>' + history[1]);
         return $row[0];
     }
 

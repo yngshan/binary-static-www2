@@ -34,22 +34,16 @@ var ForwardWS = (function() {
     if (verification_token) req.verification_code = verification_token;
     BinarySocket.send(req);
   }
-  function hideAll() {
+  function showError(error) {
     $('#withdraw-form').hide();
     $('#currency-form').hide();
     $('#ukgc-funds-protection').hide();
-    $('#deposit-withdraw-error').hide();
-  }
-  function showError(error) {
-    hideAll();
-    document.getElementById('deposit-withdraw-error').innerHTML = error.message || text.localize('Sorry, an error occurred while processing your request.');
-    $('#deposit-withdraw-error').show();
+    document.getElementById('deposit-withdraw-message').innerHTML = error.message || text.localize('Sorry, an error occurred while processing your request.');
   }
   return {
     init: init,
     getCashierType: getCashierType,
     getCashierURL: getCashierURL,
-    hideAll: hideAll,
     showError: showError
   };
 })();
@@ -93,12 +87,16 @@ pjax_config_page("cashier/forwardws", function() {
                 } else if (type === 'cashier_password' && error) {
                   ForwardWS.showError(error);
                 } else if (type === 'cashier' && !error) {
-                  ForwardWS.hideAll();
+                  $('#currency-form').hide();
+                  $('#withdraw-form').hide();
+                  $('#ukgc-funds-protection').hide();
                   document.getElementById('deposit-withdraw-message').innerHTML = '';
                   $('#deposit-withdraw-iframe-container iframe').attr('src', response.cashier);
                   $('#deposit-withdraw-iframe-container').show();
                 } else if (type === 'cashier' && error) {
-                  ForwardWS.hideAll();
+                  $('#withdraw-form').hide();
+                  $('#currency-form').hide();
+                  $('#ukgc-funds-protection').hide();
                   document.getElementById('deposit-withdraw-message').innerHTML = '';
                   if (error.code && error.code === 'ASK_TNC_APPROVAL') {
                     window.location.href = page.url.url_for('user/tnc_approvalws');
