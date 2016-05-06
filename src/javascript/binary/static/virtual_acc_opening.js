@@ -46,20 +46,23 @@ pjax_config_page("new_account/virtualws", function(){
                   var type = response.msg_type;
                   var error = response.error;
 
-                  if (type === 'new_account_virtual' && !error){
-                    // set a flag to push to gtm in my_account
-                    localStorage.setItem('new_account', '1');
-
-                    document.getElementById('email').value = response.new_account_virtual.email;
-                    form.setAttribute('action', '/login');
-                    form.setAttribute('method', 'POST');
-                    virtualForm.unbind('submit');
-                    form.submit();
+                  if (type === 'new_account_virtual' && !error) {
+                    page.client.set_cookie('residence', response.echo_req.residence);
+                    page.client.process_new_account(
+                      response.new_account_virtual.email,
+                      response.new_account_virtual.client_id,
+                      response.new_account_virtual.oauth_token,
+                      true);
                   } else if (type === 'error' || error) {
-                    if (error.code === 'InvalidToken') {
+                    if (error.code === 'InvalidToken' || error.code === 'duplicate email') {
                       virtualForm.empty();
                       $('.notice-message').remove();
-                      var noticeText = '<p>' + Content.localize().textClickHereToRestart.replace('[_1]', page.url.url_for('')) + '</p>';
+                      var noticeText;
+                      if (error.code === 'InvalidToken') {
+                        noticeText = '<p>' + Content.localize().textClickHereToRestart.replace('[_1]', page.url.url_for('')) + '</p>';
+                      } else if (error.code === 'duplicate email') {
+                        noticeText = '<p>' + Content.localize().textDuplicatedEmail.replace('[_1]', page.url.url_for('user/lost_passwordws')) + '</p>';
+                      }
                       virtualForm.html(noticeText);
                       return;
                     } else if (error.code === 'PasswordError') {
