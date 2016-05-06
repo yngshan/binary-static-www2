@@ -21,10 +21,13 @@ function BinarySocketClass() {
         timeouts = {},
         req_number = 0,
         socketUrl;
-        if((/binaryqa|www2/i).test(window.location.host)){
-          socketUrl = 'wss://' + window.location.host + '/websockets/v3';
-        } else{
-          socketUrl = 'wss://ws.binaryws.com/websockets/v3';
+        var host = window.location.host;
+        if((/www\.binary\.com/i).test(host)) {
+            socketUrl = 'wss://ws.binaryws.com/websockets/v3';
+        } else if((/binaryqa/i).test(host)) {
+            socketUrl = 'wss://' + host + '/websockets/v3';
+        } else {
+            socketUrl = 'wss://www2.binary.com/websockets/v3';
         }
 
     if (page.language()) {
