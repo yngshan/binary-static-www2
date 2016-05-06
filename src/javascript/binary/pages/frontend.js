@@ -284,10 +284,13 @@ function dropDownMonths(select, startNum, endNum) {
     return;
 }
 
-function generateBirthDate(){
+function generateBirthDate(country){
     var days    = document.getElementById('dobdd'),
         months  = document.getElementById('dobmm'),
         year    = document.getElementById('dobyy');
+
+    if (document.getElementById('dobdd').length > 1) return;
+    
     //days
     dropDownNumbers(days, 1, 31);
     //months
@@ -297,6 +300,11 @@ function generateBirthDate(){
     var endYear = currentYear - 17;
     //years
     dropDownNumbers(year, startYear, endYear);
+    if (country && country === 'jp') {
+      days.options[0].innerHTML = text.localize('Day');
+      months.options[0].innerHTML = text.localize('Month');
+      year.options[0].innerHTML = text.localize('Year');
+    }
     return;
 }
 
@@ -319,12 +327,13 @@ function handle_residence_state_ws(){
       var response = JSON.parse(msg.data);
       if (response) {
         var type = response.msg_type;
+        var country;
         var residenceDisabled = $('#residence-disabled');
         if (type === 'get_settings') {
-          var country = response.get_settings.country_code;
+          country = response.get_settings.country_code;
           if (country && country !== null) {
             page.client.residence = country;
-            generateBirthDate();
+            generateBirthDate(country);
             generateState();
             if (/maltainvestws/.test(window.location.pathname)) {
               var settings = response.get_settings;
@@ -403,7 +412,7 @@ function handle_residence_state_ws(){
             $('#error-residence').insertAfter('#residence-disabled');
             residenceDisabled.attr('disabled', 'disabled');
             $('#real-form').show();
-            generateBirthDate();
+            generateBirthDate(country);
             generateState();
             return;
           }
@@ -543,6 +552,9 @@ function isNotBackoffice() {
 pjax_config_page('/\?.+|/home', function() {
     return {
         onLoad: function() {
+            if(/^(\/|\/home)$/i.test(window.location.pathname)) {
+                page.client.redirect_if_login();
+            }
             check_login_hide_signup();
             submit_email();
         }
@@ -671,11 +683,11 @@ pjax_config_page('/terms-and-conditions', function() {
     };
 });
 
-pjax_config_page('/login', function() {
+pjax_config_page('\/login|\/loginid_switch', function() {
     return {
         onLoad: function() {
-            if (page.user.is_logged_in) {
-              window.location.href = page.url.url_for('user/my_accountws');
+            if(isNotBackoffice()) {
+                window.location.href = page.url.url_for('oauth2/authorize', 'app_id=binarycom');
             }
         }
     };
