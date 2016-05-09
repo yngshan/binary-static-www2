@@ -27,11 +27,10 @@
   }
   #statement-table{
     .flex-tr {     
-      & > th:last-child, & > td:last-child {display: none !important;}
+      & > th.details, & > td.details {display: none !important;}
       @media (max-width : $md){
-        & > th:nth-child(4){ display : none !important; }
-        & > td:nth-child(4){ display : none !important; }
-        & > th:last-child, & > td:last-child {
+        & > th.desc, & > td.desc { display : none !important; }
+        & > th.details, & > td.details {
           display: table-cell !important;
           .button {padding: 8px 15px;}
         }
@@ -43,11 +42,10 @@
   }
   #profit-table{
     .flex-tr {     
-      & > th:last-child, & > td:last-child {display: none !important;}
+      & > th.details, & > td.details {display: none !important;}
       @media (max-width : $md){
-        & > th:nth-child(3){ display : none !important; }
-        & > td:nth-child(3){ display : none !important; }
-        & > th:last-child, & > td:last-child {
+        & > th.contract, & > td.contract { display : none !important; }
+        & > th.details, & > td.details {
           display: table-cell !important;
           .button {padding: 8px 15px;}
         }
