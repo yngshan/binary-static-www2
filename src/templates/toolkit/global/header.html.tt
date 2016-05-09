@@ -64,7 +64,7 @@
                 </div>
                 <div id="client-logged-in" class="grd-grid-3 grd-grid-mobile-9 grd-grid-phablet-10 by_client_type client_real client_virtual" style="display: none">
                   <div id="logout">
-                    <form id="loginid-switch-form" action="[% request.url_for('loginid_switch?l=EN') %]">
+                    <form id="loginid-switch-form">
                         <div id="login-fields">
                             <select id="client_loginid" name="client_loginid">
                             </select>

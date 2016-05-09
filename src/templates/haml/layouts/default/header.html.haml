@@ -14,7 +14,7 @@
         = include('layouts/default/nav')
       .grd-grid-3.grd-grid-mobile-9.grd-grid-phablet-10.by_client_type.client_virtual.client_real#client-logged-in{ :style => 'display: none;'}
         #logout
-          %form#loginid-switch-form{:action => url_for('loginid_switch')}
+          %form#loginid-switch-form
             #login-fields
               %select{:name => 'client_loginid', :id => 'client_loginid'}
             %div#balance

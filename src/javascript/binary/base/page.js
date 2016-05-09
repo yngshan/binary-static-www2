@@ -11,7 +11,6 @@ var GTM = (function() {
             pjax      : page.is_loaded_by_pjax,
             url       : document.URL,
             event     : 'page_load',
-            is_legacy : 'false',
         };
         if(page.client.is_logged_in) {
             data_layer_info['visitorID'] = page.client.loginid;
@@ -29,15 +28,6 @@ var GTM = (function() {
     };
 
     var push_data_layer = function(data) {
-        // follow the legacy method for not converted pages
-        var legacy_pages = ['affiliate_signup', 'cashier', 'payment'];
-        var regex = new RegExp(legacy_pages.join('|'), 'i');
-        if(regex.test(location.pathname)) {
-            push_data_layer_legacy();
-            return;
-        }
-
-        // new implementation (all pages except the above list)
         if(!(/logged_inws/i).test(window.location.pathname)) {
             var info = gtm_data_layer_info(data && typeof(data) === 'object' ? data : null);
             dataLayer[0] = info.data;
@@ -49,48 +39,6 @@ var GTM = (function() {
     var page_title = function() {
         var t = /^.+[:-]\s*(.+)$/.exec(document.title);
         return t && t[1] ? t[1] : document.title;
-    };
-
-    // Legacy functions (To be removed once all pages use new implementation above)
-    var gtm_data_layer_info_legacy = function() {
-        var gtm_data_layer_info = [];
-        $('.gtm_data_layer').each(function() {
-            var gtm_params = {};
-            var event_name = '';
-            $(this).children().each(function() {
-                var tag = $(this).attr("id");
-                var value = $(this).html();
-
-                if ($(this).attr("data-type") == "json") {
-                    value = JSON.parse($(this).html());
-                }
-
-                if (tag == "event") {
-                    event_name = value;
-                } else {
-                    gtm_params[tag] = value;
-                }
-            });
-            gtm_params['url'] = document.URL;
-            gtm_params['is_legacy'] = 'true';
-
-            var entry = {};
-            entry['params'] = gtm_params;
-            entry['event'] = event_name;
-            gtm_data_layer_info.push(entry);
-        });
-
-        return gtm_data_layer_info;
-    };
-
-    var push_data_layer_legacy = function() {
-        var info = gtm_data_layer_info_legacy();
-        for (var i=0;i<info.length;i++) {
-            dataLayer[0] = info[i].params;
-
-            dataLayer.push(info[i].params);
-            dataLayer.push({"event": info[i].event});
-        }
     };
 
     var event_handler = function(get_settings) {

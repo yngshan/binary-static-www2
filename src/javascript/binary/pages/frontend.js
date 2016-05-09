@@ -683,11 +683,11 @@ pjax_config_page('/terms-and-conditions', function() {
     };
 });
 
-pjax_config_page('/login', function() {
+pjax_config_page('\/login|\/loginid_switch', function() {
     return {
         onLoad: function() {
-            if (page.user.is_logged_in) {
-              window.location.href = page.url.url_for('user/my_accountws');
+            if(isNotBackoffice()) {
+                window.location.href = page.url.url_for('oauth2/authorize', 'app_id=binarycom');
             }
         }
     };
