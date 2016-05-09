@@ -2,9 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chinese (Taiwan) (Binary)\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-05-03 06:49+0000\n"
+"PO-Revision-Date: 2016-05-04 08:55+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <https://hosted.weblate.org/projects/binary/static/zh_TW/>\n"
+"Language-Team: Chinese (Taiwan) "
+"<https://hosted.weblate.org/projects/binary/static/zh_TW/>\n"
 "Language: zh_tw\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -154,7 +155,6 @@ msgstr "%1 完全基於網路，無需安裝任何軟體即可交易。"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-#, fuzzy
 #| msgid "%1is looking to recruit highly skilled, experienced designers who are passionate about developing attractive visuals for both online and offline applications."
 msgid "%1 is looking to recruit highly skilled, experienced designers who are passionate about developing attractive visuals for both online and offline applications."
 msgstr "%1 誠聘熟練、經驗豐富、熱衷於為連線和離線應用程式開發有吸引力視覺效果的設計師。"
@@ -3558,7 +3558,6 @@ msgstr ""
 
 #. (token)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/email/resend_verification.html.tt:1
-#, fuzzy
 #| msgid ""
 #| "Dear Valued Customer,\n"
 #| "\n"
@@ -3576,7 +3575,7 @@ msgid ""
 msgstr ""
 "親愛的客戶：↵\n"
 "↵\n"
-"請點選下方的連結，以進行驗證：↵\n"
+"請用下方的連結，以進行驗證：↵\n"
 "↵\n"
 "%1↵\n"
 "↵\n"
@@ -10352,10 +10351,12 @@ msgid "The Company reserves the right to change any part of this Agreement at an
 msgstr "公司有權隨時修改本協議的任何內容。我們會儘量把協議修改詳情通知聯盟成員，但是您承擔定期檢查本條款和條件的最終責任。該等修改公佈後，您繼續參加聯盟計劃的行為，將構成對該等修改的約束性接受。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:145
-#, fuzzy
 #| msgid "In the case that any financial contracts are acquired or sold at prices that do not reflect fair market prices or that are acquired or sold at an abnormally low level of risk due to an undetected programming error, bug or glitch in our website software, the Company reserves the right to cancel or reverse such transactions upon notification to the Client of the nature of the computer error that led to the mispricing. Clients have a duty to report to the Company any problems or suspected system inadequacies that they may experience and may not abuse of system problems for profit. The Company will endeavour to resolve any such difficulties in the shortest time possible. Persons with insider knowledge of any financial market or instrument are prohibited from trading at this website. In case of errors or inconsistency of data feeds, we reserve the right to cancel any or all affected contracts."
 msgid "The Company reserves the right to restrict client trading and/or cancel or reverse transactions in the case that any contracts are acquired or sold at prices that do not reflect fair market prices or that are acquired or sold at an abnormally low level of risk due to an undetected programming error, bug or glitch in our website software, market data feed or contract pricing latency, data feed error, stray quotes, incorrect pricing parameters, or manifest mis-calculation of prices or other manifest error. Clients have a duty to report to the Company any such problems, errors or suspected system inadequacies that they may experience and may not abuse of or arbitrage such system problems or errors for profit. The Company will endeavour to resolve any such difficulties in the shortest time possible. Persons with insider knowledge of any financial market or instrument are prohibited from trading at this website."
-msgstr "如果由於我們網站軟體沒有檢測出的編程錯誤、病毒或缺陷，導致任何金融合約的買入或賣出價格未能反映公平的市場價格或者金融合約以異常低的風險被買入和賣出，公司有權通過將導致錯誤報價的電腦錯誤通知客戶，取消或者撤銷這類交易。客戶有義務向公司報告其所經歷的任何問題或可能的系統缺陷，不得濫用系統缺陷盈利。公司將努力在最短時間內解決這些問題。擁有任何金融市場或者工具內幕資訊的人員禁止在本網站上交易。如果資料輸入出錯或有差異，我們保留取消部分或全部相關合同的權利。"
+msgstr ""
+"如果由於我們網站軟體沒有檢測出的編程錯誤、病毒或缺陷、市場資料輸入或合約價格延遲、資料輸入錯誤、報價差異、錯誤價格參數、價單計算錯誤或其他清單錯誤導致任何"
+"交易合約的購買或售出價格未能反映公平的市場價格或者以異常低的風險購買和售出，公司保留限制客戶交易和/或取消或撤回交易的權利。客戶有義務向公司報告其所經歷的"
+"任何問題或可能的系統缺陷，不得濫用系統缺陷盈利。公司將努力在最短時間內解決這些問題。擁有任何金融市場或者工具內幕資訊的人員禁止在本網站上交易。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:116
 msgid "The Company reserves the right to suspend the operation of this site or sections thereof:"
@@ -13368,10 +13369,9 @@ msgid "Your password has been changed."
 msgstr "您的密碼已更改。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:72
-#, fuzzy
 #| msgid "Your password has been changed."
 msgid "Your password has been changed. Please log in again."
-msgstr "您的密碼已更改。"
+msgstr "您的密碼已更改。請重新登入。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:516
 msgid "Your password has been reset."
@@ -14228,7 +14228,7 @@ msgstr "{JAPAN ONLY}Knowledge Test Result"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:30
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:42
 msgid "{JAPAN ONLY}No space between last name and first name"
-msgstr ""
+msgstr "{JAPAN ONLY}No space between last name and first name"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/get_started_jp/get_started.html.tt:169
 msgid "{JAPAN ONLY}Option Pricing"
